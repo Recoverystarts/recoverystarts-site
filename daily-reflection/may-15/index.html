@@ -132,6 +132,16 @@
       }
     }
 
+  
+    .dr-share { max-width: 760px; margin: 1.5rem auto 0; text-align: center; }
+    .dr-share .lbl { font-family: var(--font-display); color: var(--text-dim); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+    .dr-share-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .dr-share-btns a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; text-decoration: none; transition: opacity 0.2s; }
+    .dr-share-btns a:hover { opacity: 0.8; }
+    .dr-share-btns .share-x { background: #1d9bf0; color: #fff; }
+    .dr-share-btns .share-fb { background: #1877f2; color: #fff; }
+    .dr-share-btns .share-copy { background: var(--gold-glow); color: var(--gold); border: 1px solid var(--border); cursor: pointer; }
+
   </style>
 </head>
 <body>
@@ -196,5 +206,8 @@
     </div>
   </footer>
   <script src="/app.js"></script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>

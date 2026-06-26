@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's AA Daily Reflection — Recovery Einstein</title>
+  <meta name="description" content="Read today's AA Daily Reflection with Recovery Einstein's Big Book perspective. Fresh insight every day.">
+  <meta property="og:title" content="Today's AA Daily Reflection — Recovery Einstein">
+  <meta property="og:description" content="Read today's AA Daily Reflection with Recovery Einstein's Big Book perspective. A new reflection every day.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recoverystarts.com/daily-reflection/today/">
+  <meta property="og:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>
+    // Auto-redirect to today's reflection
+    const months = ['january','february','march','april','may','june',
+                     'july','august','september','october','november','december'];
+    const now = new Date();
+    const month = months[now.getMonth()];
+    const day = now.getDate();
+    window.location.replace('/daily-reflection/' + month + '-' + day + '/');
+  </script>
+  <style>
+    body { background: #0a0a0a; color: #c8b88a; font-family: Georgia, serif; 
+           display: flex; justify-content: center; align-items: center; 
+           min-height: 100vh; margin: 0; text-align: center; }
+    a { color: #d4af37; }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Redirecting to today's reflection...</p>
+    <p><a href="/daily-reflection/">Browse all reflections</a></p>
+  </div>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

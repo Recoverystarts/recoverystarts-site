@@ -100,7 +100,8 @@ ${discussion ? `**Something to sit with:** ${discussion}\n\n---\n\n` : ''}[Read 
       method: 'POST',
       headers: {
         'Authorization': `Token ${BUTTONDOWN_API_KEY}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'X-Buttondown-Live-Dangerously': 'true'
       },
       body: JSON.stringify({
         subject,

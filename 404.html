@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Page Not Found — Recovery Starts</title>
+<link rel="stylesheet" href="/style.css">
+<style>
+  .nf-wrap {
+    position: relative; z-index: 1;
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 40px 24px;
+  }
+  .nf-code {
+    font-family: var(--font-display, 'Cinzel', serif);
+    font-size: clamp(4rem, 14vw, 8rem); font-weight: 700;
+    color: var(--gold, #C8A951); line-height: 1; margin-bottom: 8px;
+    text-shadow: 0 0 40px var(--gold-glow, rgba(200,169,81,0.3));
+  }
+  .nf-title { font-family: var(--font-display, 'Cinzel', serif); font-size: clamp(1.4rem, 4vw, 2rem); color: var(--text, #F0EDE6); margin-bottom: 14px; }
+  .nf-text { color: var(--text-muted, #9A9590); max-width: 460px; line-height: 1.7; margin-bottom: 32px; }
+  .nf-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .nf-links a {
+    display: inline-block; padding: 12px 22px; border-radius: var(--radius-sm, 8px);
+    border: 1px solid var(--border-hover, rgba(200,169,81,0.3));
+    color: var(--gold, #C8A951); font-weight: 600; transition: all 0.2s;
+  }
+  .nf-links a:hover { background: var(--gold-glow, rgba(200,169,81,0.15)); color: var(--gold-light, #E5C972); }
+  .nf-links a.primary { background: var(--gold, #C8A951); color: #0B0B0F; border-color: var(--gold, #C8A951); }
+  .nf-links a.primary:hover { background: var(--gold-light, #E5C972); }
+</style>
+</head>
+<body>
+  <div class="nf-wrap">
+    <div class="nf-code">404</div>
+    <h1 class="nf-title">This page isn't here</h1>
+    <p class="nf-text">The page you're looking for moved or never existed — but recovery resources are just a click away. You're still welcome here.</p>
+    <div class="nf-links">
+      <a href="/" class="primary">Home</a>
+      <a href="/meetings/">Find Meetings</a>
+      <a href="https://app.recoverystarts.com">Talk to Recovery Einstein</a>
+    </div>
+  </div>
+</body>
+</html>

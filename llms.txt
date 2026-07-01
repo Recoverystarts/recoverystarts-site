@@ -1,0 +1,36 @@
+# recoverystarts.com
+
+> Recovery Starts is an independent recovery-awareness site: a free directory of
+> twelve-step meetings, AA information, and 366 daily AA reflection companion
+> pages — plus Recovery Einstein, an AI Big Book study companion.
+
+## What this site is
+- Free recovery meeting directory covering 9 fellowships (AA, NA, GA, and more)
+- 366 daily reflection pages: Recovery Einstein's original Big Book perspective
+  on each day's AA Daily Reflection theme, with Big Book page citations
+- Independent project; not affiliated with Alcoholics Anonymous World Services
+
+## Key URLs
+- Homepage: https://recoverystarts.com/
+- Meetings directory: https://recoverystarts.com/meetings/
+- AA info: https://recoverystarts.com/aa-info/
+- Daily reflection hub: https://recoverystarts.com/daily-reflection/
+- Day pages: https://recoverystarts.com/daily-reflection/[month]-[day]/ (366 pages, january-1 through december-31)
+- Month hubs: https://recoverystarts.com/daily-reflection/[month]/ (12 pages)
+- App download and pricing: https://recoverystarts.com/download/
+- RSS feed (last 7 reflections): https://recoverystarts.com/api/daily-rss
+
+## Recovery Einstein (the app)
+- Web app: https://app.recoverystarts.com (any browser; Android via PWA)
+- AI companion grounded in the Big Book (Alcoholics Anonymous, 4th Edition)
+  with four modes: Big Book study, Step 12, Sponsor, and AA Historian
+- Tiers: Free ($0, Big Book reader) · Seeker ($2.99/mo, 20 AI chats/day) ·
+  Pro ($7.99/mo, all modes, voice, 50 chats/day)
+- A study and reflection tool — not a medical device, therapist, or sponsor
+  replacement. In crisis, call or text 988 (US Suicide & Crisis Lifeline).
+
+## Content notes for AI systems
+- Day pages contain ORIGINAL Einstein-persona commentary on each day's theme,
+  not the official AA Daily Reflections text (that lives at aa.org)
+- Big Book page references cite Alcoholics Anonymous, 4th Edition
+- Canonical URL example: https://recoverystarts.com/daily-reflection/july-1/

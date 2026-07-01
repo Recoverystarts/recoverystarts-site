@@ -76,7 +76,7 @@ ${reflection}
 
 ---
 
-${discussion ? `**Something to sit with:** ${discussion}\n\n---\n\n` : ''}[Read today's full reflection](${pageUrl}) · [Talk to Einstein about this](https://app.recoverystarts.com)
+${discussion ? `**Something to sit with:** ${discussion}\n\n---\n\n` : ''}[Read today's full reflection](${pageUrl}) · [Talk to Einstein about this](https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=email-daily)
 
 *Recovery Einstein — an AI companion grounded in the Big Book of Alcoholics Anonymous.*
 `;

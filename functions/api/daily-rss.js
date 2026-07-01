@@ -75,7 +75,7 @@ export async function onRequest(context) {
         <hr>
         <p><strong>Something to sit with:</strong> ${escapeXml(ref.discussion)}</p>
         <p><a href="${pageUrl}">Read on recoverystarts.com →</a></p>
-        <p><a href="https://app.recoverystarts.com">Talk to Recovery Einstein about today's theme →</a></p>
+        <p><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=rss-daily">Talk to Recovery Einstein about today's theme →</a></p>
       ]]></content:encoded>
     </item>`);
     }

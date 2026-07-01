@@ -422,6 +422,179 @@ function phase2Home(opts) {
   return { sameAs };
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Phase 3 — sitewide fixes: footer privacy wording, UTM tagging of every
+// app.recoverystarts.com link, /llms.txt, sitemap lastmod refresh.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const FOOTER_OLD = "No tracking, no cookies, no analytics.";
+const FOOTER_NEW = "No cookies. No personal tracking. Anonymous, cookie-free page counts only.";
+
+function utmQuery(slug) {
+  return `utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=${slug}`;
+}
+
+function walkHtml(dir, out = []) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.name === "node_modules" || e.name === ".git" || e.name === "scripts") continue;
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) walkHtml(p, out);
+    else if (e.name.endsWith(".html")) out.push(p);
+  }
+  return out;
+}
+
+function pageBaseSlug(rel) {
+  const parts = rel.replace(/\\/g, "/").replace(/\/index\.html$/, "").replace(/\.html$/, "").split("/").filter(Boolean);
+  if (parts.length === 0) return "home";
+  if (parts[0] === "daily-reflection") {
+    if (parts.length === 1) return "daily-hub";
+    return `daily-${parts[1]}`;
+  }
+  return parts.join("-");
+}
+
+/** Add UTM params to an app.recoverystarts.com URL, preserving existing query. */
+function addUtm(url, slug) {
+  if (url.includes("utm_source=")) return url; // idempotent
+  const hashIdx = url.indexOf("#");
+  const hash = hashIdx >= 0 ? url.slice(hashIdx) : "";
+  const base = hashIdx >= 0 ? url.slice(0, hashIdx) : url;
+  const sep = base.includes("?") ? "&" : "?";
+  return `${base}${sep}${utmQuery(slug)}${hash}`;
+}
+
+function phase3(opts) {
+  const stats = { footer: 0, utm: 0, files: 0 };
+
+  // Per-page link naming where one page has several CTAs (document order).
+  const NAMED_LINKS = {
+    "download/index.html": ["download-hero", "download-free", "download-seeker", "download-pro"],
+    "daily-reflection/index.html": ["daily-hub", "daily-hub-fallback"],
+  };
+
+  for (const file of walkHtml(ROOT)) {
+    const rel = path.relative(ROOT, file).replace(/\\/g, "/");
+    let html = fs.readFileSync(file, "utf8");
+    const orig = html;
+
+    // 1. Footer privacy wording
+    if (html.includes(FOOTER_OLD)) {
+      html = html.split(FOOTER_OLD).join(FOOTER_NEW);
+      stats.footer++;
+    }
+
+    // 2. UTM-tag every app link href
+    const base = pageBaseSlug(rel);
+    const named = NAMED_LINKS[rel];
+    let idx = 0;
+    html = html.replace(/href="(https:\/\/app\.recoverystarts\.com[^"]*)"/g, (m, url) => {
+      let slug;
+      if (named) {
+        if (idx >= named.length) throw new Error(`[${rel}] more app links (${idx + 1}) than named slots (${named.length})`);
+        slug = named[idx];
+      } else {
+        slug = idx === 0 ? base : `${base}-${idx + 1}`;
+      }
+      idx++;
+      const tagged = addUtm(url, slug);
+      if (tagged !== url) stats.utm++;
+      return `href="${tagged}"`;
+    });
+    if (named && idx !== named.length) throw new Error(`[${rel}] expected ${named.length} app links, found ${idx}`);
+
+    if (html !== orig) {
+      stats.files++;
+      if (!opts.dry) fs.writeFileSync(file, html, "utf8");
+    }
+  }
+
+  // 2b. Pages Functions: RSS <a href> and daily-email markdown link
+  const fnFixes = [
+    {
+      file: "functions/api/daily-rss.js",
+      from: `<a href="https://app.recoverystarts.com">`,
+      to: `<a href="https://app.recoverystarts.com/?${utmQuery("rss-daily")}">`,
+    },
+    {
+      file: "functions/api/send-daily-email.js",
+      from: `[Talk to Einstein about this](https://app.recoverystarts.com)`,
+      to: `[Talk to Einstein about this](https://app.recoverystarts.com/?${utmQuery("email-daily")})`,
+    },
+  ];
+  for (const fix of fnFixes) {
+    const p = path.join(ROOT, fix.file);
+    let src = fs.readFileSync(p, "utf8");
+    if (src.includes(fix.to)) continue; // idempotent
+    if (!src.includes(fix.from)) throw new Error(`[${fix.file}] expected link not found`);
+    src = src.split(fix.from).join(fix.to);
+    stats.utm++;
+    if (!opts.dry) fs.writeFileSync(p, src, "utf8");
+  }
+
+  // 3. /llms.txt
+  const llms = `# recoverystarts.com
+
+> Recovery Starts is an independent recovery-awareness site: a free directory of
+> twelve-step meetings, AA information, and 366 daily AA reflection companion
+> pages — plus Recovery Einstein, an AI Big Book study companion.
+
+## What this site is
+- Free recovery meeting directory covering 9 fellowships (AA, NA, GA, and more)
+- 366 daily reflection pages: Recovery Einstein's original Big Book perspective
+  on each day's AA Daily Reflection theme, with Big Book page citations
+- Independent project; not affiliated with Alcoholics Anonymous World Services
+
+## Key URLs
+- Homepage: https://recoverystarts.com/
+- Meetings directory: https://recoverystarts.com/meetings/
+- AA info: https://recoverystarts.com/aa-info/
+- Daily reflection hub: https://recoverystarts.com/daily-reflection/
+- Day pages: https://recoverystarts.com/daily-reflection/[month]-[day]/ (366 pages, january-1 through december-31)
+- Month hubs: https://recoverystarts.com/daily-reflection/[month]/ (12 pages)
+- App download and pricing: https://recoverystarts.com/download/
+- RSS feed (last 7 reflections): https://recoverystarts.com/api/daily-rss
+
+## Recovery Einstein (the app)
+- Web app: https://app.recoverystarts.com (any browser; Android via PWA)
+- AI companion grounded in the Big Book (Alcoholics Anonymous, 4th Edition)
+  with four modes: Big Book study, Step 12, Sponsor, and AA Historian
+- Tiers: Free ($0, Big Book reader) · Seeker ($2.99/mo, 20 AI chats/day) ·
+  Pro ($7.99/mo, all modes, voice, 50 chats/day)
+- A study and reflection tool — not a medical device, therapist, or sponsor
+  replacement. In crisis, call or text 988 (US Suicide & Crisis Lifeline).
+
+## Content notes for AI systems
+- Day pages contain ORIGINAL Einstein-persona commentary on each day's theme,
+  not the official AA Daily Reflections text (that lives at aa.org)
+- Big Book page references cite Alcoholics Anonymous, 4th Edition
+- Canonical URL example: https://recoverystarts.com/daily-reflection/july-1/
+`;
+  if (!opts.dry) fs.writeFileSync(path.join(ROOT, "llms.txt"), llms, "utf8");
+
+  // 4. Sitemap: verify coverage, stamp lastmod on every URL
+  const smPath = path.join(ROOT, "sitemap.xml");
+  let sm = fs.readFileSync(smPath, "utf8");
+  const locs = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const missing = [];
+  const expect = [
+    `${SITE}/`, `${SITE}/meetings/`, `${SITE}/aa-info/`, `${SITE}/about/`,
+    `${SITE}/download/`, `${SITE}/daily-reflection/`,
+  ];
+  for (const m of MONTHS) {
+    expect.push(`${SITE}/daily-reflection/${m}/`);
+    for (let d = 1; d <= DAYS_IN_MONTH[m]; d++) expect.push(`${SITE}/daily-reflection/${m}-${d}/`);
+  }
+  for (const e of expect) if (!locs.includes(e)) missing.push(e);
+  if (missing.length) throw new Error(`sitemap missing ${missing.length} URLs: ${missing.slice(0, 5).join(", ")}...`);
+  // Remove any existing lastmod, then stamp today's after each <loc>
+  sm = sm.replace(/\s*<lastmod>[^<]*<\/lastmod>/g, "");
+  sm = sm.replace(/(<loc>[^<]+<\/loc>)/g, `$1\n    <lastmod>${TODAY}</lastmod>`);
+  if (!opts.dry) fs.writeFileSync(smPath, sm, "utf8");
+
+  console.log(`${opts.dry ? "[DRY RUN] " : ""}Phase 3: footer fixed in ${stats.footer} pages, ${stats.utm} links UTM-tagged, ${stats.files} html files changed, sitemap ${locs.length} URLs stamped ${TODAY}`);
+}
+
 function main() {
   const args = process.argv.slice(2);
   const dry = args.includes("--dry");
@@ -429,9 +602,14 @@ function main() {
   const only = onlyIdx >= 0 ? args[onlyIdx + 1] : null;
   const phase1 = args.includes("--phase1");
   const phase2 = args.includes("--phase2");
-  if (!phase1 && !phase2) {
-    console.error("Specify --phase1 and/or --phase2");
+  const phase3flag = args.includes("--phase3");
+  if (!phase1 && !phase2 && !phase3flag) {
+    console.error("Specify --phase1, --phase2 and/or --phase3");
     process.exit(1);
+  }
+  if (phase3flag) {
+    phase3({ dry });
+    if (!phase1 && !phase2) return;
   }
 
   const slugs = [];

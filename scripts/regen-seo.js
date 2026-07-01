@@ -208,11 +208,231 @@ function processDayPage(slug, opts) {
   return { slug, title, titleLen: title.length, titleMode, desc, descLen: desc.length, descMode, themeRaw, themeTC };
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Phase 2 — schema upgrades: BreadcrumbList + FAQPage (day pages), Breadcrumb
+// (month hubs), SoftwareApplication (/download), Organization (homepage).
+// Idempotent: existing generated blocks are replaced, never duplicated.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const SITE = "https://recoverystarts.com";
+
+/** Split text into sentences, tolerant of dotted acronyms (A.A.). */
+function sentences(text) {
+  const MASK = "";
+  const masked = text.replace(/\b(?:[A-Za-z]\.){2,}/g, (m) => m.split(".").join(MASK));
+  const parts = masked.split(/(?<=[.!?]['"’”]?)\s+/).map((s) => s.split(MASK).join(".").trim()).filter(Boolean);
+  return parts;
+}
+
+function ldScript(obj) {
+  const json = JSON.stringify(obj);
+  JSON.parse(json); // self-check
+  return `<script type="application/ld+json">\n  ${json}\n  </script>`;
+}
+
+function breadcrumbLd(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map(([name, url], i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name,
+      item: url,
+    })),
+  };
+}
+
+/** Remove previously generated phase-2 blocks so re-runs replace, not stack. */
+function stripGenerated(html) {
+  html = html.replace(/\n?<!-- regen-seo:phase2 -->[\s\S]*?<!-- \/regen-seo:phase2 -->/g, "");
+  html = html.replace(/\n?\s*<!-- regen-seo:faq -->[\s\S]*?<!-- \/regen-seo:faq -->/g, "");
+  html = html.replace(/\n?\s*\/\* regen-seo:faq-css \*\/[\s\S]*?\/\* \/regen-seo:faq-css \*\//g, "");
+  return html;
+}
+
+function phase2DayPage(slug, opts) {
+  const [monthLower, dayStr] = slug.split(/-(?=\d+$)/);
+  const month = monthLower[0].toUpperCase() + monthLower.slice(1);
+  const day = parseInt(dayStr, 10);
+  const file = path.join(DR, slug, "index.html");
+  let html = stripGenerated(fs.readFileSync(file, "utf8"));
+
+  // Parse doctrine (read-only)
+  const themeRaw = stripTags(html.match(/<h1 class="dr-theme">([\s\S]*?)<\/h1>/)[1]);
+  const themeTC = titleCaseTheme(themeRaw);
+  const bubbleM = html.match(/<div class="dr-bubble">[\s\S]*?<div class="who">[\s\S]*?<\/div>\s*<p>([\s\S]*?)<\/p>/);
+  if (!bubbleM) throw new Error(`[${slug}] no perspective paragraph`);
+  const perspective = stripTags(bubbleM[1]);
+  const discussM = html.match(/<div class="dr-discuss"><span class="lbl">[^<]*<\/span><p>([\s\S]*?)<\/p><\/div>/);
+  if (!discussM) throw new Error(`[${slug}] no discussion question`);
+  const question = stripTags(discussM[1]);
+  const refM = html.match(/<div class="dr-ref">—\s*([\s\S]*?)<\/div>/);
+  const bookRef = refM ? stripTags(refM[1]) : null;
+
+  // Q1: theme + one-line summary (first sentence)
+  const sents = sentences(perspective);
+  const s1 = sents[0] || perspective;
+  const q1 = `What is the AA Daily Reflection for ${month} ${day}?`;
+  const a1 = `The theme for ${month} ${day} is “${themeTC}.” ${s1}`;
+
+  // Q2: the page's own "Something to sit with" question; answer is a 1-2
+  // sentence pointer from the existing perspective + the Big Book page ref.
+  let pointer = sents[sents.length - 1] || s1;
+  if (pointer.length < 60 && sents.length >= 2) pointer = `${sents[sents.length - 2]} ${pointer}`;
+  if (pointer.length > 320) pointer = sents[sents.length - 1];
+  const a2 = bookRef ? `${pointer} (Big Book: ${bookRef})` : pointer;
+
+  // Visible "Quick answers" section, above the footer (after the disclaimer)
+  const faqHtml = [
+    `      <!-- regen-seo:faq -->`,
+    `      <section class="dr-faq">`,
+    `        <h2 class="dr-faq-title">Quick answers</h2>`,
+    `        <div class="dr-faq-item">`,
+    `          <h3>${escText(q1)}</h3>`,
+    `          <p>${escText(a1)}</p>`,
+    `        </div>`,
+    `        <div class="dr-faq-item">`,
+    `          <h3>${escText(question)}</h3>`,
+    `          <p>${escText(a2)}</p>`,
+    `        </div>`,
+    `      </section>`,
+    `      <!-- /regen-seo:faq -->`,
+  ].join("\n");
+
+  const faqCss = `\n    /* regen-seo:faq-css */\n    .dr-faq { max-width: 760px; margin: 2.6rem auto 0; }\n    .dr-faq-title { font-family: var(--font-display); color: var(--gold); font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 1rem; }\n    .dr-faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 10px; text-align: left; }\n    .dr-faq-item h3 { color: var(--text); font-size: 0.95rem; margin: 0 0 8px; }\n    .dr-faq-item p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }\n    /* /regen-seo:faq-css */\n  `;
+
+  // JSON-LD: FAQPage + BreadcrumbList (must mirror visible content)
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: q1, acceptedAnswer: { "@type": "Answer", text: a1 } },
+      { "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: a2 } },
+    ],
+  };
+  const crumbLd = breadcrumbLd([
+    ["Home", `${SITE}/`],
+    ["Daily Reflection", `${SITE}/daily-reflection/`],
+    [month, `${SITE}/daily-reflection/${monthLower}/`],
+    [`${month} ${day}`, `${SITE}/daily-reflection/${slug}/`],
+  ]);
+
+  // Insert: schema after the existing Article JSON-LD script
+  const anchor = html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/);
+  if (!anchor) throw new Error(`[${slug}] no Article JSON-LD anchor`);
+  html = html.replace(
+    anchor[0],
+    `${anchor[0]}\n  <!-- regen-seo:phase2 -->\n  ${ldScript(faqLd)}\n  ${ldScript(crumbLd)}\n  <!-- /regen-seo:phase2 -->`
+  );
+
+  // Insert: FAQ css before </style>, FAQ section after the disclaimer
+  html = mustReplace(html, /<\/style>/, `${faqCss}</style>`, "style close", slug);
+  html = mustReplace(
+    html,
+    /(<p class="dr-disclaimer">[\s\S]*?<\/p>)/,
+    `$1\n${faqHtml}`,
+    "disclaimer anchor",
+    slug
+  );
+
+  if (!opts.dry) fs.writeFileSync(file, html, "utf8");
+  return { slug, q1, a1, q2: question, a2 };
+}
+
+function phase2Hub(monthLower, opts) {
+  const month = monthLower[0].toUpperCase() + monthLower.slice(1);
+  const file = path.join(DR, monthLower, "index.html");
+  let html = stripGenerated(fs.readFileSync(file, "utf8"));
+  const crumbLd = breadcrumbLd([
+    ["Home", `${SITE}/`],
+    ["Daily Reflection", `${SITE}/daily-reflection/`],
+    [month, `${SITE}/daily-reflection/${monthLower}/`],
+  ]);
+  const anchor = html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/);
+  if (!anchor) throw new Error(`[hub ${monthLower}] no JSON-LD anchor`);
+  html = html.replace(anchor[0], `${anchor[0]}\n  <!-- regen-seo:phase2 -->\n  ${ldScript(crumbLd)}\n  <!-- /regen-seo:phase2 -->`);
+  if (!opts.dry) fs.writeFileSync(file, html, "utf8");
+  return { hub: monthLower };
+}
+
+function phase2Download(opts) {
+  const file = path.join(ROOT, "download", "index.html");
+  let html = stripGenerated(fs.readFileSync(file, "utf8"));
+
+  // Read tier names + prices from the live page markup so they can't drift.
+  const tiers = [];
+  const tierRe = /<h3>([^<]+)<\/h3>\s*<div class="tier-price">\$([\d.]+)/g;
+  let m;
+  while ((m = tierRe.exec(html)) !== null) tiers.push({ name: m[1].trim(), price: m[2] });
+  if (tiers.length < 3) throw new Error(`[download] expected 3 tiers, found ${tiers.length}`);
+
+  const appLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Recovery Einstein",
+    operatingSystem: "Web, Android",
+    applicationCategory: "HealthApplication",
+    url: "https://app.recoverystarts.com",
+    description: "AI-powered AA Big Book companion app with four Einstein personality modes, voice conversations, and daily reflections.",
+    offers: tiers.map((t) => ({
+      "@type": "Offer",
+      name: t.name,
+      price: t.price,
+      priceCurrency: "USD",
+    })),
+  };
+  // Replace the existing SoftwareApplication block in place.
+  html = mustReplace(
+    html,
+    /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json">\n  ${JSON.stringify(appLd)}\n  </script>`,
+    "SoftwareApplication JSON-LD",
+    "download"
+  );
+  if (!opts.dry) fs.writeFileSync(file, html, "utf8");
+  return { tiers };
+}
+
+function phase2Home(opts) {
+  const file = path.join(ROOT, "index.html");
+  let html = stripGenerated(fs.readFileSync(file, "utf8"));
+
+  // Collect social profile URLs already present in the page.
+  const sameAs = [];
+  const socialRe = /href="(https:\/\/(?:youtube\.com|instagram\.com|tiktok\.com|x\.com|facebook\.com|twitter\.com)\/[^"]+)"/g;
+  let m;
+  while ((m = socialRe.exec(html)) !== null) {
+    if (!sameAs.includes(m[1])) sameAs.push(m[1]);
+  }
+  if (sameAs.length < 5) throw new Error(`[home] expected ≥5 social URLs, found ${sameAs.length}`);
+
+  const orgLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Recovery Starts",
+    url: "https://recoverystarts.com",
+    logo: "https://recoverystarts.com/assets/einstein-character.png",
+    sameAs,
+  };
+  const anchor = html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/);
+  if (!anchor) throw new Error(`[home] no JSON-LD anchor`);
+  html = html.replace(anchor[0], `${anchor[0]}\n  <!-- regen-seo:phase2 -->\n  ${ldScript(orgLd)}\n  <!-- /regen-seo:phase2 -->`);
+  if (!opts.dry) fs.writeFileSync(file, html, "utf8");
+  return { sameAs };
+}
+
 function main() {
   const args = process.argv.slice(2);
   const dry = args.includes("--dry");
   const onlyIdx = args.indexOf("--only");
   const only = onlyIdx >= 0 ? args[onlyIdx + 1] : null;
+  const phase1 = args.includes("--phase1");
+  const phase2 = args.includes("--phase2");
+  if (!phase1 && !phase2) {
+    console.error("Specify --phase1 and/or --phase2");
+    process.exit(1);
+  }
 
   const slugs = [];
   for (const m of MONTHS) {
@@ -222,12 +442,57 @@ function main() {
 
   const results = [];
   const errors = [];
-  for (const slug of targets) {
-    try {
-      results.push(processDayPage(slug, { dry }));
-    } catch (e) {
-      errors.push(e.message);
+  if (phase1) {
+    for (const slug of targets) {
+      try {
+        results.push(processDayPage(slug, { dry }));
+      } catch (e) {
+        errors.push(e.message);
+      }
     }
+  }
+  if (phase2) {
+    const p2results = [];
+    for (const slug of targets) {
+      try {
+        p2results.push(phase2DayPage(slug, { dry }));
+      } catch (e) {
+        errors.push(e.message);
+      }
+    }
+    if (!only) {
+      for (const m of MONTHS) {
+        try {
+          phase2Hub(m, { dry });
+        } catch (e) {
+          errors.push(e.message);
+        }
+      }
+      try {
+        const dl = phase2Download({ dry });
+        console.log("download tiers:", JSON.stringify(dl.tiers));
+      } catch (e) {
+        errors.push(e.message);
+      }
+      try {
+        const home = phase2Home({ dry });
+        console.log("home sameAs:", JSON.stringify(home.sameAs));
+      } catch (e) {
+        errors.push(e.message);
+      }
+    }
+    console.log(`${dry ? "[DRY RUN] " : ""}Phase 2: ${p2results.length}/${targets.length} day pages`);
+    if (only) {
+      for (const r of p2results) {
+        console.log(`  Q1: ${r.q1}\n  A1: ${r.a1}\n  Q2: ${r.q2}\n  A2: ${r.a2}`);
+      }
+    }
+    if (errors.length) {
+      console.error(`\nERRORS (${errors.length}):`);
+      for (const e of errors) console.error("  " + e);
+      process.exit(1);
+    }
+    if (!phase1) return;
   }
 
   // --- Report ---

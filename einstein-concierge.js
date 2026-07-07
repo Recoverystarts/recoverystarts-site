@@ -175,4 +175,10 @@
   panel.querySelector(".rec-x").onclick = closePanel;
   panel.querySelector("#recSend").onclick = function () { send(); };
   input.addEventListener("keydown", function (e) { if (e.key === "Enter") send(); });
+
+  // Desktop: start open so Einstein greets people the moment they land.
+  // Mobile: the panel is full-screen, so leave it as a bubble.
+  if (window.matchMedia && window.matchMedia("(min-width: 481px)").matches) {
+    openPanel();
+  }
 })();

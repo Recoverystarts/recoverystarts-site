@@ -11,10 +11,10 @@
   var AVATAR = CFG.avatar || "/assets/einstein-daily.png";
   var GREETING = CFG.greeting ||
     "Hey — I'm Einstein. No sign-up, no names, no judgment. Whatever's going on, we can take it one small step at a time. What brought you here today?";
-  var CHIPS = CFG.chips || [
-    "Is AA right for me?",
-    "Find a meeting near me",
-    "I'm worried about someone",
+  var APP = CFG.app || "https://app.recoverystarts.com";
+  var CTAS = CFG.ctas || [
+    { label: "🔍 AA Big Book Search Engine", href: APP, primary: true },
+    { label: "Chat with an AI Trained Only on the A.A. Big Book", href: APP, primary: false },
   ];
 
   var css =
@@ -39,9 +39,13 @@
     ".rec-bub{padding:9px 12px;border-radius:14px;font-size:14px;line-height:1.45;white-space:pre-wrap;word-wrap:break-word}" +
     ".ein .rec-bub{background:#20202c;color:#e8e8ee;border-top-left-radius:4px}" +
     ".me .rec-bub{background:#d4af37;color:#14141c;border-top-right-radius:4px;font-weight:500}" +
-    ".rec-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}" +
-    ".rec-chip{background:#1a1a24;border:1px solid #3a3a48;color:#d4af37;border-radius:16px;padding:6px 11px;font-size:12.5px;cursor:pointer}" +
-    ".rec-chip:hover{background:#20202c;border-color:#d4af37}" +
+    ".rec-chips{display:flex;flex-direction:column;gap:8px;padding:2px 14px 12px}" +
+    ".rec-cta{display:block;box-sizing:border-box;width:100%;text-align:center;font-weight:800;font-size:14px;" +
+    "border-radius:12px;padding:13px 12px;text-decoration:none;cursor:pointer;line-height:1.25}" +
+    ".rec-cta.primary{background:#d4af37;color:#14141c;border:none;box-shadow:0 4px 14px rgba(212,175,55,.25)}" +
+    ".rec-cta.primary:hover{background:#e6c25a}" +
+    ".rec-cta.alt{background:transparent;color:#d4af37;border:2px solid #d4af37}" +
+    ".rec-cta.alt:hover{background:#20202c}" +
     ".rec-foot{display:flex;gap:8px;padding:10px;border-top:1px solid #2a2a38;background:#1a1a24}" +
     ".rec-foot input{flex:1;background:#14141c;border:1px solid #2a2a38;border-radius:20px;color:#e8e8ee;padding:10px 14px;font-size:14px;outline:none}" +
     ".rec-foot input:focus{border-color:#d4af37}" +
@@ -115,17 +119,19 @@
     return row;
   }
 
-  function showChips() {
+  function showCtas() {
     chipsWrap.innerHTML = "";
-    CHIPS.forEach(function (c) {
-      var b = document.createElement("button");
-      b.className = "rec-chip";
-      b.textContent = c;
-      b.onclick = function () { send(c); };
-      chipsWrap.appendChild(b);
+    CTAS.forEach(function (c) {
+      var a = document.createElement("a");
+      a.className = "rec-cta " + (c.primary ? "primary" : "alt");
+      a.href = c.href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = c.label;
+      chipsWrap.appendChild(a);
     });
   }
-  function clearChips() { chipsWrap.innerHTML = ""; }
+  function clearChips() { /* CTAs persist as the exit to the app */ }
 
   function typing() {
     var row = document.createElement("div");
@@ -166,7 +172,7 @@
   function openPanel() {
     panel.classList.add("open");
     launch.style.display = "none";
-    if (!greeted) { addMsg("assistant", GREETING); history.push({ role: "assistant", content: GREETING }); showChips(); greeted = true; }
+    if (!greeted) { addMsg("assistant", GREETING); history.push({ role: "assistant", content: GREETING }); showCtas(); greeted = true; }
     input.focus();
   }
   function closePanel() { panel.classList.remove("open"); launch.style.display = "flex"; }

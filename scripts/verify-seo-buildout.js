@@ -18,7 +18,7 @@ const warn = [];
 const ok = (m) => console.log("  PASS  " + m);
 const bad = (m) => { fail.push(m); console.log("  FAIL  " + m); };
 
-const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "bigbook", "search-index.json"), "utf8"));
+const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "functions", "_lib", "big-book-text.json"), "utf8"));
 const byLabel = new Map(idx.map((e) => [String(e.l).toLowerCase(), e]));
 
 function normalize(t) {
@@ -200,7 +200,49 @@ if (!sm.includes("/daily-tradition/")) bad("sitemap missing the Daily Traditions
 if (sm.includes("/daily-tradition/today/")) bad("sitemap should NOT list the noindex today redirect");
 ok("hubs listed; noindex redirect correctly excluded");
 
-console.log("\n=== 4. HOMEPAGE ===\n");
+console.log("\n=== 4. THE BOOK IS NOT A PUBLIC ASSET ===\n");
+
+// Cloudflare Pages serves the ENTIRE repo root (verified: /scripts/, /data/ and
+// /tests/ all return 200 in production). `functions/` is the ONLY directory it
+// does not serve. So: the Big Book text is allowed to live in exactly one place.
+// If anything ever moves it back into the served root, this fails the build.
+const BOOK_HOME = path.join(ROOT, "functions", "_lib", "big-book-text.json");
+if (!fs.existsSync(BOOK_HOME)) bad("the Big Book text is missing from functions/_lib/");
+else ok("Big Book text lives in functions/_lib/ (Cloudflare does not serve functions/)");
+
+if (fs.existsSync(path.join(ROOT, "bigbook"))) {
+  bad("PUBLIC /bigbook/ DIRECTORY IS BACK — the full 4th-edition text would be downloadable again");
+} else ok("no public /bigbook/ directory — the old 981 KB full-text asset is gone");
+
+// Nothing in the served root may contain a large slab of book text.
+function scanServedRoot(dir) {
+  const skip = new Set(["functions", "node_modules", ".git", "scripts", "tests"]);
+  for (const name of fs.readdirSync(dir)) {
+    if (skip.has(name)) continue;
+    const p = path.join(dir, name);
+    const st = fs.statSync(p);
+    if (st.isDirectory()) { scanServedRoot(p); continue; }
+    if (!/\.(json|txt)$/i.test(name)) continue;
+    const size = st.size;
+    if (size < 200 * 1024) continue;              // small files can't be the book
+    const body = fs.readFileSync(p, "utf8");
+    // The book's tell: many pages of prose keyed by printed page label.
+    if (/"l"\s*:\s*"\d+"/.test(body) && /"t"\s*:\s*"/.test(body)) {
+      bad("SERVED FILE LOOKS LIKE THE BIG BOOK TEXT: /" + path.relative(ROOT, p).replace(/\\/g, "/"));
+    }
+  }
+}
+scanServedRoot(ROOT);
+ok("no file in the served root contains the Big Book text");
+
+// The search UI must not be able to print a whole page any more.
+const app = fs.readFileSync(path.join(ROOT, "assets", "bigbook", "searchApp.js"), "utf8");
+if (/pageViewHtml|bb-pagetext/.test(app)) bad("searchApp.js can still render full page text");
+if (/search-index\.json['"]/.test(app)) bad("searchApp.js still fetches the public full-text index");
+if (!/\/api\/bigbook-search/.test(app)) bad("searchApp.js is not wired to the server-side search API");
+ok("search UI renders snippets + page cards only — it cannot print a page");
+
+console.log("\n=== 5. HOMEPAGE ===\n");
 const home = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 if (!/href="\/big-book\/pages\/"/.test(home)) bad("homepage: no link to the Big Book library");
 if (!/href="\/daily-tradition\/"/.test(home)) bad("homepage: no link to Daily Traditions");

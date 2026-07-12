@@ -3,27 +3,46 @@
  *
  * THE APP IS THE SPEC (app.recoverystarts.com → Big Book → search). Result
  * content, layering, ordering, and dedupe all come from composeResults()
- * (searchPipeline.js), which mirrors the app's BigBook.tsx handleSearch()
- * exactly. This file only owns the static page's presentation:
- *   • quick-cards (phraseSearch, ≤2) render instantly from the bundled phrase
- *     index — no network needed
- *   • the 1 MB full-text index (search-index.json) is LAZY-LOADED (after first
- *     paint / on first interaction) so it never blocks render or SEO
- *   • page-number queries ("page 83", "417", "xxv") show that page's text
- *     (the site has no reader to jump into) — and, like the app, a page jump
- *     SKIPS the full-text list
- *   • "step N" / chapter / reference queries surface the knowledge cards with
- *     their page RANGES ("Step 12 · pp. 89–103"), exactly like the app
- *   • full-text hits (bookSearch) render with <mark> snippets + page + section
+ * (searchPipeline.js) — which now runs SERVER-SIDE, in /api/bigbook-search.
+ *
+ * ── THE PRODUCT BOUNDARY (this is the whole design) ──────────────────────────
+ *   THE WEBSITE tells you WHICH PAGE a passage is on, and shows you just enough
+ *   to know it's the right one. THE APP is where you read the book.
+ *
+ * This file used to download the ENTIRE 4th-edition text (981 KB of
+ * /bigbook/search-index.json) into every visitor's browser, and render a full
+ * page of the book whenever someone clicked a page number. Between them, the
+ * website was a copy of the Big Book with a search box on top. That was never
+ * the product — and it staked the whole domain on something we don't need.
+ *
+ * Now: the text lives only inside the Worker (functions/_lib/, the one directory
+ * Cloudflare Pages does not serve — verified: /functions/** 404s while
+ * /scripts/**, /data/** and /tests/** all return 200). The browser sends a query
+ * and gets back page numbers, chapters, and ~170-char highlighted snippets.
+ * There is no URL that returns the book.
+ *
+ * Search quality is UNCHANGED: same BookSearch engine, same phrase index, same
+ * knowledge layer, same composeResults pipeline, same tests. Exact-phrase search
+ * still works. Only the location changed — and how little we say.
+ *
+ * What this file still owns:
+ *   • quick-cards (phraseSearch, ≤2) still render INSTANTLY, client-side, from
+ *     the curated short-quote index — no network, no perceived latency
+ *   • "step N" / chapter / reference queries surface knowledge cards with page
+ *     RANGES ("Step 12 · pp. 89–103"), exactly like the app
+ *   • a page-number query ("page 83", "417", "xxv") now offers the PAGE, not the
+ *     page's text — it points at /big-book/page-N/ and at the app
+ *   • full-text hits render with <mark> snippets + page + section
+ *
+ * 4TH EDITION pagination. Always. It's the only edition anyone is holding.
  *
  * Free search. The only CTA points to /download/. Never links to /demo.
  */
-import { BookSearch } from "./bookSearch.js";
 import { searchPhraseIndex } from "./phraseSearch.js";
-import { composeResults, firstLabel } from "./searchPipeline.js";
+import { firstLabel } from "./searchPipeline.js";
 
 const INDEX_EDITION = "4th";
-const INDEX_URL = "/bigbook/search-index.json";
+const API_URL = "/api/bigbook-search";
 
 // ── DOM ──────────────────────────────────────────────────────────────────────
 const input = document.getElementById("bb-input");
@@ -33,36 +52,26 @@ const empty = document.getElementById("bb-empty");
 const status = document.getElementById("bb-status");
 const suggestions = document.getElementById("bb-suggestions");
 
-// ── Lazy index load ──────────────────────────────────────────────────────────
-let engine = null;
-let entriesByLabel = null;
-let indexPromise = null;
+// ── Server-side search ───────────────────────────────────────────────────────
 // Monotonic search token: every render-clearing or render-producing path bumps
-// it so a slow in-flight search (during the first 1 MB index load) can't resolve
-// and repaint over a newer query or a cleared box.
+// it so a slow in-flight request can't resolve and repaint over a newer query
+// or a cleared box.
 let seq = 0;
 
-function ensureIndex() {
-  if (indexPromise) return indexPromise;
-  indexPromise = fetch(INDEX_URL)
-    .then((r) => {
-      if (!r.ok) throw new Error(`index ${r.status}`);
-      return r.json();
-    })
-    .then((entries) => {
-      engine = new BookSearch(entries);
-      entriesByLabel = new Map();
-      for (const e of entries) {
-        const k = e.l.toLowerCase();
-        if (!entriesByLabel.has(k)) entriesByLabel.set(k, e);
-      }
-      return engine;
-    })
-    .catch((err) => {
-      indexPromise = null; // allow retry
-      throw err;
-    });
-  return indexPromise;
+// Same query, same answer — and the edge caches it too. Don't re-ask.
+const cache = new Map();
+
+async function apiSearch(query, signal) {
+  const key = query.toLowerCase();
+  if (cache.has(key)) return cache.get(key);
+  const r = await fetch(`${API_URL}?q=${encodeURIComponent(query)}`, { signal });
+  if (!r.ok) throw new Error(`search ${r.status}`);
+  const data = await r.json();
+  if (data.error) throw new Error(data.error);
+  const composed = data.results ?? [];
+  if (cache.size > 60) cache.clear();
+  cache.set(key, composed);
+  return composed;
 }
 
 // ── Escaping ─────────────────────────────────────────────────────────────────
@@ -71,12 +80,9 @@ const esc = (s) =>
 const escAttr = (s) =>
   esc(s).replace(/"/g, "&quot;");
 
-// ── Ligature fold (mirror of the engine, for page-view text) ─────────────────
-const LIGATURES = {
-  "ﬀ": "ff", "ﬁ": "fi", "ﬂ": "fl", "ﬃ": "ffi", "ﬄ": "ffl",
-  "’": "'", "‘": "'", "“": '"', "”": '"',
-};
-const normalize = (t) => t.replace(/[ﬀ-ﬄ‘’“”]/g, (c) => LIGATURES[c] ?? c);
+// (The ligature fold that used to live here existed only to clean up full page
+// text before printing it into the DOM. We don't print page text any more, and
+// the server already folds ligatures inside the snippets it sends.)
 
 // ── Rendering helpers ────────────────────────────────────────────────────────
 function snippetHtml(parts) {
@@ -155,17 +161,31 @@ function hitHtml(r) {
     </article>`;
 }
 
-function pageViewHtml(label) {
-  const e = entriesByLabel && entriesByLabel.get(String(label).toLowerCase());
-  if (!e) return "";
-  const text = normalize(e.t);
+/**
+ * A page-number query used to dump that page's ENTIRE text into the DOM.
+ *
+ * It doesn't any more. The website's job is to tell you WHICH PAGE — and then
+ * hand you off to the two places that should actually have the words: your own
+ * copy of the book, or the app. So a page jump now offers the page's reference
+ * card (/big-book/page-N/) and the app, and says so plainly.
+ *
+ * `description` here is the section/chapter, straight from the API.
+ */
+function pageCardHtml(r) {
+  const label = String(r.page);
+  const slug = label.toLowerCase();
   return `
     <article class="bb-card bb-page">
       <div class="bb-card-head">
-        <span class="bb-badge">Page ${esc(e.l)}</span>
-        <span class="bb-cite">${esc(e.s)}</span>
+        <span class="bb-badge">Page ${esc(label)}</span>
+        ${r.description ? `<span class="bb-cite">${esc(r.description)}</span>` : ""}
       </div>
-      <div class="bb-pagetext">${esc(text).replace(/\n+/g, "<br>")}</div>
+      <p class="bb-snippet">You're looking for <strong>page ${esc(label)}</strong> of the Big Book, 4th Edition.</p>
+      <div class="bb-page-actions">
+        <a class="btn btn-primary" href="/big-book/page-${escAttr(slug)}/">What's on page ${esc(label)} →</a>
+        <a class="btn btn-outline" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=bigbook-search&amp;utm_content=page-${escAttr(slug)}" target="_blank" rel="noopener">Read it in the app →</a>
+      </div>
+      <p class="bb-page-note">We don't reproduce the Big Book here — it belongs to A.A., and the book is better than any summary of it. <a href="/big-book/">Get your own copy →</a></p>
     </article>`;
 }
 
@@ -208,11 +228,11 @@ function render(query, state) {
   let head = "";
   const cols = [];
 
-  // A page jump renders FULL WIDTH above the columns — a page of text needs
-  // reading room — and (like the app) a jump skips the full-text list entirely.
+  // A page jump renders FULL WIDTH above the columns, and (like the app) skips
+  // the full-text list. It hands off to the page's reference card and the app
+  // rather than printing the page.
   if (jump) {
-    const view = pageViewHtml(jump.page);
-    if (view) head = `<section class="bb-group jump"><h2 class="bb-group-title">Jump to page ${esc(jump.page)}</h2>${view}</section>`;
+    head = `<section class="bb-group jump"><h2 class="bb-group-title">Page ${esc(jump.page)}</h2>${pageCardHtml(jump)}</section>`;
   }
 
   // COLUMN 1 — THE ANSWER. Steps / chapters / references lead, on the left, so
@@ -259,24 +279,28 @@ async function runSearch(rawQuery) {
   }
   const mine = ++seq;
 
-  // Quick-cards need no network — show them immediately.
+  // Quick-cards are curated short quotes bundled with the page — no network,
+  // so they paint instantly while the server searches the full text.
   const quick = searchPhraseIndex(query);
   render(query, { quick, loading: true });
   setStatus("Searching…");
 
-  let eng = null;
+  let composed;
   try {
-    eng = await ensureIndex();
+    composed = await apiSearch(query);
   } catch {
     if (mine !== seq) return;
-    // Knowledge cards don't need the index — compose without the engine.
-    render(query, { quick, composed: composeResults(query, { engine: null, quick }), loading: false });
-    setStatus("The full-text index could not load. Quick answers are still available.");
+    // The server search is unreachable. Quick answers still stand on their own.
+    render(query, { quick, composed: [], loading: false });
+    setStatus(
+      quick.length
+        ? "Full-text search is unavailable right now. Quick answers are still here."
+        : "Search is unavailable right now. Please try again in a moment."
+    );
     return;
   }
   if (mine !== seq) return; // a newer query superseded this one
 
-  const composed = composeResults(query, { engine: eng, quick });
   render(query, { quick, composed, loading: false });
 }
 
@@ -305,8 +329,8 @@ function init() {
       runSearch(input.value);
     }
   });
-  // Warm the index on first focus so the first real query is instant.
-  input.addEventListener("focus", () => { ensureIndex().catch(() => {}); }, { once: true });
+  // There is no 1 MB index to warm any more — the search runs on the server and
+  // the first query is a single small request. Nothing to prefetch.
 
   clearBtn.addEventListener("click", () => {
     input.value = "";
@@ -344,10 +368,9 @@ function init() {
     runSearch(q0);
   }
 
-  // Prefetch the index after first paint even if the user hasn't interacted.
-  const warm = () => ensureIndex().catch(() => {});
-  if ("requestIdleCallback" in window) requestIdleCallback(warm, { timeout: 2500 });
-  else setTimeout(warm, 1200);
+  // Nothing to prefetch. The old build downloaded 981 KB of Big Book text here,
+  // on every visit, before anyone had typed a thing. That page is now ~1 MB
+  // lighter and the book isn't on the wire at all.
 }
 
 // Boot at the end of module evaluation, after every helper/const above is

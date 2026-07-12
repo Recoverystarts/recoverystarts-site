@@ -11,7 +11,11 @@ import { BookSearch, normalizeText } from "../assets/bigbook/bookSearch.js";
 let engine;
 
 beforeAll(() => {
-  const p = fileURLToPath(new URL("../bigbook/search-index.json", import.meta.url));
+  // The Big Book text moved to functions/_lib/ — the one directory Cloudflare
+  // Pages does NOT serve publicly. It is no longer a downloadable web asset;
+  // the search now runs server-side in /api/bigbook-search. The ENGINE is
+  // unchanged, so these tests still exercise exactly what production runs.
+  const p = fileURLToPath(new URL("../functions/_lib/big-book-text.json", import.meta.url));
   const entries = JSON.parse(readFileSync(p, "utf8"));
   engine = new BookSearch(entries);
 });

@@ -349,7 +349,11 @@ ${NAV}
 const DISCLAIMER = `      <p class="cp-disclaimer">This is an independent Big Book reference page from Recovery Starts — not official AA literature, not affiliated with Alcoholics Anonymous World Services, and not medical advice. Page references are to <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition. Short quotations appear for identification and study; <strong>the full text of the book is not reproduced here</strong> — <a href="/big-book/">get your own copy</a>. If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>`;
 
 // ── Build ───────────────────────────────────────────────────────────────────
-const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "bigbook", "search-index.json"), "utf8"));
+// The Big Book text now lives in functions/_lib/ — the one directory Cloudflare
+// Pages does NOT serve publicly. It is a BUILD-TIME input here (we derive short
+// excerpts from it) and a RUNTIME input to /api/bigbook-search. It is never a
+// public asset. See functions/api/bigbook-search.js for the full reasoning.
+const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "functions", "_lib", "big-book-text.json"), "utf8"));
 
 const pages = idx
   .map((e, i) => Object.assign({}, e, { order: i }))

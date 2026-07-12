@@ -16,7 +16,8 @@ import { composeResults } from "../assets/bigbook/searchPipeline.js";
  */
 let engine;
 beforeAll(() => {
-  const p = fileURLToPath(new URL("../bigbook/search-index.json", import.meta.url));
+  // Text now lives in functions/_lib/ (not publicly served). Engine unchanged.
+  const p = fileURLToPath(new URL("../functions/_lib/big-book-text.json", import.meta.url));
   engine = new BookSearch(JSON.parse(readFileSync(p, "utf8")));
 });
 

@@ -61,7 +61,9 @@ const NAV = `  <nav class="nav"><div class="nav-inner">
       <li><a href="/daily-reflection/">Daily Reflection</a></li>
       <li><a href="/daily-tradition/">Daily Tradition</a></li>
       <li><a href="/12-steps/">The 12 Steps</a></li>
+      <li><a href="/big-book/">Big Book</a></li>
       <li><a href="/about/">About</a></li>
+      <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>`;
@@ -118,6 +120,23 @@ const STYLE = `  <style>
     .dt-cta { text-align:center; margin: 2.4rem auto 0; }
     .dt-disc { max-width: 720px; margin: 2.6rem auto 0; text-align:center; color: var(--text-dim); font-size: 0.78rem; line-height: 1.6; }
     .dt-disc a { color: var(--text-muted); text-decoration: underline; }
+    /* hub — TODAY'S READING leads */
+    .dt-today { max-width: 760px; margin: 0 auto 2.6rem; background: var(--bg-card); border: 1px solid var(--border-hover); border-radius: var(--radius); padding: 28px 30px; }
+    .dt-today-head { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 10px; }
+    .dt-today-lbl { color: var(--gold); font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+    .dt-today .dt-badge { margin-bottom: 0; }
+    .dt-today-title { font-family: var(--font-display); font-size: clamp(1.4rem,3.4vw,1.9rem); line-height:1.2; margin: 0 0 14px; }
+    .dt-today-title a { color: var(--text); }
+    .dt-today-title a:hover { color: var(--gold); }
+    .dt-today-body { color: var(--text); line-height: 1.9; font-size: 1.03rem; margin: 0 0 1.2rem; }
+    .dt-today-body em { color: var(--text-muted); }
+    .dt-today-sit { border-left: 3px solid var(--gold); padding: 4px 0 4px 16px; margin-bottom: 1.4rem; }
+    .dt-today-sit .lbl { display:block; color: var(--gold); font-size: 0.66rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+    .dt-today-sit p { margin: 0; color: var(--text); font-style: italic; line-height: 1.65; }
+    .dt-today-actions { display:flex; flex-wrap:wrap; gap: 10px; }
+    .dt-today-actions .btn { font-size: 0.9rem; }
+    .dt-h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.2rem; margin: 0 0 0.9rem; }
+    .dt-cta { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
     /* hub */
     .dt-intro { max-width: 760px; margin: 0 auto 2rem; }
     .dt-intro p { color: var(--text-muted); line-height: 1.9; margin: 0 0 1rem; }
@@ -172,6 +191,64 @@ ${NAV}
 const HYP_NOTE = `      <p class="dt-hyp"><strong>This is a hypothetical.</strong> The situation described above is illustrative — an imagined scenario used to think a Tradition through. It is not a real group, not a report of anything that happened, and not a rule we invented. The Traditions belong to A.A.; we're only reading them plainly.</p>`;
 
 const DISC = `      <p class="dt-disc">Daily Traditions is an independent educational resource from Recovery Starts — <strong>not official A.A. literature</strong>, not affiliated with Alcoholics Anonymous World Services, and not medical advice. The Twelve Traditions are the property of A.A. Page references are to <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition: short form ${SHORT_PAGES}, <strong>long form ${LONG_PAGES}</strong>. If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>`;
+
+/**
+ * TODAY'S READING — the hero at the top of the hub.
+ *
+ * Derick's note, and he's right: "if people show up and [the doctrine essay] is
+ * the first thing they read they will leave." Someone landing here should be
+ * READING, not being lectured. So the reading leads and the essay moves down.
+ *
+ * Rendered twice, identically: once here at build time (so no-JS users and
+ * crawlers get a real reading), and once by __dtHero() in the browser (so the
+ * date is actually today's). Keep the two in sync — same markup, same classes.
+ */
+function todayHeroHtml(d, isToday = true) {
+  const monthCap = CAP(d.month);
+  const slug = `${d.month}-${d.day}`;
+  const badge = d.hypothetical
+    ? '<span class="dt-badge hyp">A hypothetical</span>'
+    : '<span class="dt-badge earned">The earned answer</span>';
+  return `
+        <div class="dt-today-head">
+          <span class="dt-today-lbl">${isToday ? "Today" : "Latest reading"} · ${monthCap} ${d.day}</span>
+          ${badge}
+        </div>
+        <h2 class="dt-today-title"><a href="/daily-tradition/${slug}/">${esc(d.title)}</a></h2>
+        <p class="dt-today-body">${mdEm(d.body)}</p>
+        <div class="dt-today-sit">
+          <span class="lbl">Sit with</span>
+          <p>${mdEm(d.sitWith)}</p>
+        </div>
+        <div class="dt-today-actions">
+          <a class="btn btn-primary" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=${slug}" target="_blank" rel="noopener">Ask Recovery Einstein about today's Tradition →</a>
+          <a class="btn btn-outline" href="/daily-tradition/${slug}/">Open this reading →</a>
+        </div>`;
+}
+
+/** The browser-side twin of todayHeroHtml(). Same markup, real date. */
+const HERO_JS = `
+  <script>
+    window.__dtHero = function (d, isToday) {
+      var esc = function (s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
+      var em = function (s) { return esc(s).replace(/\\*([^*]+)\\*/g, "<em>$1</em>"); };
+      var badge = d.hypothetical
+        ? '<span class="dt-badge hyp">A hypothetical</span>'
+        : '<span class="dt-badge earned">The earned answer</span>';
+      return ''
+        + '<div class="dt-today-head">'
+        +   '<span class="dt-today-lbl">' + (isToday ? "Today" : "Latest reading") + ' \\u00b7 ' + esc(d.month) + ' ' + d.day + '</span>'
+        +   badge
+        + '</div>'
+        + '<h2 class="dt-today-title"><a href="/daily-tradition/' + d.slug + '/">' + esc(d.title) + '</a></h2>'
+        + '<p class="dt-today-body">' + em(d.body) + '</p>'
+        + '<div class="dt-today-sit"><span class="lbl">Sit with</span><p>' + em(d.sitWith) + '</p></div>'
+        + '<div class="dt-today-actions">'
+        +   '<a class="btn btn-primary" target="_blank" rel="noopener" href="https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=daily-traditions&utm_content=' + d.slug + '">Ask Recovery Einstein about today\\'s Tradition \\u2192</a>'
+        +   '<a class="btn btn-outline" href="/daily-tradition/' + d.slug + '/">Open this reading \\u2192</a>'
+        + '</div>';
+    };
+  </script>`;
 
 function traditionBlock(n, shortForm) {
   return `      <div class="dt-tradition">
@@ -268,7 +345,10 @@ ${traditionBlock(d.tradition, shortForm)}
         <a href="/daily-tradition/">Every day this month →</a>
       </div>
 
-      <div class="dt-cta"><a href="/download/?utm_source=recoverystarts&utm_medium=site&utm_campaign=daily-traditions&utm_content=${slug}" class="btn btn-primary">Get Recovery Einstein →</a></div>
+      <div class="dt-cta">
+        <a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=${slug}" class="btn btn-primary" target="_blank" rel="noopener">Ask Recovery Einstein about Tradition ${d.tradition} →</a>
+        <a href="/download/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=${slug}" class="btn btn-outline">Get the app →</a>
+      </div>
 
       <div class="dt-nav">
         ${prevLink}
@@ -371,17 +451,19 @@ const hubHtml = head({
       <h1 class="dt-title">Daily Traditions</h1>
       <p class="dt-date">Twelve months. Twelve Traditions. ${monthCap} is Tradition ${T}.</p>
 
-      <div class="dt-intro">
-        <p>The Twelve Traditions were adopted in 1950 for one reason: to stop A.A. from being <strong>owned</strong>. Not owned by a benefactor, not by a treatment centre, not by whoever happened to be paying the rent. They are the Fellowship's constitution — written out of near-misses A.A. actually lived through.</p>
-        <p>Most of what circulates online quotes only the short form (pp. ${SHORT_PAGES}) and quietly drops the rest. So we front-load <strong>the Long Form, pp. ${LONG_PAGES}</strong> — where the Traditions actually say what they mean. Tradition 3's clause that a group is A.A. only if "as a group, they have no other affiliation"? That exists <em>only</em> in the Long Form. It's the clause that says no treatment centre can own an A.A. group. It's also the clause the internet forgot.</p>
-        <p>One more thing, because it gets blurred constantly: <strong>the Traditions are governance, not theology.</strong> They bind A.A. groups and the Fellowship — not individuals. They are not a rulebook for your personal life.</p>
+      <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
+           being lectured. The doctrine essay used to sit here; it now sits below,
+           for the people who want it. JS swaps in the real date on load; the
+           server-rendered fallback below is a real reading either way. -->
+      <section id="dt-today" class="dt-today">
+        ${todayHeroHtml(days[0])}
+      </section>
+
+      <div class="dt-days">
+        ${dayCards}
       </div>
 
       <div class="dt-months">${monthCards}</div>
-
-      <div class="dt-intro">
-        <p><strong>How ${monthCap} reads.</strong> Odd days pose a hypothetical: <em>imagine a group did the thing the Tradition warns against — what follows?</em> Even days turn that harm over and find the reason the Tradition exists in the first place. Flip the wound and you get the healing. Every scenario is explicitly hypothetical — not a real group, and not a rule we invented.</p>
-      </div>
 
       <div class="dt-tradition" style="margin-bottom:2.4rem">
         <h2>Tradition ${T} · Short form</h2>
@@ -389,17 +471,56 @@ const hubHtml = head({
         <div class="dt-longform"><strong>Short form: pp. ${SHORT_PAGES}. Long form: pp. ${LONG_PAGES}.</strong> If you only ever read one, read the long one.</div>
       </div>
 
-      <div class="dt-days">
-        ${dayCards}
+      <div class="dt-intro">
+        <h2 class="dt-h2">Why these exist</h2>
+        <p>The Twelve Traditions were adopted in 1950 for one reason: to stop A.A. from being <strong>owned</strong>. Not owned by a benefactor, not by a treatment centre, not by whoever happened to be paying the rent. They are the Fellowship's constitution — written out of near-misses A.A. actually lived through.</p>
+        <p>Most of what circulates online quotes only the short form (pp. ${SHORT_PAGES}) and quietly drops the rest. So we front-load <strong>the Long Form, pp. ${LONG_PAGES}</strong> — where the Traditions actually say what they mean. Tradition 3's clause that a group is A.A. only if "as a group, they have no other affiliation"? That exists <em>only</em> in the Long Form. It's the clause that says no treatment centre can own an A.A. group. It's also the clause the internet forgot.</p>
+        <p>One more thing, because it gets blurred constantly: <strong>the Traditions are governance, not theology.</strong> They bind A.A. groups and the Fellowship — not individuals. They are not a rulebook for your personal life.</p>
+        <p><strong>How ${monthCap} reads.</strong> Odd days pose a hypothetical: <em>imagine a group did the thing the Tradition warns against — what follows?</em> Even days turn that harm over and find the reason the Tradition exists in the first place. Flip the wound and you get the healing. Every scenario is explicitly hypothetical — not a real group, and not a rule we invented.</p>
       </div>
 
       <div class="dt-chips">
-        <a href="/daily-tradition/today/">Today's reading →</a>
         <a href="/big-book/search/">Search the Big Book →</a>
         <a href="/big-book/pages/">The Big Book, page by page →</a>
+        <a href="/daily-reflection/">Daily Reflection →</a>
       </div>
 
 ${DISC}
+${HERO_JS}
+  <script type="application/json" id="dt-data">${JSON.stringify(
+    days.map((d) => ({
+      day: d.day,
+      slug: `${d.month}-${d.day}`,
+      month: CAP(d.month),
+      title: d.title,
+      body: d.body,
+      sitWith: d.sitWith,
+      hypothetical: d.hypothetical,
+    }))
+  ).replace(/</g, "\\u003c")}</script>
+  <script>
+    // Swap the hero to TODAY's reading. If this month isn't published yet, fall
+    // back to the same day-number in the month that is — better a real reading
+    // than an empty slot. Never invents a date it can't back up.
+    (function () {
+      try {
+        var data = JSON.parse(document.getElementById("dt-data").textContent);
+        var now = new Date();
+        var monthNames = ${JSON.stringify(MONTHS.map(CAP))};
+        var thisMonth = monthNames[now.getMonth()];
+        var d = now.getDate();
+        var live = data[0] && data[0].month;
+        var pick = data.find(function (x) { return x.month === thisMonth && x.day === d; })
+                || data.find(function (x) { return x.day === d; })
+                || data[0];
+        if (!pick) return;
+        var host = document.getElementById("dt-today");
+        if (!host) return;
+        var isToday = pick.month === thisMonth && pick.day === d;
+        host.innerHTML = window.__dtHero(pick, isToday);
+      } catch (e) { /* the server-rendered reading stays. */ }
+    })();
+  </script>
   </div></section></main>
 ${FOOTER}
 `;

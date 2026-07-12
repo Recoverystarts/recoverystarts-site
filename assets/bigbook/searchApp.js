@@ -106,8 +106,33 @@ function quickCardHtml(card) {
     </article>`;
 }
 
-/** Steps / chapters / special references — the app's knowledge cards. */
+/**
+ * Steps / chapters / special references — the app's knowledge cards.
+ *
+ * SITE-ONLY PRESENTATION (approved divergence): the Twelve Traditions reference
+ * is surfaced as the LONG FORM (pp. 563–566) so people actually discover the
+ * complete text. This matters — Tradition Three's "no other affiliation" clause,
+ * the one that says no treatment center can own an A.A. group, exists ONLY in the
+ * Long Form. The short form (pp. 561–562) does not carry it, and the short form is
+ * all most people are ever shown.
+ *
+ * The DATA is untouched: p.563 is still the underlying record and still the jump
+ * target (pageButton uses firstLabel()). This is display only, so app-parity and
+ * the pipeline tests both hold.
+ */
 function knowledgeCardHtml(r) {
+  if (r.title === "Twelve Traditions") {
+    return `
+    <article class="bb-card bb-know bb-longform">
+      <div class="bb-card-head">
+        <span class="bb-badge">Long Form</span>
+        <span class="bb-cite">Appendix I · ${pageButton("563-566")}</span>
+      </div>
+      <p class="bb-know-title">The Twelve Traditions — Long Form</p>
+      <p class="bb-snippet">The complete, unabridged Traditions (pp. 563–566).</p>
+      <p class="bb-longform-note">Most people are only ever shown the <strong>short form</strong> (pp. 561–562). The Long Form is the full text — it is where Tradition Three states that alcoholics may call themselves an A.A. group “provided that, as a group, they have no other affiliation.”</p>
+    </article>`;
+  }
   return `
     <article class="bb-card bb-know">
       <div class="bb-card-head">
@@ -176,43 +201,45 @@ function render(query, state) {
     (r) => r.type === "Exact Match" || r.type === "Text Match"
   );
 
-  const blocks = [];
+  // Each section becomes ONE COLUMN of the results grid.
+  const col = (title, body) =>
+    `<section class="bb-group"><h2 class="bb-group-title">${title}</h2><div class="bb-group-body">${body}</div></section>`;
 
-  // 1. Direct page jump (if the whole query is a page reference)
+  let head = "";
+  const cols = [];
+
+  // A page jump renders FULL WIDTH above the columns — a page of text needs
+  // reading room — and (like the app) a jump skips the full-text list entirely.
   if (jump) {
     const view = pageViewHtml(jump.page);
-    if (view) blocks.push(`<section class="bb-group"><h2 class="bb-group-title">Jump to page ${esc(jump.page)}</h2>${view}</section>`);
+    if (view) head = `<section class="bb-group jump"><h2 class="bb-group-title">Jump to page ${esc(jump.page)}</h2>${view}</section>`;
   }
 
-  // 2. Quick answers
-  if (state.quick && state.quick.length) {
-    blocks.push(
-      `<section class="bb-group"><h2 class="bb-group-title">Quick answers</h2>${state.quick.map(quickCardHtml).join("")}</section>`
-    );
-  }
-
-  // 3. Steps, chapters & references (the app's knowledge layer)
+  // COLUMN 1 — THE ANSWER. Steps / chapters / references lead, on the left, so
+  // the truth is front-loaded: visible immediately, no scrolling, no hunting.
   if (knowledge.length) {
-    blocks.push(
-      `<section class="bb-group"><h2 class="bb-group-title">Steps, chapters &amp; references</h2>${knowledge.map(knowledgeCardHtml).join("")}</section>`
-    );
+    cols.push(col("Steps, chapters &amp; references", knowledge.map(knowledgeCardHtml).join("")));
   }
 
-  // 4. Full-text hits (skipped entirely on a page jump, like the app)
+  // COLUMN 2 — quick answers.
+  if (state.quick && state.quick.length) {
+    cols.push(col("Quick answers", state.quick.map(quickCardHtml).join("")));
+  }
+
+  // COLUMN 3 — full-text hits (skipped on a page jump, like the app).
   if (state.loading) {
-    blocks.push(`<section class="bb-group"><h2 class="bb-group-title">Searching the Big Book…</h2><div class="bb-skeleton"></div><div class="bb-skeleton"></div></section>`);
+    cols.push(col("Searching the Big Book…", `<div class="bb-skeleton"></div><div class="bb-skeleton"></div>`));
   } else if (full.length) {
-    blocks.push(
-      `<section class="bb-group"><h2 class="bb-group-title">In the Big Book</h2>${full.map(hitHtml).join("")}</section>`
-    );
-  } else if (!jump && !knowledge.length && (!state.quick || !state.quick.length)) {
-    blocks.push(
-      `<section class="bb-group"><p class="bb-noresults">No pages matched “${esc(query)}.” Try a word or short phrase from the text, a page number, or a topic like <em>resentment</em> or <em>acceptance</em>.</p></section>`
-    );
+    cols.push(col("In the Big Book", full.map(hitHtml).join("")));
   }
 
-  blocks.push(CTA);
-  results.innerHTML = blocks.join("");
+  let body = cols.length ? `<div class="bb-cols">${cols.join("")}</div>` : "";
+
+  if (!jump && !cols.length && !state.loading) {
+    body = `<section class="bb-group"><p class="bb-noresults">No pages matched “${esc(query)}.” Try a word or short phrase from the text, a page number, or a topic like <em>resentment</em> or <em>acceptance</em>.</p></section>`;
+  }
+
+  results.innerHTML = head + body + CTA;
 
   const counts = [
     jump ? "1 page" : "",

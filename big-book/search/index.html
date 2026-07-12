@@ -20,7 +20,7 @@
   {"@context":"https://schema.org","@type":"WebSite","name":"Recovery Starts — Big Book Search","url":"https://recoverystarts.com/big-book/search/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://recoverystarts.com/big-book/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which edition of the Big Book does the search cover?","acceptedAnswer":{"@type":"Answer","text":"The 4th Edition of Alcoholics Anonymous, from the Title Page through the Personal Stories and the appendices. Page numbers match the printed 4th Edition."}},{"@type":"Question","name":"Can I search by page number?","acceptedAnswer":{"@type":"Answer","text":"Yes. Type a page number like 417, page 83, or a Roman numeral like xxv and the search jumps straight to that page's text. Pages that are blank in the book resolve to the nearest printed page."}},{"@type":"Question","name":"Does the search include the 12 Traditions?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Twelve Traditions appear in the Big Book's Appendix I, The A.A. Tradition. The short form is on pages 561 to 562 and the Long Form runs pages 563 to 566. Searching '12 traditions' brings up page 563."}},{"@type":"Question","name":"Where is Step 12 in the Big Book?","acceptedAnswer":{"@type":"Answer","text":"Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which begins on page 89. Searching 'step 12' shows the Step text and points to Working With Others on page 89."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The search is free, needs no account, and sets no cookies. The search runs in your browser."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which edition of the Big Book does the search cover?","acceptedAnswer":{"@type":"Answer","text":"The 4th Edition of Alcoholics Anonymous, from the Title Page through the Personal Stories and the appendices. Page numbers match the printed 4th Edition."}},{"@type":"Question","name":"Can I search by page number?","acceptedAnswer":{"@type":"Answer","text":"Yes. Type a page number like 417, page 83, or a Roman numeral like xxv and the search jumps straight to that page's text. Pages that are blank in the book resolve to the nearest printed page."}},{"@type":"Question","name":"Does the search include the 12 Traditions?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Twelve Traditions appear in the Big Book's Appendix I, The A.A. Tradition. The short form is on pages 561 to 562 and the Long Form runs pages 563 to 566. Searching '12 traditions' brings up page 563."}},{"@type":"Question","name":"Where is Step 12 in the Big Book?","acceptedAnswer":{"@type":"Answer","text":"Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which runs pages 89 to 103. Searching 'step 12' shows the Step text and points to Working With Others, pages 89 to 103."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The search is free, needs no account, and sets no cookies. The search runs in your browser."}}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://recoverystarts.com/"},{"@type":"ListItem","position":2,"name":"Big Book","item":"https://recoverystarts.com/big-book/search/"},{"@type":"ListItem","position":3,"name":"Search the Big Book","item":"https://recoverystarts.com/big-book/search/"}]}
@@ -49,16 +49,32 @@
     .bb-chip { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); border-radius: 999px; padding: 7px 15px; font-size: 0.85rem; font-family: var(--font-body); cursor: pointer; transition: all 0.2s; }
     .bb-chip:hover { border-color: var(--border-hover); color: var(--gold); }
 
-    #bb-results { max-width: 720px; margin: 1.8rem auto 0; }
-    .bb-group { margin-bottom: 1.6rem; }
-    .bb-group-title { font-family: var(--font-display); color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 0.7rem; }
-    .bb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 10px; }
+    /* Results: three side-by-side columns. The ANSWER (steps / references)
+       leads on the left, so someone on a borrowed desktop with limited time
+       sees the truth immediately — no scrolling, no hunting. Columns auto-fit
+       (an empty section simply doesn't render, and the rest expand) and stack
+       to one column on mobile. */
+    #bb-results { max-width: 1280px; margin: 1.8rem auto 0; }
+    .bb-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; align-items: start; }
+    .bb-group { margin: 0; min-width: 0; }
+    .bb-group.jump { max-width: 860px; margin: 0 auto 1.2rem; }
+    .bb-group-body { max-height: 62vh; overflow-y: auto; padding-right: 5px; }
+    .bb-group-body::-webkit-scrollbar { width: 6px; }
+    .bb-group-body::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
+    .bb-group-title { font-family: var(--font-display); color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 0.6rem; }
+    .bb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; }
+    .bb-card.bb-longform { border-color: var(--gold); }
+    .bb-longform-note { color: var(--text-dim); font-size: 0.82rem; line-height: 1.55; margin: 7px 0 0; }
+    @media (max-width: 900px) {
+      .bb-cols { grid-template-columns: 1fr; }
+      .bb-group-body { max-height: none; overflow: visible; }
+    }
     .bb-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
     .bb-badge { font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--bg-deep); background: var(--gold); border-radius: 999px; padding: 3px 9px; }
     .bb-badge.subtle { color: var(--gold); background: var(--gold-glow); }
     .bb-cite { font-size: 0.8rem; color: var(--text-dim); }
-    .bb-quote { color: var(--text); line-height: 1.7; margin: 0; font-size: 1rem; }
-    .bb-snippet { color: var(--text-muted); line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .bb-quote { color: var(--text); line-height: 1.6; margin: 0; font-size: 0.95rem; }
+    .bb-snippet { color: var(--text-muted); line-height: 1.6; margin: 0; font-size: 0.9rem; }
     .bb-snippet mark, .bb-pagetext mark { background: var(--gold-glow-strong); color: var(--gold-light); border-radius: 3px; padding: 0 2px; }
     .bb-pagelink { background: none; border: none; color: var(--gold); font-family: var(--font-body); font-size: inherit; cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 2px; }
     .bb-pagelink:hover { color: var(--gold-light); }
@@ -206,7 +222,7 @@
         </div>
         <div class="bb-faq-item">
           <h3>Where is Step 12 in the Big Book?</h3>
-          <p>Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which begins on page 89. Searching "step 12" shows the Step text and points to Working With Others on page 89.</p>
+          <p>Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which runs <strong>pages 89–103</strong>. Searching "step 12" shows the Step text and points to Working With Others, pp. 89–103.</p>
         </div>
         <div class="bb-faq-item">
           <h3>Is it free?</h3>

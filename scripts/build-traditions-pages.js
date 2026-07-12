@@ -340,8 +340,9 @@ ${d.hypothetical ? HYP_NOTE : ""}
 ${traditionBlock(d.tradition, shortForm)}
 
       <div class="dt-chips">
-        <a href="/big-book/search/">Search the Big Book →</a>
+        <a href="/12-traditions/">What the Traditions actually say →</a>
         <a href="/big-book/page-563/">The Long Form, p. 563 →</a>
+        <a href="/big-book/search/">Search the Big Book →</a>
         <a href="/daily-tradition/">Every day this month →</a>
       </div>
 
@@ -480,6 +481,7 @@ const hubHtml = head({
       </div>
 
       <div class="dt-chips">
+        <a href="/12-traditions/">What the Traditions actually say →</a>
         <a href="/big-book/search/">Search the Big Book →</a>
         <a href="/big-book/pages/">The Big Book, page by page →</a>
         <a href="/daily-reflection/">Daily Reflection →</a>

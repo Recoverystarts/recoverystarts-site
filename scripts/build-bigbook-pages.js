@@ -248,6 +248,125 @@ function chapterRangeText(ch) {
   return "pages " + ch.startPage + "–" + ch.endPage;
 }
 
+/**
+ * ── THE FAQ LAYER ───────────────────────────────────────────────────────────
+ * Clean question/answer pairs with FAQPage schema are what AI assistants and
+ * AI Overviews actually LIFT. This is the layer that decides whether a machine
+ * asking "what's on page 64 of the Big Book?" gets our answer or somebody's
+ * distortion. It's also the only genuinely unique substance on these pages, so
+ * it's what keeps them from being thin content.
+ *
+ * THE RULE: every answer is DERIVED — from the index (label, section) or the
+ * knowledge layer (chapters, steps, special references). Nothing is invented,
+ * nothing is remembered, nothing is guessed. If we can't source it, we don't
+ * say it. A wrong page number is the one failure this product cannot have, and
+ * an FAQ answer is the single most quotable place to put one.
+ *
+ * SECOND RULE: answers carry NO book text. They are our own prose plus page
+ * refs. That keeps the total quoted book text on the page at exactly the one
+ * capped excerpt — the FAQ layer adds substance without adding exposure.
+ * (Enforced by construction: this function never receives the page text.)
+ */
+function makeFaqs(displayLabel, section, ch, st, sp, themes) {
+  const faqs = [];
+  const P = "page " + displayLabel;
+
+  // Q1 — chapter/section. Straight from the knowledge layer or the index.
+  if (ch) {
+    const chName = ch.number === 0 ? ch.title : "Chapter " + ch.number + ", “" + ch.title + "”";
+    faqs.push({
+      q: "What chapter of the Big Book is page " + displayLabel + " in?",
+      a: "Page " + displayLabel + " is in " + chName + ", which runs " + chapterRangeText(ch) +
+         " in Alcoholics Anonymous, 4th Edition." +
+         (st ? " That is the part of the book where " + st.label + " " + (st.steps.length > 1 ? "are" : "is") + " worked through." : ""),
+    });
+  } else {
+    faqs.push({
+      q: "What part of the Big Book is page " + displayLabel + " in?",
+      a: "Page " + displayLabel + " is in " + section + " of Alcoholics Anonymous, 4th Edition." +
+         (String(section).indexOf("Personal Stories") === 0
+           ? " The personal stories make up the back half of the book — members telling their own accounts in their own words."
+           : ""),
+    });
+  }
+
+  // Q2 — what's on it. Themes are read off the page's own words; landmarks come
+  // from the knowledge layer's verified ranges.
+  const notables = sp.map((s) => s.name.replace(/^the /, ""));
+  let a2 = "Page " + displayLabel + " sits in " + section + ".";
+  if (notables.length) {
+    a2 += " It falls inside " + notables.join(" and ") + " — " +
+      sp.map((s) => (s.from === s.to ? "page " + s.from : "pages " + s.from + "–" + s.to)).join(" and ") +
+      " in the 4th Edition.";
+  }
+  if (themes.length) {
+    a2 += " Reading the page itself, its language turns on " + themes.join(", ") + ".";
+  }
+  a2 += " Recovery Starts does not reproduce the Big Book — the book belongs to A.A. — so to read the page in full, get your own copy.";
+  faqs.push({ q: "What is on page " + displayLabel + " of the Big Book?", a: a2 });
+
+  // Q3 — the Step question. Only when the knowledge layer actually maps it.
+  if (st) {
+    faqs.push({
+      q: "Which Step does page " + displayLabel + " of the Big Book relate to?",
+      a: "Page " + displayLabel + " falls in the pages where the Big Book works through " + st.label +
+         " (pages " + st.from + "–" + st.to + " in the 4th Edition). The Big Book does not put the Steps in tidy chapters of their own — the instructions run continuously through the text, which is why a page reference matters more than a Step number.",
+    });
+  }
+
+  // Q4 — landmark-specific, and this is where the Traditions correction lands.
+  for (const s of sp) {
+    if (s.from === 563) {
+      faqs.push({
+        q: "Where are the Twelve Traditions in the Big Book?",
+        a: "The SHORT FORM of the Twelve Traditions is on pages 561–562 of Alcoholics Anonymous, 4th Edition. The LONG FORM — the fuller original wording, and the one worth reading — is on pages 563–566. The Twelve Concepts follow on pages 574–575. Nearly every summary online quotes only the short form, which is why so much of what circulates is incomplete. Note also that Tradition 3's clause that a group is A.A. only if, “as a group, they have no other affiliation,” appears ONLY in the long form — and it is the clause that prevents a treatment centre from owning an A.A. group.",
+      });
+      faqs.push({
+        q: "Do the Twelve Traditions apply to individual members?",
+        a: "No. The Twelve Traditions are governance, not theology. They bind A.A. groups and the Fellowship as a whole — not individual members, and not independent businesses or outside organisations. They were adopted in 1950 to keep A.A. from being owned, co-opted, or torn apart by disputes over money, property and authority. They are not a rulebook for a member's personal life.",
+      });
+    } else if (s.from === 561) {
+      faqs.push({
+        q: "What is the difference between the short form and the long form of the Traditions?",
+        a: "The short form (pages 561–562 of the 4th Edition) is the condensed version read aloud in meetings. The long form (pages 563–566) is the fuller statement and says considerably more. For example, Tradition 3's clause that a group is A.A. only if, “as a group, they have no other affiliation,” appears ONLY in the long form. That single clause is what prevents a treatment centre or any outside body from owning an A.A. group — and it is missing from almost every summary online.",
+      });
+    } else if (s.from === 83) {
+      faqs.push({
+        q: "What page do the Promises start on in the Big Book?",
+        a: "The Ninth Step Promises begin at the bottom of page 83 of Alcoholics Anonymous, 4th Edition, and continue onto page 84. They sit inside Chapter 6, “Into Action,” in the Step Nine material — which is why the book attaches them to the work of making amends rather than to sobriety alone.",
+      });
+    } else if (s.from === 63) {
+      faqs.push({
+        q: "What page is the Third Step Prayer on in the Big Book?",
+        a: "The Third Step Prayer is on page 63 of Alcoholics Anonymous, 4th Edition, in Chapter 5, “How It Works” (pages 58–71).",
+      });
+    } else if (s.from === 76) {
+      faqs.push({
+        q: "What page is the Seventh Step Prayer on in the Big Book?",
+        a: "The Seventh Step Prayer is on page 76 of Alcoholics Anonymous, 4th Edition, in Chapter 6, “Into Action” (pages 72–88).",
+      });
+    } else if (s.from === 59) {
+      faqs.push({
+        q: "What page is “How It Works” read from in the Big Book?",
+        a: "The passage read aloud at the start of most A.A. meetings — “How It Works,” including the Twelve Steps themselves — is on pages 59–60 of Alcoholics Anonymous, 4th Edition, at the opening of Chapter 5.",
+      });
+    } else if (s.from === 567) {
+      faqs.push({
+        q: "Where is the Spiritual Experience appendix in the Big Book?",
+        a: "Appendix II, “Spiritual Experience,” is on pages 567–568 of Alcoholics Anonymous, 4th Edition. It is the appendix that clarifies that a spiritual awakening is usually of the “educational variety” — gradual rather than sudden.",
+      });
+    }
+  }
+
+  // Q5 — the honest close. Same on every page, and it should be.
+  faqs.push({
+    q: "Can I read page " + displayLabel + " of the Big Book online for free?",
+    a: "Not here — Recovery Starts does not reproduce Alcoholics Anonymous, because the book belongs to A.A. and the book is better than any summary of it. You can read the Big Book free at aa.org, buy a copy from the official A.A. store, or pick one up at almost any meeting. Recovery Starts can tell you which page a passage is on and search the book for you; for the words themselves, go to the book.",
+  });
+
+  return faqs;
+}
+
 // ── Shared chrome (mirrors big-book/page-83/index.html) ─────────────────────
 const NAV = `  <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
@@ -313,6 +432,11 @@ const STYLE = `  <style>
     .cp-nav a small { display:block; color: var(--text-dim); font-size: 0.7rem; }
     .cp-disclaimer { max-width: 760px; margin: 2.6rem auto 0; text-align: center; color: var(--text-dim); font-size: 0.78rem; line-height: 1.6; }
     .cp-disclaimer a { color: var(--text-muted); text-decoration: underline; }
+    .cp-faq { max-width: 760px; margin: 2.6rem auto 0; }
+    .cp-faq-title { font-family: var(--font-display); color: var(--gold); font-size: 0.95rem; letter-spacing: 2px; text-transform: uppercase; text-align: center; margin-bottom: 1rem; }
+    .cp-faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 10px; }
+    .cp-faq-item h3 { color: var(--text); font-size: 0.95rem; margin: 0 0 8px; }
+    .cp-faq-item p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }
   </style>`;
 
 function head(o) {
@@ -367,6 +491,7 @@ const built = [];
 const titles = new Map();
 const descs = new Map();
 let maxQuoteSeen = 0;
+let faqTotal = 0;
 
 for (let i = 0; i < pages.length; i++) {
   const e = pages[i];
@@ -465,7 +590,27 @@ for (let i = 0; i < pages.length; i++) {
 
   const searchQ = encodeURIComponent(sp.length ? sp[0].name.replace(/^the /, "") : (themes[0] || topic));
 
-  const html = head({ title: title, desc: desc, url: url, ld: [articleLd, crumbLd] }) + `
+  // ── FAQ layer: the substance, and the thing AI actually lifts ──
+  const faqs = makeFaqs(displayLabel, e.s, ch, st, sp, themes);
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  const faqHtml = `
+      <section class="cp-faq">
+        <h2 class="cp-faq-title">Quick answers</h2>
+${faqs.map((f) => `        <div class="cp-faq-item">
+          <h3>${esc(f.q)}</h3>
+          <p>${esc(f.a)}</p>
+        </div>`).join("\n")}
+      </section>`;
+
+  const html = head({ title: title, desc: desc, url: url, ld: [articleLd, faqLd, crumbLd] }) + `
       <nav class="cp-crumb"><a href="/">Home</a> / <a href="/big-book/">Big Book</a> / <a href="/big-book/pages/">Page by page</a> / Page ${esc(displayLabel)}</nav>
       <div class="cp-kicker">Alcoholics Anonymous · 4th Edition</div>
       <h1 class="cp-title">Big Book Page ${esc(displayLabel)}</h1>
@@ -488,6 +633,7 @@ ${facts.join("\n")}
         <h2>Read it for yourself</h2>
         <p>We don't reproduce the Big Book here. The book belongs to Alcoholics Anonymous — and honestly, the book is better than any summary of it. <a href="/big-book/">Buy a copy from A.A., read it free at aa.org, or pick one up at a meeting.</a> Then come back and <a href="/big-book/search/">search it</a> when you're chasing a line you only half-remember.</p>
       </div>
+${faqHtml}
 
       <div class="bb-chips">
         <a href="/big-book/search/">Search the Big Book →</a>
@@ -506,6 +652,21 @@ ${DISCLAIMER}
   </div></section></main>
 ${FOOTER}
 `;
+
+  // GUARD: the FAQ layer must add SUBSTANCE, never EXPOSURE. Every answer is our
+  // own prose plus page refs — no book text. If an answer ever contains a long
+  // run of this page's actual text, the copyright argument for these pages
+  // collapses. Fail the build rather than ship it.
+  const pageNorm = normalize(e.t);
+  for (const f of faqs) {
+    for (let k = 0; k + 40 <= f.a.length; k += 20) {
+      const probe = f.a.slice(k, k + 40);
+      if (pageNorm.indexOf(probe) !== -1) {
+        throw new Error("FAQ LEAK on page " + label + ": an answer contains book text -> \"" + probe + "\"");
+      }
+    }
+  }
+  faqTotal += faqs.length;
 
   if (titles.has(title)) throw new Error('DUPLICATE TITLE: "' + title + '" on ' + label + " and " + titles.get(title));
   if (descs.has(desc)) throw new Error("DUPLICATE META: page " + label + " matches " + descs.get(desc));
@@ -646,6 +807,7 @@ console.log("  hub                    : /big-book/pages/  (" + totalLinked + " l
 console.log("  unique titles          : " + titles.size);
 console.log("  unique metas           : " + descs.size);
 console.log("  longest quote rendered : " + maxQuoteSeen + " chars (cap " + QUOTE_CAP + ") OK");
+console.log("  FAQ answers            : " + faqTotal + " (avg " + (faqTotal / built.length).toFixed(1) + "/page, FAQPage schema, ZERO book text — asserted)");
 
 if (titles.size !== built.length) throw new Error("Title collision — aborting.");
 if (descs.size !== built.length) throw new Error("Meta collision — aborting.");

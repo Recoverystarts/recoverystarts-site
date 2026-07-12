@@ -55,6 +55,10 @@ for (const p of bb.pages) {
   if (addUrl(`${SITE}/big-book/${slug}/`, "0.5", "yearly", path.join("big-book", slug)) === "added") bbAdded++;
 }
 
+// The canonical Traditions correction page — the highest-priority page on the
+// site for the mission (it's what we want AI to lift), so it gets top priority.
+addUrl(`${SITE}/12-traditions/`, "1.0", "monthly", "12-traditions");
+
 // Daily Traditions
 const dt = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
 addUrl(`${SITE}/daily-tradition/`, "0.9", "daily", "daily-tradition");

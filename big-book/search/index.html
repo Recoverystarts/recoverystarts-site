@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search the Big Book of Alcoholics Anonymous (4th Edition) — Free</title>
+  <meta name="description" content="Free, instant search of the Big Book of Alcoholics Anonymous, 4th Edition. Type a word, a phrase, a page number, or a Step — get the exact page, chapter, and passage. No account, no tracking.">
+  <meta property="og:title" content="Search the Big Book of Alcoholics Anonymous (4th Edition) — Free">
+  <meta property="og:description" content="Type a word, a phrase, a page number, or a Step and jump straight to the page in the Big Book. Free. No account.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recoverystarts.com/big-book/search/">
+  <meta property="og:site_name" content="Recovery Starts">
+  <meta property="og:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Search the Big Book of Alcoholics Anonymous (4th Edition) — Free">
+  <meta name="twitter:description" content="Type a word, a phrase, a page number, or a Step and jump straight to the page. Free. No account.">
+  <meta name="twitter:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <link rel="canonical" href="https://recoverystarts.com/big-book/search/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Recovery Starts — Big Book Search","url":"https://recoverystarts.com/big-book/search/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://recoverystarts.com/big-book/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which edition of the Big Book does the search cover?","acceptedAnswer":{"@type":"Answer","text":"The 4th Edition of Alcoholics Anonymous, from the Title Page through the Personal Stories and the appendices. Page numbers match the printed 4th Edition."}},{"@type":"Question","name":"Can I search by page number?","acceptedAnswer":{"@type":"Answer","text":"Yes. Type a page number like 417, page 83, or a Roman numeral like xxv and the search jumps straight to that page's text. Pages that are blank in the book resolve to the nearest printed page."}},{"@type":"Question","name":"Does the search include the 12 Traditions?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Twelve Traditions appear in the Big Book's Appendix I, The A.A. Tradition. The short form is on pages 561 to 562 and the Long Form runs pages 563 to 566. Searching '12 traditions' brings up page 563."}},{"@type":"Question","name":"Where is Step 12 in the Big Book?","acceptedAnswer":{"@type":"Answer","text":"Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which begins on page 89. Searching 'step 12' shows the Step text and points to Working With Others on page 89."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The search is free, needs no account, and sets no cookies. The search runs in your browser."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://recoverystarts.com/"},{"@type":"ListItem","position":2,"name":"Big Book","item":"https://recoverystarts.com/big-book/search/"},{"@type":"ListItem","position":3,"name":"Search the Big Book","item":"https://recoverystarts.com/big-book/search/"}]}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .bb-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
+    .bb-wrap { padding: clamp(1.5rem,4vw,3rem) 0 4rem; }
+    .bb-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1rem; }
+    .bb-crumb a { color: var(--text-muted); }
+    .bb-kicker { color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; text-align: center; }
+    .bb-title { font-family: var(--font-display); color: var(--text); text-align: center; font-size: clamp(1.9rem,5vw,2.7rem); line-height: 1.15; margin: 8px 0 6px; }
+    .bb-sub { text-align: center; color: var(--text-muted); margin: 0 auto 1.8rem; max-width: 620px; }
+
+    .bb-searchwrap { max-width: 720px; margin: 0 auto; }
+    .bb-box { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border-hover); border-radius: 999px; padding: 6px 6px 6px 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+    .bb-box:focus-within { border-color: var(--gold); }
+    .bb-box svg { flex-shrink: 0; color: var(--text-dim); }
+    #bb-input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-family: var(--font-body); font-size: 1.05rem; padding: 10px 0; min-width: 0; }
+    #bb-input::placeholder { color: var(--text-dim); }
+    #bb-clear { display: none; background: none; border: none; color: var(--text-dim); cursor: pointer; padding: 6px; border-radius: 50%; }
+    #bb-clear:hover { color: var(--text); }
+
+    .bb-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px auto 0; max-width: 720px; }
+    .bb-chip-label { width: 100%; text-align:center; color: var(--text-dim); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2px; }
+    .bb-chip { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); border-radius: 999px; padding: 7px 15px; font-size: 0.85rem; font-family: var(--font-body); cursor: pointer; transition: all 0.2s; }
+    .bb-chip:hover { border-color: var(--border-hover); color: var(--gold); }
+
+    #bb-results { max-width: 720px; margin: 1.8rem auto 0; }
+    .bb-group { margin-bottom: 1.6rem; }
+    .bb-group-title { font-family: var(--font-display); color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 0.7rem; }
+    .bb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 10px; }
+    .bb-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+    .bb-badge { font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--bg-deep); background: var(--gold); border-radius: 999px; padding: 3px 9px; }
+    .bb-badge.subtle { color: var(--gold); background: var(--gold-glow); }
+    .bb-cite { font-size: 0.8rem; color: var(--text-dim); }
+    .bb-quote { color: var(--text); line-height: 1.7; margin: 0; font-size: 1rem; }
+    .bb-snippet { color: var(--text-muted); line-height: 1.7; margin: 0; font-size: 0.95rem; }
+    .bb-snippet mark, .bb-pagetext mark { background: var(--gold-glow-strong); color: var(--gold-light); border-radius: 3px; padding: 0 2px; }
+    .bb-pagelink { background: none; border: none; color: var(--gold); font-family: var(--font-body); font-size: inherit; cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 2px; }
+    .bb-pagelink:hover { color: var(--gold-light); }
+    .bb-pagelink.strong { font-weight: 600; text-decoration: none; }
+    .bb-know-title { color: var(--text); font-weight: 600; font-size: 1rem; margin: 0 0 4px; }
+    .bb-pamphlets { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; }
+    .bb-pamphlets-lbl { width: 100%; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); }
+    .bb-pamphlet { font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 12px; color: var(--text-muted); }
+    .bb-pamphlet:hover { border-color: var(--border-hover); color: var(--gold); }
+    .bb-pagetext { color: var(--text-muted); line-height: 1.8; font-size: 0.92rem; max-height: 420px; overflow-y: auto; padding-right: 6px; }
+    .bb-skeleton { height: 54px; border-radius: var(--radius); background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%); background-size: 200% 100%; animation: bbshimmer 1.2s infinite; margin-bottom: 10px; }
+    @keyframes bbshimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+    .bb-noresults { color: var(--text-muted); line-height: 1.7; text-align: center; }
+    .bb-cta { text-align: center; margin: 2rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--border); }
+    .bb-cta p { color: var(--text-muted); margin-bottom: 0.9rem; }
+
+    .bb-empty { text-align: center; max-width: 620px; margin: 2rem auto 0; }
+    .bb-empty .q { font-family: var(--font-display); color: var(--text); font-size: 1.15rem; font-style: italic; line-height: 1.5; }
+    .bb-empty .qa { color: var(--gold); font-size: 0.85rem; margin-top: 6px; }
+
+    .bb-section { max-width: 900px; margin: 3rem auto 0; }
+    .bb-section h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.15rem; text-align: center; margin-bottom: 1rem; }
+    .bb-topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 10px; }
+    .bb-topic { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--text-muted); font-size: 0.9rem; transition: all 0.2s; }
+    .bb-topic:hover { border-color: var(--border-hover); color: var(--gold); transform: translateY(-2px); }
+    .bb-trad { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1.2rem,3vw,2rem); }
+    .bb-trad p { color: var(--text-muted); line-height: 1.75; margin-bottom: 0.9rem; }
+    .bb-trad strong { color: var(--text); }
+    .bb-trad .bb-pamphlets { justify-content: flex-start; }
+    .bb-faq-list { max-width: 760px; margin: 0 auto; text-align: left; }
+    .bb-faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 10px; }
+    .bb-faq-item h3 { color: var(--text); font-size: 0.98rem; margin: 0 0 6px; }
+    .bb-faq-item p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }
+    .bb-disclaimer { max-width: 720px; margin: 2.4rem auto 0; text-align: center; color: var(--text-dim); font-size: 0.78rem; line-height: 1.6; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
+</head>
+<body>
+  <div class="bb-bg"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/meetings/">Meetings</a></li>
+      <li><a href="/aa-info/">AA Info</a></li>
+      <li><a href="/daily-reflection/">Daily Reflection</a></li>
+      <li><a href="/12-steps/">The 12 Steps</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
+      <li><a href="/download/" class="nav-cta">Get the App</a></li>
+    </ul>
+  </div></nav>
+
+  <main id="main"><section class="bb-wrap"><div class="container">
+    <nav class="bb-crumb"><a href="/">Home</a> / Big Book / Search</nav>
+    <div class="bb-kicker">The Big Book · 4th Edition</div>
+    <h1 class="bb-title">Search the Big Book of Alcoholics Anonymous</h1>
+    <p class="bb-sub">Type a word, a phrase, a page number, or a Step. Jump straight to the page, chapter, and passage — with the exact wording highlighted. Free, no account, nothing to install.</p>
+
+    <div class="bb-searchwrap">
+      <label for="bb-input" class="sr-only">Search the Big Book</label>
+      <div class="bb-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="bb-input" type="search" placeholder="Try “resentment”, “half measures”, “step 12”, or “417”…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+        <button id="bb-clear" type="button" aria-label="Clear search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="bb-suggestions" class="bb-chips">
+        <div class="bb-chip-label">Try a search</div>
+        <button class="bb-chip" data-q="resentment">resentment</button>
+        <button class="bb-chip" data-q="how to take inventory">how to take inventory</button>
+        <button class="bb-chip" data-q="powerlessness">powerlessness</button>
+        <button class="bb-chip" data-q="making amends">making amends</button>
+        <button class="bb-chip" data-q="step 12">step 12</button>
+        <button class="bb-chip" data-q="12 traditions">12 traditions</button>
+        <button class="bb-chip" data-q="417">page 417</button>
+      </div>
+    </div>
+
+    <p id="bb-status" class="sr-only" role="status" aria-live="polite"></p>
+
+    <div id="bb-empty" class="bb-empty">
+      <p class="q">“Rarely have we seen a person fail who has thoroughly followed our path.”</p>
+      <p class="qa">— How It Works, p. 58</p>
+    </div>
+
+    <div id="bb-results"></div>
+
+    <!-- Crawlable core content: present in the initial HTML so the page is
+         useful and indexable even before the search engine loads. -->
+    <div class="bb-section">
+      <h2>Popular passages in the Big Book</h2>
+      <div class="bb-topic-grid">
+        <a class="bb-topic" href="/big-book/powerlessness/">Powerlessness (Step 1)</a>
+        <a class="bb-topic" href="/big-book/resentment/">Resentment — the number one offender</a>
+        <a class="bb-topic" href="/big-book/fear-inventory/">The fear inventory</a>
+        <a class="bb-topic" href="/big-book/step-4-instructions/">Step 4 instructions</a>
+        <a class="bb-topic" href="/big-book/how-it-works/">How It Works (p. 58)</a>
+        <a class="bb-topic" href="/big-book/amends/">Making amends</a>
+        <a class="bb-topic" href="/big-book/the-promises/">The Promises (pp. 83–84)</a>
+        <a class="bb-topic" href="/big-book/acceptance/">Acceptance (p. 417)</a>
+        <a class="bb-topic" href="/big-book/self-will/">Self-will</a>
+        <a class="bb-topic" href="/big-book/spiritual-experience/">Spiritual experience</a>
+        <a class="bb-topic" href="/big-book/daily-reprieve/">The daily reprieve (p. 85)</a>
+        <a class="bb-topic" href="/big-book/carrying-the-message/">Carrying the message (Step 12)</a>
+        <a class="bb-topic" href="/big-book/sponsorship/">Sponsorship in the Big Book</a>
+        <a class="bb-topic" href="/big-book/page-83/">Page 83</a>
+        <a class="bb-topic" href="/big-book/more-will-be-revealed/">More will be revealed</a>
+        <a class="bb-topic" href="/12-steps/">The 12 Steps — index</a>
+      </div>
+    </div>
+
+    <div class="bb-section" id="traditions">
+      <h2>The 12 Traditions (Appendix I)</h2>
+      <div class="bb-trad">
+        <p>The Twelve Traditions live in the Big Book's <strong>Appendix I, “The A.A. Tradition.”</strong> The short form is on <strong>pages 561–562</strong>; the <strong>Long Form runs pages 563–566</strong>. Search <em>“12 traditions”</em> above to jump to page 563.</p>
+        <p>The Traditions are <strong>governance</strong> — organizational and structural principles about money, authority, membership, public relations, and autonomy. They are not about God or a higher power. “Group conscience” means the group's collective decision; the older phrase “a loving God … in our group conscience” means no single person is in charge — not a theological claim.</p>
+        <p><strong>Tradition Three, Long Form:</strong> “Any two or three alcoholics gathered together for sobriety may call themselves an A.A. group, provided that, as a group, they have no other affiliation.” No treatment center, facility, or institution can own or authorize an A.A. group.</p>
+        <div class="bb-pamphlets">
+          <span class="bb-pamphlets-lbl">Read the Traditions</span>
+          <a class="bb-pamphlet" href="https://www.aa.org/twelve-traditions-alcoholics-anonymous-long-form" target="_blank" rel="noopener">SMF-187 — The Twelve Traditions (Long Form) · aa.org</a>
+          <a class="bb-pamphlet" href="https://www.aa.org/experience-has-taught-us-introduction-our-twelve-traditions" target="_blank" rel="noopener">P-91 — An Introduction to Our Twelve Traditions · aa.org</a>
+          <a class="bb-pamphlet" href="https://www.aa.org/twelve-traditions-illustrated" target="_blank" rel="noopener">P-43 — The Twelve Traditions Illustrated · aa.org</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bb-section" id="faq">
+      <h2>Common questions</h2>
+      <div class="bb-faq-list">
+        <div class="bb-faq-item">
+          <h3>Which edition of the Big Book does the search cover?</h3>
+          <p>The 4th Edition of Alcoholics Anonymous, from the Title Page through the Personal Stories and the appendices. Page numbers match the printed 4th Edition.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>Can I search by page number?</h3>
+          <p>Yes. Type a page number like 417, page 83, or a Roman numeral like xxv and the search jumps straight to that page's text. Pages that are blank in the book resolve to the nearest printed page.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>Does the search include the 12 Traditions?</h3>
+          <p>Yes. The Twelve Traditions appear in the Big Book's Appendix I, The A.A. Tradition. The short form is on pages 561 to 562 and the Long Form runs pages 563 to 566. Searching "12 traditions" brings up page 563.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>Where is Step 12 in the Big Book?</h3>
+          <p>Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which begins on page 89. Searching "step 12" shows the Step text and points to Working With Others on page 89.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>Is it free?</h3>
+          <p>Yes. The search is free, needs no account, and sets no cookies. The search runs in your browser.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="bb-disclaimer">This is an independent educational search tool over <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition. It is not official AA literature and not medical advice. Page references are to the printed 4th Edition. If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>
+  </div></section></main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Independent recovery awareness project. Not affiliated with any fellowship.</p></div>
+        <div><h4>Navigate</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/meetings/">Meetings</a></li><li><a href="/daily-reflection/">Daily Reflection</a></li><li><a href="/steps/">The 12 Steps</a></li><li><a href="/big-book/search/">Search the Big Book</a></li><li><a href="/download/">Recovery Einstein</a></li></ul></div>
+        <div><h4>AA Resources</h4><ul class="footer-links"><li><a href="/aa-info/">AA Info</a></li><li><a href="/big-book/search/#traditions">12 Traditions</a></li><li><a href="https://www.aa.org" target="_blank" rel="noopener">aa.org</a></li></ul></div>
+        <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <div class="privacy-notice"><strong>Privacy:</strong> No cookies. No cross-site tracking. Anonymous, cookie-free page counts only; the search itself runs in your browser. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
+  <script type="module" src="/assets/bigbook/searchApp.js"></script>
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

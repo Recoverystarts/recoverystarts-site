@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Daily Tradition | Recovery Starts</title>
+  <meta name="description" content="Read today's Daily Tradition — one reading a day on A.A.'s Twelve Traditions, grounded in the Long Form (pp. 563–566).">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://recoverystarts.com/daily-tradition/">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // Auto-redirect to today's reading. Falls back to the hub if that month
+    // isn't published yet (only July / Tradition 7 is live today).
+    var MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+    var LIVE = ["july"];
+    var now = new Date();
+    var month = MONTHS[now.getMonth()];
+    var day = now.getDate();
+    if (LIVE.indexOf(month) !== -1) {
+      window.location.replace('/daily-tradition/' + month + '-' + day + '/');
+    } else {
+      window.location.replace('/daily-tradition/');
+    }
+  </script>
+</head>
+<body>
+  <main><div class="container" style="padding:80px 20px;text-align:center">
+    <p>Opening today's Tradition…</p>
+    <p><a href="/daily-tradition/">Daily Traditions →</a></p>
+  </div></main>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
+</body>
+</html>

@@ -108,13 +108,29 @@ for (const lbl of ["277", "433", "165"]) {
 }
 ok("blank/short pages (i, 165, 277, 433) correctly skipped");
 
-// page-83 must be byte-identical to main.
+// ── page-83 is HAND-WRITTEN and better than a generated page. Its CONTENT must
+// never be clobbered by a generator.
+//
+// The old version of this check demanded the whole FILE be byte-identical to
+// main — which meant it also failed when the site-wide nav fix legitimately
+// touched the header. A guard that fires on the fixes you want isn't a guard,
+// it's noise, and noise gets switched off.
+//
+// So: the guard now protects what it was actually there to protect — the curated
+// CONTENT. Chrome (nav, footer) may change site-wide; the article may not.
 const { execSync } = require("child_process");
 try {
-  const diff = execSync("git diff main --stat -- big-book/page-83/", { cwd: ROOT }).toString().trim();
-  if (diff) bad("page-83 was MODIFIED — it must be preserved:\n" + diff);
-  else ok("page-83 (curated) is byte-identical to main — preserved");
-} catch (e) { warn.push("could not git-diff page-83: " + e.message); }
+  const mainVer = execSync("git show main:big-book/page-83/index.html", { cwd: ROOT }).toString();
+  const nowVer = fs.readFileSync(path.join(ROOT, "big-book", "page-83", "index.html"), "utf8");
+  const body = (s) => {
+    const m = s.match(/<main[^>]*>([\s\S]*?)<\/main>/);
+    return m ? m[1].replace(/\s+/g, " ").trim() : null;
+  };
+  const a = body(mainVer), b = body(nowVer);
+  if (!a || !b) warn.push("could not isolate page-83 <main> for comparison");
+  else if (a !== b) bad("page-83's CURATED CONTENT was modified — the generator must never clobber it");
+  else ok("page-83 (curated): content byte-identical; only site-wide chrome changed — preserved");
+} catch (e) { warn.push("could not compare page-83 against main: " + e.message); }
 
 console.log("\n=== 2. DAILY TRADITIONS ===\n");
 
@@ -246,7 +262,37 @@ if (/search-index\.json['"]/.test(app)) bad("searchApp.js still fetches the publ
 if (!/\/api\/bigbook-search/.test(app)) bad("searchApp.js is not wired to the server-side search API");
 ok("search UI renders snippets + page cards only — it cannot print a page");
 
-console.log("\n=== 5. HOMEPAGE ===\n");
+console.log("\n=== 5. ONE NAV, ON EVERY PAGE ===\n");
+
+// The nav drifted: 1,039 pages were missing "The 12 Traditions", and /big-book/
+// and 404.html had NO nav at all — you could land there with no way back into
+// the site. Every generator carried its own copy of the header. Now there is one
+// (scripts/fix-nav.js) and this proves it reached every page.
+const REQUIRED_NAV = ["/", "/meetings/", "/aa-info/", "/daily-reflection/", "/daily-tradition/",
+                      "/12-traditions/", "/12-steps/", "/big-book/", "/about/", "/download/"];
+const SKIP_NAV = new Set(["googlee7fbd843aaac14fe.html"]);
+let navPages = 0, navBad = 0;
+(function walkNav(dir) {
+  for (const name of fs.readdirSync(dir)) {
+    if (["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"].includes(name)) continue;
+    const p = path.join(dir, name);
+    if (fs.statSync(p).isDirectory()) { walkNav(p); continue; }
+    if (!name.endsWith(".html") || SKIP_NAV.has(name)) continue;
+    const s = fs.readFileSync(p, "utf8");
+    if (/window\.location\.replace/.test(s) && s.length < 3000) continue;  // redirect stubs
+    navPages++;
+    const nav = (s.match(/<ul class="nav-links">[\s\S]*?<\/ul>/) || [""])[0];
+    const missing = REQUIRED_NAV.filter((h) => !nav.includes(`href="${h}"`));
+    if (missing.length) {
+      navBad++;
+      if (navBad <= 3) bad(path.relative(ROOT, p).replace(/\\/g, "/") + " — nav missing: " + missing.join(", "));
+    }
+  }
+})(ROOT);
+if (navBad === 0) ok(`all ${navPages} pages carry the same ${REQUIRED_NAV.length}-link nav (no orphan pages)`);
+else bad(`${navBad} page(s) have a broken or missing nav`);
+
+console.log("\n=== 6. HOMEPAGE ===\n");
 const home = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 if (!/href="\/big-book\/pages\/"/.test(home)) bad("homepage: no link to the Big Book library");
 if (!/href="\/daily-tradition\/"/.test(home)) bad("homepage: no link to Daily Traditions");

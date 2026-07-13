@@ -1,51 +1,46 @@
+const fs = require("fs");
 const B = "https://feat-seo-buildout.recoverystarts-site.pages.dev";
 const cb = "?cb=" + Date.now();
+const TRAD = JSON.parse(fs.readFileSync("data/twelve-traditions.json", "utf8"));
+
+const dec = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
 (async () => {
-  console.log("PREVIEW: " + B + "\n");
+  const h = dec(await (await fetch(B + "/12-traditions/" + cb)).text());
 
-  console.log("=== /12-traditions/ — the canonical correction page ===");
-  const r = await fetch(B + "/12-traditions/" + cb);
-  const h = await r.text();
-  console.log("  status: " + r.status + "   " + (h.length / 1024).toFixed(0) + " KB");
+  console.log("LIVE: " + B + "/12-traditions/\n");
+  console.log("=== IS EVERY TRADITION ON THE LIVE PAGE, WORD FOR WORD? ===\n");
 
-  const ld = [...h.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)].map((m) => JSON.parse(m[1]));
-  const faq = ld.find((x) => x["@type"] === "FAQPage");
-  console.log("  FAQPage schema: " + (faq ? faq.mainEntity.length + " Q&A pairs, machine-readable" : "MISSING"));
-  if (faq) faq.mainEntity.slice(0, 4).forEach((q, i) => console.log("    " + (i + 1) + ". " + q.name));
-
-  console.log("\n  doctrine present on the live page:");
-  const checks = [
-    ["governance, not theology", /governance/i],
-    ["nothing to do with God or a higher power", /nothing to do with God/i],
-    ["binds groups, not individuals", /not a rulebook for a member/i],
-    ["Tradition 3 'no other affiliation'", /no other affiliation/i],
-    ["short form 561-562", /561–562/],
-    ["LONG FORM 563-566", /563–566/],
-    ["Concepts 574-575", /574–575/],
-    ["does NOT republish the Traditions", /quote only short clauses/i],
-  ];
-  for (const [name, rx] of checks) console.log("    " + (rx.test(h) ? "yes" : "NO !!") + "  " + name);
-
-  console.log("\n=== FAQ layer on the Big Book pages ===");
-  for (const p of ["/big-book/page-563/", "/big-book/page-64/", "/big-book/page-83/"]) {
-    const t = await (await fetch(B + p + cb)).text();
-    const l = [...t.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)].map((m) => JSON.parse(m[1]));
-    const f = l.find((x) => x["@type"] === "FAQPage");
-    console.log("  " + p.padEnd(24) + (f ? f.mainEntity.length + " FAQ pairs" : "no FAQPage") + "   (page-83 is the curated one)");
+  let ok = 0;
+  for (const t of TRAD.traditions) {
+    const s = h.indexOf(t.short) !== -1;
+    const l = h.indexOf(t.long) !== -1;
+    if (s && l) ok++;
+    console.log(
+      "  T" + String(t.n).padStart(2) +
+      "   short: " + (s ? "VERBATIM" : "MISSING!") +
+      "   long: " + (l ? "VERBATIM" : "MISSING!") +
+      "   (" + t.long.length + " chars)"
+    );
   }
+  console.log("\n  " + ok + "/12 Traditions published in FULL, BOTH FORMS, verbatim.\n");
 
-  const t563 = await (await fetch(B + "/big-book/page-563/" + cb)).text();
-  const l563 = [...t563.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)].map((m) => JSON.parse(m[1]));
-  const f563 = l563.find((x) => x["@type"] === "FAQPage");
-  console.log("\n  What a machine reads off page 563:");
-  f563.mainEntity.forEach((q) => console.log("    Q: " + q.name));
+  console.log("=== TRADITION 3, LONG FORM — LIVE ON THE PAGE ===\n");
+  const t3 = TRAD.traditions[2].long;
+  console.log("  " + t3.replace(/(.{78}\s)/g, "$1\n  "));
+  console.log("\n  ^ 'as a group, they have no other affiliation' — on the open web: " + (h.includes("as a group, they have no other affiliation") ? "YES" : "NO"));
 
-  console.log("\n=== nothing broke ===");
-  for (const p of ["/", "/daily-tradition/", "/big-book/pages/", "/big-book/search/", "/daily-reflection/july-12/", "/12-steps/"]) {
-    const x = await fetch(B + p, { redirect: "manual" });
-    console.log("  " + x.status + "  " + p);
+  console.log("\n=== ATTRIBUTION ===");
+  for (const [n, rx] of [
+    ["property of A.A.W.S.", /property of Alcoholics Anonymous World Services/],
+    ["not an A.A. group", /not an A\.A\. group/],
+    ["A.A. has not endorsed this", /has not approved, endorsed, or reviewed/],
+    ["FAQPage schema", /"@type":"FAQPage"/],
+  ]) console.log("  " + (rx.test(h) ? "yes" : "NO!") + "  " + n);
+
+  console.log("\n=== NOTHING ELSE BROKE ===");
+  for (const p of ["/", "/daily-tradition/", "/big-book/pages/", "/big-book/search/", "/aa-info/"]) {
+    const r = await fetch(B + p, { redirect: "manual" });
+    console.log("  " + r.status + "  " + p);
   }
-  const gone = await fetch(B + "/bigbook/search-index.json" + cb);
-  console.log("  " + gone.status + "  /bigbook/search-index.json  (410 = the book is still gone)");
 })();

@@ -119,7 +119,11 @@ try {
 console.log("\n=== 2. DAILY TRADITIONS ===\n");
 
 const dt = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
-const srcMd = fs.readFileSync("D:\\Forge\\research\\daily-traditions\\PILOT-T7-month.md", "utf8");
+// The approved source is VENDORED INTO THE REPO (data/readings-source.md), not
+// read off D:\Forge. A build that can only verify itself when an external drive
+// happens to be plugged in is not verified — it's lucky. Regenerate with
+// scripts/vendor-source.js.
+const srcMd = fs.readFileSync(path.join(ROOT, "data", "readings-source.md"), "utf8");
 
 let dtDrift = 0, dtChecked = 0;
 const dtTitles = new Set();
@@ -136,7 +140,7 @@ for (const day of dt.days) {
   const rendered = unesc(bodyM[1].replace(/<\/?em>/g, "*")).trim();
   if (srcMd.indexOf(rendered) === -1) {
     dtDrift++;
-    bad(`${slug}: rendered reading DRIFTED from PILOT-T7-month.md`);
+    bad(`${slug}: rendered reading DRIFTED from the approved source`);
   }
   dtChecked++;
 

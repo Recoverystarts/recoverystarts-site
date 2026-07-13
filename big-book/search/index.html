@@ -84,7 +84,12 @@
     .bb-pamphlets-lbl { width: 100%; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); }
     .bb-pamphlet { font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 12px; color: var(--text-muted); }
     .bb-pamphlet:hover { border-color: var(--border-hover); color: var(--gold); }
-    .bb-pagetext { color: var(--text-muted); line-height: 1.8; font-size: 0.92rem; max-height: 420px; overflow-y: auto; padding-right: 6px; }
+    /* .bb-pagetext is gone: a page jump no longer prints the page's text.
+       It hands off to the page's reference card and to the app instead. */
+    .bb-page-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 12px; }
+    .bb-page-actions .btn { font-size: 0.9rem; padding: 9px 16px; }
+    .bb-page-note { color: var(--text-dim); font-size: 0.82rem; line-height: 1.6; margin: 0; }
+    .bb-page-note a { color: var(--gold); }
     .bb-skeleton { height: 54px; border-radius: var(--radius); background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%); background-size: 200% 100%; animation: bbshimmer 1.2s infinite; margin-bottom: 10px; }
     @keyframes bbshimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
     .bb-noresults { color: var(--text-muted); line-height: 1.7; text-align: center; }
@@ -123,6 +128,7 @@
       <li><a href="/meetings/">Meetings</a></li>
       <li><a href="/aa-info/">AA Info</a></li>
       <li><a href="/daily-reflection/">Daily Reflection</a></li>
+      <li><a href="/daily-tradition/">Daily Tradition</a></li>
       <li><a href="/12-steps/">The 12 Steps</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
@@ -135,6 +141,7 @@
     <div class="bb-kicker">The Big Book · 4th Edition</div>
     <h1 class="bb-title">Search the Big Book of Alcoholics Anonymous</h1>
     <p class="bb-sub">Type a word, a phrase, a page number, or a Step. Jump straight to the page, chapter, and passage — with the exact wording highlighted. Free, no account, nothing to install.</p>
+    <p class="bb-sub" style="margin-top:-0.6rem"><a href="/big-book/pages/" style="color:var(--gold)">Or browse the book page by page →</a></p>
 
     <div class="bb-searchwrap">
       <label for="bb-input" class="sr-only">Search the Big Book</label>

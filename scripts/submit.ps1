@@ -1,6 +1,6 @@
 if (-not $env:windir) { $env:windir = $env:SystemRoot }
 
-$key   = ((Get-Content 'C:\Users\addic\Desktop\claude-tools\secrets\cloudflareglobal-api-key.txt' | Where-Object { $_.Trim() -ne '' })[0]).Trim()
+$key   = (((Get-Content 'C:\Users\addic\Desktop\claude-tools\secrets\cloudflareglobal-api-key.txt') | Where-Object { $_ -match '^CLOUDFLARE_GLOBAL_API_KEY=' } | Select-Object -First 1) -replace '^CLOUDFLARE_GLOBAL_API_KEY=','').Trim()
 $email = 'dmccorriston2222@proton.me'
 $zone  = '2a1a8a947509b994006e545316201f8d'
 $H = @{ 'X-Auth-Email' = $email; 'X-Auth-Key' = $key; 'Content-Type' = 'application/json' }
@@ -32,7 +32,7 @@ if ($rb -match 'Disallow: /scripts/') { Write-Output '  /scripts/ /tests/ /data/
 
 Write-Output ''
 Write-Output '=== 3. IndexNow - tell the engines the pages exist, right now ==='
-$indexKey = 'd4af37recoverystarts2026'
+$indexKey = (Get-Content (Join-Path $PSScriptRoot '..\.indexnow-key') -Raw).Trim()  # valid hex key; the old non-hex key made IndexNow 403
 $sitemap = (Invoke-WebRequest -Uri "https://recoverystarts.com/sitemap.xml?cb=$bust" -UseBasicParsing).Content
 $urls = [regex]::Matches($sitemap, '<loc>(.*?)</loc>') | ForEach-Object { $_.Groups[1].Value }
 Write-Output ('  sitemap has ' + $urls.Count + ' URLs')

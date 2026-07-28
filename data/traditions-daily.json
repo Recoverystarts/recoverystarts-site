@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-12",
-  "source": "PILOT-T7-month.md (GATE 2 approved)",
+  "source": "data/traditions-source.md (GATE 2 approved: July T7 + August T8)",
   "doctrine": {
     "note": "The Traditions are GOVERNANCE, not theology. They bind A.A. groups and the Fellowship — not individuals, and not independent businesses.",
     "shortForm": {
@@ -16,6 +16,9 @@
   "traditions": {
     "7": {
       "shortForm": "Every A.A. group ought to be fully self-supporting, declining outside contributions."
+    },
+    "8": {
+      "shortForm": "Alcoholics Anonymous should remain forever nonprofessional, but our service centers may employ special workers."
     }
   },
   "days": [
@@ -390,6 +393,378 @@
       "body": "Imagine A.A. had never adopted Tradition 7 at all. The big gifts get taken. The wealthy donors get their say. The treatment centers fund the meetings and then run them. The name goes up for sale, and fights over money split group after group. Within a generation, \"A.A.\" means whatever the people paying for it want it to mean. That's the future the Tradition was written to prevent — not from theory, but from near-misses A.A. actually lived. The rule is the scar. The scar is why we're still here.",
       "sitWith": "What in my life is worth protecting before I lose it, not after?",
       "groundedIn": "Long form (\"experience has taught us\"); AA Comes of Age."
+    },
+    {
+      "key": "august-1",
+      "month": "august",
+      "day": 1,
+      "tradition": 8,
+      "title": "The Shingle",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a member who decides to charge for it. He is good at this — years sober, dozens of people carried through, a real gift for the work. So he rents a small office and puts a sign on the door. Nothing about it is illegal. Nothing about it is even unkind; the people who come to him get better. Bill W. wrote that sign himself. In *A.A. Tradition — How It Developed*, he imagined the office and the door and the exact words on it: \"Bill W. — Alcoholics Anonymous Therapist. Charges $10.00 per hour.\" Then he named what it was, without flinching: \"That would be face-to-face treatment of alcoholism for a fee.\" And he named what it did to the Fellowship whose name was on the door: \"And I would surely be trading on the name of Alcoholics Anonymous, a purely amateur organization, to enlarge my professional practice.\" Then came the verdict, and it is the sentence this whole month turns on: \"It would be quite legal, but hardly ethical.\" Legal was never the bar. The Tradition does not ask whether a thing is permitted. It asks what the thing does to the room it was taken out of. A man with a rate card is doing something that looks identical from the outside and is not the same thing at all. He has a fee schedule, a caseload, a livelihood. He has, in the plainest sense, something to lose. And the moment the person across from him becomes someone he can lose, the one thing A.A. had to offer — a man with nothing to sell — is gone from the room, and neither of them will notice it leave.",
+      "sitWith": "What changes in a conversation the moment one person is being paid to have it?",
+      "groundedIn": "P-17; long form, Tradition 8."
+    },
+    {
+      "key": "august-2",
+      "month": "august",
+      "day": 2,
+      "tradition": 8,
+      "title": "The Night They Told Him No",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn that sign around and you find the night it did not get hung. It is 1937. Bill is broke, Lois is working the department store, and the house is full of drunks who are not paying board. Charlie Towns calls him into the office and makes him an offer: \"I'll give you an office, a decent drawing account, and a very healthy slice of the profits. What I propose is perfectly ethical.\" Then the closer: \"You can become a lay therapist, and more successful than anybody in the business.\" Bill's own account is honest to the point of discomfort. \"There was nothing wrong whatever with becoming a lay therapist.\" He thought of Lois. He thought of his creditors. On the subway home a verse arrived like guidance — \"The laborer is worthy of his hire\" — and his mind was made up. Then he told the group. They sat there. And one of them said, almost timidly, \"that you can never become a professional?\" — and then found his footing: \"You tell us that Charlie's proposal is ethical. Sure, it's ethical. But what we've got won't run on ethics only; it has to be better.\" And finally: \"This is a matter of life and death, Bill, and nothing but the very best will do.\" He reminded Bill of his own line — \"sometimes the good is the enemy of the best.\" Bill wrote afterward: \"Thus spoke the group conscience. The group was right and I was wrong; the voice on the subway was not the voice of God.\" Tradition 8 is not an idea somebody had. It is the scar from that living room.",
+      "sitWith": "When has the good thing been the enemy of the best thing, in my life?",
+      "groundedIn": "AA Comes of Age (the Towns offer; the group conscience); P-43."
+    },
+    {
+      "key": "august-3",
+      "month": "august",
+      "day": 3,
+      "tradition": 8,
+      "title": "Fuzzy Thinking",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Picture a group that argues about \"professionalism\" for a year without ever defining the word. The intergroup wants to pay someone to answer the phone; half the room says that is professionalizing A.A. The literature chair is offered a stipend; the same argument, louder. A member takes a job at a hospital and people stop talking to him at coffee. Nobody can say what the word means, so it comes to mean whatever the most frightened person in the room needs it to mean — and the group ends up policing its own without a single sentence of the Tradition in hand. Bill knew that room from the inside, and he did not exempt himself from it. \"On this subject we have all done a pile of fuzzy thinking. And I would be one of the first to plead guilty to that charge.\" He was also honest about where the fog came from, and it was not greed. \"The reason for our fuzzy thinking is the usual one — it is fear.\" Fear of losing the one thing that had actually worked. \"The slightest thought of marring our ideal, much less bartering it for gold, is to most of us unthinkable.\" That fear is not shameful; Bill said he was rather glad of the vigilance, and so should we be. But vigilance without a definition is not vigilance. It is suspicion with a clear conscience. An undefined word cannot govern anything — it can only wound, and it will always wound whoever is easiest to reach. A group that will not define professionalism will eventually accuse the wrong person of it, on a Thursday night, in front of everyone, and go home feeling it has protected something.",
+      "sitWith": "What word am I using as a weapon without being able to define it?",
+      "groundedIn": "P-17 (fuzzy thinking; the fear underneath it)."
+    },
+    {
+      "key": "august-4",
+      "month": "august",
+      "day": 4,
+      "tradition": 8,
+      "title": "A Definition, Not a Mood",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Reverse it, and here is what the Long Form actually does — the thing almost nothing written about this Tradition bothers to do. It defines the word. \"We define professionalism as the occupation of counseling alcoholics for fees or hire.\" Ten words. Read them slowly, because they are doing two jobs at once. First, they draw a boundary A.A. can actually enforce: not a feeling, not a mood, not a suspicion about somebody's motives — an occupation, with fees, with hire. You can point at it. You can hold a thing up against it and get an answer. Second — and this is the part people walk straight past — that sentence is also, word for word, a description of an entire industry. A.A. did not stumble into that phrasing. It looked squarely at the thing it could have become, wrote down its name in plain commercial language, and then said: not us. Never us. That is what \"should remain forever nonprofessional\" is attached to. Not an aspiration toward humility. A defined occupation, refused on purpose, forever. And because the definition is precise, it also protects the innocent: everything that is *not* the occupation of counseling alcoholics for fees or hire is not professionalism, no matter how much money moves around it. The definition is the fence, and a fence keeps things out and lets things live. Without it, every paid janitor is a suspect and every member with a job in the field is on trial. With it, the line is a line — and a line can be walked, honestly, in daylight, by anyone.",
+      "sitWith": "Where would I be freer if I knew exactly where the line was?",
+      "groundedIn": "Long form, Tradition 8 (pp. 563–566)."
+    },
+    {
+      "key": "august-5",
+      "month": "august",
+      "day": 5,
+      "tradition": 8,
+      "title": "The Going Rate",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a group that solves its Twelfth-Step problem with money. Nobody wants the 2 a.m. calls, so the group votes a stipend — a modest one, forty dollars a call, paid to whoever goes. It works immediately. The calls get answered. Now watch what happens over the next year, because this is the whole mechanism of the Tradition and it has nothing to do with anyone's motives. A price now exists. Which means there is a going rate. Which means the man who goes out at 2 a.m. for nothing is no longer a member doing what members do — he is a man working for free, in a room where that job pays. He looks like a mug, or an amateur, or someone angling for something. So he stops. Not out of greed. Out of arithmetic. And the newcomer who would have gone next year never starts, because he has learned that carrying the message is a paid position and he has not been hired. The free version does not lose a competition with the paid version. It evaporates, quietly, and takes the Fellowship with it — because a Fellowship is nothing but people doing for free the one thing that cannot be bought. A.A. found this out the hard way, more than once, and wrote down the finding: \"Every time we have tried to professionalize our Twelfth Step, the result has been exactly the same; our single purpose has been defeated.\" Not sometimes. Not usually. Exactly the same. Pay one person to carry the message and eventually no one will carry it for nothing — and the moment it has a price, it stops doing the thing it was for.",
+      "sitWith": "What have I stopped doing freely because someone started getting paid for it?",
+      "groundedIn": "AA Comes of Age (professionalizing the Twelfth Step); long form, Tradition 8."
+    },
+    {
+      "key": "august-6",
+      "month": "august",
+      "day": 6,
+      "tradition": 8,
+      "title": "The Sentence That Only Works If It's True",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Flip it and you find why the free version is not a nice tradition but a load-bearing wall. Here is what an A.A. can say, and no one else on earth can: \"No, I'm not a social worker. I don't get paid for talking with you. I'm doing it because it's the best way to stay sober myself.\" That sentence is the entire product. It disarms the man on the other side of the kitchen table completely, and it does so for one reason only — it is true. Take a fee and it is still grammatical, but it is no longer a sentence; it is a claim you cannot make. The Big Book had already named the conditions before there was a Tradition to protect them. What reaches the new prospect, it says, is that there are \"no fees to pay, no axes to grind, no people to please, no lectures to be endured\" — and those, it adds, are the conditions found most effective. Then, a line later, the finding that should end every argument about scaling this work: \"None of us makes a sole vocation of this work, nor do we think its effectiveness would be increased if we did.\" Not that we shouldn't. That it *wouldn't work.* The unpaid amateur is not a budget version of the professional. He is a different instrument entirely, and the thing that gives him his power is precisely the thing a paycheque would remove. In A.A.'s service offices, people are paid, properly, for real jobs. But for the newcomer a staff member takes to a meeting that night, P-43 is exact about the wage: \"they are paid only with their own continuing sobriety.\" That is not a smaller wage. It is the only one that buys anything.",
+      "sitWith": "What can I offer someone precisely because I am not getting anything for it?",
+      "groundedIn": "P-43; Big Book, \"There Is a Solution\" (p. 19); long form, Tradition 8."
+    },
+    {
+      "key": "august-7",
+      "month": "august",
+      "day": 7,
+      "tradition": 8,
+      "title": "Scaling the Message",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine A.A. decides to be sensible about it. The demand is enormous and the volunteers are exhausted, so the Fellowship trains a corps of paid carriers — good people, sober people, properly supervised — and sends them out to do Twelfth-Step work full time. On paper it is obviously better. More calls answered. Consistent quality. Nobody burning out. The only problem with the plan is that A.A. has run the experiment. \"Early in the game we discovered that under no conditions should an A.A. be paid for taking or carrying this message to somebody else, person to person and face to face. That was out.\" And then Bill wrote the line that should stop the plan where it stands: \"If professionalism ever invaded us at that level, we were doomed.\" Not weakened. Doomed. Because the paid carrier arrives having been sent, and the newcomer can feel the difference before a word is spoken — the difference between a man who came because it is his job and a man who came because he could not stay sober otherwise. Everything A.A. has rests on the second man. Scale him and you have not multiplied him. You have replaced him with something that wears his clothes. And the strangest part of the arithmetic is that the plan does not fail slowly, or ambiguously, or differently each time. It fails identically: \"our single purpose has been defeated.\" The efficient version of A.A. is not a stronger A.A. It is a smaller organisation, doing something else, under the same name, and getting good reviews.",
+      "sitWith": "What have I tried to make more efficient and accidentally made pointless?",
+      "groundedIn": "AA Comes of Age (professionalism at the Twelfth-Step level)."
+    },
+    {
+      "key": "august-8",
+      "month": "august",
+      "day": 8,
+      "tradition": 8,
+      "title": "Not a Verdict on Doctors",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn that over, carefully, because this is where the Tradition gets misused most often — as a stick to beat professionals with. It is not that, and it never was. Read what A.A. actually said about itself: \"at the point of professionalism money and spirituality do not mix.\" And then, immediately, in the very next breath, the sentence almost nobody quotes: \"We do not decry professionalism in other fields, but we accept the sober fact that it does not work for us.\" That is not a moral judgement on counsellors, doctors, nurses, or therapists. It is a structural finding about one Fellowship, made by that Fellowship, about the one specific thing it does. Surgeons should be paid. Psychiatrists should be paid. The nurse who sat with us on the worst night of our lives should be paid, and paid well, and A.A. says so out loud rather than sniffing at the people who take a wage for healing. What A.A. claims is narrower and stranger: *this particular act* — one drunk sitting with another, person to person and face to face — stops working when it is bought. Not because money is dirty. Because the act was never a service being delivered; it was one man staying alive by helping another, and you cannot pay a man to need something. Get this distinction wrong and Tradition 8 curdles into contempt for anyone with a credential, which is neither what it says nor what it is for. Get it right and it becomes what it is: a Fellowship being honest about the one thing it cannot sell without destroying.",
+      "sitWith": "Where have I turned a limit on myself into a judgement on someone else?",
+      "groundedIn": "AA Comes of Age (money and spirituality; other fields)."
+    },
+    {
+      "key": "august-9",
+      "month": "august",
+      "day": 9,
+      "tradition": 8,
+      "title": "Volunteers Only",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a group that takes the first half of the Tradition and throws the second half away. Nonprofessional forever — so nobody gets paid for anything, ever. No paid secretary. No paid caretaker. Purity, at last. And for about six months it is beautiful. Then the phone at the central office starts ringing at hours when the volunteer is at work. The literature order sits in a box. The meeting list goes stale, and a man who has finally decided to try drives across town to a church basement that has been dark for a year, and sits in the car park, and then drives home. Somebody has to do the grubby, unglamorous, relentless work, and there is a reason the Fellowship stopped pretending otherwise. P-43 puts the arithmetic plainly: there is \"too great a volume of work to be done in spare hours here and there, and only the rich or the retired could afford to work full-time as volunteers.\" Read that twice. A volunteers-only A.A. is not a humbler A.A. It is an A.A. staffed exclusively by people who do not need money — which is to say, an A.A. quietly run by the comfortable. And if you then need someone actually equipped for a particular job, \"obviously the field would be narrowed down — too often, down to nobody at all.\" The purity is not free. Somebody pays for it. It is usually the drunk who called the office at four in the morning and listened to it ring.",
+      "sitWith": "Whose unpaid labour am I quietly depending on to keep something \"pure\"?",
+      "groundedIn": "P-43 (the limits of volunteers); short form, Tradition 8."
+    },
+    {
+      "key": "august-10",
+      "month": "august",
+      "day": 10,
+      "tradition": 8,
+      "title": "Old Tom Was Right",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Flip it, and the answer is a fireman named Tom. The old clubhouse on Twenty-Fourth Street was a mess. Volunteers painted it and answered the phone and then went home, and the place stayed filthy, and drunks slept in it at all hours and in all conditions. \"Plainly enough we needed a caretaker.\" So they went after Tom, who had a pension and therefore, they figured, no leverage. They offered him a nice room. Seven days a week. Make the coffee, walk out the bad ones, sweep the place. Tom listened to the whole pitch and said what you would say: what you guys want is a janitor. They agreed that they did. And then Tom asked whether they were going to pay him anything, and A.A. — young, frightened, and very sure of itself — said no, because \"that would make you a professional. This is Alcoholics Anonymous. We must not mix money with spirituality.\" Tom's reply is one of the most useful sentences in our literature: \"no money, no work. I'm doing my Twelfth Step work free, but if you're going to have me here as a janitor, you're going to pay me, see?\" There it is. The entire Tradition, from a man with a broom, years before anyone thought to write it down. He would carry the message for nothing, forever, and he said so. He would not sweep the floor for nothing. Bill's verdict, written long after they had haggled the old man down to the last cent they could: \"But old Tom was right. In order for A.A. to function, we had to hire some help.\"",
+      "sitWith": "What am I asking someone to do for free that I would never do for free myself?",
+      "groundedIn": "AA Comes of Age (old Tom and the clubhouse); long form, Tradition 8."
+    },
+    {
+      "key": "august-11",
+      "month": "august",
+      "day": 11,
+      "tradition": 8,
+      "title": "The Sponsor Who Bills",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Picture a sponsor who starts charging. It begins reasonably — his time is real, he has been at this twenty years, and the men he takes through the Steps get sober. So there is a monthly figure now, and a schedule, and a message that says he can fit you in Thursday. Watch what it does to the room, because it does not change a single word that gets said. It changes who is sitting in the chair. A sponsee is a man you can tell the truth to, because you have nothing to lose by losing him. A client is a man you can lose. And a man you can lose is a man you begin, without ever once deciding to, to handle. The hard sentence gets softened. The uncomfortable question waits until next week. The inventory that would send him out the door does not get asked for, because the door now has a number attached to it. Nothing corrupt has happened here. No one is a villain, and the sponsor would be appalled to be told what he is doing. The relationship has simply acquired an interest, and an interest bends everything it touches by a degree or two — and two degrees, held for a year, is a different destination entirely. A.A. drew this line before it drew almost any other: \"no A.A. should ever ask or accept payment for\" — and then it named the act precisely — \"carrying this message to somebody else, person to person and face to face.\" That is what sponsorship *is.* It is the message, carried, face to face. There is no version of it with an invoice attached that is still it.",
+      "sitWith": "Who can I tell the truth to only because I have nothing to lose by losing them?",
+      "groundedIn": "P-43; long form, Tradition 8; AA Comes of Age."
+    },
+    {
+      "key": "august-12",
+      "month": "august",
+      "day": 12,
+      "tradition": 8,
+      "title": "Nothing to Sell",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn it back over. The sponsor's whole authority — every bit of it — comes from the fact that he has no product. He is not qualified. He is not credentialed. He cannot be fired, and he cannot be paid, and he wants nothing from you that you have the power to withhold. This is not a limitation the Fellowship tolerates. It is the source of the power. A.A. found the words for it in an old line and used them exactly: \"Freely you have received, freely give.\" Look at what that does to a room. The man across the table cannot buy your approval and cannot lose it. He cannot pay his way past the fourth step. He cannot fire you for saying the thing nobody else in his life will say to him. And you, for your part, cannot dress self-interest up as care, because there is no interest to dress — you are there for the plainest reason in the book: \"Helping others is the foundation stone of your recovery.\" You need him. Not his money, not his gratitude, not his good opinion. You need the act itself, or you will drink. That is the whole arrangement, and it is why it holds when everything else has failed: two men, neither of whom can purchase a thing from the other, one of whom is only still breathing because of the conversation. Every professional relationship on earth has a transaction underneath it somewhere. This one has a debt — and the debt runs forward, and it is paid, every time, to the next man through the door.",
+      "sitWith": "What have I been given freely that I have never passed on?",
+      "groundedIn": "AA Comes of Age (\"Freely you have received, freely give\"); Big Book, \"Working With Others\" (p. 97)."
+    },
+    {
+      "key": "august-13",
+      "month": "august",
+      "day": 13,
+      "tradition": 8,
+      "title": "A Credential That Does Not Exist",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a practice that advertises the one thing it must not: *counselling by an A.A. member.* The membership is the selling point. It is right there in the listing, because it works — a man deciding where to spend money he does not have will choose the one who has been where he is. And that is exactly why A.A. forbids it, and forbids it in the flattest language Bill ever used about anything: \"no one ought to advertise himself as an A.A. therapist. As we are strictly amateur there can be no such thing.\" Read that twice. Not *should not.* Cannot. There is no such job. A.A. does not certify, license, ordain, or authorise anyone to do anything whatsoever, so an A.A. credential is not a credential being misused — it is a credential that does not exist, being sold anyway. And what is actually on sale in that listing is not the man's skill, which may be considerable. It is the Fellowship's reputation: built over ninety years by hundreds of thousands of people who were paid nothing for building it, borrowed by one, and converted into a rate. Bill saw the whole mechanism in his own imagined office door: \"And I would surely be trading on the name of Alcoholics Anonymous, a purely amateur organization, to enlarge my professional practice.\" That is the harm, and it is a harm even when the counselling is excellent. Especially then — because the better it works, the more of the name gets spent, and the name was never the practitioner's to spend. It belongs to the man who is not in the room yet.",
+      "sitWith": "What am I tempted to trade on that was never mine to trade?",
+      "groundedIn": "P-17 (there can be no such thing as an A.A. therapist)."
+    },
+    {
+      "key": "august-14",
+      "month": "august",
+      "day": 14,
+      "tradition": 8,
+      "title": "Set the Hat Down",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Now the correction, because Tradition 8 gets used as a stick against members who take honest jobs, and that misreading has a cost. A.A. does not bar you from the field. Bill was emphatic: \"Surely no A.A. should be barred from such employment because of his membership with us.\" Nurses, doctors, social workers, educators, researchers — A.A. members fill these jobs, and A.A. says so approvingly: \"If an A.A. member, acting as a citizen, can become a better researcher, educator, or personnel officer, why not? Everybody gains, and we have lost nothing.\" So where is the line? Not at the paycheque. At the name. Bill's image is worth keeping: \"As the tennis player has to drop his amateur status when he turns professional so should A.A.s who become therapists cease publishing their A.A. connection.\" You do not lose the job. You set the hat down at the door. And this is not a loophole — it is the opposite of one, because the conditions are explicit and they are strict. His own summary states the first: \"that A.A.s going into alcohol therapy should never trade on their A.A. connection.\" And when he looked directly at paid recovery ventures, he named the terms under which they could stand at all — they continue \"just as long as they are tactfully managed, do not carry the A.A. name, and do not publicly solicit funds as A.A. enterprises.\" No name. No fundraising under the name. Do the work, take the wage, and leave the Fellowship out of the advertising entirely. When members *were* accused of professionalism for taking such jobs, Bill was blunt about what the real offence had been in every case: \"The violation in these instances was not professionalism at all; it was breaking anonymity.\"",
+      "sitWith": "Which hat am I wearing right now — and did I check it at the door?",
+      "groundedIn": "P-17 (the tennis player; the conditions); AA Comes of Age (the violation was anonymity)."
+    },
+    {
+      "key": "august-15",
+      "month": "august",
+      "day": 15,
+      "tradition": 8,
+      "title": "Paid in Gratitude",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine an intergroup that pays its one employee almost nothing, on principle. She is a member. She answers the phone, keeps the meeting list current, mails literature to two prisons, and takes the calls that come in at closing time from people who are not going to make it to a meeting tonight and want to tell someone so. The wage is a fraction of what the job is worth, and everyone is comfortable with that, because it is *service* — a privilege, really, and she should be glad of it. Nobody ever says this out loud. It does not need to be said; it is simply the air in the room. Now watch what it costs. She stays two years and leaves quietly, worn out, and takes six years of institutional memory out the door with her. The next one lasts a year. After that the office runs on a rotating cast of the temporary and the desperate, the meeting list drifts out of date, and the man who calls at closing time gets a recording asking him to try again during business hours. Not one Tradition was violated in the course of this. It was all done in the *name* of a Tradition. And here is the part the group never quite noticed: it was not being humble. It was buying its own comfort with somebody else's wage — because underpaying her let everyone else go on believing the office ran on spirit alone. It did not. It ran on her, and then it stopped.",
+      "sitWith": "What am I calling humility that is really someone else going without?",
+      "groundedIn": "P-43 (service-centre pay); A.A. Service Manual (special workers); long form, Tradition 8."
+    },
+    {
+      "key": "august-16",
+      "month": "august",
+      "day": 16,
+      "tradition": 8,
+      "title": "Well Recompensed",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn it over and read the clause that gets dropped. The Long Form does not merely permit paid workers; it says how to pay them. \"Such special services may be well recompensed.\" *Well.* Not adequately. Not sacrificially. Well. And P-43 goes further, in a sentence that reverses the whole instinct: a service centre \"maintains A.A. humility by paying its employees decent wages — rather than considering A.A. so virtuous an outfit that employment there is a favor.\" Sit with that, because it inverts what most of us assume. Paying properly is the *humble* act. Underpaying is the arrogant one — because underpaying assumes the Fellowship is such a fine thing that the privilege of serving it is itself a form of compensation, which is only another way of saying we are too spiritual to owe anybody anything. A.A. does not believe that about itself, and it never has. At the General Service Office, \"The employees, both A.A. and nonalcoholic, are paid on a scale comparable to that in profit-making enterprises, so that the office force can function dependably.\" Dependably. That is the word carrying the weight. The phone gets answered at four in the morning because somebody is properly employed to make certain that it does. This is what people miss when they read Tradition 8 as a vow of poverty. It is not one. It is a working agreement, and it has two halves: the message is carried free, forever, by everyone — and the machinery that makes the carrying possible is staffed by people who are paid like adults.",
+      "sitWith": "Where does paying properly cost me less than the loyalty I expected for free?",
+      "groundedIn": "Long form, Tradition 8; P-43 (decent wages; the GSO pay scale)."
+    },
+    {
+      "key": "august-17",
+      "month": "august",
+      "day": 17,
+      "tradition": 8,
+      "title": "The Man With the Drying-Out House",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a member who runs a small place where drunks can dry out. It is his own venture, not the group's — no A.A. name on the sign, no A.A. money in it, no A.A. anything except the man himself and what he knows. He charges, because there is rent and food and a night attendant, and because it is his living and he has children. And the group turns on him. Word goes round that he is professionalizing. That he is making money out of A.A. Nobody quite says it to his face; it simply becomes a thing that is *known* about him, the way things become known, and after a while he stops coming on Thursdays because he is tired of being the subject of the meeting he is sitting in. Then watch what the group does next, because this is the part that ought to keep us honest. It keeps using him. It sends him the worst cases — the ones nobody wants to sit up with, the ones who need to be somewhere by tonight, the ones with nowhere else — and it promises to settle the bill, and it does not always settle the bill. He is professionalizing when they are talking about him, and he is the answer when they need somewhere to put a man at midnight. Both of these things are true in the same group, in the same month, and nobody feels the contradiction — because the accusation felt like principle, and the dumping felt like a favour they were doing him.",
+      "sitWith": "Who do I look down on and lean on at the same time?",
+      "groundedIn": "P-17 (the A.A. manager; the accusation of professionalizing)."
+    },
+    {
+      "key": "august-18",
+      "month": "august",
+      "day": 18,
+      "tradition": 8,
+      "title": "Nonsense, Bill Called It",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Reverse it, and find Bill W. standing squarely in front of that man. He knew the accusation, and he named it for what it usually is. \"It is difficult for the A.A. manager to charge high enough rates to make the venture include a fair living for himself.\" And if he does, Bill writes, people are apt to say that he is professionalizing — that he is making money out of A.A. Then the verdict: \"Nonsense though this may often be, it is a severe handicap nevertheless.\" *Nonsense.* That is the founder of Alcoholics Anonymous, defending a man for charging enough to eat. And then he turns, without pausing for breath, on his own people: \"When a place has an A.A. in charge we sometimes do take thoughtless advantage of the fact. We dump alcoholics into it just to get them off our hands; we promise to pay bills and do not.\" That is written about us. Not about him. And then a line that ought to be read aloud in every group that has ever whispered about somebody's job: \"It is a hard and often thankless job though it may bring him deep spiritual satisfaction.\" What Bill would not do is leave the terms vague. Such a venture stands, he says, as long as it is \"tactfully managed, do not carry the A.A. name, and do not publicly solicit funds as A.A. enterprises.\" There is the line, drawn by the man who wrote the Tradition. Not: you may not be paid to help drunks. But: you may not do it wearing our name, and you may not raise money in our name. Everything past that is his business, his risk, and his rent.",
+      "sitWith": "Have I ever accused someone of a principle I was only uncomfortable with?",
+      "groundedIn": "P-17 (the fair living; the conditions; the thankless job)."
+    },
+    {
+      "key": "august-19",
+      "month": "august",
+      "day": 19,
+      "tradition": 8,
+      "title": "A.A. Inc., Hospital Division",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine A.A. builds its own hospitals. Not a wild idea — a sensible one, and the obvious next step in 1937: the Fellowship has a method that works and no beds to work it in, so it builds beds, hires staff, and does the thing properly, at scale, with trained people. Follow it forward twenty years. A.A. now owns real estate and carries payroll. It has admissions, and admissions require revenue, and revenue requires a rate, and a rate requires somebody whose job it is to defend the rate — so A.A. has become, without any single person ever choosing it, a provider of treatment for money. Which is precisely the occupation its own Tradition would later define, and refuse. And the meeting in the church basement is now a referral channel for the hospital that owns the building. The remarkable thing is how close this came to being the actual history — not a thought experiment, a vote. Eighteen members met at T. Henry Williams' house in Akron and decided the future of the Fellowship, and the majority \"felt that we now needed our own hospitals with paid workers and, above all, a book for other alcoholics that could explain to them our methods and results.\" The motion carried. Bill was sent to New York to raise the money. \"This would require considerable money — millions perhaps.\" A.A. did not decline to become an industry out of virtue. It voted to become one, and then went out looking for the funding.",
+      "sitWith": "What obvious, sensible next step would have quietly ended the thing it was meant to grow?",
+      "groundedIn": "P-44 (the Akron vote; hospitals with paid workers)."
+    },
+    {
+      "key": "august-20",
+      "month": "august",
+      "day": 20,
+      "tradition": 8,
+      "title": "The Parenthesis",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn it over, and the whole of Alcoholics Anonymous survives inside a pair of brackets. Having described that vote — the hospitals, the paid workers, the millions they went looking for — Bill adds, in an aside, almost as a footnote, the sentence that may be the most important in the entire service history: \"We didn't know that millions would have ruined us even more than no money at all.\" That is a man looking back at a disaster he was spared. Not avoided. *Spared.* The money did not come. Rockefeller gave a little and refused, firmly, to give more. The hospital chain was never built, the paid staff were never hired, and the Fellowship was forced to stay small, unpaid, unowned, and structurally incapable of billing anyone for anything — which is the reason there is still an A.A. left to argue about. This is what Tradition 8 is written *from.* Not a theory about money. A memory of a bullet that missed. And it is why the Tradition's second clause is bounded so carefully: service centres may employ special workers, and A.A. may pay them well, but A.A. does not own the beds, does not deliver the treatment, and holds no revenue line anywhere that depends on an alcoholic remaining an alcoholic. Look how much of this Fellowship's freedom is downstream of one cheque that was refused. A.A. is not poor by accident, and it is not poor by virtue. It is poor by the narrowest margin in its history — and it has spent seventy years making sure that margin was written down.",
+      "sitWith": "What did I not get, that I have since been saved by not getting?",
+      "groundedIn": "P-44 (millions would have ruined us); AA Comes of Age."
+    },
+    {
+      "key": "august-21",
+      "month": "august",
+      "day": 21,
+      "tradition": 8,
+      "title": "But She Talks to Newcomers All Day",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a group that finally works out what has been bothering it about the intergroup secretary. She is paid. And what does she actually do all day? She talks to alcoholics. Shaky men call the office and she stays on the line with them, tells them where to go tonight, hears things they have not told anybody. That is Twelfth-Step work, and she is drawing a wage for it, and the Tradition says our usual A.A. Twelfth-Step work is never to be paid for. It is a clean argument. It is even a sincere one, made by people who love this Fellowship. So the position is cut, on principle, and the office goes to a volunteer rota, and within a year the phone is a recording. This is not an imaginary failure. The cry is old, and A.A. has heard it before, and Bill wrote it down exactly as it was shouted: \"Professionalism! That guy is making money out of A.A.!\" And in the same breath he gave the answer — the plain fact the accusation never once bothers to check. Not one of the accused had been \"hired to do A.A.'s Twelfth Step work.\" Not one. That is what makes this the most dangerous misreading of Tradition 8 there is. It sounds exactly like the Tradition. It uses the Tradition's own vocabulary, in the Tradition's own cadence, with the Tradition's own conviction. And it aims all of it at the one person in the structure who was hired precisely so that the Twelfth Step could go on happening for free.",
+      "sitWith": "What have I dismantled with an argument that was almost right?",
+      "groundedIn": "AA Comes of Age (cries of professionalism); long form, Tradition 8."
+    },
+    {
+      "key": "august-22",
+      "month": "august",
+      "day": 22,
+      "tradition": 8,
+      "title": "Paving the Way",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Reverse it, and P-43 answers the question head-on — because it is the obvious question, and A.A. has never dodged it. Central offices are busy enough now to need full-time employees, and A.A. members are better suited to those jobs than anybody else. \"but are these A.A.'s then being paid for doing Twelfth Step work? No. In the office, they are just paving the way for this work.\" That is the distinction the entire Tradition rests on, and it is worth saying slowly. She is not paid to carry the message. She is paid to make it possible for the message to be carried by somebody who is not being paid. \"Arranging to get a sick drunk into a hospital, telling a shaky newcomer where the nearest meeting is tonight\" — that is logistics, in the service of a Twelfth Step that still, at the actual moment it occurs, costs the man doing it a night's sleep and earns him nothing at all. And watch the line get drawn *inside a single person, on a single day.* At the General Service Office, staff work on next year's Conference and answer letters from groups. \"For that, they are paid biweekly checks.\" The same staff members, that same afternoon, make plans to take a newcomer to a meeting in the evening. \"For that, they are paid only with their own continuing sobriety.\" One person. One building. Two entirely separate economies, running side by side — and A.A. keeps them apart without the slightest difficulty, because it has never for a moment confused which one is the product and which one is the plumbing.",
+      "sitWith": "What in my life is the plumbing — and have I been mistaking it for the point?",
+      "groundedIn": "P-43 (paving the way; the two economies at GSO)."
+    },
+    {
+      "key": "august-23",
+      "month": "august",
+      "day": 23,
+      "tradition": 8,
+      "title": "You Can't Criticise a Gift",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Picture a group that gets everything done by volunteers and therefore cannot say a word about any of it. The newsletter goes out with the wrong meeting times, three months running, and everyone thanks the man who does it. The literature order is a shambles. The treasurer's books have not balanced since spring, and the treasurer is a lovely man who is doing his best. Each of these jobs is done by somebody giving their time for nothing, and so each of them is untouchable — because how, exactly, do you tell a man working for free that he is doing it badly? You do not. You thank him. You fix it quietly afterwards, and you do not mention it, and the standard drops another inch, and everyone agrees that the important thing is that people are willing. P-43 names the trap precisely: \"It seems ungrateful — or, at least, it's socially awkward — to criticize or reject a job done for free.\" Read that as the practical problem it is, not the polite observation it sounds like. Unpaid work is not accountable work, because gratitude and accountability cannot comfortably share a room. And a Fellowship that has lost the ability to correct its own work will get quietly worse at everything except being grateful — which is a very pleasant way for something important to fall apart, and nobody will be able to name the month it started. The people who paid for it are the ones who never found the meeting, and they do not write in to complain.",
+      "sitWith": "What am I unable to say to someone because they are doing it for free?",
+      "groundedIn": "P-43 (the awkwardness of criticising free work)."
+    },
+    {
+      "key": "august-24",
+      "month": "august",
+      "day": 24,
+      "tradition": 8,
+      "title": "Paid Jobs Get a Going-Over",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Flip it and you find the argument for paying that nobody sees coming: money buys the right to demand the work be done properly. P-43's next line is almost cheerful about it — \"But paid jobs for A.A. get quite a going-over!\" And it means every word. New literature must first be approved by the Conference. Once it is in process, the Literature Committee watches it at every stage. Drastic changes are frequently required. The finished thing is then sent back and revised again, and approved again, and revised again. The people doing that work are paid — and *because* they are paid, the Fellowship can be merciless about the standard, and is. Here is the hinge of Tradition 8 that almost nobody expects. Paying a special worker is not A.A. loosening its grip on itself. It is A.A. taking hold. You can hold an employee to a standard, and send the work back, and say plainly that it is not good enough yet. You cannot hold a volunteer to one without appearing ungrateful. You cannot hold a benefactor to one at all — you can only hope, and thank him, and hope again. And notice where the leverage sits: the wages come from the groups, which means, as Bill put it, that the funds \"could readily be cut off whenever they failed to serve us well.\" The paid worker answers to the Fellowship that pays her, and the Fellowship answers to nobody, because nobody outside it has put in a penny. That is not a compromise of A.A.'s independence. That *is* its independence, wearing work clothes.",
+      "sitWith": "Where would I rather be held to a standard than thanked for turning up?",
+      "groundedIn": "P-43 (paid jobs get a going-over); P-17 (funds cut off if they fail to serve)."
+    },
+    {
+      "key": "august-25",
+      "month": "august",
+      "day": 25,
+      "tradition": 8,
+      "title": "What's It Worth?",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine a group that sits down to price the Twelfth Step honestly. Not to profit from it — just to be fair to the people carrying the load. So: what is a two-in-the-morning drive across town worth? What is sitting on a stranger's bathroom floor until it gets light worth? What is the hour where you finally say the thing that reaches him worth — given that it might not reach him, and given that if it does he will be alive in ten years, and his children will know him, and none of that will show up on an invoice? Try to write down a number and watch the exercise collapse in your hands. Any figure is an insult, because the thing being exchanged was never a service. P-43 says it flatly: \"The meaning of Twelfth Step work cannot be measured in money\" — what is on the table is \"of far greater worth — our very lives.\" But notice the second failure, the practical one, which arrives the instant a number exists at all. Now there is something to negotiate. Is a hard case worth more than an easy one? Does a relapse mean a refund? Who gets the calls that pay best? The group that was going out at 2 a.m. is now a group holding a meeting about rates. It has not become corrupt. It has simply been handed something far easier to argue about than the man who is still drinking — and it will take that offer, every single time.",
+      "sitWith": "What have I damaged in my life by trying to work out what it was worth?",
+      "groundedIn": "P-43 (the meaning of Twelfth Step work); long form, Tradition 8."
+    },
+    {
+      "key": "august-26",
+      "month": "august",
+      "day": 26,
+      "tradition": 8,
+      "title": "Where the Line Finally Fell",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Turn it over, and the man who wrote the Tradition puts himself on the paid side of it. Listing everyone A.A. employs — the cooks frying hamburgers in the clubs, the janitors sweeping the places out, the women answering telephones in the central offices — Bill adds himself to the payroll without ceremony or apology: \"It also includes me. I once wrote some literature for you, so I am paid a royalty for being a writer.\" He wrote our book, and he was paid for writing it, and he says so in the middle of the chapter about nonprofessionalism, because it is not a contradiction and he wants us to see that it is not. Then he tells us exactly where the boundary came to rest: \"For face-to-face treatment of a drunk, no money, ever. But A.A. does have to hire people so that it can function where there are legitimate jobs to be done.\" Read that as a *location*, because that is what it is. Not a mood about money. Not a suspicion of anybody drawing a wage. A line, in one specific place, with an *ever* on one side of it and a *has to* on the other. Everything else is detail. This Fellowship can pay a writer, an editor, a secretary, a janitor, a founder — and it will still be A.A. in the morning. The single thing it cannot pay for, ever, is what happens on the bathroom floor at four in the morning. One word is holding the whole Fellowship up, and the word is *ever.*",
+      "sitWith": "Do I know exactly where my line is — or only that I have one?",
+      "groundedIn": "AA Comes of Age (where the line fell; Bill's royalty)."
+    },
+    {
+      "key": "august-27",
+      "month": "august",
+      "day": 27,
+      "tradition": 8,
+      "title": "A Paid Class",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Picture a Fellowship that grows a professional tier. It does not happen by decree; nobody votes for it. It happens the way these things always happen. A few people turn out to be very good at carrying the message, and demand runs ahead of them, so the Fellowship finds ways to free them up — a stipend here, a full-time role there, an arrangement that lets a gifted man do what he is gifted at. And within a decade there is a recognisable group of people whose *job* this is, and a much larger group of people whose job it is not. Nobody ever voted for a clergy. One simply appeared. And on the day it appears, the ordinary member's relationship to the newcomer changes forever, and changes silently: he is no longer the man who goes. He is the man who calls someone. He has been demoted inside his own Fellowship, gently, by people acting in complete good faith, and he will not even resent it — he will be relieved, because now it is handled, and handled better than he could have handled it. Bill named this fear outright and said he was glad of it: \"So we are constantly on the alert against the rise, within A.A., of a paid class of practitioners or missionaries.\" A paid class does not have to be corrupt to be fatal. It does not have to be lazy, or greedy, or bad at the work. It only has to exist. Because the moment there is someone whose job this is, it stops being everyone's.",
+      "sitWith": "What have I quietly handed to a specialist that was always mine to do?",
+      "groundedIn": "P-17 (the paid class of practitioners or missionaries)."
+    },
+    {
+      "key": "august-28",
+      "month": "august",
+      "day": 28,
+      "tradition": 8,
+      "title": "Everyone Is Already the Practitioner",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Flip it, and the reason A.A. needs no professional class turns out not to be disapproval. It is that the positions are already filled. Every one of them. Bill's sentence is the answer to the entire month: \"In A.A., where each of us is a goodwill practitioner and missionary in his own right, there is no need for anyone to be paid for simple Twelfth Step work — a purely spiritual undertaking.\" Read *in his own right.* Not deputised. Not supervised. Not licensed, appointed, or qualified by any authority, because there is no authority to do the qualifying. The man ninety days sober who sits up all night with a stranger is not doing a rough amateur version of a professional's job. He is doing the *actual job*, in the only way it has ever been done or ever will be, and he is doing it in his own right — because getting sober conferred the standing, and nothing else on earth could have. So a paid class in A.A. would not merely be dangerous. It would be *redundant*: a salaried few, hired at some expense to do what is already being done, tonight, in a hundred countries, for nothing, by everybody. That is the strangest and the strongest fact about this Fellowship. It solved its labour problem before it ever had one, by making every single member the entire workforce — and there is exactly one way it keeps that workforce, one method, one mechanism, and it has never needed a second. By never, under any circumstances, paying it.",
+      "sitWith": "Am I waiting to be qualified for something I have already been authorised to do?",
+      "groundedIn": "P-17 (each of us a goodwill practitioner in his own right)."
+    },
+    {
+      "key": "august-29",
+      "month": "august",
+      "day": 29,
+      "tradition": 8,
+      "title": "Half a Sentence",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine the Tradition had stopped halfway. \"Alcoholics Anonymous should remain forever nonprofessional.\" Full stop. No definition of the word. No permission for anybody to be paid for anything, ever. It reads beautifully. It would also have strangled the Fellowship inside a decade. With no definition, professionalism means whatever the room happens to fear, so every wage becomes an accusation waiting for a name to attach itself to. With no permission, the service structure cannot exist at all — no paid secretary, no central office, no General Service Office, no literature, no meeting list, no telephone, and no one whose actual job it is to make certain the meeting list is right. And so every single time a club or an intergroup grew large enough to need help, the same fight would break out, and break out again, forever, with nothing in writing to end it. Bill described that fight from inside it: there is \"hot debate every time a club or central committee gets large enough to require paid help.\" Half a Tradition would have made that debate permanent and unwinnable, and the debate would have been *conducted in the Tradition's own name.* And here is the thing worth sitting with: the half-sentence version is the one that circulates. Nonprofessional, forever, full stop — a fine noble principle with the working parts quietly removed. It is easy to admire, and easy to quote, and easy to feel righteous holding. It is also impossible to run a Fellowship on. And the machinery it forbids without ever quite saying so is the machinery that answers the phone.",
+      "sitWith": "What principle am I holding that I have never actually finished reading?",
+      "groundedIn": "Short form, Tradition 8; P-17 (the hot debate over paid help)."
+    },
+    {
+      "key": "august-30",
+      "month": "august",
+      "day": 30,
+      "tradition": 8,
+      "title": "Both Clauses Are the Tradition",
+      "kind": "the earned answer",
+      "hypothetical": false,
+      "body": "Reverse the whole month and read the sentence entire, both halves, as it was written. The refusal first: \"Alcoholics Anonymous should remain forever nonprofessional. We define professionalism as the occupation of counseling alcoholics for fees or hire.\" Then — in the same Tradition, in the very next breath, and this is the half that gets left on the cutting-room floor — the permission: \"But we may employ alcoholics where they are going to perform those services for which we might otherwise have to engage nonalcoholics. Such special services may be well recompensed.\" And then the closing clause, which returns the whole thing to the bathroom floor at four in the morning: our usual Twelfth-Step work is never to be paid for. Two commitments, welded together, each one useless and dangerous without the other. Refuse the first and A.A. becomes a business with a spiritual vocabulary. Refuse the second and A.A. becomes a beautiful idea that cannot answer a telephone. Bill put both into a single breath at the end of the story: \"Our Twelfth Step—carrying the message is never to be paid for. But those who labor in service for us are worthy of their hire.\" *Never.* And *worthy.* Hold both at once. They are not in tension — they are one conviction seen from two sides: that the thing which saves a man cannot be sold, and that the work which makes the saving possible must not be stolen. Nearly everyone who quotes this Tradition drops one of the halves. Which half they drop will tell you precisely what they were trying to prove.",
+      "sitWith": "Which half of this do I find harder to hold — the *never*, or the *worthy*?",
+      "groundedIn": "Long form, Tradition 8 (pp. 563–566); AA Comes of Age."
+    },
+    {
+      "key": "august-31",
+      "month": "august",
+      "day": 31,
+      "tradition": 8,
+      "title": "If They'd Never Written It",
+      "kind": "hypothetical",
+      "hypothetical": true,
+      "body": "Imagine Tradition 8 was never adopted. Go back to the parlor in 1937 and let the room say yes. Bill takes the Towns offer — the office, the drawing account, the healthy slice of the profits — and why not, it was perfectly ethical, and Lois could finally come home from the department store. And it works. He is good at it, the results are real, and other members watch him and see a living where they had only seen a duty. Now follow it out. A rate emerges, then a range of rates. The men still doing it for nothing begin to look either saintly or foolish, and there are never very many saints, so they thin out, and then they are gone. Sponsorship becomes an engagement. The Steps become a curriculum — and a curriculum can be taught by someone who has never once taken it. The Fellowship does not vanish in this version; that is the part worth noticing. It simply becomes the free tier. The thing you attend between the sessions you pay for. And the message is now carried by people who are paid to carry it, and who will stop carrying it the week the funding stops. A.A. does not collapse here. It is absorbed. The thing that made it work is the first thing to go, and no one is able to say precisely when it went. That is the future this Tradition was written against — not out of theory, but out of an offer that was really made, to a man who had really said yes, in a room that told him no. Read the world of your own time against it, if you like. The Tradition does not need to point at anything. It only has to be read.",
+      "sitWith": "What is still free in my life because someone, once, refused good money for it?",
+      "groundedIn": "AA Comes of Age (the Towns offer; the group conscience); P-17; long form, Tradition 8."
     }
   ]
 }

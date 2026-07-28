@@ -10,7 +10,8 @@
  * A round-trip check (--verify) diffs every parsed reading back against the
  * source markdown, character for character, and throws on the first mismatch.
  *
- * Source: D:\Forge\research\daily-traditions\PILOT-T7-month.md
+ * Source: data/traditions-source.md  (in-repo; approved July T7 + August T8 …).
+ *         The build no longer depends on D:\Forge being mounted.
  * Usage:  node scripts/parse-traditions.js [--verify]
  */
 
@@ -18,7 +19,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const SRC = "D:\\Forge\\research\\daily-traditions\\PILOT-T7-month.md";
+const SRC = path.join(ROOT, "data", "traditions-source.md");
 const OUT = path.join(ROOT, "data", "traditions-daily.json");
 
 // Month -> Tradition. January = T1 ... July = T7 ... December = T12.
@@ -27,9 +28,14 @@ const MONTH_TRADITION = {
   july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
 };
 
-// The Traditions, short form, verbatim. Long form lives at pp. 563–566.
-const SHORT_FORM = {
-  7: "Every A.A. group ought to be fully self-supporting, declining outside contributions.",
+// The Traditions, short form — READ from the extractor's output, never retyped.
+// data/twelve-traditions.json is the single source of Tradition text (verbatim,
+// 4th ed). This is the "never retype a Tradition" rule, applied to our own script.
+const TRAD = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "twelve-traditions.json"), "utf8"));
+const shortFormFor = (n) => {
+  const t = TRAD.traditions.find((x) => x.n === n);
+  if (!t) throw new Error("No Tradition " + n + " in data/twelve-traditions.json");
+  return t.short;
 };
 
 const raw = fs.readFileSync(SRC, "utf8");
@@ -98,14 +104,14 @@ if (badPair.length) {
 
 const out = {
   generated: "2026-07-12",
-  source: "PILOT-T7-month.md (GATE 2 approved)",
+  source: "data/traditions-source.md (GATE 2 approved: July T7 + August T8)",
   doctrine: {
     note: "The Traditions are GOVERNANCE, not theology. They bind A.A. groups and the Fellowship — not individuals, and not independent businesses.",
     shortForm: { pages: "561–562" },
     longForm: { pages: "563–566" },
     concepts: { pages: "574–575" },
   },
-  traditions: { 7: { shortForm: SHORT_FORM[7] } },
+  traditions: Object.fromEntries([...new Set(days.map((d) => d.tradition))].map((n) => [n, { shortForm: shortFormFor(n) }])),
   days,
 };
 

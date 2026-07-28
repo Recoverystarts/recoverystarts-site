@@ -263,20 +263,25 @@ function traditionBlock(n, shortForm) {
 }
 
 // ── Day pages ───────────────────────────────────────────────────────────────
-const days = DATA.days.slice().sort((a, b) => a.day - b.day);
+const days = DATA.days.slice().sort((a, b) => (MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month)) || (a.day - b.day));
+// Group by month so prev/next stay WITHIN a month — adding August must not make
+// July 1's "next" jump to August 1. Each month navigates as its own sequence.
+const byMonth = {};
+for (const dd of days) (byMonth[dd.month] = byMonth[dd.month] || []).push(dd);
 const built = [];
 const seenTitles = new Set();
 const seenDescs = new Set();
 
-for (let i = 0; i < days.length; i++) {
-  const d = days[i];
+for (const d of days) {
   const slug = `${d.month}-${d.day}`;
   const url = `${SITE}/daily-tradition/${slug}/`;
   const shortForm = DATA.traditions[String(d.tradition)].shortForm;
   const monthCap = CAP(d.month);
 
-  const prev = days[i - 1];
-  const next = days[i + 1];
+  const monthArr = byMonth[d.month];
+  const mi = monthArr.indexOf(d);
+  const prev = monthArr[mi - 1];
+  const next = monthArr[mi + 1];
 
   const title = `Tradition ${d.tradition} — ${monthCap} ${d.day}: ${d.title} | Daily Traditions | Recovery Starts`;
 
@@ -383,8 +388,16 @@ ${FOOTER}
 
 // ── Hub: /daily-tradition/ ──────────────────────────────────────────────────
 const liveMonths = new Set(days.map((d) => d.month));
-const T = days[0].tradition;
-const monthCap = CAP(days[0].month);
+// Featured month = the live month matching the current calendar month, else the
+// latest live month at or before it, else the earliest. Keeps the hub framed on
+// the month a visitor is actually in; pre-published months stay reachable below.
+const liveIdx = [...liveMonths].map((m) => MONTHS.indexOf(m)).sort((a, b) => a - b);
+const nowIdx = new Date().getMonth();
+const featIdx = liveIdx.filter((i) => i <= nowIdx).pop();
+const featMonth = MONTHS[featIdx !== undefined ? featIdx : liveIdx[0]];
+const featDays = byMonth[featMonth];
+const T = featDays[0].tradition;
+const monthCap = CAP(featMonth);
 const shortForm = DATA.traditions[String(T)].shortForm;
 
 const monthCards = MONTHS.map((m, i) => {
@@ -395,13 +408,24 @@ const monthCards = MONTHS.map((m, i) => {
     : `<div class="dt-month soon"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n}</span></div>`;
 }).join("");
 
-const dayCards = built.map((b) =>
+const cardHtml = (b) =>
   `<a class="dt-day" href="/daily-tradition/${b.slug}/">
           <span class="d">${CAP(b.month)} ${b.day}</span>
           <span class="t">${esc(b.dTitle)}</span>
           <span class="k">${b.hypothetical ? "a hypothetical" : "the earned answer"}</span>
-        </a>`
-).join("\n        ");
+        </a>`;
+const dayCards = built.filter((b) => b.month === featMonth).map(cardHtml).join("\n        ");
+// Other published months — linked for readers and crawlers, below the featured
+// month. This is how a pre-published month (e.g. August in July) stays reachable.
+const otherMonths = MONTHS.filter((m) => liveMonths.has(m) && m !== featMonth);
+const otherSections = otherMonths.map((m) => {
+  const t = byMonth[m][0].tradition;
+  const cards = built.filter((b) => b.month === m).map(cardHtml).join("\n        ");
+  return `      <h2 class="dt-h2" style="max-width:980px;margin:2.6rem auto 1rem;text-align:center">${CAP(m)} · Tradition ${t}</h2>
+      <div class="dt-days">
+        ${cards}
+      </div>`;
+}).join("\n");
 
 const hubLd = [
   {
@@ -457,7 +481,7 @@ const hubHtml = head({
            for the people who want it. JS swaps in the real date on load; the
            server-rendered fallback below is a real reading either way. -->
       <section id="dt-today" class="dt-today">
-        ${todayHeroHtml(days[0])}
+        ${todayHeroHtml(featDays[0])}
       </section>
 
       <div class="dt-days">
@@ -465,6 +489,8 @@ const hubHtml = head({
       </div>
 
       <div class="dt-months">${monthCards}</div>
+
+${otherSections}
 
       <div class="dt-tradition" style="margin-bottom:2.4rem">
         <h2>Tradition ${T} · Short form</h2>

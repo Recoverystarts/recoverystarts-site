@@ -198,6 +198,9 @@ const STYLE = `  <style>
     .dt-month.live .t { color: var(--gold); }
     .dt-month.soon { opacity:0.45; }
     .dt-days { display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:12px; max-width: 980px; margin: 0 auto; }
+    /* Anchor targets sit under the fixed header without it — leave room. */
+    .dt-days[id], .dt-h2[id] { scroll-margin-top: 96px; }
+    html { scroll-behavior: smooth; }
     .dt-day { display:block; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; transition: all .2s; }
     .dt-day:hover { border-color: var(--gold); transform: translateY(-2px); }
     .dt-day .d { color: var(--gold); font-size:0.72rem; letter-spacing:1.4px; text-transform:uppercase; font-weight:700; }
@@ -449,7 +452,10 @@ const monthCards = MONTHS.map((m, i) => {
   const n = i + 1;
   const live = liveMonths.has(m);
   return live
-    ? `<a class="dt-month live" href="/daily-tradition/"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n} · live</span></a>`
+    // Live months jump to their own section ON THIS PAGE. This used to point at
+    // "/daily-tradition/" — the page you are already on — so clicking August or
+    // September just reloaded the hub and dumped you back at the top.
+    ? `<a class="dt-month live" href="#month-${m}"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n} · live</span></a>`
     : `<div class="dt-month soon"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n}</span></div>`;
 }).join("");
 
@@ -466,7 +472,7 @@ const otherMonths = MONTHS.filter((m) => liveMonths.has(m) && m !== featMonth);
 const otherSections = otherMonths.map((m) => {
   const t = byMonth[m][0].tradition;
   const cards = built.filter((b) => b.month === m).map(cardHtml).join("\n        ");
-  return `      <h2 class="dt-h2" style="max-width:980px;margin:2.6rem auto 1rem;text-align:center">${CAP(m)} · Tradition ${t}</h2>
+  return `      <h2 class="dt-h2" id="month-${m}" style="max-width:980px;margin:2.6rem auto 1rem;text-align:center">${CAP(m)} · Tradition ${t}</h2>
       <div class="dt-days">
         ${cards}
       </div>`;
@@ -529,7 +535,7 @@ const hubHtml = head({
         ${todayHeroHtml(featDays[0])}
       </section>
 
-      <div class="dt-days">
+      <div class="dt-days" id="month-${featMonth}">
         ${dayCards}
       </div>
 

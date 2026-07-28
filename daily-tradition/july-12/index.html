@@ -87,6 +87,9 @@
     .dt-month.live .t { color: var(--gold); }
     .dt-month.soon { opacity:0.45; }
     .dt-days { display:grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap:12px; max-width: 980px; margin: 0 auto; }
+    /* Anchor targets sit under the fixed header without it — leave room. */
+    .dt-days[id], .dt-h2[id] { scroll-margin-top: 96px; }
+    html { scroll-behavior: smooth; }
     .dt-day { display:block; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; transition: all .2s; }
     .dt-day:hover { border-color: var(--gold); transform: translateY(-2px); }
     .dt-day .d { color: var(--gold); font-size:0.72rem; letter-spacing:1.4px; text-transform:uppercase; font-weight:700; }

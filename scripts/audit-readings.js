@@ -58,6 +58,22 @@ const SOURCES = [
 // slipped is its own kind of lie. Each repair is listed so it can be audited.
 const OCR_REPAIRS = [[/beelsaverted/gi, "been averted"]];
 
+// The corpus-wide repair map lives NEXT TO THE SCANS it repairs — one file,
+// read by both this gate and the app's DB ingest, so the two can never
+// disagree. Each entry's "find" is a snippet of the raw scan that occurs
+// exactly once in its file, carrying the corruption; "replace" is the same
+// snippet as the printed page reads. Entries feed the same loop below.
+// Full audit trail (evidence, sentences, reasons): ocr-repairs.json itself.
+const MAP_FILE = path.join(HIST, "ocr-repairs.json");
+if (fs.existsSync(MAP_FILE)) {
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  for (const r of JSON.parse(fs.readFileSync(MAP_FILE, "utf8")).repairs) {
+    // global flag: each find occurs exactly once per file, except in
+    // byte-identical duplicated passages where every copy needs the same fix
+    OCR_REPAIRS.push([new RegExp(esc(r.find), "g"), r.replace]);
+  }
+}
+
 /** Strip everything a line-break or hyphenation could have mangled. */
 const squash = (t) =>
   (t || "")

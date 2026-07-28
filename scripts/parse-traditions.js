@@ -74,8 +74,16 @@ while ((m = blockRx.exec(raw)) !== null) {
     day,
     tradition: MONTH_TRADITION[month],
     title: title.trim(),
-    kind: kind.trim(),                    // "hypothetical" | "the earned answer"
-    hypothetical: /hypothetical/i.test(kind),
+    // TWO SCHEMES LIVE SIDE BY SIDE, on purpose.
+    //   OLD (July T7, August T8): "hypothetical" | "the earned answer", odd/even.
+    //   NEW (September T9 onward): the five questions, run straight through —
+    //     "the threat" | "before the tradition" | "the threat today" |
+    //     "how a group breaks it" | "how it gets captured".
+    // July and August are shipped and approved. They are NOT retro-fitted.
+    kind: kind.trim(),
+    // Q4 ("how a group breaks it") is the NEW scheme's labelled hypothetical —
+    // it is the only new-scheme day that carries the disclaimer.
+    hypothetical: /hypothetical|how a group breaks it/i.test(kind),
     body,                                 // VERBATIM
     sitWith: sit[1].trim(),               // VERBATIM
     groundedIn: gnd[1].trim(),            // VERBATIM
@@ -96,15 +104,35 @@ for (const d of days) {
 }
 if (drift) throw new Error(`${drift} verbatim check(s) failed. Refusing to write. The readings are approved content — they do not get rewritten.`);
 
-// Pairing check: odd = hypothetical, even = the earned answer.
-const badPair = days.filter((d) => (d.day % 2 === 1) !== d.hypothetical);
+// Pairing check applies ONLY to the old odd/even scheme (July T7, August T8).
+// The five-question scheme runs Q1..Q5 straight through and has no odd/even
+// relationship — checking it there would warn on every second day, forever.
+const OLD_SCHEME = /^(hypothetical|the earned answer)$/i;
+const oldSchemeDays = days.filter((d) => OLD_SCHEME.test(d.kind));
+const badPair = oldSchemeDays.filter((d) => (d.day % 2 === 1) !== d.hypothetical);
 if (badPair.length) {
   console.warn("Pairing warning (odd should be hypothetical, even the earned answer):", badPair.map((d) => d.key).join(", "));
 }
 
+// Five-question scheme: assert the straight rotation is intact. Day N's question
+// is ((N-1) mod 5). A month that drifts out of rotation is a defect, not a style
+// choice — the whole point is that every 5 days tells the Tradition once.
+const FIVE_Q = ["the threat", "before the tradition", "the threat today", "how a group breaks it", "how it gets captured"];
+const newSchemeDays = days.filter((d) => FIVE_Q.includes(d.kind.toLowerCase()));
+const badRotation = newSchemeDays.filter((d) => FIVE_Q[(d.day - 1) % 5] !== d.kind.toLowerCase());
+if (badRotation.length) {
+  throw new Error("Rotation broken on: " + badRotation.map((d) => `${d.key} (is "${d.kind}", expected "${FIVE_Q[(d.day - 1) % 5]}")`).join(", "));
+}
+
+// Every reading must use a known kind from ONE of the two schemes.
+const unknownKind = days.filter((d) => !OLD_SCHEME.test(d.kind) && !FIVE_Q.includes(d.kind.toLowerCase()));
+if (unknownKind.length) {
+  throw new Error("Unknown kind tag(s): " + unknownKind.map((d) => `${d.key} → "${d.kind}"`).join(", "));
+}
+
 const out = {
-  generated: "2026-07-12",
-  source: "data/traditions-source.md (GATE 2 approved: July T7 + August T8)",
+  generated: "2026-07-28",
+  source: "data/traditions-source.md (GATE 2 approved: July T7 + August T8 + September T9)",
   doctrine: {
     note: "The Traditions are GOVERNANCE, not theology. They bind A.A. groups and the Fellowship — not individuals, and not independent businesses.",
     shortForm: { pages: "561–562" },

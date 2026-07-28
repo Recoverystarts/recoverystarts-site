@@ -31,6 +31,55 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const SITE = "https://recoverystarts.com";
 const TODAY = "2026-07-12";
+
+// Article schema dates, PER MONTH-BATCH — not one date for all 366 pages.
+// Each month is written, gated and shipped as a batch, so the honest
+// datePublished is the day that batch went live. One shared date across the
+// whole year reads to a crawler as a single enormous content dump.
+// ADD A LINE HERE WHEN A MONTH SHIPS. Unlisted months fall back to TODAY.
+const MONTH_PUBLISHED = {
+  july: "2026-07-12",
+  august: "2026-07-12",
+  september: "2026-07-28",
+};
+const publishedFor = (month) => MONTH_PUBLISHED[month] || TODAY;
+
+// ── Kind → badge. TWO SCHEMES, side by side. ────────────────────────────────
+// July T7 and August T8 shipped on the odd/even scheme and are not retro-fitted.
+// September T9 onward uses the five questions, run straight through.
+// "hyp" styling marks the day that carries the hypothetical disclaimer.
+const KIND_BADGE = {
+  "hypothetical":          { label: "A hypothetical",        cls: "hyp" },
+  "the earned answer":     { label: "The earned answer",     cls: "earned" },
+  "the threat":            { label: "The threat",            cls: "earned" },
+  "before the tradition":  { label: "Before the Tradition",  cls: "earned" },
+  "the threat today":      { label: "The threat today",      cls: "earned" },
+  "how a group breaks it": { label: "How a group breaks it", cls: "hyp" },
+  "how it gets captured":  { label: "How it gets captured",  cls: "earned" },
+};
+function badgeFor(d) {
+  const k = KIND_BADGE[String(d.kind || "").toLowerCase()];
+  if (!k) throw new Error(`Unknown kind "${d.kind}" on ${d.month}-${d.day} — add it to KIND_BADGE.`);
+  return `<span class="dt-badge ${k.cls}">${k.label}</span>`;
+}
+function kindLabelFor(d) {
+  const k = KIND_BADGE[String(d.kind || "").toLowerCase()];
+  return k ? k.label.toLowerCase() : String(d.kind || "");
+}
+// The hub's "How <Month> reads" paragraph. It describes the SCHEME the featured
+// month was written on — July and August ran odd/even; September onward runs the
+// five questions straight through. Describing the wrong one is a lie about the
+// page directly beneath it, so this switches on the month's actual kind tags.
+function howMonthReads(month, daysForMonth) {
+  const monthCap = month.charAt(0).toUpperCase() + month.slice(1);
+  const kinds = new Set((daysForMonth || []).map((d) => String(d.kind || "").toLowerCase()));
+  const isFiveQ = kinds.has("the threat") || kinds.has("how it gets captured");
+  if (isFiveQ) {
+    return `<p><strong>How ${monthCap} reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. The fourth question is the labelled hypothetical: an imagined group, never a real one, and never a rule we invented.</p>`;
+  }
+  return `<p><strong>How ${monthCap} reads.</strong> Odd days pose a hypothetical: <em>imagine a group did the thing the Tradition warns against — what follows?</em> Even days turn that harm over and find the reason the Tradition exists in the first place. Flip the wound and you get the healing. Every scenario is explicitly hypothetical — not a real group, and not a rule we invented.</p>`;
+}
+
 const DRY = process.argv.includes("--dry");
 
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
@@ -206,9 +255,7 @@ const DISC = `      <p class="dt-disc">Daily Traditions is an independent educat
 function todayHeroHtml(d, isToday = true) {
   const monthCap = CAP(d.month);
   const slug = `${d.month}-${d.day}`;
-  const badge = d.hypothetical
-    ? '<span class="dt-badge hyp">A hypothetical</span>'
-    : '<span class="dt-badge earned">The earned answer</span>';
+  const badge = badgeFor(d);
   return `
         <div class="dt-today-head">
           <span class="dt-today-lbl">${isToday ? "Today" : "Latest reading"} · ${monthCap} ${d.day}</span>
@@ -232,9 +279,9 @@ const HERO_JS = `
     window.__dtHero = function (d, isToday) {
       var esc = function (s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); };
       var em = function (s) { return esc(s).replace(/\\*([^*]+)\\*/g, "<em>$1</em>"); };
-      var badge = d.hypothetical
-        ? '<span class="dt-badge hyp">A hypothetical</span>'
-        : '<span class="dt-badge earned">The earned answer</span>';
+      // Badge HTML is precomputed server-side (badgeFor) and shipped in the
+      // payload, so the two schemes stay in one place instead of two.
+      var badge = d.badge || '';
       return ''
         + '<div class="dt-today-head">'
         +   '<span class="dt-today-lbl">' + (isToday ? "Today" : "Latest reading") + ' \\u00b7 ' + esc(d.month) + ' ' + d.day + '</span>'
@@ -297,8 +344,8 @@ for (const d of days) {
     author: { "@type": "Organization", name: "Recovery Starts", url: SITE },
     publisher: { "@type": "Organization", name: "Recovery Starts", logo: { "@type": "ImageObject", url: SITE + "/assets/einstein-character.png" } },
     image: SITE + "/assets/einstein-character.png",
-    datePublished: TODAY,
-    dateModified: TODAY,
+    datePublished: publishedFor(d.month),
+    dateModified: publishedFor(d.month),
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     isPartOf: { "@type": "WebSite", name: "Recovery Starts", url: SITE },
   };
@@ -312,9 +359,7 @@ for (const d of days) {
     ],
   };
 
-  const badge = d.hypothetical
-    ? '<span class="dt-badge hyp">A hypothetical</span>'
-    : '<span class="dt-badge earned">The earned answer</span>';
+  const badge = badgeFor(d);
 
   const prevLink = prev
     ? `<a href="/daily-tradition/${prev.month}-${prev.day}/"><small>← ${CAP(prev.month)} ${prev.day}</small>${esc(prev.title)}</a>`
@@ -377,7 +422,7 @@ ${FOOTER}
   if (html.indexOf(SHORT_PAGES) === -1) throw new Error("Missing short form page ref on " + slug);
   if (html.indexOf("/demo") !== -1) throw new Error("Forbidden /demo link on " + slug);
 
-  built.push({ slug, url, title, day: d.day, month: d.month, dTitle: d.title, kind: d.kind, hypothetical: d.hypothetical });
+  built.push({ slug, url, title, day: d.day, month: d.month, dTitle: d.title, kind: d.kind, kindLabel: kindLabelFor(d), hypothetical: d.hypothetical });
 
   if (!DRY) {
     const dir = path.join(ROOT, "daily-tradition", slug);
@@ -412,7 +457,7 @@ const cardHtml = (b) =>
   `<a class="dt-day" href="/daily-tradition/${b.slug}/">
           <span class="d">${CAP(b.month)} ${b.day}</span>
           <span class="t">${esc(b.dTitle)}</span>
-          <span class="k">${b.hypothetical ? "a hypothetical" : "the earned answer"}</span>
+          <span class="k">${esc(b.kindLabel)}</span>
         </a>`;
 const dayCards = built.filter((b) => b.month === featMonth).map(cardHtml).join("\n        ");
 // Other published months — linked for readers and crawlers, below the featured
@@ -503,7 +548,7 @@ ${otherSections}
         <p>The Twelve Traditions were adopted in 1950 for one reason: to stop A.A. from being <strong>owned</strong>. Not owned by a benefactor, not by a treatment centre, not by whoever happened to be paying the rent. They are the Fellowship's constitution — written out of near-misses A.A. actually lived through.</p>
         <p>Most of what circulates online quotes only the short form (pp. ${SHORT_PAGES}) and quietly drops the rest. So we front-load <strong>the Long Form, pp. ${LONG_PAGES}</strong> — where the Traditions actually say what they mean. Tradition 3's clause that a group is A.A. only if "as a group, they have no other affiliation"? That exists <em>only</em> in the Long Form. It's the clause that says no treatment centre can own an A.A. group. It's also the clause the internet forgot.</p>
         <p>One more thing, because it gets blurred constantly: <strong>the Traditions are governance, not theology.</strong> They bind A.A. groups and the Fellowship — not individuals. They are not a rulebook for your personal life.</p>
-        <p><strong>How ${monthCap} reads.</strong> Odd days pose a hypothetical: <em>imagine a group did the thing the Tradition warns against — what follows?</em> Even days turn that harm over and find the reason the Tradition exists in the first place. Flip the wound and you get the healing. Every scenario is explicitly hypothetical — not a real group, and not a rule we invented.</p>
+        ${howMonthReads(featMonth, byMonth[featMonth])}
       </div>
 
       <div class="dt-chips">
@@ -524,6 +569,7 @@ ${HERO_JS}
       body: d.body,
       sitWith: d.sitWith,
       hypothetical: d.hypothetical,
+      badge: badgeFor(d),
     }))
   ).replace(/</g, "\\u003c")}</script>
   <script>

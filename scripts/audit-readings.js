@@ -107,6 +107,14 @@ const squash = (t) =>
     .replace(/ﬃ/g, "ffi").replace(/ﬄ/g, "ffl")
     .replace(/[’‘']/g, "'").replace(/[“”"]/g, '"')
     .replace(/[—–]/g, "")
+    // SOFT HYPHEN U+00AD. The Big Book extract stores line-break hyphenation on
+    // chapter pages as an INVISIBLE soft hyphen ("un­\nless"), not an ASCII
+    // one — 103 pages carry them. It is a typesetting artifact that appears in no
+    // printed copy, so it must be stripped exactly like the visible hyphens below.
+    // Without this, any correctly-transcribed quote spanning a hyphenated word on
+    // a chapter page is reported as FABRICATED. Found when the p.125 quotation
+    // "unless we are sure he would approve" failed while being verbatim correct.
+    .replace(/­/g, "")
     .replace(/[\s\-]+/g, "")     // ALL whitespace + hyphens: "mem -\nbers" -> "members"
     .toLowerCase();
 

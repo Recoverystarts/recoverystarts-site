@@ -58,6 +58,48 @@ const SOURCES = [
 // slipped is its own kind of lie. Each repair is listed so it can be audited.
 const OCR_REPAIRS = [[/beelsaverted/gi, "been averted"]];
 
+// The corpus-wide repair map lives NEXT TO THE SCANS it repairs — one file,
+// read by both this gate and the app's DB ingest, so the two can never
+// disagree. Each entry's "find" is a snippet of the raw scan that occurs
+// exactly once in its file, carrying the corruption; "replace" is the same
+// snippet as the printed page reads. Entries feed the same loop below.
+// Full audit trail (evidence, sentences, reasons): ocr-repairs.json itself.
+const MAP_FILE = path.join(HIST, "ocr-repairs.json");
+
+// FAIL LOUD. This used to sit behind `if (fs.existsSync(MAP_FILE))`, which meant
+// a missing map produced no error, no warning and no output — the audit simply
+// ran with one repair instead of 2,746 and still printed PASS. That is the same
+// silent-fallback shape that left the app's Tier 1 correction layer dead in
+// production for months. An absent map is now a hard stop, because an audit that
+// cannot repair the scans cannot tell a real quote from a scanner artifact.
+if (!fs.existsSync(MAP_FILE)) {
+  throw new Error(
+    `OCR repair map missing: ${MAP_FILE}\n` +
+      `The quote audit cannot run without it.\n` +
+      `Restore it with:\n` +
+      `  cd C:\\Users\\addic\\recovery-einstein\n` +
+      `  git show origin/fix/ocr-corpus-repairs:historian-sources/ocr-repairs.json > historian-sources/ocr-repairs.json\n` +
+      `(that branch is not merged to main, which is why the file can go absent)`
+  );
+}
+
+// strip a UTF-8 BOM if one crept in — JSON.parse throws on it, and the message
+// it throws ("Unexpected token") does not tell you a BOM is the reason.
+const rawMap = fs.readFileSync(MAP_FILE, "utf8").replace(/^\uFEFF/, "");
+const parsedMap = JSON.parse(rawMap);
+if (!Array.isArray(parsedMap.repairs) || parsedMap.repairs.length === 0) {
+  throw new Error(`OCR repair map has no repairs array: ${MAP_FILE}`);
+}
+{
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  for (const r of parsedMap.repairs) {
+    // global flag: each find occurs exactly once per file, except in
+    // byte-identical duplicated passages where every copy needs the same fix
+    OCR_REPAIRS.push([new RegExp(esc(r.find), "g"), r.replace]);
+  }
+  console.log(`  OCR repair map    : ${parsedMap.repairs.length} repairs loaded`);
+}
+
 /** Strip everything a line-break or hyphenation could have mangled. */
 const squash = (t) =>
   (t || "")

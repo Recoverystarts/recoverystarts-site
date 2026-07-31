@@ -87,23 +87,37 @@ Note the em dash after the date, the straight quotes around the title, the ` · 
 
 ## The three passes, in this order
 
-**1. Gather.** Research first, from the books, before writing a line. Pull every fact, incident, date and exact quotation you'll need. Parallel subagents across the source files works well — give each one file or a small group, and ask it to report exact quotes along with their damage status and their quote characters.
+**1. Gather.** Research first, from the books, before writing a line. Pull every fact, incident, date and exact quotation you'll need. Parallel subagents across the source files work well for this and ONLY this — give each one file or a small group, and ask it to report exact quotes with their damage status and quote characters. Retrieval can be delegated. The writing cannot: the judgement about what a newcomer will understand is too fine-grained to farm out, and it is the entire product.
 
 **2. Draft.** Write in the source's own gravity. Let it run long. You have the facts now, so you can follow the material rather than fight it.
 
-**3. Modernize.** A separate pass. Chronological order, short sentences at the hinges, cut to about 175 words, land the ending on the reader. Quotations stay in the book's voice — the moment you modernize inside quote marks it stops being A.A.'s claim and becomes ours.
+**3. Modernize.** A separate pass, and the one that matters most. Chronological order, short sentences at the hinges, cut hard, land the ending on the reader. Strip every word of A.A. shorthand or replace it with a plain description. Read the whole thing back as somebody three weeks sober who has been told these are rules for a club they are not in: if any sentence would make that person stop reading, it goes. Quotations stay in the book's voice — the moment you modernize inside quote marks it stops being A.A.'s claim and becomes ours.
 
 Doing these in order is what makes a month sound like it was written by someone who knew the material, because by then you do.
 
 ---
 
-## What a good reading does
+## The job, in one sentence
 
-- **Quotes freely and exactly.** The books are more vivid than any paraphrase. Let them talk.
-- **Names the people the literature names**, in the form the literature prints them — members as first name and last initial, non-members in full. A.A. published these names in books written for members to read; repeating them from those books is citation. Where a source itself withholds a name, follow that source's wording.
-- **Puts a person in the hypotheticals.** Q4 days work when someone is in them and something is specific — a number, a day of the week, a consequence that lands eleven months later. An abstract cautionary tale teaches nobody.
-- **Makes its own point plainly.** Each reading carries one idea. Only the Q5 days deal with outside capture, and each of those names a different mechanism.
-- **Ends on the reader.** The *Sit with* line states what happened in that reading, then asks something the reader can actually answer about their own life.
+**Take real literature and make it accessible to someone who has never read the Traditions — because almost nobody has.**
+
+Everything below serves that. Write for a person who walked into their first meeting last week, has been told the Traditions are a rulebook or somebody's selfish ideology, and has never had one explained. Assume no knowledge and no goodwill toward the subject. Then also make it worth the time of someone with thirty years, by never being vague.
+
+### Two kinds of words, and the reader can always tell
+
+- **A.A.'s words** — inside quotation marks, verbatim, never reshaped, source named in *Grounded in*. This is the hard rule and the audit gate enforces it. Repair OCR damage to what the book actually prints; never print a scanner error, never smooth a quotation to make it fit.
+- **Our words** — everything else. Explaining, translating out of 1940s vocabulary, drawing a scene. This is not a deviation from the book, it is the reason the page exists. But it never wears A.A.'s authority: no paraphrase in quote marks, no putting a claim in the Fellowship's mouth.
+
+### What every reading must do
+
+- **Open where the reader is**, not where A.A. was. No jargon in the first sentence — and no jargon anywhere without plain words attached the moment it appears. "Intergroup," "Twelfth Step work," "GSR," "the Conference" all mean nothing to a newcomer; describe the thing instead ("the local office that answers the phone when a stranger calls").
+- **Say what the Tradition actually means, in today's English.** If a reading raises a question, it answers it. Never leave a reader with the vague sense that A.A. people argue about something — that is the fog we exist to clear.
+- **Bring the literature in where it lands.** Introduce a quotation so the reader knows who said it and roughly when. Never open with a block of definition; let the source arrive at the moment it settles something.
+- **Never announce a scenario.** No "this is a hypothetical," no disclaimer box. "Imagine a group that…" or "Picture a sponsor who…" carries it. And every scene is anchored to real A.A. material before or after it — a scene with nothing real holding it down is just our opinion in a costume.
+- **Put a person in it.** Scenes work when someone is in them and something is specific — a number, a day of the week, a consequence that lands eleven months later. An abstract cautionary tale teaches nobody.
+- **Name the people the literature names**, in the form the literature prints them — members as first name and last initial, non-members in full. Where a source withholds a name, follow that source.
+- **Carry one idea.** Say it once. If the point lands three times before the ending, cut two.
+- **End on the reader.** The *Sit with* states plainly what the reading showed — in the simplest words available — then asks something the reader can actually answer about their own life.
 
 Keep the month to its own Tradition. Each one has enough material.
 

@@ -106,6 +106,7 @@ Everything below serves that. Write for a person who walked into their first mee
 ### Two kinds of words, and the reader can always tell
 
 - **A.A.'s words** — inside quotation marks, verbatim, never reshaped, source named in *Grounded in*. This is the hard rule and the audit gate enforces it. Repair OCR damage to what the book actually prints; never print a scanner error, never smooth a quotation to make it fit.
+- **Every quotation says who is speaking, immediately before it, in words a stranger can't misread.** Not "Bill did not pretend otherwise:" but "Bill W. did not pretend otherwise. **He said:** …". Not a bare quotation after a pronoun — name the speaker or the source: *Bill W. said*, *Dr. Bob told him*, *the Tradition itself says*, *P-43 puts it*. When several quotations from the same person run together, re-attribute at each new idea (*He also said…*). A reader must never have to wonder whether a sentence is A.A.'s or ours — that ambiguity is the exact thing this project exists to correct, and it is not allowed to happen on our own pages.
 - **Our words** — everything else. Explaining, translating out of 1940s vocabulary, drawing a scene. This is not a deviation from the book, it is the reason the page exists. But it never wears A.A.'s authority: no paraphrase in quote marks, no putting a claim in the Fellowship's mouth.
 
 ### What every reading must do

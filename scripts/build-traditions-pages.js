@@ -43,6 +43,7 @@ const MONTH_PUBLISHED = {
   september: "2026-07-28",
   october: "2026-07-29",
   november: "2026-07-30",
+  december: "2026-07-31",
 };
 const publishedFor = (month) => MONTH_PUBLISHED[month] || TODAY;
 

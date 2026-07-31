@@ -50,9 +50,10 @@ const publishedFor = (month) => MONTH_PUBLISHED[month] || TODAY;
 // ── Kind → badge. TWO SCHEMES, side by side. ────────────────────────────────
 // July T7 and August T8 shipped on the odd/even scheme and are not retro-fitted.
 // September T9 onward uses the five questions, run straight through.
-// "hyp" styling marks the day that carries the hypothetical disclaimer.
+// "hyp" styling tints the days that work through a scenario rather than an
+// incident. It is a colour, not a disclaimer — nothing announces itself.
 const KIND_BADGE = {
-  "hypothetical":          { label: "A hypothetical",        cls: "hyp" },
+  "hypothetical":          { label: "Where it goes wrong",   cls: "hyp" },
   "the earned answer":     { label: "The earned answer",     cls: "earned" },
   "the threat":            { label: "The threat",            cls: "earned" },
   "before the tradition":  { label: "Before the Tradition",  cls: "earned" },
@@ -78,9 +79,9 @@ function howMonthReads(month, daysForMonth) {
   const kinds = new Set((daysForMonth || []).map((d) => String(d.kind || "").toLowerCase()));
   const isFiveQ = kinds.has("the threat") || kinds.has("how it gets captured");
   if (isFiveQ) {
-    return `<p><strong>How ${monthCap} reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. The fourth question is the labelled hypothetical: an imagined group, never a real one, and never a rule we invented.</p>`;
+    return `<p><strong>How ${monthCap} reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. Every reading is anchored to A.A.'s own literature: real incidents, named where the books name them, and quotations exactly as printed.</p>`;
   }
-  return `<p><strong>How ${monthCap} reads.</strong> Odd days pose a hypothetical: <em>imagine a group did the thing the Tradition warns against — what follows?</em> Even days turn that harm over and find the reason the Tradition exists in the first place. Flip the wound and you get the healing. Every scenario is explicitly hypothetical — not a real group, and not a rule we invented.</p>`;
+  return `<p><strong>How ${monthCap} reads.</strong> Each day takes one angle on the Tradition — where groups go wrong with it, and the reason it was written in the first place. Every reading is anchored to A.A.'s own literature: real incidents, named where the books name them, and quotations exactly as printed.</p>`;
 }
 
 const DRY = process.argv.includes("--dry");
@@ -242,8 +243,11 @@ ${NAV}
   <main id="main"><section class="dt-wrap"><div class="container">`;
 }
 
-// MANDATORY on every day page — the scenarios are illustrative, never reportage.
-const HYP_NOTE = `      <p class="dt-hyp"><strong>This is a hypothetical.</strong> The situation described above is illustrative — an imagined scenario used to think a Tradition through. It is not a real group, not a report of anything that happened, and not a rule we invented. The Traditions belong to A.A.; we're only reading them plainly.</p>`;
+// The scenario disclaimer was removed on purpose. Announcing "this is a
+// hypothetical" taught the reader nothing and read like a legal notice in the
+// middle of a reading. The prose carries it instead — an imagined scene says so
+// in its own opening words, and every scene is anchored to real A.A. history or
+// the book. The site-wide notice below still states what this project is.
 
 const DISC = `      <p class="dt-disc">Daily Traditions is an independent educational resource from Recovery Starts — <strong>not official A.A. literature</strong>, not affiliated with Alcoholics Anonymous World Services, and not medical advice. The Twelve Traditions are the property of A.A. Page references are to <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition: short form ${SHORT_PAGES}, <strong>long form ${LONG_PAGES}</strong>. If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>`;
 
@@ -391,7 +395,6 @@ for (const d of days) {
       </div>
       <p class="dt-grounded">Grounded in: ${mdEm(d.groundedIn)}</p>
 
-${d.hypothetical ? HYP_NOTE : ""}
 
 ${traditionBlock(d.tradition, shortForm)}
 
@@ -423,7 +426,7 @@ ${FOOTER}
   seenDescs.add(desc);
 
   // Non-negotiables, asserted at build time.
-  if (d.hypothetical && html.indexOf("This is a hypothetical.") === -1) throw new Error("Missing hypothetical disclaimer on " + slug);
+
   if (html.indexOf(LONG_PAGES) === -1) throw new Error("Missing Long Form page ref on " + slug);
   if (html.indexOf(SHORT_PAGES) === -1) throw new Error("Missing short form page ref on " + slug);
   if (html.indexOf("/demo") !== -1) throw new Error("Forbidden /demo link on " + slug);
@@ -654,8 +657,8 @@ if (!DRY) {
 console.log("Daily Traditions " + (DRY ? "(DRY RUN)" : "BUILT"));
 console.log("  readings rendered : " + built.length);
 console.log("  month / tradition : " + monthCap + " = Tradition " + T);
-console.log("  hypothetical days : " + built.filter((b) => b.hypothetical).length + " (all carry the disclaimer — asserted)");
-console.log("  earned-answer days: " + built.filter((b) => !b.hypothetical).length);
+console.log("  scenario days     : " + built.filter((b) => b.hypothetical).length);
+console.log("  incident days     : " + built.filter((b) => !b.hypothetical).length);
 console.log("  unique titles     : " + seenTitles.size);
 console.log("  unique metas      : " + seenDescs.size);
 console.log("  page refs asserted: short " + SHORT_PAGES + " + LONG FORM " + LONG_PAGES + " on every page");

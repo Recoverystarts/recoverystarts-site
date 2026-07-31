@@ -53,7 +53,7 @@ const urls = [
   // Daily tradition
   h = await (await fetch(BASE + "/daily-tradition/july-1/")).text();
   console.log("\njuly-1 title  : " + (h.match(/<title>(.*?)<\/title>/) || [])[1]);
-  console.log("  hypothetical note : " + /This is a hypothetical\./.test(h));
+
   console.log("  long form 563-566 : " + h.includes("563–566"));
   console.log("  short form 561-562: " + h.includes("561–562"));
   console.log("  governance line   : " + /governance, not theology/.test(h));

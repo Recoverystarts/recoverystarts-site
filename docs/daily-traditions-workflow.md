@@ -63,7 +63,7 @@ Each day carries one of five questions, in strict rotation. **Day N carries ques
 | **Q1** | **The threat** — what specifically happened in early A.A. A real incident, with names and dates. | `(the threat)` |
 | **Q2** | **Before the Tradition** — how Bill, Dr. Bob and the early members lived through it and solved it the hard way. Sourced. | `(before the tradition)` |
 | **Q3** | **The threat today** — the same danger now, in today's clothes. | `(the threat today)` |
-| **Q4** | **How a group breaks it** — a labelled hypothetical. Internal, cautionary, no villain. The only day carrying the disclaimer, which the builder adds from the kind tag. | `(how a group breaks it)` |
+| **Q4** | **How a group breaks it** — a scenario. Internal, cautionary, no villain. NEVER announced as a hypothetical: the opening words carry that on their own, and the scene must be anchored to real A.A. material before or after it. | `(how a group breaks it)` |
 | **Q5** | **How it gets captured** — how outside bodies hollow the Tradition out. Name the mechanism; name no organisation. | `(how it gets captured)` |
 
 A 31-day month needs **seven** Q1 readings — days 1, 6, 11, 16, 21, 26, 31 — and six of each other. A 30-day month divides evenly at six each.

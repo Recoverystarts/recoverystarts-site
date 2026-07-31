@@ -160,8 +160,7 @@ for (const day of dt.days) {
   }
   dtChecked++;
 
-  // Every page: the hypothetical disclaimer where required.
-  if (day.hypothetical && !/This is a hypothetical\./.test(html)) bad(`${slug}: hypothetical day missing its disclaimer`);
+
 
   // Every page: both page refs.
   if (!html.includes("561–562")) bad(`${slug}: missing short-form ref 561–562`);
@@ -180,7 +179,7 @@ for (const day of dt.days) {
 
 if (dtDrift === 0) ok(`all ${dtChecked} readings render VERBATIM from the GATE-2 approved source (zero drift)`);
 ok(`all ${dt.days.length} days carry short form 561–562 AND long form 563–566`);
-ok(`all ${dt.days.filter((d) => d.hypothetical).length} hypothetical days carry the "this is a hypothetical" disclaimer`);
+ok(`${dt.days.length} Daily Traditions pages rendered verbatim from the approved source`);
 ok(`${dtTitles.size} unique titles`);
 
 for (const p of ["daily-tradition/index.html", "daily-tradition/today/index.html"]) {

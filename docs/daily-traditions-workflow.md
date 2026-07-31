@@ -74,7 +74,7 @@ Within a month, every incident, quotation and image appears once.
 
 ```
 ### October 1 — "Half a Million" · *(the threat)*
-[one body block, roughly 175 words, no line breaks inside it]
+[one body block, 200-220 words, no line breaks inside it]
 *Sit with:* [a plain statement of what happened in THIS reading] [then a question to the reader]
 *Grounded in:* [citation]
 ```
@@ -142,7 +142,7 @@ Once Gate 2 is approved:
 2. Add the month to `MONTH_PUBLISHED` in `scripts/build-traditions-pages.js` with the date it actually ships. Per-batch dates matter — 366 pages sharing one date reads to a crawler as a single content dump.
 3. `node scripts/parse-traditions.js --verify` — confirms the readings parse and asserts the question rotation.
 4. `node scripts/build-all.js` — ten stages. Both gates come back green: the quotation audit at zero fabrications, and the SEO buildout verification passed.
-5. Check the built pages: the right count on disk, prev/next staying inside the month, the disclaimer on the Q4 days only, the long form and Article schema on every page, the hub listing the month, the sitemap carrying the new URLs.
+5. Check the built pages: the right count on disk, prev/next staying inside the month, the long form and Article schema on every page, the hub listing the month, the sitemap carrying the new URLs.
 6. Commit and push. Check `git rev-parse --abbrev-ref HEAD` and `git log origin/main..HEAD` first — Claude Code works in these repos too. Add your own paths explicitly. Confirm the push landed with `git fetch` and comparing local to origin.
 7. `powershell -ExecutionPolicy Bypass -File scripts\submit.ps1` — purges the Cloudflare cache and submits to IndexNow.
 8. Load a few live pages and confirm.

@@ -34,8 +34,8 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -86,9 +86,9 @@
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
-  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=meetings" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=meetings" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
 
   <main id="main">
@@ -96,7 +96,7 @@
       <div class="page-head">
         <p class="eyebrow">The rooms</p>
         <h1>Walking in is the hardest part. Here's where the rooms are.</h1>
-        <p class="standfirst">Every fellowship below is free, anonymous, and peer-led. No sign-up, no cost, no questions. Each card opens that fellowship's own meeting finder — some of those sites are clunky, but the meetings on the other side are worth it.</p>
+        <p class="standfirst">Every fellowship below is free to attend, and nobody will ask you to sign anything. Each card opens that fellowship's own meeting finder — some of those sites are clunky, but the rooms on the other side are worth it.</p>
       </div>
 
       <section>
@@ -114,7 +114,7 @@
             <div class="meeting-card-icon">🌀</div>
             <div class="meeting-card-body">
               <h3>Narcotics Anonymous (NA)</h3>
-              <p>Founded 1953. A 12-step fellowship for people overcoming drug addiction — considers any substance abuse or compulsive disorder a drug. Open and closed meetings worldwide with peer sharing and sponsor relationships.</p>
+              <p>Founded 1953. A 12-step fellowship for people recovering from drug addiction — any substance, any compulsion. Open and closed meetings worldwide with peer sharing and sponsor relationships.</p>
             </div>
             <span class="meeting-card-arrow">→</span>
           </a>
@@ -217,7 +217,7 @@
       <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>
   </footer>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/app.js"></script>
+  <script src="/app.js"></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 <!-- End Cloudflare Web Analytics -->

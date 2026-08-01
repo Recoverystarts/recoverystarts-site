@@ -102,8 +102,8 @@ function navHtml(urlPath) {
   }).join("\n");
   return `  <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
 ${items}
       <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
@@ -115,12 +115,14 @@ ${items}
 // The one action the whole site points at: talking to Recovery Einstein.
 // Static HTML (crawlable, no-JS safe), per-page utm_content so we can see
 // which pages actually carry people over.
+// Copy note: no "free" promise here — AI chat lives on paid tiers, and a
+// brand of hope never makes a claim its own pricing page contradicts.
 function ctaHtml(urlPath) {
   const slug = (urlPath === "/" ? "home" : urlPath.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")) || "home";
   const q = `utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=${slug}`;
-  return `  <a class="einstein-cta" href="https://app.recoverystarts.com/?${q}" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  return `  <a class="einstein-cta" href="https://app.recoverystarts.com/?${q}" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>`;
 }
 const CTA_RX = /[ \t]*<a class="einstein-cta"[\s\S]*?<\/a>/;
@@ -159,7 +161,7 @@ const pages = [];
 
 const NAV_RX = /[ \t]*<nav class="nav">[\s\S]*?<\/nav>/;
 
-let fixed = 0, added = 0, already = 0, skipped = 0, ctaAdded = 0, ctaFixed = 0, footFixed = 0, footAdded = 0;
+let fixed = 0, added = 0, already = 0, skipped = 0, ctaAdded = 0, ctaFixed = 0, footFixed = 0, footAdded = 0, appJsAdded = 0;
 const noNav = [];
 
 for (const file of pages) {
@@ -224,6 +226,14 @@ for (const file of pages) {
     changed = true;
   }
 
+  // The chrome is dead without /app.js (dropdowns, theme toggle). Any page
+  // that carries the nav must load it.
+  if (!html.includes('src="/app.js"')) {
+    html = html.replace(/<\/body>/, '  <script src="/app.js"></script>\n</body>');
+    appJsAdded++;
+    changed = true;
+  }
+
   if (!DRY && changed) fs.writeFileSync(file, html);
 }
 
@@ -235,6 +245,7 @@ console.log("  already correct    : " + already);
 console.log("  redirect stubs     : " + skipped + "   (no chrome by design)");
 console.log("  einstein pill added: " + ctaAdded + "  fixed: " + ctaFixed);
 console.log("  footer replaced    : " + footFixed + "  added: " + footAdded);
+console.log("  app.js added       : " + appJsAdded);
 if (noNav.length) {
   console.log("\n  pages that had NO NAV — you could land there and not get back:");
   noNav.forEach((p) => console.log("    " + p));

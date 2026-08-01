@@ -66,22 +66,22 @@
     .lib-search .btn { margin: 5px; }
     .lib-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:5px; max-width: 900px; margin: 0 auto 2.5rem; padding: 14px; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); }
     .lib-jump a { font-size: 0.75rem; color: var(--text-muted); padding: 4px 9px; border-radius: 999px; }
-    .lib-jump a:hover { color: var(--gold); background: rgba(212,175,55,0.08); }
+    .lib-jump a:hover { color: var(--gold); background: var(--gold-glow); }
     .lib-sec { max-width: 900px; margin: 0 auto 2.2rem; scroll-margin-top: 90px; }
     .lib-sec h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.08rem; margin: 0 0 0.8rem; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
     .lib-count { color: var(--text-dim); font-size: 0.7rem; letter-spacing:1px; text-transform:uppercase; }
     .lib-grid { display:flex; flex-wrap:wrap; gap:6px; }
     .lib-grid a { display:inline-flex; align-items:center; justify-content:center; min-width: 48px; padding: 9px 11px; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; transition: all .15s; }
     .lib-grid a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
-    .lib-grid a.curated { border-color: rgba(212,175,55,0.55); color: var(--gold); }
+    .lib-grid a.curated { border-color: var(--border-hover); color: var(--gold); }
   </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -132,9 +132,9 @@
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
-  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=big-book-pages" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=big-book-pages" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
   <main id="main"><section class="cp-wrap"><div class="container">
       <nav class="cp-crumb"><a href="/">Home</a> / <a href="/big-book/">Big Book</a> / Page by page</nav>

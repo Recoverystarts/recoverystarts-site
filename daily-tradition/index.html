@@ -87,7 +87,8 @@
     .dt-month .m { display:block; color: var(--ink); font-size:0.95rem; }
     .dt-month .t { display:block; color: var(--ink-dim); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; margin-top:3px; }
     .dt-month.live .t { color: var(--accent); }
-    .dt-month.soon { opacity:0.45; }
+    .dt-month.soon { border-style: dashed; }
+    .dt-month.soon .m { color: var(--ink-soft); }
     /* Day index — a book's table of contents: rows and rules, not boxes */
     .dt-days { max-width: 760px; margin: 0 auto; }
     .dt-days[id], .dt-h2[id] { scroll-margin-top: 96px; }
@@ -103,8 +104,8 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -155,9 +156,9 @@
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
-  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=daily-tradition" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=daily-tradition" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
   <main id="main"><section class="dt-wrap"><div class="container">
       <nav class="dt-crumb"><a href="/">Home</a> / Daily Traditions</nav>
@@ -168,11 +169,12 @@
       <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
            being lectured. The doctrine essay used to sit here; it now sits below,
            for the people who want it. JS swaps in the real date on load; the
-           server-rendered fallback below is a real reading either way. -->
+           server-rendered fallback is honestly labeled "Latest reading" because
+           a static page cannot know what day the reader arrives. -->
       <section id="dt-today" class="dt-today">
         
         <div class="dt-today-head">
-          <span class="dt-today-lbl">Today · August 1</span>
+          <span class="dt-today-lbl">Latest reading · August 1</span>
           <span class="dt-badge hyp">Where it goes wrong</span>
         </div>
         <h2 class="dt-today-title"><a href="/daily-tradition/august-1/">The Shingle</a></h2>
@@ -359,7 +361,7 @@
         <p>The Twelve Traditions were adopted in 1950 for one reason: to stop A.A. from being <strong>owned</strong>. Not owned by a benefactor, not by a treatment centre, not by whoever happened to be paying the rent. They are the Fellowship's constitution — written out of near-misses A.A. actually lived through.</p>
         <p>Most of what circulates online quotes only the short form (pp. 561–562) and quietly drops the rest. So we front-load <strong>the Long Form, pp. 563–566</strong> — where the Traditions actually say what they mean. Tradition 3's clause that a group is A.A. only if "as a group, they have no other affiliation"? That exists <em>only</em> in the Long Form. It's the clause that says no treatment centre can own an A.A. group. It's also the clause the internet forgot.</p>
         <p>One more thing, because it gets blurred constantly: <strong>the Traditions are governance, not theology.</strong> They bind A.A. groups and the Fellowship — not individuals. They are not a rulebook for your personal life.</p>
-        <p><strong>How August reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>
+        <p><strong>How August reads.</strong> The month opens day-by-day — one angle on the Tradition at a time, where groups go wrong with it and the reason it was written — then settles into five questions, run straight through: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>
       </div>
 
       <div class="dt-chips">

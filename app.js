@@ -61,17 +61,22 @@
   });
 
   // ===== MOBILE NAV =====
+  var closeMobileNav = function () {
+    var nav = document.querySelector('.nav-links');
+    var toggle = document.querySelector('.nav-toggle');
+    if (nav) nav.classList.remove('open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  };
+
   document.querySelectorAll('.nav-links a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      document.querySelector('.nav-links').classList.remove('open');
-    });
+    link.addEventListener('click', closeMobileNav);
   });
 
   document.addEventListener('click', function (e) {
     var nav = document.querySelector('.nav-links');
     var toggle = document.querySelector('.nav-toggle');
     if (nav && nav.classList.contains('open') && !nav.contains(e.target) && toggle && !toggle.contains(e.target)) {
-      nav.classList.remove('open');
+      closeMobileNav();
     }
   });
 
@@ -100,7 +105,23 @@
     if (!e.target.closest('.has-sub')) closeSubs();
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeSubs();
+    if (e.key !== 'Escape') return;
+    closeSubs();
+    // :focus-within holds a desktop menu open — release it so Escape works.
+    var active = document.activeElement;
+    if (active && active.closest && active.closest('.has-sub')) active.blur();
+  });
+
+  // Menus also open via :hover / :focus-within on desktop — keep the
+  // aria-expanded state honest for assistive tech either way.
+  document.querySelectorAll('.has-sub').forEach(function (li) {
+    var btn = li.querySelector('.sub-toggle');
+    if (!btn) return;
+    var sync = function (open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
+    li.addEventListener('mouseenter', function () { sync(true); });
+    li.addEventListener('mouseleave', function () { if (!li.classList.contains('open')) sync(false); });
+    li.addEventListener('focusin', function () { sync(true); });
+    li.addEventListener('focusout', function () { if (!li.classList.contains('open')) sync(false); });
   });
 
   // ===== ACTIVE NAV LINK (longest match wins; submenu hits light their parent) =====

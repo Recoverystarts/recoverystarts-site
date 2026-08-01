@@ -78,11 +78,19 @@ function kindLabelFor(d) {
 function howMonthReads(month, daysForMonth) {
   const monthCap = month.charAt(0).toUpperCase() + month.slice(1);
   const kinds = new Set((daysForMonth || []).map((d) => String(d.kind || "").toLowerCase()));
-  const isFiveQ = kinds.has("the threat") || kinds.has("how it gets captured");
-  if (isFiveQ) {
-    return `<p><strong>How ${monthCap} reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>`;
+  const hasFiveQ = kinds.has("the threat") || kinds.has("how it gets captured");
+  const hasOddEven = kinds.has("hypothetical") || kinds.has("the earned answer");
+  const CLOSE = `Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>`;
+  // A month can carry BOTH schemes (August: days 1–11 shipped on odd/even,
+  // days 12+ on the five questions). Describing only one would be a lie about
+  // the page directly beneath this paragraph.
+  if (hasFiveQ && hasOddEven) {
+    return `<p><strong>How ${monthCap} reads.</strong> The month opens day-by-day — one angle on the Tradition at a time, where groups go wrong with it and the reason it was written — then settles into five questions, run straight through: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. ${CLOSE}`;
   }
-  return `<p><strong>How ${monthCap} reads.</strong> Each day takes one angle on the Tradition — where groups go wrong with it, and the reason it was written in the first place. Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>`;
+  if (hasFiveQ) {
+    return `<p><strong>How ${monthCap} reads.</strong> The month runs on five questions, straight through, over and over: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. Every five days tells the whole Tradition once, then comes back new — no incident, quote or image is used twice. ${CLOSE}`;
+  }
+  return `<p><strong>How ${monthCap} reads.</strong> Each day takes one angle on the Tradition — where groups go wrong with it, and the reason it was written in the first place. ${CLOSE}`;
 }
 
 const DRY = process.argv.includes("--dry");
@@ -205,7 +213,8 @@ const STYLE = `  <style>
     .dt-month .m { display:block; color: var(--ink); font-size:0.95rem; }
     .dt-month .t { display:block; color: var(--ink-dim); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; margin-top:3px; }
     .dt-month.live .t { color: var(--accent); }
-    .dt-month.soon { opacity:0.45; }
+    .dt-month.soon { border-style: dashed; }
+    .dt-month.soon .m { color: var(--ink-soft); }
     /* Day index — a book's table of contents: rows and rules, not boxes */
     .dt-days { max-width: 760px; margin: 0 auto; }
     .dt-days[id], .dt-h2[id] { scroll-margin-top: 96px; }
@@ -616,9 +625,10 @@ const hubHtml = head({
       <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
            being lectured. The doctrine essay used to sit here; it now sits below,
            for the people who want it. JS swaps in the real date on load; the
-           server-rendered fallback below is a real reading either way. -->
+           server-rendered fallback is honestly labeled "Latest reading" because
+           a static page cannot know what day the reader arrives. -->
       <section id="dt-today" class="dt-today">
-        ${todayHeroHtml(featDays[0])}
+        ${todayHeroHtml(featDays[0], false)}
       </section>
 
       <div class="dt-months">${monthCardsFor(featMonth)}</div>

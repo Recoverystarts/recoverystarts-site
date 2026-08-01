@@ -41,8 +41,8 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -93,9 +93,9 @@
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
-  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=about" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=about" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
 
   <main id="main">
@@ -109,13 +109,13 @@
         <div class="about-story fade-in">
           <div class="story-content">
             <h2>The Story</h2>
-            <p>Recovery Starts was built by Derick — a recovery advocate who got clean on the streets of Red Deer, Alberta after 103 days sober with nothing but the clothes on his back and the Big Book in his hands.</p>
+            <p>Recovery Starts was built by Derick — a recovery advocate who got clean on the streets of Red Deer, Alberta — carrying his first 103 days sober with nothing but the clothes on his back and the Big Book in his hands.</p>
             <p>Today, Derick has 3+ years of continuous sobriety, stable employment as a pipelayer in Alberta's construction industry, a vehicle, and is legally driving for the first time in his life. He built Recovery Einstein because the tools he wished existed during his early recovery didn't — and the ones that did were paywalled by treatment centers profiting from people's desperation.</p>
             <p>This project exists because recovery should be free, accessible, and grounded in the actual program — not watered-down therapy-speak designed to sell a $30,000 treatment stay.</p>
           </div>
           <div class="story-content">
             <h2>The Mission</h2>
-            <p>Recovery Einstein is an AI companion trained on all 596 pages of the Big Book. It doesn't replace sponsors, meetings, or fellowship — it supplements them. When you're at 2 AM staring at the ceiling, when you need a passage but can't remember which chapter, when you want to understand a concept deeper — Einstein is there.</p>
+            <p>Recovery Einstein is an AI companion grounded in the complete Big Book, page references and all. It doesn't replace sponsors, meetings, or fellowship — it supplements them. When you're at 2 AM staring at the ceiling, when you need a passage but can't remember which chapter, when you want to understand a concept deeper — Einstein is there.</p>
             <p>The meeting directory connects you to 9 fellowships covering alcohol, drugs, gambling, sex addiction, and more. Every single one is free. Every single one is anonymous. We don't gatekeep recovery behind a paywall or a waiting list.</p>
             <p><strong style="color: var(--gold);">Addict2Influencer</strong> is the content arm — daily recovery reflections, AA commentary, and real talk about addiction across YouTube, Instagram, TikTok, X, and Facebook. Including the Facebook Lives exposing corruption in Alberta's addiction and homeless sector.</p>
           </div>
@@ -129,7 +129,7 @@
             <div class="stat-label">Years Sober</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">596</div>
+            <div class="stat-number">575+</div>
             <div class="stat-label">Big Book Pages in Einstein</div>
           </div>
           <div class="stat-card">

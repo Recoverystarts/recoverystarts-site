@@ -22,8 +22,8 @@
   <a href="#main" class="skip-link">Skip to content</a>
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -74,15 +74,15 @@
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
-  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=download" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=download" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — day or night">
     <span class="ec-dot" aria-hidden="true"></span>
-    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
 
   <main id="main">
     <section class="download-hero">
       <div class="container">
-        <div class="hero-badge" style="margin: 0 auto 1.5rem;">✦ Available on Android</div>
+        <div class="hero-badge" style="margin: 0 auto 1.5rem;">✦ Works in any browser</div>
         <h1>Meet <span class="gold">Recovery Einstein</span></h1>
         <p>An AI companion that knows the Big Book cover to cover. Four Einstein personality modes. Built by someone who got sober on the streets — not in a boardroom.</p>
         
@@ -108,7 +108,7 @@
             <h3>Free</h3>
             <div class="tier-price">$0</div>
             <ul class="tier-features">
-              <li>Full Big Book reader — all 596 pages</li>
+              <li>Full Big Book reader — the complete text</li>
               <li>Search across the entire text</li>
               <li>Daily reflections</li>
               <li>No AI chat access</li>
@@ -171,7 +171,7 @@
             <div class="meeting-card-icon">⚔️</div>
             <div class="meeting-card-body">
               <h3>Step 12 Mode</h3>
-              <p>War-room partner. No hedging, no therapy-speak. Uses the Chapter 7–11 toolkit. When someone's life is on the line, this mode matches that urgency.</p>
+              <p>War-room partner for Twelfth Step work — carrying the message to someone who still suffers. No hedging, no therapy-speak. Uses the Chapter 7–11 toolkit, and always points back to the rooms.</p>
             </div>
           </div>
 
@@ -218,7 +218,7 @@
       <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>
   </footer>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/app.js"></script>
+  <script src="/app.js"></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 <!-- End Cloudflare Web Analytics -->

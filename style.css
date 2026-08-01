@@ -25,11 +25,11 @@
   /* Ink */
   --ink:      #2A2521;
   --ink-soft: #5C544A;
-  --ink-dim:  #7A7060;
+  --ink-dim:  #6E6558;
 
   /* THE accent — gold. Three jobs: the door, links, focus rings. */
-  --accent:       #8F5F12;
-  --accent-hover: #A9750F;
+  --accent:       #7E5410;
+  --accent-hover: #6B470B;
 
   /* Sanctuary bands — FIXED, not theme-switched: always the app's night */
   --sky:      #141C2B;
@@ -91,9 +91,9 @@
     --paper-3: light-dark(#ECE4D4, #212A3B);
     --ink:      light-dark(#2A2521, #E9E1CF);
     --ink-soft: light-dark(#5C544A, #A99F8C);
-    --ink-dim:  light-dark(#7A7060, #877E6D);
-    --accent:       light-dark(#8F5F12, #E0B15E);
-    --accent-hover: light-dark(#A9750F, #EDC77E);
+    --ink-dim:  light-dark(#6E6558, #9A907C);
+    --accent:       light-dark(#7E5410, #E0B15E);
+    --accent-hover: light-dark(#6B470B, #EDC77E);
     --safe:  light-dark(#4C6B4F, #9DBD9F);
     --alert: light-dark(#8C3B2E, #D98A76);
     --rule:        light-dark(rgba(42, 37, 33, 0.14), rgba(233, 225, 207, 0.13));
@@ -352,14 +352,18 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.6rem;
   line-height: 1;
   cursor: pointer;
-  padding: 6px 3px;
+  min-width: 26px;
+  min-height: 26px;
+  padding: 6px 4px;
   transition: transform 0.2s, color 0.2s;
 }
 .has-sub:hover .sub-toggle,
 .has-sub.open .sub-toggle { color: var(--accent); }
 .has-sub.open > .sub-toggle { transform: rotate(180deg); }
 
-.sub-menu { list-style: none; margin: 0; font-family: var(--font-ui); }
+/* Hidden by default — at fractional viewport widths between the two media
+   branches, neither would otherwise apply and every submenu would sit open. */
+.sub-menu { list-style: none; margin: 0; font-family: var(--font-ui); display: none; }
 
 @media (min-width: 1021px) {
   .sub-menu {
@@ -410,7 +414,7 @@ img { max-width: 100%; height: auto; display: block; }
     padding: 7px 10px;
     font-size: 0.88rem;
     color: var(--ink-dim);
-    opacity: 0.5;
+    font-style: italic;
     cursor: default;
   }
 }
@@ -456,7 +460,7 @@ img { max-width: 100%; height: auto; display: block; }
   .has-sub.open > .sub-menu { display: block; }
   .sub-menu a { display: block; padding: 7px 0; color: var(--ink-soft); }
   .sub-menu .sub-today a { color: var(--accent); font-weight: 600; }
-  .sub-soon { padding: 7px 0; color: var(--ink-dim); opacity: 0.5; }
+  .sub-soon { padding: 7px 0; color: var(--ink-dim); font-style: italic; }
   .nav-cta { text-align: center; }
 }
 
@@ -612,16 +616,19 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
   margin-top: 10px;
   font-family: var(--font-ui);
   font-size: 0.85rem;
+  font-weight: 600;
   color: var(--accent);
 }
 
-/* Quote block — the sacred text, framed like a poem */
-.bb-quote {
+/* Quote block — the sacred text, framed like a poem.
+   Named .quote-frame (NOT .bb-quote) — 591 legacy Big Book pages define their
+   own .bb-quote inline and must not inherit this frame. */
+.quote-frame {
   margin-block: var(--space-m);
   padding-top: var(--space-s);
   position: relative;
 }
-.bb-quote::before {
+.quote-frame::before {
   content: '';
   position: absolute;
   top: 0;
@@ -630,14 +637,14 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
   height: 2px;
   background: var(--accent);
 }
-.bb-quote blockquote {
+.quote-frame blockquote {
   font-family: var(--font-body);
   font-style: italic;
   font-size: var(--step-1);
   line-height: 1.55;
   color: var(--ink);
 }
-.bb-quote cite {
+.quote-frame cite {
   display: block;
   margin-top: 0.8rem;
   font-family: var(--font-ui);
@@ -826,8 +833,10 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .hero-content p { color: var(--sky-soft); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-s); }
 
-.gold { color: var(--sky-gold); }
-main > section:not(.hero) .gold { color: var(--accent); }
+/* .gold defaults to the readable accent; sanctuary (night) contexts opt in
+   to the app's sky-gold, where it belongs. */
+.gold { color: var(--accent); }
+.hero .gold, .invite-band .gold, .footer .gold, .app-promo .gold { color: var(--sky-gold); }
 
 /* ===== 11. LEGACY COMPONENTS, RESTYLED =================================== */
 
@@ -1075,3 +1084,17 @@ main > section:not(.hero) .gold { color: var(--accent); }
 
 /* Einstein figure glow, calmed for paper */
 .dr-figure img { filter: none !important; }
+
+/* No box-shadows in First Light — flatten the legacy dark glows baked into
+   reflection pages and the Big Book search box. */
+.dr-bubble, .bb-box { box-shadow: none !important; }
+
+/* ===== 13. REDUCED MOTION — stillness is the default experience ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

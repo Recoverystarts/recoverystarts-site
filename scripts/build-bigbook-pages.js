@@ -729,14 +729,14 @@ const HUB_STYLE = STYLE.replace("</style>", `
     .lib-search .btn { margin: 5px; }
     .lib-jump { display:flex; flex-wrap:wrap; justify-content:center; gap:5px; max-width: 900px; margin: 0 auto 2.5rem; padding: 14px; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); }
     .lib-jump a { font-size: 0.75rem; color: var(--text-muted); padding: 4px 9px; border-radius: 999px; }
-    .lib-jump a:hover { color: var(--gold); background: rgba(212,175,55,0.08); }
+    .lib-jump a:hover { color: var(--gold); background: var(--gold-glow); }
     .lib-sec { max-width: 900px; margin: 0 auto 2.2rem; scroll-margin-top: 90px; }
     .lib-sec h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.08rem; margin: 0 0 0.8rem; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
     .lib-count { color: var(--text-dim); font-size: 0.7rem; letter-spacing:1px; text-transform:uppercase; }
     .lib-grid { display:flex; flex-wrap:wrap; gap:6px; }
     .lib-grid a { display:inline-flex; align-items:center; justify-content:center; min-width: 48px; padding: 9px 11px; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; transition: all .15s; }
     .lib-grid a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
-    .lib-grid a.curated { border-color: rgba(212,175,55,0.55); color: var(--gold); }
+    .lib-grid a.curated { border-color: var(--border-hover); color: var(--gold); }
   </style>`);
 
 const hubSections = sectionOrder.map((s) => {

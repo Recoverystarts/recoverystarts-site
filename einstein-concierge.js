@@ -97,14 +97,33 @@
 
   function scroll() { msgs.scrollTop = msgs.scrollHeight; }
 
-  function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+  // Builds the linkified reply as DOM nodes rather than an HTML string.
+  // The previous version concatenated the matched URL into an href attribute,
+  // and its escaper (textContent -> innerHTML) does not escape double quotes —
+  // so a URL containing one could close the attribute and add its own.
   function linkify(s) {
-    return esc(s).replace(
-      /((?:https?:\/\/|www\.)[^\s<]+|\b[a-z0-9.-]+\.(?:com|org|net)(?:\/[^\s<]*)?)/gi,
-      function (u) {
-        var href = /^https?:\/\//i.test(u) ? u : "https://" + u;
-        return '<a href="' + href + '" target="_blank" rel="noopener noreferrer" style="color:#d4af37;text-decoration:underline">' + u + "</a>";
-      });
+    var frag = document.createDocumentFragment();
+    var re = /((?:https?:\/\/|www\.)[^\s<]+|\b[a-z0-9.-]+\.(?:com|org|net)(?:\/[^\s<]*)?)/gi;
+    var last = 0;
+    var m;
+    while ((m = re.exec(s)) !== null) {
+      if (m.index > last) frag.appendChild(document.createTextNode(s.slice(last, m.index)));
+      var u = m[0];
+      var href = /^https?:\/\//i.test(u) ? u : "https://" + u;
+      var a = document.createElement("a");
+      // Assigning .href rejects anything that isn't a parseable URL, and
+      // .textContent means the label can never be markup.
+      a.href = href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.style.color = "#d4af37";
+      a.style.textDecoration = "underline";
+      a.textContent = u;
+      frag.appendChild(a);
+      last = m.index + u.length;
+    }
+    if (last < s.length) frag.appendChild(document.createTextNode(s.slice(last)));
+    return frag;
   }
 
   function addMsg(role, text) {
@@ -112,7 +131,7 @@
     row.className = "rec-row " + (role === "user" ? "me" : "ein");
     var bub = document.createElement("div");
     bub.className = "rec-bub";
-    if (role === "user") { bub.textContent = text; } else { bub.innerHTML = linkify(text); }
+    if (role === "user") { bub.textContent = text; } else { bub.appendChild(linkify(text)); }
     row.appendChild(bub);
     msgs.appendChild(row);
     scroll();

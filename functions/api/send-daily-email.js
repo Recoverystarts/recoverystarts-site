@@ -131,7 +131,10 @@ ${discussion ? `**Something to sit with:** ${discussion}\n\n---\n\n` : ''}[Read 
     });
 
   } catch (err) {
-    return jsonResponse({ error: 'Internal error', message: err.message, stack: err.stack }, 500);
+    // Log the detail, don't return it — this response is reachable by anyone
+    // holding the token, and a stack trace maps out the Worker for them.
+    console.error('[send-daily-email] failed:', err && err.stack);
+    return jsonResponse({ error: 'Internal error' }, 500);
   }
 }
 

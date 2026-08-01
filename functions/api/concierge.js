@@ -25,6 +25,45 @@ SAFETY (the one thing that overrides everything): If someone expresses thoughts 
 
 TONE: warm, short, human, never preachy. You are the friendly face at the door, not the whole house. Every reply ends by pointing to the meeting links on this page or to app.recoverystarts.com. Plain text, plain bare URL (app.recoverystarts.com), no markdown, no asterisks.`;
 
+// Abuse controls. Per-request cost was already capped (MAX_TURNS/MAX_CHARS/
+// MAX_TOKENS); what was uncapped was the number of requests. Nothing here
+// authenticates a visitor — the widget is deliberately anonymous — these just
+// make the endpoint expensive to script against from outside a browser.
+const ALLOWED_ORIGINS = [
+  "https://recoverystarts.com",
+  "https://www.recoverystarts.com",
+];
+const RATE_LIMIT_PER_HOUR = 40;
+
+function isAllowedOrigin(origin) {
+  if (!origin) return false;
+  if (ALLOWED_ORIGINS.includes(origin)) return true;
+  // Cloudflare Pages preview deployments for this project.
+  return /^https:\/\/[a-z0-9-]+\.recoverystarts-site\.pages\.dev$/.test(origin);
+}
+
+/**
+ * Per-IP hourly cap, backed by the CONCIERGE_RL KV namespace.
+ *
+ * Returns false (allow) when the binding is absent so the endpoint keeps
+ * working before the namespace is created — the origin check above is the
+ * control that works with no configuration. Bind CONCIERGE_RL in the Pages
+ * project to turn this on.
+ */
+async function overRateLimit(env, ip) {
+  if (!env.CONCIERGE_RL || !ip) return false;
+  const bucket = `${ip}:${Math.floor(Date.now() / 3600000)}`;
+  try {
+    const used = parseInt((await env.CONCIERGE_RL.get(bucket)) || "0", 10);
+    if (used >= RATE_LIMIT_PER_HOUR) return true;
+    await env.CONCIERGE_RL.put(bucket, String(used + 1), { expirationTtl: 3600 });
+    return false;
+  } catch {
+    // A KV outage must not take the greeter down with it.
+    return false;
+  }
+}
+
 function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), {
     status,
@@ -35,6 +74,18 @@ function json(obj, status = 200) {
 export async function onRequestPost(context) {
   const { request, env } = context;
   try {
+    // Browsers always send Origin on POST, so a missing or foreign Origin
+    // means this did not come from the widget on the site.
+    if (!isAllowedOrigin(request.headers.get("origin"))) {
+      return json({ error: "forbidden" }, 403);
+    }
+
+    if (await overRateLimit(env, request.headers.get("cf-connecting-ip"))) {
+      return json({
+        reply: "I need a breather — try again shortly. Meetings are listed right here on this page, and the full app is at app.recoverystarts.com.",
+      });
+    }
+
     const body = await request.json();
     let messages = Array.isArray(body.messages) ? body.messages : [];
     messages = messages

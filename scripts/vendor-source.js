@@ -43,13 +43,21 @@ for (const d of DATA.days.slice().sort((a, b) => a.day - b.day)) {
 }
 
 const out = lines.join("\n");
-fs.writeFileSync(path.join(ROOT, "data", "readings-source.md"), out);
+const outPath = path.join(ROOT, "data", "readings-source.md");
+fs.writeFileSync(outPath, out);
 
 // Prove the vendored copy still contains every reading, verbatim.
+//
+// Read it BACK from disk. The previous version searched `out` — the same
+// in-memory string it had just built from these exact fields — so it could
+// never fail for any input, while reading like a gate. Checking the file as
+// written is what catches a short write or an encoding mangle (this repo has
+// been bitten by cp1252/UTF-8 round-trips before).
+const written = fs.readFileSync(outPath, "utf8");
 let bad = 0;
 for (const d of DATA.days) {
   for (const [f, v] of [["body", d.body], ["sitWith", d.sitWith], ["groundedIn", d.groundedIn], ["title", d.title]]) {
-    if (out.indexOf(v) === -1) { console.error("DRIFT: " + d.key + " [" + f + "]"); bad++; }
+    if (written.indexOf(v) === -1) { console.error("DRIFT: " + d.key + " [" + f + "]"); bad++; }
   }
 }
 if (bad) throw new Error(bad + " field(s) drifted — refusing to vendor.");

@@ -384,17 +384,10 @@ img { max-width: 100%; height: auto; display: block; }
     overflow-y: auto;
   }
   .sub-menu.sub-menu-list { grid-template-columns: 1fr; width: 250px; }
-  .sub-menu::before {
-    content: '';
-    position: absolute;
-    top: -14px;
-    left: 0;
-    right: 0;
-    height: 14px;
-  }
-  .has-sub:hover > .sub-menu,
-  .has-sub:focus-within > .sub-menu,
+  /* Desktop menus open on CLICK only (.open, toggled in app.js). Hover-open
+     flickered shut on the pointer's way down to the panel — Derick killed it. */
   .has-sub.open > .sub-menu { display: grid; }
+  .has-sub > a { cursor: pointer; }
   .sub-menu .sub-today {
     grid-column: 1 / -1;
     border-bottom: 1px solid var(--rule);
@@ -402,12 +395,24 @@ img { max-width: 100%; height: auto; display: block; }
     padding-bottom: 6px;
   }
   .sub-menu .sub-today a { color: var(--accent); font-weight: 600; }
+  .sub-menu .sub-hub {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--rule);
+    margin-top: 6px;
+    padding-top: 6px;
+  }
   .sub-menu a {
     display: block;
     padding: 7px 10px;
     border-radius: var(--radius-sm);
     font-size: 0.88rem;
     color: var(--ink-soft);
+  }
+  .sub-menu a small {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--ink-dim);
+    line-height: 1.3;
   }
   .sub-menu a:hover { background: color-mix(in oklab, var(--accent) 8%, var(--paper)); color: var(--accent); }
   .sub-soon {
@@ -417,6 +422,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-style: italic;
     cursor: default;
   }
+  .sub-soon small { display: block; font-size: 0.72rem; line-height: 1.3; }
 }
 
 /* Mobile nav */
@@ -460,6 +466,7 @@ img { max-width: 100%; height: auto; display: block; }
   .has-sub.open > .sub-menu { display: block; }
   .sub-menu a { display: block; padding: 7px 0; color: var(--ink-soft); }
   .sub-menu .sub-today a { color: var(--accent); font-weight: 600; }
+  .sub-menu a small, .sub-soon small { display: block; font-size: 0.72rem; color: var(--ink-dim); line-height: 1.3; }
   .sub-soon { padding: 7px 0; color: var(--ink-dim); font-style: italic; }
   .nav-cta { text-align: center; }
 }

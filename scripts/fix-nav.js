@@ -32,17 +32,23 @@ const tradLive = new Set(TRAD.days.map((d) => d.month));
 
 // THE nav. One definition. Everything else is generated from it.
 // sub items: [href|null, label, isToday?]
+// Desktop parents open on CLICK (app.js), so each submenu must carry a link
+// to its hub page — the parent link no longer navigates there on desktop.
 const reflectionSub = [
   ["/daily-reflection/today/", "Today's Reflection →", true],
   ...MONTHS.map((m) => [`/daily-reflection/${m}/`, CAP(m)]),
+  ["/daily-reflection/", "All of Daily Reflection →", "hub"],
 ];
+// "T8" read as noise — spell out the Tradition. Month on the first line,
+// "Tradition N" beneath it.
 const traditionSub = [
   ["/daily-tradition/today/", "Today's Tradition →", true],
   ...MONTHS.map((m, i) =>
     tradLive.has(m)
-      ? [`/daily-tradition/${m}/`, `${CAP(m)} · T${i + 1}`]
-      : [null, `${CAP(m)} · T${i + 1}`]
+      ? [`/daily-tradition/${m}/`, `${CAP(m)}<small>Tradition ${i + 1}</small>`]
+      : [null, `${CAP(m)}<small>Tradition ${i + 1} · coming</small>`]
   ),
+  ["/daily-tradition/", "All of Daily Traditions →", "hub"],
 ];
 const bigBookSub = [
   ["/big-book/search/", "Search the Big Book"],
@@ -79,9 +85,9 @@ function activeFor(urlPath) {
 }
 
 function subHtml(label, items, style) {
-  const lis = items.map(([href, text, isToday]) => {
+  const lis = items.map(([href, text, kind]) => {
     if (!href) return `        <li class="sub-soon">${text}</li>`;
-    const cls = isToday ? ' class="sub-today"' : "";
+    const cls = kind === true ? ' class="sub-today"' : kind === "hub" ? ' class="sub-hub"' : "";
     return `        <li${cls}><a href="${href}">${text}</a></li>`;
   }).join("\n");
   const menuCls = style === "list" ? "sub-menu sub-menu-list" : "sub-menu";

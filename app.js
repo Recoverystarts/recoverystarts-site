@@ -81,6 +81,12 @@
   });
 
   // ===== NAV DROPDOWNS (month + section submenus) =====
+  // Click-to-open everywhere. On desktop the parent label itself toggles the
+  // menu (hover-open flickered and is gone); every submenu carries a link to
+  // its hub page, so nothing is lost. With JS off, the parent navigates to the
+  // hub — a complete fallback.
+  var isDesktopNav = window.matchMedia('(min-width: 1021px)');
+
   var closeSubs = function (except) {
     document.querySelectorAll('.has-sub.open').forEach(function (li) {
       if (li === except) return;
@@ -90,14 +96,27 @@
     });
   };
 
+  var toggleSub = function (li) {
+    var opening = !li.classList.contains('open');
+    closeSubs(li);
+    li.classList.toggle('open', opening);
+    var b = li.querySelector('.sub-toggle');
+    if (b) b.setAttribute('aria-expanded', opening ? 'true' : 'false');
+  };
+
   document.querySelectorAll('.sub-toggle').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
-      var li = btn.closest('.has-sub');
-      var opening = !li.classList.contains('open');
-      closeSubs(li);
-      li.classList.toggle('open', opening);
-      btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+      toggleSub(btn.closest('.has-sub'));
+    });
+  });
+
+  document.querySelectorAll('.has-sub > a').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (!isDesktopNav.matches) return; // phone: the ▾ toggles, the label navigates
+      e.preventDefault();
+      e.stopPropagation();
+      toggleSub(link.closest('.has-sub'));
     });
   });
 
@@ -105,23 +124,7 @@
     if (!e.target.closest('.has-sub')) closeSubs();
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    closeSubs();
-    // :focus-within holds a desktop menu open — release it so Escape works.
-    var active = document.activeElement;
-    if (active && active.closest && active.closest('.has-sub')) active.blur();
-  });
-
-  // Menus also open via :hover / :focus-within on desktop — keep the
-  // aria-expanded state honest for assistive tech either way.
-  document.querySelectorAll('.has-sub').forEach(function (li) {
-    var btn = li.querySelector('.sub-toggle');
-    if (!btn) return;
-    var sync = function (open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); };
-    li.addEventListener('mouseenter', function () { sync(true); });
-    li.addEventListener('mouseleave', function () { if (!li.classList.contains('open')) sync(false); });
-    li.addEventListener('focusin', function () { sync(true); });
-    li.addEventListener('focusout', function () { if (!li.classList.contains('open')) sync(false); });
+    if (e.key === 'Escape') closeSubs();
   });
 
   // ===== ACTIVE NAV LINK (longest match wins; submenu hits light their parent) =====

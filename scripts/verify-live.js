@@ -44,7 +44,7 @@ const urls = [
   console.log("page-64 quote length: " + (quote || "").length + " chars  (cap 340)");
   console.log("  has canonical      : " + /rel="canonical"/.test(h));
   console.log("  has Article JSON-LD: " + /"@type":"Article"/.test(h));
-  console.log("  no-repro disclaimer: " + /full text of the book is not reproduced/.test(h));
+  console.log("  aa.org link present: " + /aa\.org/.test(h));
 
   // How much book text is on the page in total? The whole point of the rewrite.
   const bodyText = h.replace(/<script[\s\S]*?<\/script>/g, "").replace(/<style[\s\S]*?<\/style>/g, "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();

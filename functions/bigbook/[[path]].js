@@ -35,10 +35,9 @@ export async function onRequest() {
     JSON.stringify({
       error: "gone",
       message:
-        "This endpoint used to return the full text of the Big Book. It no longer exists. " +
-        "Recovery Starts does not reproduce Alcoholics Anonymous — the book belongs to A.A. " +
-        "To find a passage, use the search (it returns page numbers and short quotations). " +
-        "To read the book, get a copy.",
+        "This endpoint no longer exists. The Big Book belongs to A.A., who offer it free " +
+        "at https://www.aa.org/the-big-book. To find a passage, use the search below; " +
+        "to read the book, read it at aa.org or get your own copy.",
       search: "https://recoverystarts.com/big-book/search/",
       pages: "https://recoverystarts.com/big-book/pages/",
       getTheBook: "https://recoverystarts.com/big-book/",

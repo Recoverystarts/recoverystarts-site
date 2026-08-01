@@ -91,7 +91,7 @@ for (const dir of bbDirs) {
   if (!/rel="canonical"/.test(html)) bad(`page-${label}: no canonical`);
   if (!/"@type":"Article"/.test(html)) bad(`page-${label}: no Article JSON-LD`);
   if (!/"@type":"BreadcrumbList"/.test(html)) bad(`page-${label}: no Breadcrumb JSON-LD`);
-  if (!/the full text of the book is not reproduced here/.test(html)) bad(`page-${label}: missing the no-reproduction disclaimer`);
+  if (!/aa\.org/.test(html)) bad(`page-${label}: missing the aa.org link`);
   if (/\/demo/.test(html)) bad(`page-${label}: forbidden /demo link`);
 }
 

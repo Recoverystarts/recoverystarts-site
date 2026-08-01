@@ -315,22 +315,24 @@ let navPages = 0, navBad = 0;
 if (navBad === 0) ok(`all ${navPages} pages carry the same ${REQUIRED_NAV.length}-link nav (no orphan pages)`);
 else bad(`${navBad} page(s) have a broken or missing nav`);
 
-console.log("\n=== 6. HOMEPAGE (First Light dawn arc) ===\n");
+console.log("\n=== 6. HOMEPAGE (Open Cosmos) ===\n");
 const home = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 if (!/href="\/big-book\/pages\/"/.test(home)) bad("homepage: no link to the Big Book library");
 if (!/href="\/big-book\/search\/"/.test(home)) bad("homepage: no link to Big Book search");
-if (!/href="\/daily-tradition\/"/.test(home)) bad("homepage: no link to Daily Traditions");
+if (!/href="\/daily-tradition\//.test(home)) bad("homepage: no link into Daily Traditions");
 if (!/href="\/daily-reflection\/today\/"/.test(home)) bad("homepage: no link to today's reflection");
-if (!/href="\/meetings\/"/.test(home)) bad("homepage: no doorway to meetings");
-if (!/class="doorway/.test(home)) bad("homepage: doorway cards missing");
-if (!/class="index-row"/.test(home)) bad("homepage: library index rows missing");
-if (!/invite-band/.test(home)) bad("homepage: Einstein invitation band missing");
+if (!/href="\/meetings\/"/.test(home)) bad("homepage: no door to meetings");
+if (!/class="door-card"/.test(home)) bad("homepage: the four doors are missing");
+if (!/library-panel/.test(home)) bad("homepage: the free-reader library panel is missing");
+if (!/world-fixed/.test(home)) bad("homepage: the cosmos world layer is missing");
+if (!/video-frame/.test(home)) bad("homepage: the YouTube demo slot is missing");
 if (!/988/.test(home)) bad("homepage: the 988 crisis line is missing");
+if (/(chat (is|for) free|free ai chat)/i.test(home)) bad("homepage: a free-chat claim crept in");
 const css = fs.readFileSync(path.join(ROOT, "style.css"), "utf8");
-for (const cls of ["\\.doorway", "\\.index-row", "\\.invite-band", "\\.einstein-cta", "\\.footer-safety"]) {
+for (const cls of ["\\.door-card", "\\.glass-panel", "\\.world-fixed", "\\.einstein-cta", "\\.footer-safety"]) {
   if (!new RegExp(cls).test(css)) bad("style.css: " + cls.replace("\\\\", "") + " styles missing");
 }
-ok("homepage carries the dawn arc: doorways, daily panel, library rows, invitation, 988");
+ok("homepage carries the Open Cosmos arc: world, doors, readings, library, demo slot, 988");
 
 console.log("\n" + "=".repeat(60));
 if (fail.length) {

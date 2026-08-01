@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recovery Starts — Free Recovery Meetings, Resources & Recovery Einstein AI</title>
-  <meta name="description" content="However last night went, this is a new day. Free daily readings, the Big Book page by page, meeting directories for 9 fellowships, and Recovery Einstein — an AI Big Book companion, free, any hour.">
+  <meta name="description" content="However last night went, this is a new day. Free daily readings, the Big Book page by page, meeting directories for 9 fellowships, and Recovery Einstein — an AI Big Book companion, any hour you need one.">
   <meta property="og:title" content="Recovery Starts — Free Recovery Readings, Meetings & Recovery Einstein AI">
   <meta property="og:description" content="However last night went, this is a new day. Free daily readings, the Big Book page by page, and Recovery Einstein — an AI Big Book companion.">
   <meta property="og:type" content="website">
@@ -23,46 +23,18 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Recovery Starts","url":"https://recoverystarts.com","logo":"https://recoverystarts.com/assets/einstein-character.png","sameAs":["https://youtube.com/@addict2influencer","https://instagram.com/addict2influencer","https://tiktok.com/@addict2influencer","https://x.com/addict2influence","https://facebook.com/addict2influencer"]}
   </script>
+  <link rel="preload" as="image" href="/assets/world/cosmos-bg.webp" fetchpriority="high">
   <link rel="stylesheet" href="/style.css">
-  <style>
-    /* Homepage-only: the dawn arc */
-    .home-hero { min-height: min(78vh, 640px); padding: var(--space-xl) 0; }
-    .home-hero .hero-stack { display: flex; flex-direction: column; gap: var(--space-s); align-items: flex-start; }
-    .home-hero .hero-actions { margin-top: var(--space-2xs); }
-    .doorway-section h2 { max-width: 26ch; }
-    .daily-panel {
-      background: var(--paper-2);
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      padding: var(--space-m);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-m);
-    }
-    .daily-panel .dp { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
-    .daily-panel .dp p { color: var(--ink-soft); font-size: 0.95rem; }
-    .daily-panel .dp .go { font-family: var(--font-ui); font-size: 0.92rem; color: var(--accent); }
-    @media (max-width: 680px) { .daily-panel { grid-template-columns: 1fr; } }
-    .exchange {
-      background: var(--sky-2);
-      border: 1px solid var(--sky-rule);
-      border-radius: var(--radius);
-      padding: var(--space-m);
-      max-width: 640px;
-      color: var(--sky-ink);
-    }
-    .exchange .who { font-family: var(--font-ui); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sky-soft); margin-bottom: 6px; }
-    .exchange .them { font-style: italic; color: var(--sky-ink); margin-bottom: var(--space-s); }
-    .exchange .cite { color: var(--sky-gold); white-space: nowrap; font-family: var(--font-ui); font-size: 0.85em; }
-    .exchange-note { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-soft); margin-top: var(--space-2xs); }
-    .library-rows { max-width: 760px; }
-    .home-derick { border-top: 1px solid var(--rule); padding-top: var(--space-m); display: flex; flex-wrap: wrap; gap: var(--space-s); align-items: center; justify-content: space-between; }
-    .home-derick p { color: var(--ink-soft); max-width: 52ch; }
-    .home-derick .links { display: flex; gap: 14px; font-family: var(--font-ui); font-size: 0.92rem; }
-  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
+
+  <div class="world-fixed" aria-hidden="true">
+    <img class="bg" src="/assets/world/cosmos-bg.webp" alt="" width="1600" height="1066">
+    <div class="shade"></div>
+    <canvas id="particles" class="world-particles"></canvas>
+  </div>
+
   <nav class="nav"><div class="nav-inner">
     <a href="/" class="nav-brand">Recovery Starts</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
@@ -115,7 +87,6 @@
         <li><a href="/meetings/">Find a Meeting</a></li>
       </ul></li>
       <li><a href="/about/">About</a></li>
-      <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
@@ -124,136 +95,210 @@
     <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — day or night</small></span>
   </a>
 
+  <div class="page">
   <main id="main">
-    <!-- 1 · The dawn: night resolving into the paper the page is printed on -->
-    <section class="hero home-hero grain">
-      <div class="container">
-        <div class="hero-stack">
-          <p class="eyebrow hero-eyebrow breath">Recovery Starts</p>
-          <h1 class="breath">However last night went, this is a new day.</h1>
-          <p class="standfirst breath">Free daily readings, the Big Book page by page, real meetings, and a companion who knows the whole book — any hour you need one.</p>
-          <div class="hero-actions breath">
-            <a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=home-hero" class="btn btn-primary" target="_blank" rel="noopener">Talk to Recovery Einstein →</a>
-            <a href="/daily-reflection/today/" class="btn btn-outline">Today's reading</a>
+  <div class="shell">
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Free · No sign-up · Night or day</p>
+        <h1>
+          However last night went,<br>
+          <em>this is a new day.</em>
+        </h1>
+        <p class="lede">
+          Free daily readings, the Big Book page by page, real meetings, and a companion who knows
+          the whole book — any hour you need one.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-glow" href="/big-book/pages/">Read the Big Book free</a>
+          <a class="btn btn-glass" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=cosmos-home&amp;utm_content=hero" target="_blank" rel="noopener">Talk to Recovery Einstein</a>
+        </div>
+        <p class="crisis">
+          In crisis right now? Call or text
+          <a href="tel:988">988</a>. You are not alone.
+        </p>
+      </div>
+
+      <div class="hero-figure">
+        <div class="figure-glow"></div>
+        <div class="figure-ring"></div>
+        <img src="/assets/einstein/guide.webp" alt="Recovery Einstein — calm guide with a glowing book" class="figure-img" width="800" height="1174">
+        <div class="figure-caption">
+          <span>Recovery Einstein</span>
+          <small>Your guide in the book</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="doors">
+      <div class="section-head">
+        <p class="eyebrow">Start where you are</p>
+        <h2>Four doors. Walk through any of them.</h2>
+      </div>
+      <div class="door-grid">
+        <a class="door-card" href="/aa-info/">
+          <div class="door-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" />
+              <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" />
+            </svg>
           </div>
-          <p class="crisis-line breath">In crisis right now? Call or text <a href="tel:988">988</a>. You are not alone.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2 · Doorways: routed by state of heart -->
-    <section class="doorway-section">
-      <div class="container">
-        <p class="eyebrow fade-in">Start where you are</p>
-        <h2 class="fade-in">Four doors. Walk through any of them.</h2>
-        <div class="doorways" style="margin-top: var(--space-m)">
-          <a class="doorway fade-in" href="/aa-info/">
-            <span class="lead">“I want to stop. I don't know how.”</span>
-            <span class="where">What A.A. is, plainly →</span>
-          </a>
-          <a class="doorway fade-in" href="/meetings/">
-            <span class="lead">“I need a meeting.”</span>
-            <span class="where">Nine fellowships, all free →</span>
-          </a>
-          <a class="doorway fade-in" href="/12-steps/">
-            <span class="lead">“I'm working the steps.”</span>
-            <span class="where">The 12 Steps, step by step →</span>
-          </a>
-          <a class="doorway fade-in" href="/daily-reflection/today/">
-            <span class="lead">“I just need today's reading.”</span>
-            <span class="where">One page for this morning →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3 · The daily practice -->
-    <section>
-      <div class="container">
-        <p class="eyebrow fade-in">A reading a day</p>
-        <h2 class="fade-in">The mornings add up.</h2>
-        <div class="daily-panel fade-in" style="margin-top: var(--space-m)">
-          <div class="dp">
-            <h3>Daily Reflection</h3>
-            <p>Recovery Einstein's Big Book perspective on every day's theme — 366 mornings, page references and all.</p>
-            <a class="go" href="/daily-reflection/today/">Read today's →</a>
+          <h3>AA Info</h3>
+          <p>Plain answers when you're not sure where to begin.</p>
+          <span class="door-go">Enter →</span>
+        </a>
+        <a class="door-card" href="/meetings/">
+          <div class="door-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 8v4l2.5 2.5" />
+            </svg>
           </div>
-          <div class="dp">
-            <h3>Daily Tradition</h3>
-            <p>One month, one Tradition — where groups go wrong with it, and why it was written. Grounded in the Long Form.</p>
-            <a class="go" href="/daily-tradition/today/">Read today's →</a>
+          <h3>Meetings</h3>
+          <p>Real rooms across nine fellowships. Walking in is the hardest part.</p>
+          <span class="door-go">Find a room →</span>
+        </a>
+        <a class="door-card" href="/12-steps/">
+          <div class="door-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 6h16M4 12h12M4 18h8" />
+            </svg>
+          </div>
+          <h3>12 Steps</h3>
+          <p>Step by step, with the book beside you.</p>
+          <span class="door-go">Begin →</span>
+        </a>
+        <a class="door-card" href="/daily-reflection/today/">
+          <div class="door-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 4h10a2 2 0 012 2v14l-7-3-7 3V6a2 2 0 012-2z" />
+            </svg>
+          </div>
+          <h3>Daily Reading</h3>
+          <p>A reflection for this morning. The mornings add up.</p>
+          <span class="door-go">Read today →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="readings">
+      <div class="section-head">
+        <p class="eyebrow">A reading a day</p>
+        <h2>The mornings add up.</h2>
+      </div>
+      <div class="reading-grid">
+        <article class="glass-panel reading-card">
+          <div class="reading-meta">
+            <span class="chip">Daily Reflection</span>
+            <span class="date">Today</span>
+          </div>
+          <h3>This morning's page</h3>
+          <p>
+            Recovery Einstein's Big Book perspective on the day's theme — page cites and all.
+            Free. Always.
+          </p>
+          <a class="text-link" href="/daily-reflection/today/">Read today's reflection →</a>
+        </article>
+        <article class="glass-panel reading-card">
+          <div class="reading-meta">
+            <span class="chip chip-gold">Daily Tradition</span>
+            <span class="date">This month</span>
+          </div>
+          <h3>The Tradition, held to the light</h3>
+          <p>
+            One Tradition a month, one reading a day — for groups, sponsors, and anyone learning
+            how we stay together.
+          </p>
+          <a class="text-link" href="/daily-tradition/today/">Read today's tradition →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="library">
+      <div class="glass-panel library-panel">
+        <div class="library-copy">
+          <p class="eyebrow">The library</p>
+          <h2>Read and search the Big Book — free, right here.</h2>
+          <p class="lede-sm">
+            Full free value on this site. No agreement wall. No account. When you're ready to
+            <em>talk</em>, that's the app.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-glow" href="/big-book/pages/">Open the reader</a>
+            <a class="btn btn-glass" href="/big-book/search/">Search the book</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 4 · The real thing: what talking to Einstein actually looks like -->
-    <section>
-      <div class="container">
-        <p class="eyebrow fade-in">The companion</p>
-        <h2 class="fade-in">A friend who knows the whole book.</h2>
-        <div class="exchange grain fade-in" style="margin-top: var(--space-m)">
-          <p class="who">You</p>
-          <p class="them">I heard a line in a meeting about acceptance being the answer. Where is that?</p>
-          <p class="who">Recovery Einstein</p>
-          <p>That's page 417 — “And acceptance is the answer to <em>all</em> my problems today.” It's from the story “Acceptance Was the Answer.” If it helped, the paragraph that follows it is the part people read twice <span class="cite">[Page 417]</span>.</p>
-        </div>
-        <p class="exchange-note fade-in">Grounded in the actual text — it cites the page, so you can read the real thing. <a href="/download/">About the app →</a></p>
-      </div>
-    </section>
-
-    <!-- 5 · The library -->
-    <section>
-      <div class="container">
-        <p class="eyebrow fade-in">The library</p>
-        <h2 class="fade-in">Free. Complete. No sign-up.</h2>
-        <div class="library-rows fade-in" style="margin-top: var(--space-m)">
-          <a class="index-row" href="/big-book/pages/">
-            <span class="d">The reference library</span>
-            <span class="t">The Big Book, page by page</span>
-            <span class="k">Every page of the 4th Edition, indexed — what it covers and where to read the real thing.</span>
-          </a>
-          <a class="index-row" href="/big-book/search/">
-            <span class="d">Free, no sign-up</span>
-            <span class="t">Search the Big Book</span>
-            <span class="k">The same engine that runs inside the app. Ask it “the promises” — it tells you the page.</span>
-          </a>
-          <a class="index-row" href="/12-traditions/">
-            <span class="d">Set the record straight</span>
-            <span class="t">The 12 Traditions — what they actually say</span>
-            <span class="k">Governance, not theology. The Long Form clause the internet forgot, printed in full.</span>
-          </a>
-          <a class="index-row" href="/daily-tradition/">
-            <span class="d">A reading a day</span>
-            <span class="t">Daily Traditions</span>
-            <span class="k">Twelve months, twelve Traditions — one honest reading each morning.</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6 · Built by someone who lived it -->
-    <section>
-      <div class="container">
-        <div class="home-derick fade-in">
-          <p><strong>Built in recovery, by someone in recovery.</strong> Derick — Addict2Influencer — got clean and built this so the next person has it easier. No corporation, no wellness startup.</p>
-          <div class="links">
-            <a href="/about/">The story →</a>
-            <a href="https://youtube.com/@addict2influencer" target="_blank" rel="noopener">YouTube →</a>
+        <div class="library-preview" aria-hidden="true">
+          <div class="book-window">
+            <div class="book-chrome">
+              <span></span><span></span><span></span>
+              <em>Alcoholics Anonymous · 4th Ed.</em>
+            </div>
+            <div class="book-body">
+              <p class="page-tag">p. 417</p>
+              <p>
+                And acceptance is the answer to all my problems today. When I am disturbed, it is
+                because I find some person, place, thing, or situation — some fact of my life —
+                unacceptable to me…
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 7 · The invitation -->
-    <section class="invite-band grain">
-      <div class="container invite-inner">
-        <p class="invite-line">Whenever you're ready to talk it through, Einstein is here — day or night.</p>
-        <a class="btn btn-primary" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=home-invite" target="_blank" rel="noopener">Talk to Recovery Einstein →</a>
-        <p class="reassure">Free to start. No judgment. Grounded in the Big Book, page references and all.</p>
+    <section class="section" id="demo">
+      <div class="section-head">
+        <p class="eyebrow">See it once</p>
+        <h2>How Recovery Einstein works</h2>
+        <p class="section-sub">
+          A walkthrough of the app is on its way — this is its seat.
+        </p>
+      </div>
+      <div class="glass-panel video-slot">
+        <div class="video-frame">
+          <div class="video-placeholder">
+            <span class="play-btn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                <path d="M8 5v14l11-7L8 5z" />
+              </svg>
+            </span>
+            <p>YouTube demo</p>
+            <small>app.recoverystarts.com walkthrough · coming soon</small>
+          </div>
+        </div>
       </div>
     </section>
+
+    <section class="section" id="companion">
+      <div class="glass-panel companion-panel">
+        <div class="companion-art">
+          <img src="/assets/einstein/think.webp" alt="" width="560" height="746">
+        </div>
+        <div class="companion-copy">
+          <p class="eyebrow">The companion</p>
+          <h2>A friend who knows the whole book.</h2>
+          <p>
+            Whenever you're ready to talk it through, Einstein is here — day or night. The free
+            reader stays on this site. AI chat lives on the app (Seeker &amp; Pro). Honest
+            pricing. No "free chat" bait.
+          </p>
+          <a class="btn btn-glow" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=cosmos-home&amp;utm_content=companion" target="_blank" rel="noopener">Talk to Recovery Einstein</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-crisis">
+      <strong>In crisis?</strong>
+      Call or text
+      <a href="tel:988">988</a>
+      — free, 24/7, confidential. You are not alone.
+    </div>
+
+  </div>
   </main>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -269,6 +314,7 @@
     </div>
   </footer>
   <script src="/app.js"></script>
+  <script src="/cosmos.js"></script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 </body>
 </html>

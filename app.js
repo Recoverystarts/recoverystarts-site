@@ -8,29 +8,6 @@
   // Content is only ever hidden for reveal animations when JS is alive.
   document.documentElement.classList.add('js');
 
-  // ===== DAY / NIGHT THEME =====
-  // Default follows the system (light-dark() in CSS). The toggle overrides,
-  // and the choice is remembered on this device only. No tracking.
-  var root = document.documentElement;
-  try {
-    var saved = localStorage.getItem('rs-theme');
-    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
-  } catch (e) { /* private mode — theme just follows the system */ }
-
-  var isDark = function () {
-    var forced = root.getAttribute('data-theme');
-    if (forced) return forced === 'dark';
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  };
-
-  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var next = isDark() ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('rs-theme', next); } catch (e) {}
-    });
-  });
-
   // ===== SCROLL REVEALS =====
   var observer = new IntersectionObserver(
     function (entries) {

@@ -111,7 +111,6 @@ function navHtml(urlPath) {
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
     <ul class="nav-links" id="nav-menu">
 ${items}
-      <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>`;

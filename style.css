@@ -10,52 +10,62 @@
    feel held, not marketed to?
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&family=Source+Sans+3:ital,wght@0,400..700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-/* ===== 1. TOKENS ========================================================= */
+/* ===== 1. TOKENS — OPEN COSMOS (night-native, locked by Derick+Grok) ===== */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
-  /* Grounds — warm cream by day, the old candlelit navy by night */
-  --paper:   #FAF6EE;
-  --paper-2: #F3EDE1;
-  --paper-3: #ECE4D4;
+  /* Grounds — the night world */
+  --paper:   #12081F;
+  --paper-2: #0E111C;
+  --paper-3: #1A1528;
+  --void:    #04060D;
 
   /* Ink */
-  --ink:      #2A2521;
-  --ink-soft: #5C544A;
-  --ink-dim:  #6E6558;
+  --ink:      #F2F4FF;
+  --ink-soft: #D0D7EE;
+  --ink-dim:  #9AA5C0;
 
-  /* THE accent — gold. Three jobs: the door, links, focus rings. */
-  --accent:       #7E5410;
-  --accent-hover: #6B470B;
+  /* THE accent — teal glow. The free-value door, links, focus. */
+  --accent:       #2DD4BF;
+  --accent-hover: #5EEAD4;
+  --accent-deep:  #14B8A6;
+  --accent-fg:    #042F2E;
 
-  /* Sanctuary bands — FIXED, not theme-switched: always the app's night */
+  /* Night chrome bands (footer, invitation) — same world, one step calmer */
   --sky:      #141C2B;
-  --sky-2:    #1C2739;
-  --sky-ink:  #EDE5D3;
-  --sky-soft: #A99F8C;
+  --sky-2:    #0E121C;
+  --sky-ink:  #EEF2FF;
+  --sky-soft: #9AA5C0;
   --sky-gold: #E0B15E;
   --sky-gold-hover: #EDC77E;
-  --sky-rule: rgba(237, 229, 211, 0.14);
+  --sky-rule: rgba(238, 242, 255, 0.14);
 
-  /* Dawn glow hues (hero gradient stops only) */
-  --dawn-rose: #C98F6B;
-  --dawn-gold: #E8C98A;
+  /* Glass system */
+  --glass:           rgba(8, 12, 24, 0.55);
+  --glass-border:    rgba(255, 255, 255, 0.16);
+  --glass-highlight: rgba(255, 255, 255, 0.08);
+  --glass-solid:     rgba(12, 16, 28, 0.92); /* no-blur fallback */
+  --lamp:            rgba(224, 177, 94, 0.14);
+  --nebula-violet:   rgba(139, 100, 220, 0.28);
+  --nebula-teal:     rgba(45, 212, 191, 0.16);
 
-  /* Semantic (rare) */
-  --safe:  #4C6B4F;
-  --alert: #8C3B2E;
+  /* Semantic */
+  --safe:   #34D399;
+  --alert:  #F87171;
+  --crisis: #7DD3FC; /* 988 only — never teal */
 
   /* Hairlines — the ink at low alpha, never gray */
-  --rule:        rgba(42, 37, 33, 0.14);
-  --rule-strong: rgba(42, 37, 33, 0.28);
+  --rule:        rgba(242, 244, 255, 0.10);
+  --rule-strong: rgba(242, 244, 255, 0.16);
 
   /* Type — Utopia fluid scale, 320px→1240px, 1.2→1.3 */
   --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Literata', Georgia, serif;
-  --font-ui: 'Source Sans 3', -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-ui: 'Outfit', system-ui, -apple-system, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --step--1: clamp(0.9028rem, 0.8778rem + 0.125vw, 0.9748rem);
   --step-0:  clamp(1.0625rem, 1.0234rem + 0.1957vw, 1.175rem);
   --step-1:  clamp(1.275rem, 1.1924rem + 0.413vw, 1.5125rem);
@@ -72,56 +82,36 @@
   --space-xl:  clamp(3.5rem, 2.8rem + 3.5vw, 6rem);
   --space-section: clamp(4.5rem, 3rem + 6vw, 8rem);
 
-  /* Radius trio: panels / pills / inline. Nothing else. */
-  --radius: 16px;
+  /* Radius: panels / pills / inline (Open Cosmos: 20 / 999 / 12) */
+  --radius: 20px;
   --radius-pill: 999px;
-  --radius-sm: 8px;
-  --radius-lg: 16px;
+  --radius-sm: 12px;
+  --radius-lg: 20px;
 
   --max-width: 1200px;
   --nav-height: 68px;
 }
 
-/* Theme switch: modern browsers get light-dark(); the toggle just flips
-   color-scheme. Older browsers keep the light (paper) theme above. */
-@supports (color: light-dark(#fff, #000)) {
-  :root {
-    --paper:   light-dark(#FAF6EE, #131A26);
-    --paper-2: light-dark(#F3EDE1, #1A2231);
-    --paper-3: light-dark(#ECE4D4, #212A3B);
-    --ink:      light-dark(#2A2521, #E9E1CF);
-    --ink-soft: light-dark(#5C544A, #A99F8C);
-    --ink-dim:  light-dark(#6E6558, #9A907C);
-    --accent:       light-dark(#7E5410, #E0B15E);
-    --accent-hover: light-dark(#6B470B, #EDC77E);
-    --safe:  light-dark(#4C6B4F, #9DBD9F);
-    --alert: light-dark(#8C3B2E, #D98A76);
-    --rule:        light-dark(rgba(42, 37, 33, 0.14), rgba(233, 225, 207, 0.13));
-    --rule-strong: light-dark(rgba(42, 37, 33, 0.28), rgba(233, 225, 207, 0.26));
-  }
-  :root[data-theme="light"] { color-scheme: light; }
-  :root[data-theme="dark"]  { color-scheme: dark; }
-}
-
 /* ===== 1b. LEGACY TOKEN BRIDGE ==========================================
    ~1,200 generated pages carry inline styles written against the old token
    names. Remapping them here re-themes every one of those pages at once.
-   Generators should migrate to the new names; the bridge keeps the past safe. */
+   On the night world, legacy "gold" accents stay warm gold (the book light),
+   while the one ACTION accent is teal. */
 :root {
   --bg-deep: var(--paper);
-  --bg-card: var(--paper-2);
-  --bg-card-hover: var(--paper-3);
-  --bg-surface: var(--paper-3);
-  --gold: var(--accent);
-  --gold-light: var(--accent-hover);
-  --gold-dark: var(--accent);
-  --gold-glow: color-mix(in oklab, var(--accent) 9%, transparent);
-  --gold-glow-strong: color-mix(in oklab, var(--accent) 22%, transparent);
+  --bg-card: var(--paper-3);
+  --bg-card-hover: #221B33;
+  --bg-surface: #221B33;
+  --gold: var(--sky-gold);
+  --gold-light: var(--sky-gold-hover);
+  --gold-dark: var(--sky-gold);
+  --gold-glow: rgba(224, 177, 94, 0.12);
+  --gold-glow-strong: rgba(224, 177, 94, 0.28);
   --text: var(--ink);
   --text-muted: var(--ink-soft);
   --text-dim: var(--ink-dim);
   --border: var(--rule);
-  --border-hover: color-mix(in oklab, var(--accent) 42%, transparent);
+  --border-hover: rgba(224, 177, 94, 0.42);
   --danger: var(--alert);
   --success: var(--safe);
 }
@@ -133,6 +123,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -243,10 +234,10 @@ img { max-width: 100%; height: auto; display: block; }
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: color-mix(in oklab, var(--paper) 88%, transparent);
+  background: rgba(4, 6, 13, 0.72);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -264,12 +255,25 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .nav-brand {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: 0.01em;
   white-space: nowrap;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+}
+.nav-brand::before {
+  content: '';
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent) 0%, #5B8DEF 50%, #8B6CF0 100%);
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 .nav-brand:hover { color: var(--accent); }
 
@@ -302,40 +306,24 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 1px;
 }
 
-/* The one header action — Derick's door stays pinned top */
+/* The one header action — Derick's door stays pinned top (nav-talk style) */
 .nav-cta {
-  background: var(--accent);
-  color: var(--paper) !important;
-  padding: 0.5rem 1.2rem;
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.55);
+  color: var(--accent) !important;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-pill);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   white-space: nowrap;
-  transition: background 0.18s, transform 0.18s;
+  backdrop-filter: blur(8px);
+  transition: background 0.18s, box-shadow 0.18s;
 }
 .nav-cta:hover {
-  background: var(--accent-hover);
-  color: var(--paper) !important;
-  transform: translateY(-1px);
+  background: rgba(45, 212, 191, 0.22);
+  color: var(--accent-hover) !important;
+  box-shadow: 0 0 28px rgba(45, 212, 191, 0.28);
 }
-
-/* Theme toggle — day / night */
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--rule);
-  color: var(--ink-soft);
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  font-size: 0.95rem;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.18s, border-color 0.18s;
-}
-.theme-toggle:hover { color: var(--accent); border-color: var(--rule-strong); }
 
 /* --- Dropdowns (Daily Reflection / Daily Tradition months, Library, Program) */
 .nav-links .has-sub {
@@ -373,13 +361,15 @@ img { max-width: 100%; height: auto; display: block; }
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    background: var(--paper);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    background: var(--glass-solid);
+    backdrop-filter: blur(18px) saturate(1.2);
+    -webkit-backdrop-filter: blur(18px) saturate(1.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
     padding: 10px;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
-    box-shadow: 0 18px 44px rgba(20, 20, 15, 0.13);
+    box-shadow: 0 0 0 1px var(--glass-highlight) inset, 0 24px 56px rgba(0, 0, 0, 0.55);
     max-height: min(70vh, 520px);
     overflow-y: auto;
   }
@@ -414,7 +404,7 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--ink-dim);
     line-height: 1.3;
   }
-  .sub-menu a:hover { background: color-mix(in oklab, var(--accent) 8%, var(--paper)); color: var(--accent); }
+  .sub-menu a:hover { background: rgba(45, 212, 191, 0.10); color: var(--accent); }
   .sub-soon {
     padding: 7px 10px;
     font-size: 0.88rem;
@@ -444,7 +434,9 @@ img { max-width: 100%; height: auto; display: block; }
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: var(--paper);
+    background: rgba(4, 6, 13, 0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     flex-direction: column;
     align-items: stretch;
     padding: 1.5rem;
@@ -798,52 +790,377 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .footer-bottom a { color: var(--sky-ink); }
 .footer-bottom a:hover { color: var(--sky-gold); }
 
-/* ===== 10. HERO — the dawn ============================================== */
+/* ===== 10. OPEN COSMOS WORLD + HOMEPAGE COMPONENTS =======================
+   Ported pixel-faithful from Grok's locked Option 2 (grok-handoff/). The
+   world (fixed cosmos image + shade + particles) ships on the homepage and,
+   later, hub pages; content pages stay quiet night per the adaptation law. */
 
-.hero {
-  position: relative;
+.world-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
   overflow: hidden;
+  pointer-events: none;
+}
+.world-fixed img.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none !important;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+.world-fixed .shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg, rgba(10, 4, 24, 0.45) 0%, rgba(10, 4, 24, 0.12) 42%, transparent 70%),
+    linear-gradient(180deg, rgba(10, 4, 24, 0.15) 0%, transparent 25%, transparent 60%, rgba(10, 4, 24, 0.7) 100%);
+}
+.world-particles { position: absolute; inset: 0; width: 100%; height: 100%; }
+.page { position: relative; z-index: 1; }
+.shell { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+/* Hero — the open cosmos */
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0 3.5rem;
+  min-height: min(88dvh, 820px);
+}
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1.15fr 0.85fr; gap: 1.5rem; padding: 3rem 0 4.5rem; }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2.35rem, 6.2vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  color: var(--ink);
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.75), 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(120deg, #FFFFFF 0%, #D4C4FF 40%, #5EEAD4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pulse { animation: cosmos-pulse 2.4s ease-out infinite; }
+  @keyframes cosmos-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.45); }
+    70% { box-shadow: 0 0 0 12px rgba(45, 212, 191, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0); }
+  }
+}
+.hero .eyebrow { color: var(--accent); text-shadow: 0 0 22px rgba(45, 212, 191, 0.4); display: inline-flex; align-items: center; gap: 0.5rem; }
+.lede {
+  font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+  color: var(--ink-soft);
+  max-width: 34rem;
+  font-weight: 300;
+  line-height: 1.65;
+  margin: 0;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
+}
+.lede-sm { font-size: 1.02rem; color: var(--ink-soft); font-weight: 300; line-height: 1.65; max-width: 36rem; }
+.lede-sm em { font-style: italic; color: var(--ink); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.btn-glow {
+  background: linear-gradient(135deg, #5EEAD4 0%, var(--accent) 40%, var(--accent-deep) 100%);
+  color: var(--accent-fg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset, 0 8px 32px rgba(45, 212, 191, 0.45), 0 0 48px rgba(45, 212, 191, 0.2);
+}
+.btn-glow:hover {
+  color: var(--accent-fg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset, 0 10px 40px rgba(45, 212, 191, 0.55), 0 0 64px rgba(45, 212, 191, 0.3);
+}
+.btn-glass {
+  background: rgba(8, 12, 24, 0.5);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.btn-glass:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: var(--ink); }
+.crisis { margin-top: 1.75rem; font-size: 0.9rem; color: var(--ink-dim); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55); }
+.crisis a, .crisis-line a { color: var(--crisis); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.crisis-line { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-dim); }
+
+/* Einstein hero figure */
+.hero-figure { position: relative; justify-self: center; width: min(340px, 78vw); }
+@media (min-width: 900px) { .hero-figure { width: min(400px, 100%); justify-self: end; } }
+.figure-glow {
+  position: absolute;
+  inset: 5% 0%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.42) 0%, rgba(139, 100, 220, 0.28) 40%, transparent 70%);
+  filter: blur(36px);
+}
+.figure-ring {
+  position: absolute;
+  inset: -6%;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 212, 191, 0.28);
+  box-shadow: 0 0 50px rgba(45, 212, 191, 0.14), inset 0 0 40px rgba(139, 100, 220, 0.12);
+}
+.figure-ring::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 14px var(--accent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .figure-glow { animation: cosmos-breathe 5s ease-in-out infinite; }
+  .figure-ring { animation: cosmos-spin 40s linear infinite; }
+  @keyframes cosmos-breathe {
+    0%, 100% { opacity: 0.75; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+  }
+  @keyframes cosmos-spin { to { transform: rotate(360deg); } }
+}
+.figure-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  mask-image: linear-gradient(180deg, #000 68%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+  filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.65));
+}
+.figure-caption { position: relative; z-index: 2; text-align: center; margin-top: -1.5rem; }
+.figure-caption span { display: block; font-weight: 600; font-size: 0.95rem; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7); }
+.figure-caption small { color: var(--ink-dim); font-size: 0.8rem; }
+
+/* Sections + glass */
+.section { padding: 2.75rem 0 1rem; }
+.section-head { margin-bottom: 1.75rem; max-width: 40rem; }
+.section-head h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.55);
+}
+.section-sub { margin-top: 0.6rem; color: var(--ink-dim); font-size: 0.98rem; font-weight: 300; }
+.glass-panel {
+  background: var(--glass-solid);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--glass-highlight) inset, 0 24px 64px rgba(0, 0, 0, 0.42);
+}
+@supports (backdrop-filter: blur(1px)) {
+  .glass-panel { background: var(--glass); backdrop-filter: blur(20px) saturate(1.25); -webkit-backdrop-filter: blur(20px) saturate(1.25); }
+}
+
+/* Four doors */
+.door-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+@media (min-width: 640px) { .door-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .door-grid { grid-template-columns: repeat(4, 1fr); } }
+.door-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.4rem 1.25rem 1.3rem;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.1) 0%, rgba(8, 12, 24, 0.58) 100%);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+  transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.25s;
+  min-height: 210px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+  color: var(--ink);
+}
+.door-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 0%, rgba(45, 212, 191, 0.16), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.door-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(45, 212, 191, 0.48);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.48), 0 0 48px rgba(45, 212, 191, 0.14);
+  color: var(--ink);
+}
+.door-card:hover::before { opacity: 1; }
+.door-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.32);
+  margin-bottom: 0.35rem;
+}
+.door-icon svg { width: 22px; height: 22px; }
+.door-card h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.22rem; position: relative; margin: 0; }
+.door-card p { font-size: 0.88rem; color: var(--ink-dim); font-weight: 300; flex: 1; position: relative; line-height: 1.5; margin: 0; }
+.door-go { font-size: 0.82rem; font-weight: 600; color: var(--accent); position: relative; margin-top: 0.5rem; }
+
+/* Reading cards */
+.reading-grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .reading-grid { grid-template-columns: 1fr 1fr; } }
+.reading-card { padding: 1.5rem 1.4rem; transition: border-color 0.2s, transform 0.2s; }
+.reading-card:hover { border-color: rgba(45, 212, 191, 0.35); transform: translateY(-4px); }
+.reading-meta { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.9rem; }
+.chip {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(45, 212, 191, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(45, 212, 191, 0.28);
+}
+.chip-gold { background: rgba(224, 177, 94, 0.12); color: var(--sky-gold); border-color: rgba(224, 177, 94, 0.32); }
+.date { font-size: 0.8rem; color: var(--ink-dim); }
+.reading-card h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; margin: 0 0 0.5rem; }
+.reading-card p { color: var(--ink-soft); font-weight: 300; font-size: 0.95rem; margin: 0 0 1rem; }
+.text-link { font-size: 0.9rem; font-weight: 600; color: var(--accent); }
+.text-link:hover { text-decoration: underline; text-underline-offset: 3px; color: var(--accent-hover); }
+
+/* Library panel + tilted book window */
+.library-panel { display: grid; gap: 1.5rem; padding: 1.75rem; overflow: hidden; position: relative; }
+@media (min-width: 800px) { .library-panel { grid-template-columns: 1.1fr 0.9fr; padding: 2rem 2rem 2rem 2.25rem; align-items: center; } }
+.library-panel::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle, var(--lamp), transparent 65%);
+  pointer-events: none;
+}
+.library-copy h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 0.75rem; }
+.book-window {
+  position: relative;
+  border-radius: 14px;
+  background: linear-gradient(165deg, #1A1528 0%, #0E121C 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 100, 220, 0.14);
+  overflow: hidden;
+  transform: perspective(800px) rotateY(-6deg) rotateX(3deg);
+}
+.book-chrome {
   display: flex;
   align-items: center;
-  color: var(--sky-ink);
+  gap: 0.4rem;
+  padding: 0.65rem 0.9rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.book-chrome span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); }
+.book-chrome span:nth-child(1) { background: #FF5F57; }
+.book-chrome span:nth-child(2) { background: #FEBC2E; }
+.book-chrome span:nth-child(3) { background: #28C840; }
+.book-chrome em { margin-left: 0.5rem; font-style: normal; font-size: 0.7rem; color: var(--ink-dim); }
+.book-body { padding: 1.25rem 1.15rem 1.5rem; font-family: var(--font-display); font-size: 0.92rem; line-height: 1.65; color: #E8DFD0; }
+.book-body p { margin: 0; }
+.page-tag { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky-gold); margin: 0 0 0.55rem; font-weight: 600; }
+
+/* Video slot */
+.video-slot { padding: 0.75rem; }
+.video-frame {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
   background:
-    radial-gradient(58% 44% at 22% 16%, rgba(232, 201, 138, 0.14), transparent 70%),
-    radial-gradient(52% 42% at 80% 22%, rgba(201, 143, 107, 0.12), transparent 70%),
-    linear-gradient(180deg, var(--sky) 0%, #1B2740 52%, #3A3A50 76%, #7A5C4E 92%, var(--paper) 100%);
+    radial-gradient(ellipse at 50% 40%, rgba(45, 212, 191, 0.1), transparent 55%),
+    linear-gradient(160deg, rgba(12, 16, 28, 0.9), rgba(8, 10, 18, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.hero .container { position: relative; z-index: 2; }
-.hero-eyebrow { color: var(--sky-gold); }
-.hero h1 {
-  color: var(--sky-ink);
-  font-size: var(--step-5);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  max-width: 17ch;
-  font-variation-settings: 'opsz' 120;
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  text-align: center;
+  padding: 1.5rem;
 }
-.hero .standfirst {
-  color: var(--sky-soft);
-  font-size: var(--step-1);
-  font-family: var(--font-body);
-  max-width: 46ch;
+.video-placeholder p { font-weight: 600; font-size: 1.05rem; margin: 0; }
+.video-placeholder small { color: var(--ink-dim); font-size: 0.85rem; }
+.play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #5EEAD4, var(--accent-deep));
+  color: var(--accent-fg);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 0 12px rgba(45, 212, 191, 0.12), 0 12px 40px rgba(45, 212, 191, 0.4);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s;
+  margin-bottom: 0.35rem;
 }
-.hero .crisis-line {
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  color: var(--sky-soft);
+.play-btn:hover { transform: scale(1.06); box-shadow: 0 0 0 16px rgba(45, 212, 191, 0.16), 0 16px 48px rgba(45, 212, 191, 0.5); }
+
+/* Companion panel */
+.companion-panel { display: grid; gap: 1.5rem; padding: 1.5rem; align-items: center; }
+@media (min-width: 720px) { .companion-panel { grid-template-columns: 140px 1fr; padding: 1.75rem 2rem; gap: 1.75rem; } }
+.companion-art { width: 120px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45); }
+@media (min-width: 720px) { .companion-art { width: 140px; margin: 0; } }
+.companion-art img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1; }
+.companion-copy h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.4rem, 2.8vw, 1.85rem); margin: 0 0 0.65rem; letter-spacing: -0.02em; }
+.companion-copy p { color: var(--ink-soft); font-weight: 300; font-size: 0.98rem; margin: 0 0 1.25rem; max-width: 38rem; }
+
+/* Crisis bar (page-level, above the stamped footer) */
+.footer-crisis {
+  background: rgba(12, 22, 40, 0.68);
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.15rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 2rem 0 1.5rem;
+  backdrop-filter: blur(12px);
 }
-.hero .crisis-line a { color: var(--sky-gold); }
+.footer-crisis a { color: var(--crisis); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
 /* legacy hero support (old hand pages until rebuilt) */
 .hero-bg, .hero-overlay { position: absolute; inset: 0; }
-.hero-content h1 { color: var(--sky-ink); }
-.hero-content p { color: var(--sky-soft); }
+.hero-content h1 { color: var(--ink); }
+.hero-content p { color: var(--ink-soft); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-s); }
 
-/* .gold defaults to the readable accent; sanctuary (night) contexts opt in
-   to the app's sky-gold, where it belongs. */
-.gold { color: var(--accent); }
-.hero .gold, .invite-band .gold, .footer .gold, .app-promo .gold { color: var(--sky-gold); }
+/* Legacy warm emphasis stays gold on the night world */
+.gold { color: var(--sky-gold); }
 
 /* ===== 11. LEGACY COMPONENTS, RESTYLED =================================== */
 

@@ -63,6 +63,10 @@ addUrl(`${SITE}/12-traditions/`, "1.0", "monthly", "12-traditions");
 const dt = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
 addUrl(`${SITE}/daily-tradition/`, "0.9", "daily", "daily-tradition");
 let dtAdded = 0;
+// Month hubs — one per live month, same shape as /daily-reflection/<month>/.
+for (const m of [...new Set(dt.days.map((d) => d.month))]) {
+  if (addUrl(`${SITE}/daily-tradition/${m}/`, "0.8", "monthly", path.join("daily-tradition", m)) === "added") dtAdded++;
+}
 for (const d of dt.days) {
   const slug = `${d.month}-${d.day}`;
   if (addUrl(`${SITE}/daily-tradition/${slug}/`, "0.7", "yearly", path.join("daily-tradition", slug)) === "added") dtAdded++;

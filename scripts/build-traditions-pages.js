@@ -4,6 +4,7 @@
  *
  * Renders data/traditions-daily.json into:
  *   /daily-tradition/                 the hub (month = Tradition; July = Tradition 7)
+ *   /daily-tradition/july/ … december/    one hub per LIVE month (day grid + Tradition)
  *   /daily-tradition/july-1/ … july-31/   one page per reading
  *   /daily-tradition/today/           auto-redirect to today's reading
  *
@@ -163,10 +164,16 @@ const STYLE = `  <style>
     .dt-longform { border-top: 1px solid var(--border); margin-top: 14px; padding-top: 14px; color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
     .dt-longform strong { color: var(--gold); }
     .dt-hyp { max-width: 720px; margin: 2rem auto 0; border: 1px dashed rgba(200,140,70,0.42); border-radius: var(--radius-sm); padding: 16px 20px; color: #d8b088; font-size: 0.86rem; line-height: 1.65; text-align:center; }
-    .dt-nav { display:flex; justify-content:space-between; gap:12px; max-width: 720px; margin: 2.6rem auto 0; }
-    .dt-nav a { background: var(--bg-card); border:1px solid var(--border); color: var(--text); border-radius: var(--radius-sm); padding: 10px 18px; font-size:0.9rem; max-width:46%; transition: all .2s; }
+    .dt-nav { display:flex; justify-content:space-between; gap:10px; max-width: 760px; margin: 2.6rem auto 0; }
+    .dt-nav a { flex:1 1 0; background: var(--bg-card); border:1px solid var(--border); color: var(--text); border-radius: var(--radius-sm); padding: 10px 14px; font-size:0.88rem; transition: all .2s; }
     .dt-nav a:hover { border-color: var(--border-hover); color: var(--gold); }
     .dt-nav a small { display:block; color: var(--text-dim); font-size: 0.7rem; }
+    .dt-nav .dt-nav-mid { text-align:center; }
+    .dt-nav .dt-nav-next { text-align:right; }
+    @media (max-width: 560px) {
+      .dt-nav { flex-wrap: wrap; }
+      .dt-nav a, .dt-nav .dt-nav-next { flex: 1 1 100%; text-align:center; }
+    }
     .dt-chips { text-align:center; margin: 2rem auto 0; max-width: 720px; }
     .dt-chips a { display:inline-block; background: var(--bg-card); border:1px solid var(--border); color: var(--text-muted); border-radius:999px; padding:7px 16px; margin:4px; font-size:0.85rem; transition: all .2s; }
     .dt-chips a:hover { border-color: var(--border-hover); color: var(--gold); }
@@ -365,21 +372,25 @@ for (const d of days) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
       { "@type": "ListItem", position: 2, name: "Daily Traditions", item: SITE + "/daily-tradition/" },
-      { "@type": "ListItem", position: 3, name: `${monthCap} ${d.day}: ${d.title}`, item: url },
+      { "@type": "ListItem", position: 3, name: monthCap, item: SITE + `/daily-tradition/${d.month}/` },
+      { "@type": "ListItem", position: 4, name: `${monthCap} ${d.day}: ${d.title}`, item: url },
     ],
   };
 
   const badge = badgeFor(d);
 
+  // Three-slot nav: prev day / all of the month / next day. Nobody is ever
+  // more than one tap from the month they are standing in.
   const prevLink = prev
     ? `<a href="/daily-tradition/${prev.month}-${prev.day}/"><small>← ${CAP(prev.month)} ${prev.day}</small>${esc(prev.title)}</a>`
-    : `<a href="/daily-tradition/"><small>←</small>All of ${monthCap}</a>`;
+    : `<a href="/daily-tradition/${d.month}/"><small>←</small>All of ${monthCap}</a>`;
+  const midLink = `<a class="dt-nav-mid" href="/daily-tradition/${d.month}/"><small>Tradition ${d.tradition}</small>All of ${monthCap}</a>`;
   const nextLink = next
-    ? `<a href="/daily-tradition/${next.month}-${next.day}/" style="text-align:right"><small>${CAP(next.month)} ${next.day} →</small>${esc(next.title)}</a>`
-    : `<a href="/daily-tradition/" style="text-align:right"><small>→</small>All of ${monthCap}</a>`;
+    ? `<a class="dt-nav-next" href="/daily-tradition/${next.month}-${next.day}/"><small>${CAP(next.month)} ${next.day} →</small>${esc(next.title)}</a>`
+    : `<a class="dt-nav-next" href="/daily-tradition/${d.month}/"><small>→</small>All of ${monthCap}</a>`;
 
   const html = head({ title, desc, url, ld: [articleLd, crumbLd] }) + `
-      <nav class="dt-crumb"><a href="/">Home</a> / <a href="/daily-tradition/">Daily Traditions</a> / ${monthCap} ${d.day}</nav>
+      <nav class="dt-crumb"><a href="/">Home</a> / <a href="/daily-tradition/">Daily Traditions</a> / <a href="/daily-tradition/${d.month}/">${monthCap}</a> / ${monthCap} ${d.day}</nav>
       <div class="dt-kicker">Tradition ${d.tradition} · ${monthCap} ${d.day}</div>
       <h1 class="dt-title">${esc(d.title)}</h1>
       <p class="dt-date">Daily Traditions · ${monthCap} ${d.day}</p>
@@ -402,7 +413,7 @@ ${traditionBlock(d.tradition, shortForm)}
         <a href="/12-traditions/">What the Traditions actually say →</a>
         <a href="/big-book/page-563/">The Long Form, p. 563 →</a>
         <a href="/big-book/search/">Search the Big Book →</a>
-        <a href="/daily-tradition/">Every day this month →</a>
+        <a href="/daily-tradition/${d.month}/">Every day this month →</a>
       </div>
 
       <div class="dt-cta">
@@ -412,6 +423,7 @@ ${traditionBlock(d.tradition, shortForm)}
 
       <div class="dt-nav">
         ${prevLink}
+        ${midLink}
         ${nextLink}
       </div>
 
@@ -454,15 +466,16 @@ const T = featDays[0].tradition;
 const monthCap = CAP(featMonth);
 const shortForm = DATA.traditions[String(T)].shortForm;
 
-const monthCards = MONTHS.map((m, i) => {
+// Month cards — every LIVE month now has its own hub page. The card used to
+// jump to an in-page anchor, which meant the hub had to carry every month's
+// full grid and grew without bound. The id stays so old #month-august links
+// still land somewhere sensible.
+const monthCardsFor = (current) => MONTHS.map((m, i) => {
   const n = i + 1;
   const live = liveMonths.has(m);
-  return live
-    // Live months jump to their own section ON THIS PAGE. This used to point at
-    // "/daily-tradition/" — the page you are already on — so clicking August or
-    // September just reloaded the hub and dumped you back at the top.
-    ? `<a class="dt-month live" href="#month-${m}"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n} · live</span></a>`
-    : `<div class="dt-month soon"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n}</span></div>`;
+  if (!live) return `<div class="dt-month soon" id="month-${m}"><span class="m">${CAP(m)}</span><span class="t">Tradition ${n}</span></div>`;
+  const here = m === current ? ' style="border-color:var(--gold)"' : "";
+  return `<a class="dt-month live" id="month-${m}" href="/daily-tradition/${m}/"${here}><span class="m">${CAP(m)}</span><span class="t">Tradition ${n} · live</span></a>`;
 }).join("");
 
 const cardHtml = (b) =>
@@ -472,17 +485,87 @@ const cardHtml = (b) =>
           <span class="k">${esc(b.kindLabel)}</span>
         </a>`;
 const dayCards = built.filter((b) => b.month === featMonth).map(cardHtml).join("\n        ");
-// Other published months — linked for readers and crawlers, below the featured
-// month. This is how a pre-published month (e.g. August in July) stays reachable.
-const otherMonths = MONTHS.filter((m) => liveMonths.has(m) && m !== featMonth);
-const otherSections = otherMonths.map((m) => {
+
+// ── Month hub pages: /daily-tradition/<month>/ ──────────────────────────────
+// One page per live month: the Tradition, every day of the month, and a way
+// into every other month. These are what the nav dropdown points at.
+const liveOrdered = MONTHS.filter((m) => liveMonths.has(m));
+for (const m of liveOrdered) {
   const t = byMonth[m][0].tradition;
+  const mCap = CAP(m);
+  const sf = DATA.traditions[String(t)].shortForm;
   const cards = built.filter((b) => b.month === m).map(cardHtml).join("\n        ");
-  return `      <h2 class="dt-h2" id="month-${m}" style="max-width:980px;margin:2.6rem auto 1rem;text-align:center">${CAP(m)} · Tradition ${t}</h2>
-      <div class="dt-days">
+  const mi = liveOrdered.indexOf(m);
+  const prevM = liveOrdered[mi - 1];
+  const nextM = liveOrdered[mi + 1];
+  const prevMLink = prevM
+    ? `<a href="/daily-tradition/${prevM}/"><small>← ${CAP(prevM)}</small>Tradition ${byMonth[prevM][0].tradition}</a>`
+    : `<a href="/daily-tradition/"><small>←</small>All months</a>`;
+  const nextMLink = nextM
+    ? `<a class="dt-nav-next" href="/daily-tradition/${nextM}/"><small>${CAP(nextM)} →</small>Tradition ${byMonth[nextM][0].tradition}</a>`
+    : `<a class="dt-nav-next" href="/daily-tradition/"><small>→</small>All months</a>`;
+  const mUrl = `${SITE}/daily-tradition/${m}/`;
+  const mLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: `Daily Traditions — ${mCap}: Tradition ${t}`,
+      description: `${mCap} on Daily Traditions: one reading a day on Tradition ${t} of Alcoholics Anonymous. ${byMonth[m].length} readings, grounded in the Long Form (pp. ${LONG_PAGES}).`,
+      url: mUrl,
+      isPartOf: { "@type": "WebSite", name: "Recovery Starts", url: SITE },
+      hasPart: built.filter((b) => b.month === m).map((b) => ({ "@type": "Article", headline: `${CAP(b.month)} ${b.day}: ${b.dTitle}`, url: b.url })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE + "/" },
+        { "@type": "ListItem", position: 2, name: "Daily Traditions", item: SITE + "/daily-tradition/" },
+        { "@type": "ListItem", position: 3, name: mCap, item: mUrl },
+      ],
+    },
+  ];
+  const mHtml = head({
+    title: `${mCap} — Tradition ${t}, One Reading a Day | Daily Traditions | Recovery Starts`,
+    desc: `Every Daily Traditions reading for ${mCap} — one a day on Tradition ${t} of Alcoholics Anonymous, grounded in the LONG FORM (pp. ${LONG_PAGES}), not the internet's version.`,
+    url: mUrl,
+    ld: mLd,
+  }) + `
+      <nav class="dt-crumb"><a href="/">Home</a> / <a href="/daily-tradition/">Daily Traditions</a> / ${mCap}</nav>
+      <div class="dt-kicker">Daily Traditions · one month, one Tradition</div>
+      <h1 class="dt-title">${mCap}</h1>
+      <p class="dt-date">Tradition ${t} · ${byMonth[m].length} readings</p>
+
+${traditionBlock(t, sf)}
+
+      <div class="dt-days" style="margin-top:2.4rem">
         ${cards}
-      </div>`;
-}).join("\n");
+      </div>
+
+      <div class="dt-nav">
+        ${prevMLink}
+        <a class="dt-nav-mid" href="/daily-tradition/"><small>Daily Traditions</small>All months</a>
+        ${nextMLink}
+      </div>
+
+      <div class="dt-months" style="margin-top:2.4rem">${monthCardsFor(m)}</div>
+
+      <div class="dt-cta">
+        <a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=month-${m}" class="btn btn-primary" target="_blank" rel="noopener">Ask Recovery Einstein about Tradition ${t} →</a>
+        <a href="/download/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=month-${m}" class="btn btn-outline">Get the app →</a>
+      </div>
+
+${DISC}
+  </div></section></main>
+${FOOTER}
+`;
+  if (mHtml.indexOf(LONG_PAGES) === -1) throw new Error("Missing Long Form page ref on month hub " + m);
+  if (!DRY) {
+    const mDir = path.join(ROOT, "daily-tradition", m);
+    fs.mkdirSync(mDir, { recursive: true });
+    fs.writeFileSync(path.join(mDir, "index.html"), mHtml);
+  }
+}
 
 const hubLd = [
   {
@@ -541,13 +624,12 @@ const hubHtml = head({
         ${todayHeroHtml(featDays[0])}
       </section>
 
-      <div class="dt-days" id="month-${featMonth}">
+      <div class="dt-months">${monthCardsFor(featMonth)}</div>
+
+      <h2 class="dt-h2" style="max-width:980px;margin:0 auto 1rem;text-align:center">${monthCap} · Tradition ${T}</h2>
+      <div class="dt-days">
         ${dayCards}
       </div>
-
-      <div class="dt-months">${monthCards}</div>
-
-${otherSections}
 
       <div class="dt-tradition" style="margin-bottom:2.4rem">
         <h2>Tradition ${T} · Short form</h2>

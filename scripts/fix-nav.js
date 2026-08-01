@@ -8,6 +8,11 @@
  *
  * This makes every page carry the SAME header. Run it after any generator.
  *
+ * v2: "Daily Reflection" and "Daily Tradition" are dropdowns. Every month is
+ * one hover/tap away from EVERY page on the site — nobody is stranded inside
+ * a reading again. Tradition months come from data/traditions-daily.json, so
+ * publishing a new month updates the menu with zero template work.
+ *
  * Usage: node scripts/fix-nav.js [--dry]
  */
 const fs = require("fs");
@@ -16,13 +21,34 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const DRY = process.argv.includes("--dry");
 
+const MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"];
+const CAP = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Which Tradition months are actually published — read from the data, never assumed.
+const TRAD = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
+const tradLive = new Set(TRAD.days.map((d) => d.month));
+
 // THE nav. One definition. Everything else is generated from it.
+// [href, label, submenu?] — submenu items are [href|null, label].
+const reflectionSub = [
+  ["/daily-reflection/today/", "Today's Reflection →"],
+  ...MONTHS.map((m) => [`/daily-reflection/${m}/`, CAP(m)]),
+];
+const traditionSub = [
+  ["/daily-tradition/today/", "Today's Tradition →"],
+  ...MONTHS.map((m, i) =>
+    tradLive.has(m)
+      ? [`/daily-tradition/${m}/`, `${CAP(m)} · T${i + 1}`]
+      : [null, `${CAP(m)} · T${i + 1}`]
+  ),
+];
+
 const LINKS = [
   ["/", "Home"],
   ["/meetings/", "Meetings"],
   ["/aa-info/", "AA Info"],
-  ["/daily-reflection/", "Daily Reflection"],
-  ["/daily-tradition/", "Daily Tradition"],
+  ["/daily-reflection/", "Daily Reflection", reflectionSub],
+  ["/daily-tradition/", "Daily Tradition", traditionSub],
   ["/12-traditions/", "The 12 Traditions"],
   ["/12-steps/", "The 12 Steps"],
   ["/big-book/", "Big Book"],
@@ -41,10 +67,25 @@ function activeFor(urlPath) {
   return best;
 }
 
+function subHtml(label, items) {
+  const lis = items.map(([href, text], i) => {
+    const cls = i === 0 ? ' class="sub-today"' : "";
+    if (!href) return `        <li class="sub-soon">${text}</li>`;
+    return `        <li${cls}><a href="${href}">${text}</a></li>`;
+  }).join("\n");
+  return `<button class="sub-toggle" aria-expanded="false" aria-label="Browse ${label} by month">▾</button>
+      <ul class="sub-menu">
+${lis}
+      </ul>`;
+}
+
 function navHtml(urlPath) {
   const active = activeFor(urlPath);
-  const items = LINKS.map(([href, label]) => {
+  const items = LINKS.map(([href, label, sub]) => {
     const cls = href === active ? ' class="active"' : "";
+    if (sub) {
+      return `      <li class="has-sub"><a href="${href}"${cls}>${label}</a>${subHtml(label, sub)}</li>`;
+    }
     return `      <li><a href="${href}"${cls}>${label}</a></li>`;
   }).join("\n");
   return `  <nav class="nav"><div class="nav-inner">
@@ -122,3 +163,4 @@ if (noNav.length) {
   noNav.forEach((p) => console.log("    " + p));
 }
 console.log("\n  every page now carries: " + LINKS.map((l) => l[1]).join(" · ") + " · Claude's Lab · Get the App");
+console.log("  dropdowns          : Daily Reflection (12 months) · Daily Tradition (" + tradLive.size + " live months)");

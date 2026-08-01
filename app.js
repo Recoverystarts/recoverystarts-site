@@ -61,13 +61,47 @@
     }
   });
 
-  // ===== ACTIVE NAV LINK =====
+  // ===== NAV DROPDOWNS (month submenus) =====
+  const closeSubs = (except) => {
+    document.querySelectorAll('.has-sub.open').forEach((li) => {
+      if (li === except) return;
+      li.classList.remove('open');
+      const b = li.querySelector('.sub-toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  document.querySelectorAll('.sub-toggle').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const li = btn.closest('.has-sub');
+      const opening = !li.classList.contains('open');
+      closeSubs(li);
+      li.classList.toggle('open', opening);
+      btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-sub')) closeSubs();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSubs();
+  });
+
+  // ===== ACTIVE NAV LINK (longest matching section wins) =====
   const path = window.location.pathname;
-  document.querySelectorAll('.nav-links a').forEach((link) => {
+  let best = null;
+  let bestLen = 0;
+  document.querySelectorAll('.nav-links > li > a').forEach((link) => {
     link.classList.remove('active');
     const href = link.getAttribute('href');
-    if (href === path || (path === '/' && href === '/')) {
-      link.classList.add('active');
+    if (!href || href.indexOf('http') === 0) return;
+    const match = href === '/' ? path === '/' : path.indexOf(href) === 0;
+    if (match && href.length > bestLen) {
+      best = link;
+      bestLen = href.length;
     }
   });
+  if (best) best.classList.add('active');
 })();

@@ -98,7 +98,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.9rem, 1.5vw, 1.9rem);
   list-style: none;
   align-items: center;
 }
@@ -134,6 +134,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.9rem;
+  white-space: nowrap;
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -141,6 +142,88 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--gold-light);
   color: var(--bg-deep) !important;
   transform: translateY(-1px);
+}
+
+/* ===== NAV DROPDOWNS (Daily Reflection / Daily Tradition months) ===== */
+.nav-links .has-sub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sub-toggle {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 3px;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.has-sub:hover .sub-toggle,
+.has-sub.open .sub-toggle { color: var(--gold); }
+.has-sub.open > .sub-toggle { transform: rotate(180deg); }
+
+.sub-menu { list-style: none; margin: 0; }
+
+/* Desktop: floating panel on hover / focus / tap of the arrow */
+@media (min-width: 1181px) {
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background: rgba(13, 13, 18, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55);
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+  }
+  /* hover bridge — lets the pointer cross the gap without the menu closing */
+  .sub-menu::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    height: 14px;
+  }
+  .has-sub:hover > .sub-menu,
+  .has-sub:focus-within > .sub-menu,
+  .has-sub.open > .sub-menu { display: grid; }
+  .sub-menu .sub-today {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+  .sub-menu .sub-today a { color: var(--gold); font-weight: 600; }
+  .sub-menu a {
+    display: block;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+  .sub-menu a:hover { background: var(--gold-glow); color: var(--gold); }
+  .sub-soon {
+    padding: 7px 10px;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    opacity: 0.5;
+    cursor: default;
+  }
 }
 
 /* Mobile nav */
@@ -154,7 +237,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: block; }
   .nav-links {
     display: none;
@@ -165,11 +248,28 @@ img { max-width: 100%; height: auto; display: block; }
     background: rgba(11, 11, 15, 0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
+    align-items: stretch;
     padding: 1.5rem;
-    gap: 1.25rem;
+    gap: 1.1rem;
     border-bottom: 1px solid var(--border);
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
   }
   .nav-links.open { display: flex; }
+  .nav-links .has-sub { display: block; }
+  .nav-links .has-sub > a { display: inline-block; }
+  .sub-toggle { font-size: 0.85rem; padding: 4px 14px; }
+  .sub-menu {
+    display: none;
+    margin: 10px 0 0 4px;
+    padding: 2px 0 2px 14px;
+    border-left: 1px solid var(--border);
+  }
+  .has-sub.open > .sub-menu { display: block; }
+  .sub-menu a { display: block; padding: 7px 0; color: var(--text-muted); }
+  .sub-menu .sub-today a { color: var(--gold); font-weight: 600; }
+  .sub-soon { padding: 7px 0; color: var(--text-dim); opacity: 0.5; }
+  .nav-cta { text-align: center; }
 }
 
 /* ===== LAYOUT ===== */

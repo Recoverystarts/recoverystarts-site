@@ -187,6 +187,28 @@ for (const p of ["daily-tradition/index.html", "daily-tradition/today/index.html
 }
 ok("hub + today redirect present");
 
+// Month hubs: every live month has its own page, the page lists every one of
+// its days, and every day page links back to its month hub.
+const liveM = [...new Set(dt.days.map((d) => d.month))];
+let mhBad = 0;
+for (const m of liveM) {
+  const f = path.join(ROOT, "daily-tradition", m, "index.html");
+  if (!fs.existsSync(f)) { bad(`month hub missing: daily-tradition/${m}/`); mhBad++; continue; }
+  const mh = fs.readFileSync(f, "utf8");
+  for (const day of dt.days.filter((x) => x.month === m)) {
+    if (!mh.includes(`/daily-tradition/${m}-${day.day}/`)) { bad(`${m} month hub missing day ${day.day}`); mhBad++; }
+  }
+}
+for (const day of dt.days) {
+  const slug = `${day.month}-${day.day}`;
+  const f = path.join(ROOT, "daily-tradition", slug, "index.html");
+  if (!fs.existsSync(f)) continue; // already reported above
+  if (!fs.readFileSync(f, "utf8").includes(`href="/daily-tradition/${day.month}/"`)) {
+    bad(`${slug}: no escape link to its month hub`); mhBad++;
+  }
+}
+if (mhBad === 0) ok(`${liveM.length} month hubs present, complete, and linked from every day page`);
+
 // Prev/next wrap correctly
 const first = fs.readFileSync(path.join(ROOT, "daily-tradition", "july-1", "index.html"), "utf8");
 const last = fs.readFileSync(path.join(ROOT, "daily-tradition", "july-31", "index.html"), "utf8");
@@ -280,7 +302,9 @@ let navPages = 0, navBad = 0;
     const s = fs.readFileSync(p, "utf8");
     if (/window\.location\.replace/.test(s) && s.length < 3000) continue;  // redirect stubs
     navPages++;
-    const nav = (s.match(/<ul class="nav-links">[\s\S]*?<\/ul>/) || [""])[0];
+    // Match the WHOLE nav block — the month dropdowns nest <ul>s inside
+    // .nav-links, so a first-</ul> match would truncate at the first submenu.
+    const nav = (s.match(/<nav class="nav">[\s\S]*?<\/nav>/) || [""])[0];
     const missing = REQUIRED_NAV.filter((h) => !nav.includes(`href="${h}"`));
     if (missing.length) {
       navBad++;

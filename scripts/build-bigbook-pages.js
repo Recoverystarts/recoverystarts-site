@@ -361,7 +361,7 @@ function makeFaqs(displayLabel, section, ch, st, sp, themes) {
   // Q5 — the honest close. Same on every page, and it should be.
   faqs.push({
     q: "Can I read page " + displayLabel + " of the Big Book online for free?",
-    a: "Not here — Recovery Starts does not reproduce Alcoholics Anonymous, because the book belongs to A.A. and the book is better than any summary of it. You can read the Big Book free at aa.org, buy a copy from the official A.A. store, or pick one up at almost any meeting. Recovery Starts can tell you which page a passage is on and search the book for you; for the words themselves, go to the book.",
+    a: "Yes — free, no account. The Big Book Search Engine at read.recoverystarts.com shows the actual pages of the 4th Edition; page " + displayLabel + " is at read.recoverystarts.com/bigbook/read?page=" + String(displayLabel).toLowerCase() + ". The book itself belongs to A.A., which offers it to everyone: read it free at aa.org, buy a copy from the official A.A. store, or pick one up at almost any meeting.",
   });
 
   return faqs;
@@ -629,7 +629,7 @@ ${facts.join("\n")}
         ${notable.join("\n        ")}
         ${themeLine}
         <h2>Read it for yourself</h2>
-        <p>The Big Book belongs to Alcoholics Anonymous, and A.A. offers it to everyone: <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read it free at aa.org</a>, <a href="/big-book/">buy a copy from A.A.</a>, or pick one up at a meeting. Then come back and <a href="/big-book/search/">search it</a> when you're chasing a line you only half-remember.</p>
+        <p>Page ${esc(displayLabel)} itself — the actual page, full size — is in the <a href="https://read.recoverystarts.com/bigbook/read?page=${encodeURIComponent(String(displayLabel).toLowerCase())}&utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-pages&utm_content=${slug}">Big Book Search Engine</a>, free with no account. The book belongs to Alcoholics Anonymous, and A.A. offers it to everyone: <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read it free at aa.org</a>, <a href="/big-book/">buy a copy from A.A.</a>, or pick one up at a meeting.</p>
       </div>
 ${faqHtml}
 
@@ -639,7 +639,10 @@ ${faqHtml}
         <a href="/big-book/pages/">Every page →</a>
       </div>
 
-      <div class="cp-cta"><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-pages&utm_content=${slug}" class="btn btn-primary" target="_blank" rel="noopener">Ask Recovery Einstein about page ${esc(displayLabel)} →</a></div>
+      <div class="cp-cta">
+        <a href="https://read.recoverystarts.com/bigbook/read?page=${encodeURIComponent(String(displayLabel).toLowerCase())}&utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-pages&utm_content=${slug}" class="btn btn-primary">Read page ${esc(displayLabel)} — actual pages, free →</a>
+        <a href="https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-pages&utm_content=${slug}" class="btn btn-outline" target="_blank" rel="noopener">Ask Recovery Einstein about page ${esc(displayLabel)} →</a>
+      </div>
 
       <div class="cp-nav">
         ${prevLink}
@@ -768,11 +771,12 @@ const hubHtml = head({
 
       <div class="lib-intro">
         <p>People look for Big Book pages the way they look for a half-remembered face. <em>"Page 64."</em> <em>"The one with the promises."</em> <em>"417 — acceptance."</em> You heard a line in a meeting once, or you underlined something years ago, and now you want it back.</p>
-        <p>This is the index for that. <strong>${totalLinked} pages</strong>, each one telling you which chapter it belongs to, what the page turns on, and how to get to the real thing. We quote a line so you know you've got the right page — and A.A. has the whole thing waiting: <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read it free at aa.org</a> or <a href="/big-book/">get your own copy</a>.</p>
+        <p>This is the index for that. <strong>${totalLinked} pages</strong>, each one telling you which chapter it belongs to, what the page turns on, and how to get to the real thing. When you want the page itself, the <a href="https://read.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-library&utm_content=intro">Big Book Search Engine</a> shows every actual page free, no account — and A.A. has the whole thing waiting too: <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read it free at aa.org</a> or <a href="/big-book/">get your own copy</a>.</p>
       </div>
 
       <div class="lib-search">
-        <a class="btn btn-primary" href="/big-book/search/">Search the whole Big Book →</a>
+        <a class="btn btn-primary" href="https://read.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=bigbook-library&utm_content=hub">Read &amp; search the actual pages — free →</a>
+        <a class="btn btn-outline" href="/big-book/search/">Search the whole Big Book →</a>
         <a class="btn btn-outline" href="/big-book/">Get your own copy →</a>
       </div>
 

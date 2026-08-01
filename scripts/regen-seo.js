@@ -532,7 +532,11 @@ function phase3(opts) {
     if (!opts.dry) fs.writeFileSync(p, src, "utf8");
   }
 
-  // 3. /llms.txt
+  // 3. /llms.txt — RETIRED 2026-08-01. The live /llms.txt has been hand-evolved
+  // far past this template (Twelve Traditions corrections, Big Book Search
+  // Engine at read.recoverystarts.com, content notes) and is maintained
+  // directly. Writing this stale copy over it would regress all of that.
+  const WRITE_LLMS = false;
   const llms = `# recoverystarts.com
 
 > Recovery Starts is an independent recovery-awareness site: a free directory of
@@ -570,7 +574,7 @@ function phase3(opts) {
 - Big Book page references cite Alcoholics Anonymous, 4th Edition
 - Canonical URL example: https://recoverystarts.com/daily-reflection/july-1/
 `;
-  if (!opts.dry) fs.writeFileSync(path.join(ROOT, "llms.txt"), llms, "utf8");
+  if (WRITE_LLMS && !opts.dry) fs.writeFileSync(path.join(ROOT, "llms.txt"), llms, "utf8");
 
   // 4. Sitemap: verify coverage, stamp lastmod on every URL
   const smPath = path.join(ROOT, "sitemap.xml");

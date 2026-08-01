@@ -186,8 +186,13 @@ const STYLE = `  <style>
     .dt-chips a:hover { border-color: var(--accent); color: var(--accent); }
     .dt-disc { max-width: 65ch; margin: 2.6rem auto 0; text-align:center; font-family: var(--font-ui); color: var(--ink-dim); font-size: 0.78rem; line-height: 1.6; }
     .dt-disc a { color: var(--ink-soft); text-decoration: underline; }
-    /* hub — TODAY'S READING leads */
-    .dt-today { max-width: 760px; margin: 0 auto 2.6rem; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 28px 30px; }
+    /* hub — TODAY'S READING leads, Einstein holds the book beside it */
+    .dt-today { max-width: 920px; margin: 0 auto 2.6rem; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 28px 30px; display: grid; grid-template-columns: 1fr 200px; gap: 1.75rem; align-items: center; }
+    .dt-today-fig { position: relative; }
+    .dt-today-fig::before { content: ''; position: absolute; inset: -10%; background: radial-gradient(circle, rgba(139, 100, 220, 0.35) 0%, rgba(45, 212, 191, 0.18) 45%, transparent 70%); filter: blur(28px); }
+    .dt-today-fig img { position: relative; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); }
+    .dt-today-fig figcaption { position: relative; text-align: center; font-family: var(--font-ui); font-size: 0.75rem; color: var(--ink-dim); margin-top: 8px; }
+    @media (max-width: 700px) { .dt-today { grid-template-columns: 1fr; } .dt-today-fig { max-width: 220px; margin: 0 auto; } }
     .dt-today-head { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 10px; }
     .dt-today-lbl { color: var(--ink-soft); font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
     .dt-today .dt-badge { margin-bottom: 0; }
@@ -624,11 +629,18 @@ const hubHtml = head({
 
       <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
            being lectured. The doctrine essay used to sit here; it now sits below,
-           for the people who want it. JS swaps in the real date on load; the
-           server-rendered fallback is honestly labeled "Latest reading" because
-           a static page cannot know what day the reader arrives. -->
-      <section id="dt-today" class="dt-today">
+           for the people who want it. JS swaps in the real date on load (into
+           #dt-today-main only — Einstein keeps his seat); the server-rendered
+           fallback is honestly labeled "Latest reading" because a static page
+           cannot know what day the reader arrives. -->
+      <section class="dt-today">
+        <div id="dt-today-main">
         ${todayHeroHtml(featDays[0], false)}
+        </div>
+        <figure class="dt-today-fig" aria-hidden="true">
+          <img src="/assets/einstein/traditions.webp" alt="" width="640" height="640" loading="lazy">
+          <figcaption>Recovery Einstein · Daily Traditions</figcaption>
+        </figure>
       </section>
 
       <div class="dt-months">${monthCardsFor(featMonth)}</div>
@@ -689,7 +701,7 @@ ${HERO_JS}
                 || data.find(function (x) { return x.day === d; })
                 || data[0];
         if (!pick) return;
-        var host = document.getElementById("dt-today");
+        var host = document.getElementById("dt-today-main");
         if (!host) return;
         var isToday = pick.month === thisMonth && pick.day === d;
         host.innerHTML = window.__dtHero(pick, isToday);

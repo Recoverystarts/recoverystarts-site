@@ -60,8 +60,13 @@
     .dt-chips a:hover { border-color: var(--accent); color: var(--accent); }
     .dt-disc { max-width: 65ch; margin: 2.6rem auto 0; text-align:center; font-family: var(--font-ui); color: var(--ink-dim); font-size: 0.78rem; line-height: 1.6; }
     .dt-disc a { color: var(--ink-soft); text-decoration: underline; }
-    /* hub — TODAY'S READING leads */
-    .dt-today { max-width: 760px; margin: 0 auto 2.6rem; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 28px 30px; }
+    /* hub — TODAY'S READING leads, Einstein holds the book beside it */
+    .dt-today { max-width: 920px; margin: 0 auto 2.6rem; background: var(--paper-2); border: 1px solid var(--rule); border-radius: var(--radius); padding: 28px 30px; display: grid; grid-template-columns: 1fr 200px; gap: 1.75rem; align-items: center; }
+    .dt-today-fig { position: relative; }
+    .dt-today-fig::before { content: ''; position: absolute; inset: -10%; background: radial-gradient(circle, rgba(139, 100, 220, 0.35) 0%, rgba(45, 212, 191, 0.18) 45%, transparent 70%); filter: blur(28px); }
+    .dt-today-fig img { position: relative; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); }
+    .dt-today-fig figcaption { position: relative; text-align: center; font-family: var(--font-ui); font-size: 0.75rem; color: var(--ink-dim); margin-top: 8px; }
+    @media (max-width: 700px) { .dt-today { grid-template-columns: 1fr; } .dt-today-fig { max-width: 220px; margin: 0 auto; } }
     .dt-today-head { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 10px; }
     .dt-today-lbl { color: var(--ink-soft); font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
     .dt-today .dt-badge { margin-bottom: 0; }
@@ -169,10 +174,12 @@
 
       <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
            being lectured. The doctrine essay used to sit here; it now sits below,
-           for the people who want it. JS swaps in the real date on load; the
-           server-rendered fallback is honestly labeled "Latest reading" because
-           a static page cannot know what day the reader arrives. -->
-      <section id="dt-today" class="dt-today">
+           for the people who want it. JS swaps in the real date on load (into
+           #dt-today-main only — Einstein keeps his seat); the server-rendered
+           fallback is honestly labeled "Latest reading" because a static page
+           cannot know what day the reader arrives. -->
+      <section class="dt-today">
+        <div id="dt-today-main">
         
         <div class="dt-today-head">
           <span class="dt-today-lbl">Latest reading · August 1</span>
@@ -188,6 +195,11 @@
           <a class="btn btn-primary" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=daily-traditions&amp;utm_content=august-1" target="_blank" rel="noopener">Ask Recovery Einstein about today's Tradition →</a>
           <a class="btn btn-outline" href="/daily-tradition/august-1/">Open this reading →</a>
         </div>
+        </div>
+        <figure class="dt-today-fig" aria-hidden="true">
+          <img src="/assets/einstein/traditions.webp" alt="" width="640" height="640" loading="lazy">
+          <figcaption>Recovery Einstein · Daily Traditions</figcaption>
+        </figure>
       </section>
 
       <div class="dt-months"><div class="dt-month soon" id="month-january"><span class="m">January</span><span class="t">Tradition 1</span></div><div class="dt-month soon" id="month-february"><span class="m">February</span><span class="t">Tradition 2</span></div><div class="dt-month soon" id="month-march"><span class="m">March</span><span class="t">Tradition 3</span></div><div class="dt-month soon" id="month-april"><span class="m">April</span><span class="t">Tradition 4</span></div><div class="dt-month soon" id="month-may"><span class="m">May</span><span class="t">Tradition 5</span></div><div class="dt-month soon" id="month-june"><span class="m">June</span><span class="t">Tradition 6</span></div><a class="dt-month live" id="month-july" href="/daily-tradition/july/"><span class="m">July</span><span class="t">Tradition 7 · live</span></a><a class="dt-month live" id="month-august" href="/daily-tradition/august/" style="border-color:var(--gold)"><span class="m">August</span><span class="t">Tradition 8 · live</span></a><a class="dt-month live" id="month-september" href="/daily-tradition/september/"><span class="m">September</span><span class="t">Tradition 9 · live</span></a><a class="dt-month live" id="month-october" href="/daily-tradition/october/"><span class="m">October</span><span class="t">Tradition 10 · live</span></a><a class="dt-month live" id="month-november" href="/daily-tradition/november/"><span class="m">November</span><span class="t">Tradition 11 · live</span></a><a class="dt-month live" id="month-december" href="/daily-tradition/december/"><span class="m">December</span><span class="t">Tradition 12 · live</span></a></div>
@@ -412,7 +424,7 @@
                 || data.find(function (x) { return x.day === d; })
                 || data[0];
         if (!pick) return;
-        var host = document.getElementById("dt-today");
+        var host = document.getElementById("dt-today-main");
         if (!host) return;
         var isToday = pick.month === thisMonth && pick.day === d;
         host.innerHTML = window.__dtHero(pick, isToday);

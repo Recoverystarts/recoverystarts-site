@@ -295,7 +295,7 @@ const SKIP_NAV = new Set(["googlee7fbd843aaac14fe.html"]);
 let navPages = 0, navBad = 0;
 (function walkNav(dir) {
   for (const name of fs.readdirSync(dir)) {
-    if (["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"].includes(name)) continue;
+    if (["node_modules", ".git", "functions", "scripts", "tests", "assets", "data", "grok-handoff"].includes(name)) continue;
     const p = path.join(dir, name);
     if (fs.statSync(p).isDirectory()) { walkNav(p); continue; }
     if (!name.endsWith(".html") || SKIP_NAV.has(name)) continue;

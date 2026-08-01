@@ -13,7 +13,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"]);
+const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data", "grok-handoff"]);
 
 const pages = [];
 (function walk(dir) {

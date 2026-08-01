@@ -151,7 +151,7 @@ const FOOTER_HTML = `  <footer class="footer">
 const FOOTER_RX = /[ \t]*<footer class="footer">[\s\S]*?<\/footer>/;
 
 // ── Walk every HTML page ────────────────────────────────────────────────────
-const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"]);
+const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data", "grok-handoff"]);
 // Search Console's verification file is a bare token, not a page. Touching it
 // would break GSC verification and silently delist the site.
 const SKIP_FILES = new Set(["googlee7fbd843aaac14fe.html"]);

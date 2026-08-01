@@ -99,6 +99,20 @@ ${items}
   </div></nav>`;
 }
 
+// ── The floating Einstein CTA — on every page, quietly ──────────────────────
+// The one action the whole site points at: talking to Recovery Einstein.
+// A small fixed pill, bottom corner. Static HTML (crawlable, no-JS safe),
+// per-page utm_content so we can see which pages actually carry people over.
+function ctaHtml(urlPath) {
+  const slug = (urlPath === "/" ? "home" : urlPath.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")) || "home";
+  const q = `utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=${slug}`;
+  return `  <a class="einstein-cta" href="https://app.recoverystarts.com/?${q}" target="_blank" rel="noopener" aria-label="Talk to Recovery Einstein — free, any hour">
+    <span class="ec-dot" aria-hidden="true"></span>
+    <span class="ec-text"><strong>Talk to Recovery Einstein</strong><small>You're not alone — free, any hour</small></span>
+  </a>`;
+}
+const CTA_RX = /[ \t]*<a class="einstein-cta"[\s\S]*?<\/a>/;
+
 // ── Walk every HTML page ────────────────────────────────────────────────────
 const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"]);
 // Search Console's verification file is a bare token, not a page. Touching it
@@ -116,7 +130,7 @@ const pages = [];
 
 const NAV_RX = /[ \t]*<nav class="nav">[\s\S]*?<\/nav>/;
 
-let fixed = 0, added = 0, already = 0, skipped = 0;
+let fixed = 0, added = 0, already = 0, skipped = 0, ctaAdded = 0, ctaFixed = 0;
 const noNav = [];
 
 for (const file of pages) {
@@ -129,11 +143,16 @@ for (const file of pages) {
 
   const want = navHtml(urlPath === "//" ? "/" : urlPath);
 
+  let changed = false;
   if (NAV_RX.test(html)) {
     const current = html.match(NAV_RX)[0];
-    if (current.trim() === want.trim()) { already++; continue; }
-    html = html.replace(NAV_RX, want);
-    fixed++;
+    if (current.trim() === want.trim()) {
+      already++;
+    } else {
+      html = html.replace(NAV_RX, want);
+      fixed++;
+      changed = true;
+    }
   } else {
     // No nav at all. Inject it right after <body> (and after the skip-link /
     // background div if they're there), so it lands where every other page has it.
@@ -147,9 +166,21 @@ for (const file of pages) {
       html = html.replace(anchor[0], anchor[0].replace(/\s*$/, "") + "\n" + want + "\n");
     }
     added++;
+    changed = true;
   }
 
-  if (!DRY) fs.writeFileSync(file, html);
+  // Stamp the floating CTA right after the header nav. Same idempotency
+  // pattern as the nav itself: replace if drifted, add if missing.
+  const wantCta = ctaHtml(urlPath === "//" ? "/" : urlPath);
+  if (CTA_RX.test(html)) {
+    const currentCta = html.match(CTA_RX)[0];
+    if (currentCta.trim() !== wantCta.trim()) { html = html.replace(CTA_RX, wantCta); ctaFixed++; changed = true; }
+  } else {
+    const navEnd = html.match(NAV_RX);
+    if (navEnd) { html = html.replace(navEnd[0], navEnd[0] + "\n" + wantCta); ctaAdded++; changed = true; }
+  }
+
+  if (!DRY && changed) fs.writeFileSync(file, html);
 }
 
 console.log("NAV NORMALISED" + (DRY ? " (DRY RUN)" : "") + "\n");
@@ -162,5 +193,7 @@ if (noNav.length) {
   console.log("\n  pages that had NO NAV — you could land there and not get back:");
   noNav.forEach((p) => console.log("    " + p));
 }
+console.log("  einstein CTA added : " + ctaAdded + "   (fixed pill → app.recoverystarts.com)");
+console.log("  einstein CTA fixed : " + ctaFixed);
 console.log("\n  every page now carries: " + LINKS.map((l) => l[1]).join(" · ") + " · Claude's Lab · Get the App");
 console.log("  dropdowns          : Daily Reflection (12 months) · Daily Tradition (" + tradLive.size + " live months)");

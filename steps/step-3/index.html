@@ -67,10 +67,7 @@
     <a href="/" class="nav-brand">Recovery Starts</a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/meetings/">Meetings</a></li>
-      <li><a href="/aa-info/">AA Info</a></li>
-      <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection by month">▾</button>
+      <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
         <li><a href="/daily-reflection/january/">January</a></li>
@@ -86,7 +83,7 @@
         <li><a href="/daily-reflection/november/">November</a></li>
         <li><a href="/daily-reflection/december/">December</a></li>
       </ul></li>
-      <li class="has-sub"><a href="/daily-tradition/">Daily Tradition</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Tradition by month">▾</button>
+      <li class="has-sub"><a href="/daily-tradition/">Daily Tradition</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Tradition">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-tradition/today/">Today's Tradition →</a></li>
         <li class="sub-soon">January · T1</li>
@@ -102,11 +99,21 @@
         <li><a href="/daily-tradition/november/">November · T11</a></li>
         <li><a href="/daily-tradition/december/">December · T12</a></li>
       </ul></li>
-      <li><a href="/12-traditions/">The 12 Traditions</a></li>
-      <li><a href="/12-steps/">The 12 Steps</a></li>
-      <li><a href="/big-book/">Big Book</a></li>
+      <li class="has-sub"><a href="/big-book/">Big Book</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Big Book">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/big-book/search/">Search the Big Book</a></li>
+        <li><a href="/big-book/pages/">Page by Page</a></li>
+        <li><a href="/big-book/">Get the Big Book</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/aa-info/">The Program</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse The Program">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/12-steps/">The 12 Steps</a></li>
+        <li><a href="/12-traditions/">The 12 Traditions</a></li>
+        <li><a href="/aa-info/">AA Info</a></li>
+        <li><a href="/meetings/">Find a Meeting</a></li>
+      </ul></li>
       <li><a href="/about/">About</a></li>
-      <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
+      <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
@@ -152,11 +159,12 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Independent recovery awareness project. Not affiliated with any fellowship.</p></div>
-        <div><h4>Navigate</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/meetings/">Meetings</a></li><li><a href="/daily-reflection/">Daily Reflection</a></li><li><a href="/steps/">The 12 Steps</a></li><li><a href="/download/">Recovery Einstein</a></li><li><a href="/about/">About</a></li></ul></div>
-        <div><h4>AA Resources</h4><ul class="footer-links"><li><a href="/aa-info/">AA Info</a></li><li><a href="/aa-info/#traditions">12 Traditions</a></li><li><a href="https://www.aa.org" target="_blank" rel="noopener">aa.org</a></li></ul></div>
-        <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">An independent recovery awareness project. Not affiliated with any fellowship. Every reading here is free, complete, and always will be.</p></div>
+        <div><h4>Read</h4><ul class="footer-links"><li><a href="/daily-reflection/">Daily Reflection</a></li><li><a href="/daily-tradition/">Daily Tradition</a></li><li><a href="/big-book/pages/">The Big Book, page by page</a></li><li><a href="/big-book/search/">Search the Big Book</a></li></ul></div>
+        <div><h4>The Program</h4><ul class="footer-links"><li><a href="/12-steps/">The 12 Steps</a></li><li><a href="/12-traditions/">The 12 Traditions</a></li><li><a href="/aa-info/">AA Info</a></li><li><a href="/meetings/">Find a Meeting</a></li></ul></div>
+        <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/download/">Get the App</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
       </div>
+      <p class="footer-safety">In crisis right now? Call or text <a href="tel:988">988</a>. You are not alone.</p>
       <div class="privacy-notice"><strong>Privacy:</strong> No cookies. No personal tracking. Anonymous, cookie-free page counts only. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
       <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>

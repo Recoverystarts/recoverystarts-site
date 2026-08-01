@@ -315,14 +315,22 @@ let navPages = 0, navBad = 0;
 if (navBad === 0) ok(`all ${navPages} pages carry the same ${REQUIRED_NAV.length}-link nav (no orphan pages)`);
 else bad(`${navBad} page(s) have a broken or missing nav`);
 
-console.log("\n=== 6. HOMEPAGE ===\n");
+console.log("\n=== 6. HOMEPAGE (First Light dawn arc) ===\n");
 const home = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 if (!/href="\/big-book\/pages\/"/.test(home)) bad("homepage: no link to the Big Book library");
+if (!/href="\/big-book\/search\/"/.test(home)) bad("homepage: no link to Big Book search");
 if (!/href="\/daily-tradition\/"/.test(home)) bad("homepage: no link to Daily Traditions");
-if (!/study-card/.test(home)) bad("homepage: study cards missing");
+if (!/href="\/daily-reflection\/today\/"/.test(home)) bad("homepage: no link to today's reflection");
+if (!/href="\/meetings\/"/.test(home)) bad("homepage: no doorway to meetings");
+if (!/class="doorway/.test(home)) bad("homepage: doorway cards missing");
+if (!/class="index-row"/.test(home)) bad("homepage: library index rows missing");
+if (!/invite-band/.test(home)) bad("homepage: Einstein invitation band missing");
+if (!/988/.test(home)) bad("homepage: the 988 crisis line is missing");
 const css = fs.readFileSync(path.join(ROOT, "style.css"), "utf8");
-if (!/\.study-card/.test(css)) bad("style.css: .study-card styles missing (cards would render unstyled)");
-ok("homepage links to both new sections; card styles present");
+for (const cls of ["\\.doorway", "\\.index-row", "\\.invite-band", "\\.einstein-cta", "\\.footer-safety"]) {
+  if (!new RegExp(cls).test(css)) bad("style.css: " + cls.replace("\\\\", "") + " styles missing");
+}
+ok("homepage carries the dawn arc: doorways, daily panel, library rows, invitation, 988");
 
 console.log("\n" + "=".repeat(60));
 if (fail.length) {

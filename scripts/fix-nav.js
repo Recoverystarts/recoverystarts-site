@@ -1,17 +1,19 @@
 #!/usr/bin/env node
 /**
- * fix-nav.js — one nav, on every page.
+ * fix-nav.js — one header, one footer, one floating pill. On every page.
  *
- * The site grew in layers and the header drifted: some pages carry the full nav,
- * some are missing "Daily Tradition" and "Big Book", and /big-book/ has no nav
- * at all — you land there and there is no way back into the site.
+ * The site grew in layers and the chrome drifted; this stamps the SAME
+ * header/footer/pill on all ~1200 pages. Run it after any generator
+ * (build-all.js runs it for you).
  *
- * This makes every page carry the SAME header. Run it after any generator.
+ * v3 (First Light): restructured nav — Daily Reflection + Daily Tradition
+ * keep their month dropdowns; Big Book and The Program (12 Steps, 12
+ * Traditions, AA Info, Find a Meeting) become dropdowns; Claude's Lab moves
+ * to the footer; a day/night theme toggle joins the header; the footer is
+ * now also canonical and carries the standing 988 safety line.
  *
- * v2: "Daily Reflection" and "Daily Tradition" are dropdowns. Every month is
- * one hover/tap away from EVERY page on the site — nobody is stranded inside
- * a reading again. Tradition months come from data/traditions-daily.json, so
- * publishing a new month updates the menu with zero template work.
+ * Tradition months come from data/traditions-daily.json, so publishing a new
+ * month updates the menu with zero template work.
  *
  * Usage: node scripts/fix-nav.js [--dry]
  */
@@ -29,62 +31,72 @@ const TRAD = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-dail
 const tradLive = new Set(TRAD.days.map((d) => d.month));
 
 // THE nav. One definition. Everything else is generated from it.
-// [href, label, submenu?] — submenu items are [href|null, label].
+// sub items: [href|null, label, isToday?]
 const reflectionSub = [
-  ["/daily-reflection/today/", "Today's Reflection →"],
+  ["/daily-reflection/today/", "Today's Reflection →", true],
   ...MONTHS.map((m) => [`/daily-reflection/${m}/`, CAP(m)]),
 ];
 const traditionSub = [
-  ["/daily-tradition/today/", "Today's Tradition →"],
+  ["/daily-tradition/today/", "Today's Tradition →", true],
   ...MONTHS.map((m, i) =>
     tradLive.has(m)
       ? [`/daily-tradition/${m}/`, `${CAP(m)} · T${i + 1}`]
       : [null, `${CAP(m)} · T${i + 1}`]
   ),
 ];
-
-const LINKS = [
-  ["/", "Home"],
-  ["/meetings/", "Meetings"],
-  ["/aa-info/", "AA Info"],
-  ["/daily-reflection/", "Daily Reflection", reflectionSub],
-  ["/daily-tradition/", "Daily Tradition", traditionSub],
-  ["/12-traditions/", "The 12 Traditions"],
+const bigBookSub = [
+  ["/big-book/search/", "Search the Big Book"],
+  ["/big-book/pages/", "Page by Page"],
+  ["/big-book/", "Get the Big Book"],
+];
+const programSub = [
   ["/12-steps/", "The 12 Steps"],
-  ["/big-book/", "Big Book"],
-  ["/about/", "About"],
+  ["/12-traditions/", "The 12 Traditions"],
+  ["/aa-info/", "AA Info"],
+  ["/meetings/", "Find a Meeting"],
 ];
 
-/** Which nav item should be highlighted for a page at this URL path? */
+const NAV_ITEMS = [
+  { href: "/daily-reflection/", label: "Daily Reflection", sub: reflectionSub, style: "months" },
+  { href: "/daily-tradition/", label: "Daily Tradition", sub: traditionSub, style: "months" },
+  { href: "/big-book/", label: "Big Book", sub: bigBookSub, style: "list" },
+  { href: "/aa-info/", label: "The Program", sub: programSub, style: "list" },
+  { href: "/about/", label: "About" },
+];
+
+/** Which top-level item should light up for a page at this URL path?
+ *  Longest matching href wins, searching submenu targets too. */
 function activeFor(urlPath) {
-  let best = "";
-  for (const [href] of LINKS) {
-    if (href === "/") continue;
-    if (urlPath.startsWith(href) && href.length > best.length) best = href;
+  let bestTop = "";
+  let bestLen = 0;
+  for (const item of NAV_ITEMS) {
+    const candidates = [item.href, ...(item.sub || []).map(([h]) => h).filter(Boolean)];
+    for (const h of candidates) {
+      if (urlPath.startsWith(h) && h.length > bestLen) { bestLen = h.length; bestTop = item.href; }
+    }
   }
-  if (!best && (urlPath === "/" || urlPath === "")) best = "/";
-  // Big Book sub-pages (/big-book/pages/, /big-book/page-64/) light up "Big Book"
-  return best;
+  return bestTop;
 }
 
-function subHtml(label, items) {
-  const lis = items.map(([href, text], i) => {
-    const cls = i === 0 ? ' class="sub-today"' : "";
+function subHtml(label, items, style) {
+  const lis = items.map(([href, text, isToday]) => {
     if (!href) return `        <li class="sub-soon">${text}</li>`;
+    const cls = isToday ? ' class="sub-today"' : "";
     return `        <li${cls}><a href="${href}">${text}</a></li>`;
   }).join("\n");
-  return `<button class="sub-toggle" aria-expanded="false" aria-label="Browse ${label} by month">▾</button>
-      <ul class="sub-menu">
+  const menuCls = style === "list" ? "sub-menu sub-menu-list" : "sub-menu";
+  return `<button class="sub-toggle" aria-expanded="false" aria-label="Browse ${label}">▾</button>
+      <ul class="${menuCls}">
 ${lis}
       </ul>`;
 }
 
 function navHtml(urlPath) {
   const active = activeFor(urlPath);
-  const items = LINKS.map(([href, label, sub]) => {
+  const items = NAV_ITEMS.map(({ href, label, sub, style }) => {
     const cls = href === active ? ' class="active"' : "";
     if (sub) {
-      return `      <li class="has-sub"><a href="${href}"${cls}>${label}</a>${subHtml(label, sub)}</li>`;
+      return `      <li class="has-sub"><a href="${href}"${cls}>${label}</a>${subHtml(label, sub, style)}</li>`;
     }
     return `      <li><a href="${href}"${cls}>${label}</a></li>`;
   }).join("\n");
@@ -93,16 +105,16 @@ function navHtml(urlPath) {
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
 ${items}
-      <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
+      <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>`;
 }
 
-// ── The floating Einstein CTA — on every page, quietly ──────────────────────
+// ── The floating Einstein pill — on every page, quietly ─────────────────────
 // The one action the whole site points at: talking to Recovery Einstein.
-// A small fixed pill, bottom corner. Static HTML (crawlable, no-JS safe),
-// per-page utm_content so we can see which pages actually carry people over.
+// Static HTML (crawlable, no-JS safe), per-page utm_content so we can see
+// which pages actually carry people over.
 function ctaHtml(urlPath) {
   const slug = (urlPath === "/" ? "home" : urlPath.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")) || "home";
   const q = `utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=${slug}`;
@@ -112,6 +124,23 @@ function ctaHtml(urlPath) {
   </a>`;
 }
 const CTA_RX = /[ \t]*<a class="einstein-cta"[\s\S]*?<\/a>/;
+
+// ── THE footer. One definition, stamped everywhere. ─────────────────────────
+// The 988 line is a permanent fixture of the brand, not legal fine print.
+const FOOTER_HTML = `  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">An independent recovery awareness project. Not affiliated with any fellowship. Every reading here is free, complete, and always will be.</p></div>
+        <div><h4>Read</h4><ul class="footer-links"><li><a href="/daily-reflection/">Daily Reflection</a></li><li><a href="/daily-tradition/">Daily Tradition</a></li><li><a href="/big-book/pages/">The Big Book, page by page</a></li><li><a href="/big-book/search/">Search the Big Book</a></li></ul></div>
+        <div><h4>The Program</h4><ul class="footer-links"><li><a href="/12-steps/">The 12 Steps</a></li><li><a href="/12-traditions/">The 12 Traditions</a></li><li><a href="/aa-info/">AA Info</a></li><li><a href="/meetings/">Find a Meeting</a></li></ul></div>
+        <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/download/">Get the App</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">In crisis right now? Call or text <a href="tel:988">988</a>. You are not alone.</p>
+      <div class="privacy-notice"><strong>Privacy:</strong> No cookies. No personal tracking. Anonymous, cookie-free page counts only. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>`;
+const FOOTER_RX = /[ \t]*<footer class="footer">[\s\S]*?<\/footer>/;
 
 // ── Walk every HTML page ────────────────────────────────────────────────────
 const SKIP_DIRS = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data"]);
@@ -130,7 +159,7 @@ const pages = [];
 
 const NAV_RX = /[ \t]*<nav class="nav">[\s\S]*?<\/nav>/;
 
-let fixed = 0, added = 0, already = 0, skipped = 0, ctaAdded = 0, ctaFixed = 0;
+let fixed = 0, added = 0, already = 0, skipped = 0, ctaAdded = 0, ctaFixed = 0, footFixed = 0, footAdded = 0;
 const noNav = [];
 
 for (const file of pages) {
@@ -169,7 +198,7 @@ for (const file of pages) {
     changed = true;
   }
 
-  // Stamp the floating CTA right after the header nav. Same idempotency
+  // Stamp the floating pill right after the header nav. Same idempotency
   // pattern as the nav itself: replace if drifted, add if missing.
   const wantCta = ctaHtml(urlPath === "//" ? "/" : urlPath);
   if (CTA_RX.test(html)) {
@@ -180,20 +209,35 @@ for (const file of pages) {
     if (navEnd) { html = html.replace(navEnd[0], navEnd[0] + "\n" + wantCta); ctaAdded++; changed = true; }
   }
 
+  // Stamp the footer. Replace if drifted, add before </body> if missing.
+  if (FOOTER_RX.test(html)) {
+    const currentFoot = html.match(FOOTER_RX)[0];
+    if (currentFoot.trim() !== FOOTER_HTML.trim()) { html = html.replace(FOOTER_RX, FOOTER_HTML); footFixed++; changed = true; }
+  } else {
+    const appScript = html.match(/[ \t]*<script src="\/app\.js">/);
+    if (appScript) {
+      html = html.replace(appScript[0], FOOTER_HTML + "\n" + appScript[0]);
+    } else {
+      html = html.replace(/<\/body>/, FOOTER_HTML + "\n</body>");
+    }
+    footAdded++;
+    changed = true;
+  }
+
   if (!DRY && changed) fs.writeFileSync(file, html);
 }
 
-console.log("NAV NORMALISED" + (DRY ? " (DRY RUN)" : "") + "\n");
+console.log("CHROME NORMALISED" + (DRY ? " (DRY RUN)" : "") + "\n");
 console.log("  pages scanned      : " + pages.length);
 console.log("  nav REPLACED       : " + fixed + "   (was missing links or out of date)");
 console.log("  nav ADDED          : " + added + "   (had NO nav at all)");
 console.log("  already correct    : " + already);
 console.log("  redirect stubs     : " + skipped + "   (no chrome by design)");
+console.log("  einstein pill added: " + ctaAdded + "  fixed: " + ctaFixed);
+console.log("  footer replaced    : " + footFixed + "  added: " + footAdded);
 if (noNav.length) {
   console.log("\n  pages that had NO NAV — you could land there and not get back:");
   noNav.forEach((p) => console.log("    " + p));
 }
-console.log("  einstein CTA added : " + ctaAdded + "   (fixed pill → app.recoverystarts.com)");
-console.log("  einstein CTA fixed : " + ctaFixed);
-console.log("\n  every page now carries: " + LINKS.map((l) => l[1]).join(" · ") + " · Claude's Lab · Get the App");
-console.log("  dropdowns          : Daily Reflection (12 months) · Daily Tradition (" + tradLive.size + " live months)");
+console.log("\n  every page now carries: " + NAV_ITEMS.map((l) => l.label).join(" · ") + " · theme toggle · Get the App + the 988 footer");
+console.log("  dropdowns          : Daily Reflection (12 months) · Daily Tradition (" + tradLive.size + " live) · Big Book · The Program");

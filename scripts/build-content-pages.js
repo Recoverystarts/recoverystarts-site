@@ -103,7 +103,6 @@ const FOOTER = `  <footer class="footer">
 <!-- End Cloudflare Web Analytics -->`;
 
 const STYLE = `  <style>
-    .cp-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
     .cp-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
     .cp-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1.2rem; }
     .cp-crumb a { color: var(--text-muted); }
@@ -160,7 +159,6 @@ ${schemas.map((s) => `  <script type="application/ld+json">\n  ${ld(s)}\n  </scr
 ${STYLE}
 </head>
 <body>
-  <div class="cp-bg"></div>
   <a href="#main" class="skip-link">Skip to content</a>
 ${NAV}`;
 }

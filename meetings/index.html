@@ -36,10 +36,7 @@
     <a href="/" class="nav-brand">Recovery Starts</a>
     <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/meetings/" class="active">Meetings</a></li>
-      <li><a href="/aa-info/">AA Info</a></li>
-      <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection by month">▾</button>
+      <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
         <li><a href="/daily-reflection/january/">January</a></li>
@@ -55,7 +52,7 @@
         <li><a href="/daily-reflection/november/">November</a></li>
         <li><a href="/daily-reflection/december/">December</a></li>
       </ul></li>
-      <li class="has-sub"><a href="/daily-tradition/">Daily Tradition</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Tradition by month">▾</button>
+      <li class="has-sub"><a href="/daily-tradition/">Daily Tradition</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Tradition">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-tradition/today/">Today's Tradition →</a></li>
         <li class="sub-soon">January · T1</li>
@@ -71,11 +68,21 @@
         <li><a href="/daily-tradition/november/">November · T11</a></li>
         <li><a href="/daily-tradition/december/">December · T12</a></li>
       </ul></li>
-      <li><a href="/12-traditions/">The 12 Traditions</a></li>
-      <li><a href="/12-steps/">The 12 Steps</a></li>
-      <li><a href="/big-book/">Big Book</a></li>
+      <li class="has-sub"><a href="/big-book/">Big Book</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Big Book">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/big-book/search/">Search the Big Book</a></li>
+        <li><a href="/big-book/pages/">Page by Page</a></li>
+        <li><a href="/big-book/">Get the Big Book</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/aa-info/" class="active">The Program</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse The Program">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/12-steps/">The 12 Steps</a></li>
+        <li><a href="/12-traditions/">The 12 Traditions</a></li>
+        <li><a href="/aa-info/">AA Info</a></li>
+        <li><a href="/meetings/">Find a Meeting</a></li>
+      </ul></li>
       <li><a href="/about/">About</a></li>
-      <li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li>
+      <li class="nav-theme"><button class="theme-toggle" aria-label="Switch between day and night" title="Day / night">◐</button></li>
       <li><a href="/download/" class="nav-cta">Get the App</a></li>
     </ul>
   </div></nav>
@@ -86,9 +93,10 @@
 
   <main id="main">
     <div class="container">
-      <div class="page-header">
-        <h1>Find Your <span class="gold">Meeting</span></h1>
-        <p>Every fellowship below is free, anonymous, and peer-led. No sign-up required. Click any card to find meetings near you or online.</p>
+      <div class="page-head">
+        <p class="eyebrow">The rooms</p>
+        <h1>Walking in is the hardest part. Here's where the rooms are.</h1>
+        <p class="standfirst">Every fellowship below is free, anonymous, and peer-led. No sign-up, no cost, no questions. Each card opens that fellowship's own meeting finder — some of those sites are clunky, but the meetings on the other side are worth it.</p>
       </div>
 
       <section>
@@ -177,23 +185,36 @@
       </section>
 
       <section>
-        <div class="content-block fade-in" style="text-align: center;">
-          <h2>Need Help Right Now?</h2>
-          <p>If you're in crisis or struggling, you don't have to face it alone.</p>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        <div class="crisis-box fade-in" style="text-align: center;">
+          <strong>Need help right now?</strong> You don't have to face it alone.
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
             <a href="tel:988" class="btn btn-primary">988 Crisis Lifeline</a>
-            <a href="https://www.aa.org/meeting-guide-app" class="btn btn-outline" target="_blank" rel="noopener">Find AA Near You</a>
+            <a href="https://www.aa.org/meeting-guide-app" class="btn btn-outline" target="_blank" rel="noopener">Find AA near you</a>
           </div>
         </div>
       </section>
     </div>
+
+    <section class="invite-band grain">
+      <div class="container invite-inner">
+        <p class="invite-line">Can't get to a meeting tonight? Einstein is awake.</p>
+        <a class="btn btn-primary" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=meetings-invite" target="_blank" rel="noopener">Talk to Recovery Einstein →</a>
+        <p class="reassure">Free to start. No judgment. Grounded in the Big Book, page references and all.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2026 RecoveryStarts.com. <a href="/">Home</a> · <a href="/about/">About</a> · <a href="/cdn-cgi/l/email-protection#93f0fcfde7f2f0e7d3e1f6f0fce5f6e1eae0e7f2e1e7e0bdf0fcfe">Contact</a></p>
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">An independent recovery awareness project. Not affiliated with any fellowship. Every reading here is free, complete, and always will be.</p></div>
+        <div><h4>Read</h4><ul class="footer-links"><li><a href="/daily-reflection/">Daily Reflection</a></li><li><a href="/daily-tradition/">Daily Tradition</a></li><li><a href="/big-book/pages/">The Big Book, page by page</a></li><li><a href="/big-book/search/">Search the Big Book</a></li></ul></div>
+        <div><h4>The Program</h4><ul class="footer-links"><li><a href="/12-steps/">The 12 Steps</a></li><li><a href="/12-traditions/">The 12 Traditions</a></li><li><a href="/aa-info/">AA Info</a></li><li><a href="/meetings/">Find a Meeting</a></li></ul></div>
+        <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/download/">Get the App</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
       </div>
+      <p class="footer-safety">In crisis right now? Call or text <a href="tel:988">988</a>. You are not alone.</p>
+      <div class="privacy-notice"><strong>Privacy:</strong> No cookies. No personal tracking. Anonymous, cookie-free page counts only. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>
   </footer>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/app.js"></script>

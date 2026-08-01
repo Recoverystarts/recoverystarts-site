@@ -261,7 +261,6 @@ const html = `<!DOCTYPE html>
 ${ld.map((o) => `  <script type="application/ld+json">\n  ${JSON.stringify(o)}\n  </script>`).join("\n")}
   <link rel="stylesheet" href="/style.css">
   <style>
-    .tt-bg { position: fixed; inset: 0; background: linear-gradient(150deg,#0b0b0f 0%,#191426 38%,#12203a 72%,#0b0b0f 100%); z-index:-1; }
     .tt-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
     .tt-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1.4rem; }
     .tt-crumb a { color: var(--text-muted); }
@@ -306,7 +305,6 @@ ${ld.map((o) => `  <script type="application/ld+json">\n  ${JSON.stringify(o)}\n
   </style>
 </head>
 <body>
-  <div class="tt-bg"></div>
   <a href="#main" class="skip-link">Skip to content</a>
 ${NAV}
   <main id="main"><section class="tt-wrap"><div class="container">

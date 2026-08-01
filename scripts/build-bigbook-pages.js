@@ -403,7 +403,6 @@ const FOOTER = `  <footer class="footer">
 </html>`;
 
 const STYLE = `  <style>
-    .cp-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
     .cp-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
     .cp-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1.2rem; }
     .cp-crumb a { color: var(--text-muted); }
@@ -466,7 +465,6 @@ ${ldBlocks}
 ${o.extraStyle || STYLE}
 </head>
 <body>
-  <div class="cp-bg"></div>
   <a href="#main" class="skip-link">Skip to content</a>
 ${NAV}
   <main id="main"><section class="cp-wrap"><div class="container">`;

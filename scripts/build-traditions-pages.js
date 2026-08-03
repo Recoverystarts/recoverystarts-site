@@ -192,11 +192,12 @@ const STYLE = `  <style>
     .dt-today-fig::before { content: ''; position: absolute; inset: -10%; background: radial-gradient(circle, rgba(139, 100, 220, 0.35) 0%, rgba(45, 212, 191, 0.18) 45%, transparent 70%); filter: blur(28px); }
     .dt-today-fig img { position: relative; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); }
     .dt-today-fig figcaption { position: relative; text-align: center; font-family: var(--font-ui); font-size: 0.75rem; color: var(--ink-dim); margin-top: 8px; }
-    /* Phone: the boxed figure sat below the buttons where nobody scrolls — hide
-       it and wash the same feathered art faintly behind the card text instead. */
+    /* Phone: the boxed figure used to sit below the buttons where nobody
+       scrolls — keep the box, move it to the top of the card so Einstein
+       greets the reader before the reading starts. */
     @media (max-width: 700px) {
-      .dt-today { grid-template-columns: 1fr; background-image: linear-gradient(color-mix(in srgb, var(--paper-2) 84%, transparent), color-mix(in srgb, var(--paper-2) 84%, transparent)), url('/assets/einstein/traditions-embed.webp'); background-size: 440px auto; background-position: center 55%; background-repeat: no-repeat; }
-      .dt-today-fig { display: none; }
+      .dt-today { grid-template-columns: 1fr; }
+      .dt-today-fig { max-width: 220px; margin: 0 auto; order: -1; }
     }
     .dt-today-head { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 10px; }
     .dt-today-lbl { color: var(--ink-soft); font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
@@ -234,13 +235,14 @@ const STYLE = `  <style>
     .dt-day .d { color: var(--accent); font-family: var(--font-ui); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; }
     .dt-day .t { display:block; font-family: var(--font-display); color: var(--ink); margin-top:3px; font-size:1.15rem; line-height:1.35; }
     .dt-day .k { display:block; color: var(--ink-dim); font-size:0.78rem; margin-top:4px; font-style:italic; }
-    /* Einstein keeps the reader company on every screen — the art is feathered
-       to transparency at its edges (baked into the asset). Wide screens: beside
-       the left margin at half strength. Narrow screens: centered low behind the
-       text at 15%, faint enough that the words always win. */
-    .dt-einstein-bg { display: block; position: fixed; z-index: -1; pointer-events: none; left: 50%; transform: translateX(-50%); bottom: -4vh; width: min(130vw, 540px); height: auto; opacity: 0.15; }
+    /* Einstein keeps the reader company on wide screens — the art is feathered
+       to transparency at its edges (baked into the asset) and sits behind the
+       left margin at half strength. Hidden on narrow screens: a faint wash
+       behind phone text was tried and read badly; phones get the boxed figure
+       at the top of the hub card instead. */
+    .dt-einstein-bg { display: none; }
     @media (min-width: 1150px) {
-      .dt-einstein-bg { left: calc(50% - 660px); transform: none; bottom: 4vh; width: 400px; opacity: 0.5; }
+      .dt-einstein-bg { display: block; position: fixed; z-index: -1; pointer-events: none; left: calc(50% - 660px); bottom: 4vh; width: 400px; height: auto; opacity: 0.5; }
     }
   </style>`;
 

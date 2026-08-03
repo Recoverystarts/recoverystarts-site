@@ -66,12 +66,15 @@ work, may stay — emphasized, not multiplied.
 
 ## Shape of a reading
 
-200–220 words, one body block. Open where the reader is, not where A.A. was.
-Scenes carry themselves ("Imagine a group that…") and stay anchored to real
-A.A. material before or after — a scene with nothing real holding it down is
-opinion in a costume. No villains inside A.A. scenes; the harm comes from good
-intentions plus a wrong idea. End on the reader: *Sit with:* is a plain
-statement of what the reading showed, then a question about their own life.
+There is no formula. (There was one — a five-question rotation with per-slot
+recipes — and it produced readings that fought their own point. Erased Aug 2026.)
+What remains is only this: start from the point Derick wants made, say it
+plainly and early, keep it short — punchy beats complete, and most days land
+well under 200 words. One exact quote with its source can carry a whole day.
+Scenes are welcome when they serve the point, never required. End on the
+reader: *Sit with:* is a plain statement, then a question about their own life.
+The slot names on published pages are labels for the reader, not molds for the
+writer. When a reading is fighting its shape, the shape is what's wrong.
 
 ## Anonymity is not secrecy (for Traditions 11 and 12 especially)
 

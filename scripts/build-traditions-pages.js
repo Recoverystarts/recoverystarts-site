@@ -229,6 +229,14 @@ const STYLE = `  <style>
     .dt-day .d { color: var(--accent); font-family: var(--font-ui); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; }
     .dt-day .t { display:block; font-family: var(--font-display); color: var(--ink); margin-top:3px; font-size:1.15rem; line-height:1.35; }
     .dt-day .k { display:block; color: var(--ink-dim); font-size:0.78rem; margin-top:4px; font-style:italic; }
+    /* Einstein keeps the reader company on wide screens — the art is feathered
+       to transparency at its edges (baked into the asset) and sits behind the
+       left margin at half strength, so it blends into the paper and never
+       competes with the text. Hidden below 1150px; phones keep their layout. */
+    .dt-einstein-bg { display: none; }
+    @media (min-width: 1150px) {
+      .dt-einstein-bg { display: block; position: fixed; z-index: -1; pointer-events: none; left: calc(50% - 660px); bottom: 4vh; width: 400px; height: auto; opacity: 0.5; }
+    }
   </style>`;
 
 function head(o) {
@@ -401,6 +409,7 @@ for (const d of days) {
     : `<a class="dt-nav-next" href="/daily-tradition/${d.month}/"><small>→</small>All of ${monthCap}</a>`;
 
   const html = head({ title, desc, url, ld: [articleLd, crumbLd] }) + `
+      <img class="dt-einstein-bg" src="/assets/einstein/traditions-embed.webp" alt="" aria-hidden="true" width="760" height="760" loading="lazy">
       <nav class="dt-crumb"><a href="/">Home</a> / <a href="/daily-tradition/">Daily Traditions</a> / <a href="/daily-tradition/${d.month}/">${monthCap}</a> / ${monthCap} ${d.day}</nav>
       <div class="dt-kicker">Tradition ${d.tradition} · ${monthCap} ${d.day}</div>
       <h1 class="dt-title">${esc(d.title)}</h1>

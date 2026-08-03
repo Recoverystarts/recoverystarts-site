@@ -1,0 +1,6 @@
+{
+  "_note": "Quotation marks in the readings work like normal writing: people in a scene may speak in quotes. The hard rule is narrower - any quotation OF A.A. LITERATURE must match the source character for character (audit-readings.js enforces this). Every quoted line that is OURS (scene dialogue, not literature) must be registered here, so an unmatched quote is always either declared fiction or a build-stopping fabrication. Nothing passes silently.",
+  "dialogue": [
+    "She talks to alcoholics all day, that is Twelfth Step work, and Twelfth Step work is never paid!"
+  ]
+}

@@ -13,7 +13,15 @@
  * This gate is NOT a reason to quote less. Quoting the actual words is the whole
  * point — it is what makes a reading land, and it is what nobody else does. Quote
  * as much as the reading needs. Just never reshape a quotation to make it read
- * better. If it's in quotation marks, it's the source's exact words.
+ * better.
+ *
+ * Quotation marks work like normal writing (Derick's ruling, Aug 2026): a person
+ * in an imagined scene may speak in quotes, the way dialogue is quoted anywhere.
+ * The hard rule is narrower: any quotation OF A.A. LITERATURE must be the
+ * source's exact words, and every quoted line that is OURS (scene dialogue, not
+ * literature) must be registered in data/scene-dialogue.json. So an unmatched
+ * quotation is always one of two things: declared fiction, or a fabrication
+ * that stops the build. It is never silently either.
  *
  * (It caught a real one: a July reading said Rockefeller spoke "without any
  * thought of financial reward." The book says "without any thought of financial
@@ -166,12 +174,26 @@ bodies.forEach((b, i) => {
 
 console.log("\n  quotations to verify : " + claims.length + "\n");
 
+// Scene dialogue — quoted lines that are OURS by declaration. Registered in one
+// file so fiction is always deliberate, never an accident of the regex.
+const OURS_FILE = "data/scene-dialogue.json";
+let OURS = [];
+if (fs.existsSync(OURS_FILE)) {
+  const oursRaw = JSON.parse(fs.readFileSync(OURS_FILE, "utf8").replace(/^﻿/, ""));
+  OURS = (oursRaw.dialogue || []).map(squash);
+  console.log("  scene dialogue     : " + OURS.length + " registered line(s)\n");
+}
+
 const bad = [];
+let oursSeen = 0;
 for (const c of claims) {
   const q = squash(c.quote);
   const hit = haystacks.find(([, h]) => h.includes(q));
   if (hit) {
     console.log("  REAL   " + hit[0].padEnd(30) + '"' + c.quote.slice(0, 54) + (c.quote.length > 54 ? "…" : "") + '"');
+  } else if (OURS.includes(q)) {
+    oursSeen++;
+    console.log("  OURS   " + "scene dialogue (registered)".padEnd(30) + '"' + c.quote.slice(0, 54) + (c.quote.length > 54 ? "…" : "") + '"');
   } else {
     bad.push(c);
     console.log("  !!!!!  NOT IN ANY SOURCE WE OWN — day " + c.day);
@@ -181,7 +203,8 @@ for (const c of claims) {
 
 console.log("\n" + "=".repeat(74));
 console.log("  quotations checked : " + claims.length);
-console.log("  VERIFIED           : " + (claims.length - bad.length));
+console.log("  VERIFIED           : " + (claims.length - bad.length - oursSeen));
+console.log("  SCENE DIALOGUE     : " + oursSeen + " (ours, registered)");
 console.log("  FABRICATED         : " + bad.length);
 console.log("=".repeat(74));
 

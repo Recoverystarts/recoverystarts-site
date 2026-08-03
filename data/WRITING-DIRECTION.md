@@ -95,9 +95,11 @@ to their members, never the reverse (that inversion is the basis of the Twelve
 Concepts). Write anonymity readings from those reasons. Any framing that makes
 A.A. sound like a secret society repeats the distortion we exist to correct.
 
-## Working with Derick
+## Handoffs
 
-Show drafts, keep his words when he rewrites (fix grammar only, say what
-changed), and when unsure whether a change is wanted — make the smaller change
-and flag the question. He catches what a newcomer would stumble on, and he is
-right about it, including when it's a single word.
+A handoff records the state of the work: what is live, where files are, what
+is unresolved, which commit is the way back. It does not record rules of
+engagement, process rituals, or descriptions of how Derick works — he is in
+the room and speaks for himself. Saved context is evidence, not law: every
+note is a record of one moment, and one-offs stay one-offs unless Derick says
+otherwise.

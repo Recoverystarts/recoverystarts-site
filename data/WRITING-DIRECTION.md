@@ -73,6 +73,25 @@ opinion in a costume. No villains inside A.A. scenes; the harm comes from good
 intentions plus a wrong idea. End on the reader: *Sit with:* is a plain
 statement of what the reading showed, then a question about their own life.
 
+## Anonymity is not secrecy (for Traditions 11 and 12 especially)
+
+A.A. is the opposite of secret. The Big Book is published to the world, the
+Grapevine is a worldwide journal, A.A. advertises and always has, documentaries
+about A.A. exist and are fine — Bill W.'s own anonymity was released after his
+death, for the good of A.A., which is why a film can show his name and face.
+The Tradition's ask is one narrow thing: a member speaking FOR A.A. at the
+public level (press, radio, film, and their modern equivalents) keeps the face
+hidden and uses a first name, last initial at most. Not because membership is
+shameful or hidden — because of what fame does: the member on TV becomes a
+rockstar in the rooms; members start using A.A. for profit in the media; a
+world-famous face who relapses teaches the public "I guess A.A. doesn't work";
+and a World Service office that picks which members appear is a governing body
+playing favorites, which is how a dictatorship creeps into a fellowship built
+as an upside-down pyramid — the board answers to the groups, the groups answer
+to their members, never the reverse (that inversion is the basis of the Twelve
+Concepts). Write anonymity readings from those reasons. Any framing that makes
+A.A. sound like a secret society repeats the distortion we exist to correct.
+
 ## Working with Derick
 
 Show drafts, keep his words when he rewrites (fix grammar only, say what

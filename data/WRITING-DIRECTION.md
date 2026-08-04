@@ -53,9 +53,23 @@ fine? If yes, it's wrong, no matter how good the sources are.
 Name today's practices plainly — meetings bundled into treatment invoices,
 staff paid to be the newcomer's friend, recovery-story-as-credential, billing
 codes on the free hour. Name mechanisms and practices, never a company or
-organisation. Don't overcorrect into "all money is evil": members may work any
-honest job, including in the recovery field — the breach is trading on A.A.'s
-name, not the paycheque.
+organisation.
+
+THE READINGS DEFEND THE TRADITION — they never give its exceptions light
+(Derick's ruling, Aug 2026, learned the hard way: a month built by mining the
+literature's most quotable passages came out arguing the permission side,
+because Bill's vivid writing was his defense of paid janitors — quotability
+is not importance). A reading is information on how to understand the
+Tradition, never a catalog of when it bends. If the paid-office fact must
+appear at all, it gets one blunt line — basic labor, A.A.'s own office, so the
+message stays free — and it is never a day's anchor. Edge cases, oddball
+situations, and "it's more nuanced" framing are what the manipulators feed on.
+
+Per-day procedure: before writing a day, reread the LONG FORM of the month's
+Tradition; then search the books for stories that BACK it up — never material
+that argues against its plain meaning. For extra grounding on Tradition 8,
+read it in P-43 (The Twelve Traditions Illustrated). Keep it short. No other
+structure.
 
 Avoid the word "sponsor" in new readings. It isn't in the Steps or the
 Traditions, and it's the most-used lever of manipulation in the rooms — no

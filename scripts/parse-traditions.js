@@ -114,15 +114,12 @@ if (badPair.length) {
   console.warn("Pairing warning (odd should be hypothetical, even the earned answer):", badPair.map((d) => d.key).join(", "));
 }
 
-// Five-question scheme: assert the straight rotation is intact. Day N's question
-// is ((N-1) mod 5). A month that drifts out of rotation is a defect, not a style
-// choice — the whole point is that every 5 days tells the Tradition once.
+// Five-question tags are LABELS, not law (Derick's ruling, Aug 2026). The
+// rotation was a writing scaffold, and enforcing it here turned a style into a
+// build failure — a reading's shape comes from its point, not from a slot.
+// The tag on a day only has to be a known kind (checked below); which kind a
+// day carries is an editorial choice, never a defect.
 const FIVE_Q = ["the threat", "before the tradition", "the threat today", "how a group breaks it", "how it gets captured"];
-const newSchemeDays = days.filter((d) => FIVE_Q.includes(d.kind.toLowerCase()));
-const badRotation = newSchemeDays.filter((d) => FIVE_Q[(d.day - 1) % 5] !== d.kind.toLowerCase());
-if (badRotation.length) {
-  throw new Error("Rotation broken on: " + badRotation.map((d) => `${d.key} (is "${d.kind}", expected "${FIVE_Q[(d.day - 1) % 5]}")`).join(", "));
-}
 
 // Every reading must use a known kind from ONE of the two schemes.
 const unknownKind = days.filter((d) => !OLD_SCHEME.test(d.kind) && !FIVE_Q.includes(d.kind.toLowerCase()));

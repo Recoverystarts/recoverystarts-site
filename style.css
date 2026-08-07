@@ -325,6 +325,30 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 28px rgba(45, 212, 191, 0.28);
 }
 
+/* The second header action — the Meetings Map (Derick, 2026-08-06): the teal
+   pill's violet twin, softly lit even at rest. Teal is the door to the app;
+   violet is the door to a real room. */
+.nav-cta-map {
+  background: rgba(167, 139, 250, 0.12);
+  border-color: rgba(167, 139, 250, 0.55);
+  color: #C4B5FD !important;
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.25);
+}
+.nav-cta-map:hover {
+  background: rgba(167, 139, 250, 0.22);
+  color: #DDD6FE !important;
+  box-shadow: 0 0 32px rgba(167, 139, 250, 0.42);
+}
+
+/* Seven items share the desktop row since the Meetings Map pill joined; a
+   label must never break into two lines, and the narrow desktop band packs
+   tighter instead of wrapping. */
+.nav-links > li > a { white-space: nowrap; }
+@media (min-width: 1021px) and (max-width: 1140px) {
+  .nav-links { gap: 8px; }
+  .nav-cta { padding: 0.45rem 0.75rem; }
+}
+
 /* --- Dropdowns (Daily Reflection / Daily Tradition months, Library, Program) */
 .nav-links .has-sub {
   position: relative;

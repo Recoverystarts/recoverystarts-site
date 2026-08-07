@@ -35,3 +35,4 @@ Disallow: /tests/
 Disallow: /data/
 
 Sitemap: https://recoverystarts.com/sitemap.xml
+Sitemap: https://recoverystarts.com/sitemap-meetings.xml

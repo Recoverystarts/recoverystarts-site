@@ -36,7 +36,7 @@
     <a href="/" class="nav-brand">Recovery Starts</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
     <ul class="nav-links" id="nav-menu">
-      <li><a href="https://meetings.recoverystarts.com/meetings/find/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=nav" class="nav-cta nav-cta-map">Meetings Map</a></li>
+      <li><a href="/meetings/find/" class="nav-cta nav-cta-map">Meetings Map</a></li>
       <li class="has-sub"><a href="/daily-reflection/">Daily Reflection</a><button class="sub-toggle" aria-expanded="false" aria-label="Browse Daily Reflection">▾</button>
       <ul class="sub-menu">
         <li class="sub-today"><a href="/daily-reflection/today/">Today's Reflection →</a></li>
@@ -98,12 +98,18 @@
       <div class="page-head">
         <p class="eyebrow">The rooms</p>
         <h1>Walking in is the hardest part. Here's where the rooms are.</h1>
-        <p class="standfirst">Every fellowship below is free to attend, and nobody will ask you to sign anything. Each card opens that fellowship's own meeting finder — some of those sites are clunky, but the rooms on the other side are worth it.</p>
+        <p class="standfirst">Every fellowship below is free to attend, and nobody will ask you to sign anything. The first four open our own live meeting listings — every meeting those fellowships publish, on one map. The rest open that fellowship's own finder.</p>
       </div>
 
       <section>
+        <a href="/meetings/find/" class="fade-in" style="display:flex;align-items:center;gap:14px;padding:18px 22px;margin-bottom:26px;border:1px solid rgba(45,212,191,.45);border-radius:14px;background:rgba(45,212,191,.08);text-decoration:none">
+          <span style="font-size:1.6rem" aria-hidden="true">🗺️</span>
+          <span><strong style="color:var(--accent)">Open the Meetings Map</strong><br>
+          <span style="color:var(--ink-dim);font-size:.92rem">Every A.A., N.A., C.M.A. and C.A. meeting we carry — near you, today, on one map. Works offline once saved.</span></span>
+          <span class="meeting-card-arrow" style="margin-left:auto">→</span>
+        </a>
         <div class="meetings-grid">
-          <a href="https://www.aa.org/meeting-guide-app" target="_blank" rel="noopener" class="meeting-card fade-in">
+          <a href="/meetings/aa/" class="meeting-card fade-in">
             <div class="meeting-card-icon">🔺</div>
             <div class="meeting-card-body">
               <h3>Alcoholics Anonymous (AA)</h3>
@@ -112,7 +118,7 @@
             <span class="meeting-card-arrow">→</span>
           </a>
 
-          <a href="https://na.org/meetingsearch/find-na/" target="_blank" rel="noopener" class="meeting-card fade-in">
+          <a href="/meetings/na/" class="meeting-card fade-in">
             <div class="meeting-card-icon">🌀</div>
             <div class="meeting-card-body">
               <h3>Narcotics Anonymous (NA)</h3>
@@ -121,7 +127,7 @@
             <span class="meeting-card-arrow">→</span>
           </a>
 
-          <a href="https://www.crystalmeth.org/cma-meeting-directory/" target="_blank" rel="noopener" class="meeting-card fade-in">
+          <a href="/meetings/cma/" class="meeting-card fade-in">
             <div class="meeting-card-icon">💎</div>
             <div class="meeting-card-body">
               <h3>Crystal Meth Anonymous (CMA)</h3>
@@ -130,7 +136,7 @@
             <span class="meeting-card-arrow">→</span>
           </a>
 
-          <a href="https://ca.org/meetings/" target="_blank" rel="noopener" class="meeting-card fade-in">
+          <a href="/meetings/ca/" class="meeting-card fade-in">
             <div class="meeting-card-icon">⚡</div>
             <div class="meeting-card-body">
               <h3>Cocaine Anonymous (CA)</h3>

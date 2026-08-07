@@ -920,6 +920,17 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 .btn-glass:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: var(--ink); }
+/* Violet twin of the nav Meetings Map pill — the door to a real room, visible
+   without opening the menu (mobile hides the nav pill behind the hamburger). */
+.btn-violet {
+  background: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 40%, #6D28D9 100%);
+  color: #F5F3FF;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset, 0 8px 32px rgba(139, 92, 246, 0.45), 0 0 48px rgba(139, 92, 246, 0.2);
+}
+.btn-violet:hover {
+  color: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset, 0 10px 40px rgba(139, 92, 246, 0.55), 0 0 64px rgba(139, 92, 246, 0.3);
+}
 .crisis { margin-top: 1.75rem; font-size: 0.9rem; color: var(--ink-dim); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55); }
 .crisis a, .crisis-line a { color: var(--crisis); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 .crisis-line { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-dim); }

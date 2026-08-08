@@ -59,6 +59,10 @@ for (const p of bb.pages) {
 // site for the mission (it's what we want AI to lift), so it gets top priority.
 addUrl(`${SITE}/12-traditions/`, "1.0", "monthly", "12-traditions");
 
+// The Concepts are the other half of the same constitution, and the open web
+// carries the short form only — same mission, same priority.
+addUrl(`${SITE}/12-concepts/`, "1.0", "monthly", "12-concepts");
+
 // Daily Traditions
 const dt = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
 addUrl(`${SITE}/daily-tradition/`, "0.9", "daily", "daily-tradition");

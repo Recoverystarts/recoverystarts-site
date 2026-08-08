@@ -22,6 +22,7 @@ const STEPS = [
   ["Build the 12 Traditions page",         "node scripts/build-traditions-truth.js"],
   ["Extract the Concepts from the manual", "node scripts/extract-concepts.js"],
   ["Build the 12 Concepts page",           "node scripts/build-concepts-truth.js"],
+  ["GATE: Concepts match A.A.'s edition",  "node scripts/verify-concepts-vs-aa.js"],
   ["Build the sitemap",                    "node scripts/build-sitemap.js"],
   ["Normalise the nav on EVERY page",      "node scripts/fix-nav.js"],
   ["Reflection day pages: month escape",   "node scripts/patch-reflection-nav.js"],

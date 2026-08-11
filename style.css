@@ -950,6 +950,22 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .crisis a, .crisis-line a { color: var(--crisis); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 .crisis-line { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-dim); }
 
+/* The meeting-info door (Derick, 2026-08-11). Sits directly ABOVE the 988 line,
+   and wears the teal ACTION accent while 988 keeps --crisis blue. The two lines
+   are adjacent, so they must never read as the same kind of thing: one is an
+   invitation to help, the other is a lifeline. The rule at the top of this file
+   still holds — teal is the action accent, --crisis is 988 only. */
+.hero-add-meeting { margin-top: 1.5rem; font-size: 0.9rem; color: var(--ink-dim); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55); }
+.hero-add-meeting a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+.hero-add-meeting a:hover { color: var(--accent-hover); }
+
+/* "Add a Meeting" in the header + hamburger. Teal like the homepage door so the
+   two read as one invitation, but NOT a .nav-cta pill: the header already carries
+   two pills (Meetings Map, Get the App) and a third crowds the desktop row at the
+   widths where the menu has not yet collapsed. */
+.nav-links a.nav-add-meeting { color: var(--accent); font-weight: 600; }
+.nav-links a.nav-add-meeting:hover { color: var(--accent-hover); }
+
 /* Einstein hero figure */
 .hero-figure { position: relative; justify-self: center; width: min(340px, 78vw); }
 @media (min-width: 900px) { .hero-figure { width: min(400px, 100%); justify-self: end; } }

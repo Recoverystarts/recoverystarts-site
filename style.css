@@ -931,6 +931,21 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
   color: #FFFFFF;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset, 0 10px 40px rgba(139, 92, 246, 0.55), 0 0 64px rgba(139, 92, 246, 0.3);
 }
+/* Blue twin of the violet map button — the other kind of room. Kept the same
+   shape and glow so the three hero doors read as siblings, and the colour is
+   the same blue the meeting map uses for A.A. pins and the online catalogue
+   uses for its A.A. tiles. */
+.btn-online {
+  background: linear-gradient(135deg, #7DD3FC 0%, #3B82F6 42%, #1D4ED8 100%);
+  color: #F0F9FF;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18) inset, 0 8px 32px rgba(59, 130, 246, 0.45), 0 0 48px rgba(59, 130, 246, 0.2);
+}
+.btn-online:hover {
+  color: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25) inset, 0 10px 40px rgba(59, 130, 246, 0.55), 0 0 64px rgba(59, 130, 246, 0.3);
+}
+.nav-cta-online { background: rgba(59, 130, 246, 0.16); border-color: rgba(59, 130, 246, 0.55); color: #BFDBFE !important; box-shadow: 0 0 18px rgba(59, 130, 246, 0.25); }
+.nav-cta-online:hover { background: rgba(59, 130, 246, 0.28); color: #DBEAFE !important; box-shadow: 0 0 32px rgba(59, 130, 246, 0.42); }
 .crisis { margin-top: 1.75rem; font-size: 0.9rem; color: var(--ink-dim); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55); }
 .crisis a, .crisis-line a { color: var(--crisis); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 .crisis-line { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-dim); }

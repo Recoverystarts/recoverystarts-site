@@ -7,11 +7,6 @@ Allow: /
 Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
-
-# The live search box. It generates results, it does not hold content — there is
-# nothing here to read or train on, and crawling it is the single heaviest thing
-# anyone does to this site. Every meeting page it would find is already listed
-# in the sitemap below, so nothing is lost by skipping it.
 Disallow: /meetings/find/
 
 Sitemap: https://recoverystarts.com/sitemap.xml

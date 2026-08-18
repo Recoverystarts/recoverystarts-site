@@ -7,7 +7,13 @@ Allow: /
 Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
-Disallow: /meetings/find/
+
+# /meetings/find/ is deliberately NOT disallowed.
+# It serves noindex,follow, and Google can only see a noindex on a page
+# it is allowed to fetch. Blocking it here made Search Console report it
+# under "Blocked by robots.txt" forever instead of dropping it, and the
+# ~123k meeting pages each link to it. Matches the P0.1 rule already
+# written in meeting-finder server/index.mjs: never Disallow.
 
 Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml

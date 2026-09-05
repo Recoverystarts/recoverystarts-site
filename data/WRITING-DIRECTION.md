@@ -90,6 +90,38 @@ reader: *Sit with:* is a plain statement, then a question about their own life.
 The slot names on published pages are labels for the reader, not molds for the
 writer. When a reading is fighting its shape, the shape is what's wrong.
 
+## Order of work: read the truth, then write (Sept 5, 2026 — the thing that fixed September)
+
+The same instance wrote Sept 6 twice in one day. The morning version was 330
+words with the point at the end and Derick said it was more confusing than
+the original. The afternoon version he called awesome. Nothing about ability
+changed between them. The order did.
+
+Morning: wrote from what the instance already "knew" about Tradition 9, then
+went looking for quotes to hang on it. That is how the July 28 auto-generate
+worked too, and it is why it leaned toward the internet's version — the
+training data is the distortion the Traditions were written against, so
+anything written before reading the source drifts toward it.
+
+Afternoon: read the LONG FORM of the Tradition (pp. 563–566) and the source
+pages in `recovery-einstein\historian-sources` first, pulled the exact lines
+with their page numbers, THEN chose the day's one point from what the text
+actually says, then wrote — point in sentence one, the quote already in hand,
+today's mechanism named, under 200 words. The reading defends the Tradition
+because the sources do; there is nothing to soften.
+
+So, per day: source pages open first (P-17/P-43/P-44 are now in the corpus,
+Einstein's DB, and the quote gate); point chosen from the text; draft;
+`apply-tradition-batch.js` → `parse-traditions.js --verify` →
+`audit-readings.js` (0 fabricated or it does not ship); reader test through
+Einstein's Historian prompt (`recovery-einstein\scripts\review-readings-with-
+historian.mjs` — the POINT line must come back as one plain sentence, and its
+UNCLEAR words get glossed in the same breath); Derick reads the live pages.
+Batches of five. Whole-reading rewrites, never sentence fights.
+
+"Going hard on the defensive" is not a tone problem. It is what the material
+is: the Traditions were written after the damage, by people who had lived it.
+
 ## Anonymity is not secrecy (for Traditions 11 and 12 especially)
 
 A.A. is the opposite of secret. The Big Book is published to the world, the

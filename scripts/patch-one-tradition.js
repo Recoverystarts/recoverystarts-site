@@ -60,6 +60,26 @@ replaceOnce(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${escAttr
 // JSON-LD Article description
 replaceOnce(/("@type":"Article","headline":"[^"]*","description":")(?:[^"\\]|\\.)*(")/, `$1${JSON.stringify(desc).slice(1, -1)}$2`, "ld description");
 
+// Title: if the reading was retitled, the OLD title still sits in this page's
+// <title>, og/twitter titles, <h1>, JSON-LD headline — and in the hub, the month
+// page and the neighbours' prev/next links. Old title = whatever the <h1> says now.
+const h1 = html.match(/<h1[^>]*>([^<]*)<\/h1>/);
+if (h1 && h1[1] !== esc(d.title)) {
+  const oldTitle = h1[1];
+  const dir = path.join(ROOT, "daily-tradition");
+  let touched = 0;
+  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+    const f = ent.isDirectory() ? path.join(dir, ent.name, "index.html") : (ent.name === "index.html" ? path.join(dir, ent.name) : null);
+    if (!f || !fs.existsSync(f)) continue;
+    const s = f === file ? html : fs.readFileSync(f, "utf8");
+    if (!s.includes(oldTitle)) continue;
+    const out = s.split(oldTitle).join(esc(d.title));
+    if (f === file) html = out; else fs.writeFileSync(f, out);
+    touched++;
+  }
+  console.log(`retitled "${oldTitle}" -> "${d.title}" in ${touched} file(s)`);
+}
+
 if (html === before) throw new Error("nothing changed");
 fs.writeFileSync(file, html);
 console.log("patched", file);

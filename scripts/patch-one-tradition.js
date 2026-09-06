@@ -73,7 +73,21 @@ if (h1 && h1[1] !== esc(d.title)) {
     if (!f || !fs.existsSync(f)) continue;
     const s = f === file ? html : fs.readFileSync(f, "utf8");
     if (!s.includes(oldTitle)) continue;
-    const out = s.split(oldTitle).join(esc(d.title));
+    // Only the occurrences that belong to THIS day: every place a title
+    // appears (hub JSON, month grid, prev/next links, the page's own head)
+    // carries "September 28" / "september-28" / "day":28 within ~120 chars
+    // before it. Two days can share a title in passing (Sept 28 took Sept
+    // 30's old title on 2026-09-05) — a blind global replace renamed both.
+    // (?!\d) so "September 2" does not claim "September 28".
+    const tokens = [new RegExp(`${monthCap} ${d.day}(?!\\d)`), new RegExp(`${d.month}-${d.day}/`), new RegExp(`"day":${d.day},`)];
+    let out = "", last = 0, idx;
+    while ((idx = s.indexOf(oldTitle, last)) !== -1) {
+      const ctx = s.slice(Math.max(0, idx - 120), idx);
+      out += s.slice(last, idx) + (tokens.some((t) => t.test(ctx)) ? esc(d.title) : oldTitle);
+      last = idx + oldTitle.length;
+    }
+    out += s.slice(last);
+    if (out === s) continue;
     if (f === file) html = out; else fs.writeFileSync(f, out);
     touched++;
   }

@@ -26,7 +26,7 @@
     '.pb.br{right:clamp(12px,3vw,24px);bottom:calc(clamp(12px,3vw,22px) + env(safe-area-inset-bottom))}',
     '.pb.tl{left:12px;top:calc(12px + env(safe-area-inset-top))}',
     '.pb:hover{transform:translateY(-2px)}',
-    '.pb .pb-ic{flex:none;border-radius:22%;background:#8fd3d0 center/cover no-repeat;box-shadow:0 1px 2px rgba(0,0,0,.4)}',
+    '.pb .pb-ic{display:block;flex:none;border-radius:22%;background:#8fd3d0 center/cover no-repeat;box-shadow:0 1px 2px rgba(0,0,0,.4)}',
     '.pb .pb-glyph{display:block}',
     /* A: store row */
     '.pb.card .pb-in{display:flex;align-items:center;gap:12px;background:#1b1f22;border:1px solid #2c3236;border-radius:14px;padding:10px 12px 10px 10px;box-shadow:0 10px 30px rgba(0,0,0,.5);width:min(318px,calc(100vw - 28px))}',
@@ -49,7 +49,7 @@
     '.pb.min .pb-ic{width:44px;height:44px;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.55);border:2px solid #2c5552}',
     '.pb.min .pb-mini{display:grid}',
     '.pb .pb-mini{display:none;position:absolute;right:-2px;bottom:-2px;width:18px;height:18px;border-radius:50%;background:#fff;place-items:center;box-shadow:0 1px 3px rgba(0,0,0,.4)}',
-    '.pb .pb-wrap{position:relative;display:block}',
+    '.pb .pb-wrap{position:relative;display:block;flex:none}',
     '.pb:focus-visible{outline:2px solid #e3c060;outline-offset:3px;border-radius:14px}',
     '@media (prefers-reduced-motion:reduce){.pb{transition:none}}'
   ].join('\n');

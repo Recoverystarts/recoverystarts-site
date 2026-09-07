@@ -135,5 +135,5 @@
   try { if (cta) content = new URL(cta.getAttribute('href'), location.origin).searchParams.get('utm_content') || content; } catch (e) {}
   window.PLAY_BADGE = { mode: 'card', pos: 'br', icon: '/assets/play/icon-96.png',
     utm: { source: 'recoverystarts', medium: 'site', campaign: 'play-badge', content: content } };
-  var s = document.createElement('script'); s.src = '/play-badge.js?v=2'; s.defer = true; document.head.appendChild(s);
+  var s = document.createElement('script'); s.src = '/play-badge.js?v=3'; s.defer = true; document.head.appendChild(s);
 })();

@@ -126,24 +126,14 @@
 })();
 
 
-// ===== PLAY STORE BRIDGE (2026-09-07) =====
-// The floating Einstein CTA points at the web app. On Android the native app is
-// the better door (offline book, Play billing, reviews), so route Android visitors
-// to the store and carry the page's UTM into Play's install referrer so Console
-// attributes the install to this site. Non-Android visitors are untouched.
+// ===== PLAY BADGE (2026-09-07, Derick's call: A on the site, folds to icon after first scroll) =====
+// Hides the old .einstein-cta and mounts /play-badge.js (shared with the meeting finder).
+// Android -> Play listing with install referrer; everyone else -> the web app. Same UTM either way.
 (function () {
-  var ua = navigator.userAgent || '';
-  if (!/Android/i.test(ua)) return;
   var cta = document.querySelector('.einstein-cta');
-  if (!cta) return;
   var content = 'site';
-  try {
-    var u = new URL(cta.getAttribute('href'), window.location.origin);
-    content = u.searchParams.get('utm_content') || content;
-  } catch (e) {}
-  var referrer = 'utm_source=recoverystarts&utm_medium=site&utm_campaign=floating-cta&utm_content=' + content;
-  cta.setAttribute('href', 'https://play.google.com/store/apps/details?id=org.autogrow.recoveryeinstein&referrer=' + encodeURIComponent(referrer));
-  cta.setAttribute('aria-label', 'Get the free AA Big Book app with Einstein on Google Play');
-  var small = cta.querySelector('.ec-text small');
-  if (small) small.textContent = 'Free on Google Play - the whole Big Book, offline';
+  try { if (cta) content = new URL(cta.getAttribute('href'), location.origin).searchParams.get('utm_content') || content; } catch (e) {}
+  window.PLAY_BADGE = { mode: 'card', pos: 'br', icon: '/assets/play/icon-96.png',
+    utm: { source: 'recoverystarts', medium: 'site', campaign: 'play-badge', content: content } };
+  var s = document.createElement('script'); s.src = '/play-badge.js?v=1'; s.defer = true; document.head.appendChild(s);
 })();

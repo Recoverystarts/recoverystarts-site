@@ -25,6 +25,7 @@
     '.pb{position:fixed;z-index:1200;text-decoration:none;color:#fff;font-family:Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent;transition:transform .18s,opacity .18s}',
     '.pb.br{right:clamp(12px,3vw,24px);bottom:calc(clamp(12px,3vw,22px) + env(safe-area-inset-bottom))}',
     '.pb.tl{left:12px;top:calc(12px + env(safe-area-inset-top))}',
+    '@media (min-width:900px){.pb.tl{left:auto;top:auto;right:16px;bottom:44px}}',
     '.pb:hover{transform:translateY(-2px)}',
     '.pb .pb-ic{display:block;flex:none;border-radius:22%;background:#8fd3d0 center/cover no-repeat;box-shadow:0 1px 2px rgba(0,0,0,.4)}',
     '.pb .pb-glyph{display:block}',
@@ -42,7 +43,7 @@
     '.pb.pill .pb-ic{width:28px;height:28px;border-radius:50%}',
     '.pb.pill .pb-title{font-size:13px;font-weight:500;white-space:nowrap}',
     '.pb.pill .pb-dev{font-size:11px;color:#2ec27e;margin-left:-4px;white-space:nowrap}',
-    '.pb.pill .pb-sub,.pb.pill .pb-act{display:none}',
+    '.pb.pill .pb-sub,.pb.pill .pb-act{display:none!important}',
     /* folded: icon only with a tiny Play mark */
     '.pb.min .pb-in{padding:0;background:transparent;border:0;box-shadow:none;gap:0;width:auto}',
     '.pb.min .pb-t,.pb.min .pb-act,.pb.min .pb-glyph{display:none}',

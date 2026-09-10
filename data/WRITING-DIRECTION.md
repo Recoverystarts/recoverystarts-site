@@ -113,7 +113,10 @@ because the sources do; there is nothing to soften.
 So, per day: source pages open first (P-17/P-43/P-44 are now in the corpus,
 Einstein's DB, and the quote gate); point chosen from the text; draft;
 `apply-tradition-batch.js` → `parse-traditions.js --verify` →
-`audit-readings.js` (0 fabricated or it does not ship); reader test through
+`audit-readings.js` (0 fabricated or it does not ship); `patch-one-tradition.js` per day, then
+`refresh-tradition-hub.js` (the hub keeps its own copy of every reading — the
+day pages alone are not the site; learned 09-10 when the phone showed the old
+Sept 10 and the desktop the new one); reader test through
 Einstein's Historian prompt (`recovery-einstein\scripts\review-readings-with-
 historian.mjs` — the POINT line must come back as one plain sentence, and its
 UNCLEAR words get glossed in the same breath); Derick reads the live pages.

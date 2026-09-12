@@ -137,3 +137,17 @@
     utm: { source: 'recoverystarts', medium: 'site', campaign: 'play-badge', content: content } };
   var s = document.createElement('script'); s.src = '/play-badge.js?v=4'; s.defer = true; document.head.appendChild(s);
 })();
+
+
+// ===== GA4 (2026-09-12, Derick's call: "we want the google analytics for sure") =====
+// Measurement ID G-QEHZLMSH7P — property "recoverystarts.com" under the Recovery Starts GA account. Mounted from app.js so
+// every one of the ~1,200 static pages carries it without a rebuild; the meeting finder carries the same tag from its
+// server template. Cloudflare's Web Analytics collector was found answering 503 to every beacon, hence the switch.
+(function () {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true });
+  var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
+})();

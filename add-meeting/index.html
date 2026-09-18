@@ -196,6 +196,7 @@
             <input type="email" id="your_email" name="your_email" autocomplete="email">
           </div>
 
+          <input type="hidden" id="page" name="page" value="">
           <div class="mi-hp" aria-hidden="true">
             <label for="website2">Leave this empty</label>
             <input type="text" id="website2" name="website2" tabindex="-1" autocomplete="off">
@@ -226,9 +227,19 @@
     // A no-JS submit posts the form and is redirected back here with ?sent=1,
     // so the page has to be able to report the outcome without any JS having run.
     var q = new URLSearchParams(location.search);
+    // Which listing the person came from (a "report a problem" link passes ?page=;
+    // otherwise the referrer) — so a "this meeting closed" report names the room.
+    var pg = document.getElementById('page');
+    if (pg) pg.value = q.get('page') || (document.referrer && /recoverystarts\.com\/meetings\//.test(document.referrer) ? document.referrer : '');
+    if (pg && pg.value) {
+      var mn = document.getElementById('meeting_name');
+      if (mn && !mn.value && q.get('name')) mn.value = q.get('name');
+      var st = document.getElementById('mi-status');
+      if (st) { st.textContent = 'About the listing: ' + pg.value.replace(/^https?:\/\//, '') + ' — tell us what changed (moved, ended, wrong time).'; st.className = 'mi-status show ok'; }
+    }
     if (q.get('sent')) show('ok', 'Thank you — a person will read this and add the meeting.');
     else if (q.get('error')) show('bad', q.get('error'));
-    if (q.get('sent') || q.get('error')) history.replaceState({}, '', location.pathname);
+    if (q.get('sent') || q.get('error') || q.get('page')) history.replaceState({}, '', location.pathname);
 
     function show(kind, msg) {
       s.textContent = msg;

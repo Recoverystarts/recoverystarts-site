@@ -15,6 +15,11 @@
 // submitter's own email is optional and used only to reply; nothing submitted
 // here is published anywhere automatically. A human reads every one.
 //
+// 2026-09-17: the email now carries WHICH LISTING the report is about — the
+// form's hidden `page` field (filled from ?page= on a "report a problem" link,
+// or the referrer) and the Referer header. A Sep 14 submission said "Tuesday
+// 7:30 recovery center closed 3 months ago" and nothing in it said which room.
+//
 // Env (Cloudflare Pages → Settings → Environment variables):
 //   RESEND_API_KEY   send-only Resend key
 //   MEETING_INFO_TO  destination, defaults to addict2influencer@gmail.com
@@ -56,6 +61,10 @@ export async function onRequestPost(context) {
   const contact = clean(f.group_contact);
   const notes = clean(f.notes);
   const from = clean(f.your_email);
+  // Which listing this is about: the form's hidden field, else the page the
+  // browser says it came from. Only our own listing URLs are worth printing.
+  const ours = (u) => /^https?:\/\/(www\.)?recoverystarts\.com\/meetings\//.test(u) ? u : "";
+  const page = ours(clean(f.page)) || ours(clean(request.headers.get("referer")));
 
   // The bar is deliberately low: a name, or an address, or just a link. Someone
   // typing this on a phone outside a church hall should not be made to fill in
@@ -75,6 +84,7 @@ export async function onRequestPost(context) {
   }
 
   const rows = [
+    ["About listing", page],
     ["Meeting", name],
     ["Where", where],
     ["When", when],
@@ -88,7 +98,7 @@ export async function onRequestPost(context) {
   const html =
     `<h2 style="font:600 18px system-ui">A meeting was submitted at recoverystarts.com</h2>` +
     `<table cellpadding="6" style="font:14px/1.5 system-ui;border-collapse:collapse">` +
-    rows.map(([k, v]) => `<tr><td style="vertical-align:top;color:#555"><strong>${esc(k)}</strong></td><td style="white-space:pre-wrap">${esc(v)}</td></tr>`).join("") +
+    rows.map(([k, v]) => `<tr><td style="vertical-align:top;color:#555"><strong>${esc(k)}</strong></td><td style="white-space:pre-wrap">${k === "About listing" ? `<a href="${esc(v)}">${esc(v)}</a>` : esc(v)}</td></tr>`).join("") +
     `</table>` +
     `<p style="font:13px system-ui;color:#666">Submitted ${new Date().toISOString()} · ` +
     `country ${esc(request.headers.get("cf-ipcountry") || "?")}. Nothing here is published automatically.</p>`;

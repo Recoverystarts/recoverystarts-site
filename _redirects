@@ -1,3 +1,20 @@
 # Legacy paths still indexed by Google — walk people home, not to a 404
 /services/ / 301
 /services / 301
+
+# Old (pre-rebuild) Daily Reflections addresses. Bing Webmaster Tools still shows
+# them crawled in Aug–Sep 2026 with impressions and a 404. Added 2026-09-20.
+/daily-reflections /daily-reflection/ 301
+/daily-reflections/ /daily-reflection/ 301
+/dailyreflections-january /daily-reflection/january/ 301
+/dailyreflections-february /daily-reflection/february/ 301
+/dailyreflections-march /daily-reflection/march/ 301
+/dailyreflections-april /daily-reflection/april/ 301
+/dailyreflections-may /daily-reflection/may/ 301
+/dailyreflections-june /daily-reflection/june/ 301
+/dailyreflections-july /daily-reflection/july/ 301
+/dailyreflections-august /daily-reflection/august/ 301
+/dailyreflections-september /daily-reflection/september/ 301
+/dailyreflections-october /daily-reflection/october/ 301
+/dailyreflections-november /daily-reflection/november/ 301
+/dailyreflections-december /daily-reflection/december/ 301

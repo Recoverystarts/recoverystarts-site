@@ -151,3 +151,13 @@
   gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true });
   var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
 })();
+
+
+// ===== Donate sheet (2026-09-27, Derick's ask: out of pocket, no ads, a dollar in the basket) =====
+// /donate.js is one file shared with the meeting finder (server/static/donate.js). It waits for the reader's first
+// search or 20 s, shows a small closable sheet once per 30 days (localStorage, no cookie), and adds a footer link.
+// Links + why: claude-home secrets-docs/DONATIONS.md.
+(function () {
+  window.RS_DONATE = { site: 'site' };
+  var d = document.createElement('script'); d.src = '/donate.js?v=1'; d.defer = true; document.head.appendChild(d);
+})();

@@ -8,8 +8,10 @@
  * localStorage (no cookie, nothing sent anywhere), and leaves a quiet "Donate"
  * link in the footer so nobody has to wait for the sheet again. v2 (14:4x):
  * also a "Donate" item in the nav menu and a hero button on the homepage.
+ * v3 (17:5x): the PayPal button is on by default (hosted button 77M33WUD8KTCE,
+ * "Support Recovery Starts", any amount, CAD; made by the PayPal window).
  * Config (optional) via window.RS_DONATE before this script loads:
- *   { paypal: "https://paypal.me/…", delayMs: 6000, days: 30, site: "finder"|"site" }
+ *   { paypal: "https://…" | "" to hide, delayMs: 6000, days: 30, site: "finder"|"site" }
  * Links live in claude-home secrets-docs/DONATIONS.md.
  */
 (function () {
@@ -20,7 +22,7 @@
   var cfg = window.RS_DONATE || {};
   var LINK_DOLLAR = "https://donate.stripe.com/28E6oH05y8Ip9MQ5M3bZe0f"; // US$1 × quantity
   var LINK_ANY    = "https://donate.stripe.com/00waEX5pS4s9gbegqHbZe0g"; // choose your amount
-  var LINK_PAYPAL = cfg.paypal || "";
+  var LINK_PAYPAL = cfg.paypal != null ? cfg.paypal : "https://www.paypal.com/ncp/payment/77M33WUD8KTCE"; // PayPal, any amount
   var KEY = "rs_donate_seen";
   var DAYS = cfg.days || 30;
   var DELAY = cfg.delayMs != null ? cfg.delayMs : 6000; // Derick 2026-09-27 14:41: 20 s "takes too long"
@@ -65,7 +67,7 @@
           '<a class="rsd-btn" href="' + LINK_ANY + '" target="_blank" rel="noopener" data-k="more">Give more</a>' +
           paypal +
         '</div>' +
-        '<p class="rsd-fine">Any bank card, Apple Pay or Google Pay, in your own currency. Nothing is stored here; we only remember that you closed this.</p>' +
+        '<p class="rsd-fine">Any bank card, Apple Pay, Google Pay or PayPal, in your own currency. Nothing is stored here; we only remember that you closed this.</p>' +
       '</div>';
     document.body.appendChild(wrap);
     var sheet = wrap.firstChild;

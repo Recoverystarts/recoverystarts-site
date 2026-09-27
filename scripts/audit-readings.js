@@ -45,7 +45,7 @@ const fs = require("fs");
 const path = require("path");
 
 const SRC = "data/readings-source.md";
-const HIST = "C:\\Users\\addic\\recovery-einstein\\historian-sources";
+const HIST = process.env.HISTORIAN_SOURCES || "C:\\Users\\addic\\recovery-einstein\\historian-sources";
 
 // Everything we are allowed to quote. A source we can't grep is a source we
 // can't verify — and a quotation we can't verify does not ship.

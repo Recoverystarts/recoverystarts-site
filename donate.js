@@ -3,12 +3,13 @@
  * meeting-finder (server/static/donate.js). Written 2026-09-27 (Fable 5.1, the
  * Sunday planner) at Derick's ask: out of pocket, no ads, a dollar in the basket.
  *
- * Behaviour: waits for the reader's first search (or 20 s), slides a small
+ * Behaviour: waits for the reader's first search (or 6 s), slides a small
  * closable sheet up from the bottom, remembers the close for 30 days in
  * localStorage (no cookie, nothing sent anywhere), and leaves a quiet "Donate"
- * link in the footer so nobody has to wait for the sheet again.
+ * link in the footer so nobody has to wait for the sheet again. v2 (14:4x):
+ * also a "Donate" item in the nav menu and a hero button on the homepage.
  * Config (optional) via window.RS_DONATE before this script loads:
- *   { paypal: "https://paypal.me/…", delayMs: 20000, days: 30, site: "finder"|"site" }
+ *   { paypal: "https://paypal.me/…", delayMs: 6000, days: 30, site: "finder"|"site" }
  * Links live in claude-home secrets-docs/DONATIONS.md.
  */
 (function () {
@@ -22,7 +23,7 @@
   var LINK_PAYPAL = cfg.paypal || "";
   var KEY = "rs_donate_seen";
   var DAYS = cfg.days || 30;
-  var DELAY = cfg.delayMs != null ? cfg.delayMs : 20000;
+  var DELAY = cfg.delayMs != null ? cfg.delayMs : 6000; // Derick 2026-09-27 14:41: 20 s "takes too long"
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function seen() {
@@ -46,7 +47,9 @@
     ".rsd-fine{margin:10px 0 0;font-size:.72rem;color:var(--ink-dim,var(--dim,#8e8778))}" +
     ".rsd-fine a{color:inherit}" +
     ".rsd-foot{font-size:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:.85}" +
-    "@media (min-width:720px){.rsd-wrap{justify-content:flex-end;padding:0 20px 20px}}";
+    "@media (min-width:720px){.rsd-wrap{justify-content:flex-end;padding:0 20px 20px}}" +
+    ".nav-links a.nav-donate{color:var(--accent,#2DD4BF);font-weight:600}.nav-links a.nav-donate:hover{color:var(--accent-hover,#5EEAD4)}" +
+    ".btn.rsd-hero{border-color:rgba(45,212,191,.55)}";
 
   function build() {
     var wrap = document.createElement("div");
@@ -87,8 +90,29 @@
     host.appendChild(a);
   }
 
+  function navAndHero() {
+    // Menu item (every page: the nav is one stamped header) and a hero button on the homepage,
+    // both added here so no page needs a rebuild. Derick 2026-09-27 14:41.
+    var add = document.querySelector(".nav-links a.nav-add-meeting");
+    if (add && !document.querySelector(".nav-donate")) {
+      var li = document.createElement("li");
+      li.innerHTML = '<a href="' + LINK_ANY + '" class="nav-donate" target="_blank" rel="noopener">Donate</a>';
+      li.firstChild.addEventListener("click", function(){ track("nav"); });
+      add.parentNode.insertAdjacentElement("afterend", li);
+    }
+    var hero = document.querySelector(".hero a.btn[href*='utm_content=hero'][href*='app.recoverystarts']") || document.querySelector(".hero a.btn.btn-glass");
+    if (hero && !document.querySelector(".rsd-hero")) {
+      var a = document.createElement("a");
+      a.className = "btn btn-glass rsd-hero"; a.href = LINK_ANY; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = "Donate — keep it free";
+      a.addEventListener("click", function(){ track("hero"); });
+      hero.insertAdjacentElement("afterend", a);
+    }
+  }
+
   function init() {
     var style = document.createElement("style"); style.textContent = CSS; document.head.appendChild(style);
+    navAndHero();
     footerLink();
     if (seen() || /[?&]thanks=1/.test(location.search)) return;
     var fired = false;

@@ -18,3 +18,8 @@
 /dailyreflections-october /daily-reflection/october/ 301
 /dailyreflections-november /daily-reflection/november/ 301
 /dailyreflections-december /daily-reflection/december/ 301
+
+# The AI front door (WO-AI-FRONT-DOOR, 2026-09-28): /ai/ is the readable twin of the meetings' llms.txt,
+# served by the meeting finder under /meetings/ (the worker proxies /meetings/*).
+/ai /meetings/ai/ 302
+/ai/ /meetings/ai/ 302

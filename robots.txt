@@ -15,5 +15,7 @@ Disallow: /data/
 # ~123k meeting pages each link to it. Matches the P0.1 rule already
 # written in meeting-finder server/index.mjs: never Disallow.
 
+# For AI assistants: https://recoverystarts.com/llms.txt (meetings: https://recoverystarts.com/meetings/llms.txt)
+
 Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml

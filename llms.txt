@@ -19,9 +19,31 @@
   on each day's AA Daily Reflection theme, with Big Book page citations
 - Independent project; not affiliated with Alcoholics Anonymous World Services
 
+## Finding a meeting — for AI assistants
+Asked something like "C.A. in Calgary tonight?" — two calls, no key:
+1. Find the town's slug: https://recoverystarts.com/meetings/api/cities?p=ca&q=calgary
+   Several towns can share a name (London, Ontario and London, England): pick the row
+   whose region and country match. Don't build a slug by hand.
+2. Get its meetings: https://recoverystarts.com/meetings/api/meetings?p=ca&town=calgary&day=today
+   Returns the rows the town page prints (day, start/end, name, venue, address, formats,
+   the meeting's page, a verification badge) plus `today` in the town's own time zone,
+   so "tonight" is the town's tonight, and the country's crisis line. Leave off &day= for
+   the whole week; day also takes 0-6 (0 = Sunday) or a day name.
+- p is the fellowship: aa = Alcoholics Anonymous, na = Narcotics Anonymous,
+  ca = Cocaine Anonymous, cma = Crystal Meth Anonymous.
+- Pages a person opens: https://recoverystarts.com/meetings/<p>/<town>/ (a town, by day) and
+  https://recoverystarts.com/meetings/<p>/<town>/<group>/ (one group). There is no state level:
+  /meetings/ca/calgary/, not /meetings/ca/alberta/calgary/. A wrong town answers 404 with
+  did_you_mean.
+- Cite: link the meeting's page, give its name, day and time exactly as written, and say the
+  times are local. If the person is in crisis, give the crisis line first.
+- The full door — URL grammar, every field, crisis lines by country, what "verified" means:
+  https://recoverystarts.com/meetings/llms.txt (the same as a web page: https://recoverystarts.com/ai/)
+
 ## Key URLs
 - Homepage: https://recoverystarts.com/
 - Meetings directory: https://recoverystarts.com/meetings/
+- Meetings, for AI assistants: https://recoverystarts.com/meetings/llms.txt
 - AA info: https://recoverystarts.com/aa-info/
 - Big Book — READ & SEARCH the actual pages (free, no account): https://read.recoverystarts.com/
 - Big Book — read a specific page: https://read.recoverystarts.com/bigbook/read?page=[label] (e.g. ?page=417, ?page=59, ?page=xxv)

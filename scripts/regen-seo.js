@@ -428,7 +428,7 @@ function phase2Home(opts) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const FOOTER_OLD = "No tracking, no cookies, no analytics.";
-const FOOTER_NEW = "No cookies. No personal tracking. Anonymous, cookie-free page counts only.";
+const FOOTER_NEW = "We use Google Analytics and Cloudflare Web Analytics to see which pages help people and where to improve; Google&rsquo;s sets analytics cookies. We never sell your data or post anything about you.";
 
 function utmQuery(slug) {
   return `utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=${slug}`;

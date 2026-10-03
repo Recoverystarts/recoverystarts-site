@@ -138,8 +138,8 @@ const FOOTER = `  <footer class="footer">
         <div><h4>The Big Book</h4><ul class="footer-links"><li><a href="/big-book/">Get the Big Book</a></li><li><a href="/big-book/pages/">Page by Page</a></li><li><a href="/big-book/search/">Search the Big Book</a></li><li><a href="https://www.aa.org" target="_blank" rel="noopener">aa.org</a></li></ul></div>
         <div><h4>Connect</h4><ul class="footer-links"><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Meet Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
       </div>
-      <div class="privacy-notice"><strong>Privacy:</strong> No cookies. No personal tracking. Anonymous, cookie-free page counts only. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
-      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+      <div class="privacy-notice"><strong>Privacy:</strong> We use Google Analytics and Cloudflare Web Analytics to see which pages help people and where to improve; Google&rsquo;s sets analytics cookies. We never sell your data or post anything about you. <strong>Independence:</strong> Not affiliated with any fellowship. <strong>No Medical Advice:</strong> Not a substitute for professional care.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, a project of <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>
   </footer>
   <script src="/app.js"></script>

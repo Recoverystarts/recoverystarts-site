@@ -143,7 +143,6 @@ const FOOTER = `  <footer class="footer">
     </div>
   </footer>
   <script src="/app.js"></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 </body>
 </html>`;
 
@@ -759,7 +758,6 @@ const todayHtml = `<!DOCTYPE html>
     <p>Opening today's Tradition…</p>
     <p><a href="/daily-tradition/">Daily Traditions →</a></p>
   </div></main>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 </body>
 </html>
 `;

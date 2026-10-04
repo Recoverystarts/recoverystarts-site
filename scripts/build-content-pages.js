@@ -99,7 +99,6 @@ const FOOTER = `  <footer class="footer">
   </footer>
   <script src="/app.js"></script>
 <!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9c520169a3ab453b867424ab9b3b276b"}'></script>
 <!-- End Cloudflare Web Analytics -->`;
 
 const STYLE = `  <style>

@@ -52,8 +52,9 @@ their phone at 3am feel held, not marketed to?**
 1. No funnel mechanics: exit-intent, countdowns, sticky CTA bars, urgency
    copy, A/B'd labels. One exception, Derick's call 2026-09-27: a small,
    closable, once-per-month donate sheet (`/donate.js`) that waits until the
-   reader has searched — the map is out of pocket and stays ad-free because
-   of it. It passes the 3am test by being honest and easy to close, not by
+   reader has searched — the map is out of pocket. (2026-10-06: the "ad-free"
+   wording came off at Derick's ask; ads are his call, never from treatment
+   centres.) It passes the 3am test by being honest and easy to close, not by
    being absent.
 2. No gating, ever — every reading fully free and complete.
 3. No stock photography. Imagery = the real text, the real app, the painted

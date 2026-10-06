@@ -1,7 +1,7 @@
 /* donate.js — "keep this free" sheet for recoverystarts.com + the meeting finder.
  * One file, kept identical in recoverystarts-site (/donate.js) and
  * meeting-finder (server/static/donate.js). Written 2026-09-27 (Fable 5.1, the
- * Sunday planner) at Derick's ask: out of pocket, no ads, a dollar in the basket.
+ * Sunday planner) at Derick's ask: out of pocket, a dollar in the basket.
  *
  * Behaviour: waits for the reader's first search (or 6 s), slides a small
  * closable sheet up from the bottom, remembers the close for 30 days in
@@ -60,7 +60,7 @@
     wrap.innerHTML =
       '<div class="rsd" role="dialog" aria-labelledby="rsd-h" aria-describedby="rsd-p">' +
         '<button class="rsd-x" type="button" aria-label="Close">&times;</button>' +
-        '<h3 id="rsd-h">Keep this free. No ads, ever.</h3>' +
+        '<h3 id="rsd-h">Keep this free.</h3>' +
         '<p id="rsd-p">This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.</p>' +
         '<div class="rsd-row">' +
           '<a class="rsd-btn pri" href="' + LINK_DOLLAR + '" target="_blank" rel="noopener" data-k="dollar">$1 in the basket</a>' +

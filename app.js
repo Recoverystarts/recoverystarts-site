@@ -153,11 +153,11 @@
 })();
 
 
-// ===== Donate sheet (2026-09-27, Derick's ask: out of pocket, no ads, a dollar in the basket) =====
+// ===== Donate sheet (2026-09-27, Derick's ask: out of pocket, a dollar in the basket) =====
 // /donate.js is one file shared with the meeting finder (server/static/donate.js). It waits for the reader's first
 // search or 20 s, shows a small closable sheet once per 30 days (localStorage, no cookie), and adds a footer link.
 // Links + why: claude-home secrets-docs/DONATIONS.md.
 (function () {
   window.RS_DONATE = { site: 'site' };
-  var d = document.createElement('script'); d.src = '/donate.js?v=1'; d.defer = true; document.head.appendChild(d);
+  var d = document.createElement('script'); d.src = '/donate.js?v=2'; d.defer = true; document.head.appendChild(d);
 })();

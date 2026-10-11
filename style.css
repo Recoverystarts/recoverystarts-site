@@ -349,6 +349,45 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-cta { padding: 0.45rem 0.75rem; }
 }
 
+/* v4 (2026-10-11, Derick: "the top menu more organized"): the same items in
+   three quiet groups (find a room · read · give), smaller type, one hairline
+   between groups. Daily Reflection + Daily Tradition share one dropdown. */
+.sub-group { list-style: none; }
+.sub-group-list { list-style: none; margin: 0; padding: 0; }
+.sub-group-title {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sky-gold);
+}
+@media (min-width: 1021px) {
+  .nav-links { gap: clamp(0.55rem, 1vw, 1.15rem); }
+  .nav-links a { font-size: 0.88rem; }
+  .nav-cta { padding: 0.36rem 0.85rem; font-size: 0.82rem; }
+  .nav-links li.nav-group-start {
+    margin-left: clamp(0.15rem, 0.6vw, 0.5rem);
+    padding-left: clamp(0.7rem, 1.1vw, 1.2rem);
+    border-left: 1px solid rgba(255, 255, 255, 0.13);
+  }
+  .nav-links a.nav-add-meeting,
+  .nav-links a.nav-donate { font-size: 0.82rem; }
+  .sub-menu.sub-menu-groups {
+    width: 540px;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 14px;
+    padding: 14px;
+  }
+  .sub-group { display: flex; flex-direction: column; min-width: 0; }
+  .sub-group-title { padding: 2px 10px 8px; }
+  .sub-group-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+}
+@media (max-width: 1020px) {
+  .sub-group { margin-bottom: 10px; }
+  .sub-group-title { padding: 6px 0 2px; }
+}
+
 /* --- Dropdowns (Daily Reflection / Daily Tradition months, Library, Program) */
 .nav-links .has-sub {
   position: relative;

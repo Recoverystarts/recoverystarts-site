@@ -1,0 +1,2290 @@
+{
+ "6bb165059d41": {
+  "t": "Page Not Found — Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "404.html"
+  ]
+ },
+ "2621f1b71db3": {
+  "t": "Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "52092247b825": {
+  "t": "Toggle menu",
+  "kind": "attr",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "de9d50e6b77b": {
+  "t": "<0>Meetings Map</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b0277b3e649d": {
+  "t": "<0>Online Meetings</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b5dc97e3d71b": {
+  "t": "Daily Reading",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "87b0ce4c759b": {
+  "t": "Browse Daily Reading",
+  "kind": "attr",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "dcc18f767d5d": {
+  "t": "Daily Reflection",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "55e20ee3aa90": {
+  "t": "<0>Today's Reflection →</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "e753d2e68983": {
+  "t": "<0>January</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "c3b591e606dc": {
+  "t": "<0>February</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "5389abc0dfd0": {
+  "t": "<0>March</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "887812009d56": {
+  "t": "<0>April</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "39d3315a197f": {
+  "t": "<0>May</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "99383876f101": {
+  "t": "<0>June</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "14fad67646fc": {
+  "t": "<0>July</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "96a0c320da8b": {
+  "t": "<0>August</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "3d644c6dfff2": {
+  "t": "<0>September</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "0a69d555145b": {
+  "t": "<0>October</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b807c66d936b": {
+  "t": "<0>November</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "f9416d62c8c0": {
+  "t": "<0>December</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "990b8f0ddda0": {
+  "t": "<0>All of Daily Reflection →</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "041577678ffe": {
+  "t": "Daily Tradition",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "45eb01e67efe": {
+  "t": "<0>Today's Tradition →</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "98690696c02f": {
+  "t": "January<0>Tradition 1 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "328989c348b4": {
+  "t": "February<0>Tradition 2 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "893e5909ed37": {
+  "t": "March<0>Tradition 3 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "da9178457a5e": {
+  "t": "April<0>Tradition 4 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "0a7a48a29cef": {
+  "t": "May<0>Tradition 5 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "e1d201d8bb24": {
+  "t": "June<0>Tradition 6 · coming</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "623a7de8fbdd": {
+  "t": "<0>July<1>Tradition 7</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "8a7cfdd8f188": {
+  "t": "<0>August<1>Tradition 8</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "a6938061d4b4": {
+  "t": "<0>September<1>Tradition 9</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b18d7de469fb": {
+  "t": "<0>October<1>Tradition 10</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "756a9e14d526": {
+  "t": "<0>November<1>Tradition 11</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "aa6ddf0b9995": {
+  "t": "<0>December<1>Tradition 12</1></0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "072ae2196e70": {
+  "t": "<0>All of Daily Traditions →</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "1186b24da25f": {
+  "t": "Big Book",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "51df864dbf47": {
+  "t": "Browse Big Book",
+  "kind": "attr",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "97ada6eb2b8d": {
+  "t": "<0>Search the Big Book</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "3ab271ab418c": {
+  "t": "<0>Page by Page</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "6a55849726ff": {
+  "t": "<0>Get the Big Book</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "fce180364958": {
+  "t": "The Program",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "47eda28e8ed7": {
+  "t": "Browse The Program",
+  "kind": "attr",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "aa4ce077d3ce": {
+  "t": "<0>The 12 Steps</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "d0b614eec9b1": {
+  "t": "<0>The 12 Traditions</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b27e08a2db7f": {
+  "t": "<0>The 12 Concepts</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "4621e84a06d6": {
+  "t": "<0>A.A. Questions, From the Books</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "d2c851521738": {
+  "t": "<0>AA Info</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "493e93bf10f9": {
+  "t": "<0>Find a Meeting</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "c6f2dac078c2": {
+  "t": "<0>About</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "add-meeting/index.html",
+   "download/index.html",
+   "index.html"
+  ]
+ },
+ "120f56c3b14c": {
+  "t": "<0>Add a Meeting</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "fd30942be07c": {
+  "t": "<0>Get the App</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "fd1d97f7c01c": {
+  "t": "Talk to Recovery Einstein — day or night",
+  "kind": "attr",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "81920af2c73f": {
+  "t": "<0></0> <1><2>Talk to Recovery Einstein</2><3>You're not alone — day or night</3></1>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "c5e46d394aa6": {
+  "t": "This page isn't here",
+  "kind": "html",
+  "pages": [
+   "404.html"
+  ]
+ },
+ "d6fd99f46ff7": {
+  "t": "The page you're looking for moved or never existed — but recovery resources are just a click away. You're still welcome here.",
+  "kind": "html",
+  "pages": [
+   "404.html"
+  ]
+ },
+ "0ee19fb3dc5f": {
+  "t": "<0>Home</0> <1>Find Meetings</1> <2>Talk to Recovery Einstein</2>",
+  "kind": "html",
+  "pages": [
+   "404.html"
+  ]
+ },
+ "69701572b552": {
+  "t": "An independent recovery awareness project. Not affiliated with any fellowship. Every reading here is free, complete, and always will be.",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "852b438f91ad": {
+  "t": "Read",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "fee18cbaaf10": {
+  "t": "<0>Daily Reflection</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "67a28e288021": {
+  "t": "<0>Daily Tradition</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "e3178a8f9743": {
+  "t": "<0>The Big Book, page by page</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "43f7020d23f4": {
+  "t": "<0>A.A. Questions</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "b65463cb6a42": {
+  "t": "Connect",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "12bf0fef5fd9": {
+  "t": "<0>Recovery Einstein</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "f27dae06a26b": {
+  "t": "<0>Get the App</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "e49cc38dac07": {
+  "t": "<0>Meet Derick</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "5aa5a8e8957a": {
+  "t": "<0>Claude's Lab</0>",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "8962fc3719e8": {
+  "t": "In crisis right now? Call or text <0>988</0>. You are not alone.",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "61034ced09c2": {
+  "t": "<0>Privacy:</0> We use Google Analytics and Cloudflare Web Analytics to see which pages help people and where to improve; Google&rsquo;s sets analytics cookies. We never sell your data or post anything about you. <1>Independence:</1> Not affiliated with any fellowship. <2>No Medical Advice:</2> Not a substitute for professional care.",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "8e56679bb597": {
+  "t": "&copy; 2026 RecoveryStarts.com, a project of <0>AutoGrow AI Solutions</0>. Built by <1>Addict2Influencer</1>.",
+  "kind": "html",
+  "pages": [
+   "404.html",
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html"
+  ]
+ },
+ "1f24903bda9c": {
+  "t": "AA Information — 12 Traditions & 12 Concepts | Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "a96f6140f375": {
+  "t": "Learn about Alcoholics Anonymous — the 12 Traditions (home group rules) and 12 Concepts for World Service. Essential AA knowledge for newcomers and old-timers.",
+  "kind": "attr",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "17a7513aa1b5": {
+  "t": "AA Info — 12 Traditions & 12 Concepts",
+  "kind": "attr",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "183c5159f6fc": {
+  "t": "Learn about AA — the 12 Traditions, 12 Concepts for World Service. Essential knowledge for newcomers and old-timers.",
+  "kind": "attr",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "9676da8da0f7": {
+  "t": "Recovery Starts - free recovery readings, meetings and the Big Book",
+  "kind": "attr",
+  "pages": [
+   "aa-info/index.html",
+   "about/index.html",
+   "download/index.html",
+   "index.html",
+   "meetings/index.html"
+  ]
+ },
+ "0a4470d64e9d": {
+  "t": "Skip to content",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "about/index.html",
+   "add-meeting/index.html",
+   "download/index.html",
+   "index.html"
+  ]
+ },
+ "26db3bea16f6": {
+  "t": "AA <0>Information</0>",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "c47c56f63583": {
+  "t": "The Twelve Traditions and Twelve Concepts for World Service — the framework that keeps AA alive and autonomous.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "8ff1b21ca75a": {
+  "t": "The Twelve Traditions",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "d89c0de2a001": {
+  "t": "The Traditions are AA's home group rules — the principles that protect the fellowship's unity and independence. Written by Bill W. and adopted in 1950.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "c5440356ebfa": {
+  "t": "<0>Our common welfare should come first;</0> personal recovery depends upon A.A. unity.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "95ea3eb4fba0": {
+  "t": "<0>For our group purpose there is but one ultimate authority</0> — a loving God as He may express Himself in our group conscience. Our leaders are but trusted servants; they do not govern.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "0e30b8a4b191": {
+  "t": "<0>The only requirement for A.A. membership</0> is a desire to stop drinking.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "641484d043f5": {
+  "t": "<0>Each group should be autonomous</0> except in matters affecting other groups or A.A. as a whole.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "c8d53aacc2e5": {
+  "t": "<0>Each group has but one primary purpose</0> — to carry its message to the alcoholic who still suffers.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "0e55224b8f67": {
+  "t": "<0>An A.A. group ought never endorse, finance, or lend the A.A. name</0> to any related facility or outside enterprise, lest problems of money, property, and prestige divert us from our primary purpose.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "820708f4a612": {
+  "t": "<0>Every A.A. group ought to be fully self-supporting,</0> declining outside contributions.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "091e5615ccc5": {
+  "t": "<0>Alcoholics Anonymous should remain forever nonprofessional,</0> but our service centers may employ special workers.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "4cb698cdf70e": {
+  "t": "<0>A.A., as such, ought never be organized;</0> but we may create service boards or committees directly responsible to those they serve.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "5e3353f9c9b6": {
+  "t": "<0>Alcoholics Anonymous has no opinion on outside issues;</0> hence the A.A. name ought never be drawn into public controversy.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "096b9362e4f7": {
+  "t": "<0>Our public relations policy is based on attraction rather than promotion;</0> we need always maintain personal anonymity at the level of press, radio, and films.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "26d1893a822f": {
+  "t": "<0>Anonymity is the spiritual foundation of all our traditions,</0> ever reminding us to place principles before personalities.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "d0029f9e6dd7": {
+  "t": "Twelve Concepts for World Service",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "aa-questions/oldest-aa-books/index.html"
+  ]
+ },
+ "2cf97da69a36": {
+  "t": "The Concepts describe how AA's world service structure operates — from the group conscience to the General Service Board. Written by Bill W. in 1962.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "e32af397e692": {
+  "t": "Final responsibility and ultimate authority for A.A. world services should always reside in the collective conscience of our whole Fellowship.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "12-concepts/index.html"
+  ]
+ },
+ "b084094d334e": {
+  "t": "The General Service Conference of A.A. has become, for nearly every practical purpose, the active voice and the effective conscience of our whole Society in its world affairs.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "12-concepts/index.html"
+  ]
+ },
+ "e99705658413": {
+  "t": "To insure effective leadership, we should endow each element of A.A. — the Conference, the General Service Board and its service corporations, staffs, committees and executives — with a traditional \"Right of Decision.\"",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "fc17395e8bba": {
+  "t": "At all responsible levels, we ought to maintain a traditional \"Right of Participation,\" allowing a voting representation in reasonable proportion to the responsibility that each must discharge.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "7b6164ceea73": {
+  "t": "Throughout our structure, a traditional \"Right of Appeal\" ought to prevail, so that minority opinion will be heard and personal grievances receive careful consideration.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "6e113351c5ee": {
+  "t": "The Conference recognizes that the chief initiative and active responsibility in most world service matters should be exercised by the trustee members of the Conference acting as the General Service Board.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "12-concepts/index.html"
+  ]
+ },
+ "fa8e60e92af1": {
+  "t": "The Charter and Bylaws of the General Service Board are legal instruments, empowering the trustees to manage and conduct world service affairs.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "a333fcb97375": {
+  "t": "The trustees are the principal planners and administrators of overall policy and finance.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "c7a95ff21a1f": {
+  "t": "Good service leadership at all levels is indispensable for our future functioning and safety.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "1ea61b4f0d4a": {
+  "t": "Every service responsibility should be matched by an equal service authority.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "8d73b18df62b": {
+  "t": "The trustees should always have the best possible committees, corporate service directors, executives, staffs, and consultants.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "a1c750b3e6c8": {
+  "t": "The Conference shall observe the spirit of A.A. tradition, taking great care that it never becomes the seat of perilous wealth or power.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "3766e9ad3169": {
+  "t": "Go Deeper with Recovery Einstein",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "c3ff73cd754f": {
+  "t": "Ask Einstein about any Tradition, Concept, or Big Book passage. Four AI modes built on strict AA doctrine.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "92fe72f22a84": {
+  "t": "<0>Try Recovery Einstein →</0> <1>Visit aa.org</1>",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "08b99f41b372": {
+  "t": "<0>New each day:</0> Recovery Einstein shares a Big Book perspective on every day&rsquo;s AA Daily Reflection theme &mdash; with page references and a question to sit with. <1>Read Einstein&rsquo;s daily Big Book perspective &rarr;</1>",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html"
+  ]
+ },
+ "a0f1140eab1c": {
+  "t": "About Recovery Starts — Built in Recovery, For Recovery",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "20413800579c": {
+  "t": "Recovery Starts was built by Derick — a recovery advocate with 3+ years sober who got clean on the streets of Red Deer. Not corporate wellness. Real recovery.",
+  "kind": "attr",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "a751a6e3ea8b": {
+  "t": "About Recovery Starts — Built in Recovery",
+  "kind": "attr",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "f3d8adf1ad46": {
+  "t": "Built by Derick — a recovery advocate with 3+ years sober who got clean on the streets. Not corporate wellness. Real recovery.",
+  "kind": "attr",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "6d1c2b26ea10": {
+  "t": "<0>About</0>",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "c60ebb016a0e": {
+  "t": "Built in <0>Recovery</0>",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "374110cc8f70": {
+  "t": "Not by a corporation. Not by a wellness startup. By someone who lived it.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "7a5ee4290bc9": {
+  "t": "The Story",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "7d915976a042": {
+  "t": "Recovery Starts was built by Derick — a recovery advocate who got clean on the streets of Red Deer, Alberta — carrying his first 103 days sober with nothing but the clothes on his back and the Big Book in his hands.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "e74d40fbed9f": {
+  "t": "Today, Derick has 3+ years of continuous sobriety, stable employment as a pipelayer in Alberta's construction industry, a vehicle, and is legally driving for the first time in his life. He built Recovery Einstein because the tools he wished existed during his early recovery didn't — and the ones that did were paywalled by treatment centers profiting from people's desperation.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "a0db5ec392be": {
+  "t": "This project exists because recovery should be free, accessible, and grounded in the actual program — not watered-down therapy-speak designed to sell a $30,000 treatment stay.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "f2b146b42ea1": {
+  "t": "The Mission",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "9380579c1abe": {
+  "t": "Recovery Einstein is an AI companion grounded in the complete Big Book, page references and all. It doesn't replace sponsors, meetings, or fellowship — it supplements them. When you're at 2 AM staring at the ceiling, when you need a passage but can't remember which chapter, when you want to understand a concept deeper — Einstein is there.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "0271f89e838d": {
+  "t": "The meeting directory connects you to 9 fellowships covering alcohol, drugs, gambling, sex addiction, and more. Every single one is free. Every single one is anonymous. We don't gatekeep recovery behind a paywall or a waiting list.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "7fc451afdcf2": {
+  "t": "<0>Addict2Influencer</0> is the content arm — daily recovery reflections, AA commentary, and real talk about addiction across YouTube, Instagram, TikTok, X, and Facebook. Including the Facebook Lives exposing corruption in Alberta's addiction and homeless sector.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "77d802010a94": {
+  "t": "Years Sober",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "98143169a00f": {
+  "t": "Big Book Pages in Einstein",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "9d9c8ad39444": {
+  "t": "Fellowships Listed",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "5876eca36e9b": {
+  "t": "Follow the journey. Ask questions. Get involved.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "aaf5c4a25a8d": {
+  "t": "<0>Meet Derick</0> <1>Email Us</1> <2>YouTube</2>",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "83613970d49d": {
+  "t": "Recovery Starts also publishes a <0>Daily Reflection</0> &mdash; 366 days of Recovery Einstein&rsquo;s original Big Book perspective on each day&rsquo;s AA theme, free and open to all.",
+  "kind": "html",
+  "pages": [
+   "about/index.html"
+  ]
+ },
+ "b7d7a47baff4": {
+  "t": "Leave the Meeting Info — Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "c24c4eb3e8de": {
+  "t": "Know a meeting that is not on the map? Tell us here — a few boxes, a link, or an email. A person reads every one.",
+  "kind": "attr",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "77338132a483": {
+  "t": "Know a meeting that is not on the map? Tell us here. A person reads every one.",
+  "kind": "attr",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "39c65f659d22": {
+  "t": "Leave the meeting info here",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "d05b72e01f0c": {
+  "t": "The map is built from what fellowships publish online &mdash; so the meetings hardest to find are usually the ones with no website at all. That is backwards from who needs them most. If you know a room that is missing, or one of ours that has moved or closed, tell us here. <0>A person reads every one.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "0458e1b66caf": {
+  "t": "<0>Fill in the boxes</0><1>Whatever you know. One line is plenty &mdash; we will do the rest.</1>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "c8d361b008e8": {
+  "t": "<0>Or just leave a link</0><1>A group page, a district schedule, even a Facebook post.</1>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "34ae48661d47": {
+  "t": "<0>Or email it</0><1><2>addict2influencer@gmail.com</2> &mdash; a photo of a schedule works too.</1>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "2a1df2ac570b": {
+  "t": "<0>Please keep it to the meeting, not the member.</0> Give the group&rsquo;s <1>published</1> contact if it has one &mdash; a hotline or a group email. Please don&rsquo;t send anyone&rsquo;s full name or personal phone number, including your own sponsor&rsquo;s. Anonymity is the point, and this map is public.",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "8fda8b39c5ec": {
+  "t": "Meeting or group name <0>If you know it. &ldquo;The Tuesday night one at the Legion&rdquo; is fine too.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "3b7949409551": {
+  "t": "Where does it meet? <0>Building name and street, or just the town.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "8bf604c0ddeb": {
+  "t": "Day and time <0>e.g. &ldquo;Tuesdays 7:00 pm&rdquo;. List a few if the group meets more than once.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "8832bb957391": {
+  "t": "Which fellowship?",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "8a911e488b6c": {
+  "t": "Not sure / other",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "76549fa02626": {
+  "t": "AA — Alcoholics Anonymous",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "ec9801da69fd": {
+  "t": "NA — Narcotics Anonymous",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "cb416f9dac80": {
+  "t": "CA — Cocaine Anonymous",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "576f57335e0e": {
+  "t": "CMA — Crystal Meth Anonymous",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "eb32836ef669": {
+  "t": "A link, if there is one <0>Group page, district schedule, or a post with the details.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "a9a13761cc52": {
+  "t": "https://",
+  "kind": "attr",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "230b8b596b21": {
+  "t": "The group&rsquo;s published contact <0>A hotline or group email that is already public. Never a member&rsquo;s personal number.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "c61d5bb10379": {
+  "t": "Anything else <0>Wheelchair access, which door, &ldquo;closed meeting&rdquo;, or that one of ours has closed or moved.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "11ca5d55d198": {
+  "t": "Your email &mdash; optional <0>Only so we can ask a follow-up question. Never published, never added to a list.</0>",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "8842e5b44771": {
+  "t": "Leave this empty",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "a48ffd972b5a": {
+  "t": "Send the meeting info",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "25dbff01e26f": {
+  "t": "or look at the map first",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "be655008940b": {
+  "t": "Nothing you send is published automatically. Meetings go on the map only after a human has checked them, and a room with no findable location stays off it rather than sending someone to a door that isn&rsquo;t there.",
+  "kind": "html",
+  "pages": [
+   "add-meeting/index.html"
+  ]
+ },
+ "1e1164afcbd0": {
+  "t": "Download Recovery Einstein — AI Big Book Companion App",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "3d33c26b8603": {
+  "t": "Download Recovery Einstein — an AI-powered AA Big Book companion with 4 Einstein modes, full text search, voice conversations, and daily reflections. Free tier available.",
+  "kind": "attr",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "9032806b082d": {
+  "t": "Download Recovery Einstein — AI Big Book Companion",
+  "kind": "attr",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "dcffdbd164c1": {
+  "t": "AI-powered AA Big Book companion with 4 personality modes. Built by someone in recovery.",
+  "kind": "attr",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "fced51791764": {
+  "t": "✦ Works in any browser",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "d472b5bab8c7": {
+  "t": "Meet <0>Recovery Einstein</0>",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "6258758e52c2": {
+  "t": "An AI companion that knows the Big Book cover to cover. Four Einstein personality modes. Built by someone who got sober on the streets — not in a boardroom.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "d398d878bab1": {
+  "t": "<0>Open Web App →</0>",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "4353f53f0d8c": {
+  "t": "Works in any browser. Android app coming to Google Play.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "51c7e3e7c64d": {
+  "t": "Choose Your Path",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "aed9420d0f95": {
+  "t": "Start free. Upgrade when you're ready. No pressure, no tricks.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "75f527181b57": {
+  "t": "Free",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "0f175b4e6eeb": {
+  "t": "Full Big Book reader — the complete text",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "22526edc4e47": {
+  "t": "Search across the entire text",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "7c619c486275": {
+  "t": "Daily reflections",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "9a89ce08a71e": {
+  "t": "No AI chat access",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "ec8c2d85d7b9": {
+  "t": "Start Reading",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "f0b57cd878df": {
+  "t": "Seeker",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "2b2c0ea66951": {
+  "t": "$2.99 <0>/month</0>",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "b6017dd40013": {
+  "t": "Everything in Free",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "db55a7469a4e": {
+  "t": "20 AI messages per day",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "26b4b4352078": {
+  "t": "Big Book Einstein mode",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "f0f2278e1f76": {
+  "t": "Step work conversations",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "e5efb0512509": {
+  "t": "Email support",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "68c9b7647aba": {
+  "t": "Start Seeking",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "66d0c5e6b170": {
+  "t": "Pro",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "554cdaa4edec": {
+  "t": "$7.99 <0>/month</0>",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "fbc40a61be6c": {
+  "t": "Everything in Seeker",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "d2520a462670": {
+  "t": "50 AI messages per day",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "af8a8a431334": {
+  "t": "All 4 Einstein modes",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "d32a7861c50b": {
+  "t": "Voice conversations",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "0c57cb3a4d81": {
+  "t": "Step 12 war-room partner",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "faf0819dfc1d": {
+  "t": "Sponsor Teacher mode",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "2b4a714a4eb5": {
+  "t": "AA Historian mode",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "17817626b1fc": {
+  "t": "Go Pro",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "6c875e786d4e": {
+  "t": "Four Einstein Modes",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "deb417dc569d": {
+  "t": "Each mode is purpose-built for a different stage of your recovery journey.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "52ef4e57d32b": {
+  "t": "Big Book Mode",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "8e3b867cfdda": {
+  "t": "Your study companion. Ask questions about the Big Book text, get chapter references, understand passages in context. Grounded in the actual text — no paraphrasing.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "b6cb11e60be1": {
+  "t": "Step 12 Mode",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "6067ce6178f6": {
+  "t": "War-room partner for Twelfth Step work — carrying the message to someone who still suffers. No hedging, no therapy-speak. Uses the Chapter 7–11 toolkit, and always points back to the rooms.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "ce6b47b0630f": {
+  "t": "Sponsor Teacher",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "70c7169ae6fd": {
+  "t": "Like sitting down with someone who's worked all 12 steps. Patient guidance through the process, not a lecture — a conversation with accountability.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "8af1ef0bc905": {
+  "t": "AA Historian",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "2921e2a3e057": {
+  "t": "The full history — Bill W., Dr. Bob, Akron, the Oxford Group, the Big Book's writing, and AA's evolution. Context that makes the program come alive.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "4b6d6a30150a": {
+  "t": "Important",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "6c4e5e94d345": {
+  "t": "Recovery Einstein is a study and reflection tool — not a medical device, therapist, or sponsor replacement. It does not provide medical advice or crisis intervention. If you're in crisis, please call 988 (Suicide & Crisis Lifeline) or go to your nearest emergency room. This app is not affiliated with Alcoholics Anonymous World Services.",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "a20243eefed8": {
+  "t": "Recovery Starts — Free Recovery Meetings, Resources & Recovery Einstein AI",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b945199b9df9": {
+  "t": "However last night went, this is a new day. Free daily readings, the Big Book page by page, meeting directories for 9 fellowships, and Recovery Einstein — an AI Big Book companion, any hour you need one.",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "906305458d2b": {
+  "t": "Recovery Starts — Free Recovery Readings, Meetings & Recovery Einstein AI",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "d622b9ebb89a": {
+  "t": "However last night went, this is a new day. Free daily readings, the Big Book page by page, and Recovery Einstein — an AI Big Book companion.",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "fd4615ba2bbe": {
+  "t": "<0></0> Free · No sign-up · Night or day",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "79de0e6fed7c": {
+  "t": "However last night went,<0/> <1>this is a new day.</1>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "9d91af84d9f0": {
+  "t": "Free daily readings, the Big Book page by page, real meetings, and a companion who knows the whole book — any hour you need one.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "bb8608ddb151": {
+  "t": "<0>Any Meeting, Anywhere</0> <1>Online Meetings, Any Hour</1> <2>Big Book Search Engine</2> <3>Talk to Recovery Einstein</3>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "ddca034f53fb": {
+  "t": "Know a meeting we&rsquo;re missing? <0>Leave the meeting info here</0>.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "129380e12be2": {
+  "t": "Recovery Einstein — calm guide with a glowing book",
+  "kind": "attr",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c000093551b4": {
+  "t": "<0>Recovery Einstein</0> <1>Your guide in the book</1>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "00c220492610": {
+  "t": "See it once",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c15afb9319d2": {
+  "t": "How Recovery Einstein works",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "05e2e179b1e9": {
+  "t": "A short walkthrough of the real app — watch it work before you sign up.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "dc167ffb2b48": {
+  "t": "Start where you are",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "f41cb475d11f": {
+  "t": "Four doors. Walk through any of them.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1b7995858fe8": {
+  "t": "AA Info",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "0b70417fcad6": {
+  "t": "Plain answers when you're not sure where to begin.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "5d3be01d42f4": {
+  "t": "Enter →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b23a193872fc": {
+  "t": "Meetings",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "3fd2c0ad4691": {
+  "t": "Real rooms across nine fellowships. Walking in is the hardest part.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "ab027ad27a96": {
+  "t": "Find a room →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "8084ae3617d6": {
+  "t": "12 Steps",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "244ed5e02902": {
+  "t": "Step by step, with the book beside you.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "3578e49a3b3f": {
+  "t": "Begin →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1895bd97c892": {
+  "t": "A reflection for this morning. The mornings add up.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "2bbe455cbb81": {
+  "t": "Read today →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "3f38db95b469": {
+  "t": "A reading a day",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "daily-tradition/index.html"
+  ]
+ },
+ "bc93ca41ad67": {
+  "t": "The mornings add up.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e87a4b4328c3": {
+  "t": "<0>Daily Reflection</0> <1>Today</1>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "901beb015f79": {
+  "t": "This morning's page",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b9bbb494f52d": {
+  "t": "Recovery Einstein's Big Book perspective on the day's theme — page cites and all. Free. Always.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "eecf50b000cf": {
+  "t": "Read today's reflection →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "37d0cfb48ac2": {
+  "t": "<0>Daily Tradition</0> <1>This month</1>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "abffc04dc051": {
+  "t": "The Tradition, held to the light",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "628f18e9d3d0": {
+  "t": "One Tradition a month, one reading a day — for groups, sponsors, and anyone learning how we stay together.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7d150f562ebf": {
+  "t": "Read today's tradition →",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "a6194977cdcd": {
+  "t": "The library",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c885c24a4331": {
+  "t": "Read and search the Big Book — free.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "70dfba52bfb6": {
+  "t": "The app's own reader and search, open to everyone. No agreement wall. No account. When you're ready to <0>talk</0>, that's the app.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "94c60326f73f": {
+  "t": "<0>Read &amp; search free</0> <1>Page-by-page library</1>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "96327e987d94": {
+  "t": "<0></0><1></1><2></2> <3>Alcoholics Anonymous · 4th Ed.</3>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7ed24aa5bff7": {
+  "t": "p. 417",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "1b08a63f6559": {
+  "t": "And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation — some fact of my life — unacceptable to me…",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "e2fc052eaec8": {
+  "t": "The companion",
+  "kind": "html",
+  "pages": [
+   "index.html",
+   "big-book/index.html"
+  ]
+ },
+ "fe1a0f307d01": {
+  "t": "A friend who knows the whole book.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "4843fa24e684": {
+  "t": "Whenever you're ready to talk it through, Einstein is here — day or night. The free reader stays on this site. AI chat lives on the app (Seeker &amp; Pro). Honest pricing. No \"free chat\" bait.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "eeda671cf598": {
+  "t": "Talk to Recovery Einstein",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "d1539935a7cb": {
+  "t": "<0>In crisis?</0> Call or text <1>988</1> — free, 24/7, confidential. You are not alone.",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7068b718522e": {
+  "t": "Find Recovery Meetings — AA, NA, CMA, GA & More | Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "d36b2a0a86ff": {
+  "t": "Free recovery meeting directory for AA, NA, CMA, CA, GA, SAA, Recovery Dharma, SMART Recovery, and Celebrate Recovery. Find local or online meetings today.",
+  "kind": "attr",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "2dfd52ca25da": {
+  "t": "Find Recovery Meetings — 9 Fellowships | Recovery Starts",
+  "kind": "attr",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "7f8ce74fbf30": {
+  "t": "Free meeting directory for AA, NA, CMA, CA, GA, SAA, Recovery Dharma, SMART Recovery, and Celebrate Recovery.",
+  "kind": "attr",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "449170234744": {
+  "t": "The rooms",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "205fed1911dc": {
+  "t": "Walking in is the hardest part. Here's where the rooms are.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "ccaf6385fe87": {
+  "t": "Every fellowship below is free to attend, and nobody will ask you to sign anything. The first four open our own live meeting listings — every meeting those fellowships publish, on one map. The rest open that fellowship's own finder.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "1fdc3964f059": {
+  "t": "<0>🗺️</0> <1><2>Open the Meetings Map</2><3/> <4>Every A.A., N.A., C.M.A. and C.A. meeting we carry — near you, today, on one map. Works offline once saved.</4></1> <5>→</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "93356144ff0c": {
+  "t": "<0>💻</0> <1><2>Online meetings — in your time zone</2><3/> <4>29,000+ A.A., N.A., C.A. and C.M.A. rooms you can join from anywhere, sorted by what starts next. No map, no travel, no account.</4></1> <5>→</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "d8c73b37ce71": {
+  "t": "Alcoholics Anonymous (AA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "e2b37d35d487": {
+  "t": "Founded 1935 in Akron, Ohio by Bill W. and Dr. Bob. The original 12-step mutual-aid fellowship for anyone with a desire to stop drinking. Peer support, anonymity, sponsorship, and the Big Book. Over 2 million members in 180+ countries.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "e558eac7fb84": {
+  "t": "Narcotics Anonymous (NA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "5a87f94db7f0": {
+  "t": "Founded 1953. A 12-step fellowship for people recovering from drug addiction — any substance, any compulsion. Open and closed meetings worldwide with peer sharing and sponsor relationships.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "e961fc6ce352": {
+  "t": "Crystal Meth Anonymous (CMA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "083b8db255b1": {
+  "t": "Founded 1994. 12-step fellowship focused specifically on crystal methamphetamine recovery. Promotes total abstinence and connects those with a shared experience of meth addiction. Specialized focus helps members feel understood.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "8a2d5b19bc02": {
+  "t": "Cocaine Anonymous (CA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "799ad000ed08": {
+  "t": "Started November 18, 1982 in Los Angeles. A 12-step program modeled after AA for anyone seeking recovery from cocaine and other mind-altering substances. Focused peer support for stimulant-related addiction.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "9fcf85510c87": {
+  "t": "Gamblers Anonymous (GA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "719ee9751d38": {
+  "t": "Founded 1957 in Los Angeles by members of AA. A 12-step mutual-aid fellowship for compulsive gambling. Membership requires only a desire to stop gambling. Free, no affiliation — peer support and a structured recovery path.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "42cffa30243f": {
+  "t": "Sex Addicts Anonymous (SAA)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "20e02267f6dd": {
+  "t": "Founded 1977 in Minneapolis. A 12-step fellowship for individuals struggling with compulsive sexual behaviors. Grounded in AA principles with confidential peer-led meetings and structured recovery support.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "f2e29fd6deb3": {
+  "t": "Recovery Dharma (RD)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "2fb2853a11e4": {
+  "t": "Established 2019. Buddhist-inspired, peer-led recovery using mindfulness, meditation, and Dharma principles. Open to anyone — substances or process addictions. Compassionate, non-dogmatic framework rooted in self-awareness.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "fe402f251150": {
+  "t": "SMART Recovery",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "34a0bb58b569": {
+  "t": "Self-Management and Recovery Training. Secular, evidence-based alternative using CBT, REBT, and motivational tools. Structured workshops emphasizing self-empowerment and choice. Open to all forms of addiction.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "02d7d360df11": {
+  "t": "Celebrate Recovery (CR)",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "250693bb3337": {
+  "t": "Christ-centered, 12-step recovery program for anyone struggling with hurt, pain, or addiction of any kind. Safe, supportive community finding freedom, healing, and hope through spiritual growth and practical steps.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "d5ef98300876": {
+  "t": "Need help right now?",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "8ffd496ed6d5": {
+  "t": "You don't have to face it alone.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "a05fd124808c": {
+  "t": "<0>988 Crisis Lifeline</0> <1>Find AA near you</1>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ }
+}

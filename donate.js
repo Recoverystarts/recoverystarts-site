@@ -116,14 +116,10 @@
     var style = document.createElement("style"); style.textContent = CSS; document.head.appendChild(style);
     navAndHero();
     footerLink();
-    if (seen() || /[?&]thanks=1/.test(location.search)) return;
-    var fired = false;
-    function go() { if (fired) return; fired = true; setTimeout(build, 1200); }
-    // First search, or the timer — whichever comes first. The reader finds the meeting before we ask.
-    document.addEventListener("submit", go, true);
-    document.addEventListener("click", function (e) { if (e.target.closest && e.target.closest("#searchhere, #searchrow, button[type=submit], .search, [data-search]")) go(); }, true);
-    document.addEventListener("input", function (e) { if (e.target.closest && e.target.closest("#searchrow, input[type=search], .search")) go(); }, true);
-    setTimeout(go, DELAY);
+    // v4 (2026-10-11): the pop-up sheet is retired. Derick: "lets get ride of
+    // that donate popup now that we have a button on the main page." The menu
+    // item, the homepage button and the footer link stay. build() is kept
+    // unused so the sheet can come back with one line if he ever wants it.
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

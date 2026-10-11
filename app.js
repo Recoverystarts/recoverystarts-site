@@ -159,5 +159,5 @@
 // Links + why: claude-home secrets-docs/DONATIONS.md.
 (function () {
   window.RS_DONATE = { site: 'site' };
-  var d = document.createElement('script'); d.src = '/donate.js?v=2'; d.defer = true; document.head.appendChild(d);
+  var d = document.createElement('script'); d.src = '/donate.js?v=3'; d.defer = true; document.head.appendChild(d);
 })();

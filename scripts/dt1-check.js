@@ -6,13 +6,16 @@
  *
  *   HISTORIAN_SOURCES=~/hist node scripts/dt1-check.js data/dt1/D-jan1.md [--pages]
  *
- * Checks: the block format, the day range for the file's line, the five-kind
- * rotation, 180–230 words, "Test it tonight:", the Long Form named with its page,
+ * Problems (exit 1): the block format, the day range for the file's line, a known
+ * kind, a body of 120–260 words, the Long Form named with its page,
  * the Sit with question, a title nobody else has, the sources Derick allows (no
  * 12&12, no first edition, nothing outside the wave's three), and the quote gate:
  * every quotation of 25+ characters must be in the Big Book (4th ed), A.A. Comes
  * of Age or P-17, character for character. A quote that names a Big Book or
  * P-17 page right before it must be on that page.
+ * Notes (no exit): a day off the five-kind rotation, a body outside 180–230
+ * words, no "Test it tonight:". The shape is direction, not law
+ * (WRITING-DIRECTION.md; parse-traditions.js on the kinds).
  *
  * --pages also writes preview pages to daily-tradition/<month>-<day>/ (throw
  * them away afterwards: git checkout -- . && git clean -fd daily-tradition/).
@@ -117,14 +120,19 @@ for (const d of days) {
   if (!R.MONTH_TRADITION[d.month] || R.MONTH_TRADITION[d.month] > 6) P(where, "month must be January–June");
   if (d.day < 1 || d.day > (R.DAYS_IN[d.month] || 31)) P(where, "no such day");
   const kind = R.KINDS[(d.day - 1) % 5];
-  if (d.kind !== kind) P(where, `kind must be "${kind}" (day ${d.day}: (n−1) mod 5 = ${(d.day - 1) % 5}), not "${d.kind}"`);
+  // The five kinds are LABELS, not law (Derick, Aug 2026 — parse-traditions.js): a known kind is required,
+  // the rotation is the spec's default and only a note when a day departs from it.
+  if (!R.KINDS.includes(d.kind)) P(where, `kind "${d.kind}" isn't one of: ${R.KINDS.join(" · ")}`);
+  else if (d.kind !== kind) warn.push(`${where}: the rotation puts "${kind}" here, not "${d.kind}" — fine if the reading's point needs it; say why in your status file`);
   const rest = d.rest.filter((l) => l.trim());
   if (rest.length !== 3 || !rest[1].startsWith("*Sit with:* ") || !rest[2].startsWith("*Grounded in:* ") || d.rest[0] !== rest[0])
     P(where, "after the heading: exactly three lines — the body (one line), *Sit with:*, *Grounded in:*");
   const words = d.body.split(/\s+/).filter(Boolean).length;
-  if (words < 180 || words > 230) P(where, `body is ${words} words; 180–230`);
-  if (!/Test it tonight:/.test(d.body)) P(where, `body doesn't end on "Test it tonight:" (SPEC §3.7)`);
-  else if (d.body.lastIndexOf("Test it tonight:") < d.body.length * 0.6) P(where, `"Test it tonight:" should be the reading's last move`);
+  // Shape is direction, not law (WRITING-DIRECTION.md): hard limits only where a reading stops being one.
+  if (words < 120 || words > 260) P(where, `body is ${words} words — that's not one reading (aim 180–230)`);
+  else if (words < 180 || words > 230) warn.push(`${where}: ${words} words (the spec aims for 180–230)`);
+  if (!/Test it tonight:/.test(d.body)) warn.push(`${where}: no "Test it tonight:" (SPEC §3.7) — fine only if the ending does that job another way`);
+  else if (d.body.lastIndexOf("Test it tonight:") < d.body.length * 0.6) warn.push(`${where}: "Test it tonight:" usually comes last`);
   if (!/\?$/.test(d.sitWith.trim())) P(where, "Sit with must end on a question");
   if ((d.sitWith.match(/[.!]/g) || []).length === 0) P(where, "Sit with: a plain statement first, then the question");
   if (!/\.$/.test(d.groundedIn.trim())) P(where, "Grounded in ends with a period");

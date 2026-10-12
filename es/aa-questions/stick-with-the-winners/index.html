@@ -56,6 +56,7 @@
   <link rel="canonical" href="https://recoverystarts.com/es/aa-questions/stick-with-the-winners/">
   <link rel="alternate" hreflang="en" href="https://recoverystarts.com/aa-questions/stick-with-the-winners/">
   <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/aa-questions/stick-with-the-winners/">
+  <link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/aa-questions/stick-with-the-winners/">
   <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/aa-questions/stick-with-the-winners/">
 <style id="rs-globe-css">
 .rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
@@ -73,11 +74,20 @@
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
+   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
+   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+@media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+   this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
+.rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
+.rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
+.rs-offer button{background:none;border:0;color:inherit;font-size:22px;line-height:1;min-width:36px;min-height:36px;cursor:pointer}
 </style>
 </head>
 <body>
@@ -145,7 +155,7 @@
       <li class="nav-group-start nav-util"><a href="/es/add-meeting/" class="nav-add-meeting">Agregar reunión</a></li>
       <li class="nav-app"><a href="/es/download/" class="nav-cta">La app</a></li>
     </ul>
-    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="es">✓ Español</span><a href="/aa-questions/stick-with-the-winners/" data-hl="en" hreflang="en" lang="en">English</a></div></details>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="es">✓ Español</span><a href="/aa-questions/stick-with-the-winners/" data-hl="en" hreflang="en" lang="en">English</a><a href="/pt/aa-questions/stick-with-the-winners/" data-hl="pt" hreflang="pt-BR" lang="pt-BR">Português</a></div><script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script></details>
   </div></nav>
   <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=aa-questions-stick-with-the-winners" target="_blank" rel="noopener" aria-label="Habla con Recovery Einstein — de día o de noche">
     <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Habla con Recovery Einstein</strong><small>No estás solo — de día o de noche</small></span>
@@ -226,5 +236,12 @@
   <script src="/app.js?v=b267d333f8"></script>
 <script>window.RS_T={"p":{"Donate":"Donar","Donate — keep it free":"Donar — mantenlo gratis","Keep this free.":"Mantenlo gratis.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Este mapa lo construye y lo paga una sola persona, de su bolsillo. Cada país nuevo cuesta más mantenerlo. Si te ayudó a encontrar una sala, un dólar en la canasta lo mantiene gratis para la próxima persona.","$1 in the basket":"$1 en la canasta","Give more":"Dar más","Close":"Cerrar","Support Recovery Starts":"Apoya a Recovery Starts","Big Book app":"App del Libro Grande","Open web app":"Abrir la app web","Free · also on Google Play":"Gratis · también en Google Play","Install":"Instalar","In-app purchases · Free":"Compras dentro de la app · Gratis","Get AA Big Book Search + AI Guide on Google Play":"Consigue AA Big Book Search + AI Guide en Google Play","Open AA Big Book Search + AI Guide, the free web app":"Abre AA Big Book Search + AI Guide, la app web gratis"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
 
-<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);</script></body>
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl],.rs-offer a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);
+(function(){try{if(localStorage.getItem('rs_lang_offer')||localStorage.getItem('rs_hl'))return}catch(e){return}if(/(?:^|; )rs_hl=/.test(document.cookie))return;
+var cur=(document.documentElement.lang||'en').toLowerCase().split('-')[0],want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(function(x){return String(x).toLowerCase().split('-')[0]});
+if(!want[0]||want[0]===cur)return;var T={"en":["This page is also in English.","View in English"],"es":["Esta página también está en español.","Ver en español"],"pt":["Esta página também está em português.","Ver em português"]},pick=null;document.querySelectorAll('.rs-globe a[data-hl]').forEach(function(a){var c=(a.getAttribute('data-hl')||'').split('-')[0];if(!pick&&T[c]&&want.indexOf(c)>-1)pick=a});if(!pick)return;
+var c=pick.getAttribute('data-hl').split('-')[0],bar=document.createElement('div');bar.className='rs-offer';bar.lang=pick.getAttribute('lang')||c;
+var s=document.createElement('span');s.textContent=T[c][0];var a=document.createElement('a');a.href=pick.getAttribute('href');a.textContent=T[c][1];a.setAttribute('data-hl',pick.getAttribute('data-hl'));
+var x=document.createElement('button');x.type='button';x.setAttribute('aria-label','×');x.textContent='×';function seen(){try{localStorage.setItem('rs_lang_offer','1')}catch(e){}}
+a.addEventListener('click',seen);x.addEventListener('click',function(){seen();bar.remove()});bar.appendChild(s);bar.appendChild(a);bar.appendChild(x);document.body.appendChild(bar)})();</script></body>
 </html>

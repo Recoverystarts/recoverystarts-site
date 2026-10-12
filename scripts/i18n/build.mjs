@@ -7,14 +7,14 @@
 // The folder /<lang>/ is rebuilt from scratch each run, so it's always exactly what the translation files cover.
 import fs from "node:fs";
 import path from "node:path";
-import { ROOT, I18N, LANGS, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
+import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
 import { stampGlobe } from "./globe.mjs";
 
 const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", "pt-BR": "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", en: "en_US" };
 
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }
@@ -56,10 +56,10 @@ for (const rel of Object.keys(pageIds)) {
   });
   // the head: language, direction, canonical, alternates, og
   const url = `${SITE}/${lang}${urlOf(rel)}`;
-  html = html.replace(/<html\b[^>]*>/i, `<html lang="${lang}"${L.dir === "rtl" ? ' dir="rtl"' : ""}>`);
+  html = html.replace(/<html\b[^>]*>/i, `<html lang="${tagOf(lang)}"${L.dir === "rtl" ? ' dir="rtl"' : ""}>`);
   html = html.replace(/^[ \t]*<link rel="(?:canonical|alternate)"[^>]*>[ \t]*\r?\n/gim, "").replace(/<link rel="(?:canonical|alternate)"[^>]*>/gi, "");
   const alts = [["en", `${SITE}${urlOf(rel)}`], [lang, url], ...Object.entries(other).filter(([, s]) => s.has(rel)).map(([l]) => [l, `${SITE}/${l}${urlOf(rel)}`])];
-  const head = [`<link rel="canonical" href="${url}">`, ...alts.map(([l, u]) => `<link rel="alternate" hreflang="${l}" href="${u}">`), `<link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(rel)}">`].map((x) => `  ${x}\n`).join("");
+  const head = [`<link rel="canonical" href="${url}">`, ...alts.map(([l, u]) => `<link rel="alternate" hreflang="${tagOf(l)}" href="${u}">`), `<link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(rel)}">`].map((x) => `  ${x}\n`).join("");
   html = html.replace(/<\/head>/i, () => `${head}</head>`);
   html = html.replace(/(<meta property="og:locale" content=")[^"]*"/i, `$1${OG[lang] ?? lang}"`);
   if (!/property="og:locale"/i.test(html)) html = html.replace(/(<meta property="og:type"[^>]*>)/i, `$1\n  <meta property="og:locale" content="${OG[lang] ?? lang}">`);
@@ -84,7 +84,7 @@ if (!only) for (const rel of Object.keys(pageIds)) {
   let out = stampGlobe(html, "en", avail);
   out = out.replace(/^[ \t]*<link rel="alternate" hreflang="[^"]*" href="[^"]*" data-i18n>\r?\n/gm, "");
   if (Object.keys(avail).length > 1) {
-    const alts = Object.entries(avail).map(([l, u]) => `<link rel="alternate" hreflang="${l}" href="${SITE}${u}" data-i18n>`).concat(`<link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(rel)}" data-i18n>`);
+    const alts = Object.entries(avail).sort(([a], [b]) => Object.keys(LANGS).indexOf(a) - Object.keys(LANGS).indexOf(b)).map(([l, u]) => `<link rel="alternate" hreflang="${tagOf(l)}" href="${SITE}${u}" data-i18n>`).concat(`<link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(rel)}" data-i18n>`);
     out = out.replace(/<\/head>/i, () => alts.map((x) => `  ${x}\n`).join("") + "</head>");
   }
   if (out !== html) fs.writeFileSync(file, out);

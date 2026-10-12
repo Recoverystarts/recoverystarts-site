@@ -160,7 +160,7 @@ for (const f of files) {
 
 rows.sort((a, b) => a.score - b.score);
 const pad = (s, n) => String(s).padEnd(n), lp = (s, n) => String(s).padStart(n);
-console.log(`${lang}: ${rows.length} file(s)${useBranches ? " from origin/${pre}* branches" : ""}, weakest first. A low score is where a checker reads first.\n`);
+console.log(`${lang}: ${rows.length} file(s)${useBranches ? ` from origin/${pre}* branches` : ""}, weakest first. A low score is where a checker reads first.\n`);
 console.log(pad("line", 9) + pad("batch", 20) + lp("score", 6) + lp("done", 12) + lp("tags", 6) + lp("same", 6) + lp("engl", 6) + lp("short", 6) + lp("nums", 6) + lp(lang === "es" ? "usted" : "reg", 6) + "  glossary");
 for (const r of rows) console.log(pad(r.line, 9) + pad(r.batch, 20) + lp(r.err ? "ERR" : r.score, 6) + lp(`${r.done}/${r.n}`, 12) + lp(r.tags, 6) + lp(r.same, 6) + lp(r.english, 6) + lp(r.short, 6) + lp(r.numbers, 6) + lp(r.usted, 6) + "  " + r.glossary + (r.err ? `  (${r.err})` : ""));
 if (outAt) { writeJson(path.resolve(ROOT, outAt), report); console.log(`\nflagged segments → ${outAt}`); }

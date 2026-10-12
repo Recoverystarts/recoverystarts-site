@@ -12,9 +12,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>Page Not Found — Recovery Starts</title>
-<script>/*rs-lang-404*/// a page a language hasn't published yet (/fr/daily-tradition/…): the English page, not a dead end. Never on a 404.html
-// itself, so the 🌐's own redirect to /<lang>/404.html can't bounce back here.
-(function(){var m=location.pathname.match(/^\/[a-z]{2}(?:-[a-z]{2,4})?(\/.+)$/i);if(m&&!/\/404\.html$/i.test(m[1]))location.replace(m[1]+location.search+location.hash)})();</script>
+<script>/*rs-lang-404*/// a page a language hasn't published yet (/fr/daily-tradition/…): the English page, not a dead end. Never on the
+// 404 page itself (/es/404, /es/404.html), where the 🌐's own redirect lands, and at most once per address per tab, so
+// nothing can bounce between the two.
+(function(){try{var m=location.pathname.match(/^\/[a-z]{2}(?:-[a-z]{2,4})?(\/.+)$/i);if(!m||/\/404(\.html)?\/?$/i.test(m[1]))return;var k='rs404:'+location.pathname;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(m[1]+location.search+location.hash)}catch(e){}})();</script>
 <link rel="stylesheet" href="/style.css?v=b267d333f8">
 <style>
   .nf-wrap {

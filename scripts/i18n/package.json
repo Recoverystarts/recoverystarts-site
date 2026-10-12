@@ -3,5 +3,8 @@
   "private": true,
   "type": "module",
   "description": "The translation pipeline (WO-TRANSLATE-SITE). Run locally only; Cloudflare Pages serves the built files and never runs this.",
-  "dependencies": { "parse5": "^7.1.2" }
+  "dependencies": {
+    "parse5": "^7.1.2",
+    "rtlcss": "^4.3.0"
+  }
 }

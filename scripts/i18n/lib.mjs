@@ -16,7 +16,8 @@ import { parse } from "parse5";
 export const ROOT = path.resolve(import.meta.dirname, "..", "..");
 export const I18N = path.join(ROOT, "i18n");
 
-// the languages the site can be built in (code → its own name, direction; tag: the BCP-47 tag a page and its hreflang
+// the languages the site can be built in (code → its own name, direction; en: its English name, where the own name is in
+// another script (llms.txt names it both ways); tag: the BCP-47 tag a page and its hreflang
 // carry when it's more than the code — pt is built at /pt/ and marked pt-BR). A language is live on a page only when
 // i18n/<code>/ covers every segment of that page.
 export const LANGS = {
@@ -25,7 +26,7 @@ export const LANGS = {
   pt: { name: "Português", dir: "ltr", tag: "pt-BR" },
   fr: { name: "Français", dir: "ltr" },
   de: { name: "Deutsch", dir: "ltr" },
-  fa: { name: "فارسی", dir: "rtl" },
+  fa: { name: "فارسی", dir: "rtl", en: "Persian" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

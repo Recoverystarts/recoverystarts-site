@@ -198,9 +198,9 @@ Use A.A.'s French, cut to the sentences the English page has (the English site p
 | Find a meeting | Trouver une réunion |
 | Talk to Recovery Einstein | Parler à Recovery Einstein |
 | You're not alone | Vous n'êtes pas seul |
-| Get the App / web app | Obtenir l'appli / appli Web |
+| Get the App / web app | Obtenir l’appli (the top menu says just « L’appli », to fit) / appli Web |
 | AI chat | clavardage IA (or « discussion avec l'IA ») |
-| Donate — keep it free | Faire un don — pour que ça reste gratuit |
+| Donate / Donate — keep it free | Donner (menu) · Faire un don / Faire un don — pour que ça reste gratuit |
 | free | gratuit |
 | Home (breadcrumb) | Accueil |
 | ← Previous / Next → | ← Précédent / Suivant → |

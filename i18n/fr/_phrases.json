@@ -1,7 +1,7 @@
 {
  "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub’s card), swapped by /rs-t.js on /fr/ pages. Our English → French. Shared with meeting-finder server/i18n/es.mjs phrases.",
  "p": {
-  "Donate": "Faire un don",
+  "Donate": "Donner",
   "Donate — keep it free": "Faire un don — pour que ça reste gratuit",
   "Keep this free.": "Pour que ça reste gratuit.",
   "This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.": "Cette carte est construite et payée par une seule personne, de sa poche. Chaque nouveau pays coûte plus cher à faire tourner. Si elle vous a aidé à trouver une salle, un dollar dans le panier la garde gratuite pour la prochaine personne.",

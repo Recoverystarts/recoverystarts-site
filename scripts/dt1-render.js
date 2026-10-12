@@ -256,7 +256,10 @@ function renderMonth(tpl, month, days, liveMonths) {
   html = html.replace(/Ask Recovery Einstein about Tradition 10 →/g, `Ask Recovery Einstein about Tradition ${n} →`);
   html = stampMonthStrip(html, liveMonths, month);
   html = stampMenu(html, liveMonths);
-  const left = html.match(/October|october-\d|Tradition 10\b/g);
+  // Leftovers from the October template, outside the menu and the 12-month strip (both name every month).
+  const head = html.split("</head>")[0];
+  const main = (html.match(/<main[\s\S]*?<\/main>/) || [""])[0].replace(/<div class="dt-months"[\s\S]*?<\/div>\s*\n/, "");
+  const left = (head + main).match(/October|october-\d|Tradition 10\b/g);
   if (left) throw new Error(`month ${month}: template text left over: ${[...new Set(left)].join(", ")}`);
   return html;
 }

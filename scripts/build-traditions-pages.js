@@ -39,6 +39,12 @@ const TODAY = "2026-07-12";
 // whole year reads to a crawler as a single enormous content dump.
 // ADD A LINE HERE WHEN A MONTH SHIPS. Unlisted months fall back to TODAY.
 const MONTH_PUBLISHED = {
+  january: "2026-10-12",
+  february: "2026-10-12",
+  march: "2026-10-12",
+  april: "2026-10-12",
+  may: "2026-10-12",
+  june: "2026-10-12",
   july: "2026-07-12",
   august: "2026-07-12",
   september: "2026-07-28",

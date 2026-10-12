@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js), swapped by /rs-t.js on /es/ pages. Our English → Spanish. Shared with meeting-finder server/i18n/es.mjs phrases.",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub’s card), swapped by /rs-t.js on /es/ pages. Our English → Spanish. Shared with meeting-finder server/i18n/es.mjs phrases.",
  "p": {
   "Donate": "Donar",
   "Donate — keep it free": "Donar — mantenlo gratis",
@@ -15,7 +15,12 @@
   "Install": "Instalar",
   "In-app purchases · Free": "Compras dentro de la app · Gratis",
   "Get AA Big Book Search + AI Guide on Google Play": "Consigue AA Big Book Search + AI Guide en Google Play",
-  "Open AA Big Book Search + AI Guide, the free web app": "Abre AA Big Book Search + AI Guide, la app web gratis"
+  "Open AA Big Book Search + AI Guide, the free web app": "Abre AA Big Book Search + AI Guide, la app web gratis",
+  "Today": "Hoy",
+  "Latest reading": "Última lectura",
+  "Sit with": "Para meditar",
+  "Open this reading": "Abre esta lectura",
+  "Ask Recovery Einstein about today's Tradition": "Pregúntale a Recovery Einstein sobre la Tradición de hoy"
  },
  "r": [],
  "skip": ""

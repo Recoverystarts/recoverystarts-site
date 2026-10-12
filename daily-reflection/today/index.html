@@ -23,12 +23,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <script>
     // Auto-redirect to today's reflection
+    // Stay in the reader's language: /es/…/today/ goes to /es/…, English to /…. A day a language hasn't published
+    // yet falls back to the English one (404.html sends a missing /<lang>/ page to its English path).
+    const L = (document.documentElement.lang || 'en').split('-')[0].toLowerCase();
+    const P = L !== 'en' && location.pathname.indexOf('/' + L + '/') === 0 ? '/' + L : '';
     const months = ['january','february','march','april','may','june',
                      'july','august','september','october','november','december'];
     const now = new Date();
     const month = months[now.getMonth()];
     const day = now.getDate();
-    window.location.replace('/daily-reflection/' + month + '-' + day + '/');
+    window.location.replace(P + '/daily-reflection/' + month + '-' + day + '/');
   </script>
   <style>
     body { background: #0a0a0a; color: #c8b88a; font-family: Georgia, serif; 

@@ -1,0 +1,22 @@
+{
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js), swapped by /rs-t.js on /pt/ pages. Our English → Brazilian Portuguese (você). Same keys as i18n/es/_phrases.json.",
+ "p": {
+  "Donate": "Doar",
+  "Donate — keep it free": "Doar — mantenha gratuito",
+  "Keep this free.": "Mantenha isto gratuito.",
+  "This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.": "Este mapa é feito e pago por uma só pessoa, do próprio bolso. Cada país novo custa mais para manter. Se ele ajudou você a encontrar uma sala, um dólar na sacola o mantém gratuito para a próxima pessoa.",
+  "$1 in the basket": "US$ 1 na sacola",
+  "Give more": "Doar mais",
+  "Close": "Fechar",
+  "Support Recovery Starts": "Apoie o Recovery Starts",
+  "Big Book app": "App do Livro Azul",
+  "Open web app": "Abrir o app web",
+  "Free · also on Google Play": "Gratuito · também no Google Play",
+  "Install": "Instalar",
+  "In-app purchases · Free": "Compras no app · Gratuito",
+  "Get AA Big Book Search + AI Guide on Google Play": "Baixe o AA Big Book Search + AI Guide no Google Play",
+  "Open AA Big Book Search + AI Guide, the free web app": "Abra o AA Big Book Search + AI Guide, o app web gratuito"
+ },
+ "r": [],
+ "skip": ""
+}

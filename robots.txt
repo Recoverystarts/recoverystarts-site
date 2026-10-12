@@ -17,5 +17,8 @@ Disallow: /data/
 
 # For AI assistants: https://recoverystarts.com/llms.txt (meetings: https://recoverystarts.com/meetings/llms.txt)
 
+# sitemap.xml is an index: one sitemap per language (sitemap-en/es/pt/fr.xml), each URL listing its
+# other-language versions (hreflang). Written by scripts/i18n/build.mjs (sitemap.mjs) on every build.
+# sitemap-meetings.xml is the meeting finder's own index, so it's named here on its own line.
 Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml

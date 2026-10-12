@@ -399,7 +399,7 @@ function injectGoDeeper(reflections, pagesBySlug, dry) {
 // ── Sitemap ──────────────────────────────────────────────────────────────────
 
 function updateSitemap(urls, dry) {
-  const smPath = path.join(ROOT, "sitemap.xml");
+  const smPath = path.join(ROOT, "sitemap-en.xml");
   let sm = fs.readFileSync(smPath, "utf8");
   let added = 0;
   const entries = urls

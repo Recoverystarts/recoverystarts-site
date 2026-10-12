@@ -69,7 +69,7 @@ const urls = [
   console.log("  FAQPage JSON-LD : " + /"@type":"FAQPage"/.test(h));
 
   // Sitemap
-  const sm = await (await fetch(BASE + "/sitemap.xml")).text();
+  const sm = await (await fetch(BASE + "/sitemap-en.xml")).text();
   console.log("\nsitemap URLs  : " + (sm.match(/<loc>/g) || []).length);
 
   // PRODUCTION must be untouched.

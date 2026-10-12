@@ -577,7 +577,7 @@ function phase3(opts) {
   if (WRITE_LLMS && !opts.dry) fs.writeFileSync(path.join(ROOT, "llms.txt"), llms, "utf8");
 
   // 4. Sitemap: verify coverage, stamp lastmod on every URL
-  const smPath = path.join(ROOT, "sitemap.xml");
+  const smPath = path.join(ROOT, "sitemap-en.xml");
   let sm = fs.readFileSync(smPath, "utf8");
   const locs = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   const missing = [];

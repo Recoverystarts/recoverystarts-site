@@ -47,6 +47,34 @@ const API_URL = "/api/bigbook-search";
 const LANG = (document.documentElement.lang || "en").split("-")[0].toLowerCase();
 const P = LANG !== "en" && location.pathname.startsWith(`/${LANG}/`) ? `/${LANG}` : "";
 
+// ── Words in the reader's language (wave tr3 S3, claude-home#256) ─────────────
+// On /es/, /pt/, /fr/… the page carries its phrasebook (i18n/<lang>/_phrases.json → window.RS_T, before this module
+// runs). Every sentence this file writes is looked up there WHOLE, its {n} slots filled after, so a new language gets
+// these words from its phrase list alone. In English there's no book and every word stays as written. The data's own
+// words (a chapter, "Step 12", a Step's text) go through the same book, by shape; one with no entry stays English.
+// The Big Book's own text (a snippet, a quick quote) is English and marked lang="en", so rs-t.js never touches it.
+const BOOK = (window.RS_T && window.RS_T.p) || {};
+const t = (s, v = {}) => String(BOOK[s] ?? s).replace(/\{(\w+)\}/g, (m, k) => (k in v ? v[k] : m));
+const SHAPES = [
+  [/^Chapter (\d+) – (.+)$/, "Chapter {n} – {x}"],
+  [/^Step (\d+)$/, "Step {n}"],
+  [/^Page (\S+)$/, "Page {n}"],
+  [/^Pages (\S+) to (\S+)$/, "Pages {n} to {x}"],
+  [/^Go directly to page (\S+)$/, "Go directly to page {n}"],
+  [/^Found in (.+)$/, "Found in {x}"],
+];
+function td(s) {
+  s = String(s ?? "");
+  if (BOOK[s] != null) return BOOK[s];
+  for (const [rx, key] of SHAPES) {
+    const m = rx.exec(s);
+    if (!m || BOOK[key] == null) continue;
+    const words = (x) => x.split(", ").map((w) => (BOOK[w] != null ? BOOK[w] : w)).join(", ");
+    return t(key, key.includes("{x}") && key.includes("{n}") ? { n: m[1], x: words(m[2]) } : key.includes("{x}") ? { x: words(m[1]) } : { n: m[1] });
+  }
+  return s;
+}
+
 // ── DOM ──────────────────────────────────────────────────────────────────────
 const input = document.getElementById("bb-input");
 const clearBtn = document.getElementById("bb-clear");
@@ -108,10 +136,10 @@ function quickCardHtml(card) {
   return `
     <article class="bb-card bb-quick">
       <div class="bb-card-head">
-        <span class="bb-badge">Quick answer</span>
-        <span class="bb-cite">${esc(card.chapter)} · ${pageButton(card.page)}</span>
+        <span class="bb-badge">${t("Quick answer")}</span>
+        <span class="bb-cite">${esc(td(card.chapter))} · ${pageButton(card.page)}</span>
       </div>
-      <p class="bb-quote">${esc(card.snippet)}</p>
+      <p class="bb-quote" lang="en">${esc(card.snippet)}</p>
     </article>`;
 }
 
@@ -134,22 +162,22 @@ function knowledgeCardHtml(r) {
     return `
     <article class="bb-card bb-know bb-longform">
       <div class="bb-card-head">
-        <span class="bb-badge">Long Form</span>
-        <span class="bb-cite">Appendix I · ${pageButton("563-566")}</span>
+        <span class="bb-badge">${t("Long Form")}</span>
+        <span class="bb-cite">${t("Appendix I")} · ${pageButton("563-566")}</span>
       </div>
-      <p class="bb-know-title">The Twelve Traditions — Long Form</p>
-      <p class="bb-snippet">The complete, unabridged Traditions (pp. 563–566).</p>
-      <p class="bb-longform-note">Most people are only ever shown the <strong>short form</strong> (pp. 561–562). The Long Form is the full text — it is where Tradition Three states that alcoholics may call themselves an A.A. group “provided that, as a group, they have no other affiliation.”</p>
+      <p class="bb-know-title">${t("The Twelve Traditions — Long Form")}</p>
+      <p class="bb-snippet">${t("The complete, unabridged Traditions (pp. 563–566).")}</p>
+      <p class="bb-longform-note">${t("Most people are only ever shown the <strong>short form</strong> (pp. 561–562). The Long Form is the full text — it is where Tradition Three states that alcoholics may call themselves an A.A. group “provided that, as a group, they have no other affiliation.”")}</p>
     </article>`;
   }
   return `
     <article class="bb-card bb-know">
       <div class="bb-card-head">
-        <span class="bb-badge">${esc(r.type)}</span>
+        <span class="bb-badge">${esc(td(r.type))}</span>
         <span class="bb-cite">${pageButton(r.page)}</span>
       </div>
-      <p class="bb-know-title">${esc(r.title)}</p>
-      <p class="bb-snippet">${esc(r.description)}</p>
+      <p class="bb-know-title">${esc(td(r.title))}</p>
+      <p class="bb-snippet">${esc(td(r.description))}</p>
     </article>`;
 }
 
@@ -157,10 +185,10 @@ function hitHtml(r) {
   return `
     <article class="bb-card bb-hit">
       <div class="bb-card-head">
-        <span class="bb-cite">${esc(r.description)} · ${pageButton(r.page)}</span>
-        ${r.type === "Exact Match" ? `<span class="bb-badge subtle">exact phrase</span>` : ""}
+        <span class="bb-cite">${esc(td(r.description))} · ${pageButton(r.page)}</span>
+        ${r.type === "Exact Match" ? `<span class="bb-badge subtle">${t("exact phrase")}</span>` : ""}
       </div>
-      <p class="bb-snippet">${snippetHtml(r.snippetParts ?? [])}</p>
+      <p class="bb-snippet" lang="en">${snippetHtml(r.snippetParts ?? [])}</p>
     </article>`;
 }
 
@@ -180,22 +208,22 @@ function pageCardHtml(r) {
   return `
     <article class="bb-card bb-page">
       <div class="bb-card-head">
-        <span class="bb-badge">Page ${esc(label)}</span>
-        ${r.description ? `<span class="bb-cite">${esc(r.description)}</span>` : ""}
+        <span class="bb-badge">${t("Page {n}", { n: esc(label) })}</span>
+        ${r.description ? `<span class="bb-cite">${esc(td(r.description))}</span>` : ""}
       </div>
-      <p class="bb-snippet">You're looking for <strong>page ${esc(label)}</strong> of the Big Book, 4th Edition.</p>
+      <p class="bb-snippet">${t("You're looking for <strong>page {n}</strong> of the Big Book, 4th Edition.", { n: esc(label) })}</p>
       <div class="bb-page-actions">
-        <a class="btn btn-primary" href="${P}/big-book/page-${escAttr(slug)}/">What's on page ${esc(label)} →</a>
-        <a class="btn btn-outline" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=bigbook-search&amp;utm_content=page-${escAttr(slug)}" target="_blank" rel="noopener">Read it in the app →</a>
+        <a class="btn btn-primary" href="${P}/big-book/page-${escAttr(slug)}/">${t("What's on page {n} →", { n: esc(label) })}</a>
+        <a class="btn btn-outline" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=bigbook-search&amp;utm_content=page-${escAttr(slug)}" target="_blank" rel="noopener">${t("Read it in the app →")}</a>
       </div>
-      <p class="bb-page-note">A.A. offers the whole book free — <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read this page at aa.org →</a> · <a href="${P}/big-book/">Get your own copy →</a></p>
+      <p class="bb-page-note">${t("A.A. offers the whole book free —")} <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">${t("read this page at aa.org →")}</a> · <a href="${P}/big-book/">${t("Get your own copy →")}</a></p>
     </article>`;
 }
 
 const CTA = `
   <div class="bb-cta">
-    <p>Reading the Big Book with someone who knows every page?</p>
-    <a class="btn btn-primary" href="${P}/download/">Meet Recovery Einstein →</a>
+    <p>${t("Reading the Big Book with someone who knows every page?")}</p>
+    <a class="btn btn-primary" href="${P}/download/">${t("Meet Recovery Einstein →")}</a>
   </div>`;
 
 function setStatus(msg) {
@@ -235,42 +263,42 @@ function render(query, state) {
   // the full-text list. It hands off to the page's reference card and the app
   // rather than printing the page.
   if (jump) {
-    head = `<section class="bb-group jump"><h2 class="bb-group-title">Page ${esc(jump.page)}</h2>${pageCardHtml(jump)}</section>`;
+    head = `<section class="bb-group jump"><h2 class="bb-group-title">${t("Page {n}", { n: esc(jump.page) })}</h2>${pageCardHtml(jump)}</section>`;
   }
 
   // COLUMN 1 — THE ANSWER. Steps / chapters / references lead, on the left, so
   // the truth is front-loaded: visible immediately, no scrolling, no hunting.
   if (knowledge.length) {
-    cols.push(col("Steps, chapters &amp; references", knowledge.map(knowledgeCardHtml).join("")));
+    cols.push(col(t("Steps, chapters &amp; references"), knowledge.map(knowledgeCardHtml).join("")));
   }
 
   // COLUMN 2 — quick answers.
   if (state.quick && state.quick.length) {
-    cols.push(col("Quick answers", state.quick.map(quickCardHtml).join("")));
+    cols.push(col(t("Quick answers"), state.quick.map(quickCardHtml).join("")));
   }
 
   // COLUMN 3 — full-text hits (skipped on a page jump, like the app).
   if (state.loading) {
-    cols.push(col("Searching the Big Book…", `<div class="bb-skeleton"></div><div class="bb-skeleton"></div>`));
+    cols.push(col(t("Searching the Big Book…"), `<div class="bb-skeleton"></div><div class="bb-skeleton"></div>`));
   } else if (full.length) {
-    cols.push(col("In the Big Book", full.map(hitHtml).join("")));
+    cols.push(col(t("In the Big Book"), full.map(hitHtml).join("")));
   }
 
   let body = cols.length ? `<div class="bb-cols">${cols.join("")}</div>` : "";
 
   if (!jump && !cols.length && !state.loading) {
-    body = `<section class="bb-group"><p class="bb-noresults">No pages matched “${esc(query)}.” Try a word or short phrase from the text, a page number, or a topic like <em>resentment</em> or <em>acceptance</em>.</p></section>`;
+    body = `<section class="bb-group"><p class="bb-noresults">${t("No pages matched “{q}.” Try a word or short phrase from the text, a page number, or a topic like <em>resentment</em> or <em>acceptance</em>.", { q: esc(query) })}</p></section>`;
   }
 
   results.innerHTML = head + body + CTA;
 
   const counts = [
-    jump ? "1 page" : "",
-    state.quick && state.quick.length ? `${state.quick.length} quick answer${state.quick.length > 1 ? "s" : ""}` : "",
-    knowledge.length ? `${knowledge.length} reference${knowledge.length === 1 ? "" : "s"}` : "",
-    !state.loading && full.length ? `${full.length} passage${full.length === 1 ? "" : "s"}` : "",
+    jump ? t("1 page") : "",
+    state.quick && state.quick.length ? t(state.quick.length > 1 ? "{n} quick answers" : "1 quick answer", { n: state.quick.length }) : "",
+    knowledge.length ? t(knowledge.length === 1 ? "1 reference" : "{n} references", { n: knowledge.length }) : "",
+    !state.loading && full.length ? t(full.length === 1 ? "1 passage" : "{n} passages", { n: full.length }) : "",
   ].filter(Boolean);
-  if (!state.loading) setStatus(counts.length ? `Results for “${query}”: ${counts.join(", ")}.` : `No results for “${query}.”`);
+  if (!state.loading) setStatus(counts.length ? t("Results for “{q}”: {list}.", { q: query, list: counts.join(", ") }) : t("No results for “{q}.”", { q: query }));
 }
 
 // ── Search flow ──────────────────────────────────────────────────────────────
@@ -286,7 +314,7 @@ async function runSearch(rawQuery) {
   // so they paint instantly while the server searches the full text.
   const quick = searchPhraseIndex(query);
   render(query, { quick, loading: true });
-  setStatus("Searching…");
+  setStatus(t("Searching…"));
 
   let composed;
   try {
@@ -297,8 +325,8 @@ async function runSearch(rawQuery) {
     render(query, { quick, composed: [], loading: false });
     setStatus(
       quick.length
-        ? "Full-text search is unavailable right now. Quick answers are still here."
-        : "Search is unavailable right now. Please try again in a moment."
+        ? t("Full-text search is unavailable right now. Quick answers are still here.")
+        : t("Search is unavailable right now. Please try again in a moment.")
     );
     return;
   }

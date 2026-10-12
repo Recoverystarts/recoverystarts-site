@@ -19,7 +19,7 @@ const ROOT = path.join(__dirname, "..");
 const SITE = "https://recoverystarts.com";
 const TODAY = "2026-07-12";
 const DRY = process.argv.includes("--dry");
-const SITEMAP = path.join(ROOT, "sitemap.xml");
+const SITEMAP = path.join(ROOT, "sitemap-en.xml");
 
 // ── 1. Keep everything already indexed ──────────────────────────────────────
 const existingXml = fs.readFileSync(SITEMAP, "utf8");

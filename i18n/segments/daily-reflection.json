@@ -3537,7 +3537,8 @@
   "t": "April",
   "kind": "html",
   "pages": [
-   "daily-reflection/april/index.html"
+   "daily-reflection/april/index.html",
+   "daily-tradition/april/index.html"
   ]
  },
  "922a69f89655": {
@@ -13431,7 +13432,8 @@
   "t": "February",
   "kind": "html",
   "pages": [
-   "daily-reflection/february/index.html"
+   "daily-reflection/february/index.html",
+   "daily-tradition/february/index.html"
   ]
  },
  "93c51161171a": {
@@ -19510,7 +19512,8 @@
   "t": "January",
   "kind": "html",
   "pages": [
-   "daily-reflection/january/index.html"
+   "daily-reflection/january/index.html",
+   "daily-tradition/january/index.html"
   ]
  },
  "71a0d3fc64a5": {
@@ -25911,7 +25914,8 @@
   "t": "June",
   "kind": "html",
   "pages": [
-   "daily-reflection/june/index.html"
+   "daily-reflection/june/index.html",
+   "daily-tradition/june/index.html"
   ]
  },
  "93def2d714ae": {
@@ -29160,7 +29164,8 @@
   "t": "March",
   "kind": "html",
   "pages": [
-   "daily-reflection/march/index.html"
+   "daily-reflection/march/index.html",
+   "daily-tradition/march/index.html"
   ]
  },
  "b94b924ac073": {
@@ -32437,7 +32442,8 @@
   "t": "May",
   "kind": "html",
   "pages": [
-   "daily-reflection/may/index.html"
+   "daily-reflection/may/index.html",
+   "daily-tradition/may/index.html"
   ]
  },
  "71e62335b32b": {

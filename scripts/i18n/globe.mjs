@@ -21,6 +21,10 @@ export const GLOBE_CSS = `<style id="rs-globe-css">
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
+   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
+   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+@media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}

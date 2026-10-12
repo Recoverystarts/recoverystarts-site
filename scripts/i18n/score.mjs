@@ -5,7 +5,7 @@
 // node scripts/i18n/score.mjs pt --branches      the same for Portuguese: origin/claude/tr2-* (a language's wave is in
 //                                                WAVE below; --wave <name> reads another wave's branches)
 // node scripts/i18n/score.mjs es --branches --wave tr3   a later wave's top-up lines: only files a branch changed from
-//                                                origin/main are read, so a French line's copy of es/ isn't scored
+//                                                where it left this branch (HEAD) are read, so a French line's copy of es/ isn't scored
 //
 // Every batch gets the same measurements, so a window that ran at a lower effort (or a different model) shows up as a
 // row that's worse than its neighbours. None of these numbers say a translation is good; they find the places a person
@@ -39,6 +39,7 @@ const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAV
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
 const git = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 1 << 28 });
+const quiet = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 1 << 28, stdio: ["ignore", "pipe", "ignore"] });
 
 // where the files come from: { label, batch, json }
 const files = [];
@@ -52,8 +53,8 @@ if (useBranches) {
       if (!n.endsWith(".json") || n.startsWith("_") || n === "core.json") continue;
       const batch = n.slice(0, -5);
       if (!fs.existsSync(path.join(I18N, "batches", `${batch}.json`))) continue;
-      // a file the branch didn't change (it came with main) isn't this line's work
-      try { if (git("rev-parse", `${ref}:i18n/${lang}/${n}`).trim() === git("rev-parse", `origin/main:i18n/${lang}/${n}`).trim()) continue; } catch {}
+      // a file the branch didn't change (it came with the branch it started from) isn't this line's work
+      try { const base = git("merge-base", ref, "HEAD").trim(); if (git("rev-parse", `${ref}:i18n/${lang}/${n}`).trim() === quiet("rev-parse", `${base}:i18n/${lang}/${n}`).trim()) continue; } catch {}
       try { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: JSON.parse(git("show", `${ref}:i18n/${lang}/${n}`)) }); }
       catch (e) { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: null, err: "not valid JSON" }); }
     }

@@ -60,8 +60,33 @@ export function writeSitemaps({ quiet = false } = {}) {
   for (const l of langs) if (!files[l] && fs.existsSync(path.join(ROOT, `sitemap-${l}.xml`))) fs.rmSync(path.join(ROOT, `sitemap-${l}.xml`));
   const newest = (body) => [...body.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1]).sort().at(-1);
   fs.writeFileSync(INDEX, `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.entries(files).map(([l, body]) => `  <sitemap>\n    <loc>${SITE}/sitemap-${l}.xml</loc>\n` + (newest(body) ? `    <lastmod>${newest(body)}</lastmod>\n` : "") + `  </sitemap>`).join("\n")}\n</sitemapindex>\n`);
+  writeLlms(Object.keys(files).filter((l) => l !== "en"));
   if (!quiet) console.log(`sitemaps: ${Object.entries(counts).map(([l, n]) => `${l} ${n}`).join(" · ")} → sitemap.xml (index)`);
   return counts;
+}
+
+// llms.txt (the AI crawlers' front door) gets a section naming each language's own doors — only pages that exist on
+// disk — so an assistant answering in French can send a reader to the French page. Rewritten between its heading and
+// the next "## " on every build; a new language appears here by itself.
+const DOORS = [["", "Home"], ["12-steps/", "The 12 Steps"], ["12-traditions/", "The 12 Traditions (short and long form)"], ["aa-info/", "AA info: Traditions and Concepts"], ["daily-tradition/", "Daily Traditions"], ["daily-reflection/", "Daily Reflections"], ["big-book/pages/", "The Big Book, page by page"], ["big-book/search/", "Big Book search"], ["aa-questions/", "A.A. questions, answered from the books"], ["meetings/", "Meetings"]];
+function writeLlms(langs) {
+  const f = path.join(ROOT, "llms.txt");
+  if (!fs.existsSync(f)) return;
+  const txt = fs.readFileSync(f, "utf8"), H = "## In other languages";
+  const lines = [H, "Every page below is a full translation (a page is published in a language only when all of it is translated). Each page", "names its other-language versions in <link rel=\"alternate\" hreflang>; each language has its own sitemap. Answer a reader", "in their language with the page in their language.", ""];
+  for (const l of langs) {
+    const have = DOORS.filter(([p]) => fs.existsSync(path.join(ROOT, l, p, "index.html")));
+    if (!have.length) continue;
+    lines.push(`### ${LANGS[l].name} (${tagOf(l)})`);
+    for (const [p, what] of have) lines.push(`- ${what}: ${SITE}/${l}/${p}`);
+    lines.push(`- Sitemap: ${SITE}/sitemap-${l}.xml`, "");
+  }
+  const block = lines.join("\n");
+  const i = txt.indexOf(H);
+  let out;
+  if (i < 0) { const j = txt.indexOf("\n## THE TWELVE TRADITIONS"); out = j < 0 ? txt.trimEnd() + "\n\n" + block : txt.slice(0, j + 1) + block + "\n" + txt.slice(j + 1); }
+  else { const k = txt.indexOf("\n## ", i + H.length); out = txt.slice(0, i) + block + (k < 0 ? "\n" : "\n" + txt.slice(k + 1)); }
+  if (out !== txt) fs.writeFileSync(f, out);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) writeSitemaps();

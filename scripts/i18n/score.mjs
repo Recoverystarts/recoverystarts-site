@@ -4,6 +4,8 @@
 // node scripts/i18n/score.mjs es --branches --out i18n/reports/score.json   + the flagged segments, for a checker
 // node scripts/i18n/score.mjs pt --branches      the same for Portuguese: origin/claude/tr2-* (a language's wave is in
 //                                                WAVE below; --wave <name> reads another wave's branches)
+// node scripts/i18n/score.mjs es --branches --wave tr3   a later wave's top-up lines: only files a branch changed from
+//                                                origin/main are read, so a French line's copy of es/ isn't scored
 //
 // Every batch gets the same measurements, so a window that ran at a lower effort (or a different model) shows up as a
 // row that's worse than its neighbours. None of these numbers say a translation is good; they find the places a person
@@ -20,6 +22,7 @@
 //   reg       pt (wave tr2): the column "usted" counts the wrong register for Brazil: "tu"/"vós" forms ("tu és",
 //             "teu", "vosso", "contigo") and European-Portuguese words and grammar ("facto", "telemóvel", "equipa",
 //             "está a fazer"). The site speaks Brazilian Portuguese as "você".
+//             fr (wave tr3): "tu"/"toi"/"ton"/"ta"/"tes"/"t'" forms — the site says "vous" (a few are fine inside a quote).
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -31,7 +34,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -49,6 +52,8 @@ if (useBranches) {
       if (!n.endsWith(".json") || n.startsWith("_") || n === "core.json") continue;
       const batch = n.slice(0, -5);
       if (!fs.existsSync(path.join(I18N, "batches", `${batch}.json`))) continue;
+      // a file the branch didn't change (it came with main) isn't this line's work
+      try { if (git("rev-parse", `${ref}:i18n/${lang}/${n}`).trim() === git("rev-parse", `origin/main:i18n/${lang}/${n}`).trim()) continue; } catch {}
       try { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: JSON.parse(git("show", `${ref}:i18n/${lang}/${n}`)) }); }
       catch (e) { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: null, err: "not valid JSON" }); }
     }
@@ -120,10 +125,31 @@ GLOSS_BY.pt = [
   [/\bpowerless\b/i, /impotentes?/i, "powerless"],
   [/\bunmanageable\b/i, /perdido o dom[ií]nio|dom[ií]nio/i, "unmanageable"],
 ];
+// French (i18n/fr/GLOSSARY.md; A.A. World Services' French wording, aa.org)
+GLOSS_BY.fr = [
+  [/\bBig Book\b/i, /Gros Livre|Alcooliques anonymes/i, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /parrain|marraine/i, "sponsor"],
+  [/\bsponsees?\b/i, /filleul/i, "sponsee"],
+  [/\bHigher Power\b/i, /Puissance sup[ée]rieure/i, "Higher Power"],
+  [/\bhome groups?\b/i, /groupe d['’]attache|groupes d['’]attache/i, "home group"],
+  [/\bnewcomers?\b/i, /nouveaux?|nouvelles?|nouveaux venus|nouvelle venue/i, "newcomer"],
+  [/\bamends\b/i, /r[ée]par/i, "amends"],
+  [/\bresentments?\b/i, /ressentiment/i, "resentment"],
+  [/\binventory\b/i, /inventaire/i, "inventory"],
+  [/\bsobriety\b/i, /sobri[ée]t[ée]|abstinence/i, "sobriety"],
+  [/\bspiritual awakening\b/i, /r[ée]veil spirituel/i, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /conscience de groupe/i, "group conscience"],
+  [/\banonymity\b/i, /anonymat/i, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /d[ée]fauts/i, "defects of character"],
+  [/\bTraditions?\b/, /Tradition/i, "Tradition"],
+  [/\bSteps?\b/, /[ÉE]tape/i, "Step"],
+  [/\bpowerless\b/i, /impuissant/i, "powerless"],
+];
 const GLOSS = GLOSS_BY[lang] ?? [];
 // the wrong register: es "usted"; pt "tu"/"vós" forms and European-Portuguese words (Brazil says "você", "fato", "celular")
 const REG = {
   es: /\busted(es)?\b/gi,
+  fr: /(?<!\p{L})(?:(?:tu|toi|ton|ta|tes|tien|tienne)(?!\p{L})|t['’](?=\p{L}))/giu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
 

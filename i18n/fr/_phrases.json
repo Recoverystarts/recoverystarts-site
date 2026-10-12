@@ -1,0 +1,27 @@
+{
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub’s card), swapped by /rs-t.js on /fr/ pages. Our English → French. Shared with meeting-finder server/i18n/es.mjs phrases.",
+ "p": {
+  "Donate": "Faire un don",
+  "Donate — keep it free": "Faire un don — pour que ça reste gratuit",
+  "Keep this free.": "Pour que ça reste gratuit.",
+  "This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.": "Cette carte est construite et payée par une seule personne, de sa poche. Chaque nouveau pays coûte plus cher à faire tourner. Si elle vous a aidé à trouver une salle, un dollar dans le panier la garde gratuite pour la prochaine personne.",
+  "$1 in the basket": "1 $ dans le panier",
+  "Give more": "Donner plus",
+  "Close": "Fermer",
+  "Support Recovery Starts": "Soutenir Recovery Starts",
+  "Big Book app": "Appli du Gros Livre",
+  "Open web app": "Ouvrir l'appli Web",
+  "Free · also on Google Play": "Gratuit · aussi sur Google Play",
+  "Install": "Installer",
+  "In-app purchases · Free": "Achats intégrés · Gratuit",
+  "Get AA Big Book Search + AI Guide on Google Play": "Obtenez AA Big Book Search + AI Guide sur Google Play",
+  "Open AA Big Book Search + AI Guide, the free web app": "Ouvrez AA Big Book Search + AI Guide, l'appli Web gratuite",
+  "Today": "Aujourd'hui",
+  "Latest reading": "Dernière lecture",
+  "Sit with": "À méditer",
+  "Open this reading": "Ouvrir cette lecture",
+  "Ask Recovery Einstein about today's Tradition": "Interrogez Recovery Einstein sur la Tradition d'aujourd'hui"
+ },
+ "r": [],
+ "skip": ""
+}

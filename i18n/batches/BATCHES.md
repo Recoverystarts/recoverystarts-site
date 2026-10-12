@@ -29,3 +29,6 @@
 | daily-tradition-1 | 31,319 | 1161 | daily-tradition/august-1/index.html | daily-tradition/november-14/index.html |
 | daily-tradition-2 | 31,316 | 956 | daily-tradition/november-14/index.html | daily-tradition/today/index.html |
 | steps | 14,574 | 298 | steps/index.html | steps/step-9/index.html |
+| topup-misc | 720 | 12 | daily-tradition/april/index.html | daily-tradition/september/index.html |
+| daily-tradition-3 | 35,463 | 1020 | daily-tradition/february-1/index.html | daily-tradition/march/index.html |
+| daily-tradition-4 | 35,333 | 1021 | daily-tradition/april-1/index.html | daily-tradition/may/index.html |

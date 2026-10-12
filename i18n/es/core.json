@@ -23,12 +23,6 @@
  "990b8f0ddda0": "<0>Toda la Reflexión diaria →</0>",
  "041577678ffe": "Tradición diaria",
  "45eb01e67efe": "<0>Tradición de hoy →</0>",
- "98690696c02f": "Enero<0>Tradición 1 · próximamente</0>",
- "328989c348b4": "Febrero<0>Tradición 2 · próximamente</0>",
- "893e5909ed37": "Marzo<0>Tradición 3 · próximamente</0>",
- "da9178457a5e": "Abril<0>Tradición 4 · próximamente</0>",
- "0a7a48a29cef": "Mayo<0>Tradición 5 · próximamente</0>",
- "e1d201d8bb24": "Junio<0>Tradición 6 · próximamente</0>",
  "623a7de8fbdd": "<0>Julio<1>Tradición 7</1></0>",
  "8a7cfdd8f188": "<0>Agosto<1>Tradición 8</1></0>",
  "a6938061d4b4": "<0>Septiembre<1>Tradición 9</1></0>",
@@ -284,5 +278,11 @@
  "250693bb3337": "Programa de recuperación de 12 pasos centrado en Cristo, para cualquiera que luche con heridas, dolor o adicciones de cualquier tipo. Una comunidad segura y de apoyo que encuentra libertad, sanación y esperanza a través del crecimiento espiritual y pasos prácticos.",
  "d5ef98300876": "¿Necesitas ayuda ahora mismo?",
  "8ffd496ed6d5": "No tienes que enfrentarlo solo.",
- "a05fd124808c": "<0>Línea de Crisis 988</0> <1>Encuentra A.A. cerca de ti</1>"
+ "a05fd124808c": "<0>Línea de Crisis 988</0> <1>Encuentra A.A. cerca de ti</1>",
+ "b200121a05a3": "<0>Enero<1>Tradición 1</1></0>",
+ "37382b5428c6": "<0>Febrero<1>Tradición 2</1></0>",
+ "466107b6cc93": "<0>Marzo<1>Tradición 3</1></0>",
+ "ba9597f7b626": "<0>Abril<1>Tradición 4</1></0>",
+ "ce38c440c5c1": "<0>Mayo<1>Tradición 5</1></0>",
+ "eeed231349a4": "<0>Junio<1>Tradición 6</1></0>"
 }

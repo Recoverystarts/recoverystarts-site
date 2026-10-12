@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- brand:icons -->
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="application-name" content="Recovery Starts">
+  <meta name="theme-color" content="#14110d">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Page introuvable — Recovery Starts</title>
+<script>/*rs-lang-404*/// a page a language hasn't published yet (/fr/daily-tradition/…): the English page, not a dead end. Never on the
+// 404 page itself (/es/404, /es/404.html), where the 🌐's own redirect lands, and at most once per address per tab, so
+// nothing can bounce between the two.
+(function(){try{var m=location.pathname.match(/^\/[a-z]{2}(?:-[a-z]{2,4})?(\/.+)$/i);if(!m||/\/404(\.html)?\/?$/i.test(m[1]))return;var k='rs404:'+location.pathname;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(m[1]+location.search+location.hash)}catch(e){}})();</script>
+<link rel="stylesheet" href="/style.css?v=b267d333f8">
+<style>
+  .nf-wrap {
+    position: relative; z-index: 1;
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 40px 24px;
+  }
+  .nf-code {
+    font-family: var(--font-display, 'Cinzel', serif);
+    font-size: clamp(4rem, 14vw, 8rem); font-weight: 700;
+    color: var(--gold, #C8A951); line-height: 1; margin-bottom: 8px;
+    text-shadow: 0 0 40px var(--gold-glow, rgba(200,169,81,0.3));
+  }
+  .nf-title { font-family: var(--font-display, 'Cinzel', serif); font-size: clamp(1.4rem, 4vw, 2rem); color: var(--text, #F0EDE6); margin-bottom: 14px; }
+  .nf-text { color: var(--text-muted, #9A9590); max-width: 460px; line-height: 1.7; margin-bottom: 32px; }
+  .nf-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .nf-links a {
+    display: inline-block; padding: 12px 22px; border-radius: var(--radius-sm, 8px);
+    border: 1px solid var(--border-hover, rgba(200,169,81,0.3));
+    color: var(--gold, #C8A951); font-weight: 600; transition: all 0.2s;
+  }
+  .nf-links a:hover { background: var(--gold-glow, rgba(200,169,81,0.15)); color: var(--gold-light, #E5C972); }
+  .nf-links a.primary { background: var(--gold, #C8A951); color: var(--paper, #0B0B0F); border-color: var(--gold, #C8A951); }
+  .nf-links a.primary:hover { background: var(--gold-light, #E5C972); }
+</style>
+  <link rel="canonical" href="https://recoverystarts.com/fr/404.html">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/404.html">
+  <link rel="alternate" hreflang="fr" href="https://recoverystarts.com/fr/404.html">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/404.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/404.html">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/404.html">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
+   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
+   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+@media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+   this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
+.rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
+.rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
+.rs-offer button{background:none;border:0;color:inherit;font-size:22px;line-height:1;min-width:36px;min-height:36px;cursor:pointer}
+</style>
+</head>
+<body>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/fr/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Ouvrir ou fermer le menu" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=fr" class="nav-cta nav-cta-map">Carte des réunions</a></li>
+      <li><a href="/online/?hl=fr" class="nav-cta nav-cta-online">Réunions en ligne</a></li>
+      <li class="has-sub nav-group-start"><a href="/daily-reflection/">Lecture du jour</a><button class="sub-toggle" aria-expanded="false" aria-label="Parcourir les lectures du jour">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Réflexion du jour</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/daily-reflection/today/">La réflexion d’aujourd’hui →</a></li>
+            <li><a href="/daily-reflection/january/">Janvier</a></li>
+            <li><a href="/daily-reflection/february/">Février</a></li>
+            <li><a href="/daily-reflection/march/">Mars</a></li>
+            <li><a href="/daily-reflection/april/">Avril</a></li>
+            <li><a href="/daily-reflection/may/">Mai</a></li>
+            <li><a href="/daily-reflection/june/">Juin</a></li>
+            <li><a href="/daily-reflection/july/">Juillet</a></li>
+            <li><a href="/daily-reflection/august/">Août</a></li>
+            <li><a href="/daily-reflection/september/">Septembre</a></li>
+            <li><a href="/daily-reflection/october/">Octobre</a></li>
+            <li><a href="/daily-reflection/november/">Novembre</a></li>
+            <li><a href="/daily-reflection/december/">Décembre</a></li>
+            <li class="sub-hub"><a href="/daily-reflection/">Toutes les réflexions du jour →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Tradition du jour</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/daily-tradition/today/">La Tradition d’aujourd’hui →</a></li>
+            <li><a href="/daily-tradition/january/">Janvier<small>Tradition 1</small></a></li>
+            <li><a href="/daily-tradition/february/">Février<small>Tradition 2</small></a></li>
+            <li><a href="/daily-tradition/march/">Mars<small>Tradition 3</small></a></li>
+            <li><a href="/daily-tradition/april/">Avril<small>Tradition 4</small></a></li>
+            <li><a href="/daily-tradition/may/">Mai<small>Tradition 5</small></a></li>
+            <li><a href="/daily-tradition/june/">Juin<small>Tradition 6</small></a></li>
+            <li><a href="/daily-tradition/july/">Juillet<small>Tradition 7</small></a></li>
+            <li><a href="/daily-tradition/august/">Août<small>Tradition 8</small></a></li>
+            <li><a href="/daily-tradition/september/">Septembre<small>Tradition 9</small></a></li>
+            <li><a href="/daily-tradition/october/">Octobre<small>Tradition 10</small></a></li>
+            <li><a href="/daily-tradition/november/">Novembre<small>Tradition 11</small></a></li>
+            <li><a href="/daily-tradition/december/">Décembre<small>Tradition 12</small></a></li>
+            <li class="sub-hub"><a href="/daily-tradition/">Toutes les Traditions du jour →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/big-book/">Gros Livre</a><button class="sub-toggle" aria-expanded="false" aria-label="Parcourir le Gros Livre">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/big-book/search/">Chercher dans le Gros Livre</a></li>
+        <li><a href="/big-book/pages/">Page par page</a></li>
+        <li><a href="/big-book/">Se procurer le Gros Livre</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/fr/aa-info/">Le programme</a><button class="sub-toggle" aria-expanded="false" aria-label="Parcourir le programme">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/12-steps/">Les Douze Étapes</a></li>
+        <li><a href="/12-traditions/">Les Douze Traditions</a></li>
+        <li><a href="/12-concepts/">Les Douze Concepts</a></li>
+        <li><a href="/aa-questions/">Questions sur les AA, réponses tirées des livres</a></li>
+        <li><a href="/fr/aa-info/">Infos AA</a></li>
+        <li><a href="/fr/meetings/">Trouver une réunion</a></li>
+      </ul></li>
+      <li><a href="/fr/about/">À propos</a></li>
+      <li class="nav-group-start nav-util"><a href="/fr/add-meeting/" class="nav-add-meeting">Ajouter une réunion</a></li>
+      <li class="nav-app"><a href="/fr/download/" class="nav-cta">Obtenir l’appli</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="fr">✓ Français</span><a href="/404.html" data-hl="en" hreflang="en" lang="en">English</a><a href="/es/404.html" data-hl="es" hreflang="es" lang="es">Español</a><a href="/pt/404.html" data-hl="pt" hreflang="pt-BR" lang="pt-BR">Português</a></div><script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script></details>
+  </div></nav>
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=404" target="_blank" rel="noopener" aria-label="Parler à Recovery Einstein — jour et nuit">
+    <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Parler à Recovery Einstein</strong><small>Vous n’êtes pas seul — jour et nuit</small></span>
+  </a>
+  <div class="nf-wrap">
+    <div class="nf-code">404</div>
+    <h1 class="nf-title">Cette page n’est pas ici</h1>
+    <p class="nf-text">La page que vous cherchez a été déplacée ou n’a jamais existé — mais l’aide au rétablissement n’est qu’à un clic. Vous êtes toujours le bienvenu ici.</p>
+    <div class="nf-links">
+      <a href="/fr/" class="primary">Accueil</a> <a href="/fr/meetings/">Trouver des réunions</a> <a href="https://app.recoverystarts.com?utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=404">Parler à Recovery Einstein</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Un projet indépendant de sensibilisation au rétablissement. Affilié à aucune fraternité. Chaque lecture ici est gratuite, complète, et le restera toujours.</p></div>
+        <div><h4>Lire</h4><ul class="footer-links"><li><a href="/daily-reflection/">Réflexion du jour</a></li><li><a href="/daily-tradition/">Tradition du jour</a></li><li><a href="/big-book/pages/">Le Gros Livre, page par page</a></li><li><a href="/big-book/search/">Chercher dans le Gros Livre</a></li></ul></div>
+        <div><h4>Le programme</h4><ul class="footer-links"><li><a href="/12-steps/">Les Douze Étapes</a></li><li><a href="/12-traditions/">Les Douze Traditions</a></li><li><a href="/12-concepts/">Les Douze Concepts</a></li><li><a href="/aa-questions/">Questions sur les AA</a></li><li><a href="/fr/aa-info/">Infos AA</a></li><li><a href="/fr/meetings/">Trouver une réunion</a></li></ul></div>
+        <div><h4>Liens</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/fr/download/">Obtenir l’appli</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Faire connaissance avec Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude’s Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">En crise en ce moment ? Au Canada, appelez ou textez le <a href="tel:988">988</a> (en français, 24 h sur 24). Aux États-Unis, appelez le 988 et demandez un interprète en français. En France, appelez le 3114. Vous n’êtes pas seul.</p>
+      <div class="privacy-notice"><strong>Confidentialité :</strong> nous utilisons Google Analytics et Cloudflare Web Analytics pour voir quelles pages aident les gens et ce qu’il faut améliorer ; Google dépose des témoins (cookies) de mesure d’audience. Nous ne vendons jamais vos données et ne publions jamais rien à votre sujet. <strong>Indépendance :</strong> affilié à aucune fraternité. <strong>Aucun avis médical :</strong> ne remplace pas des soins professionnels.</div>
+      <div class="footer-bottom"><p>© 2026 RecoveryStarts.com, un projet d'<a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Réalisé par <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script src="/app.js?v=b267d333f8"></script>
+<script>window.RS_T={"p":{"Donate":"Faire un don","Donate — keep it free":"Faire un don — pour que ça reste gratuit","Keep this free.":"Pour que ça reste gratuit.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Cette carte est construite et payée par une seule personne, de sa poche. Chaque nouveau pays coûte plus cher à faire tourner. Si elle vous a aidé à trouver une salle, un dollar dans le panier la garde gratuite pour la prochaine personne.","$1 in the basket":"1 $ dans le panier","Give more":"Donner plus","Close":"Fermer","Support Recovery Starts":"Soutenir Recovery Starts","Big Book app":"Appli du Gros Livre","Open web app":"Ouvrir l'appli Web","Free · also on Google Play":"Gratuit · aussi sur Google Play","Install":"Installer","In-app purchases · Free":"Achats intégrés · Gratuit","Get AA Big Book Search + AI Guide on Google Play":"Obtenez AA Big Book Search + AI Guide sur Google Play","Open AA Big Book Search + AI Guide, the free web app":"Ouvrez AA Big Book Search + AI Guide, l'appli Web gratuite","Today":"Aujourd'hui","Latest reading":"Dernière lecture","Sit with":"À méditer","Open this reading":"Ouvrir cette lecture","Ask Recovery Einstein about today's Tradition":"Interrogez Recovery Einstein sur la Tradition d'aujourd'hui"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl],.rs-offer a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);
+(function(){try{if(localStorage.getItem('rs_lang_offer')||localStorage.getItem('rs_hl'))return}catch(e){return}if(/(?:^|; )rs_hl=/.test(document.cookie))return;
+var cur=(document.documentElement.lang||'en').toLowerCase().split('-')[0],want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(function(x){return String(x).toLowerCase().split('-')[0]});
+if(!want[0]||want[0]===cur)return;var T={"en":["This page is also in English.","View in English"],"es":["Esta página también está en español.","Ver en español"],"pt":["Esta página também está em português.","Ver em português"],"fr":["Cette page existe aussi en français.","Voir en français"]},pick=null;document.querySelectorAll('.rs-globe a[data-hl]').forEach(function(a){var c=(a.getAttribute('data-hl')||'').split('-')[0];if(!pick&&T[c]&&want.indexOf(c)>-1)pick=a});if(!pick)return;
+var c=pick.getAttribute('data-hl').split('-')[0],bar=document.createElement('div');bar.className='rs-offer';bar.lang=pick.getAttribute('lang')||c;
+var s=document.createElement('span');s.textContent=T[c][0];var a=document.createElement('a');a.href=pick.getAttribute('href');a.textContent=T[c][1];a.setAttribute('data-hl',pick.getAttribute('data-hl'));
+var x=document.createElement('button');x.type='button';x.setAttribute('aria-label','×');x.textContent='×';function seen(){try{localStorage.setItem('rs_lang_offer','1')}catch(e){}}
+a.addEventListener('click',seen);x.addEventListener('click',function(){seen();bar.remove()});bar.appendChild(s);bar.appendChild(a);bar.appendChild(x);document.body.appendChild(bar)})();</script></body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deja los datos de la reunión — Recovery Starts</title>
+  <meta name="description" content="¿Conoces una reunión que no está en el mapa? Cuéntanos aquí — unas casillas, un enlace o un correo. Una persona lee cada uno.">
+  <meta property="og:title" content="Deja los datos de la reunión — Recovery Starts">
+  <meta property="og:description" content="¿Conoces una reunión que no está en el mapa? Cuéntanos aquí. Una persona lee cada uno.">
+  <meta property="og:url" content="https://recoverystarts.com/es/add-meeting/">
+  <meta property="og:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <link rel="stylesheet" href="/style.css?v=b267d333f8">
+  <link rel="canonical" href="https://recoverystarts.com/es/add-meeting/">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/add-meeting/">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/add-meeting/">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/add-meeting/">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+</style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/es/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Abrir o cerrar el menú" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=es" class="nav-cta nav-cta-map">Mapa de reuniones</a></li>
+      <li><a href="/online/?hl=es" class="nav-cta nav-cta-online">Reuniones en línea</a></li>
+      <li class="has-sub nav-group-start"><a href="/es/daily-reflection/">Lectura diaria</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver la lectura diaria">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Reflexión diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-reflection/today/">Reflexión de hoy →</a></li>
+            <li><a href="/es/daily-reflection/january/">Enero</a></li>
+            <li><a href="/es/daily-reflection/february/">Febrero</a></li>
+            <li><a href="/es/daily-reflection/march/">Marzo</a></li>
+            <li><a href="/es/daily-reflection/april/">Abril</a></li>
+            <li><a href="/es/daily-reflection/may/">Mayo</a></li>
+            <li><a href="/es/daily-reflection/june/">Junio</a></li>
+            <li><a href="/es/daily-reflection/july/">Julio</a></li>
+            <li><a href="/es/daily-reflection/august/">Agosto</a></li>
+            <li><a href="/es/daily-reflection/september/">Septiembre</a></li>
+            <li><a href="/es/daily-reflection/october/">Octubre</a></li>
+            <li><a href="/es/daily-reflection/november/">Noviembre</a></li>
+            <li><a href="/es/daily-reflection/december/">Diciembre</a></li>
+            <li class="sub-hub"><a href="/es/daily-reflection/">Toda la Reflexión diaria →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Tradición diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-tradition/today/">Tradición de hoy →</a></li>
+            <li class="sub-soon">Enero<small>Tradición 1 · próximamente</small></li>
+            <li class="sub-soon">Febrero<small>Tradición 2 · próximamente</small></li>
+            <li class="sub-soon">Marzo<small>Tradición 3 · próximamente</small></li>
+            <li class="sub-soon">Abril<small>Tradición 4 · próximamente</small></li>
+            <li class="sub-soon">Mayo<small>Tradición 5 · próximamente</small></li>
+            <li class="sub-soon">Junio<small>Tradición 6 · próximamente</small></li>
+            <li><a href="/es/daily-tradition/july/">Julio<small>Tradición 7</small></a></li>
+            <li><a href="/es/daily-tradition/august/">Agosto<small>Tradición 8</small></a></li>
+            <li><a href="/es/daily-tradition/september/">Septiembre<small>Tradición 9</small></a></li>
+            <li><a href="/es/daily-tradition/october/">Octubre<small>Tradición 10</small></a></li>
+            <li><a href="/es/daily-tradition/november/">Noviembre<small>Tradición 11</small></a></li>
+            <li><a href="/es/daily-tradition/december/">Diciembre<small>Tradición 12</small></a></li>
+            <li class="sub-hub"><a href="/es/daily-tradition/">Todas las Tradiciones diarias →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/big-book/">Libro Grande</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver el Libro Grande">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li>
+        <li><a href="/es/big-book/pages/">Página por página</a></li>
+        <li><a href="/es/big-book/">Conseguir el Libro Grande</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/aa-info/">El Programa</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver El Programa">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/12-steps/">Los Doce Pasos</a></li>
+        <li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li>
+        <li><a href="/es/12-concepts/">Los Doce Conceptos</a></li>
+        <li><a href="/es/aa-questions/">Preguntas sobre A.A., según los libros</a></li>
+        <li><a href="/es/aa-info/">Sobre A.A.</a></li>
+        <li><a href="/es/meetings/">Encontrar una reunión</a></li>
+      </ul></li>
+      <li><a href="/es/about/">Quiénes somos</a></li>
+      <li class="nav-group-start nav-util"><a href="/es/add-meeting/" class="nav-add-meeting">Agregar reunión</a></li>
+      <li class="nav-app"><a href="/es/download/" class="nav-cta">La app</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="es">✓ Español</span><a href="/add-meeting/" data-hl="en" hreflang="en" lang="en">English</a></div></details>
+  </div></nav>
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=add-meeting" target="_blank" rel="noopener" aria-label="Habla con Recovery Einstein — de día o de noche">
+    <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Habla con Recovery Einstein</strong><small>No estás solo — de día o de noche</small></span>
+  </a>
+  <style>
+    /* Scoped to this page so no site-wide asset re-bust is needed. Colours are
+       the existing tokens: teal is THE action accent, and --crisis stays 988-only. */
+    .mi-wrap { max-width: 46rem; margin: 0 auto; }
+    .mi-lead { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; }
+    .mi-ways { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 1.75rem 0 2.25rem; }
+    .mi-way { border: 1px solid var(--sky-rule); border-radius: .8rem; padding: .9rem 1rem; background: rgba(255,255,255,.03); }
+    .mi-way b { color: var(--accent); display: block; margin-bottom: .2rem; font-size: .95rem; }
+    .mi-way span { color: var(--ink-dim); font-size: .88rem; line-height: 1.5; }
+    .mi-form { display: grid; gap: 1.1rem; margin-top: .5rem; }
+    .mi-field label { display: block; font-weight: 600; margin-bottom: .35rem; font-size: .95rem; }
+    .mi-field .hint { display: block; font-weight: 400; color: var(--ink-dim); font-size: .84rem; margin-top: .15rem; }
+    .mi-form input[type=text], .mi-form input[type=email], .mi-form input[type=url], .mi-form textarea, .mi-form select {
+      width: 100%; padding: .7rem .85rem; border-radius: .6rem; font: inherit; color: var(--ink);
+      background: rgba(255,255,255,.05); border: 1px solid var(--sky-rule);
+    }
+    .mi-form textarea { min-height: 6.5rem; resize: vertical; }
+    .mi-form input:focus, .mi-form textarea:focus, .mi-form select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+    .mi-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .mi-actions { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; margin-top: .4rem; }
+    .mi-note { border-left: 3px solid var(--accent); padding: .85rem 1rem; background: rgba(45,212,191,.07);
+               border-radius: 0 .6rem .6rem 0; color: var(--ink-soft); font-size: .92rem; line-height: 1.6; }
+    .mi-status { display: none; padding: .9rem 1.1rem; border-radius: .7rem; font-size: .97rem; line-height: 1.55; }
+    .mi-status.show { display: block; }
+    .mi-status.ok { background: rgba(45,212,191,.12); border: 1px solid var(--accent-deep); color: var(--ink); }
+    .mi-status.bad { background: rgba(255,120,120,.10); border: 1px solid rgba(255,120,120,.45); color: var(--ink); }
+    @media (max-width: 540px) { .mi-ways { grid-template-columns: 1fr; } }
+  </style>
+
+  <main id="main">
+    <section class="section">
+      <div class="container mi-wrap">
+        <h1>Deja aquí los datos de la reunión</h1>
+        <p class="mi-lead">
+          El mapa se arma con lo que las comunidades publican en internet — así que las reuniones más difíciles de encontrar suelen ser las que no tienen sitio web. Es justo al revés de quien más las necesita. Si conoces una sala que falta, o una de las nuestras que se mudó o cerró, cuéntanos aquí. <strong>Una persona lee cada uno.</strong>
+        </p>
+
+        <div class="mi-ways">
+          <div class="mi-way"><b>Llena las casillas</b><span>Lo que sepas. Una línea basta — nosotros hacemos el resto.</span></div>
+          <div class="mi-way"><b>O solo deja un enlace</b><span>La página de un grupo, el horario de un distrito, incluso una publicación de Facebook.</span></div>
+          <div class="mi-way"><b>O mándalo por correo</b><span><a href="mailto:addict2influencer@gmail.com?subject=Meeting%20info">addict2influencer@gmail.com</a> — una foto de un horario también sirve.</span></div>
+        </div>
+
+        <div class="mi-note">
+          <strong>Por favor, que sea sobre la reunión, no sobre el miembro.</strong> Da el contacto <em>publicado</em> del grupo si tiene uno — una línea de ayuda o el correo del grupo. Por favor no mandes el nombre completo ni el teléfono personal de nadie, ni siquiera el de tu padrino. El anonimato es la clave, y este mapa es público.
+        </div>
+
+        <p id="mi-status" class="mi-status" role="status" aria-live="polite"></p>
+
+        <form class="mi-form" id="mi-form" method="POST" action="/api/meeting-info">
+          <div class="mi-field">
+            <label for="meeting_name">Nombre de la reunión o del grupo <span class="hint">Si lo sabes. «La del martes en la noche en la Legión» también sirve.</span>
+            </label>
+            <input type="text" id="meeting_name" name="meeting_name" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="where">¿Dónde se reúne? <span class="hint">Nombre del edificio y calle, o solo el pueblo.</span>
+            </label>
+            <input type="text" id="where" name="where" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="when">Día y hora <span class="hint">p. ej. «los martes 7:00 p.m.». Anota varios si el grupo se reúne más de una vez.</span>
+            </label>
+            <input type="text" id="when" name="when" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="program">¿Qué comunidad?</label>
+            <select id="program" name="program">
+              <option value="">No estoy seguro / otra</option>
+              <option>AA — Alcohólicos Anónimos</option>
+              <option>NA — Narcóticos Anónimos</option>
+              <option>CA — Cocaína Anónimos</option>
+              <option>CMA — Crystal Meth Anonymous</option>
+            </select>
+          </div>
+
+          <div class="mi-field">
+            <label for="link">Un enlace, si hay uno <span class="hint">La página del grupo, el horario del distrito, o una publicación con los datos.</span>
+            </label>
+            <input type="url" id="link" name="link" inputmode="url" placeholder="https://">
+          </div>
+
+          <div class="mi-field">
+            <label for="group_contact">El contacto publicado del grupo <span class="hint">Una línea de ayuda o un correo del grupo que ya sea público. Nunca el número personal de un miembro.</span>
+            </label>
+            <input type="text" id="group_contact" name="group_contact" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="notes">Algo más <span class="hint">Acceso en silla de ruedas, qué puerta, «reunión cerrada», o que una de las nuestras cerró o se mudó.</span>
+            </label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+
+          <div class="mi-field">
+            <label for="your_email">Tu correo — opcional <span class="hint">Solo para poder hacerte una pregunta de seguimiento. Nunca se publica, nunca se agrega a una lista.</span>
+            </label>
+            <input type="email" id="your_email" name="your_email" autocomplete="email">
+          </div>
+
+          <input type="hidden" id="page" name="page" value="">
+          <div class="mi-hp" aria-hidden="true">
+            <label for="website2">Deja esto vacío</label>
+            <input type="text" id="website2" name="website2" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="mi-actions">
+            <button type="submit" class="btn btn-glow" id="mi-submit">Enviar los datos de la reunión</button>
+            <a href="/meetings/find/?hl=es" style="color:var(--ink-dim)">o mira primero el mapa</a>
+          </div>
+        </form>
+
+        <p style="margin-top:2rem;color:var(--ink-dim);font-size:.9rem;line-height:1.6">
+          Nada de lo que envíes se publica automáticamente. Las reuniones entran al mapa solo después de que una persona las revisa, y una sala sin un lugar que se pueda encontrar se queda fuera en vez de mandar a alguien a una puerta que no existe.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  (function () {
+    var f = document.getElementById('mi-form');
+    if (!f) return;
+    var s = document.getElementById('mi-status');
+    var btn = document.getElementById('mi-submit');
+
+    // A no-JS submit posts the form and is redirected back here with ?sent=1,
+    // so the page has to be able to report the outcome without any JS having run.
+    var q = new URLSearchParams(location.search);
+    // Which listing the person came from (a "report a problem" link passes ?page=;
+    // otherwise the referrer) — so a "this meeting closed" report names the room.
+    var pg = document.getElementById('page');
+    if (pg) pg.value = q.get('page') || (document.referrer && /recoverystarts\.com\/meetings\//.test(document.referrer) ? document.referrer : '');
+    if (pg && pg.value) {
+      var mn = document.getElementById('meeting_name');
+      if (mn && !mn.value && q.get('name')) mn.value = q.get('name');
+      var st = document.getElementById('mi-status');
+      if (st) { st.textContent = 'About the listing: ' + pg.value.replace(/^https?:\/\//, '') + ' — tell us what changed (moved, ended, wrong time).'; st.className = 'mi-status show ok'; }
+    }
+    if (q.get('sent')) show('ok', 'Thank you — a person will read this and add the meeting.');
+    else if (q.get('error')) show('bad', q.get('error'));
+    if (q.get('sent') || q.get('error') || q.get('page')) history.replaceState({}, '', location.pathname);
+
+    function show(kind, msg) {
+      s.textContent = msg;
+      s.className = 'mi-status show ' + kind;
+      s.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = {};
+      new FormData(f).forEach(function (v, k) { data[k] = v; });
+      btn.disabled = true;
+      var was = btn.textContent;
+      btn.textContent = 'Sending…';
+      fetch('/api/meeting-info', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) { return r.json().catch(function () { return { ok: r.ok, message: r.ok ? 'Thank you.' : 'Something went wrong.' }; }); })
+        .then(function (j) {
+          show(j.ok ? 'ok' : 'bad', j.message || (j.ok ? 'Thank you.' : 'Something went wrong.'));
+          if (j.ok) f.reset();
+        })
+        .catch(function () {
+          show('bad', 'That did not send — you can email addict2influencer@gmail.com instead.');
+        })
+        .then(function () { btn.disabled = false; btn.textContent = was; });
+    });
+  })();
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Un proyecto independiente de conciencia sobre la recuperación. Sin vínculo con ninguna comunidad. Cada lectura aquí es gratis, completa, y siempre lo será.</p></div>
+        <div><h4>Leer</h4><ul class="footer-links"><li><a href="/es/daily-reflection/">Reflexión diaria</a></li><li><a href="/es/daily-tradition/">Tradición diaria</a></li><li><a href="/es/big-book/pages/">El Libro Grande, página por página</a></li><li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li></ul></div>
+        <div><h4>El Programa</h4><ul class="footer-links"><li><a href="/es/12-steps/">Los Doce Pasos</a></li><li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li><li><a href="/es/12-concepts/">Los Doce Conceptos</a></li><li><a href="/es/aa-questions/">Preguntas sobre A.A.</a></li><li><a href="/es/aa-info/">Sobre A.A.</a></li><li><a href="/es/meetings/">Encontrar una reunión</a></li></ul></div>
+        <div><h4>Conectar</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/es/download/">Descargar la app</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Conoce a Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">¿Estás en crisis ahora? Llama o envía un mensaje de texto al <a href="tel:988">988</a> (en Estados Unidos, marca 2 para español o escribe AYUDA). No estás solo.</p>
+      <div class="privacy-notice"><strong>Privacidad:</strong> Usamos Google Analytics y Cloudflare Web Analytics para ver qué páginas ayudan a la gente y dónde mejorar; la de Google pone cookies de analítica. Nunca vendemos tus datos ni publicamos nada sobre ti. <strong>Independencia:</strong> Sin vínculo con ninguna comunidad. <strong>Sin consejo médico:</strong> No sustituye la atención profesional.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, un proyecto de <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Hecho por <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/app.js?v=b267d333f8"></script>
+<!-- Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+<script>window.RS_T={"p":{"Donate":"Donar","Donate — keep it free":"Donar — mantenlo gratis","Keep this free.":"Mantenlo gratis.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Este mapa lo construye y lo paga una sola persona, de su bolsillo. Cada país nuevo cuesta más mantenerlo. Si te ayudó a encontrar una sala, un dólar en la canasta lo mantiene gratis para la próxima persona.","$1 in the basket":"$1 en la canasta","Give more":"Dar más","Close":"Cerrar","Support Recovery Starts":"Apoya a Recovery Starts","Big Book app":"App del Libro Grande","Open web app":"Abrir la app web","Free · also on Google Play":"Gratis · también en Google Play","Install":"Instalar","In-app purchases · Free":"Compras dentro de la app · Gratis","Get AA Big Book Search + AI Guide on Google Play":"Consigue AA Big Book Search + AI Guide en Google Play","Open AA Big Book Search + AI Guide, the free web app":"Abre AA Big Book Search + AI Guide, la app web gratis"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);</script></body>
+</html>

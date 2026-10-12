@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- brand:icons -->
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="application-name" content="Recovery Starts">
+  <meta name="theme-color" content="#14110d">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca en el Libro Grande de Alcohólicos Anónimos (4.ª edición) — Gratis</title>
+  <meta name="description" content="Búsqueda gratuita e instantánea en el Libro Grande de Alcohólicos Anónimos, 4.ª edición. Escribe una palabra, una frase, un número de página o un Paso y obtén la página exacta, el capítulo y el pasaje. Sin cuenta, sin rastreo.">
+  <meta property="og:title" content="Busca en el Libro Grande de Alcohólicos Anónimos (4.ª edición) — Gratis">
+  <meta property="og:description" content="Escribe una palabra, una frase, un número de página o un Paso y ve directo a la página del Libro Grande. Gratis. Sin cuenta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recoverystarts.com/es/big-book/search/">
+  <meta property="og:site_name" content="Recovery Starts">
+  <meta property="og:image" content="https://recoverystarts.com/assets/og/og-bigbook.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Recovery Starts - lecturas de recuperación gratis, reuniones y el Libro Grande">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Busca en el Libro Grande de Alcohólicos Anónimos (4.ª edición) — Gratis">
+  <meta name="twitter:description" content="Escribe una palabra, una frase, un número de página o un Paso y ve directo a la página. Gratis. Sin cuenta.">
+  <meta name="twitter:image" content="https://recoverystarts.com/assets/og/og-bigbook.jpg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Recovery Starts — Big Book Search","url":"https://recoverystarts.com/big-book/search/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://recoverystarts.com/big-book/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which edition of the Big Book does the search cover?","acceptedAnswer":{"@type":"Answer","text":"The 4th Edition of Alcoholics Anonymous, from the Title Page through the Personal Stories and the appendices. Page numbers match the printed 4th Edition."}},{"@type":"Question","name":"Can I search by page number?","acceptedAnswer":{"@type":"Answer","text":"Yes. Type a page number like 417, page 83, or a Roman numeral like xxv and the search jumps straight to that page's text. Pages that are blank in the book resolve to the nearest printed page."}},{"@type":"Question","name":"Does the search include the 12 Traditions?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Twelve Traditions appear in the Big Book's Appendix I, The A.A. Tradition. The short form is on pages 561 to 562 and the Long Form runs pages 563 to 566. Searching '12 traditions' brings up page 563."}},{"@type":"Question","name":"Where is Step 12 in the Big Book?","acceptedAnswer":{"@type":"Answer","text":"Step 12 is stated on page 60, and it is lived out in the chapter Working With Others, which runs pages 89 to 103. Searching 'step 12' shows the Step text and points to Working With Others, pages 89 to 103."}},{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The search is free and needs no account. The search itself sets no cookies; the site&rsquo;s Google Analytics does. The search runs in your browser."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://recoverystarts.com/"},{"@type":"ListItem","position":2,"name":"Big Book","item":"https://recoverystarts.com/big-book/search/"},{"@type":"ListItem","position":3,"name":"Search the Big Book","item":"https://recoverystarts.com/big-book/search/"}]}
+  </script>
+  <link rel="stylesheet" href="/style.css?v=b267d333f8">
+  <style>
+    .bb-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
+    .bb-wrap { padding: clamp(1.5rem,4vw,3rem) 0 4rem; }
+    .bb-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1rem; }
+    .bb-crumb a { color: var(--text-muted); }
+    .bb-kicker { color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; text-align: center; }
+    .bb-title { font-family: var(--font-display); color: var(--text); text-align: center; font-size: clamp(1.9rem,5vw,2.7rem); line-height: 1.15; margin: 8px 0 6px; }
+    .bb-sub { text-align: center; color: var(--text-muted); margin: 0 auto 1.8rem; max-width: 620px; }
+
+    .bb-searchwrap { max-width: 720px; margin: 0 auto; }
+    .bb-box { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border-hover); border-radius: 999px; padding: 6px 6px 6px 18px; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+    .bb-box:focus-within { border-color: var(--gold); }
+    .bb-box svg { flex-shrink: 0; color: var(--text-dim); }
+    #bb-input { flex: 1; background: transparent; border: none; outline: none; color: var(--text); font-family: var(--font-body); font-size: 1.05rem; padding: 10px 0; min-width: 0; }
+    #bb-input::placeholder { color: var(--text-dim); }
+    #bb-clear { display: none; background: none; border: none; color: var(--text-dim); cursor: pointer; padding: 6px; border-radius: 50%; }
+    #bb-clear:hover { color: var(--text); }
+
+    .bb-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px auto 0; max-width: 720px; }
+    .bb-chip-label { width: 100%; text-align:center; color: var(--text-dim); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2px; }
+    .bb-chip { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); border-radius: 999px; padding: 7px 15px; font-size: 0.85rem; font-family: var(--font-body); cursor: pointer; transition: all 0.2s; }
+    .bb-chip:hover { border-color: var(--border-hover); color: var(--gold); }
+
+    /* Results: three side-by-side columns. The ANSWER (steps / references)
+       leads on the left, so someone on a borrowed desktop with limited time
+       sees the truth immediately — no scrolling, no hunting. Columns auto-fit
+       (an empty section simply doesn't render, and the rest expand) and stack
+       to one column on mobile. */
+    #bb-results { max-width: 1280px; margin: 1.8rem auto 0; }
+    .bb-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; align-items: start; }
+    .bb-group { margin: 0; min-width: 0; }
+    .bb-group.jump { max-width: 860px; margin: 0 auto 1.2rem; }
+    .bb-group-body { max-height: 62vh; overflow-y: auto; padding-right: 5px; }
+    .bb-group-body::-webkit-scrollbar { width: 6px; }
+    .bb-group-body::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
+    .bb-group-title { font-family: var(--font-display); color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 0.6rem; }
+    .bb-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 8px; }
+    .bb-card.bb-longform { border-color: var(--gold); }
+    .bb-longform-note { color: var(--text-dim); font-size: 0.82rem; line-height: 1.55; margin: 7px 0 0; }
+    @media (max-width: 900px) {
+      .bb-cols { grid-template-columns: 1fr; }
+      .bb-group-body { max-height: none; overflow: visible; }
+    }
+    .bb-card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+    .bb-badge { font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--bg-deep); background: var(--gold); border-radius: 999px; padding: 3px 9px; }
+    .bb-badge.subtle { color: var(--gold); background: var(--gold-glow); }
+    .bb-cite { font-size: 0.8rem; color: var(--text-dim); }
+    .bb-quote { color: var(--text); line-height: 1.6; margin: 0; font-size: 0.95rem; }
+    .bb-snippet { color: var(--text-muted); line-height: 1.6; margin: 0; font-size: 0.9rem; }
+    .bb-snippet mark, .bb-pagetext mark { background: var(--gold-glow-strong); color: var(--gold-light); border-radius: 3px; padding: 0 2px; }
+    .bb-pagelink { background: none; border: none; color: var(--gold); font-family: var(--font-body); font-size: inherit; cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 2px; }
+    .bb-pagelink:hover { color: var(--gold-light); }
+    .bb-pagelink.strong { font-weight: 600; text-decoration: none; }
+    .bb-know-title { color: var(--text); font-weight: 600; font-size: 1rem; margin: 0 0 4px; }
+    .bb-pamphlets { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; border-top: 1px solid var(--border); padding-top: 10px; }
+    .bb-pamphlets-lbl { width: 100%; font-size: 0.68rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-dim); }
+    .bb-pamphlet { font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 12px; color: var(--text-muted); }
+    .bb-pamphlet:hover { border-color: var(--border-hover); color: var(--gold); }
+    /* .bb-pagetext is gone: a page jump no longer prints the page's text.
+       It hands off to the page's reference card and to the app instead. */
+    .bb-page-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 12px; }
+    .bb-page-actions .btn { font-size: 0.9rem; padding: 9px 16px; }
+    .bb-page-note { color: var(--text-dim); font-size: 0.82rem; line-height: 1.6; margin: 0; }
+    .bb-page-note a { color: var(--gold); }
+    .bb-skeleton { height: 54px; border-radius: var(--radius); background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card-hover) 50%, var(--bg-card) 75%); background-size: 200% 100%; animation: bbshimmer 1.2s infinite; margin-bottom: 10px; }
+    @keyframes bbshimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+    .bb-noresults { color: var(--text-muted); line-height: 1.7; text-align: center; }
+    .bb-cta { text-align: center; margin: 2rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--border); }
+    .bb-cta p { color: var(--text-muted); margin-bottom: 0.9rem; }
+
+    .bb-empty { text-align: center; max-width: 620px; margin: 2rem auto 0; }
+    .bb-empty .q { font-family: var(--font-display); color: var(--text); font-size: 1.15rem; font-style: italic; line-height: 1.5; }
+    .bb-empty .qa { color: var(--gold); font-size: 0.85rem; margin-top: 6px; }
+
+    .bb-section { max-width: 900px; margin: 3rem auto 0; }
+    .bb-section h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.15rem; text-align: center; margin-bottom: 1rem; }
+    .bb-topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 10px; }
+    .bb-topic { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--text-muted); font-size: 0.9rem; transition: all 0.2s; }
+    .bb-topic:hover { border-color: var(--border-hover); color: var(--gold); transform: translateY(-2px); }
+    .bb-trad { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1.2rem,3vw,2rem); }
+    .bb-trad p { color: var(--text-muted); line-height: 1.75; margin-bottom: 0.9rem; }
+    .bb-trad strong { color: var(--text); }
+    .bb-trad .bb-pamphlets { justify-content: flex-start; }
+    .bb-faq-list { max-width: 760px; margin: 0 auto; text-align: left; }
+    .bb-faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 18px; margin-bottom: 10px; }
+    .bb-faq-item h3 { color: var(--text); font-size: 0.98rem; margin: 0 0 6px; }
+    .bb-faq-item p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }
+    .bb-disclaimer { max-width: 720px; margin: 2.4rem auto 0; text-align: center; color: var(--text-dim); font-size: 0.78rem; line-height: 1.6; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  </style>
+  <link rel="canonical" href="https://recoverystarts.com/es/big-book/search/">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/big-book/search/">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/big-book/search/">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/big-book/search/">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+</style>
+</head>
+<body>
+  <div class="bb-bg"></div>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/es/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Abrir o cerrar el menú" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=es" class="nav-cta nav-cta-map">Mapa de reuniones</a></li>
+      <li><a href="/online/?hl=es" class="nav-cta nav-cta-online">Reuniones en línea</a></li>
+      <li class="has-sub nav-group-start"><a href="/es/daily-reflection/">Lectura diaria</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver la lectura diaria">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Reflexión diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-reflection/today/">Reflexión de hoy →</a></li>
+            <li><a href="/es/daily-reflection/january/">Enero</a></li>
+            <li><a href="/es/daily-reflection/february/">Febrero</a></li>
+            <li><a href="/es/daily-reflection/march/">Marzo</a></li>
+            <li><a href="/es/daily-reflection/april/">Abril</a></li>
+            <li><a href="/es/daily-reflection/may/">Mayo</a></li>
+            <li><a href="/es/daily-reflection/june/">Junio</a></li>
+            <li><a href="/es/daily-reflection/july/">Julio</a></li>
+            <li><a href="/es/daily-reflection/august/">Agosto</a></li>
+            <li><a href="/es/daily-reflection/september/">Septiembre</a></li>
+            <li><a href="/es/daily-reflection/october/">Octubre</a></li>
+            <li><a href="/es/daily-reflection/november/">Noviembre</a></li>
+            <li><a href="/es/daily-reflection/december/">Diciembre</a></li>
+            <li class="sub-hub"><a href="/es/daily-reflection/">Toda la Reflexión diaria →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Tradición diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-tradition/today/">Tradición de hoy →</a></li>
+            <li class="sub-soon">Enero<small>Tradición 1 · próximamente</small></li>
+            <li class="sub-soon">Febrero<small>Tradición 2 · próximamente</small></li>
+            <li class="sub-soon">Marzo<small>Tradición 3 · próximamente</small></li>
+            <li class="sub-soon">Abril<small>Tradición 4 · próximamente</small></li>
+            <li class="sub-soon">Mayo<small>Tradición 5 · próximamente</small></li>
+            <li class="sub-soon">Junio<small>Tradición 6 · próximamente</small></li>
+            <li><a href="/es/daily-tradition/july/">Julio<small>Tradición 7</small></a></li>
+            <li><a href="/es/daily-tradition/august/">Agosto<small>Tradición 8</small></a></li>
+            <li><a href="/es/daily-tradition/september/">Septiembre<small>Tradición 9</small></a></li>
+            <li><a href="/es/daily-tradition/october/">Octubre<small>Tradición 10</small></a></li>
+            <li><a href="/es/daily-tradition/november/">Noviembre<small>Tradición 11</small></a></li>
+            <li><a href="/es/daily-tradition/december/">Diciembre<small>Tradición 12</small></a></li>
+            <li class="sub-hub"><a href="/es/daily-tradition/">Todas las Tradiciones diarias →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/big-book/" class="active">Libro Grande</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver el Libro Grande">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li>
+        <li><a href="/es/big-book/pages/">Página por página</a></li>
+        <li><a href="/es/big-book/">Conseguir el Libro Grande</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/aa-info/">El Programa</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver El Programa">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/12-steps/">Los Doce Pasos</a></li>
+        <li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li>
+        <li><a href="/es/12-concepts/">Los Doce Conceptos</a></li>
+        <li><a href="/es/aa-questions/">Preguntas sobre A.A., según los libros</a></li>
+        <li><a href="/es/aa-info/">Sobre A.A.</a></li>
+        <li><a href="/es/meetings/">Encontrar una reunión</a></li>
+      </ul></li>
+      <li><a href="/es/about/">Quiénes somos</a></li>
+      <li class="nav-group-start nav-util"><a href="/es/add-meeting/" class="nav-add-meeting">Agregar reunión</a></li>
+      <li class="nav-app"><a href="/es/download/" class="nav-cta">La app</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="es">✓ Español</span><a href="/big-book/search/" data-hl="en" hreflang="en" lang="en">English</a></div></details>
+  </div></nav>
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=big-book-search" target="_blank" rel="noopener" aria-label="Habla con Recovery Einstein — de día o de noche">
+    <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Habla con Recovery Einstein</strong><small>No estás solo — de día o de noche</small></span>
+  </a>
+
+  <main id="main"><section class="bb-wrap"><div class="container">
+    <nav class="bb-crumb"><a href="/es/">Inicio</a> / Libro Grande / Buscar</nav>
+    <div class="bb-kicker">El Libro Grande · 4.ª edición</div>
+    <h1 class="bb-title">Busca en el Libro Grande de Alcohólicos Anónimos</h1>
+    <p class="bb-sub">Escribe una palabra, una frase, un número de página o un Paso. Ve directo a la página, el capítulo y el pasaje, con las palabras exactas resaltadas. Gratis, sin cuenta, sin nada que instalar.</p>
+    <p class="bb-sub" style="margin-top:-0.6rem"><a href="/es/big-book/pages/" style="color:var(--gold)">O recorre el libro página por página →</a></p>
+
+    <div style="text-align:center; margin: 0 0 2rem">
+      <a class="btn btn-glow" href="https://read.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=bigbook-search&amp;utm_content=top">Buscador del Libro Grande: las páginas reales, gratis →</a>
+      <p class="bb-sub" style="margin: 0.7rem 0 0; font-size: 0.9rem">El lector y buscador propios de la aplicación. Cada página a tamaño completo, sin cuenta.</p>
+    </div>
+
+    <div class="bb-searchwrap">
+      <label for="bb-input" class="sr-only">Busca en el Libro Grande</label>
+      <div class="bb-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="bb-input" type="search" placeholder="Prueba con «resentimiento», «medidas a medias», «paso 12» o «417»…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+        <button id="bb-clear" type="button" aria-label="Borrar búsqueda">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="bb-suggestions" class="bb-chips">
+        <div class="bb-chip-label">Prueba una búsqueda</div>
+        <button class="bb-chip" data-q="resentment">resentimiento</button>
+        <button class="bb-chip" data-q="how to take inventory">cómo hacer el inventario</button>
+        <button class="bb-chip" data-q="powerlessness">impotencia</button>
+        <button class="bb-chip" data-q="making amends">hacer enmiendas</button>
+        <button class="bb-chip" data-q="step 12">paso 12</button>
+        <button class="bb-chip" data-q="12 traditions">12 tradiciones</button>
+        <button class="bb-chip" data-q="417">página 417</button>
+      </div>
+    </div>
+
+    <p id="bb-status" class="sr-only" role="status" aria-live="polite"></p>
+
+    <div id="bb-empty" class="bb-empty">
+      <p class="q">“Raras veces hemos visto fracasar a una persona que haya seguido a conciencia nuestro camino.”</p>
+      <p class="qa">— Cómo trabaja, p. 58</p>
+    </div>
+
+    <div id="bb-results"></div>
+
+    <!-- Crawlable core content: present in the initial HTML so the page is
+         useful and indexable even before the search engine loads. -->
+    <div class="bb-section">
+      <h2>Pasajes populares del Libro Grande</h2>
+      <div class="bb-topic-grid">
+        <a class="bb-topic" href="/es/big-book/powerlessness/">La impotencia (Primer Paso)</a> <a class="bb-topic" href="/es/big-book/resentment/">El resentimiento: el infractor número uno</a> <a class="bb-topic" href="/es/big-book/fear-inventory/">El inventario de miedos</a> <a class="bb-topic" href="/es/big-book/step-4-instructions/">Instrucciones del Cuarto Paso</a> <a class="bb-topic" href="/es/big-book/how-it-works/">Cómo trabaja (p. 58)</a> <a class="bb-topic" href="/es/big-book/amends/">Hacer enmiendas</a> <a class="bb-topic" href="/es/big-book/the-promises/">Las Promesas (pp. 83–84)</a> <a class="bb-topic" href="/es/big-book/acceptance/">La aceptación (p. 417)</a> <a class="bb-topic" href="/es/big-book/self-will/">La voluntad propia</a> <a class="bb-topic" href="/es/big-book/spiritual-experience/">La experiencia espiritual</a> <a class="bb-topic" href="/es/big-book/daily-reprieve/">La tregua diaria (p. 85)</a> <a class="bb-topic" href="/es/big-book/carrying-the-message/">Llevar el mensaje (Paso Doce)</a> <a class="bb-topic" href="/es/big-book/sponsorship/">El apadrinamiento en el Libro Grande</a> <a class="bb-topic" href="/es/big-book/page-83/">Página 83</a> <a class="bb-topic" href="/es/big-book/more-will-be-revealed/">Se nos revelará más</a> <a class="bb-topic" href="/es/12-steps/">Los 12 Pasos: índice</a>
+      </div>
+    </div>
+
+    <div class="bb-section" id="traditions">
+      <h2>Las 12 Tradiciones (Apéndice I)</h2>
+      <div class="bb-trad">
+        <p>Las Doce Tradiciones están en el <strong>Apéndice I del Libro Grande, «La Tradición de A.A.»</strong>. La forma corta está en las <strong>páginas 561–562</strong>; la <strong>forma larga abarca las páginas 563–566</strong>. Busca <em>«12 tradiciones»</em> arriba para ir a la página 563.</p>
+        <p>Las Tradiciones son de <strong>gobierno</strong>: principios organizativos y estructurales sobre el dinero, la autoridad, la membresía, las relaciones públicas y la autonomía. No tratan de Dios ni de un poder superior. «Conciencia de grupo» significa la decisión colectiva del grupo; la expresión más antigua «un Dios amoroso … en la conciencia de nuestro grupo» significa que ninguna persona está a cargo, no es una afirmación teológica.</p>
+        <p><strong>Tercera Tradición, forma larga:</strong> «Dos o tres alcohólicos reunidos para lograr la sobriedad pueden llamarse un grupo de A.A., siempre que, como grupo, no tengan ninguna otra afiliación». Ningún centro de tratamiento, establecimiento o institución puede ser dueño de un grupo de A.A. ni autorizarlo.</p>
+        <div class="bb-pamphlets">
+          <span class="bb-pamphlets-lbl">Lee las Tradiciones</span> <a class="bb-pamphlet" href="https://www.aa.org/twelve-traditions-alcoholics-anonymous-long-form" target="_blank" rel="noopener">SMF-187 — Las Doce Tradiciones (forma larga) · aa.org</a> <a class="bb-pamphlet" href="https://www.aa.org/experience-has-taught-us-introduction-our-twelve-traditions" target="_blank" rel="noopener">P-91 — Introducción a nuestras Doce Tradiciones · aa.org</a> <a class="bb-pamphlet" href="https://www.aa.org/twelve-traditions-illustrated" target="_blank" rel="noopener">P-43 — Las Doce Tradiciones ilustradas · aa.org</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bb-section" id="faq">
+      <h2>Preguntas frecuentes</h2>
+      <div class="bb-faq-list">
+        <div class="bb-faq-item">
+          <h3>¿Qué edición del Libro Grande cubre la búsqueda?</h3>
+          <p>La 4.ª edición de Alcohólicos Anónimos, desde la portada hasta las Historias personales y los apéndices. Los números de página coinciden con la 4.ª edición impresa.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>¿Puedo buscar por número de página?</h3>
+          <p>Sí. Escribe un número de página como 417, página 83, o un número romano como xxv, y la búsqueda salta directo al texto de esa página. Las páginas que están en blanco en el libro llevan a la página impresa más cercana.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>¿La búsqueda incluye las 12 Tradiciones?</h3>
+          <p>Sí. Las Doce Tradiciones aparecen en el Apéndice I del Libro Grande, La Tradición de A.A. La forma corta está en las páginas 561 a 562 y la forma larga abarca las páginas 563 a 566. Al buscar «12 tradiciones» aparece la página 563.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>¿Dónde está el Paso 12 en el Libro Grande?</h3>
+          <p>El Paso 12 se enuncia en la página 60, y se vive en el capítulo Trabajando con los demás, que abarca las <strong>páginas 89–103</strong>. Al buscar «paso 12» se muestra el texto del Paso y se señala Trabajando con los demás, pp. 89–103.</p>
+        </div>
+        <div class="bb-faq-item">
+          <h3>¿Es gratis?</h3>
+          <p>Sí. La búsqueda es gratuita y no necesita cuenta. La búsqueda en sí no instala cookies; Google Analytics del sitio sí. La búsqueda se ejecuta en tu navegador.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="bb-disclaimer">Esta es una herramienta de búsqueda educativa independiente sobre <em>Alcohólicos Anónimos</em> (el Libro Grande), 4.ª edición. No es literatura oficial de A.A. ni consejo médico. Las referencias de página son a la 4.ª edición impresa. Si estás en crisis, llama o envía un mensaje al 988 (Línea de Prevención del Suicidio y Crisis; en Estados Unidos, marca 2 para español o escribe AYUDA).</p>
+  </div></section></main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Un proyecto independiente de conciencia sobre la recuperación. Sin vínculo con ninguna comunidad. Cada lectura aquí es gratis, completa, y siempre lo será.</p></div>
+        <div><h4>Leer</h4><ul class="footer-links"><li><a href="/es/daily-reflection/">Reflexión diaria</a></li><li><a href="/es/daily-tradition/">Tradición diaria</a></li><li><a href="/es/big-book/pages/">El Libro Grande, página por página</a></li><li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li></ul></div>
+        <div><h4>El Programa</h4><ul class="footer-links"><li><a href="/es/12-steps/">Los Doce Pasos</a></li><li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li><li><a href="/es/12-concepts/">Los Doce Conceptos</a></li><li><a href="/es/aa-questions/">Preguntas sobre A.A.</a></li><li><a href="/es/aa-info/">Sobre A.A.</a></li><li><a href="/es/meetings/">Encontrar una reunión</a></li></ul></div>
+        <div><h4>Conectar</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/es/download/">Descargar la app</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Conoce a Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">¿Estás en crisis ahora? Llama o envía un mensaje de texto al <a href="tel:988">988</a> (en Estados Unidos, marca 2 para español o escribe AYUDA). No estás solo.</p>
+      <div class="privacy-notice"><strong>Privacidad:</strong> Usamos Google Analytics y Cloudflare Web Analytics para ver qué páginas ayudan a la gente y dónde mejorar; la de Google pone cookies de analítica. Nunca vendemos tus datos ni publicamos nada sobre ti. <strong>Independencia:</strong> Sin vínculo con ninguna comunidad. <strong>Sin consejo médico:</strong> No sustituye la atención profesional.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, un proyecto de <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Hecho por <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script src="/app.js?v=b267d333f8"></script>
+  <script type="module" src="/assets/bigbook/searchApp.js"></script>
+<!-- Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+<script>window.RS_T={"p":{"Donate":"Donar","Donate — keep it free":"Donar — mantenlo gratis","Keep this free.":"Mantenlo gratis.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Este mapa lo construye y lo paga una sola persona, de su bolsillo. Cada país nuevo cuesta más mantenerlo. Si te ayudó a encontrar una sala, un dólar en la canasta lo mantiene gratis para la próxima persona.","$1 in the basket":"$1 en la canasta","Give more":"Dar más","Close":"Cerrar","Support Recovery Starts":"Apoya a Recovery Starts","Big Book app":"App del Libro Grande","Open web app":"Abrir la app web","Free · also on Google Play":"Gratis · también en Google Play","Install":"Instalar","In-app purchases · Free":"Compras dentro de la app · Gratis","Get AA Big Book Search + AI Guide on Google Play":"Consigue AA Big Book Search + AI Guide en Google Play","Open AA Big Book Search + AI Guide, the free web app":"Abre AA Big Book Search + AI Guide, la app web gratis"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);</script></body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- brand:icons -->
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="application-name" content="Recovery Starts">
+  <meta name="theme-color" content="#14110d">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexión diaria: la mirada de Recovery Einstein desde el Libro Grande | Recovery Starts</title>
+  <meta name="description" content="Una reflexión diaria del Libro Grande de la mano de Recovery Einstein: el tema de la Reflexión diaria de A.A. de hoy a través de la sabiduría del Libro Grande, con referencias de página y una pregunta para llevar contigo. Explora los 366 días.">
+  <meta property="og:title" content="Reflexión diaria: la mirada de Recovery Einstein desde el Libro Grande">
+  <meta property="og:description" content="Una reflexión diaria del Libro Grande de la mano de Recovery Einstein: el tema de la Reflexión diaria de A.A. de hoy a través de la sabiduría del Libro Grande, con referencias de página y una pregunta para llevar contigo. Explora los 366 días.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://recoverystarts.com/es/daily-reflection/">
+  <meta property="og:site_name" content="Recovery Starts">
+  <meta property="og:image" content="https://recoverystarts.com/assets/og/og-daily.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Recovery Starts - lecturas de recuperación gratis, reuniones y el Libro Grande">
+  <meta property="og:locale" content="es_LA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reflexión diaria: la mirada de Recovery Einstein desde el Libro Grande">
+  <meta name="twitter:description" content="Una reflexión diaria del Libro Grande de la mano de Recovery Einstein: el tema de la Reflexión diaria de A.A. de hoy a través de la sabiduría del Libro Grande, con referencias de página y una pregunta para llevar contigo. Explora los 366 días.">
+  <meta name="twitter:image" content="https://recoverystarts.com/assets/og/og-daily.jpg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Daily Reflection — Recovery Einstein","url":"https://recoverystarts.com/daily-reflection/","description":"A daily Big Book reflection from Recovery Einstein — today's AA Daily Reflection theme through the wisdom of the Big Book, with page references and a question to carry with you. Browse all 366 days.","isPartOf":{"@type":"WebSite","name":"Recovery Starts","url":"https://recoverystarts.com"}}
+  </script>
+  <link rel="stylesheet" href="/style.css?v=b267d333f8">
+  <style>
+    .dr-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
+    .dr-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
+    .dr-crumb { text-align:center; font-size:0.78rem; color:var(--text-dim); margin-bottom:1.2rem; }
+    .dr-crumb a { color: var(--text-muted); }
+    .dr-date { color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; text-align: center; }
+    .dr-theme { font-family: var(--font-display); color: var(--text); text-align: center; font-size: clamp(1.8rem,5vw,2.8rem); line-height: 1.15; margin: 8px 0 6px; }
+    .dr-sub { text-align: center; color: var(--text-muted); font-style: italic; margin-bottom: 2.2rem; }
+    .dr-stage { display: grid; grid-template-columns: 300px 1fr; gap: 2rem; align-items: center; max-width: 980px; margin: 0 auto; }
+    .dr-figure { position: relative; text-align: center; }
+    .dr-figure img { width: 100%; max-width: 300px; border-radius: var(--radius-lg); filter: drop-shadow(0 0 40px var(--gold-glow)); }
+    .dr-booklink { display:inline-block; margin-top: 14px; font-size: 0.85rem; color: var(--gold); border-bottom: 1px dashed var(--border-hover); padding-bottom: 2px; }
+    .dr-bubble { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 30px; box-shadow: 0 0 40px rgba(0,0,0,0.4); }
+    .dr-bubble::after { content:''; position:absolute; left:-14px; top:60px; width:0; height:0; border:14px solid transparent; border-right-color: var(--bg-card); border-left:0; }
+    .dr-bubble .who { font-family: var(--font-display); color: var(--gold); font-size: 0.95rem; margin-bottom: 10px; letter-spacing: 1px; }
+    .dr-bubble p { margin: 0 0 0.9rem; color: var(--text); line-height: 1.75; }
+    .dr-bubble p:last-child { margin-bottom: 0; }
+    .cite { color: var(--gold-light); font-weight: 600; white-space: nowrap; }
+    .dr-ref { font-size: 0.82rem; color: var(--text-dim); margin-top: 14px; }
+    .dr-discuss { max-width: 760px; margin: 2.4rem auto 0; background: var(--gold-glow); border: 1px solid var(--border-hover); border-radius: var(--radius); padding: 20px 24px; text-align: center; }
+    .dr-discuss .lbl { font-family: var(--font-display); color: var(--gold); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .dr-discuss p { color: var(--text); font-size: 1.08rem; font-style: italic; margin: 0; }
+    .dr-cta { text-align: center; margin: 2.4rem auto 0; }
+    .dr-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; max-width: 980px; margin: 2.6rem auto 0; }
+    .dr-nav a { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius-sm); padding: 10px 18px; font-size: 0.9rem; transition: all 0.2s; max-width: 45%; }
+    .dr-nav a:hover { border-color: var(--border-hover); color: var(--gold); }
+    .dr-nav a small { display:block; color: var(--text-dim); font-size: 0.7rem; }
+    .dr-disclaimer { max-width: 760px; margin: 2.6rem auto 0; text-align: center; color: var(--text-dim); font-size: 0.78rem; line-height: 1.6; }
+    /* month index + browse */
+    .month-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 12px; max-width: 920px; margin: 1.5rem auto 0; }
+    .month-card { display:block; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; transition: all 0.2s; }
+    .month-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .month-card .d { color: var(--gold); font-weight:700; font-size:0.78rem; letter-spacing:1px; }
+    .month-card .t { color: var(--text); display:block; margin-top:2px; }
+    .browse details { max-width: 920px; margin: 0 auto 8px; background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius-sm); }
+    .browse summary { cursor:pointer; padding: 12px 18px; font-family: var(--font-display); color: var(--gold); list-style:none; }
+    .browse summary::-webkit-details-marker { display:none; }
+    .browse summary::after { content:' ▾'; color: var(--text-dim); }
+    .browse ul { list-style:none; padding: 0 18px 14px; margin:0; columns: 2; column-gap: 24px; }
+    .browse li { padding: 3px 0; }
+    .browse li a { color: var(--text-muted); font-size: 0.9rem; }
+    .browse li a:hover { color: var(--gold); }
+    @media (max-width: 720px) {
+      .dr-stage { grid-template-columns: 1fr; gap: 1.4rem; }
+      .dr-figure { order: 2; } .dr-bubble { order: 1; }
+      .dr-bubble::after { left: 50%; top:-14px; transform: translateX(-50%); border:14px solid transparent; border-bottom-color: var(--bg-card); border-top:0; }
+      .dr-figure img { max-width: 220px; }
+      .browse ul { columns: 1; }
+    }
+
+    /* Email capture */
+    .dr-email {
+      margin: 2rem 0;
+      padding: 1.5rem 2rem;
+      background: rgba(212, 175, 55, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .dr-email .lbl {
+      display: block;
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin-bottom: 0.5rem;
+    }
+    .dr-email p {
+      color: #c5b88a;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .dr-email-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .dr-email-form input[type="email"] {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      background: rgba(0,0,0,0.3);
+      color: #f5f0e8;
+      font-size: 0.95rem;
+    }
+    .dr-email-form input[type="email"]::placeholder {
+      color: #8a7f6a;
+    }
+    .dr-email-form button {
+      padding: 0.6rem 1.2rem;
+      background: #d4af37;
+      color: #1a1510;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .dr-email-form button:hover {
+      background: #e5c04b;
+    }
+    @media (max-width: 600px) {
+      .dr-email-form {
+        flex-direction: column;
+      }
+    }
+
+  
+    .dr-share { max-width: 760px; margin: 1.5rem auto 0; text-align: center; }
+    .dr-share .lbl { font-family: var(--font-display); color: var(--text-dim); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+    .dr-share-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .dr-share-btns a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; text-decoration: none; transition: opacity 0.2s; }
+    .dr-share-btns a:hover { opacity: 0.8; }
+    .dr-share-btns .share-x { background: #1d9bf0; color: #fff; }
+    .dr-share-btns .share-fb { background: #1877f2; color: #fff; }
+    .dr-share-btns .share-copy { background: var(--gold-glow); color: var(--gold); border: 1px solid var(--border); cursor: pointer; }
+
+  </style>
+  <link rel="canonical" href="https://recoverystarts.com/es/daily-reflection/">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/daily-reflection/">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/daily-reflection/">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/daily-reflection/">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+</style>
+</head>
+<body>
+  <div class="dr-bg"></div>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/es/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Abrir o cerrar el menú" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=es" class="nav-cta nav-cta-map">Mapa de reuniones</a></li>
+      <li><a href="/online/?hl=es" class="nav-cta nav-cta-online">Reuniones en línea</a></li>
+      <li class="has-sub nav-group-start"><a href="/es/daily-reflection/" class="active">Lectura diaria</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver la lectura diaria">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Reflexión diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-reflection/today/">Reflexión de hoy →</a></li>
+            <li><a href="/es/daily-reflection/january/">Enero</a></li>
+            <li><a href="/es/daily-reflection/february/">Febrero</a></li>
+            <li><a href="/es/daily-reflection/march/">Marzo</a></li>
+            <li><a href="/es/daily-reflection/april/">Abril</a></li>
+            <li><a href="/es/daily-reflection/may/">Mayo</a></li>
+            <li><a href="/es/daily-reflection/june/">Junio</a></li>
+            <li><a href="/es/daily-reflection/july/">Julio</a></li>
+            <li><a href="/es/daily-reflection/august/">Agosto</a></li>
+            <li><a href="/es/daily-reflection/september/">Septiembre</a></li>
+            <li><a href="/es/daily-reflection/october/">Octubre</a></li>
+            <li><a href="/es/daily-reflection/november/">Noviembre</a></li>
+            <li><a href="/es/daily-reflection/december/">Diciembre</a></li>
+            <li class="sub-hub"><a href="/es/daily-reflection/">Toda la Reflexión diaria →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Tradición diaria</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/es/daily-tradition/today/">Tradición de hoy →</a></li>
+            <li class="sub-soon">Enero<small>Tradición 1 · próximamente</small></li>
+            <li class="sub-soon">Febrero<small>Tradición 2 · próximamente</small></li>
+            <li class="sub-soon">Marzo<small>Tradición 3 · próximamente</small></li>
+            <li class="sub-soon">Abril<small>Tradición 4 · próximamente</small></li>
+            <li class="sub-soon">Mayo<small>Tradición 5 · próximamente</small></li>
+            <li class="sub-soon">Junio<small>Tradición 6 · próximamente</small></li>
+            <li><a href="/es/daily-tradition/july/">Julio<small>Tradición 7</small></a></li>
+            <li><a href="/es/daily-tradition/august/">Agosto<small>Tradición 8</small></a></li>
+            <li><a href="/es/daily-tradition/september/">Septiembre<small>Tradición 9</small></a></li>
+            <li><a href="/es/daily-tradition/october/">Octubre<small>Tradición 10</small></a></li>
+            <li><a href="/es/daily-tradition/november/">Noviembre<small>Tradición 11</small></a></li>
+            <li><a href="/es/daily-tradition/december/">Diciembre<small>Tradición 12</small></a></li>
+            <li class="sub-hub"><a href="/es/daily-tradition/">Todas las Tradiciones diarias →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/big-book/">Libro Grande</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver el Libro Grande">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li>
+        <li><a href="/es/big-book/pages/">Página por página</a></li>
+        <li><a href="/es/big-book/">Conseguir el Libro Grande</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/es/aa-info/">El Programa</a><button class="sub-toggle" aria-expanded="false" aria-label="Ver El Programa">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/es/12-steps/">Los Doce Pasos</a></li>
+        <li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li>
+        <li><a href="/es/12-concepts/">Los Doce Conceptos</a></li>
+        <li><a href="/es/aa-questions/">Preguntas sobre A.A., según los libros</a></li>
+        <li><a href="/es/aa-info/">Sobre A.A.</a></li>
+        <li><a href="/es/meetings/">Encontrar una reunión</a></li>
+      </ul></li>
+      <li><a href="/es/about/">Quiénes somos</a></li>
+      <li class="nav-group-start nav-util"><a href="/es/add-meeting/" class="nav-add-meeting">Agregar reunión</a></li>
+      <li class="nav-app"><a href="/es/download/" class="nav-cta">La app</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="es">✓ Español</span><a href="/daily-reflection/" data-hl="en" hreflang="en" lang="en">English</a></div></details>
+  </div></nav>
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=daily-reflection" target="_blank" rel="noopener" aria-label="Habla con Recovery Einstein — de día o de noche">
+    <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Habla con Recovery Einstein</strong><small>No estás solo — de día o de noche</small></span>
+  </a>
+  <main id="main"><section class="dr-wrap"><div class="container">
+      <div class="dr-date" id="dr-date">Cargando…</div>
+      <h1 class="dr-theme" id="dr-theme">Reflexión diaria</h1>
+      <p class="dr-sub">Recovery Einstein lee el tema de hoy a través del Libro Grande.</p>
+      <div class="dr-stage">
+        <div class="dr-figure">
+          <img id="dr-img" src="/assets/einstein/reflections.webp" alt="Recovery Einstein, the AI Big Book companion" onerror="this.onerror=null;this.src='/assets/einstein-character.png'"> <a id="dr-booklink" class="dr-booklink" href="https://www.aa.org/daily-reflections" target="_blank" rel="noopener">Lee la reflexión oficial de hoy en aa.org →</a>.org →</a>
+        </div>
+        <div class="dr-bubble">
+          <div class="who">Recovery Einstein</div>
+          <div id="dr-thought"><p>Abriendo el Libro Grande…</p></div>
+          <div class="dr-ref" id="dr-ref"></div>
+        </div>
+      </div>
+      <div class="dr-discuss"><span class="lbl">Algo para meditar</span><p id="dr-discuss">—</p></div>
+      <div class="dr-cta"><a href="https://app.recoverystarts.com?utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=daily-hub" class="btn btn-primary" target="_blank" rel="noopener">Habla con Recovery Einstein →</a></div>
+      
+      <div class="dr-share">
+        <span class="lbl">Comparte esta reflexión</span>
+        <div class="dr-share-btns">
+          <a class="share-x" href="https://twitter.com/intent/tweet?text=Daily%20Reflection%20%E2%80%94%20Recovery%20Einstein%27s%20Big%20Book%20perspective&url=https%3A//recoverystarts.com/daily-reflection/daily-reflection/" target="_blank" rel="noopener">𝕏 Publicar</a> <a class="share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//recoverystarts.com/daily-reflection/daily-reflection/" target="_blank" rel="noopener">Facebook</a> <a class="share-copy" href="#" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Link',2000);return false;"&gt;Copiar enlace</a>
+        </div>
+      </div>
+      <div class="dr-email">
+        <span class="lbl">Mañana por la mañana</span>
+        <p>Empieza cada día con la mirada de Einstein desde el Libro Grande: un&nbsp;momento de calma antes de que el mundo se vuelva ruidoso.</p>
+        <form class="dr-email-form" action="https://buttondown.com/api/emails/embed-subscribe/recoverystarts" method="post" target="_blank">
+          <input type="email" name="email" placeholder="tu correo electrónico" required aria-label="Correo electrónico">
+          <button type="submit">Envíamela</button>
+        </form>
+      </div>
+      <div class="dr-nav">
+        <a id="dr-prev" href="#">← Día anterior</a> <a id="dr-next" href="#" style="text-align:right">Día siguiente →</a>
+      </div>
+
+      <section class="browse" style="margin-top:3.5rem">
+        <h2 style="text-align:center;font-family:var(--font-display);color:var(--text);font-size:1.6rem;margin-bottom:0.4rem">Explora las 366 reflexiones</h2>
+        <p style="text-align:center;color:var(--text-muted);margin-bottom:1.6rem">Cada día del año: la mirada de Einstein desde el Libro Grande. Elige un mes.</p>
+      <details><summary>Enero <a href="/es/daily-reflection/january/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/january-1/">1 de enero — SOY UN MILAGRO</a></li><li><a href="/es/daily-reflection/january-2/">2 de enero — PRIMERO, EL CIMIENTO</a></li><li><a href="/es/daily-reflection/january-3/">3 de enero — IMPOTENTES</a></li><li><a href="/es/daily-reflection/january-4/">4 de enero — EMPIEZA DONDE ESTÁS</a></li><li><a href="/es/daily-reflection/january-5/">5 de enero — ACEPTACIÓN TOTAL</a></li><li><a href="/es/daily-reflection/january-6/">6 de enero — LA VICTORIA DE RENDIRSE</a></li><li><a href="/es/daily-reflection/january-7/">7 de enero — EN EL PUNTO DE INFLEXIÓN</a></li><li><a href="/es/daily-reflection/january-8/">8 de enero — ¿TENGO ALTERNATIVA?</a></li><li><a href="/es/daily-reflection/january-9/">9 de enero — UN ACTO DE LA PROVIDENCIA</a></li><li><a href="/es/daily-reflection/january-10/">10 de enero — UNIDOS PERMANECEMOS</a></li><li><a href="/es/daily-reflection/january-11/">11 de enero — EL PASO AL 100 %</a></li><li><a href="/es/daily-reflection/january-12/">12 de enero — ACEPTAR NUESTRAS CIRCUNSTANCIAS PRESENTES</a></li><li><a href="/es/daily-reflection/january-13/">13 de enero — NO SUCEDE DE LA NOCHE A LA MAÑANA</a></li><li><a href="/es/daily-reflection/january-14/">14 de enero — SIN REMORDIMIENTOS</a></li><li><a href="/es/daily-reflection/january-15/">15 de enero — UN RECURSO INTERIOR INSOSPECHADO</a></li><li><a href="/es/daily-reflection/january-16/">16 de enero — TOCAR FONDO</a></li><li><a href="/es/daily-reflection/january-17/">17 de enero — LA FELICIDAD LLEGA EN SILENCIO</a></li><li><a href="/es/daily-reflection/january-18/">18 de enero — ¿AYUDARÍA UN TRAGO?</a></li><li><a href="/es/daily-reflection/january-19/">19 de enero — FE LAS 24 HORAS</a></li><li><a href="/es/daily-reflection/january-20/">20 de enero — HACEMOS UNA PAUSA... Y PEDIMOS</a></li><li><a href="/es/daily-reflection/january-21/">21 de enero — SERVIR A MI HERMANO</a></li><li><a href="/es/daily-reflection/january-22/">22 de enero — MANTENGAMOS LA SENCILLEZ</a></li><li><a href="/es/daily-reflection/january-23/">23 de enero — ¿YA TE ESTÁS DIVIRTIENDO?</a></li><li><a href="/es/daily-reflection/january-24/">24 de enero — INVOLUCRARSE</a></li><li><a href="/es/daily-reflection/january-25/">25 de enero — LO QUE NECESITAMOS: UNOS A OTROS</a></li><li><a href="/es/daily-reflection/january-26/">26 de enero — HONESTIDAD RIGUROSA</a></li><li><a href="/es/daily-reflection/january-27/">27 de enero — LIBRES DE CULPA</a></li><li><a href="/es/daily-reflection/january-28/">28 de enero — EL TESORO DEL PASADO</a></li><li><a href="/es/daily-reflection/january-29/">29 de enero — LA ALEGRÍA DE COMPARTIR</a></li><li><a href="/es/daily-reflection/january-30/">30 de enero — LIBERTAD DE... LIBERTAD PARA</a></li><li><a href="/es/daily-reflection/january-31/">31 de enero — NUESTRO BIENESTAR COMÚN VA PRIMERO</a></li></ul></details>
+      <details><summary>Febrero <a href="/es/daily-reflection/february/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/february-1/">1 de febrero — META: LA CORDURA</a></li><li><a href="/es/daily-reflection/february-2/">2 de febrero — RESCATADOS AL RENDIRNOS</a></li><li><a href="/es/daily-reflection/february-3/">3 de febrero — LLENAR EL VACÍO</a></li><li><a href="/es/daily-reflection/february-4/">4 de febrero — CUANDO FALTA LA FE</a></li><li><a href="/es/daily-reflection/february-5/">5 de febrero — UNA LIBERACIÓN GLORIOSA</a></li><li><a href="/es/daily-reflection/february-6/">6 de febrero — UN PUNTO DE REUNIÓN</a></li><li><a href="/es/daily-reflection/february-7/">7 de febrero — UN CAMINO HACIA LA FE</a></li><li><a href="/es/daily-reflection/february-8/">8 de febrero — CONVENCER A «MR. HYDE»</a></li><li><a href="/es/daily-reflection/february-9/">9 de febrero — CAPTAR EL «ÁNGULO ESPIRITUAL»</a></li><li><a href="/es/daily-reflection/february-10/">10 de febrero — YO NO DIRIJO EL ESPECTÁCULO</a></li><li><a href="/es/daily-reflection/february-11/">11 de febrero — LOS LÍMITES DE LA AUTOSUFICIENCIA</a></li><li><a href="/es/daily-reflection/february-12/">12 de febrero — «LA RAÍZ DE NUESTROS PROBLEMAS»</a></li><li><a href="/es/daily-reflection/february-13/">13 de febrero — NO PODEMOS PENSAR NUESTRO CAMINO A LA SOBRIEDAD</a></li><li><a href="/es/daily-reflection/february-14/">14 de febrero — EXPECTATIVAS FRENTE A EXIGENCIAS</a></li><li><a href="/es/daily-reflection/february-15/">15 de febrero — TOMAR ACCIÓN</a></li><li><a href="/es/daily-reflection/february-16/">16 de febrero — COMPROMISO</a></li><li><a href="/es/daily-reflection/february-17/">17 de febrero — EL AMOR EN SUS OJOS</a></li><li><a href="/es/daily-reflection/february-18/">18 de febrero — NUESTROS CAMINOS SON PROPIOS</a></li><li><a href="/es/daily-reflection/february-19/">19 de febrero — NO SOY DIFERENTE</a></li><li><a href="/es/daily-reflection/february-20/">20 de febrero — EL REGALO DE LA RISA</a></li><li><a href="/es/daily-reflection/february-21/">21 de febrero — SOY PARTE DEL TODO</a></li><li><a href="/es/daily-reflection/february-22/">22 de febrero — GUÍA</a></li><li><a href="/es/daily-reflection/february-23/">23 de febrero — PARADOJAS MISTERIOSAS</a></li><li><a href="/es/daily-reflection/february-24/">24 de febrero — UN CORAZÓN AGRADECIDO</a></li><li><a href="/es/daily-reflection/february-25/">25 de febrero — EL DESAFÍO DEL FRACASO</a></li><li><a href="/es/daily-reflection/february-26/">26 de febrero — NO ES UNA HISTORIA DE ÉXITO COMÚN</a></li><li><a href="/es/daily-reflection/february-27/">27 de febrero — UNA ESTABILIDAD ÚNICA</a></li><li><a href="/es/daily-reflection/february-28/">28 de febrero — ¿QUÉ? ¿SIN PRESIDENTE?</a></li><li><a href="/es/daily-reflection/february-29/">29 de febrero — EL ÚNICO MILAGRO DE A.A.</a></li></ul></details>
+      <details><summary>Marzo <a href="/es/daily-reflection/march/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/march-1/">1 de marzo — FUNCIONA</a></li><li><a href="/es/daily-reflection/march-2/">2 de marzo — ESPERANZA</a></li><li><a href="/es/daily-reflection/march-3/">3 de marzo — VENCER LA VOLUNTAD PROPIA</a></li><li><a href="/es/daily-reflection/march-4/">4 de marzo — DESHIERBAR EL JARDÍN</a></li><li><a href="/es/daily-reflection/march-5/">5 de marzo — UNA TAREA DE TODA LA VIDA</a></li><li><a href="/es/daily-reflection/march-6/">6 de marzo — LA IDEA DE LA FE</a></li><li><a href="/es/daily-reflection/march-7/">7 de marzo — LA CLAVE ES LA DISPOSICIÓN</a></li><li><a href="/es/daily-reflection/march-8/">8 de marzo — ENTREGARLO</a></li><li><a href="/es/daily-reflection/march-9/">9 de marzo — RENDIR LA VOLUNTAD PROPIA</a></li><li><a href="/es/daily-reflection/march-10/">10 de marzo — HOY, ES MI DECISIÓN</a></li><li><a href="/es/daily-reflection/march-11/">11 de marzo — UNA BUENA DIRECCIÓN ORDENADA</a></li><li><a href="/es/daily-reflection/march-12/">12 de marzo — EL PLAN DE UN DÍA</a></li><li><a href="/es/daily-reflection/march-13/">13 de marzo — UN MUNDO DEL ESPÍRITU</a></li><li><a href="/es/daily-reflection/march-14/">14 de marzo — LA CLAVE DE BÓVEDA</a></li><li><a href="/es/daily-reflection/march-15/">15 de marzo — LA IDEA DE DIOS</a></li><li><a href="/es/daily-reflection/march-16/">16 de marzo — COMO NOSOTROS LO CONCEBIMOS</a></li><li><a href="/es/daily-reflection/march-17/">17 de marzo — CAMINOS MISTERIOSOS</a></li><li><a href="/es/daily-reflection/march-18/">18 de marzo — INDEPENDENCIA VERDADERA</a></li><li><a href="/es/daily-reflection/march-19/">19 de marzo — LA ORACIÓN: FUNCIONA</a></li><li><a href="/es/daily-reflection/march-20/">20 de marzo — AMOR Y TOLERANCIA</a></li><li><a href="/es/daily-reflection/march-21/">21 de marzo — BIENESTAR MATERIAL Y ESPIRITUAL</a></li><li><a href="/es/daily-reflection/march-22/">22 de marzo — SIN MÁS LUCHA...</a></li><li><a href="/es/daily-reflection/march-23/">23 de marzo — ... Y SIN MÁS RESERVAS</a></li><li><a href="/es/daily-reflection/march-24/">24 de marzo — ACTIVOS, NO PASIVOS</a></li><li><a href="/es/daily-reflection/march-25/">25 de marzo — UN CORAZÓN LLENO Y AGRADECIDO</a></li><li><a href="/es/daily-reflection/march-26/">26 de marzo — LA ENSEÑANZA NUNCA TERMINA</a></li><li><a href="/es/daily-reflection/march-27/">27 de marzo — LAS LIBERTADES DE A.A.</a></li><li><a href="/es/daily-reflection/march-28/">28 de marzo — IGUALDAD</a></li><li><a href="/es/daily-reflection/march-29/">29 de marzo — SERVIDORES DE CONFIANZA</a></li><li><a href="/es/daily-reflection/march-30/">30 de marzo — NUESTRA CONCIENCIA DE GRUPO</a></li><li><a href="/es/daily-reflection/march-31/">31 de marzo — A NADIE SE LE NEGÓ EL AMOR</a></li></ul></details>
+      <details><summary>Abril <a href="/es/daily-reflection/april/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/april-1/">1 de abril — MIRAR HACIA DENTRO</a></li><li><a href="/es/daily-reflection/april-2/">2 de abril — LA FORMACIÓN DEL CARÁCTER</a></li><li><a href="/es/daily-reflection/april-3/">3 de abril — ACEPTAR NUESTRA CONDICIÓN HUMANA</a></li><li><a href="/es/daily-reflection/april-4/">4 de abril — PEDIR LA LUNA</a></li><li><a href="/es/daily-reflection/april-5/">5 de abril — VERDADERA HERMANDAD</a></li><li><a href="/es/daily-reflection/april-6/">6 de abril — UN PROCESO DE TODA LA VIDA</a></li><li><a href="/es/daily-reflection/april-7/">7 de abril — UN AMPLIO ARCO DE GRATITUD</a></li><li><a href="/es/daily-reflection/april-8/">8 de abril — UNA MIRADA POR DENTRO</a></li><li><a href="/es/daily-reflection/april-9/">9 de abril — LIBRES DEL «REY ALCOHOL»</a></li><li><a href="/es/daily-reflection/april-10/">10 de abril — MADURAR</a></li><li><a href="/es/daily-reflection/april-11/">11 de abril — UNA PALABRA QUE HAY QUE DEJAR: «CULPA»</a></li><li><a href="/es/daily-reflection/april-12/">12 de abril — RENUNCIAR A LA INSENSATEZ</a></li><li><a href="/es/daily-reflection/april-13/">13 de abril — EL FALSO CONSUELO DE LA AUTOCOMPASIÓN</a></li><li><a href="/es/daily-reflection/april-14/">14 de abril — EL «INFRACTOR NÚMERO UNO»</a></li><li><a href="/es/daily-reflection/april-15/">15 de abril — LA ESCLAVITUD DE LOS RESENTIMIENTOS</a></li><li><a href="/es/daily-reflection/april-16/">16 de abril — LA IRA: UN «LUJO DUDOSO»</a></li><li><a href="/es/daily-reflection/april-17/">17 de abril — EL AMOR Y EL MIEDO COMO OPUESTOS</a></li><li><a href="/es/daily-reflection/april-18/">18 de abril — HONESTIDAD CON UNO MISMO</a></li><li><a href="/es/daily-reflection/april-19/">19 de abril — HERMANOS EN NUESTROS DEFECTOS</a></li><li><a href="/es/daily-reflection/april-20/">20 de abril — AUTOEXAMEN</a></li><li><a href="/es/daily-reflection/april-21/">21 de abril — CULTIVAR LA FE</a></li><li><a href="/es/daily-reflection/april-22/">22 de abril — SUELO NUEVO... RAÍCES NUEVAS</a></li><li><a href="/es/daily-reflection/april-23/">23 de abril — A.A. NO ES UN REMEDIO UNIVERSAL</a></li><li><a href="/es/daily-reflection/april-24/">24 de abril — APRENDER A AMARNOS</a></li><li><a href="/es/daily-reflection/april-25/">25 de abril — ENTRAR EN UNA NUEVA DIMENSIÓN</a></li><li><a href="/es/daily-reflection/april-26/">26 de abril — LA FELICIDAD NO ES EL PUNTO</a></li><li><a href="/es/daily-reflection/april-27/">27 de abril — DESCUBRIMIENTOS GOZOSOS</a></li><li><a href="/es/daily-reflection/april-28/">28 de abril — DOS «MAGNÍFICOS ESTÁNDARES»</a></li><li><a href="/es/daily-reflection/april-29/">29 de abril — AUTONOMÍA DE GRUPO</a></li><li><a href="/es/daily-reflection/april-30/">30 de abril — UNA GRAN PARADOJA</a></li></ul></details>
+      <details><summary>Mayo <a href="/es/daily-reflection/may/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/may-1/">1 de mayo — SANAR EL CORAZÓN Y LA MENTE</a></li><li><a href="/es/daily-reflection/may-2/">2 de mayo — ILUMINAR EL OSCURO PASADO</a></li><li><a href="/es/daily-reflection/may-3/">3 de mayo — LIMPIAR LA CASA</a></li><li><a href="/es/daily-reflection/may-4/">4 de mayo — «COMPLETAMENTE HONESTOS»</a></li><li><a href="/es/daily-reflection/may-5/">5 de mayo — EL BOSQUE Y LOS ÁRBOLES</a></li><li><a href="/es/daily-reflection/may-6/">6 de mayo — «NO RETENER NADA»</a></li><li><a href="/es/daily-reflection/may-7/">7 de mayo — RESPETO POR LOS DEMÁS</a></li><li><a href="/es/daily-reflection/may-8/">8 de mayo — UN LUGAR DE DESCANSO</a></li><li><a href="/es/daily-reflection/may-9/">9 de mayo — ATRAVESAR EL MIEDO</a></li><li><a href="/es/daily-reflection/may-10/">10 de mayo — LIBRES POR FIN</a></li><li><a href="/es/daily-reflection/may-11/">11 de mayo — UN NUEVO SENTIDO DE PERTENENCIA</a></li><li><a href="/es/daily-reflection/may-12/">12 de mayo — EL PASADO ACABÓ</a></li><li><a href="/es/daily-reflection/may-13/">13 de mayo — EL CAMINO MÁS FÁCIL Y SUAVE</a></li><li><a href="/es/daily-reflection/may-14/">14 de mayo — ESTÁ BIEN SER YO</a></li><li><a href="/es/daily-reflection/may-15/">15 de mayo — CONOCER A DIOS; CONOCER LA PAZ</a></li><li><a href="/es/daily-reflection/may-16/">16 de mayo — PERDONAMOS...</a></li><li><a href="/es/daily-reflection/may-17/">17 de mayo — ... Y PERDONAMOS</a></li><li><a href="/es/daily-reflection/may-18/">18 de mayo — LIBERTAD PARA SER YO</a></li><li><a href="/es/daily-reflection/may-19/">19 de mayo — DAR SIN CONDICIONES</a></li><li><a href="/es/daily-reflection/may-20/">20 de mayo — UN DÍA A LA VEZ</a></li><li><a href="/es/daily-reflection/may-21/">21 de mayo — UNA LISTA DE BENDICIONES</a></li><li><a href="/es/daily-reflection/may-22/">22 de mayo — PASO UNO</a></li><li><a href="/es/daily-reflection/may-23/">23 de mayo — SALUD ESPIRITUAL</a></li><li><a href="/es/daily-reflection/may-24/">24 de mayo — «FELICES, DICHOSOS Y LIBRES»</a></li><li><a href="/es/daily-reflection/may-25/">25 de mayo — GRATITUD PROGRESIVA</a></li><li><a href="/es/daily-reflection/may-26/">26 de mayo — CONVERTIR LO NEGATIVO EN POSITIVO</a></li><li><a href="/es/daily-reflection/may-27/">27 de mayo — SIN CULPA SENSIBLERA</a></li><li><a href="/es/daily-reflection/may-28/">28 de mayo — IGUALDAD DE DERECHOS</a></li><li><a href="/es/daily-reflection/may-29/">29 de mayo — TOLERANCIA VERDADERA</a></li><li><a href="/es/daily-reflection/may-30/">30 de mayo — NUESTRO OBJETIVO PRIMORDIAL</a></li><li><a href="/es/daily-reflection/may-31/">31 de mayo — DISPOSICIÓN PARA SERVIR A LOS DEMÁS</a></li></ul></details>
+      <details><summary>Junio <a href="/es/daily-reflection/june/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/june-1/">1 de junio — UNA PERSPECTIVA TRANSFORMADA</a></li><li><a href="/es/daily-reflection/june-2/">2 de junio — EL CAMINO ASCENDENTE</a></li><li><a href="/es/daily-reflection/june-3/">3 de junio — A TODA PRISA Y CON UNA ORACIÓN</a></li><li><a href="/es/daily-reflection/june-4/">4 de junio — SOLTAR NUESTRO VIEJO YO</a></li><li><a href="/es/daily-reflection/june-5/">5 de junio — ¿COMPLETAMENTE LISTOS?</a></li><li><a href="/es/daily-reflection/june-6/">6 de junio — TODO LO QUE HACEMOS ES INTENTAR</a></li><li><a href="/es/daily-reflection/june-7/">7 de junio — ESPERANZA A LARGO PLAZO</a></li><li><a href="/es/daily-reflection/june-8/">8 de junio — ABRIRSE AL CAMBIO</a></li><li><a href="/es/daily-reflection/june-9/">9 de junio — VIVIR EN EL AHORA</a></li><li><a href="/es/daily-reflection/june-10/">10 de junio — ¿IMPACIENTE? PRUEBA A LEVITAR</a></li><li><a href="/es/daily-reflection/june-11/">11 de junio — OBLIGACIONES FAMILIARES</a></li><li><a href="/es/daily-reflection/june-12/">12 de junio — FORMAR VERDADERAS ALIANZAS</a></li><li><a href="/es/daily-reflection/june-13/">13 de junio — VIVIR NUESTRAS ENMIENDAS</a></li><li><a href="/es/daily-reflection/june-14/">14 de junio — CUANDO LAS COSAS SE PONEN DIFÍCILES</a></li><li><a href="/es/daily-reflection/june-15/">15 de junio — HACER DE A.A. TU PODER SUPERIOR</a></li><li><a href="/es/daily-reflection/june-16/">16 de junio — MENTE ABIERTA</a></li><li><a href="/es/daily-reflection/june-17/">17 de junio — «EN LO MÁS HONDO DE NOSOTROS»</a></li><li><a href="/es/daily-reflection/june-18/">18 de junio — UNA COMUNIDAD DE LIBERTAD</a></li><li><a href="/es/daily-reflection/june-19/">19 de junio — «LA REGENERACIÓN DE A.A.»</a></li><li><a href="/es/daily-reflection/june-20/">20 de junio — LIBERACIÓN DEL MIEDO</a></li><li><a href="/es/daily-reflection/june-21/">21 de junio — MIEDO Y FE</a></li><li><a href="/es/daily-reflection/june-22/">22 de junio — HOY SOY LIBRE</a></li><li><a href="/es/daily-reflection/june-23/">23 de junio — CONFIAR EN LOS DEMÁS</a></li><li><a href="/es/daily-reflection/june-24/">24 de junio — UN JARDÍN DE INFANTES ESPIRITUAL</a></li><li><a href="/es/daily-reflection/june-25/">25 de junio — UNA CALLE DE DOBLE SENTIDO</a></li><li><a href="/es/daily-reflection/june-26/">26 de junio — UN REGALO QUE CRECE CON EL TIEMPO</a></li><li><a href="/es/daily-reflection/june-27/">27 de junio — AJUSTARSE AL MODO DE A.A.</a></li><li><a href="/es/daily-reflection/june-28/">28 de junio — LA DETERMINACIÓN DE NUESTROS FUNDADORES</a></li><li><a href="/es/daily-reflection/june-29/">29 de junio — UN EFECTO DE ONDAS</a></li><li><a href="/es/daily-reflection/june-30/">30 de junio — SACRIFICIO = UNIDAD = SUPERVIVENCIA</a></li></ul></details>
+      <details><summary>Julio <a href="/es/daily-reflection/july/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/july-1/">1 de julio — LO MEJOR PARA HOY</a></li><li><a href="/es/daily-reflection/july-2/">2 de julio — EL CORAZÓN DE LA VERDADERA SOBRIEDAD</a></li><li><a href="/es/daily-reflection/july-3/">3 de julio — LA EXPERIENCIA: LA MEJOR MAESTRA</a></li><li><a href="/es/daily-reflection/july-4/">4 de julio — UNA FE NATURAL</a></li><li><a href="/es/daily-reflection/july-5/">5 de julio — UNA NUEVA DIRECCIÓN</a></li><li><a href="/es/daily-reflection/july-6/">6 de julio — IDENTIFICAR EL MIEDO...</a></li><li><a href="/es/daily-reflection/july-7/">7 de julio — ... Y SOLTARLO</a></li><li><a href="/es/daily-reflection/july-8/">8 de julio — UNA LIBERTAD EN CONSTANTE CRECIMIENTO</a></li><li><a href="/es/daily-reflection/july-9/">9 de julio — SOY UN INSTRUMENTO</a></li><li><a href="/es/daily-reflection/july-10/">10 de julio — HACIA LA PAZ Y LA SERENIDAD</a></li><li><a href="/es/daily-reflection/july-11/">11 de julio — UN PUNTO DE INFLEXIÓN</a></li><li><a href="/es/daily-reflection/july-12/">12 de julio — CEDER EL CENTRO DEL ESCENARIO</a></li><li><a href="/es/daily-reflection/july-13/">13 de julio — LA HUMILDAD ES UN REGALO</a></li><li><a href="/es/daily-reflection/july-14/">14 de julio — UN INGREDIENTE NUTRITIVO</a></li><li><a href="/es/daily-reflection/july-15/">15 de julio — ORGULLO</a></li><li><a href="/es/daily-reflection/july-16/">16 de julio — «UNA MEDIDA DE HUMILDAD»</a></li><li><a href="/es/daily-reflection/july-17/">17 de julio — RENDICIÓN Y AUTOEXAMEN</a></li><li><a href="/es/daily-reflection/july-18/">18 de julio — AGRADECIDO POR LO QUE TENGO</a></li><li><a href="/es/daily-reflection/july-19/">19 de julio — FALSO ORGULLO</a></li><li><a href="/es/daily-reflection/july-20/">20 de julio — DEFECTOS QUITADOS</a></li><li><a href="/es/daily-reflection/july-21/">21 de julio — UN REGALO INVALUABLE</a></li><li><a href="/es/daily-reflection/july-22/">22 de julio — «LO BUENO Y LO MALO»</a></li><li><a href="/es/daily-reflection/july-23/">23 de julio — LE PIDO A DIOS QUE DECIDA</a></li><li><a href="/es/daily-reflection/july-24/">24 de julio — AYUDAR A LOS DEMÁS</a></li><li><a href="/es/daily-reflection/july-25/">25 de julio — LOS QUE AÚN SUFREN</a></li><li><a href="/es/daily-reflection/july-26/">26 de julio — EL «VALOR» DE LA SOBRIEDAD</a></li><li><a href="/es/daily-reflection/july-27/">27 de julio — DAR CON GENEROSIDAD</a></li><li><a href="/es/daily-reflection/july-28/">28 de julio — LOS QUE AÚN SUFREN</a></li><li><a href="/es/daily-reflection/july-29/">29 de julio — REGALOS ANÓNIMOS DE BONDAD</a></li><li><a href="/es/daily-reflection/july-30/">30 de julio — DEVOLVER</a></li><li><a href="/es/daily-reflection/july-31/">31 de julio — UNA ORACIÓN PARA TODAS LAS ESTACIONES</a></li></ul></details>
+      <details><summary>Agosto <a href="/es/daily-reflection/august/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/august-1/">1 de agosto — VIVIRLO</a></li><li><a href="/es/daily-reflection/august-2/">2 de agosto — NOS VOLVEMOS DISPUESTOS...</a></li><li><a href="/es/daily-reflection/august-3/">3 de agosto — A SERVIR</a></li><li><a href="/es/daily-reflection/august-4/">4 de agosto — SEMILLAS DE FE</a></li><li><a href="/es/daily-reflection/august-5/">5 de agosto — ESCUCHAR EN PROFUNDIDAD</a></li><li><a href="/es/daily-reflection/august-6/">6 de agosto — IMPULSADOS</a></li><li><a href="/es/daily-reflection/august-7/">7 de agosto — UN «PROGRAMA DE VIDA»</a></li><li><a href="/es/daily-reflection/august-8/">8 de agosto — «HICIMOS UNA LISTA...»</a></li><li><a href="/es/daily-reflection/august-9/">9 de agosto — «... DE TODAS LAS PERSONAS A QUIENES HABÍAMOS OFENDIDO»</a></li><li><a href="/es/daily-reflection/august-10/">10 de agosto — REDOBLAR NUESTROS ESFUERZOS</a></li><li><a href="/es/daily-reflection/august-11/">11 de agosto — QUITAR «EL VIDRIO MOLIDO»</a></li><li><a href="/es/daily-reflection/august-12/">12 de agosto — UNA MIRADA ATRÁS</a></li><li><a href="/es/daily-reflection/august-13/">13 de agosto — UNA LIMPIEZA A FONDO</a></li><li><a href="/es/daily-reflection/august-14/">14 de agosto — REPARAR EL DAÑO</a></li><li><a href="/es/daily-reflection/august-15/">15 de agosto — ¿ACASO NO LASTIMAMOS A NADIE?</a></li><li><a href="/es/daily-reflection/august-16/">16 de agosto — «ME HABÍA RETIRADO»</a></li><li><a href="/es/daily-reflection/august-17/">17 de agosto — ENDEREZAR EL AGRAVIO</a></li><li><a href="/es/daily-reflection/august-18/">18 de agosto — RECUPERAR LA SALUD</a></li><li><a href="/es/daily-reflection/august-19/">19 de agosto — UN MARCO DE REFERENCIA</a></li><li><a href="/es/daily-reflection/august-20/">20 de agosto — HACIA LA LIBERTAD EMOCIONAL</a></li><li><a href="/es/daily-reflection/august-21/">21 de agosto — SIMPLEMENTE LO INTENTAMOS</a></li><li><a href="/es/daily-reflection/august-22/">22 de agosto — BUSCAR ESTABILIDAD EMOCIONAL</a></li><li><a href="/es/daily-reflection/august-23/">23 de agosto — LLEVAR EL MENSAJE A CASA</a></li><li><a href="/es/daily-reflection/august-24/">24 de agosto — UN ACERTIJO QUE FUNCIONA</a></li><li><a href="/es/daily-reflection/august-25/">25 de agosto — EL REGALO DE LA UNIÓN</a></li><li><a href="/es/daily-reflection/august-26/">26 de agosto — REGALARLO</a></li><li><a href="/es/daily-reflection/august-27/">27 de agosto — CENTRAR NUESTROS PENSAMIENTOS</a></li><li><a href="/es/daily-reflection/august-28/">28 de agosto — ALIVIAR LA CARGA</a></li><li><a href="/es/daily-reflection/august-29/">29 de agosto — ELIJO EL ANONIMATO</a></li><li><a href="/es/daily-reflection/august-30/">30 de agosto — EL ÚNICO REQUISITO...</a></li><li><a href="/es/daily-reflection/august-31/">31 de agosto — UN PROGRAMA ÚNICO</a></li></ul></details>
+      <details><summary>Septiembre <a href="/es/daily-reflection/september/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/september-1/">1 de septiembre — DISPOSICIÓN PARA CRECER</a></li><li><a href="/es/daily-reflection/september-2/">2 de septiembre — ENCONTRAR «UNA RAZÓN PARA CREER»</a></li><li><a href="/es/daily-reflection/september-3/">3 de septiembre — CONSTRUIR UNA VIDA NUEVA</a></li><li><a href="/es/daily-reflection/september-4/">4 de septiembre — RECONSTRUCCIÓN</a></li><li><a href="/es/daily-reflection/september-5/">5 de septiembre — EQUILIBRIO EMOCIONAL</a></li><li><a href="/es/daily-reflection/september-6/">6 de septiembre — ELIMINAR LAS AMENAZAS A LA SOBRIEDAD</a></li><li><a href="/es/daily-reflection/september-7/">7 de septiembre — «NUESTRO LADO DE LA CALLE»</a></li><li><a href="/es/daily-reflection/september-8/">8 de septiembre — «PEDIMOS SU PROTECCIÓN»</a></li><li><a href="/es/daily-reflection/september-9/">9 de septiembre — ABRIR PUERTAS NUEVAS</a></li><li><a href="/es/daily-reflection/september-10/">10 de septiembre — ¿RECUPERACIÓN POR PODER?</a></li><li><a href="/es/daily-reflection/september-11/">11 de septiembre — HACER ENMIENDAS</a></li><li><a href="/es/daily-reflection/september-12/">12 de septiembre — SOY RESPONSABLE</a></li><li><a href="/es/daily-reflection/september-13/">13 de septiembre — REPARAR EL DAÑO</a></li><li><a href="/es/daily-reflection/september-14/">14 de septiembre — PAZ MENTAL</a></li><li><a href="/es/daily-reflection/september-15/">15 de septiembre — UNA VIDA NUEVA</a></li><li><a href="/es/daily-reflection/september-16/">16 de septiembre — JUNTOS NOS SOSTENEMOS... O CAEMOS</a></li><li><a href="/es/daily-reflection/september-17/">17 de septiembre — LIBERTAD DEL MIEDO</a></li><li><a href="/es/daily-reflection/september-18/">18 de septiembre — DEVUELTO A LA RECUPERACIÓN POR AMOR</a></li><li><a href="/es/daily-reflection/september-19/">19 de septiembre — ACEPTACIÓN</a></li><li><a href="/es/daily-reflection/september-20/">20 de septiembre — EL P.S. COMO GUÍA</a></li><li><a href="/es/daily-reflection/september-21/">21 de septiembre — LA ÚLTIMA PROMESA</a></li><li><a href="/es/daily-reflection/september-22/">22 de septiembre — UN «FILÓN INAGOTABLE»</a></li><li><a href="/es/daily-reflection/september-23/">23 de septiembre — «YO ERA UNA EXCEPCIÓN»</a></li><li><a href="/es/daily-reflection/september-24/">24 de septiembre — VIGILANCIA</a></li><li><a href="/es/daily-reflection/september-25/">25 de septiembre — PRIMERO LO PRIMERO</a></li><li><a href="/es/daily-reflection/september-26/">26 de septiembre — NUESTROS HIJOS</a></li><li><a href="/es/daily-reflection/september-27/">27 de septiembre — SIN RESERVAS</a></li><li><a href="/es/daily-reflection/september-28/">28 de septiembre — AMOR SIN CONDICIONES</a></li><li><a href="/es/daily-reflection/september-29/">29 de septiembre — EXACTAMENTE IGUALES</a></li><li><a href="/es/daily-reflection/september-30/">30 de septiembre — EL CÍRCULO Y EL TRIÁNGULO</a></li></ul></details>
+      <details><summary>Octubre <a href="/es/daily-reflection/october/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/october-1/">1 de octubre — PARA QUE NO NOS VOLVAMOS COMPLACIENTES</a></li><li><a href="/es/daily-reflection/october-2/">2 de octubre — «LA PRUEBA DE FUEGO»</a></li><li><a href="/es/daily-reflection/october-3/">3 de octubre — SERENIDAD DESPUÉS DE LA TORMENTA</a></li><li><a href="/es/daily-reflection/october-4/">4 de octubre — UNA PODA NECESARIA</a></li><li><a href="/es/daily-reflection/october-5/">5 de octubre — EL EQUIPAJE DE AYER</a></li><li><a href="/es/daily-reflection/october-6/">6 de octubre — ENFRENTARNOS A NOSOTROS MISMOS</a></li><li><a href="/es/daily-reflection/october-7/">7 de octubre — VIGILANCIA DIARIA</a></li><li><a href="/es/daily-reflection/october-8/">8 de octubre — INVENTARIO DIARIO</a></li><li><a href="/es/daily-reflection/october-9/">9 de octubre — UN AXIOMA ESPIRITUAL</a></li><li><a href="/es/daily-reflection/october-10/">10 de octubre — ARREGLARME A MÍ, NO A TI</a></li><li><a href="/es/daily-reflection/october-11/">11 de octubre — AUTOCONTROL</a></li><li><a href="/es/daily-reflection/october-12/">12 de octubre — REFRENAR LA TEMERIDAD</a></li><li><a href="/es/daily-reflection/october-13/">13 de octubre — INVENTARIOS CONTINUOS</a></li><li><a href="/es/daily-reflection/october-14/">14 de octubre — UN PROGRAMA DE VIDA</a></li><li><a href="/es/daily-reflection/october-15/">15 de octubre — MI LISTA DE CONTROL, NO LA TUYA</a></li><li><a href="/es/daily-reflection/october-16/">16 de octubre — A LO LARGO DE CADA DÍA</a></li><li><a href="/es/daily-reflection/october-17/">17 de octubre — UNA AFINACIÓN DIARIA</a></li><li><a href="/es/daily-reflection/october-18/">18 de octubre — UNA MENTE ABIERTA</a></li><li><a href="/es/daily-reflection/october-19/">19 de octubre — LA «RAÍZ PRINCIPAL» DE A.A.</a></li><li><a href="/es/daily-reflection/october-20/">20 de octubre — CONSUELO PARA LA CONFUSIÓN</a></li><li><a href="/es/daily-reflection/october-21/">21 de octubre — NADA CRECE EN LA OSCURIDAD</a></li><li><a href="/es/daily-reflection/october-22/">22 de octubre — TOLERANCIA VERDADERA</a></li><li><a href="/es/daily-reflection/october-23/">23 de octubre — LO QUE MEJOR CONOCEMOS</a></li><li><a href="/es/daily-reflection/october-24/">24 de octubre — «POR LA FE Y POR LAS OBRAS»</a></li><li><a href="/es/daily-reflection/october-25/">25 de octubre — EL LATIDO DE A.A.</a></li><li><a href="/es/daily-reflection/october-26/">26 de octubre — UNA AUTORIDAD FUNDAMENTAL</a></li><li><a href="/es/daily-reflection/october-27/">27 de octubre — COMPARTIR A NIVEL MUNDIAL</a></li><li><a href="/es/daily-reflection/october-28/">28 de octubre — UNA TRADICIÓN ININTERRUMPIDA</a></li><li><a href="/es/daily-reflection/october-29/">29 de octubre — NUESTRA SUPERVIVENCIA</a></li><li><a href="/es/daily-reflection/october-30/">30 de octubre — VIVE Y DEJA VIVIR</a></li><li><a href="/es/daily-reflection/october-31/">31 de octubre — EVITAR LA CONTROVERSIA</a></li></ul></details>
+      <details><summary>Noviembre <a href="/es/daily-reflection/november/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/november-1/">1 de noviembre — NO PUEDO CAMBIAR EL VIENTO</a></li><li><a href="/es/daily-reflection/november-2/">2 de noviembre — MANTENER A FLOTE EL OPTIMISMO</a></li><li><a href="/es/daily-reflection/november-3/">3 de noviembre — ENFOCARSE Y ESCUCHAR</a></li><li><a href="/es/daily-reflection/november-4/">4 de noviembre — UNA DISCIPLINA DIARIA</a></li><li><a href="/es/daily-reflection/november-5/">5 de noviembre — «LA CALIDAD DE LA FE»</a></li><li><a href="/es/daily-reflection/november-6/">6 de noviembre — DEJARSE LLEVAR POR LA CORRIENTE</a></li><li><a href="/es/daily-reflection/november-7/">7 de noviembre — SUELTA Y DEJA A DIOS</a></li><li><a href="/es/daily-reflection/november-8/">8 de noviembre — UNA AVENTURA INDIVIDUAL</a></li><li><a href="/es/daily-reflection/november-9/">9 de noviembre — SALIR A LA LUZ DEL SOL</a></li><li><a href="/es/daily-reflection/november-10/">10 de noviembre — UN SENTIDO DE PERTENENCIA</a></li><li><a href="/es/daily-reflection/november-11/">11 de noviembre — AUTOACEPTACIÓN</a></li><li><a href="/es/daily-reflection/november-12/">12 de noviembre — PENSAMIENTOS DE LA MAÑANA</a></li><li><a href="/es/daily-reflection/november-13/">13 de noviembre — MIRAR HACIA AFUERA</a></li><li><a href="/es/daily-reflection/november-14/">14 de noviembre — INTUICIÓN E INSPIRACIÓN</a></li><li><a href="/es/daily-reflection/november-15/">15 de noviembre — ALIMENTO VITAL</a></li><li><a href="/es/daily-reflection/november-16/">16 de noviembre — UN APLAZAMIENTO DIARIO</a></li><li><a href="/es/daily-reflection/november-17/">17 de noviembre — VENCER LA SOLEDAD</a></li><li><a href="/es/daily-reflection/november-18/">18 de noviembre — UNA RED DE SEGURIDAD</a></li><li><a href="/es/daily-reflection/november-19/">19 de noviembre — «ME ESTABA DESLIZANDO RÁPIDAMENTE»</a></li><li><a href="/es/daily-reflection/november-20/">20 de noviembre — «HÁGASE TU VOLUNTAD, NO LA MÍA»</a></li><li><a href="/es/daily-reflection/november-21/">21 de noviembre — UNA ORACIÓN CLÁSICA</a></li><li><a href="/es/daily-reflection/november-22/">22 de noviembre — SOLO DOS PECADOS</a></li><li><a href="/es/daily-reflection/november-23/">23 de noviembre — «MANTÉN EL ROSTRO HACIA LA LUZ»</a></li><li><a href="/es/daily-reflection/november-24/">24 de noviembre — UNA BÚSQUEDA UNIVERSAL</a></li><li><a href="/es/daily-reflection/november-25/">25 de noviembre — UNA TRADICIÓN PODEROSA</a></li><li><a href="/es/daily-reflection/november-26/">26 de noviembre — LOS PELIGROS DE LA PUBLICIDAD</a></li><li><a href="/es/daily-reflection/november-27/">27 de noviembre — LOS PELIGROS DE LOS REFLECTORES</a></li><li><a href="/es/daily-reflection/november-28/">28 de noviembre — ATRACCIÓN, NO PROMOCIÓN</a></li><li><a href="/es/daily-reflection/november-29/">29 de noviembre — «GUARDIANES ACTIVOS»</a></li><li><a href="/es/daily-reflection/november-30/">30 de noviembre — PROTECCIÓN PARA TODOS</a></li></ul></details>
+      <details><summary>Diciembre <a href="/es/daily-reflection/december/" style="font-size:0.8rem;margin-left:8px;color:var(--text-dim)">(índice del mes)</a></summary><ul><li><a href="/es/daily-reflection/december-1/">1 de diciembre — PASOS «SUGERIDOS»</a></li><li><a href="/es/daily-reflection/december-2/">2 de diciembre — SERENIDAD</a></li><li><a href="/es/daily-reflection/december-3/">3 de diciembre — EN TODOS NUESTROS ASUNTOS</a></li><li><a href="/es/daily-reflection/december-4/">4 de diciembre — EN ACCIÓN</a></li><li><a href="/es/daily-reflection/december-5/">5 de diciembre — UN NUEVO ESTADO DE CONCIENCIA</a></li><li><a href="/es/daily-reflection/december-6/">6 de diciembre — CUANDO LAS COSAS SE PONEN FEAS</a></li><li><a href="/es/daily-reflection/december-7/">7 de diciembre — AMBICIÓN VERDADERA</a></li><li><a href="/es/daily-reflection/december-8/">8 de diciembre — SERVICIO</a></li><li><a href="/es/daily-reflection/december-9/">9 de diciembre — AMOR SIN ETIQUETA DE PRECIO</a></li><li><a href="/es/daily-reflection/december-10/">10 de diciembre — LLEVAR EL MENSAJE</a></li><li><a href="/es/daily-reflection/december-11/">11 de diciembre — «UNA GENUINA HUMILDAD»</a></li><li><a href="/es/daily-reflection/december-12/">12 de diciembre — UNA SOLUCIÓN COMÚN</a></li><li><a href="/es/daily-reflection/december-13/">13 de diciembre — PENSAR EN LOS DEMÁS</a></li><li><a href="/es/daily-reflection/december-14/">14 de diciembre — TENDER LA MANO</a></li><li><a href="/es/daily-reflection/december-15/">15 de diciembre — HACER LO QUE SEA PARA AYUDAR</a></li><li><a href="/es/daily-reflection/december-16/">16 de diciembre — SOCIOS EN LA RECUPERACIÓN</a></li><li><a href="/es/daily-reflection/december-17/">17 de diciembre — UNA RECOMPENSA INVALUABLE</a></li><li><a href="/es/daily-reflection/december-18/">18 de diciembre — HONESTIDAD CON LOS RECIÉN LLEGADOS</a></li><li><a href="/es/daily-reflection/december-19/">19 de diciembre — COMPRENDER LA ENFERMEDAD</a></li><li><a href="/es/daily-reflection/december-20/">20 de diciembre — LAS RECOMPENSAS DE DAR</a></li><li><a href="/es/daily-reflection/december-21/">21 de diciembre — ESCUCHAR, COMPARTIR Y ORAR</a></li><li><a href="/es/daily-reflection/december-22/">22 de diciembre — PRINCIPIOS, NO PERSONALIDADES</a></li><li><a href="/es/daily-reflection/december-23/">23 de diciembre — RECUPERACIÓN, UNIDAD, SERVICIO</a></li><li><a href="/es/daily-reflection/december-24/">24 de diciembre — UNA «UTILIDAD SANA Y FELIZ»</a></li><li><a href="/es/daily-reflection/december-25/">25 de diciembre — EN PAZ CON LA VIDA</a></li><li><a href="/es/daily-reflection/december-26/">26 de diciembre — ACEPTAR EL ÉXITO O EL FRACASO</a></li><li><a href="/es/daily-reflection/december-27/">27 de diciembre — RESOLVER PROBLEMAS</a></li><li><a href="/es/daily-reflection/december-28/">28 de diciembre — PREPÁRATE Y PRESÉNTATE</a></li><li><a href="/es/daily-reflection/december-29/">29 de diciembre — LA ALEGRÍA DE VIVIR</a></li><li><a href="/es/daily-reflection/december-30/">30 de diciembre — ANONIMATO</a></li><li><a href="/es/daily-reflection/december-31/">31 de diciembre — PROPÓSITOS DIARIOS</a></li></ul></details>
+      </section>
+
+      <p class="dr-disclaimer">Estas reflexiones son la mirada original de Recovery Einstein desde el Libro Grande sobre el tema de cada día; no son el texto oficial de las Reflexiones diarias de A.A. Para ver la reflexión oficial, sigue el enlace a aa.org. Las referencias de página corresponden a <em>Alcohólicos Anónimos</em> (el Libro Grande), 4.ª edición.</p>
+  </div></section></main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Un proyecto independiente de conciencia sobre la recuperación. Sin vínculo con ninguna comunidad. Cada lectura aquí es gratis, completa, y siempre lo será.</p></div>
+        <div><h4>Leer</h4><ul class="footer-links"><li><a href="/es/daily-reflection/">Reflexión diaria</a></li><li><a href="/es/daily-tradition/">Tradición diaria</a></li><li><a href="/es/big-book/pages/">El Libro Grande, página por página</a></li><li><a href="/es/big-book/search/">Buscar en el Libro Grande</a></li></ul></div>
+        <div><h4>El Programa</h4><ul class="footer-links"><li><a href="/es/12-steps/">Los Doce Pasos</a></li><li><a href="/es/12-traditions/">Las Doce Tradiciones</a></li><li><a href="/es/12-concepts/">Los Doce Conceptos</a></li><li><a href="/es/aa-questions/">Preguntas sobre A.A.</a></li><li><a href="/es/aa-info/">Sobre A.A.</a></li><li><a href="/es/meetings/">Encontrar una reunión</a></li></ul></div>
+        <div><h4>Conectar</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/es/download/">Descargar la app</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Conoce a Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">¿Estás en crisis ahora? Llama o envía un mensaje de texto al <a href="tel:988">988</a> (en Estados Unidos, marca 2 para español o escribe AYUDA). No estás solo.</p>
+      <div class="privacy-notice"><strong>Privacidad:</strong> Usamos Google Analytics y Cloudflare Web Analytics para ver qué páginas ayudan a la gente y dónde mejorar; la de Google pone cookies de analítica. Nunca vendemos tus datos ni publicamos nada sobre ti. <strong>Independencia:</strong> Sin vínculo con ninguna comunidad. <strong>Sin consejo médico:</strong> No sustituye la atención profesional.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, un proyecto de <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Hecho por <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script src="/app.js?v=b267d333f8"></script>
+  <script>
+    const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const MS=MONTHS.map(m=>m.toLowerCase());
+    const DAYS=[31,29,31,30,31,30,31,31,30,31,30,31];
+    const KEYS=(()=>{const a=[];for(let m=0;m<12;m++)for(let d=1;d<=DAYS[m];d++)a.push((m+1)+'-'+d);return a;})();
+    let DATA={};
+    function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+    function fmt(t){return t.split(/\n{2,}/).map(p=>'<p>'+esc(p.trim()).replace(/\[Page\s*([0-9ivxlcIVXLC\u2013\-, ]+)\]/g,'<span class="cite">[Page $1]</span>')+'</p>').join('');}
+    function slug(k){const[m,d]=k.split('-').map(Number);return MS[m-1]+'-'+d;}
+    function pretty(k){const[m,d]=k.split('-').map(Number);return MONTHS[m-1]+' '+d;}
+    function todayKey(){const n=new Date();return (n.getMonth()+1)+'-'+n.getDate();}
+    function pick(){const p=new URLSearchParams(location.search).get('d');if(p&&DATA[p])return p;const t=todayKey();return DATA[t]?t:(KEYS.find(k=>DATA[k])||KEYS[0]);}
+    function render(key){const e=DATA[key];if(!e)return;
+      document.getElementById('dr-date').textContent=pretty(key);
+      document.getElementById('dr-theme').textContent=e.theme;
+      document.getElementById('dr-thought').innerHTML=fmt(e.thought);
+      document.getElementById('dr-ref').textContent=e.book_ref?('— '+e.book_ref):'';
+      document.getElementById('dr-discuss').textContent=e.discussion||'';
+      document.getElementById('dr-booklink').href=e.aa_link||'https://www.aa.org/daily-reflections';
+      document.title=e.theme+' — Daily Reflection | Recovery Starts';
+      const i=KEYS.indexOf(key);
+      const pk=KEYS[(i-1+KEYS.length)%KEYS.length],nk=KEYS[(i+1)%KEYS.length];
+      const pe=document.getElementById('dr-prev'),ne=document.getElementById('dr-next');
+      pe.href='/daily-reflection/'+slug(pk)+'/';pe.innerHTML='<small>← Previous</small>'+pretty(pk);
+      ne.href='/daily-reflection/'+slug(nk)+'/';ne.innerHTML='<small>Next →</small>'+pretty(nk);
+    }
+    fetch('reflections.json').then(r=>r.json()).then(d=>{DATA=d;render(pick());}).catch(()=>{document.getElementById('dr-thought').innerHTML='<p>Today\u2019s reflection is loading. You can always <a href="https://app.recoverystarts.com?utm_source=recoverystarts&utm_medium=site&utm_campaign=366mornings&utm_content=daily-hub-fallback">talk to Recovery Einstein</a> directly.</p>';});
+  </script>
+<!-- Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+<script>window.RS_T={"p":{"Donate":"Donar","Donate — keep it free":"Donar — mantenlo gratis","Keep this free.":"Mantenlo gratis.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Este mapa lo construye y lo paga una sola persona, de su bolsillo. Cada país nuevo cuesta más mantenerlo. Si te ayudó a encontrar una sala, un dólar en la canasta lo mantiene gratis para la próxima persona.","$1 in the basket":"$1 en la canasta","Give more":"Dar más","Close":"Cerrar","Support Recovery Starts":"Apoya a Recovery Starts","Big Book app":"App del Libro Grande","Open web app":"Abrir la app web","Free · also on Google Play":"Gratis · también en Google Play","Install":"Instalar","In-app purchases · Free":"Compras dentro de la app · Gratis","Get AA Big Book Search + AI Guide on Google Play":"Consigue AA Big Book Search + AI Guide en Google Play","Open AA Big Book Search + AI Guide, the free web app":"Abre AA Big Book Search + AI Guide, la app web gratis"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);</script></body>
+</html>

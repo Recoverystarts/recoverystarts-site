@@ -8,7 +8,8 @@
 > study companion.
 
 ## What this site is
-- Free recovery meeting directory covering 9 fellowships (AA, NA, GA, and more)
+- Free recovery meeting directory: our own live listings for 4 fellowships (AA, NA, CA, CMA — the four the meetings
+  API's p takes), plus links to the finders of 5 more (GA, SAA, Recovery Dharma, SMART Recovery, Celebrate Recovery)
 - The Big Book Search Engine: read and search the actual pages of Alcoholics
   Anonymous, 4th Edition — free, no account, no agreement wall
 - The Big Book, page by page: a reference page for every page of Alcoholics

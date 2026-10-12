@@ -70,13 +70,18 @@ function loadHist(name) {
 const aacoaRaw = loadHist("aa_comes_of_age.txt");
 const p17Raw = loadHist("p-17_aa_traditions.txt");
 const SOURCES = [["Big Book (4th ed)", bbAll], ["A.A. Comes of Age", aacoaRaw && squash(aacoaRaw)], ["P-17", p17Raw && squash(p17Raw)]];
-// P-17 pages: a line holding only a number is the foot of that page.
+// P-17 pages: in the text extract, the printed page number (a line holding only
+// a number) sits ABOVE its page's text. Checked against p-17_aa_traditions.pdf:
+// "For whole movements have, before now…" is printed p. 5, "rule-making
+// benders" p. 12 (D-feb1 and D-feb2 caught the first version, which read it
+// as the foot of the page and came out one page high).
 const p17Pages = {};
 if (p17Raw) {
-  let buf = [];
+  let cur = "front";
   for (const line of p17Raw.split(/\r?\n/)) {
     const m = line.match(/^\s*(\d{1,2})\s*$/);
-    if (m) { p17Pages[m[1]] = (p17Pages[m[1]] || "") + squash(buf.join(" ")); buf = []; } else buf.push(line);
+    if (m) cur = m[1];
+    else p17Pages[cur] = (p17Pages[cur] || "") + squash(line);
   }
 }
 

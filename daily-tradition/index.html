@@ -493,13 +493,15 @@
         var thisMonth = monthNames[now.getMonth()];
         var d = now.getDate();
         var live = data[0] && data[0].month;
-        var pick = data.find(function (x) { return x.month === thisMonth && x.day === d; })
+        // by slug (october-12), not by month name: a translated page's data carries its own month names
+        var today = thisMonth.toLowerCase() + "-" + d;
+        var pick = data.find(function (x) { return x.slug === today; })
                 || data.find(function (x) { return x.day === d; })
                 || data[0];
         if (!pick) return;
         var host = document.getElementById("dt-today-main");
         if (!host) return;
-        var isToday = pick.month === thisMonth && pick.day === d;
+        var isToday = pick.slug === today;
         host.innerHTML = window.__dtHero(pick, isToday);
       } catch (e) { /* the server-rendered reading stays. */ }
     })();

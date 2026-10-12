@@ -278,6 +278,7 @@ ${ld.map((o) => `  <script type="application/ld+json">\n  ${JSON.stringify(o)}\n
     .tt-h2 { font-family: var(--font-display); color: var(--gold); font-size:1.35rem; text-align:center; margin: 2.8rem 0 1rem; }
     .tt-note { max-width: 760px; margin: 0 auto 1.8rem; text-align:center; color: var(--text-muted); font-size:0.9rem; line-height:1.75; }
     .tt-note strong { color: var(--gold); }
+    .tt-note a { color: var(--gold); text-decoration: underline; }
     .tt-grid { max-width: 860px; margin: 0 auto; }
     .tt-t { background: var(--bg-card); border:1px solid var(--border); border-radius: var(--radius); padding: 24px 26px; margin-bottom: 16px; scroll-margin-top: 90px; }
     .tt-t-h { margin: 0 0 14px; }
@@ -325,6 +326,8 @@ ${NAV}
         <p><strong>And the clause that matters most isn't in the version you were shown.</strong> Tradition 3's requirement that a group have <em>"no other affiliation"</em> exists <strong>only in the Long Form (pp. ${LONG})</strong>. It is the clause that says no treatment centre can own an A.A. group — and it is precisely the clause that vanished from the internet.</p>
       </div>
 
+      <p class="tt-note">Where they came from, 1937–1950, dated and sourced: <a href="/12-traditions/history/">How the Twelve Traditions came about →</a></p>
+
       <h2 class="tt-h2">The Twelve Traditions — both forms, in full</h2>
       <p class="tt-note">Short form and <strong>Long Form</strong>, word for word, exactly as they appear in <em>Alcoholics Anonymous</em>, 4th Edition. Most sites publish only the short form. A.A.'s own introduction on page 561 says the long form "is more explicit and of possible historic value" — so it is printed here too, which is what the book itself does.</p>
       <div class="tt-grid">
@@ -338,6 +341,7 @@ ${faqHtml}
 
       <div class="tt-cta">
         <a class="btn btn-primary" href="/daily-tradition/">Read a Tradition a day →</a>
+        <a class="btn btn-outline" href="/12-traditions/history/">How they came about →</a>
         <a class="btn btn-outline" href="/big-book/page-563/">The Long Form, p. 563 →</a>
         <a class="btn btn-outline" href="/big-book/">Get the book →</a>
       </div>

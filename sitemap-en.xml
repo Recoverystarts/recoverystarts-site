@@ -11420,7 +11420,7 @@
   </url>
   <url>
     <loc>https://recoverystarts.com/12-traditions/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://recoverystarts.com/12-traditions/"/>
@@ -11428,6 +11428,17 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/12-traditions/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://recoverystarts.com/fr/12-traditions/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/12-traditions/"/>
+  </url>
+  <url>
+    <loc>https://recoverystarts.com/12-traditions/history/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://recoverystarts.com/12-traditions/history/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/12-traditions/history/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/12-traditions/history/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://recoverystarts.com/fr/12-traditions/history/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/12-traditions/history/"/>
   </url>
   <url>
     <loc>https://recoverystarts.com/daily-tradition/august-1/</loc>

@@ -3,7 +3,7 @@
 // translates "English" into "Inglés" — Derick 2026-10-11 16:54). The same look as the meeting finder's (sitenav.mjs).
 // A click remembers the choice in rs_hl (localStorage, cookie fallback), the key the meeting finder's hl.js reads, so a
 // reader who picks Español on the homepage gets the finder in Spanish too.
-import { LANGS } from "./lib.mjs";
+import { LANGS, tagOf } from "./lib.mjs";
 const SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>`;
 export const GLOBE_CSS = `<style id="rs-globe-css">
 .rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
@@ -29,8 +29,10 @@ export const GLOBE_CSS = `<style id="rs-globe-css">
 </style>`;
 // here: the page's language; avail: { code: url } for every language this page exists in
 export function globeHtml(here, avail) {
-  const own = (c) => `lang="${c}"${LANGS[c].dir === "rtl" ? ' dir="rtl"' : ""}`;
-  const items = Object.entries(avail).filter(([c]) => c !== here).map(([c, u]) => `<a href="${u}" data-hl="${c}" hreflang="${c}" ${own(c)}>${LANGS[c].name}</a>`).join("");
+  const own = (c) => `lang="${tagOf(c)}"${LANGS[c].dir === "rtl" ? ' dir="rtl"' : ""}`;
+  // always in LANGS order (English, Español, Português…), whichever language was built last
+  const order = Object.keys(LANGS);
+  const items = Object.entries(avail).filter(([c]) => c !== here).sort(([a], [b]) => order.indexOf(a) - order.indexOf(b)).map(([c, u]) => `<a href="${u}" data-hl="${c}" hreflang="${tagOf(c)}" ${own(c)}>${LANGS[c].name}</a>`).join("");
   return `<details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان">${SVG}</summary><div class="rs-langs"><span class="rs-here" ${own(here)}>✓ ${LANGS[here].name}</span>${items}</div></details>`;
 }
 // remember a pick (the meeting finder's hl.js reads rs_hl) — one line, no dependencies

@@ -16,12 +16,13 @@ import { parse } from "parse5";
 export const ROOT = path.resolve(import.meta.dirname, "..", "..");
 export const I18N = path.join(ROOT, "i18n");
 
-// the languages the site can be built in (code → its own name, direction). A language is live on a page only when
+// the languages the site can be built in (code → its own name, direction; tag: the BCP-47 tag a page and its hreflang
+// carry when it's more than the code — pt is built at /pt/ and marked pt-BR). A language is live on a page only when
 // i18n/<code>/ covers every segment of that page.
 export const LANGS = {
   en: { name: "English", dir: "ltr" },
   es: { name: "Español", dir: "ltr" },
-  "pt-BR": { name: "Português", dir: "ltr" },
+  pt: { name: "Português", dir: "ltr", tag: "pt-BR" },
   fr: { name: "Français", dir: "ltr" },
   de: { name: "Deutsch", dir: "ltr" },
   fa: { name: "فارسی", dir: "rtl" },
@@ -33,6 +34,8 @@ const ATTRS = ["alt", "title", "aria-label", "placeholder"];
 const META = new Set(["description", "og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image:alt"]);
 const LETTER = /\p{L}/u;
 
+// the tag a language is marked with in <html lang>, hreflang and the 🌐 (pt → pt-BR; es → es)
+export const tagOf = (code) => LANGS[code]?.tag ?? code;
 export const fold = (s) => s.replace(/\s+/g, " ").trim();
 export const idOf = (s) => crypto.createHash("sha1").update(fold(s)).digest("hex").slice(0, 12);
 // a page's "part": its first path folder; the root page and the few small folders are "core"

@@ -2,6 +2,8 @@
 // node scripts/i18n/score.mjs es                 the files in i18n/es/ here
 // node scripts/i18n/score.mjs es --branches      every pushed origin/claude/tr1-* branch's files, no merging needed
 // node scripts/i18n/score.mjs es --branches --out i18n/reports/score.json   + the flagged segments, for a checker
+// node scripts/i18n/score.mjs pt --branches      the same for Portuguese: origin/claude/tr2-* (a language's wave is in
+//                                                WAVE below; --wave <name> reads another wave's branches)
 //
 // Every batch gets the same measurements, so a window that ran at a lower effort (or a different model) shows up as a
 // row that's worse than its neighbours. None of these numbers say a translation is good; they find the places a person
@@ -14,7 +16,10 @@
 //   numbers   a number in the English (a page, a year, a count) missing from the Spanish
 //   glossary  of the recovery words the glossary fixes (Big Book, sponsor, Higher Power, amends …), how often the Spanish
 //             uses the glossary's word: low = drifting vocabulary, which is what readers notice across pages
-//   usted     "usted/ustedes" forms: the site speaks as "tú" (a few are fine in quotes; many means the wrong register)
+//   usted     es: "usted/ustedes" forms: the site speaks as "tú" (a few are fine in quotes; many means the wrong register)
+//   reg       pt (wave tr2): the column "usted" counts the wrong register for Brazil: "tu"/"vós" forms ("tu és",
+//             "teu", "vosso", "contigo") and European-Portuguese words and grammar ("facto", "telemóvel", "equipa",
+//             "está a fazer"). The site speaks Brazilian Portuguese as "você".
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -25,14 +30,18 @@ const args = process.argv.slice(2);
 const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
+// each language's wave: its runners push origin/claude/<wave>-<line>
+const WAVE = { es: "tr1", pt: "tr2" };
+const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
+const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
 const git = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 1 << 28 });
 
 // where the files come from: { label, batch, json }
 const files = [];
 if (useBranches) {
-  try { git("fetch", "-q", "origin", "+refs/heads/claude/tr1-*:refs/remotes/origin/claude/tr1-*"); } catch (e) { console.error("fetch failed:", e.message.split("\n")[0]); }
-  const refs = git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/claude/").split("\n").filter((r) => /claude\/tr1-/.test(r));
+  try { git("fetch", "-q", "origin", `+refs/heads/${pre}*:refs/remotes/origin/${pre}*`); } catch (e) { console.error("fetch failed:", e.message.split("\n")[0]); }
+  const refs = git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/claude/").split("\n").filter((r) => r.startsWith(`origin/${pre}`));
   for (const ref of refs) {
     let names = [];
     try { names = git("ls-tree", "--name-only", ref, `i18n/${lang}/`).split("\n").map((n) => path.basename(n)); } catch { continue; }
@@ -40,8 +49,8 @@ if (useBranches) {
       if (!n.endsWith(".json") || n.startsWith("_") || n === "core.json") continue;
       const batch = n.slice(0, -5);
       if (!fs.existsSync(path.join(I18N, "batches", `${batch}.json`))) continue;
-      try { files.push({ label: ref.replace(/^origin\/claude\/tr1-/, ""), batch, json: JSON.parse(git("show", `${ref}:i18n/${lang}/${n}`)) }); }
-      catch (e) { files.push({ label: ref.replace(/^origin\/claude\/tr1-/, ""), batch, json: null, err: "not valid JSON" }); }
+      try { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: JSON.parse(git("show", `${ref}:i18n/${lang}/${n}`)) }); }
+      catch (e) { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: null, err: "not valid JSON" }); }
     }
   }
 } else {
@@ -66,8 +75,9 @@ const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
 const nums = (s) => (strip(s).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
-// the glossary's fixed words (i18n/es/GLOSSARY.md): English pattern → what the Spanish should contain
-const GLOSS = [
+// the glossary's fixed words (i18n/<lang>/GLOSSARY.md): English pattern → what the translation should contain
+const GLOSS_BY = {};
+GLOSS_BY.es = [
   [/\bBig Book\b/i, /Libro Grande/i, "Big Book"],
   [/\bsponsor(s|ed|ing|ship)?\b/i, /padrin|madrin|apadrin/i, "sponsor"],
   [/\bsponsees?\b/i, /ahijad/i, "sponsee"],
@@ -88,6 +98,34 @@ const GLOSS = [
   [/\bpowerless\b/i, /impotente/i, "powerless"],
   [/\bunmanageable\b/i, /ingobernable/i, "unmanageable"],
 ];
+// Brazilian Portuguese (i18n/pt/GLOSSARY.md; JUNAAB's wording at aa.org.br)
+GLOSS_BY.pt = [
+  [/\bBig Book\b/i, /Livro Azul/i, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /padrinh|madrinh|apadrinh/i, "sponsor"],
+  [/\bsponsees?\b/i, /afilhad/i, "sponsee"],
+  [/\bHigher Power\b/i, /Poder Superior/i, "Higher Power"],
+  [/\bhome groups?\b/i, /grupo base|grupos base/i, "home group"],
+  [/\bnewcomers?\b/i, /rec[eé]m-chegad|ingressante/i, "newcomer"],
+  [/\bamends\b/i, /repara[çc]/i, "amends"],
+  [/\bresentments?\b/i, /ressentiment/i, "resentment"],
+  [/\binventory\b/i, /invent[aá]rio/i, "inventory"],
+  [/\bsobriety\b/i, /sobriedade/i, "sobriety"],
+  [/\bspiritual awakening\b/i, /despertar espiritual/i, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /consci[eê]ncia (de grupo|coletiva)/i, "group conscience"],
+  [/\banonymity\b/i, /anonimato/i, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /defeitos de car[aá]ter/i, "defects of character"],
+  [/\bfellowship\b/i, /Irmandade/i, "fellowship"],
+  [/\bTraditions?\b/, /Tradi[çc]/i, "Tradition"],
+  [/\bSteps?\b/, /Passo/i, "Step"],
+  [/\bpowerless\b/i, /impotentes?/i, "powerless"],
+  [/\bunmanageable\b/i, /perdido o dom[ií]nio|dom[ií]nio/i, "unmanageable"],
+];
+const GLOSS = GLOSS_BY[lang] ?? [];
+// the wrong register: es "usted"; pt "tu"/"vós" forms and European-Portuguese words (Brazil says "você", "fato", "celular")
+const REG = {
+  es: /\busted(es)?\b/gi,
+  pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
+};
 
 const rows = [], report = {};
 for (const f of files) {
@@ -108,7 +146,9 @@ for (const f of files) {
     const tn = new Set(nums(t)); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
-    r.usted += (strip(t).match(/\busted(es)?\b/gi) ?? []).length;
+    const reg = (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;
+    if (reg && lang !== "es") flag(id, `register: ${(strip(t).match(REG[lang]) ?? []).slice(0, 3).join(", ")}`);
+    r.usted += reg;
   }
   const per = (x) => (100 * x) / Math.max(1, r.done);
   const gloss = r.gAll ? r.gHit / r.gAll : 1;
@@ -120,7 +160,7 @@ for (const f of files) {
 
 rows.sort((a, b) => a.score - b.score);
 const pad = (s, n) => String(s).padEnd(n), lp = (s, n) => String(s).padStart(n);
-console.log(`${lang}: ${rows.length} file(s)${useBranches ? " from origin/claude/tr1-* branches" : ""}, weakest first. A low score is where a checker reads first.\n`);
-console.log(pad("line", 9) + pad("batch", 20) + lp("score", 6) + lp("done", 12) + lp("tags", 6) + lp("same", 6) + lp("engl", 6) + lp("short", 6) + lp("nums", 6) + lp("usted", 6) + "  glossary");
+console.log(`${lang}: ${rows.length} file(s)${useBranches ? " from origin/${pre}* branches" : ""}, weakest first. A low score is where a checker reads first.\n`);
+console.log(pad("line", 9) + pad("batch", 20) + lp("score", 6) + lp("done", 12) + lp("tags", 6) + lp("same", 6) + lp("engl", 6) + lp("short", 6) + lp("nums", 6) + lp(lang === "es" ? "usted" : "reg", 6) + "  glossary");
 for (const r of rows) console.log(pad(r.line, 9) + pad(r.batch, 20) + lp(r.err ? "ERR" : r.score, 6) + lp(`${r.done}/${r.n}`, 12) + lp(r.tags, 6) + lp(r.same, 6) + lp(r.english, 6) + lp(r.short, 6) + lp(r.numbers, 6) + lp(r.usted, 6) + "  " + r.glossary + (r.err ? `  (${r.err})` : ""));
 if (outAt) { writeJson(path.resolve(ROOT, outAt), report); console.log(`\nflagged segments → ${outAt}`); }

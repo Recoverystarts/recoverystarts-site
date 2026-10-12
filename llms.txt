@@ -93,7 +93,14 @@ in their language with the page in their language.
 
 ### Français (fr)
 - Home: https://recoverystarts.com/fr/
+- The 12 Steps: https://recoverystarts.com/fr/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/fr/12-traditions/
 - AA info: Traditions and Concepts: https://recoverystarts.com/fr/aa-info/
+- Daily Traditions: https://recoverystarts.com/fr/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/fr/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/fr/big-book/pages/
+- Big Book search: https://recoverystarts.com/fr/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/fr/aa-questions/
 - Meetings: https://recoverystarts.com/fr/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-fr.xml
 

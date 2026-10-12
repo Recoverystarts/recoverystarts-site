@@ -220,7 +220,7 @@ ok("prev/next nav wraps correctly at both ends of the month");
 
 console.log("\n=== 3. SITEMAP ===\n");
 
-const sm = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
+const sm = fs.readFileSync(path.join(ROOT, "sitemap-en.xml"), "utf8");
 const locs = [...sm.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
 const dupes = locs.filter((l, i) => locs.indexOf(l) !== i);
 if (dupes.length) bad("duplicate sitemap entries: " + [...new Set(dupes)].slice(0, 3).join(", "));

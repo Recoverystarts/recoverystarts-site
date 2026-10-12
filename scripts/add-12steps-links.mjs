@@ -49,7 +49,7 @@ for (let n = 1; n <= 12; n++) {
 }
 
 // Sitemap
-const smPath = path.join(root, "sitemap.xml");
+const smPath = path.join(root, "sitemap-en.xml");
 let sm = readFileSync(smPath, "utf8");
 if (!sm.includes("https://recoverystarts.com/12-steps/")) {
   const entry = `  <url>

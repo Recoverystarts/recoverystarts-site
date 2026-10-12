@@ -133,7 +133,7 @@ console.log(`menus updated: ${menus} English page(s)`);
   write(f, out);
 }
 {
-  const f = rel("sitemap.xml");
+  const f = rel("sitemap-en.xml");
   let xml = fs.readFileSync(f, "utf8");
   const have = new Set([...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]));
   const add = [];

@@ -45,6 +45,6 @@ const dec = (s) => s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/
     console.log("  " + r.status + "  " + u);
   }
 
-  const sm = await (await fetch(P + "/sitemap.xml" + cb())).text();
+  const sm = await (await fetch(P + "/sitemap-en.xml" + cb())).text();
   console.log("\n  sitemap URLs live: " + (sm.match(/<loc>/g) || []).length);
 })();

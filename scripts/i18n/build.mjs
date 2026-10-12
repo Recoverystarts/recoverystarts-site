@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
 import { stampGlobe } from "./globe.mjs";
+import { writeSitemaps } from "./sitemap.mjs";
 
 const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
@@ -120,4 +121,6 @@ if (!only) for (const rel of Object.keys(pageIds)) {
   if (out !== html) fs.writeFileSync(file, out);
 }
 const total = Object.keys(pageIds).length;
+// the per-language sitemaps and their index (sitemap.mjs), from what's now on disk
+if (!only) writeSitemaps({ quiet: true });
 console.log(`${lang}: ${built} pages written to /${lang}/ (${ready.size} of ${total} pages fully translated; ${Object.keys(tr).length} translated segments)`);

@@ -43,6 +43,9 @@ import { firstLabel } from "./searchPipeline.js";
 
 const INDEX_EDITION = "4th";
 const API_URL = "/api/bigbook-search";
+// the page's language prefix (/es, /pt…; "" in English): the links a result writes stay in the reader's language
+const LANG = (document.documentElement.lang || "en").split("-")[0].toLowerCase();
+const P = LANG !== "en" && location.pathname.startsWith(`/${LANG}/`) ? `/${LANG}` : "";
 
 // ── DOM ──────────────────────────────────────────────────────────────────────
 const input = document.getElementById("bb-input");
@@ -182,17 +185,17 @@ function pageCardHtml(r) {
       </div>
       <p class="bb-snippet">You're looking for <strong>page ${esc(label)}</strong> of the Big Book, 4th Edition.</p>
       <div class="bb-page-actions">
-        <a class="btn btn-primary" href="/big-book/page-${escAttr(slug)}/">What's on page ${esc(label)} →</a>
+        <a class="btn btn-primary" href="${P}/big-book/page-${escAttr(slug)}/">What's on page ${esc(label)} →</a>
         <a class="btn btn-outline" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=bigbook-search&amp;utm_content=page-${escAttr(slug)}" target="_blank" rel="noopener">Read it in the app →</a>
       </div>
-      <p class="bb-page-note">A.A. offers the whole book free — <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read this page at aa.org →</a> · <a href="/big-book/">Get your own copy →</a></p>
+      <p class="bb-page-note">A.A. offers the whole book free — <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">read this page at aa.org →</a> · <a href="${P}/big-book/">Get your own copy →</a></p>
     </article>`;
 }
 
 const CTA = `
   <div class="bb-cta">
     <p>Reading the Big Book with someone who knows every page?</p>
-    <a class="btn btn-primary" href="/download/">Meet Recovery Einstein →</a>
+    <a class="btn btn-primary" href="${P}/download/">Meet Recovery Einstein →</a>
   </div>`;
 
 function setStatus(msg) {

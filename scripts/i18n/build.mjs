@@ -28,6 +28,26 @@ const ready = new Set(Object.entries(pageIds).filter(([rel, ids]) => ids.every((
 const other = {};
 for (const l of Object.keys(LANGS)) if (l !== "en" && l !== lang) { const t = translations(l); other[l] = new Set(Object.entries(pageIds).filter(([, ids]) => ids.length && ids.every((id) => t[id] != null)).map(([r]) => r)); }
 
+// a JSON data string → its translation, or null. A string holding HTML (a badge) gets the translation's HTML; a text string
+// (a title, a body with *emphasis*, which the page's script escapes itself) gets text, or null if tags would be left in it.
+const ENT = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+const unent = (s) => s.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => e[0] === "#" ? String.fromCodePoint(e[1] === "x" || e[1] === "X" ? parseInt(e.slice(2), 16) : +e.slice(1)) : ENT[e.toLowerCase()] ?? m);
+function dataText(v) {
+  if (!/\p{L}/u.test(v)) return null;
+  if (tr[idOf(v)] != null) {
+    const t = fromTemplate(tr[idOf(v)], v);
+    if (/<[a-z/]/i.test(v)) return t;
+    const x = unent(t);
+    return /<[a-z/]/i.test(x) ? null : x;
+  }
+  const em = v.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  if (em !== v && tr[idOf(em)] != null) {
+    const x = unent(fromTemplate(tr[idOf(em)], em).replace(/<em>([\s\S]*?)<\/em>/g, "*$1*"));
+    return /<[a-z/]/i.test(x) ? null : x;
+  }
+  return null;
+}
+
 // the phrasebook for script-written words, if the language has one (i18n/<lang>/_phrases.json — not a segment file)
 const ph = readJson(path.join(I18N, lang, "_phrases.json"), null);
 const book = ph ? JSON.stringify({ p: ph.p, r: ph.r ?? [], skip: ph.skip ?? "" }).replace(/</g, "\\u003c") : null;
@@ -46,6 +66,16 @@ for (const rel of Object.keys(pageIds)) {
     if (t == null) throw new Error(`${rel}: segment ${idOf(s.en)} has no ${lang} (extract is out of date — run extract.mjs)`);
     html = html.slice(0, s.start) + (s.kind === "attr" ? t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) : fromTemplate(t, s.en)) + html.slice(s.end);
   }
+  // a page's JSON data (<script type="application/json">, e.g. the Daily Tradition hub's readings, which its script draws
+  // over the server-rendered one): a string whose English is a segment translated elsewhere takes that translation, so the
+  // script draws it in this language too. A string with no translation stays English.
+  html = html.replace(/(<script\b[^>]*\btype="application\/json"[^>]*>)([\s\S]*?)(<\/script>)/gi, (m, open, body, close) => {
+    let data; try { data = JSON.parse(body); } catch { return m; }
+    let n = 0;
+    const walk = (v) => Array.isArray(v) ? v.map(walk) : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, walk(x)])) : typeof v === "string" ? ((t) => (t == null ? v : (n++, t)))(dataText(v)) : v;
+    const out = walk(data);
+    return n ? open + JSON.stringify(out).replace(/<\//g, "<\\/") + close : m;
+  });
   // links to pages that exist in this language
   // …and the meeting finder (the same origin, its own language switch: ?hl=<lang>)
   html = html.replace(/(\shref=")(\/[^"]*)"/g, (m, a, url) => {

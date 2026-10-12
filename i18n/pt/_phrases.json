@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js), swapped by /rs-t.js on /pt/ pages. Our English → Brazilian Portuguese (você). Same keys as i18n/es/_phrases.json.",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub’s card), swapped by /rs-t.js on /pt/ pages. Our English → Brazilian Portuguese (você). Same keys as i18n/es/_phrases.json.",
  "p": {
   "Donate": "Doar",
   "Donate — keep it free": "Doar — mantenha gratuito",
@@ -15,7 +15,12 @@
   "Install": "Instalar",
   "In-app purchases · Free": "Compras no app · Gratuito",
   "Get AA Big Book Search + AI Guide on Google Play": "Baixe o AA Big Book Search + AI Guide no Google Play",
-  "Open AA Big Book Search + AI Guide, the free web app": "Abra o AA Big Book Search + AI Guide, o app web gratuito"
+  "Open AA Big Book Search + AI Guide, the free web app": "Abra o AA Big Book Search + AI Guide, o app web gratuito",
+  "Today": "Hoje",
+  "Latest reading": "Leitura mais recente",
+  "Sit with": "Para refletir",
+  "Open this reading": "Abra esta leitura",
+  "Ask Recovery Einstein about today's Tradition": "Pergunte a Recovery Einstein sobre a Tradição de hoje"
  },
  "r": [],
  "skip": ""

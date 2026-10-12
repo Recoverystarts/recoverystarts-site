@@ -463,17 +463,20 @@
       // Badge HTML is precomputed server-side (badgeFor) and shipped in the
       // payload, so the two schemes stay in one place instead of two.
       var badge = d.badge || '';
+      // links stay in the page's language (/es/daily-tradition/…), as build.mjs does for the page's own links
+      var L = (document.documentElement.lang || 'en').split('-')[0].toLowerCase();
+      var P = L !== 'en' && location.pathname.indexOf('/' + L + '/') === 0 ? '/' + L : '';
       return ''
         + '<div class="dt-today-head">'
         +   '<span class="dt-today-lbl">' + (isToday ? "Today" : "Latest reading") + ' \u00b7 ' + esc(d.month) + ' ' + d.day + '</span>'
         +   badge
         + '</div>'
-        + '<h2 class="dt-today-title"><a href="/daily-tradition/' + d.slug + '/">' + esc(d.title) + '</a></h2>'
+        + '<h2 class="dt-today-title"><a href="' + P + '/daily-tradition/' + d.slug + '/">' + esc(d.title) + '</a></h2>'
         + '<p class="dt-today-body">' + em(d.body) + '</p>'
         + '<div class="dt-today-sit"><span class="lbl">Sit with</span><p>' + em(d.sitWith) + '</p></div>'
         + '<div class="dt-today-actions">'
         +   '<a class="btn btn-primary" target="_blank" rel="noopener" href="https://app.recoverystarts.com/?utm_source=recoverystarts&utm_medium=site&utm_campaign=daily-traditions&utm_content=' + d.slug + '">Ask Recovery Einstein about today\'s Tradition \u2192</a>'
-        +   '<a class="btn btn-outline" href="/daily-tradition/' + d.slug + '/">Open this reading \u2192</a>'
+        +   '<a class="btn btn-outline" href="' + P + '/daily-tradition/' + d.slug + '/">Open this reading \u2192</a>'
         + '</div>';
     };
   </script>

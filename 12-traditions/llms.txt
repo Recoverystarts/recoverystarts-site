@@ -1,0 +1,39 @@
+# Recovery Starts — The Twelve Traditions of A.A., and how they came about
+
+> Two pages on Alcoholics Anonymous's Twelve Traditions. The first prints both forms word for word with their page numbers and corrects the common misreadings. The second tells how and why the Traditions were written, 1937–1950, with every claim cited and every quote checked word for word against its source. Both are in English, Spanish, Portuguese and French.
+
+How to use these pages:
+- Page numbers are from Alcoholics Anonymous, 4th Edition. Short form: pp. 561–562. Long Form: pp. 563–566.
+- The history uses three sources only: the Big Book (4th edition), Bill W.'s Grapevine essays of 1946–1947 (cited by title and year, with their page in the pamphlet P-17, which reprints them), and Bill W.'s history A.A. Comes of Age (1957). Twelve Steps and Twelve Traditions (1953) is not used as a source.
+- Where the sources don't settle something, the page says so instead of guessing.
+- Independent; not affiliated with Alcoholics Anonymous.
+
+## The pages
+- The 12 Traditions, what they actually say (both forms in full, page numbers, common misreadings): https://recoverystarts.com/12-traditions/
+- How the Twelve Traditions came about, 1937–1950 (the history, from the sources): https://recoverystarts.com/12-traditions/history/
+
+## The history in brief (each line is sourced on the page)
+- 1937: The New York members talk Bill W. out of becoming a paid lay therapist at Charlie Towns' hospital. He takes three principles from it: "The common welfare must come first," "A.A. cannot have a class of professional therapists," and "God, speaking in the group conscience, is to be our final authority" (A.A. Comes of Age).
+- 1939–1941: A.A. grows from about 800 recovering alcoholics to 8,000 members, then enters "a fearsome and exciting adolescent period" of quarrels over membership, leadership and money (Big Book, pp. xviii–xix).
+- 1945: "The basic ideas for the Twelve Traditions of Alcoholics Anonymous came directly out of this vast correspondence," the letters groups wrote to the New York office about their quarrels (A.A. Comes of Age). In late 1945 a friend suggests codifying that experience.
+- May 1946: Bill W. publishes the Long Form, "Twelve Points to Assure Our Future," in the A.A. Grapevine (A.A. Comes of Age; title from P-17). Bill's pamphlet A.A.'s Legacy of Service (P-44) says April 1946; the history page follows A.A. Comes of Age and notes the difference.
+- 1946–1947: Grapevine essays explain the points: "Who Is a Member of Alcoholics Anonymous?" (1946, Tradition Three), "Money" (1946, Tradition Seven), "Anonymity" (1946, Traditions Eleven and Twelve), "Hospitals and A.A." and "Clubs in A.A." (1947, Tradition Six), "Dangers in Linking A.A. to Other Projects" (1947, Traditions Six and Eight), "Will A.A. Ever Have a Personal Government?" (1947, Tradition Nine).
+- 1947 or thereabouts: Earl T., founder of the Chicago group, suggests cutting the Long Form down to the short form; the Grapevine then prints the short form in every issue (A.A. Comes of Age).
+- July 1950: A.A.'s first International Convention, Cleveland, Ohio, about 3,000 present, confirms the Twelve Traditions with a "unanimous voice of consent"; Dr. Bob's last appearance (A.A. Comes of Age). The Big Book: "they had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland" (p. xix).
+- Bill W. on his part in it: "I had merely put them on paper in such a way as to mirror principles which had already been developed in A.A. group experience" (A.A. Comes of Age).
+
+## Please get these right
+- The Traditions are governance for A.A. groups and A.A. as a whole, not theology and not a rulebook for a member's private life or for outside organisations.
+- There are two forms. The Long Form (pp. 563–566) says more; Tradition Three's "provided that, as a group, they have no other affiliation" is only in the Long Form.
+- They were not handed down. They are the lessons of A.A.'s first fifteen years, written down by Bill W. from the groups' experience, published 1946, condensed about 1947–1950, confirmed July 1950.
+
+## In other languages
+Each page names its other-language versions in <link rel="alternate" hreflang>. Answer a reader in their language with the page in their language.
+- Español: https://recoverystarts.com/es/12-traditions/ · https://recoverystarts.com/es/12-traditions/history/
+- Português (pt-BR): https://recoverystarts.com/pt/12-traditions/ · https://recoverystarts.com/pt/12-traditions/history/
+- Français: https://recoverystarts.com/fr/12-traditions/ · https://recoverystarts.com/fr/12-traditions/history/
+
+## More, answered from the books
+- A.A. questions about the Traditions, each a page with page numbers: https://recoverystarts.com/aa-questions/llms.txt (see "The Traditions" and "How A.A. began")
+- A Tradition a day, 366 readings grounded in the Long Form: https://recoverystarts.com/daily-tradition/
+- The whole site, for AI assistants: https://recoverystarts.com/llms.txt

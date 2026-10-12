@@ -32,3 +32,4 @@
 | topup-misc | 720 | 12 | daily-tradition/april/index.html | daily-tradition/september/index.html |
 | daily-tradition-3 | 35,463 | 1020 | daily-tradition/february-1/index.html | daily-tradition/march/index.html |
 | daily-tradition-4 | 35,333 | 1021 | daily-tradition/april-1/index.html | daily-tradition/may/index.html |
+| 12-traditions-history | 2,274 | 71 | 12-traditions/history/index.html | 12-traditions/index.html |

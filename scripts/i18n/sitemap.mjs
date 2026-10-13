@@ -14,7 +14,7 @@ import { ROOT, LANGS, tagOf } from "./lib.mjs";
 
 const SITE = "https://recoverystarts.com";
 // the day a language's pages went live: a language page's lastmod is never older than that
-const LIVE = { es: "2026-10-12", pt: "2026-10-12", fr: "2026-10-12" };
+const LIVE = { es: "2026-10-12", pt: "2026-10-12", fr: "2026-10-12", fa: "2026-10-13", pl: "2026-10-13" };
 const today = new Date().toISOString().slice(0, 10);
 const EN = path.join(ROOT, "sitemap-en.xml"), INDEX = path.join(ROOT, "sitemap.xml");
 

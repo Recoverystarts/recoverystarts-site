@@ -16,7 +16,7 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", en: "en_US" };
 
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }

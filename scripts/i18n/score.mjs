@@ -85,6 +85,9 @@ const EN_FILLER = new Set("the and with your you our we are was were this that t
 // Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)
 const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
 const nums = (s) => (latin(strip(s)).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
+// fa: a number written as a word counts too («دوازده قدم» for "12 Steps", «ویرایش چهارم» for "4th Ed.", «شبانه‌روزی» for 24/7)
+const FA_NUM = [["یک|اول|نخست", "1"], ["دو|دوم", "2"], ["سه|سوم", "3"], ["چهار|چهارم", "4"], ["پنج|پنجم", "5"], ["شش|ششم", "6"], ["هفت|هفتم", "7"], ["هشت|هشتم", "8"], ["نه|نُه|نهم", "9"], ["ده|دهم", "10"], ["یازده|یازدهم", "11"], ["دوازده|دوازدهم", "12"]];
+const faWords = (s) => { const out = []; for (const [w, n] of FA_NUM) if (new RegExp(`(?<![\\p{L}])(?:${w})(?![\\p{L}])|(?<![\\p{L}])(?:${w})(?=\u200c?قدمی|\u200c?گانه)`, "u").test(s)) out.push(n); if (/شبانه[\u200c ]?روزی/.test(s)) out.push("24", "7"); return out; };
 // the glossary's fixed words (i18n/<lang>/GLOSSARY.md): English pattern → what the translation should contain
 const GLOSS_BY = {};
 GLOSS_BY.es = [
@@ -150,6 +153,26 @@ GLOSS_BY.fr = [
   [/\bSteps?\b/, /[ÉE]tape/i, "Step"],
   [/\bpowerless\b/i, /impuissant/i, "powerless"],
 ];
+// Persian (i18n/fa/GLOSSARY.md; A.A. in Iran's own wording, aairan.org / iranaa.org)
+GLOSS_BY.fa = [
+  [/\bBig Book\b/i, /کتاب بزرگ|الکلی‌های گمنام/, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /راهنما/, "sponsor"],
+  [/\bsponsees?\b/i, /رهجو/, "sponsee"],
+  [/\bHigher Power\b/i, /نیروی برتر/, "Higher Power"],
+  [/\bhome groups?\b/i, /گروه خانگی/, "home group"],
+  [/\bnewcomers?\b/i, /تازه‌وارد|تازه وارد/, "newcomer"],
+  [/\bamends\b/i, /جبران/, "amends"],
+  [/\bresentments?\b/i, /رنجش/, "resentment"],
+  [/\binventory\b/i, /ترازنامه/, "inventory"],
+  [/\bsobriety\b/i, /هوشیار/, "sobriety"],
+  [/\bspiritual awakening\b/i, /بیداری روحانی/, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /وجدان گروه/, "group conscience"],
+  [/\banonymity\b/i, /گمنامی/, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /نواقص اخلاقی/, "defects of character"],
+  [/\bTraditions?\b/, /سنت/, "Tradition"],
+  [/\bSteps?\b/, /قدم/, "Step"],
+  [/\bpowerless\b/i, /عاجز/, "powerless"],
+];
 const GLOSS = GLOSS_BY[lang] ?? [];
 // the wrong register: es "usted"; pt "tu"/"vós" forms and European-Portuguese words (Brazil says "você", "fato", "celular")
 const REG = {
@@ -175,7 +198,7 @@ for (const f of files) {
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set(nums(t)); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     const reg = (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;

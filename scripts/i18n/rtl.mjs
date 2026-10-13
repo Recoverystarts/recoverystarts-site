@@ -32,6 +32,7 @@ export function rtlSheet() {
   css = at ? at[0] + imports + "\n" + css.slice(at[0].length) : imports + "\n" + css;
   css += "\n/* ---- right-to-left type (scripts/i18n/rtl.mjs) ---- */\n" + Object.entries(FONT).map(([l, f]) => `html:lang(${l}){--font-display:${f.family},'Fraunces',Georgia,serif;--font-body:${f.family},system-ui,-apple-system,sans-serif;--font-ui:${f.family},system-ui,-apple-system,sans-serif}`).join("\n") + `
 html[dir="rtl"] *{letter-spacing:0!important}
+html:lang(fa) ol{list-style-type:persian}
 html[dir="rtl"] em,html[dir="rtl"] i,html[dir="rtl"] cite,html[dir="rtl"] blockquote{font-style:normal}
 html[dir="rtl"] em,html[dir="rtl"] i{font-weight:600}
 html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{line-height:1.45}

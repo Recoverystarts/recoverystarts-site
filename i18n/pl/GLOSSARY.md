@@ -283,3 +283,17 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 | Short form / Long form | Wersja skrócona / Wersja pełna |
 | Not verified yet | Jeszcze niezweryfikowane |
 | email | e-mail |
+
+## Review additions (pl1 super-review, 2026-10-13) — one wording, enforced by the desk's fix_pl.py §1
+| English | Polish |
+|---|---|
+| a daily reprieve (p. 85) | codzienne zawieszenie wyroku [ours; a stay of sentence, never «ułaskawienie» (a pardon)] |
+| Daily Traditions (the series, where the English is plural) | Codzienne Tradycje; the menu's "Daily Tradition" stays «Codzienna Tradycja» |
+| The A.A. Service Manual | «Podręcznik służby AA» [ours]; where a runner kept the English title, «The A.A. Service Manual» |
+| A.A.'s Legacy of Service (P-44) / The Twelve Traditions Illustrated (P-43) | «Dziedzictwo służby AA» / «Dwanaście Tradycji ilustrowanych» [ours] |
+| He Sold Himself Short (story) | «Nie doceniał siebie» [ours] |
+| Will A.A. Ever Have a Personal Government? (P-17) | «Czy AA będzie kiedyś miało rządy osobiste?» [ours] |
+| Sister Ignatia | siostra Ignacja |
+| The Name on the Drive (June 21) | «Nazwa na zbiórce» (a fund drive) |
+| Alcoholics Anonymous, 4th Edition (in the Big Book page templates) | Alcoholics Anonymous, wyd. IV — never «Anonimowi Alkoholicy, wydanie IV» for the English book's page numbers |
+| A.A. Grapevine, Inc. / English titles kept in English (A.A. Comes of Age, Clubs in A.A. …) | keep A.A. with periods |

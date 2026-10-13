@@ -113,6 +113,9 @@
   }
 
   function init() {
+    // Not on Persian pages for now (Derick, 2026-10-12): Stripe and PayPal don't take payments from Iran, and Canada has
+    // sanctions on Iran. To show it there too, delete this line.
+    if (/^fa\b/i.test(document.documentElement.lang || "")) return;
     var style = document.createElement("style"); style.textContent = CSS; document.head.appendChild(style);
     navAndHero();
     footerLink();

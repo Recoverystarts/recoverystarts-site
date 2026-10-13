@@ -23,6 +23,8 @@
 //             "teu", "vosso", "contigo") and European-Portuguese words and grammar ("facto", "telemóvel", "equipa",
 //             "está a fazer"). The site speaks Brazilian Portuguese as "você".
 //             fr (wave tr3): "tu"/"toi"/"ton"/"ta"/"tes"/"t'" forms — the site says "vous" (a few are fine inside a quote).
+//             fa (wave tr4): Arabic ي/ك for Persian ی/ک; می/نمی written apart or run together without the half-space
+//             (U+200C); "تو"/"تویی"/"خودت" where the site says «شما»; Latin , ; ? in Persian prose (، ؛ ؟).
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -34,7 +36,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -77,10 +79,15 @@ const englishOf = (batch) => {
   return JSON.parse(fs.readFileSync(path.join(I18N, "batches", `${batch}.json`), "utf8"));
 };
 
-const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;/g, " ").replace(/\s+/g, " ").trim();
+const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;|&#x[0-9a-f]+;/gi, " ").replace(/\s+/g, " ").trim();
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
-const nums = (s) => (strip(s).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
+// Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)
+const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
+const nums = (s) => (latin(strip(s)).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
+// fa: a number written as a word counts too («دوازده قدم» for "12 Steps", «ویرایش چهارم» for "4th Ed.", «شبانه‌روزی» for 24/7)
+const FA_NUM = [["یک|اول|نخست", "1"], ["دو|دوم", "2"], ["سه|سوم", "3"], ["چهار|چهارم", "4"], ["پنج|پنجم", "5"], ["شش|ششم", "6"], ["هفت|هفتم", "7"], ["هشت|هشتم", "8"], ["نه|نُه|نهم", "9"], ["ده|دهم", "10"], ["یازده|یازدهم", "11"], ["دوازده|دوازدهم", "12"]];
+const faWords = (s) => { const out = []; for (const [w, n] of FA_NUM) if (new RegExp(`(?<![\\p{L}])(?:${w})(?![\\p{L}])|(?<![\\p{L}])(?:${w})(?=\u200c?قدمی|\u200c?گانه)`, "u").test(s)) out.push(n); if (/شبانه[\u200c ]?روزی/.test(s)) out.push("24", "7"); return out; };
 // the glossary's fixed words (i18n/<lang>/GLOSSARY.md): English pattern → what the translation should contain
 const GLOSS_BY = {};
 GLOSS_BY.es = [
@@ -146,11 +153,32 @@ GLOSS_BY.fr = [
   [/\bSteps?\b/, /[ÉE]tape/i, "Step"],
   [/\bpowerless\b/i, /impuissant/i, "powerless"],
 ];
+// Persian (i18n/fa/GLOSSARY.md; A.A. in Iran's own wording, aairan.org / iranaa.org)
+GLOSS_BY.fa = [
+  [/\bBig Book\b/i, /کتاب بزرگ|الکلی‌های گمنام/, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /راهنما/, "sponsor"],
+  [/\bsponsees?\b/i, /رهجو/, "sponsee"],
+  [/\bHigher Power\b/i, /نیروی برتر/, "Higher Power"],
+  [/\bhome groups?\b/i, /گروه خانگی/, "home group"],
+  [/\bnewcomers?\b/i, /تازه‌وارد|تازه وارد/, "newcomer"],
+  [/\bamends\b/i, /جبران/, "amends"],
+  [/\bresentments?\b/i, /رنجش/, "resentment"],
+  [/\binventory\b/i, /ترازنامه/, "inventory"],
+  [/\bsobriety\b/i, /هوشیار/, "sobriety"],
+  [/\bspiritual awakening\b/i, /بیداری روحانی/, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /وجدان گروه/, "group conscience"],
+  [/\banonymity\b/i, /گمنامی/, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /نواقص اخلاقی/, "defects of character"],
+  [/\bTraditions?\b/, /سنت/, "Tradition"],
+  [/\bSteps?\b/, /قدم/, "Step"],
+  [/\bpowerless\b/i, /عاجز/, "powerless"],
+];
 const GLOSS = GLOSS_BY[lang] ?? [];
 // the wrong register: es "usted"; pt "tu"/"vós" forms and European-Portuguese words (Brazil says "você", "fato", "celular")
 const REG = {
   es: /\busted(es)?\b/gi,
   fr: /(?<!\p{L})(?:(?:tu|toi|ton|ta|tes|tien|tienne)(?!\p{L})|t['’](?=\p{L}))/giu,
+  fa: /[يك]|(?<![\p{L}\u200c])ن?می (?=\p{L})|(?<![\p{L}\u200c])ن?می(?!ز|ان|ل|وه|راث|لیون|لیارد|هن|همان|زان|ثاق|کروب|ترا|گرن|نیمم|ناکاری|نو)(?=[\u0622-\u06cc])|(?<!\p{L})(?:تو|تویی|خودت|برایت|داری|هستی)(?!\p{L})|(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
 
@@ -170,7 +198,7 @@ for (const f of files) {
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set(nums(t)); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     const reg = (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;

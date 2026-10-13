@@ -10,6 +10,7 @@ import path from "node:path";
 import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
 import { stampGlobe } from "./globe.mjs";
 import { writeSitemaps } from "./sitemap.mjs";
+import { rtlPage } from "./rtl.mjs";
 
 const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
@@ -100,6 +101,8 @@ for (const rel of Object.keys(pageIds)) {
   // the 🌐: English, this language, and every other language this page is built in
   const avail = { en: urlOf(rel), [lang]: `/${lang}${urlOf(rel)}`, ...Object.fromEntries(Object.entries(other).filter(([, s]) => s.has(rel)).map(([l]) => [l, `/${l}${urlOf(rel)}`])) };
   html = stampGlobe(html, lang, avail);
+  // a right-to-left language: the page mirrored, its arrows and digits as the language writes them (rtl.mjs)
+  if (L.dir === "rtl") html = rtlPage(html, lang);
   globes.set(rel, avail);
   const dest = path.join(outDir, rel);
   fs.mkdirSync(path.dirname(dest), { recursive: true });

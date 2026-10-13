@@ -79,7 +79,7 @@ const englishOf = (batch) => {
   return JSON.parse(fs.readFileSync(path.join(I18N, "batches", `${batch}.json`), "utf8"));
 };
 
-const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;/g, " ").replace(/\s+/g, " ").trim();
+const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;|&#x[0-9a-f]+;/gi, " ").replace(/\s+/g, " ").trim();
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
 // Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)

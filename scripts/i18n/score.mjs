@@ -23,6 +23,8 @@
 //             "teu", "vosso", "contigo") and European-Portuguese words and grammar ("facto", "telemóvel", "equipa",
 //             "está a fazer"). The site speaks Brazilian Portuguese as "você".
 //             fr (wave tr3): "tu"/"toi"/"ton"/"ta"/"tes"/"t'" forms — the site says "vous" (a few are fine inside a quote).
+//             fa (wave tr4): Arabic ي/ك for Persian ی/ک; می/نمی written apart or run together without the half-space
+//             (U+200C); "تو"/"تویی"/"خودت" where the site says «شما»; Latin , ; ? in Persian prose (، ؛ ؟).
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -34,7 +36,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -80,7 +82,9 @@ const englishOf = (batch) => {
 const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;/g, " ").replace(/\s+/g, " ").trim();
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
-const nums = (s) => (strip(s).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
+// Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)
+const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
+const nums = (s) => (latin(strip(s)).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).filter((n) => n.length);
 // the glossary's fixed words (i18n/<lang>/GLOSSARY.md): English pattern → what the translation should contain
 const GLOSS_BY = {};
 GLOSS_BY.es = [
@@ -151,6 +155,7 @@ const GLOSS = GLOSS_BY[lang] ?? [];
 const REG = {
   es: /\busted(es)?\b/gi,
   fr: /(?<!\p{L})(?:(?:tu|toi|ton|ta|tes|tien|tienne)(?!\p{L})|t['’](?=\p{L}))/giu,
+  fa: /[يك]|(?<![\p{L}\u200c])ن?می (?=\p{L})|(?<![\p{L}\u200c])ن?می(?!ز|ان|ل|وه|راث|لیون|لیارد|هن|همان|زان|ثاق|کروب|ترا|گرن|نیمم|ناکاری|نو)(?=[\u0622-\u06cc])|(?<!\p{L})(?:تو|تویی|خودت|برایت|داری|هستی)(?!\p{L})|(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
 

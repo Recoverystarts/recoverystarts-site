@@ -112,7 +112,15 @@ in their language with the page in their language.
 
 ### فارسی — Persian (fa)
 - Home: https://recoverystarts.com/fa/
+- The 12 Steps: https://recoverystarts.com/fa/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/fa/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/fa/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/fa/aa-info/
+- Daily Traditions: https://recoverystarts.com/fa/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/fa/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/fa/big-book/pages/
+- Big Book search: https://recoverystarts.com/fa/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/fa/aa-questions/
 - Meetings: https://recoverystarts.com/fa/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-fa.xml
 

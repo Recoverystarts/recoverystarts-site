@@ -1533,7 +1533,7 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 html:lang(fa){--font-display:'Vazirmatn','Fraunces',Georgia,serif;--font-body:'Vazirmatn',system-ui,-apple-system,sans-serif;--font-ui:'Vazirmatn',system-ui,-apple-system,sans-serif}
 html[dir="rtl"] *{letter-spacing:0!important}
 html:lang(fa) ol{list-style-type:persian}
-html[dir="rtl"] em,html[dir="rtl"] i,html[dir="rtl"] cite,html[dir="rtl"] blockquote{font-style:normal}
+html[dir="rtl"] *{font-style:normal!important}
 html[dir="rtl"] em,html[dir="rtl"] i{font-weight:600}
 html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] h4{line-height:1.45}
 html[dir="rtl"] body{line-height:1.9}

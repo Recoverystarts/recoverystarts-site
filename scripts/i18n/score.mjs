@@ -207,7 +207,7 @@ GLOSS_BY.pl = [
 ];
 const GLOSS = GLOSS_BY[lang] ?? [];
 // pl: diacritics stripped — words that don't exist without their ą ć ę ł ń ó ś ź ż
-const PL_BARE = /(?<!\p{L})(?:sie|juz|moze|mozesz|mozna|mozemy|ktory|ktora|ktore|ktorego|ktorej|ktorzy|ktorych|takze|rowniez|wiecej|bedzie|beda|bedziesz|byc|zycie|zycia|zyciu|zeby|sa|wlasnie|wlasny|czlowiek|ludzi[ae]|trzezwosc|trzezwosci|trzezwy|alkoholikow|krokow|mityngow|dzien|prosze|Bog)(?!\p{L})/gu;
+const PL_BARE = /(?<!\p{L})(?:sie|juz|moze|mozesz|mozna|mozemy|ktory|ktora|ktore|ktorego|ktorej|ktorzy|ktorych|takze|rowniez|wiecej|bedzie|beda|bedziesz|byc|zycie|zycia|zyciu|zeby|sa|wlasnie|wlasny|czlowiek|trzezwosc|trzezwosci|trzezwy|alkoholikow|krokow|mityngow|dzien|prosze|Bog)(?!\p{L})/gu;
 const PL_DIA = /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/;
 // the wrong register: es "usted"; pt "tu"/"vós" forms and European-Portuguese words (Brazil says "você", "fato", "celular")
 const REG = {
@@ -237,10 +237,12 @@ for (const f of files) {
     const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
-    const reg = (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;
+    // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
+    const code = /textContent|return false/.test(t);
+    const reg = code ? 0 : (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;
     if (reg && lang !== "es") flag(id, `register: ${(strip(t).match(REG[lang]) ?? []).slice(0, 3).join(", ")}`);
     r.usted += reg;
-    if (lang === "pl") {
+    if (lang === "pl" && !code) {
       const bare = strip(t).match(PL_BARE) ?? [];
       const plain = tw.length >= 10 && !PL_DIA.test(strip(t));
       if (bare.length || plain) { r.dia++; r.usted++; flag(id, bare.length ? `diacritics: ${bare.slice(0, 3).join(", ")}` : "diacritics: none in a long segment"); }

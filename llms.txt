@@ -126,7 +126,15 @@ in their language with the page in their language.
 
 ### Polski — Polish (pl)
 - Home: https://recoverystarts.com/pl/
+- The 12 Steps: https://recoverystarts.com/pl/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/pl/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/pl/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/pl/aa-info/
+- Daily Traditions: https://recoverystarts.com/pl/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/pl/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/pl/big-book/pages/
+- Big Book search: https://recoverystarts.com/pl/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/pl/aa-questions/
 - Meetings: https://recoverystarts.com/pl/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-pl.xml
 

@@ -497,7 +497,7 @@ img { max-width: 100%; height: auto; display: block; }
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(4, 6, 13, 0.96);
+    background: #04060d;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     flex-direction: column;
@@ -524,6 +524,39 @@ img { max-width: 100%; height: auto; display: block; }
   .sub-menu a small, .sub-soon small { display: block; font-size: 0.72rem; color: var(--ink-dim); line-height: 1.3; }
   .sub-soon { padding: 7px 0; color: var(--ink-dim); font-style: italic; }
   .nav-cta { text-align: center; }
+
+  /* Phone menu, 2026-10-14 (Derick: "the meetings map hamburger menu looks
+     correct but recoverystarts.com main page is wrong"). Same shape as the
+     map's: each dropdown opens flat under a small gold heading, nothing to
+     tap open, and the heading no longer jumps away to a hub page. Daily
+     Reading shows only Today's / All-of links (the months stay on the hub
+     pages); its order matches the map: both Today's first, then both All-of. */
+  .nav-links .has-sub > a {
+    pointer-events: none;
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold, #d9a441);
+  }
+  .nav-links .has-sub > a::after { display: none; }
+  .nav-links .has-sub > .sub-toggle { display: none; }
+  .nav-links .has-sub > .sub-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 6px 0 0;
+    padding: 0;
+    border-left: 0;
+  }
+  .sub-menu-groups .sub-group,
+  .sub-menu-groups .sub-group-list { display: contents; }
+  .sub-menu-groups .sub-group-title { display: none; }
+  .sub-menu-groups .sub-group-list > li { display: none; }
+  .sub-menu-groups .sub-group-list > li.sub-today { display: block; order: 1; }
+  .sub-menu-groups .sub-group-list > li.sub-hub { display: block; order: 2; }
+  .nav-links .has-sub > .sub-menu a { color: var(--ink); font-size: 1.05rem; font-weight: 400; padding: 9px 0; }
+  .nav-links .has-sub > .sub-menu .sub-today a { color: var(--ink); font-weight: 400; }
 }
 
 /* ===== 6. FLOATING EINSTEIN PILL (stamped by fix-nav.js) ================= */

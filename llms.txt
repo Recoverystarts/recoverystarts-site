@@ -140,7 +140,15 @@ in their language with the page in their language.
 
 ### Deutsch — German (de)
 - Home: https://recoverystarts.com/de/
+- The 12 Steps: https://recoverystarts.com/de/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/de/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/de/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/de/aa-info/
+- Daily Traditions: https://recoverystarts.com/de/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/de/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/de/big-book/pages/
+- Big Book search: https://recoverystarts.com/de/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/de/aa-questions/
 - Meetings: https://recoverystarts.com/de/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-de.xml
 

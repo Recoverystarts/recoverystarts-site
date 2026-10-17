@@ -90,6 +90,8 @@ const englishOf = (batch) => {
 
 const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#\d+;|&#x[0-9a-f]+;/gi, " ").replace(/\s+/g, " ").trim();
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
+// words that are also German ("Was", "will", "also"): not English in a de segment
+const DE_ALSO = new Set(["was", "will", "also"]);
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
 // Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)
 const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
@@ -239,7 +241,7 @@ const GLOSS = GLOSS_BY[lang] ?? [];
 // de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
-const DE_LOW = /(?<!(?:^|[\s.])(?:\p{L}|bzw|ca|vgl|ggf|usw|inkl|evtl|zzgl|bspw|Nr|Dr|S|St))[.!?]\s+[„‚(]?(?!(?:z|d|u|o|s)\.)[a-zäöü][\p{L}]{2,}/u;
+const DE_LOW = /(?<!(?:^|[\s.(])(?:\p{L}|bzw|ca|vgl|ggf|usw|inkl|evtl|zzgl|bspw|Nr|Dr|S|St))[.!?]\s+[„‚(]?(?!(?:z|d|u|o|s)\.|(?:x{0,3}(?:ix|iv|v?i{0,3})){1,6}(?![a-zäöü]))[a-zäöü][\p{L}]{2,}/u;
 // pl: diacritics stripped — words that don't exist without their ą ć ę ł ń ó ś ź ż
 const PL_BARE = /(?<!\p{L})(?:sie|juz|moze|mozesz|mozna|mozemy|ktory|ktora|ktore|ktorego|ktorej|ktorzy|ktorych|takze|rowniez|wiecej|bedzie|beda|bedziesz|byc|zycie|zycia|zyciu|zeby|sa|wlasnie|wlasny|czlowiek|trzezwosc|trzezwosci|trzezwy|alkoholikow|krokow|mityngow|dzien|prosze|Bog)(?!\p{L})/gu;
 const PL_DIA = /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/;
@@ -266,7 +268,7 @@ for (const f of files) {
     if (placeholdersOf(t).join(" ") !== placeholdersOf(e).join(" ")) { r.tags++; flag(id, "placeholders differ"); }
     const ew = words(e), tw = words(t);
     if (ew.length >= 4 && strip(t) === strip(e)) { r.same++; flag(id, "left in English"); continue; }
-    if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
+    if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !(lang === "de" && DE_ALSO.has(w))).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
     const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));

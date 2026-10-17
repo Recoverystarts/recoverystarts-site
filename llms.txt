@@ -154,13 +154,29 @@ in their language with the page in their language.
 
 ### Svenska — Swedish (sv)
 - Home: https://recoverystarts.com/sv/
+- The 12 Steps: https://recoverystarts.com/sv/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/sv/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/sv/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/sv/aa-info/
+- Daily Traditions: https://recoverystarts.com/sv/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/sv/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/sv/big-book/pages/
+- Big Book search: https://recoverystarts.com/sv/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/sv/aa-questions/
 - Meetings: https://recoverystarts.com/sv/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-sv.xml
 
 ### Nederlands — Dutch (nl)
 - Home: https://recoverystarts.com/nl/
+- The 12 Steps: https://recoverystarts.com/nl/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/nl/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/nl/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/nl/aa-info/
+- Daily Traditions: https://recoverystarts.com/nl/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/nl/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/nl/big-book/pages/
+- Big Book search: https://recoverystarts.com/nl/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/nl/aa-questions/
 - Meetings: https://recoverystarts.com/nl/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-nl.xml
 

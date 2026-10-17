@@ -70,5 +70,5 @@ At the inventory, Dr. Bob named the man's defects, asked if he wanted them remov
 | *Dr. Bob and the Good Oldtimers* (Amos report, February 1938) | — | 1980 |
 | *Pass It On* | — | 1984 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

@@ -8,7 +8,7 @@
 
 ## What the search found
 
-All our sources was searched for "selfish program," "program is selfish," "be selfish," "selfish about my sobriety," "healthy selfishness" and "sobriety first." None of them turns up in this sense. The only "be selfish" in our sources are in a dropped story in *Experience, Strength and Hope*, where a man reasons that one who loves his neighbour "could not be selfish" (*Experience, Strength and Hope*, 2003, story from an earlier edition).
+All our sources were searched for "selfish program," "program is selfish," "be selfish," "selfish about my sobriety," "healthy selfishness" and "sobriety first." None of them turns up in this sense. The only "be selfish" in our sources are in a dropped story in *Experience, Strength and Hope*, where a man reasons that one who loves his neighbour "could not be selfish" (*Experience, Strength and Hope*, 2003, story from an earlier edition).
 
 ## Every "selfish" in the program text
 

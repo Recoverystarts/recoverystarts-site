@@ -8,7 +8,7 @@
 
 ## Where it is
 
-All our sources was searched for "side of the street," "clean my side," "sweep off" and "own side." The only match in this sense is in Chapter 6, "Into Action," on p. 77. (One story in *Experience, Strength and Hope* uses "one side of the street" for a couple ringing doorbells for work, which isn't the saying.)
+All our sources were searched for "side of the street," "clean my side," "sweep off" and "own side." The only match in this sense is in Chapter 6, "Into Action," on p. 77. (One story in *Experience, Strength and Hope* uses "one side of the street" for a couple ringing doorbells for work, which isn't the saying.)
 
 ## The passage, read in full
 

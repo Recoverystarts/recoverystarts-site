@@ -34,6 +34,13 @@
 //             in prose (German quotes „…“); Swiss «ss» where standard German writes ß (gross, Strasse, heisst, weiss,
 //             ausser…) and old «daß/muß»; umlauts written ae/oe/ue (fuer, ueber, koennen); a sentence starting lower case.
 //             Each costs score (×2, like English words).
+//             sv (wave svnl1): the reader is «du», lower case (i18n/sv/GLOSSARY.md): ni/Ni/er/ert/era for the reader, and Du/Dig/Din
+//             capitalised mid-sentence (fine in a prayer to God; the flag says which), are the wrong register; ASCII " or “ „ « »
+//             in prose (Swedish quotes ”…”); stripped å ä ö («ar», «pa», «nar», «fran», «mote» for är, på, när, från, möte), or a
+//             long segment with no å ä ö at all.
+//             nl (wave svnl1): the reader is «je/jij», lower case (i18n/nl/GLOSSARY.md): u/uw and «jullie» for the reader are the
+//             wrong register (U/Uw for God stay); ASCII " or „ « » in prose (Dutch quotes “…”); a dropped trema («ideeen»,
+//             «financiele», «geinteresseerd») or letters Dutch doesn't use (ä ö ü å ß ñ). Both cost score (×2, like English words).
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -45,7 +52,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -92,12 +99,14 @@ const strip = (s) => String(s).replace(/<\/?\d+\/?>/g, " ").replace(/&[a-z]+;|&#
 const words = (s) => strip(s).toLowerCase().match(/[\p{L}']+/gu) ?? [];
 // words that are also German ("Was", "will", "also"): not English in a de segment
 const DE_ALSO = new Set(["was", "will", "also"]);
+// …and the same for sv («just») and nl («we», «was», «had», «been»)
+const ALSO = { de: DE_ALSO, sv: new Set(["just"]), nl: new Set(["we", "was", "had", "been"]) };
 const EN_FILLER = new Set("the and with your you our we are was were this that these those from have has had which would could should into about there their they them what when where who will been being because than then just also only very".split(" "));
 // Persian/Arabic-Indic digits count as the same number (fa writes ۶۰ for 60)
 const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
 // pl writes 1 234 (a space between thousands) and 2,99 (a decimal comma): both count as the English 1,234 and 2.99
-const plNum = (s) => (lang === "pl" ? s.replace(/(\d)[\u00a0\u202f ](?=\d{3}(?!\d))/g, "$1") : s);
-const nums = (s) => (plNum(latin(strip(s))).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).map((n) => (lang === "pl" || lang === "de" ? n.replace(",", ".") : n)).filter((n) => n.length);
+const plNum = (s) => (lang === "pl" || lang === "sv" ? s.replace(/(\d)[\u00a0\u202f ](?=\d{3}(?!\d))/g, "$1") : s);
+const nums = (s) => (plNum(latin(strip(s))).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).map((n) => (lang === "pl" || lang === "de" || lang === "sv" || lang === "nl" ? n.replace(",", ".") : n)).filter((n) => n.length);
 // fa: a number written as a word counts too («دوازده قدم» for "12 Steps", «ویرایش چهارم» for "4th Ed.", «شبانه‌روزی» for 24/7)
 const FA_NUM = [["یک|اول|نخست", "1"], ["دو|دوم", "2"], ["سه|سوم", "3"], ["چهار|چهارم", "4"], ["پنج|پنجم", "5"], ["شش|ششم", "6"], ["هفت|هفتم", "7"], ["هشت|هشتم", "8"], ["نه|نُه|نهم", "9"], ["ده|دهم", "10"], ["یازده|یازدهم", "11"], ["دوازده|دوازدهم", "12"]];
 const faWords = (s) => { const out = []; for (const [w, n] of FA_NUM) if (new RegExp(`(?<![\\p{L}])(?:${w})(?![\\p{L}])|(?<![\\p{L}])(?:${w})(?=\u200c?قدمی|\u200c?گانه)`, "u").test(s)) out.push(n); if (/شبانه[\u200c ]?روزی/.test(s)) out.push("24", "7"); return out; };
@@ -107,6 +116,12 @@ const plWords = (s) => { const out = []; for (const [w, n] of PL_NUM) if (new Re
 // de: a number written as a word counts too («Zwölf Schritte» for "12 Steps", «Dritte Tradition», «4. Auflage», «rund um die Uhr» for 24/7)
 const DE_NUM = [["eins|ein|eine|erste\\p{L}*", "1"], ["zwei|zweite\\p{L}*", "2"], ["drei|dritte\\p{L}*", "3"], ["vier|vierte\\p{L}*", "4"], ["fünf|fünfte\\p{L}*", "5"], ["sechs|sechste\\p{L}*", "6"], ["sieben|siebte\\p{L}*", "7"], ["acht|achte\\p{L}*", "8"], ["neun|neunte\\p{L}*", "9"], ["zehn|zehnte\\p{L}*", "10"], ["elf|elfte\\p{L}*", "11"], ["zwölf|zwölfte\\p{L}*", "12"]];
 const deWords = (s) => { const out = []; for (const [w, n] of DE_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?!\\p{L})`, "iu").test(s)) out.push(n); const ROM = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6", VII: "7", VIII: "8", IX: "9", X: "10", XI: "11", XII: "12" }; for (const m of s.matchAll(/(?<!\p{L})(XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)(?!\p{L})/gu)) if (m[1] !== "I" || /Konzept|Anhang|Teil/.test(s)) out.push(ROM[m[1]]); if (/rund um die Uhr|Tag und Nacht/i.test(s)) out.push("24", "7"); return out; };
+// sv: a number written as a word counts too («Tolv Steg» for "12 Steps", «det Tredje Steget», «4:e utg.», «dygnet runt» for 24/7)
+const SV_NUM = [["en|ett|första", "1"], ["två|andra", "2"], ["tre|tredje", "3"], ["fyra|fjärde", "4"], ["fem|femte", "5"], ["sex|sjätte", "6"], ["sju|sjunde", "7"], ["åtta|åttonde", "8"], ["nio|nionde", "9"], ["tio|tionde", "10"], ["elva|elfte", "11"], ["tolv|tolfte", "12"]];
+const svWords = (s) => { const out = []; for (const [w, n] of SV_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?!\\p{L})`, "iu").test(s)) out.push(n); const ROM = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6", VII: "7", VIII: "8", IX: "9", X: "10", XI: "11", XII: "12" }; for (const m of s.matchAll(/(?<!\p{L})(XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)(?!\p{L})/gu)) if (m[1] !== "I" || /Bilag|Koncept|del /.test(s)) out.push(ROM[m[1]]); if (/dygnet runt|dag och natt/i.test(s)) out.push("24", "7"); return out; };
+// nl: the same («Twaalf Stappen», «de Derde Traditie», «4e editie», «dag en nacht» for 24/7)
+const NL_NUM = [["een|één|eerste", "1"], ["twee|tweede", "2"], ["drie|derde", "3"], ["vier|vierde", "4"], ["vijf|vijfde", "5"], ["zes|zesde", "6"], ["zeven|zevende", "7"], ["acht|achtste", "8"], ["negen|negende", "9"], ["tien|tiende", "10"], ["elf|elfde", "11"], ["twaalf|twaalfde", "12"]];
+const nlWords = (s) => { const out = []; for (const [w, n] of NL_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?!\\p{L})`, "iu").test(s)) out.push(n); const ROM = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6", VII: "7", VIII: "8", IX: "9", X: "10", XI: "11", XII: "12" }; for (const m of s.matchAll(/(?<!\p{L})(XII|XI|IX|X|VIII|VII|VI|IV|V|III|II|I)(?!\p{L})/gu)) if (m[1] !== "I" || /Bijlage|Concept|deel /.test(s)) out.push(ROM[m[1]]); if (/dag en nacht|24 uur per dag/i.test(s)) out.push("24", "7"); return out; };
 // the glossary's fixed words (i18n/<lang>/GLOSSARY.md): English pattern → what the translation should contain
 const GLOSS_BY = {};
 GLOSS_BY.es = [
@@ -237,7 +252,58 @@ GLOSS_BY.de = [
   [/\bunmanageable\b/i, /nicht mehr meistern/i, "unmanageable"],
   [/\bmeetings?\b/i, /Meeting/i, "meeting"],
 ];
+// Swedish (i18n/sv/GLOSSARY.md; A.A. Sverige's own wording: aa.se, its cards and the Servicehandbok)
+GLOSS_BY.sv = [
+  [/\bBig Book\b/i, /Stora Bok|Anonyma Alkoholister|Alcoholics Anonymous/iu, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /sponsor/i, "sponsor"],
+  [/\bHigher Power\b/i, /högre kraft|Kraft större än/iu, "Higher Power"],
+  [/\bhome groups?\b/i, /hemgrupp/i, "home group"],
+  [/\bnewcomers?\b/i, /nykomling/i, "newcomer"],
+  [/\bamends\b/i, /gottgör|gottgjor/i, "amends"],
+  [/\bresentments?\b/i, /förbittring/i, "resentment"],
+  [/\binventory\b/i, /inventering/i, "inventory"],
+  [/\bsobriety\b/i, /nykter/i, "sobriety"],
+  [/\bspiritual awakening\b/i, /andligt uppvaknande/i, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /gruppsamvet/i, "group conscience"],
+  [/\banonymity\b/i, /anonymitet/i, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /karaktärsdefekt/i, "defects of character"],
+  [/\bfellowship\b/i, /gemenskap/i, "fellowship"],
+  [/\bTraditions?\b/, /Tradition/i, "Tradition"],
+  [/\bSteps?\b/, /steg/i, "Step"],
+  [/\bpowerless\b/i, /maktlös/i, "powerless"],
+  [/\bunmanageable\b/i, /ohanterlig/i, "unmanageable"],
+  [/\bmeetings?\b/i, /möte/i, "meeting"],
+  [/\brecovery\b/, /tillfrisk|Recovery/i, "recovery"],
+];
+// Dutch (i18n/nl/GLOSSARY.md; AA Nederland's wording, AA Vlaanderen for the Preamble)
+GLOSS_BY.nl = [
+  [/\bBig Book\b/i, /Grote Boek|Big Book|Anonieme Alcoholisten|Alcoholics Anonymous/iu, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /sponsor/i, "sponsor"],
+  [/\bHigher Power\b/i, /Hogere Macht|Macht groter dan/iu, "Higher Power"],
+  [/\bhome groups?\b/i, /thuisgroep/i, "home group"],
+  [/\bnewcomers?\b/i, /nieuwkomer/i, "newcomer"],
+  [/\bamends\b/i, /goed(?:\p{L}* )?(?:te )?ma[ak]|goedmaken|goedgemaakt/iu, "amends"],
+  [/\bresentments?\b/i, /wrok/i, "resentment"],
+  [/\binventory\b/i, /inventaris/i, "inventory"],
+  [/\bsobriety\b/i, /nuchter/i, "sobriety"],
+  [/\bspiritual awakening\b/i, /spiritu\p{L}* ontwaken/iu, "spiritual awakening"],
+  [/\bgroup conscience\b/i, /groepsgeweten|geweten van onze groep/i, "group conscience"],
+  [/\banonymity\b/i, /anonimiteit/i, "anonymity"],
+  [/\bdefects of character\b|\bcharacter defects\b/i, /karaktergebrek/i, "defects of character"],
+  [/\bfellowship\b/i, /gemeenschap/i, "fellowship"],
+  [/\bTraditions?\b/, /Traditie/i, "Tradition"],
+  [/\bSteps?\b/, /Stap/i, "Step"],
+  [/\bpowerless\b/i, /machteloos/i, "powerless"],
+  [/\bunmanageable\b/i, /stuurloos/i, "unmanageable"],
+  [/\bmeetings?\b/i, /meeting|bijeenkomst/i, "meeting"],
+  [/\brecovery\b/, /herstel|Recovery/i, "recovery"],
+];
 const GLOSS = GLOSS_BY[lang] ?? [];
+// sv: å ä ö stripped (wave svnl1)
+const SV_BARE = /(?<!\p{L})(?:ar|pa|nar|fran|aven|ocksa|maste|gora|gor|mote|moten|motet|hjalp|hjalpa|manniska|manniskor|tva|sjalv|sjalva|forsta|overallt|bon|langre|harifran|dar|varld|nagon|nagot|nagra|fragor|fraga|ga|gar|sag|sager|lasa|lasning|kanner|kanna|sjalvforsorjande|aterfall|nastan|battre)(?!\p{L})/gu;
+const SV_DIA = /[åäöÅÄÖ]/;
+// nl: a dropped trema, or letters Dutch doesn't use (wave svnl1)
+const NL_BAD = /(?<!\p{L})(?:ideeen|financiele|financielen|geinteresseerd\p{L}*|beinvloed\p{L}*|creeren|creeer\p{L}*|reeel|reele|naieve?|geillustreerd\p{L}*|zeeen|knieen|kopieren|kopieer\p{L}*|egoisme|egoist\p{L}*|egoistisch\p{L}*|coordin\p{L}*)(?!\p{L})|[äöüåßñÄÖÜÅ]/gu;
 // de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
@@ -251,6 +317,8 @@ const REG = {
   fr: /(?<!\p{L})(?:(?:tu|toi|ton|ta|tes|tien|tienne)(?!\p{L})|t['’](?=\p{L}))/giu,
   fa: /[يك]|(?<![\p{L}\u200c])ن?می (?=\p{L})|(?<![\p{L}\u200c])ن?می(?!ز|ان|ل|وه|راث|لیون|لیارد|هن|همان|زان|ثاق|کروب|ترا|گرن|نیمم|ناکاری|نو)(?=[\u0622-\u06cc])|(?<!\p{L})(?:تو|تویی|خودت|برایت|داری|هستی)(?!\p{L})|(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/gu,
   de: /(?<!\p{L})(?:du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer|eures|bist|hast|kannst|willst|musst|sollst|weißt)(?!\p{L})|["”]|(?<=^|[\s(])“(?=\p{L})/gu,
+  sv: /(?<![\p{L}:])(?:ni|Ni|er|Er|ert|Ert|era|Era|eder|Eder)(?!\p{L})|(?<=[\p{L},;:] )(?:Du|Dig|Din|Ditt|Dina)(?!\p{L})|["“„«»]/gu,
+  nl: /(?<!\p{L})(?:u|uw|uzelf|jullie|Jullie)(?!\p{L})|["„«»]/gu,
   pl: /(?<!\p{L})(?:Pan|Pana|Panu|Panem|Pani|Panią|Państwo|Państwa|Państwu|Państwem|możecie|jesteście|macie|chcecie|wasz|wasza|wasze|waszego|waszej|waszym|waszych)(?!\p{L})|["“]/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
@@ -268,10 +336,10 @@ for (const f of files) {
     if (placeholdersOf(t).join(" ") !== placeholdersOf(e).join(" ")) { r.tags++; flag(id, "placeholders differ"); }
     const ew = words(e), tw = words(t);
     if (ew.length >= 4 && strip(t) === strip(e)) { r.same++; flag(id, "left in English"); continue; }
-    if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !(lang === "de" && DE_ALSO.has(w))).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
+    if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !ALSO[lang]?.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
@@ -282,6 +350,15 @@ for (const f of files) {
     if (lang === "de" && !code) {
       const st = strip(t), bad = [...(st.match(DE_SS) ?? []), ...(st.match(DE_UML) ?? [])], low = DE_LOW.exec(st);
       if (bad.length || low) { r.dia++; r.usted++; flag(id, bad.length ? `spelling: ${bad.slice(0, 3).join(", ")}` : `lower case at sentence start: ${low[0].trim().slice(0, 20)}`); }
+    }
+    if (lang === "sv" && !code) {
+      const bare = strip(t).match(SV_BARE) ?? [];
+      const plain = tw.length >= 12 && !SV_DIA.test(strip(t));
+      if (bare.length || plain) { r.dia++; r.usted++; flag(id, bare.length ? `å ä ö: ${bare.slice(0, 3).join(", ")}` : "å ä ö: none in a long segment"); }
+    }
+    if (lang === "nl" && !code) {
+      const bad = strip(t).match(NL_BAD) ?? [];
+      if (bad.length) { r.dia++; r.usted++; flag(id, `diacritics: ${bad.slice(0, 3).join(", ")}`); }
     }
     if (lang === "pl" && !code) {
       const bare = strip(t).match(PL_BARE) ?? [];

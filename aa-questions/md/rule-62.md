@@ -7,7 +7,7 @@
 
 ## Where it is
 
-All our sources was searched for "Rule 62," "Rule No. 62," "sixty-one rules" and "too damned seriously." The only place is *A.A. Comes of Age* (1957). It isn't in the Big Book, P-17 or the other pamphlets in our sources.
+All our sources were searched for "Rule 62," "Rule No. 62," "sixty-one rules" and "too damned seriously." The only place is *A.A. Comes of Age* (1957). It isn't in the Big Book, P-17 or the other pamphlets in our sources.
 
 ## The story, in order
 

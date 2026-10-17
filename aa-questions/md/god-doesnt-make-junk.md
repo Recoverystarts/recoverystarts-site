@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "junk," "doesn't make junk," "worthless," "uselessness" and related words, with page breaks joined. The saying isn't there. "Junk" appears only in its ordinary sense, in a story and the history books (stolen junk on a floor, p. 507; a "junker" of a car, p. 510).
+All our sources were searched for "junk," "doesn't make junk," "worthless," "uselessness" and related words, with page breaks joined. The saying isn't there. "Junk" appears only in its ordinary sense, in a story and the history books (stolen junk on a floor, p. 507; a "junker" of a car, p. 510).
 
 ## Passages that speak to a person's worth
 

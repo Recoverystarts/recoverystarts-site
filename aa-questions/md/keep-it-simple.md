@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "keep it simple," "let's keep it simple," "simple" and "simplicity," with page breaks joined.
+All our sources were searched for "keep it simple," "let's keep it simple," "simple" and "simplicity," with page breaks joined.
 
 - **Program text, forewords, appendices:** no "keep it simple."
 - **Personal stories (fourth edition, 2001):** "Because I'm an Alcoholic" lists "Keep It Simple" with other slogans that came to "impress me as truths I could live by" (p. 345).

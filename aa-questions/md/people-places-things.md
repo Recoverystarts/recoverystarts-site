@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "people, places," "places and things," "people and places," "persons, places," "old haunts" and "drinking pals," with page breaks joined. The phrase doesn't appear anywhere: not in the program text, the stories of any edition, the pamphlets or the history books. (*A.A. Comes of Age* has a picture section headed "People and places," which is a caption, not the saying.)
+All our sources were searched for "people, places," "places and things," "people and places," "persons, places," "old haunts" and "drinking pals," with page breaks joined. The phrase doesn't appear anywhere: not in the program text, the stories of any edition, the pamphlets or the history books. (*A.A. Comes of Age* has a picture section headed "People and places," which is a caption, not the saying.)
 
 ## The list the book does have
 

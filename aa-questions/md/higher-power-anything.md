@@ -8,7 +8,7 @@
 
 ## What the search found
 
-All our sources was searched for "Higher Power," doorknob and door knob, "light bulb," "power of the group," and the names the book gives the Power.
+All our sources were searched for "Higher Power," doorknob and door knob, "light bulb," "power of the group," and the names the book gives the Power.
 
 - **"Higher Power" in the program text** turns up twice: "His defense must come from a Higher Power" (p. 43) and "Follow the dictates of a Higher Power" (p. 100). Appendix III, doctors' comments on A.A. added with the second edition in 1955 (p. xi), has "a higher power" once more (p. 570). The program text's usual words are "a Power greater than ourselves" and "God as we understood Him" (p. 59).
 - **"Doorknob"** appears only once, in a story in *Experience, Strength and Hope*, where it means an actual door handle.

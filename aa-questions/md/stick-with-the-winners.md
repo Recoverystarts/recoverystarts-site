@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "winner(s)," "stick with," "stick around," "old-timers" and "successful," with page breaks joined. The saying isn't there. "Winner" appears only in a story title, "Winner Takes All" (Part II, p. 375), and in history books in unrelated senses.
+All our sources were searched for "winner(s)," "stick with," "stick around," "old-timers" and "successful," with page breaks joined. The saying isn't there. "Winner" appears only in a story title, "Winner Takes All" (Part II, p. 375), and in history books in unrelated senses.
 
 ## Where the program text sends the member
 

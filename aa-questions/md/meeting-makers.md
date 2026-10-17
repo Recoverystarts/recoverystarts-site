@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "meeting maker(s)," "make it" and "meeting," with page breaks joined. The saying isn't there. In the program text (pp. 1–164), the word "meeting" for an A.A. gathering appears only in Chapter 11 (pp. 159, 162). The other use in the program, "avoid meeting a man through his family" (p. 91), is about something else. Bill's "We meet frequently" (p. 15) uses the verb.
+All our sources were searched for "meeting maker(s)," "make it" and "meeting," with page breaks joined. The saying isn't there. In the program text (pp. 1–164), the word "meeting" for an A.A. gathering appears only in Chapter 11 (pp. 159, 162). The other use in the program, "avoid meeting a man through his family" (p. 91), is about something else. Bill's "We meet frequently" (p. 15) uses the verb.
 
 ## What the program text says about meetings
 

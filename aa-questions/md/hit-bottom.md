@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "hit bottom," "hitting bottom," "rock bottom," "raise the bottom," "high bottom," "low bottom" and "bottom" alone.
+All our sources were searched for "hit bottom," "hitting bottom," "rock bottom," "raise the bottom," "high bottom," "low bottom" and "bottom" alone.
 
 In the program text (pp. 1–164), "bottom" turns up only in other senses: Langley's flying machine at "the bottom of the Potomac River" (p. 51), and thanking God "from the bottom of our heart" (p. 75).
 

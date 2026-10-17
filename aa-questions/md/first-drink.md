@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "first drink," "first one," "one drink," "one is too many" and the saying itself.
+All our sources were searched for "first drink," "first one," "one drink," "one is too many" and the saying itself.
 
 - **The saying:** not found.
 - **A personal story,** "Fear of Fear" (Part II), about a woman whose husband also drank: "I never knew it was the first drink that did it" (p. 292).

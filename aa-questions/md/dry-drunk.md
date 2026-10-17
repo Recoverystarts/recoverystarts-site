@@ -8,7 +8,7 @@
 
 ## What the search found
 
-All our sources was searched for "dry drunk," "dry drunks," "dry bender," "white-knuckle" and other wordings.
+All our sources were searched for "dry drunk," "dry drunks," "dry bender," "white-knuckle" and other wordings.
 
 **"Dry drunk"** appears only in *Pass It On* (1984), Bill W.'s biography. Late in 1940, Bill had no job, the Big Book wasn't selling, and A.A. wasn't getting the publicity it needed. He was "frustrated, impatient, restless, dissatisfied, and depressed" (*Pass It On*, 1984). Then: "Some even described him as being on a dry drunk" (*Pass It On*, 1984). The book defines the phrase in the same sentence: he had "all the symptoms of being drunk except the alcohol" (*Pass It On*, 1984). That is the only definition in our sources, and this page doesn't add to it. The book doesn't say who used the phrase.
 

@@ -28,4 +28,12 @@
     <loc>https://recoverystarts.com/sitemap-de.xml</loc>
     <lastmod>2026-10-17</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://recoverystarts.com/sitemap-sv.xml</loc>
+    <lastmod>2026-10-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://recoverystarts.com/sitemap-nl.xml</loc>
+    <lastmod>2026-10-17</lastmod>
+  </sitemap>
 </sitemapindex>

@@ -25,9 +25,9 @@ export const LANGS = {
   es: { name: "Español", dir: "ltr" },
   pt: { name: "Português", dir: "ltr", tag: "pt-BR" },
   fr: { name: "Français", dir: "ltr" },
-  de: { name: "Deutsch", dir: "ltr" },
   fa: { name: "فارسی", dir: "rtl", en: "Persian" },
   pl: { name: "Polski", dir: "ltr", en: "Polish" },
+  de: { name: "Deutsch", dir: "ltr", en: "German" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

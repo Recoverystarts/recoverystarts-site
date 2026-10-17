@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "sick as," "secret(s)," "skeletons" and "double life," with page breaks joined. The saying doesn't appear. In the program text "secret" appears once, for a husband's "secret and exciting affair" (p. 81).
+All our sources were searched for "sick as," "secret(s)," "skeletons" and "double life," with page breaks joined. The saying doesn't appear. In the program text "secret" appears once, for a husband's "secret and exciting affair" (p. 81).
 
 ## What the program text says about keeping things hidden
 

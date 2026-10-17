@@ -8,7 +8,7 @@
 
 ## Where "no musts" comes from
 
-All our sources was searched for "no musts," "musts," "you must" and "Thou shalt not."
+All our sources were searched for "no musts," "musts," "you must" and "Thou shalt not."
 
 The only "no musts" is in *Dr. Bob and the Good Oldtimers* (1980). It quotes Dr. Bob's article in the Grapevine of September 1948 about the Twelve Steps:
 - The Steps are "simple in language, plain in meaning" and workable by anyone with a sincere desire for sobriety (*Dr. Bob and the Good Oldtimers*, 1980).

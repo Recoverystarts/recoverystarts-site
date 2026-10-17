@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "thinking problem," "drinking problem," "stinking thinking" and "problem of the mind," with page breaks joined. "Thinking problem" appears nowhere. "Drinking problem" appears in the program text only in ordinary use, such as a book meant for "anyone concerned with a drinking problem" (p. 19). One fourth-edition story, "Flooded With Feeling," has a near-cousin: the writer once joked of not having a drinking problem but "a stopping problem" (p. 372), and later saw "I had a starting problem too" (p. 372).
+All our sources were searched for "thinking problem," "drinking problem," "stinking thinking" and "problem of the mind," with page breaks joined. "Thinking problem" appears nowhere. "Drinking problem" appears in the program text only in ordinary use, such as a book meant for "anyone concerned with a drinking problem" (p. 19). One fourth-edition story, "Flooded With Feeling," has a near-cousin: the writer once joked of not having a drinking problem but "a stopping problem" (p. 372), and later saw "I had a starting problem too" (p. 372).
 
 ## Where the text is close to the saying
 

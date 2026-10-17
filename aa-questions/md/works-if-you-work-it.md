@@ -8,7 +8,7 @@
 
 ## What the search found
 
-All our sources was searched for "works if you work," "if you work it," "work it," "it works," "work at it" and "really works."
+All our sources were searched for "works if you work," "if you work it," "work it," "it works," "work at it" and "really works."
 
 The exact saying doesn't turn up. In Chapter 5 "HOW IT WORKS" is the running head printed at the top of every other page, not a sentence.
 

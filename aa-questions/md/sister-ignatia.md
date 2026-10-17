@@ -50,5 +50,5 @@ It describes how the ward worked: a priest she sent to look into A.A. reported w
 | *A.A. Comes of Age* | (footnote, later printing), 108 | 1957 |
 | *Dr. Bob and the Good Oldtimers* | — | 1980 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44, P-53,* A.A. Comes of Age *and* Dr. Bob and the Good Oldtimers *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

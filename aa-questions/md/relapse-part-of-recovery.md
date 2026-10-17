@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "part of recovery," "relapse," "slip" and their forms, with page breaks joined. "Part of recovery" turns up once, in a story where "Commitment and service were part of recovery" (p. 345). Nothing in any book says relapse is part of recovery.
+All our sources were searched for "part of recovery," "relapse," "slip" and their forms, with page breaks joined. "Part of recovery" turns up once, in a story where "Commitment and service were part of recovery" (p. 345). Nothing in any book says relapse is part of recovery.
 
 In the program text, "relapse" appears at pp. 26, 31, 35, 120 and 125. "Slip" meaning a drink appears at p. 100 ("We have seen others slip when the family came back too soon") and p. 139 (an executive who "did slip and was fired"). At p. 84 ("Self-seeking will slip away") and p. 110 (friends who "slipped away") it means something else.
 

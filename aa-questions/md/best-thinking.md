@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "best thinking," "thinking got," "thinking brought," "stinking thinking" and "your thinking," with page breaks joined. None of them turns up the saying, in the program text, the stories of any edition, the pamphlets or the history books.
+All our sources were searched for "best thinking," "thinking got," "thinking brought," "stinking thinking" and "your thinking," with page breaks joined. None of them turns up the saying, in the program text, the stories of any edition, the pamphlets or the history books.
 
 ## Where the text agrees with the saying
 

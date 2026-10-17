@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "progress, not perfection," "progress rather than," "perfection," "perfect" and "saints," with page breaks joined.
+All our sources were searched for "progress, not perfection," "progress rather than," "perfection," "perfect" and "saints," with page breaks joined.
 
 - **Program text:** "spiritual progress rather than spiritual perfection" (p. 60), the only place the program text uses the word "perfection."
 - **The exact wording "progress, not perfection":** not in any book in our sources.

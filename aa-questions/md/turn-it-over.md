@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "turn it over," "turned it over," "turn everything over," "turn(ed) ... over" and "God's hands," with page breaks joined.
+All our sources were searched for "turn it over," "turned it over," "turn everything over," "turn(ed) ... over" and "God's hands," with page breaks joined.
 
 - **Program text, forewords, appendices:** no "turn it over." "Turn ... over" appears only in Step Three and its explanation (pp. 59, 60). "In God's hands" appears at pp. 80, 100, 120 and 124.
 - **Personal stories (fourth edition, 2001):** "The Man Who Mastered Fear" (Part I) has the writer, just out of the hospital and shut in his room at Dr. Bob's house "in a strange city" in September 1938, gripped by fear, pray, "God, for eighteen years I have been unable to handle this problem. Please let me turn it over to you." (p. 251). "Physician, Heal Thyself!" (Part II) describes the alcoholic's rage at being told he must "turn the whole business over to someone else" (p. 306).

@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "let go and let God," "let go" and "let God," with page breaks joined.
+All our sources were searched for "let go and let God," "let go" and "let God," with page breaks joined.
 
 - **Program text, forewords, appendices:** no "let go and let God." "Let go" appears twice (pp. 58, 76). "Let God" or "let Him" appears at pp. 68, 70, 76 and 88.
 - **Personal stories (fourth edition, 2001):** "Because I'm an Alcoholic" lists "Let Go and Let God" with "One Day at a Time," "Easy Does It," "Keep It Simple" and "Live and Let Live" as sayings that at first made the writer shudder and later "began to impress me as truths I could live by" (p. 345).

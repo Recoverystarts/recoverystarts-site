@@ -8,7 +8,7 @@
 
 ## The search
 
-All our sources was searched for the words *cooperation but* and *cooperate but*, with line breaks joined. Every hit is in P-43, P-16 or P-17's undated policy statement. None is in the Big Book, in the Long Form or in Bill's Grapevine essays of 1946–47.
+All our sources were searched for the words *cooperation but* and *cooperate but*, with line breaks joined. Every hit is in P-43, P-16 or P-17's undated policy statement. None is in the Big Book, in the Long Form or in Bill's Grapevine essays of 1946–47.
 
 ## The idea, in the earliest texts
 

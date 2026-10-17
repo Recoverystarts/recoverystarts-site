@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "fake," "fake it," "act as if," "acting as if" and "as if," with page breaks joined.
+All our sources were searched for "fake," "fake it," "act as if," "acting as if" and "as if," with page breaks joined.
 
 - **Big Book program text, forewords, appendices:** no "fake" and no "act as if."
 - **Personal stories (fourth edition, 2001):** in "Tightrope" (Part II), an agnostic writer's sponsor told him A.A. was not a religious program, that it was all right to doubt God, and "that I might try occasionally to act as if I believed" (p. 366). The writer connects it with an idea he'd heard, that it is easier to act your way into a new way of thinking (p. 366). In "Empty on the Inside" (Part III), "acting as if" means the opposite: the pretending she had done all her life, acting as if she knew or didn't care (p. 512).

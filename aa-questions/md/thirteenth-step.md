@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "thirteenth step," "13th step," "step thirteen" and "thirteenth" alone. The fourth-edition Big Book has none of them. Here is each use found, oldest first.
+All our sources were searched for "thirteenth step," "13th step," "step thirteen" and "thirteenth" alone. The fourth-edition Big Book has none of them. Here is each use found, oldest first.
 
 **1. The "Thirteenth Way Out" (1946).** In his Grapevine article "Anonymity" (1946), Bill tells how the book got its title. A narrow vote had favored "The Way Out," but the Library of Congress already had twelve books by that name: "we shivered at the possibility of being the 'Thirteenth Way Out'" (P-17, "Anonymity," 1946). So the book, and the fellowship, became "Alcoholics Anonymous." Bill tells the same story in *A.A. Comes of Age* (1957). This isn't a step at all. It's a joke about a book title.
 

@@ -8,7 +8,7 @@
 
 ## What the search found
 
-All our sources was searched for "pink cloud," "cloud" and other wordings such as "honeymoon."
+All our sources were searched for "pink cloud," "cloud" and other wordings such as "honeymoon."
 
 **Personal stories (fourth edition):**
 - "Physician, Heal Thyself!" (Part II): three months sober and reading everything spiritual he could find, the writer "floated higher and higher" until he was "way up on a pink cloud, which is known as Pink Seven, and I felt miserable again" (p. 304). A friend told him he'd "been floating way up on a cloud somewhere" and sent him to page 58 of the Big Book, where the word "thoroughly" struck him (p. 305).

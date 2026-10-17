@@ -44,5 +44,5 @@ In January 1961 Bill wrote to Jung to tell him that this conversation was "the f
 | *A.A. Comes of Age* (including Shoemaker's 1955 talk) | (timeline, later printing), 35, 37, 135 | 1957 |
 | *Pass It On* (including the Bill W.–Jung letters of January–March 1961) | — | 1984 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book,* A.A. Comes of Age *and* Pass It On *are © A.A. World Services, Inc.*

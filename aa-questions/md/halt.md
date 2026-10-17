@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "HALT," "hungry, angry" and each of the four words, and for any two of them within a sentence of each other. Nothing turned up. Where "halt" appears it is the ordinary word, as in a therapy that "came to almost a complete halt" (p. 283) or a motion that brings debate to a halt (A.A. Service Manual); one hit in *Dr. Bob and the Good Oldtimers* is a scanning error for "Half." No story in any edition in our sources uses the acronym.
+All our sources were searched for "HALT," "hungry, angry" and each of the four words, and for any two of them within a sentence of each other. Nothing turned up. Where "halt" appears it is the ordinary word, as in a therapy that "came to almost a complete halt" (p. 283) or a motion that brings debate to a halt (A.A. Service Manual); one hit in *Dr. Bob and the Good Oldtimers* is a scanning error for "Half." No story in any edition in our sources uses the acronym.
 
 ## Where the four words do appear in the program text
 

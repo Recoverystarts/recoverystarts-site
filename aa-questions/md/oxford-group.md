@@ -54,5 +54,5 @@ Bill says the New York alcoholics worked alongside the Oxford Groups until the m
 | *Dr. Bob and the Good Oldtimers* | — | 1980 |
 | *Pass It On* (including Bill's letter of October 30, 1940) | — | 1984 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

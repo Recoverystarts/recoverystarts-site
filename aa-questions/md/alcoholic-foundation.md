@@ -48,5 +48,5 @@ In 1969 Bill recalled that "the original Foundation, now our General Service Boa
 | P-53, Bill W.'s last major talk | — | October 1969; pamphlet © 2017 |
 | *Pass It On* | — | 1984 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44, P-53, the Service Manual,* A.A. Comes of Age *and* Pass It On *are © A.A. World Services, Inc.; P-17's articles are © AA Grapevine, Inc.*

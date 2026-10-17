@@ -7,7 +7,7 @@
 
 ## Where it is
 
-All our sources was searched for "once an alcoholic" and "always an alcoholic." The phrase is in the program text once (p. 33), and in two stories dropped from earlier editions, now in *Experience, Strength and Hope* (2003). It isn't in the fourth edition's personal stories.
+All our sources were searched for "once an alcoholic" and "always an alcoholic." The phrase is in the program text once (p. 33), and in two stories dropped from earlier editions, now in *Experience, Strength and Hope* (2003). It isn't in the fourth edition's personal stories.
 
 ## The passage, read in full
 

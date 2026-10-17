@@ -51,5 +51,5 @@ The New Yorkers parted from the Oxford Groups in the latter part of 1937 (A.A. C
 | *Dr. Bob and the Good Oldtimers* | — | 1980 |
 | *Pass It On* | — | 1984 |
 
-Big Book page numbers are from the fourth edition (2001). "f.
+Big Book page numbers are from the fourth edition (2001).
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.*

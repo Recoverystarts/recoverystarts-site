@@ -7,7 +7,7 @@
 
 ## What the search found
 
-All our sources was searched for "give it away," "to keep it," "giving away," "keep what you have," "keep what we had" and "freely given."
+All our sources were searched for "give it away," "to keep it," "giving away," "keep what you have," "keep what we had" and "freely given."
 
 - **The saying:** one personal story, "Because I'm an Alcoholic" (Part II): "Commitment and service were part of recovery. I was told that to keep it we have to give it away" (p. 345).
 - **An older version:** "The Professor and the Paradox," a story printed in the second edition (1955) and dropped in 1976, now in *Experience, Strength and Hope* (2003). Its writer lists four A.A. paradoxes, the second being "We give away to keep" (*Experience, Strength and Hope*, 2003, story from the 1955 edition).

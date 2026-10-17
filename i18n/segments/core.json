@@ -782,8 +782,8 @@
    "aa-info/index.html"
   ]
  },
- "a96f6140f375": {
-  "t": "Learn about Alcoholics Anonymous — the 12 Traditions (home group rules) and 12 Concepts for World Service. Essential AA knowledge for newcomers and old-timers.",
+ "bfa6e6f5cc9d": {
+  "t": "Learn about Alcoholics Anonymous — the 12 Traditions (long form) and 12 Concepts for World Service. Essential AA knowledge for newcomers and old-timers.",
   "kind": "attr",
   "pages": [
    "aa-info/index.html"
@@ -846,92 +846,111 @@
    "aa-info/index.html"
   ]
  },
- "d89c0de2a001": {
-  "t": "The Traditions are AA's home group rules — the principles that protect the fellowship's unity and independence. Written by Bill W. and adopted in 1950.",
+ "7a68d874e33f": {
+  "t": "The long form of the Twelve Traditions, as printed in the Big Book (<0>Alcoholics Anonymous</0>, 4th Edition, pp. 563–566).",
   "kind": "html",
   "pages": [
    "aa-info/index.html"
   ]
  },
- "c5440356ebfa": {
-  "t": "<0>Our common welfare should come first;</0> personal recovery depends upon A.A. unity.",
+ "0a41494395b7": {
+  "t": "Each member of Alcoholics Anonymous is but a small part of a great whole. A.A. must continue to live or most of us will surely die. Hence our common welfare comes first. But individual welfare follows close afterward.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "95ea3eb4fba0": {
-  "t": "<0>For our group purpose there is but one ultimate authority</0> — a loving God as He may express Himself in our group conscience. Our leaders are but trusted servants; they do not govern.",
+ "465c653ab0f5": {
+  "t": "For our group purpose there is but one ultimate authority—a loving God as He may express Himself in our group conscience.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "0e30b8a4b191": {
-  "t": "<0>The only requirement for A.A. membership</0> is a desire to stop drinking.",
+ "8eb976079adb": {
+  "t": "Our membership ought to include all who suffer from alcoholism. Hence we may refuse none who wish to recover. Nor ought A.A. membership ever depend upon money or conformity. Any two or three alcoholics gathered together for sobriety may call themselves an A.A. group, provided that, as a group, they have no other affiliation.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "641484d043f5": {
-  "t": "<0>Each group should be autonomous</0> except in matters affecting other groups or A.A. as a whole.",
+ "c086e0b55760": {
+  "t": "With respect to its own affairs, each A.A. group should be responsible to no other authority than its own conscience. But when its plans concern the welfare of neighboring groups also, those groups ought to be consulted. And no group, regional committee, or individual should ever take any action that might greatly affect A.A. as a whole without conferring with the trustees of the General Service Board. On such issues our common welfare is paramount.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "c8d53aacc2e5": {
-  "t": "<0>Each group has but one primary purpose</0> — to carry its message to the alcoholic who still suffers.",
+ "0c6ff5809ec1": {
+  "t": "Each Alcoholics Anonymous group ought to be a spiritual entity having but one primary purpose—that of carrying its message to the alcoholic who still suffers.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "0e55224b8f67": {
-  "t": "<0>An A.A. group ought never endorse, finance, or lend the A.A. name</0> to any related facility or outside enterprise, lest problems of money, property, and prestige divert us from our primary purpose.",
+ "49de96ed8473": {
+  "t": "Problems of money, property, and authority may easily divert us from our primary spiritual aim. We think, therefore, that any considerable property of genuine use to A.A. should be separately incorporated and managed, thus dividing the material from the spiritual. An A.A. group, as such, should never go into business. Secondary aids to A.A., such as clubs or hospitals which require much property or administration, ought to be incorporated and so set apart that, if necessary, they can be freely discarded by the groups. Hence such facilities ought not to use the A.A. name. Their management should be the sole responsibility of those people who financially support them. For clubs, A.A. managers are usually preferred. But hospitals, as well as other places of recuperation, ought to be well outside A.A.—and medically supervised. While an A.A. group may cooperate with anyone, such cooperation ought never go so far as affiliation or endorsement, actual or implied. An A.A. group can bind itself to no one.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "820708f4a612": {
-  "t": "<0>Every A.A. group ought to be fully self-supporting,</0> declining outside contributions.",
+ "6d723dab6c8c": {
+  "t": "The A.A. groups themselves ought to be fully supported by the voluntary contributions of their own members. We think that each group should soon achieve this ideal; that any public solicitation of funds using the name of Alcoholics Anonymous is highly dangerous, whether by groups, clubs, hospitals, or other outside agencies; that acceptance of large gifts from any source, or of contributions carrying any obligation whatever, is unwise. Then too, we view with much concern those A.A. treasuries which continue, beyond prudent reserves, to accumulate funds for no stated A.A. purpose. Experience has often warned us that nothing can so surely destroy our spiritual heritage as futile disputes over property, money, and authority.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "091e5615ccc5": {
-  "t": "<0>Alcoholics Anonymous should remain forever nonprofessional,</0> but our service centers may employ special workers.",
+ "4300607abd45": {
+  "t": "Alcoholics Anonymous should remain forever nonprofessional. We define professionalism as the occupation of counseling alcoholics for fees or hire. But we may employ alcoholics where they are going to perform those services for which we might otherwise have to engage nonalcoholics. Such special services may be well recompensed. But our usual A.A. \"12 Step\" work is never to be paid for.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "4cb698cdf70e": {
-  "t": "<0>A.A., as such, ought never be organized;</0> but we may create service boards or committees directly responsible to those they serve.",
+ "5307f52d3f80": {
+  "t": "Each A.A. group needs the least possible organization. Rotating leadership is the best. The small group may elect its secretary, the large group its rotating committee, and the groups of a large metropolitan area their central or intergroup committee, which often employs a full-time secretary. The trustees of the General Service Board are, in effect, our A.A. General Service Committee. They are the custodians of our A.A. Tradition and the receivers of voluntary A.A. contributions by which we maintain our A.A. General Service Office at New York. They are authorized by the groups to handle our over-all public relations and they guarantee the integrity of our principal newspaper, the A.A. Grapevine. All such representatives are to be guided in the spirit of service, for true leaders in A.A. are but trusted and experienced servants of the whole. They derive no real authority from their titles; they do not govern. Universal respect is the key to their usefulness.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "5e3353f9c9b6": {
-  "t": "<0>Alcoholics Anonymous has no opinion on outside issues;</0> hence the A.A. name ought never be drawn into public controversy.",
+ "f82b3a38d772": {
+  "t": "No A.A. group or member should ever, in such a way as to implicate A.A., express any opinion on outside controversial issues—particularly those of politics, alcohol reform, or sectarian religion. The Alcoholics Anonymous groups oppose no one. Concerning such matters they can express no views whatever.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "096b9362e4f7": {
-  "t": "<0>Our public relations policy is based on attraction rather than promotion;</0> we need always maintain personal anonymity at the level of press, radio, and films.",
+ "de7b404507cb": {
+  "t": "Our relations with the general public should be characterized by personal anonymity. We think A.A. ought to avoid sensational advertising. Our names and pictures as A.A. members ought not be broadcast, filmed, or publicly printed. Our public relations should be guided by the principle of attraction rather than promotion. There is never need to praise ourselves. We feel it better to let our friends recommend us.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-traditions/index.html"
   ]
  },
- "26d1893a822f": {
-  "t": "<0>Anonymity is the spiritual foundation of all our traditions,</0> ever reminding us to place principles before personalities.",
+ "b2076a23b5ae": {
+  "t": "And finally, we of Alcoholics Anonymous believe that the principle of anonymity has an immense spiritual significance. It reminds us that we are to place principles before personalities; that we are actually to practice a genuine humility. This to the end that our great blessings may never spoil us; that we shall forever live in thankful contemplation of Him who presides over us all.",
+  "kind": "html",
+  "pages": [
+   "aa-info/index.html",
+   "12-traditions/index.html"
+  ]
+ },
+ "bc70a8a52c9e": {
+  "t": "<0>The short form and the long form, side by side →</0>",
   "kind": "html",
   "pages": [
    "aa-info/index.html"
@@ -968,25 +987,28 @@
    "12-concepts/index.html"
   ]
  },
- "e99705658413": {
-  "t": "To insure effective leadership, we should endow each element of A.A. — the Conference, the General Service Board and its service corporations, staffs, committees and executives — with a traditional \"Right of Decision.\"",
+ "264e5cab603c": {
+  "t": "To insure effective leadership, we should endow each element of A.A. — the Conference, the General Service Board and its service corporations, staffs, committees, and executives — with a traditional “Right of Decision.”",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "fc17395e8bba": {
-  "t": "At all responsible levels, we ought to maintain a traditional \"Right of Participation,\" allowing a voting representation in reasonable proportion to the responsibility that each must discharge.",
+ "3c76cfcd52ff": {
+  "t": "At all responsible levels, we ought to maintain a traditional “Right of Participation,” allowing a voting representation in reasonable proportion to the responsibility that each must discharge.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "7b6164ceea73": {
-  "t": "Throughout our structure, a traditional \"Right of Appeal\" ought to prevail, so that minority opinion will be heard and personal grievances receive careful consideration.",
+ "dc8b1bc8dbcb": {
+  "t": "Throughout our structure, a traditional “Right of Appeal” ought to prevail, so that minority opinion will be heard and personal grievances receive careful consideration.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
  "6e113351c5ee": {
@@ -997,46 +1019,52 @@
    "12-concepts/index.html"
   ]
  },
- "fa8e60e92af1": {
-  "t": "The Charter and Bylaws of the General Service Board are legal instruments, empowering the trustees to manage and conduct world service affairs.",
+ "35d8a9b64010": {
+  "t": "The Charter and Bylaws of the General Service Board are legal instruments, empowering the trustees to manage and conduct world service affairs. The Conference Charter is not a legal document; it relies upon tradition and the A.A. purse for final effectiveness.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "a333fcb97375": {
-  "t": "The trustees are the principal planners and administrators of overall policy and finance.",
+ "dd04133c0abd": {
+  "t": "The trustees are the principal planners and administrators of overall policy and finance. They have custodial oversight of the separately incorporated and constantly active services, exercising this through their ability to elect all the directors of these entities.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "c7a95ff21a1f": {
-  "t": "Good service leadership at all levels is indispensable for our future functioning and safety.",
+ "f916cd53b9a8": {
+  "t": "Good service leadership at all levels is indispensable for our future functioning and safety. Primary world service leadership, once exercised by the founders, must necessarily be assumed by the trustees.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "1ea61b4f0d4a": {
-  "t": "Every service responsibility should be matched by an equal service authority.",
+ "30a723656579": {
+  "t": "Every service responsibility should be matched by an equal service authority, with the scope of such authority well defined.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "8d73b18df62b": {
-  "t": "The trustees should always have the best possible committees, corporate service directors, executives, staffs, and consultants.",
+ "ea8687e4cdf1": {
+  "t": "The trustees should always have the best possible committees, corporate service directors, executives, staffs, and consultants. Composition, qualifications, induction procedures, and rights and duties will always be matters of serious concern.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
- "a1c750b3e6c8": {
-  "t": "The Conference shall observe the spirit of A.A. tradition, taking great care that it never becomes the seat of perilous wealth or power.",
+ "549bf284bc05": {
+  "t": "The Conference shall observe the spirit of A.A. tradition, taking care that it never becomes the seat of perilous wealth or power; that sufficient operating funds and reserve be its prudent financial principle; that it place none of its members in a position of unqualified authority over others; that it reach all important decisions by discussion, vote, and, whenever possible, by substantial unanimity; that its actions never be personally punitive nor an incitement to public controversy; that it never perform acts of government, and that, like the Society it serves, it will always remain democratic in thought and action.",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "12-concepts/index.html"
   ]
  },
  "3766e9ad3169": {

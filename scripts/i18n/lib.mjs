@@ -28,6 +28,8 @@ export const LANGS = {
   fa: { name: "فارسی", dir: "rtl", en: "Persian" },
   pl: { name: "Polski", dir: "ltr", en: "Polish" },
   de: { name: "Deutsch", dir: "ltr", en: "German" },
+  sv: { name: "Svenska", dir: "ltr", en: "Swedish" },
+  nl: { name: "Nederlands", dir: "ltr", en: "Dutch" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

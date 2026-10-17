@@ -20,7 +20,7 @@
 
 ## How to write a segment
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Dutch needs. Don't type HTML.
-- Until the nl wave teaches the scripts Dutch (`LANGS` in `scripts/i18n/lib.mjs`), `check.mjs nl` refuses to run; the wave adds it. Then `node scripts/i18n/check.mjs nl <your-batch>` = 0 problems.
+- `node scripts/i18n/check.mjs nl <your-batch>` = 0 problems (the wave taught the scripts Dutch).
 - **AA, not A.A.:** Dutch A.A. writes **AA** with no periods [AA NL and AA VL everywhere]. Compounds take a hyphen: **AA-lid, AA-groep, AA-bijeenkomst, AA-programma, AA-literatuur, AA-lidmaatschap** [AA NL, Traditions 3, 6, 7]. A member is **een AA'er**, plural **AA'ers** (with the apostrophe; AA prints ’) [AA NL, /wat-is-aa/; AA VL]. The fellowship as subject is singular: «Anonieme Alcoholisten heeft geen mening» [AA NL, Tradition 10], «AA staat open voor…» [AA VL]. Keep the periods only in English proper names: A.A. World Services, Inc.; A.A. Grapevine, Inc.; A.A.W.S.
 - **Quotes:** “…” (curly double) for quotations, as AA Nederland prints them («“God, geef mij de Kalmte…”» [AA NL, Steps page]; «“Het Grote Boek van de Anonieme Alcoholisten” en “Twaalf Stappen en Twaalf Tradities”» [AA NL, Traditions page]); a quote inside a quote: ‘…’. Never straight "…" in Dutch prose. Book titles: in <i>…</i> where the English has it, otherwise “…”.
 - **Dashes:** the en dash with spaces « – » between clauses, as A.A. does (Step 1 «alcohol – dat ons leven», Tradition 5 «hoofddoel – haar boodschap»). Ranges without spaces: 1937–1950, blz. 58–59.
@@ -262,6 +262,45 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Dutch each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Dutch edition's wording for ordinary quotes.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, 4e editie (Engelstalig), pagina N; eigen vertaling. Een kort citaat, ter herkenning en studie. Lees de hele pagina in je eigen exemplaar →». Keep the English's placeholders around the same words.
+
+## Big Book quotes — look here first (wave svnl1)
+*Added 2026-10-17 by the svnl1 Super (Opus 5.5, Super window). Every English line below was located in Derick's own copy of the 4th edition (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result. Dutch A.A. publishes no Big Book passage online, so every line here is ours.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (cut, never reworded, if the English quotes only part of it).
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase a quote, never shorten it, never "improve" it. Then list its id in your close under `unsure:` as **`BBQ <id>`**. Checkers read every BBQ; the Super reads every BBQ.
+3. **Same line, same Dutch**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know it. Never swap in Dutch page numbers (see "Page references").
+5. Never call one of these «de Nederlandse tekst van AA»: the credit line says «eigen vertaling» (see the credit-line rule above).
+
+**Fixed (credit «eigen vertaling»):**
+| p. | English | Dutch |
+|---|---|---|
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | Het idee dat hij op een of andere manier, ooit, zijn drinken zal beheersen en ervan zal genieten, is de grote obsessie van iedere abnormale drinker. |
+| 53 | God either is, or He isn't. | Ofwel God is er, ofwel Hij is er niet. |
+| 53 | God is everything or else He is nothing. | God is alles, of anders is Hij niets. |
+| 58 | Rarely have we seen a person fail who has thoroughly followed our path. | Zelden hebben we iemand zien mislukken die onze weg grondig heeft gevolgd. |
+| 58 | Our stories disclose in a general way what we used to be like, what happened, and what we are like now. | Onze verhalen laten in grote lijnen zien hoe we vroeger waren, wat er gebeurde en hoe we nu zijn. |
+| 58 | If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps. | Als je besloten hebt dat je wilt wat wij hebben en bereid bent tot het uiterste te gaan om het te krijgen – dan ben je klaar om bepaalde stappen te zetten. |
+| 58–59 | Remember that we deal with alcohol—cunning, baffling, powerful! | Bedenk dat we met alcohol te maken hebben – sluw, verbijsterend en machtig! |
+| 59 | Half measures availed us nothing. We stood at the turning point. | Halve maatregelen hielpen ons niets. We stonden op het keerpunt. |
+| 60 | We claim spiritual progress rather than spiritual perfection. | We maken aanspraak op spirituele vooruitgang, niet op spirituele volmaaktheid. |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | Zelfzucht – egocentrisme! Dat is volgens ons de wortel van onze problemen. |
+| 63 | the Third Step prayer | «God, ik bied mij aan U aan …» — above, [ours] |
+| 64 | Resentment is the "number one" offender. It destroys more alcoholics than anything else. | Wrok is “boosdoener nummer één”. Wrok vernietigt meer alcoholisten dan wat ook. |
+| 76 | the Seventh Step prayer | «Mijn Schepper, ik ben nu bereid …» — above, [ours] |
+| 83–84 | the Promises | above, [ours], whole or cut |
+| 84 | We have ceased fighting anything or anyone—even alcohol. | We zijn opgehouden met vechten tegen wat of wie dan ook – zelfs tegen alcohol. |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | We zijn niet genezen van alcoholisme. Wat we werkelijk hebben, is een dagelijks uitstel, dat afhangt van het onderhoud van onze spirituele toestand. ("reprieve" is a stay, «uitstel»; never «gratie», a pardon) |
+| 86 | On awakening let us think about the twenty-four hours ahead. | Laten we bij het ontwaken nadenken over de vierentwintig uur die voor ons liggen. |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | De praktijk leert dat niets zo zeker beschermt tegen drinken als intensief werken met andere alcoholisten. |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | Brand het idee in het bewustzijn van iedere man dat hij beter kan worden, ongeacht wie dan ook. De enige voorwaarde is dat hij op God vertrouwt en schoon schip maakt. |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | Geef je over aan God, zoals jij God begrijpt. Erken je fouten tegenover Hem en tegenover je medemensen. Ruim de puinhopen van je verleden op. |
+| 164 | …Trudge the Road of Happy Destiny. | … Ga moeizaam verder op de Weg naar een Gelukkige Bestemming. |
+| 417 | And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation—some fact of my life—unacceptable to me … | the /index.html line in `core.json`: «En aanvaarding is vandaag het antwoord op al mijn problemen. Als ik van streek ben, is dat omdat ik een persoon, plaats, ding of situatie — een feit in mijn leven — onaanvaardbaar vind…» |
+| 563–566 | the long-form Traditions | "The Twelve Traditions, long form" above (and `core.json`) |
+
+The site's most-cited pages, for your bearings: 563–566 (long-form Traditions), 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
 
 ## Site words
 | English | Dutch |

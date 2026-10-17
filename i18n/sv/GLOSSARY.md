@@ -31,7 +31,7 @@
 - «Vi» for the fellowship's voice, as A.A. does («Vi vet hur jobbigt eller skämmigt det kändes» [aa.se]).
 
 ## How to write a segment
-- Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Swedish needs. Don't type HTML. (The pipeline doesn't know `sv` yet; until the wave teaches it, check placeholders the way `check.mjs` does: same `<n>`, `</n>`, `<n/>` set as the English.)
+- Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Swedish needs. Don't type HTML. Then `node scripts/i18n/check.mjs sv <your-batch>` = 0 problems.
 - **Quotes:** Swedish ”…” — the **same** right double quote (”) at both ends, as Swedish A.A. prints it («en traditionsenlig ”beslutanderätt”» [Servicehandbok]; «kapitlet ”Hur det fungerar”» [Pamphlets, AA-gruppen]). A quote inside a quote: ’…’ (right single quote both ends). Never "…" or “…” or «…» in Swedish prose. Apostrophes in names stay: Claude's Lab.
 - **Dashes:** the en dash with spaces « – » between clauses, as A.A. prints it (Step 1 «maktlösa inför alkoholen – att våra liv»). Ranges with no spaces: 1937–1950, s. 58–59, kapitel 7–11.
 - **Numbers:** a space for thousands: «1 000 kr» [aa.se], «30 000 dollar», «över 29 000»; a decimal comma: «2,99». Prices: «2,99 USD» (or «2,99 dollar» in running text). Ordinals: «3:e utgåvan», «4:e utg.» (A.A. writes «3:e utgåvan» [Servicehandbok]); «Steg 12» or «Tolfte Steget».
@@ -274,6 +274,43 @@ The Servicehandbok prints Concept 4 as «”rätt tillmedbestämmande”» — a
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Swedish each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Swedish edition's wording for ordinary quotes. (The /index.html p. 417 line is in core.json, [ours].)
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, 4:e utg. (engelska), sidan N; egen översättning. Ett kort citat, för igenkänning och studium. Läs hela sidan i ditt eget exemplar →». For a line from the cards or aa.se above, «svenska AA:s lydelse» in place of «egen översättning». Keep the English's placeholders around the same words.
+
+## Big Book quotes — look here first (wave svnl1)
+*Added 2026-10-17 by the svnl1 Super (Opus 5.5, Super window). Every English line below was located in Derick's own copy of the 4th edition (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (cut, never reworded, if the English quotes only part of it).
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase a quote, never shorten it, never "improve" it. Then list its id in your close under `unsure:` as **`BBQ <id>`**. Checkers read every BBQ; the Super reads every BBQ.
+3. **Same line, same Swedish**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know it. Never swap in Swedish page numbers (see "Page references").
+5. The credit line says which kind it is: «svenska AA:s lydelse» for the card/aa.se lines, «egen översättning» for everything else (see the credit-line rule above).
+
+**A.A. Sverige's own Swedish (use it word for word):**
+- **pp. 58–60, How It Works** — the card lines in "Prayers and fixed texts" above (p. 58 "Rarely have we seen…", p. 58 "Our stories disclose…", p. 58 "If you have decided…", pp. 58–59 "Remember that we deal with alcohol…", p. 59 "Half measures availed us nothing…", p. 59 "Here are the steps we took…", p. 60 "We claim spiritual progress…", p. 60 a)–c)) and the Steps.
+- **pp. 83–84, the Promises** — the card text above, from "We are going to know a new freedom" (p. 83) to "if we work for them" (p. 84). The sentence before it (p. 83, "If we are painstaking about this phase of our development, we will be amazed before we are half way through.") is ours: «Om vi är noggranna i den här fasen av vår utveckling, kommer vi att bli förvånade innan vi har kommit halvvägs.»
+- **The Doctor's Opinion** (pp. xxv–xxxii) — aa.se's «Läkarens åsikt», above.
+
+**Ours, fixed so every page says it the same way** (credit «egen översättning»):
+| p. | English | Swedish |
+|---|---|---|
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | Tanken att han på något sätt, någon gång, ska kunna kontrollera och njuta av sitt drickande är varje onormal drinkares stora besatthet. |
+| 53 | God either is, or He isn't. | Antingen finns Gud, eller så finns Han inte. |
+| 53 | God is everything or else He is nothing. | Gud är allt, eller också är Han ingenting. |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | Själviskhet – självupptagenhet! Det, tror vi, är roten till våra problem. |
+| 63 | the Third Step prayer | «Gud, jag överlämnar mig åt Dig …» — above, [ours] |
+| 64 | Resentment is the "number one" offender. It destroys more alcoholics than anything else. | Förbittring är ”boven nummer ett”. Den förstör fler alkoholister än något annat. |
+| 76 | the Seventh Step prayer | «Min Skapare, jag är nu villig …» — above, [ours] |
+| 84 | We have ceased fighting anything or anyone—even alcohol. | Vi har slutat kämpa mot något eller någon – till och med mot alkoholen. |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | Vi är inte botade från alkoholism. Det vi egentligen har är en daglig frist, som är villkorad av att vi upprätthåller vårt andliga tillstånd. |
+| 86 | On awakening let us think about the twenty-four hours ahead. | När vi vaknar, låt oss tänka på de kommande tjugofyra timmarna. |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | Praktisk erfarenhet visar att ingenting ger ett så säkert skydd mot att dricka som intensivt arbete med andra alkoholister. |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | Bränn in tanken i varje mans medvetande att han kan bli frisk oavsett andra. Det enda villkoret är att han litar på Gud och gör rent hus. |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | Överlämna dig åt Gud, sådan du uppfattar Gud. Erkänn dina fel inför Honom och inför dina medmänniskor. Röj undan spillrorna av ditt förflutna. |
+| 164 | …Trudge the Road of Happy Destiny. | … Vandra vidare på Vägen mot ett lyckligt öde. |
+| 417 | And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation—some fact of my life—unacceptable to me … | the /index.html line in `core.json`: «Och acceptans är svaret på alla mina problem idag. När jag är upprörd beror det på att jag finner någon person, plats, sak eller situation – något faktum i mitt liv – oacceptabel för mig …» |
+| 563–566 | the long-form Traditions | "The Twelve Traditions, long form" above (and `core.json`) |
+
+The site's most-cited pages, for your bearings: 563–566 (long-form Traditions), 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
 
 ## Site words
 | English | Swedish |

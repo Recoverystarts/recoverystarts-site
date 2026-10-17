@@ -287,6 +287,7 @@ The Servicehandbok prints Concept 4 as «”rätt tillmedbestämmande”» — a
 
 **A.A. Sverige's own Swedish (use it word for word):**
 - **pp. 58–60, How It Works** — the card lines in "Prayers and fixed texts" above (p. 58 "Rarely have we seen…", p. 58 "Our stories disclose…", p. 58 "If you have decided…", pp. 58–59 "Remember that we deal with alcohol…", p. 59 "Half measures availed us nothing…", p. 59 "Here are the steps we took…", p. 60 "We claim spiritual progress…", p. 60 a)–c)) and the Steps.
+- **pp. 58–59, two more card sentences** (checked on the card PDF 2026-10-17): "But there is One who has all power—that One is God. May you find Him now!" → «Men det finns En som har all makt – denne Ende är Gud. Må du finna Honom nu!»; "Half measures availed us nothing. We stood at the turning point. We asked His protection and care with complete abandon." → «Halvmesyrer gav oss ingenting. Vi stod vid vändpunkten. Vi överlämnade oss helt och fullt och bad om Hans beskydd och omsorg.»
 - **pp. 83–84, the Promises** — the card text above, from "We are going to know a new freedom" (p. 83) to "if we work for them" (p. 84). The sentence before it (p. 83, "If we are painstaking about this phase of our development, we will be amazed before we are half way through.") is ours: «Om vi är noggranna i den här fasen av vår utveckling, kommer vi att bli förvånade innan vi har kommit halvvägs.»
 - **The Doctor's Opinion** (pp. xxv–xxxii) — aa.se's «Läkarens åsikt», above.
 

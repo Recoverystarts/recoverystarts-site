@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geef de meetinginformatie door — Recovery Starts</title>
+  <meta name="description" content="Ken je een meeting die niet op de kaart staat? Laat het ons hier weten — een paar vakjes, een link of een e-mail. Een mens leest elk bericht.">
+  <meta property="og:title" content="Geef de meetinginformatie door — Recovery Starts">
+  <meta property="og:description" content="Ken je een meeting die niet op de kaart staat? Laat het ons hier weten. Een mens leest elk bericht.">
+  <meta property="og:url" content="https://recoverystarts.com/nl/add-meeting/">
+  <meta property="og:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://recoverystarts.com/assets/einstein-character.png">
+  <link rel="stylesheet" href="/style.css?v=0162361fb3">
+  <link rel="canonical" href="https://recoverystarts.com/nl/add-meeting/">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/add-meeting/">
+  <link rel="alternate" hreflang="nl" href="https://recoverystarts.com/nl/add-meeting/">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/add-meeting/">
+  <link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/add-meeting/">
+  <link rel="alternate" hreflang="fr" href="https://recoverystarts.com/fr/add-meeting/">
+  <link rel="alternate" hreflang="fa" href="https://recoverystarts.com/fa/add-meeting/">
+  <link rel="alternate" hreflang="pl" href="https://recoverystarts.com/pl/add-meeting/">
+  <link rel="alternate" hreflang="de" href="https://recoverystarts.com/de/add-meeting/">
+  <link rel="alternate" hreflang="sv" href="https://recoverystarts.com/sv/add-meeting/">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/add-meeting/">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
+   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
+   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+@media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+   this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
+.rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
+.rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
+.rs-offer button{background:none;border:0;color:inherit;font-size:22px;line-height:1;min-width:36px;min-height:36px;cursor:pointer}
+</style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Naar de inhoud</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/nl/" class="nav-brand">Recovery Starts</a>
+    <button class="nav-toggle" aria-label="Menu openen of sluiten" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=nl" class="nav-cta nav-cta-map">Meetingkaart</a></li>
+      <li><a href="/online/?hl=nl" class="nav-cta nav-cta-online">Online meetings</a></li>
+      <li class="has-sub nav-group-start"><a href="/daily-reflection/">Dagelijkse lezing</a><button class="sub-toggle" aria-expanded="false" aria-label="Dagelijkse lezing bekijken">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Dagelijkse overdenking</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/daily-reflection/today/">De overdenking van vandaag →</a></li>
+            <li><a href="/daily-reflection/january/">Januari</a></li>
+            <li><a href="/daily-reflection/february/">Februari</a></li>
+            <li><a href="/daily-reflection/march/">Maart</a></li>
+            <li><a href="/daily-reflection/april/">April</a></li>
+            <li><a href="/daily-reflection/may/">Mei</a></li>
+            <li><a href="/daily-reflection/june/">Juni</a></li>
+            <li><a href="/daily-reflection/july/">Juli</a></li>
+            <li><a href="/daily-reflection/august/">Augustus</a></li>
+            <li><a href="/daily-reflection/september/">September</a></li>
+            <li><a href="/daily-reflection/october/">Oktober</a></li>
+            <li><a href="/daily-reflection/november/">November</a></li>
+            <li><a href="/daily-reflection/december/">December</a></li>
+            <li class="sub-hub"><a href="/daily-reflection/">Alle dagelijkse overdenkingen →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Dagelijkse Traditie</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/daily-tradition/today/">De Traditie van vandaag →</a></li>
+            <li><a href="/daily-tradition/january/">Januari<small>Traditie 1</small></a></li>
+            <li><a href="/daily-tradition/february/">Februari<small>Traditie 2</small></a></li>
+            <li><a href="/daily-tradition/march/">Maart<small>Traditie 3</small></a></li>
+            <li><a href="/daily-tradition/april/">April<small>Traditie 4</small></a></li>
+            <li><a href="/daily-tradition/may/">Mei<small>Traditie 5</small></a></li>
+            <li><a href="/daily-tradition/june/">Juni<small>Traditie 6</small></a></li>
+            <li><a href="/daily-tradition/july/">Juli<small>Traditie 7</small></a></li>
+            <li><a href="/daily-tradition/august/">Augustus<small>Traditie 8</small></a></li>
+            <li><a href="/daily-tradition/september/">September<small>Traditie 9</small></a></li>
+            <li><a href="/daily-tradition/october/">Oktober<small>Traditie 10</small></a></li>
+            <li><a href="/daily-tradition/november/">November<small>Traditie 11</small></a></li>
+            <li><a href="/daily-tradition/december/">December<small>Traditie 12</small></a></li>
+            <li class="sub-hub"><a href="/daily-tradition/">Alle Dagelijkse Tradities →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/big-book/">Het Grote Boek</a><button class="sub-toggle" aria-expanded="false" aria-label="Het Grote Boek bekijken">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/big-book/search/">Zoeken in het Grote Boek</a></li>
+        <li><a href="/big-book/pages/">Pagina voor pagina</a></li>
+        <li><a href="/big-book/">Het Grote Boek kopen</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/nl/aa-info/">Het programma</a><button class="sub-toggle" aria-expanded="false" aria-label="Het programma bekijken">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/12-steps/">De 12 Stappen</a></li>
+        <li><a href="/12-traditions/">De 12 Tradities</a></li>
+        <li><a href="/12-concepts/">De 12 Concepten</a></li>
+        <li><a href="/aa-questions/">Vragen over AA, beantwoord uit de boeken</a></li>
+        <li><a href="/nl/aa-info/">AA-info</a></li>
+        <li><a href="/nl/meetings/">Vind een meeting</a></li>
+      </ul></li>
+      <li><a href="/nl/about/">Over ons</a></li>
+      <li class="nav-group-start nav-util"><a href="/nl/add-meeting/" class="nav-add-meeting">Meeting toevoegen</a></li>
+      <li class="nav-app"><a href="/nl/download/" class="nav-cta">De app</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان · Język"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="nl">✓ Nederlands</span><a href="/add-meeting/" data-hl="en" hreflang="en" lang="en">English</a><a href="/es/add-meeting/" data-hl="es" hreflang="es" lang="es">Español</a><a href="/pt/add-meeting/" data-hl="pt" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/fr/add-meeting/" data-hl="fr" hreflang="fr" lang="fr">Français</a><a href="/fa/add-meeting/" data-hl="fa" hreflang="fa" lang="fa" dir="rtl">فارسی</a><a href="/pl/add-meeting/" data-hl="pl" hreflang="pl" lang="pl">Polski</a><a href="/de/add-meeting/" data-hl="de" hreflang="de" lang="de">Deutsch</a><a href="/sv/add-meeting/" data-hl="sv" hreflang="sv" lang="sv">Svenska</a></div><script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script></details>
+  </div></nav>
+  <a class="einstein-cta" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=floating-cta&amp;utm_content=add-meeting" target="_blank" rel="noopener" aria-label="Praat met Recovery Einstein – dag en nacht">
+    <span class="ec-dot" aria-hidden="true"></span> <span class="ec-text"><strong>Praat met Recovery Einstein</strong><small>Je bent niet alleen – dag en nacht</small></span>
+  </a>
+  <style>
+    /* Scoped to this page so no site-wide asset re-bust is needed. Colours are
+       the existing tokens: teal is THE action accent, and --crisis stays 988-only. */
+    .mi-wrap { max-width: 46rem; margin: 0 auto; }
+    .mi-lead { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; }
+    .mi-ways { display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin: 1.75rem 0 2.25rem; }
+    .mi-way { border: 1px solid var(--sky-rule); border-radius: .8rem; padding: .9rem 1rem; background: rgba(255,255,255,.03); }
+    .mi-way b { color: var(--accent); display: block; margin-bottom: .2rem; font-size: .95rem; }
+    .mi-way span { color: var(--ink-dim); font-size: .88rem; line-height: 1.5; }
+    .mi-form { display: grid; gap: 1.1rem; margin-top: .5rem; }
+    .mi-field label { display: block; font-weight: 600; margin-bottom: .35rem; font-size: .95rem; }
+    .mi-field .hint { display: block; font-weight: 400; color: var(--ink-dim); font-size: .84rem; margin-top: .15rem; }
+    .mi-form input[type=text], .mi-form input[type=email], .mi-form input[type=url], .mi-form textarea, .mi-form select {
+      width: 100%; padding: .7rem .85rem; border-radius: .6rem; font: inherit; color: var(--ink);
+      background: rgba(255,255,255,.05); border: 1px solid var(--sky-rule);
+    }
+    .mi-form textarea { min-height: 6.5rem; resize: vertical; }
+    .mi-form input:focus, .mi-form textarea:focus, .mi-form select:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+    .mi-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .mi-actions { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; margin-top: .4rem; }
+    .mi-note { border-left: 3px solid var(--accent); padding: .85rem 1rem; background: rgba(45,212,191,.07);
+               border-radius: 0 .6rem .6rem 0; color: var(--ink-soft); font-size: .92rem; line-height: 1.6; }
+    .mi-status { display: none; padding: .9rem 1.1rem; border-radius: .7rem; font-size: .97rem; line-height: 1.55; }
+    .mi-status.show { display: block; }
+    .mi-status.ok { background: rgba(45,212,191,.12); border: 1px solid var(--accent-deep); color: var(--ink); }
+    .mi-status.bad { background: rgba(255,120,120,.10); border: 1px solid rgba(255,120,120,.45); color: var(--ink); }
+    @media (max-width: 540px) { .mi-ways { grid-template-columns: 1fr; } }
+  </style>
+
+  <main id="main">
+    <section class="section">
+      <div class="container mi-wrap">
+        <h1>Geef de meetinginformatie hier door</h1>
+        <p class="mi-lead">
+          De kaart is gebouwd op wat gemeenschappen online publiceren — dus de meetings die het moeilijkst te vinden zijn, zijn meestal die zonder eigen website. Dat is precies omgekeerd aan wie ze het hardst nodig heeft. Weet je een meeting die ontbreekt, of een van de onze die verhuisd of gestopt is, laat het ons hier weten. <strong>Een mens leest elk bericht.</strong>
+        </p>
+
+        <div class="mi-ways">
+          <div class="mi-way"><b>Vul de vakjes in</b><span>Alles wat je weet. Eén regel is genoeg — wij doen de rest.</span></div>
+          <div class="mi-way"><b>Of laat alleen een link achter</b><span>Een groepspagina, een districtsrooster, zelfs een bericht op Facebook.</span></div>
+          <div class="mi-way"><b>Of mail het</b><span><a href="mailto:addict2influencer@gmail.com?subject=Meeting%20info">addict2influencer@gmail.com</a> — een foto van een rooster is ook prima.</span></div>
+        </div>
+
+        <div class="mi-note">
+          <strong>Hou het bij de meeting, niet bij de leden.</strong> Geef het <em>openbare</em> contact van de groep als die er een heeft — een hulplijn of een e-mailadres van de groep. Stuur nooit iemands volledige naam of privénummer, ook niet dat van je eigen sponsor. Anonimiteit is waar het om gaat, en deze kaart is openbaar.
+        </div>
+
+        <p id="mi-status" class="mi-status" role="status" aria-live="polite"></p>
+
+        <form class="mi-form" id="mi-form" method="POST" action="/api/meeting-info">
+          <div class="mi-field">
+            <label for="meeting_name">Naam van de meeting of groep <span class="hint">Als je die weet. “Die van dinsdagavond in het buurthuis” is ook goed.</span>
+            </label>
+            <input type="text" id="meeting_name" name="meeting_name" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="where">Waar komt de groep samen? <span class="hint">Naam van het gebouw en de straat, of alleen de plaats.</span>
+            </label>
+            <input type="text" id="where" name="where" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="when">Dag en tijd <span class="hint">bijv. “dinsdag 19.00 uur”. Noem er een paar als de groep vaker samenkomt.</span>
+            </label>
+            <input type="text" id="when" name="when" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="program">Welke gemeenschap?</label>
+            <select id="program" name="program">
+              <option value="">Weet ik niet / andere</option>
+              <option>AA — Anonieme Alcoholisten</option>
+              <option>NA — Narcotics Anonymous</option>
+              <option>CA — Cocaine Anonymous</option>
+              <option>CMA — Crystal Meth Anonymous</option>
+            </select>
+          </div>
+
+          <div class="mi-field">
+            <label for="link">Een link, als die er is <span class="hint">Groepspagina, districtsrooster of een bericht met de details.</span>
+            </label>
+            <input type="url" id="link" name="link" inputmode="url" placeholder="https://">
+          </div>
+
+          <div class="mi-field">
+            <label for="group_contact">Het openbare contact van de groep <span class="hint">Een hulplijn of e-mailadres van de groep dat al openbaar is. Nooit het privénummer van een lid.</span>
+            </label>
+            <input type="text" id="group_contact" name="group_contact" autocomplete="off">
+          </div>
+
+          <div class="mi-field">
+            <label for="notes">Verder nog iets <span class="hint">Rolstoeltoegankelijk, welke deur, “besloten meeting”, of dat een van de onze gestopt of verhuisd is.</span>
+            </label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+
+          <div class="mi-field">
+            <label for="your_email">Je e-mailadres — niet verplicht <span class="hint">Alleen zodat we iets kunnen navragen. Nooit gepubliceerd, nooit aan een lijst toegevoegd.</span>
+            </label>
+            <input type="email" id="your_email" name="your_email" autocomplete="email">
+          </div>
+
+          <input type="hidden" id="page" name="page" value="">
+          <div class="mi-hp" aria-hidden="true">
+            <label for="website2">Laat dit leeg</label>
+            <input type="text" id="website2" name="website2" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="mi-actions">
+            <button type="submit" class="btn btn-glow" id="mi-submit">Meetinginformatie versturen</button>
+            <a href="/meetings/find/?hl=nl" style="color:var(--ink-dim)">of bekijk eerst de kaart</a>
+          </div>
+        </form>
+
+        <p style="margin-top:2rem;color:var(--ink-dim);font-size:.9rem;line-height:1.6">
+          Niets wat je stuurt, wordt automatisch gepubliceerd. Meetings komen pas op de kaart nadat een mens ze heeft gecontroleerd, en een meeting zonder vindbare locatie blijft eraf, zodat we niemand naar een deur sturen die er niet is.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  (function () {
+    var f = document.getElementById('mi-form');
+    if (!f) return;
+    var s = document.getElementById('mi-status');
+    var btn = document.getElementById('mi-submit');
+
+    // A no-JS submit posts the form and is redirected back here with ?sent=1,
+    // so the page has to be able to report the outcome without any JS having run.
+    var q = new URLSearchParams(location.search);
+    // Which listing the person came from (a "report a problem" link passes ?page=;
+    // otherwise the referrer) — so a "this meeting closed" report names the room.
+    var pg = document.getElementById('page');
+    if (pg) pg.value = q.get('page') || (document.referrer && /recoverystarts\.com\/meetings\//.test(document.referrer) ? document.referrer : '');
+    if (pg && pg.value) {
+      var mn = document.getElementById('meeting_name');
+      if (mn && !mn.value && q.get('name')) mn.value = q.get('name');
+      var st = document.getElementById('mi-status');
+      if (st) { st.textContent = 'About the listing: ' + pg.value.replace(/^https?:\/\//, '') + ' — tell us what changed (moved, ended, wrong time).'; st.className = 'mi-status show ok'; }
+    }
+    if (q.get('sent')) show('ok', 'Thank you — a person will read this and add the meeting.');
+    else if (q.get('error')) show('bad', q.get('error'));
+    if (q.get('sent') || q.get('error') || q.get('page')) history.replaceState({}, '', location.pathname);
+
+    function show(kind, msg) {
+      s.textContent = msg;
+      s.className = 'mi-status show ' + kind;
+      s.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = {};
+      new FormData(f).forEach(function (v, k) { data[k] = v; });
+      btn.disabled = true;
+      var was = btn.textContent;
+      btn.textContent = 'Sending…';
+      fetch('/api/meeting-info', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function (r) { return r.json().catch(function () { return { ok: r.ok, message: r.ok ? 'Thank you.' : 'Something went wrong.' }; }); })
+        .then(function (j) {
+          show(j.ok ? 'ok' : 'bad', j.message || (j.ok ? 'Thank you.' : 'Something went wrong.'));
+          if (j.ok) f.reset();
+        })
+        .catch(function () {
+          show('bad', 'That did not send — you can email addict2influencer@gmail.com instead.');
+        })
+        .then(function () { btn.disabled = false; btn.textContent = was; });
+    });
+  })();
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Een onafhankelijk project dat aandacht vraagt voor herstel. Niet verbonden aan enige gemeenschap. Elke lezing hier is gratis en volledig, en dat blijft altijd zo.</p></div>
+        <div><h4>Lezen</h4><ul class="footer-links"><li><a href="/daily-reflection/">Dagelijkse overdenking</a></li><li><a href="/daily-tradition/">Dagelijkse Traditie</a></li><li><a href="/big-book/pages/">Het Grote Boek, pagina voor pagina</a></li><li><a href="/big-book/search/">Zoeken in het Grote Boek</a></li></ul></div>
+        <div><h4>Het programma</h4><ul class="footer-links"><li><a href="/12-steps/">De 12 Stappen</a></li><li><a href="/12-traditions/">De 12 Tradities</a></li><li><a href="/12-concepts/">De 12 Concepten</a></li><li><a href="/aa-questions/">Vragen over AA</a></li><li><a href="/nl/aa-info/">AA-info</a></li><li><a href="/nl/meetings/">Vind een meeting</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/nl/download/">Download de app</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Maak kennis met Derick</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude's Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">Zit je nu in een crisis? In Nederland: bel gratis 113 of chat via 113.nl, dag en nacht. In België: bel 1813, gratis, dag en nacht. Is er levensgevaar, bel dan 112. In de VS en Canada: bel <a href="tel:988">988</a> en vraag om een tolk Nederlands. Je bent niet alleen.</p>
+      <div class="privacy-notice"><strong>Privacy:</strong> we gebruiken Google Analytics en Cloudflare Web Analytics om te zien welke pagina's mensen helpen en wat beter kan; Google plaatst daarvoor analytische cookies. We verkopen je gegevens nooit en publiceren nooit iets over jou. <strong>Onafhankelijkheid:</strong> niet verbonden aan enige gemeenschap. <strong>Geen medisch advies:</strong> geen vervanging voor professionele zorg.</div>
+      <div class="footer-bottom"><p>© 2026 RecoveryStarts.com, een project van <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Gebouwd door <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
+    </div>
+  </footer>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/app.js?v=b267d333f8"></script>
+<!-- Cloudflare Web Analytics -->
+<!-- End Cloudflare Web Analytics -->
+<script>window.RS_T={"p":{"Donate":"Doneren","Donate — keep it free":"Doneer – zodat het gratis blijft","Keep this free.":"Zodat het gratis blijft.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Deze kaart wordt gebouwd en betaald door één persoon, uit eigen zak. Elk nieuw land kost meer om te draaien. Heeft hij je geholpen een meeting te vinden, dan houdt een dollar in de hoed hem gratis voor de volgende.","$1 in the basket":"$ 1 in de hoed","Give more":"Meer geven","Close":"Sluiten","Support Recovery Starts":"Steun Recovery Starts","Big Book app":"App voor het Grote Boek","Open web app":"Webapp openen","Free · also on Google Play":"Gratis · ook op Google Play","Install":"Installeren","In-app purchases · Free":"In-app-aankopen · Gratis","Get AA Big Book Search + AI Guide on Google Play":"Download AA Big Book Search + AI Guide op Google Play","Open AA Big Book Search + AI Guide, the free web app":"Open AA Big Book Search + AI Guide, de gratis webapp","Today":"Vandaag","Latest reading":"Nieuwste lezing","Sit with":"Om bij stil te staan","Open this reading":"Deze lezing openen","Ask Recovery Einstein about today's Tradition":"Vraag Recovery Einstein naar de Traditie van vandaag","Quick answer":"Kort antwoord","Long Form":"Lange formule","Appendix I":"Bijlage I","The Twelve Traditions — Long Form":"De Twaalf Tradities – lange formule","The complete, unabridged Traditions (pp. 563–566).":"De volledige, onverkorte Tradities (blz. 563–566 van de Engelstalige uitgave).","Most people are only ever shown the \u003cstrong>short form\u003c/strong> (pp. 561–562). The Long Form is the full text — it is where Tradition Three states that alcoholics may call themselves an A.A. group “provided that, as a group, they have no other affiliation.”":"De meeste mensen krijgen alleen de \u003cstrong>korte formule\u003c/strong> te zien (blz. 561–562). De lange formule is de volledige tekst – daarin zegt de Derde Traditie dat alcoholisten zich een AA-groep mogen noemen “op voorwaarde dat zij als groep geen andere binding hebben”.","exact phrase":"exacte woorden","Page {n}":"Pagina {n}","You're looking for \u003cstrong>page {n}\u003c/strong> of the Big Book, 4th Edition.":"Je zoekt \u003cstrong>pagina {n}\u003c/strong> van het Grote Boek, 4e editie (Engelstalig).","What's on page {n} →":"Wat staat er op pagina {n}? →","Read it in the app →":"Lees het in de app →","A.A. offers the whole book free —":"AA biedt het hele boek gratis aan –","read this page at aa.org →":"lees deze pagina op aa.org →","Get your own copy →":"Koop je eigen exemplaar →","Reading the Big Book with someone who knows every page?":"Het Grote Boek lezen met iemand die elke pagina kent?","Meet Recovery Einstein →":"Maak kennis met Recovery Einstein →","Steps, chapters &amp; references":"Stappen, hoofdstukken en verwijzingen","Quick answers":"Korte antwoorden","Searching the Big Book…":"Zoeken in het Grote Boek…","In the Big Book":"In het Grote Boek","No pages matched “{q}.” Try a word or short phrase from the text, a page number, or a topic like \u003cem>resentment\u003c/em> or \u003cem>acceptance\u003c/em>.":"Geen pagina's gevonden voor “{q}”. Probeer een woord of korte zin uit de tekst, een paginanummer of een onderwerp zoals \u003cem>wrok\u003c/em> of \u003cem>aanvaarding\u003c/em>.","1 page":"1 pagina","1 quick answer":"1 kort antwoord","{n} quick answers":"{n} korte antwoorden","1 reference":"1 verwijzing","{n} references":"{n} verwijzingen","1 passage":"1 passage","{n} passages":"{n} passages","Results for “{q}”: {list}.":"Resultaten voor “{q}”: {list}.","No results for “{q}.”":"Geen resultaten voor “{q}”.","Searching…":"Zoeken…","Full-text search is unavailable right now. Quick answers are still here.":"Zoeken in de volledige tekst werkt nu even niet. De korte antwoorden zijn er nog wel.","Search is unavailable right now. Please try again in a moment.":"Zoeken werkt nu even niet. Probeer het zo meteen opnieuw.","Step":"Stap","Chapter":"Hoofdstuk","Reference":"Verwijzing","Page":"Pagina","Chapter {n} – {x}":"Hoofdstuk {n} – {x}","Step {n}":"Stap {n}","Pages {n} to {x}":"Pagina {n} tot {x}","Go directly to page {n}":"Ga direct naar pagina {n}","Found in {x}":"Te vinden in {x}","The Doctor's Opinion":"De mening van de dokter","Bill's Story":"Bills verhaal","There Is a Solution":"Er is een oplossing","More About Alcoholism":"Meer over alcoholisme","We Agnostics":"Wij agnosten","How It Works":"Hoe het werkt","Into Action":"Aan de slag","Working With Others":"Werken met anderen","To Wives":"Aan de echtgenotes","The Family Afterward":"Het gezin daarna","To Employers":"Aan werkgevers","A Vision For You":"Een visie voor jou","The Promises":"De Beloften","Third Step Prayer":"Gebed van de Derde Stap","Seventh Step Prayer":"Gebed van de Zevende Stap","Twelve Traditions":"Twaalf Tradities","Spiritual Experience":"Spirituele ervaring","Appendix":"Bijlage","Contents":"Inhoud","Admitted we were powerless over alcohol—that our lives had become unmanageable.":"We erkenden dat we machteloos stonden tegenover alcohol – dat ons leven stuurloos was geworden.","Came to believe that a Power greater than ourselves could restore us to sanity.":"Kwamen ertoe te geloven dat een Macht groter dan wij zelf ons gezond verstand weer kon herstellen.","Made a decision to turn our will and our lives over to the care of God as we understood Him.":"Besloten onze wil en ons leven over te geven in de hoede van God, zoals wij Hem begrepen.","Made a searching and fearless moral inventory of ourselves.":"Maakten een diepgaande en onbevreesde morele inventaris op van onszelf.","Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.":"Erkenden tegenover God, tegenover onszelf en tegenover een ander mens de precieze aard van onze fouten.","Were entirely ready to have God remove all these defects of character.":"Waren volkomen bereid om God al deze karaktergebreken te laten wegnemen.","Humbly asked Him to remove our shortcomings.":"Vroegen Hem nederig onze tekortkomingen weg te nemen.","Made a list of all persons we had harmed, and became willing to make amends to them all.":"Maakten een lijst van alle personen die we schade hadden berokkend en werden bereid om het bij hen allen goed te maken.","Made direct amends to such people wherever possible, except when to do so would injure them or others.":"Maakten het overal waar dit mogelijk was rechtstreeks weer goed bij deze mensen, behalve wanneer dit hen of anderen zou kwetsen.","Continued to take personal inventory and when we were wrong promptly admitted it.":"Gingen door met het opmaken van een persoonlijke inventaris en als we fout waren erkenden we dit direct.","Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.":"Trachtten door gebed en meditatie ons bewuste contact met God, zoals wij Hem begrepen, te verbeteren en baden Hem enkel ons Zijn wil voor ons te doen kennen en om de kracht die te volbrengen.","Having had a spiritual awakening as the result of these Steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.":"Nu deze stappen ons tot spiritueel ontwaken hebben geleid, hebben we geprobeerd deze boodschap aan alcoholisten door te geven en deze principes in al ons doen en laten toe te passen.","Personal Stories – Part I":"Ervaringsverhalen – deel I","Personal Stories – Part II":"Ervaringsverhalen – deel II","Personal Stories – Part III":"Ervaringsverhalen – deel III","Personal Stories":"Ervaringsverhalen","Foreword to First Edition":"Voorwoord bij de eerste uitgave","Foreword to Second Edition":"Voorwoord bij de tweede uitgave","Foreword to Third Edition":"Voorwoord bij de derde uitgave","Foreword to Fourth Edition":"Voorwoord bij de vierde uitgave","Preface":"Inleiding","Title Page":"Titelpagina","Copyright Page":"Copyrightpagina","Appendix I – The A.A. Tradition":"Bijlage I – De AA-Traditie","Appendix II – Spiritual Experience":"Bijlage II – Spirituele ervaring","Appendix III – The Medical View":"Bijlage III – De medische kijk op AA","Appendix IV – The Lasker Award":"Bijlage IV – De Lasker-prijs","Appendix V – The Religious View":"Bijlage V – De religieuze kijk op AA","Appendix VI – How to Get in Touch":"Bijlage VI – Contact opnemen met AA","Appendix VII – Twelve Concepts":"Bijlage VII – De Twaalf Concepten"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl],.rs-offer a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);
+(function(){try{if(localStorage.getItem('rs_lang_offer')||localStorage.getItem('rs_hl'))return}catch(e){return}if(/(?:^|; )rs_hl=/.test(document.cookie))return;
+var cur=(document.documentElement.lang||'en').toLowerCase().split('-')[0],want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(function(x){return String(x).toLowerCase().split('-')[0]});
+if(!want[0]||want[0]===cur)return;var T={"en":["This page is also in English.","View in English"],"es":["Esta página también está en español.","Ver en español"],"pt":["Esta página também está em português.","Ver em português"],"fr":["Cette page existe aussi en français.","Voir en français"],"fa":["این صفحه به فارسی هم هست.","خواندن به فارسی"],"pl":["Ta strona jest też po polsku.","Czytaj po polsku"],"de":["Diese Seite gibt es auch auf Deutsch.","Auf Deutsch lesen"],"sv":["Den här sidan finns också på svenska.","Läs på svenska"],"nl":["Deze pagina is er ook in het Nederlands.","Lees in het Nederlands"]},pick=null;document.querySelectorAll('.rs-globe a[data-hl]').forEach(function(a){var c=(a.getAttribute('data-hl')||'').split('-')[0];if(!pick&&T[c]&&want.indexOf(c)>-1)pick=a});if(!pick)return;
+var c=pick.getAttribute('data-hl').split('-')[0],bar=document.createElement('div');bar.className='rs-offer';bar.lang=pick.getAttribute('lang')||c;bar.dir=pick.getAttribute('dir')||'ltr';
+var s=document.createElement('span');s.textContent=T[c][0];var a=document.createElement('a');a.href=pick.getAttribute('href');a.textContent=T[c][1];a.setAttribute('data-hl',pick.getAttribute('data-hl'));
+var x=document.createElement('button');x.type='button';x.setAttribute('aria-label','×');x.textContent='×';function seen(){try{localStorage.setItem('rs_lang_offer','1')}catch(e){}}
+a.addEventListener('click',seen);x.addEventListener('click',function(){seen();bar.remove()});bar.appendChild(s);bar.appendChild(a);bar.appendChild(x);document.body.appendChild(bar)})();</script></body>
+</html>

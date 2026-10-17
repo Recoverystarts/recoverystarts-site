@@ -317,7 +317,7 @@ const REG = {
   fr: /(?<!\p{L})(?:(?:tu|toi|ton|ta|tes|tien|tienne)(?!\p{L})|t['’](?=\p{L}))/giu,
   fa: /[يك]|(?<![\p{L}\u200c])ن?می (?=\p{L})|(?<![\p{L}\u200c])ن?می(?!ز|ان|ل|وه|راث|لیون|لیارد|هن|همان|زان|ثاق|کروب|ترا|گرن|نیمم|ناکاری|نو)(?=[\u0622-\u06cc])|(?<!\p{L})(?:تو|تویی|خودت|برایت|داری|هستی)(?!\p{L})|(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/gu,
   de: /(?<!\p{L})(?:du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer|eures|bist|hast|kannst|willst|musst|sollst|weißt)(?!\p{L})|["”]|(?<=^|[\s(])“(?=\p{L})/gu,
-  sv: /(?<!\p{L})(?:ni|Ni|er|Er|ert|Ert|era|Era|eder|Eder)(?!\p{L})|(?<=[\p{L},;:] )(?:Du|Dig|Din|Ditt|Dina)(?!\p{L})|["“„«»]/gu,
+  sv: /(?<![\p{L}:])(?:ni|Ni|er|Er|ert|Ert|era|Era|eder|Eder)(?!\p{L})|(?<=[\p{L},;:] )(?:Du|Dig|Din|Ditt|Dina)(?!\p{L})|["“„«»]/gu,
   nl: /(?<!\p{L})(?:u|uw|uzelf|jullie|Jullie)(?!\p{L})|["„«»]/gu,
   pl: /(?<!\p{L})(?:Pan|Pana|Panu|Panem|Pani|Panią|Państwo|Państwa|Państwu|Państwem|możecie|jesteście|macie|chcecie|wasz|wasza|wasze|waszego|waszej|waszym|waszych)(?!\p{L})|["“]/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,

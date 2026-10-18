@@ -234,7 +234,7 @@ The English site prints the world Concepts (General Service Conference, General 
 9. सभी स्तरों पर अच्छा सेवा-नेतृत्व हमारे भविष्य के कामकाज और सुरक्षा के लिए अनिवार्य है।
 10. हर सेवा-उत्तरदायित्व के साथ उतना ही सेवा-अधिकार होना चाहिए।
 11. ट्रस्टियों के पास सदा सर्वोत्तम संभव समितियाँ, कॉर्पोरेट सेवा निदेशक, अधिकारी, स्टाफ़ और सलाहकार होने चाहिए।
-12. कॉन्फ़्रेंस AA परंपरा की भावना का पालन करेगी, और पूरा ध्यान रखेगी कि वह कभी ख़तरनाक धन या सत्ता का केंद्र न बने।
+12. कॉन्फ़्रेंस AA परंपरा की भावना का पालन करेगी, और ध्यान रखेगी कि वह कभी ख़तरनाक धन या सत्ता का केंद्र न बने।
 
 Where the /12-concepts/ page quotes more of a Concept than this, translate the rest faithfully yourself [ours] and keep these first sentences. Any "verbatim / A.A.'s official wording" claim about the Concepts gets the same honest rewording: «हमारे अपने हिंदी अनुवाद में, AA के अंग्रेज़ी पाठ से».
 

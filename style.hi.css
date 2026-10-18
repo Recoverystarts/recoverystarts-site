@@ -7,7 +7,7 @@ html:lang(hi){--font-display:'Fraunces','Noto Sans Devanagari',Georgia,serif;--f
 html:lang(hi) body{line-height:1.8}
 html:lang(hi) h1,html:lang(hi) h2,html:lang(hi) h3,html:lang(hi) h4{line-height:1.45}
 html:lang(hi) *{letter-spacing:0!important}
-html:lang(hi) em,html:lang(hi) i,html:lang(hi) cite,html:lang(hi) blockquote{font-style:normal!important}
+html:lang(hi) *{font-style:normal!important}
 html:lang(hi) em,html:lang(hi) i{font-weight:600}
 html:lang(hi) input,html:lang(hi) textarea,html:lang(hi) select,html:lang(hi) button{font-family:var(--font-ui)}
 /* "our translation" note (build.mjs OURS_NOTE) */

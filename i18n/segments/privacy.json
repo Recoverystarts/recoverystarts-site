@@ -1,0 +1,177 @@
+{
+ "8b812e7f5fde": {
+  "t": "Privacy — Recovery Starts",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "ac506d86c6fd": {
+  "t": "What recoverystarts.com collects, why, and what it never does. Plain language, no small print.",
+  "kind": "attr",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "cf01481f626d": {
+  "t": "Privacy",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "2fa7ec5d2cd3": {
+  "t": "What this site collects, why, and what it never does.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "692bf73d72a7": {
+  "t": "<0>Who we are.</0> recoverystarts.com is run by Recovery Starts, a project of <1>AutoGrow AI Solutions</1>, Calgary, Alberta, Canada. You can reach us at <2>hello@recoverystarts.com</2>.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "f7dd5c66e939": {
+  "t": "The short version",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "eb15e578f356": {
+  "t": "You never need an account to use this site.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "ba4109d46083": {
+  "t": "We count visits so we know which pages help people and where to improve.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "639099108890": {
+  "t": "We never sell your personal information, and we never post anything about you.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "be8739082595": {
+  "t": "Nothing you read here is tied to your name.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "c48bbcfed6ef": {
+  "t": "What we collect",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "4e9cf2cc1a67": {
+  "t": "<0>Visit counts.</0> We use Google Analytics and Cloudflare Web Analytics. They tell us things like how many people visited, which pages they read, roughly which country they came from, and what kind of device they used. Google Analytics sets cookies in your browser to do this, and we ask it to shorten your IP address. Cloudflare Web Analytics uses no cookies.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "4c9e70bb62e1": {
+  "t": "<0>Your language choice.</0> If you pick a language, your browser remembers it (a small cookie or local storage on your device) so the next page opens in that language. It stays on your device.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "b83dfa7e031c": {
+  "t": "<0>The &ldquo;add a meeting&rdquo; form.</0> What you type is emailed to us so a person can add the meeting. Your email address is optional and only used to reply to you. Nothing from the form is published automatically.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "39d86727670c": {
+  "t": "<0>Donations.</0> If you give, the payment happens on Stripe&rsquo;s or PayPal&rsquo;s own pages. We never see your card details.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "299cf7a91b92": {
+  "t": "<0>Recovery Einstein.</0> The chat app at app.recoverystarts.com and the Android app have their own <1>privacy policy</1>.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "38b5b5f67e9a": {
+  "t": "Advertising",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "047a600b0da8": {
+  "t": "To keep the site free, we may show ads. If we do, Google and its advertising partners may use cookies to show ads based on your visits to this site and other sites. You can turn off personalised ads at <0>adssettings.google.com</0>, and learn about other companies&rsquo; ad cookies at <1>aboutads.info</1>. Visitors in the UK and Europe are asked for consent before any personalised ads are shown. An ad never changes which meetings you see.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "9b164ce1904f": {
+  "t": "Your choices",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "8a0c52d9c803": {
+  "t": "Block or delete cookies in your browser settings. The site still works.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "0d963bd96470": {
+  "t": "Stop Google Analytics everywhere with Google&rsquo;s <0>opt-out add-on</0>.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "21085bfe217c": {
+  "t": "Ask us what we have about you, or ask us to delete it: <0>hello@recoverystarts.com</0>.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "8aa57de6dce6": {
+  "t": "Changes",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "e7ba3d1b999e": {
+  "t": "If this page changes, the date below changes with it.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "2e7096f7fc36": {
+  "t": "Last updated: October 2026.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ }
+}

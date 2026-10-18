@@ -41,6 +41,10 @@
 //             nl (wave svnl1): the reader is «je/jij», lower case (i18n/nl/GLOSSARY.md): u/uw and «jullie» for the reader are the
 //             wrong register (U/Uw for God stay); ASCII " or „ « » in prose (Dutch quotes “…”); a dropped trema («ideeen»,
 //             «financiele», «geinteresseerd») or letters Dutch doesn't use (ä ö ü å ß ñ). Both cost score (×2, like English words).
+//             hi (wave hi1): the reader is «आप», plural, polite (i18n/hi/GLOSSARY.md): तुम/तू/तेरा/तुम्हारा/तुझे… are the wrong
+//             register; ASCII " or „ « » in prose (Hindi quotes “…”); Devanagari digits ०–९ (Hindi here writes Latin digits);
+//             a Hindi sentence ending in a Latin "." instead of the danda «।» (initials and पृ./डॉ. are fine); English left in
+//             (two or more English filler words, or five Latin words in a row, outside a “quoted” title). Each costs score (×2).
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -52,7 +56,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -304,6 +308,15 @@ const SV_BARE = /(?<!\p{L})(?:ar|pa|nar|fran|aven|ocksa|maste|gora|gor|mote|mote
 const SV_DIA = /[åäöÅÄÖ]/;
 // nl: a dropped trema, or letters Dutch doesn't use (wave svnl1)
 const NL_BAD = /(?<!\p{L})(?:ideeen|financiele|financielen|geinteresseerd\p{L}*|beinvloed\p{L}*|creeren|creeer\p{L}*|reeel|reele|naieve?|geillustreerd\p{L}*|zeeen|knieen|kopieren|kopieer\p{L}*|egoisme|egoist\p{L}*|egoistisch\p{L}*|coordin\p{L}*)(?!\p{L})|[äöüåßñÄÖÜÅ]/gu;
+// hi: Devanagari digits, a Latin full stop after a Hindi word (not an initial or an abbreviation), English left in (wave hi1)
+const HI_DIG = /[०-९]/u;
+const HI_ABBR = new Set("पृ डॉ श्री सं ए बी सी डी ई एफ़ एफ जी एच आई जे के एल एम एन ओ पी क्यू आर एस टी यू वी डब्ल्यू एक्स वाई ज़ेड जेड".split(" "));
+const HI_DOT = (s) => [...s.matchAll(/([\u0900-\u097F]+)\.(?=\s|$)/gu)].map((m) => m[1]).filter((w) => !HI_ABBR.has(w));
+const HI_FILL = new Set("the and of to is are was were with you your our we this that for from have has not it in on at as by be".split(" "));
+const hiEnglish = (s) => { const u = s.replace(/“[^”]*”|‘[^’]*’/g, " "), w = u.match(/[A-Za-z][A-Za-z'’-]*/g) ?? [], fill = w.filter((x) => HI_FILL.has(x.toLowerCase())); const run = /(?:[A-Za-z]*[a-z][A-Za-z'’-]*[\s,]+){4}[A-Za-z]*[a-z]/.test(u); return fill.length >= 2 || run ? (fill.length >= 2 ? fill : w).slice(0, 4) : []; };
+// hi: a number written as a word counts too («बारह चरण» for "12 Steps", «चौथा संस्करण», «20 लाख» for 2 million, «चौबीसों घंटे» for 24/7)
+const HI_NUM = [["एक|पहला|पहली|पहले", "1"], ["दो|दूसरा|दूसरी|दूसरे", "2"], ["तीन|तीसरा|तीसरी|तीसरे", "3"], ["चार|चौथा|चौथी|चौथे", "4"], ["पाँच|पांच|पाँचवाँ|पाँचवीं|पाँचवें", "5"], ["छह|छः|छठा|छठी|छठे", "6"], ["सात|सातवाँ|सातवीं|सातवें", "7"], ["आठ|आठवाँ|आठवीं|आठवें", "8"], ["नौ|नौवाँ|नौवीं|नौवें", "9"], ["दस|दसवाँ|दसवीं|दसवें", "10"], ["ग्यारह|ग्यारहवाँ|ग्यारहवीं|ग्यारहवें", "11"], ["बारह|बारहवाँ|बारहवीं|बारहवें", "12"]];
+const hiWords = (s) => { const out = []; for (const [w, n] of HI_NUM) if (new RegExp(`(?<![\\p{L}\\p{M}])(?:${w})(?![\\p{L}\\p{M}])`, "u").test(s)) out.push(n); for (const m of s.matchAll(/(\d+(?:[.,]\d+)?)\s*(लाख|करोड़)/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (m[2] === "लाख" ? 1e5 : 1e7); out.push(String(v), String(v / 1e6)); } if (/चौबीसों घंटे|24 घंटे|दिन-रात|हर समय/u.test(s)) out.push("24", "7"); return out; };
 // de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
@@ -319,6 +332,7 @@ const REG = {
   de: /(?<!\p{L})(?:du|dich|dir|dein|deine|deinen|deinem|deiner|deines|euch|euer|eure|euren|eurem|eurer|eures|bist|hast|kannst|willst|musst|sollst|weißt)(?!\p{L})|["”]|(?<=^|[\s(])“(?=\p{L})/gu,
   sv: /(?<![\p{L}:])(?:ni|Ni|er|Er|ert|Ert|era|Era|eder|Eder)(?!\p{L})|(?<=[\p{L},;:] )(?:Du|Dig|Din|Ditt|Dina)(?!\p{L})|["“„«»]/gu,
   nl: /(?<!\p{L})(?:u|uw|uzelf|jullie|Jullie)(?!\p{L})|["„«»]/gu,
+  hi: /(?<![\p{L}\p{M}])(?:तुम|तू|तुम्हारा|तुम्हारी|तुम्हारे|तुम्हें|तुमको|तुमसे|तेरा|तेरी|तेरे|तुझे|तुझको|तुझसे)(?![\p{L}\p{M}])|["„«»]/gu,
   pl: /(?<!\p{L})(?:Pan|Pana|Panu|Panem|Pani|Panią|Państwo|Państwa|Państwu|Państwem|możecie|jesteście|macie|chcecie|wasz|wasza|wasze|waszego|waszej|waszym|waszych)(?!\p{L})|["“]/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
@@ -339,7 +353,7 @@ for (const f of files) {
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !ALSO[lang]?.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
@@ -359,6 +373,11 @@ for (const f of files) {
     if (lang === "nl" && !code) {
       const bad = strip(t).match(NL_BAD) ?? [];
       if (bad.length) { r.dia++; r.usted++; flag(id, `diacritics: ${bad.slice(0, 3).join(", ")}`); }
+    }
+    if (lang === "hi" && !code) {
+      const st = strip(t), dig = HI_DIG.test(st), dot = HI_DOT(st), eng = hiEnglish(st);
+      if (dig || dot.length) { r.dia++; r.usted++; flag(id, dig ? "Devanagari digits (write Latin 0–9)" : `Latin "." for «।» after: ${dot.slice(0, 3).join(", ")}`); }
+      if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "pl" && !code) {
       const bare = strip(t).match(PL_BARE) ?? [];

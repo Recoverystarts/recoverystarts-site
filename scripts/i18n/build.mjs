@@ -7,6 +7,7 @@
 // The folder /<lang>/ is rebuilt from scratch each run, so it's always exactly what the translation files cover.
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
 import { stampGlobe } from "./globe.mjs";
 import { writeSitemaps } from "./sitemap.mjs";
@@ -16,8 +17,17 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", en: "en_US" };
 
+// a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
+const LANG_CSS = { hi: "style.hi.css" };
+const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
+// "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
+// and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
+// page. The words are the language's own core id <lang>_ours_note. When A.A.'s printed wording arrives, swap it into the
+// glossary and the files, and set the flag to false: the note comes off every page in one build.
+const OURS_NOTE = { hi: true };
+const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }
 const tr = translations(lang);
@@ -86,6 +96,16 @@ for (const rel of Object.keys(pageIds)) {
     if (/^\/(meetings|online)(\/|$)/.test(url) && !/[?&]hl=/.test(url)) { const [p, h = ""] = url.split("#"); return `${a}${p}${p.includes("?") ? "&amp;" : "?"}hl=${lang}${h ? "#" + h : ""}"`; }
     return m;
   });
+  // "our translation" note, under the page's h1 (its link goes to the English page, so it's put in after the links above)
+  if (OURS_NOTE[lang] && !OURS_SKIP.test(rel)) {
+    const note = tr[`${lang}_ours_note`];
+    if (!note) throw new Error(`OURS_NOTE.${lang} is on but i18n/${lang}/core.json has no ${lang}_ours_note`);
+    const p = `<p class="rs-ours" role="note">${fromTemplate(note, `<a href="${urlOf(rel)}" hreflang="en">English</a>`)}</p>`;
+    // the home page's only quote is the p. 417 card in its hero: the note goes in the card, under the quote
+    if (rel === "index.html") html = html.replace(/(<div class="book-body">[\s\S]*?<\/p>\s*<p>[\s\S]*?<\/p>)/, (m) => `${m}\n              ${p}`);
+    else html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
+  }
+  if (langCss) html = html.replace(/(<link rel="stylesheet" href="\/style\.css[^"]*">)/i, (m) => `${m}\n  <link rel="stylesheet" href="${langCss}">`);
   // the head: language, direction, canonical, alternates, og
   const url = `${SITE}/${lang}${urlOf(rel)}`;
   html = html.replace(/<html\b[^>]*>/i, `<html lang="${tagOf(lang)}"${L.dir === "rtl" ? ' dir="rtl"' : ""}>`);

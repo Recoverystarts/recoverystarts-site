@@ -30,6 +30,7 @@ export const LANGS = {
   de: { name: "Deutsch", dir: "ltr", en: "German" },
   sv: { name: "Svenska", dir: "ltr", en: "Swedish" },
   nl: { name: "Nederlands", dir: "ltr", en: "Dutch" },
+  hi: { name: "हिन्दी", dir: "ltr", en: "Hindi" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

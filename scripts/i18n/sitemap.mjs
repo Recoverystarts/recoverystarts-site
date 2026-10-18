@@ -69,6 +69,8 @@ export function writeSitemaps({ quiet = false } = {}) {
 // disk — so an assistant answering in French can send a reader to the French page. Rewritten between its heading and
 // the next "## " on every build; a new language appears here by itself.
 const DOORS = [["", "Home"], ["12-steps/", "The 12 Steps"], ["12-traditions/", "The 12 Traditions (short and long form)"], ["12-traditions/history/", "How the 12 Traditions came about (1937–1950)"], ["aa-info/", "AA info: Traditions and Concepts"], ["daily-tradition/", "Daily Traditions"], ["daily-reflection/", "Daily Reflections"], ["big-book/pages/", "The Big Book, page by page"], ["big-book/search/", "Big Book search"], ["aa-questions/", "A.A. questions, answered from the books"], ["meetings/", "Meetings"]];
+// a language whose A.A. texts are our own translation says so here too (build.mjs OURS_NOTE; wave hi1)
+const OURS = { hi: "the Hindi Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page; A.A. publishes no Hindi text of them online." };
 function writeLlms(langs) {
   const f = path.join(ROOT, "llms.txt");
   if (!fs.existsSync(f)) return;
@@ -78,6 +80,7 @@ function writeLlms(langs) {
     const have = DOORS.filter(([p]) => fs.existsSync(path.join(ROOT, l, p, "index.html")));
     if (!have.length) continue;
     lines.push(`### ${LANGS[l].name}${LANGS[l].en ? ` — ${LANGS[l].en}` : ""} (${tagOf(l)})`);
+    if (OURS[l]) lines.push(`- Note: ${OURS[l]}`);
     for (const [p, what] of have) lines.push(`- ${what}: ${SITE}/${l}/${p}`);
     lines.push(`- Sitemap: ${SITE}/sitemap-${l}.xml`, "");
   }

@@ -13,3 +13,4 @@ html:lang(hi) input,html:lang(hi) textarea,html:lang(hi) select,html:lang(hi) bu
 /* "our translation" note (build.mjs OURS_NOTE) */
 .rs-ours{margin:.9rem 0 1.3rem;padding:.6rem .9rem;border-left:3px solid var(--gold);background:var(--glass-highlight);border-radius:0 8px 8px 0;color:var(--ink-soft);font-family:var(--font-ui);font-size:var(--step--1);line-height:1.7;max-width:46rem}
 .rs-ours a{color:var(--gold);white-space:nowrap}
+.book-body .rs-ours{margin:.8rem 0 0;padding:.45rem .7rem;font-size:.78rem;line-height:1.6;max-width:none}

@@ -101,7 +101,9 @@ for (const rel of Object.keys(pageIds)) {
     const note = tr[`${lang}_ours_note`];
     if (!note) throw new Error(`OURS_NOTE.${lang} is on but i18n/${lang}/core.json has no ${lang}_ours_note`);
     const p = `<p class="rs-ours" role="note">${fromTemplate(note, `<a href="${urlOf(rel)}" hreflang="en">English</a>`)}</p>`;
-    html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
+    // the home page's only quote is the p. 417 card in its hero: the note goes in the card, under the quote
+    if (rel === "index.html") html = html.replace(/(<div class="book-body">[\s\S]*?<\/p>\s*<p>[\s\S]*?<\/p>)/, (m) => `${m}\n              ${p}`);
+    else html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
   }
   if (langCss) html = html.replace(/(<link rel="stylesheet" href="\/style\.css[^"]*">)/i, (m) => `${m}\n  <link rel="stylesheet" href="${langCss}">`);
   // the head: language, direction, canonical, alternates, og

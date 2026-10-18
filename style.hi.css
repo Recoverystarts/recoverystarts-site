@@ -1,0 +1,15 @@
+/* Hindi (Devanagari) type: loaded after /style.css on /hi/ pages only (scripts/i18n/build.mjs LANG_CSS; wave hi1).
+   Noto Sans Devanagari comes after the site's Latin fonts, so AA, Recovery Einstein and other Latin words keep the
+   site's type and the browser takes Devanagari glyphs from Noto. Devanagari needs more line height (the matras above
+   and the conjuncts below collide at 1.4), no fake italics, and no letter-spacing (it breaks the headline). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+html:lang(hi){--font-display:'Fraunces','Noto Sans Devanagari',Georgia,serif;--font-body:'Outfit','Noto Sans Devanagari',system-ui,-apple-system,sans-serif;--font-ui:'Outfit','Noto Sans Devanagari',system-ui,-apple-system,sans-serif}
+html:lang(hi) body{line-height:1.8}
+html:lang(hi) h1,html:lang(hi) h2,html:lang(hi) h3,html:lang(hi) h4{line-height:1.45}
+html:lang(hi) *{letter-spacing:0!important}
+html:lang(hi) em,html:lang(hi) i,html:lang(hi) cite,html:lang(hi) blockquote{font-style:normal!important}
+html:lang(hi) em,html:lang(hi) i{font-weight:600}
+html:lang(hi) input,html:lang(hi) textarea,html:lang(hi) select,html:lang(hi) button{font-family:var(--font-ui)}
+/* "our translation" note (build.mjs OURS_NOTE) */
+.rs-ours{margin:.9rem 0 1.3rem;padding:.6rem .9rem;border-left:3px solid var(--gold);background:var(--glass-highlight);border-radius:0 8px 8px 0;color:var(--ink-soft);font-family:var(--font-ui);font-size:var(--step--1);line-height:1.7;max-width:46rem}
+.rs-ours a{color:var(--gold);white-space:nowrap}

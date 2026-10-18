@@ -254,6 +254,52 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, चौथा संस्करण (अंग्रेज़ी), पृष्ठ N; हमारा अनुवाद। पहचान और अध्ययन के लिए एक छोटा-सा उद्धरण। पूरा पृष्ठ अपनी प्रति में पढ़ें →». Keep the English's placeholders around the same words.
 
+## Big Book quotes — look here first (wave hi1)
+*Added 2026-10-18 by the hi1 Super (Opus 5.5). There is no Hindi Big Book online, so every line here is **[ours]**, translated once, faithfully and close to the English, so that every runner writes the same Hindi for the same passage. Each English line below was pulled by script from Derick's own copy of the 4th edition (Recoverystarts/aa-library `big-book/text/`), and its page was found the same way.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly. If the English quotes only part of a passage, cut the Hindi at the matching sentence or clause; never reword it.
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase. List the id under `unsure:` as `BBQ <id>`, so a checker reads it.
+3. **Same line, same Hindi**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know it. Never swap in Hindi page numbers.
+5. **Never call this wording A.A.'s.** It is our translation from A.A.'s English; the page's note (build.mjs `OURS_NOTE`) says so. Where the English says a quote is "exactly as the book states it" or "word for word", use the honest wording given under the Steps, the Traditions (long form) and the Concepts above; for a Big Book quote, say it is our Hindi translation of the English 4th edition («हमारा हिंदी अनुवाद, अंग्रेज़ी चौथे संस्करण से»).
+6. God takes the honorific (उन्हें, उनकी, «ईश्वर हैं»); the reader is «आप». The book's "alcohol" is feminine (शराब): «धूर्त, चकरा देने वाली, ताक़तवर».
+
+**Ours, fixed so every page says it the same way:**
+| p. | English | Hindi |
+|---|---|---|
+| 58 | Rarely have we seen a person fail who has thoroughly followed our path. | the line in "Prayers and fixed texts" above |
+| 58 | Our stories disclose in a general way what we used to be like, what happened, and what we are like now. | हमारी कहानियाँ मोटे तौर पर बताती हैं कि हम पहले कैसे थे, क्या हुआ, और अब हम कैसे हैं। |
+| 58 | If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps. | अगर आपने तय कर लिया है कि आप वह चाहते हैं जो हमारे पास है, और उसे पाने के लिए आप किसी भी हद तक जाने को तैयार हैं — तो आप कुछ निश्चित क़दम उठाने के लिए तैयार हैं। |
+| 59 | Half measures availed us nothing. | आधे-अधूरे उपायों से हमें कुछ हासिल नहीं हुआ। |
+| 58–59 | Remember that we deal with alcohol—cunning, baf58 59 fling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now! | याद रखिए कि हमारा सामना शराब से है — धूर्त, चकरा देने वाली, ताक़तवर! मदद के बिना यह हमारे बस से बाहर है। लेकिन एक हैं जिनके पास सारी शक्ति है — वह एक ईश्वर हैं। आप उन्हें अभी पा लें! |
+| 59 | We stood at the turning point. We asked His protection and care with complete abandon. | हम निर्णायक मोड़ पर खड़े थे। हमने पूरे समर्पण के साथ उनसे सुरक्षा और देखभाल माँगी। |
+| 59 | Here are the steps we took, which are suggested as a program of recovery: | ये वे चरण हैं जिन्हें हमने अपनाया, और जो रिकवरी के एक कार्यक्रम के रूप में सुझाए गए हैं: |
+| 60 | Many of us exclaimed, “What an order! I can’t go through with it.’’ Do not be discouraged. | हममें से बहुतों ने कहा, “यह तो बहुत बड़ी माँग है! मुझसे यह नहीं हो पाएगा।” निराश न हों। |
+| 60 | No one among us has been able to maintain anything like perfect adherence to these principles. We are not saints. | हममें से कोई भी इन सिद्धांतों का पूरी तरह पालन करने जैसा कुछ नहीं कर पाया है। हम संत नहीं हैं। |
+| 60 | The point is, that we are willing to grow along spiritual lines. The principles we have set down are guides to progress. We claim spiritual progress rather than spiritual perfection. | मुद्दा यह है कि हम आध्यात्मिक राह पर आगे बढ़ने को तैयार हैं। हमने जो सिद्धांत रखे हैं, वे प्रगति के मार्गदर्शक हैं। हम आध्यात्मिक पूर्णता का नहीं, आध्यात्मिक प्रगति का दावा करते हैं। |
+| 60 | (a) That we were alcoholic and could not manage our own lives. (b) That probably no human power could have relieved our alcoholism. (c) That God could and would if He were sought. | (क) कि हम शराबी थे और अपना जीवन नहीं सँभाल सकते थे। (ख) कि शायद कोई भी मानवीय शक्ति हमें हमारी शराब की लत से मुक्ति नहीं दिला सकती थी। (ग) कि ईश्वर ऐसा कर सकते थे और करते, अगर उन्हें खोजा जाता। |
+| 83–84 | If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it. We will comprehend the INTO ACTION 84 ALCOHOLICS ANONYMOUS word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear. We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us. We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly. They will always materialize if we work for them. | अगर हम अपने विकास के इस दौर में पूरी लगन से लगे रहें, तो आधा रास्ता तय करने से पहले ही हम चकित रह जाएँगे। हम एक नई आज़ादी और एक नई ख़ुशी जानेंगे। हमें अतीत पर पछतावा नहीं होगा, न ही हम उस पर दरवाज़ा बंद करना चाहेंगे। हम शांति शब्द का अर्थ समझेंगे और हम सुकून जानेंगे। हम चाहे कितने भी नीचे गिर चुके हों, हम देखेंगे कि हमारा अनुभव दूसरों के काम कैसे आ सकता है। बेकार होने और आत्म-दया की वह भावना मिट जाएगी। स्वार्थ की चीज़ों में हमारी रुचि ख़त्म होगी और अपने साथियों में रुचि जागेगी। अपना ही फ़ायदा ढूँढ़ने की आदत छूट जाएगी। जीवन के प्रति हमारा पूरा रवैया और नज़रिया बदल जाएगा। लोगों का डर और आर्थिक असुरक्षा का डर हमें छोड़ देगा। जो परिस्थितियाँ हमें चकरा देती थीं, उन्हें सँभालना हम सहज ही जान जाएँगे। हमें अचानक एहसास होगा कि ईश्वर हमारे लिए वह कर रहे हैं जो हम अपने लिए नहीं कर सकते थे। क्या ये बढ़ा-चढ़ाकर किए गए वादे हैं? हम ऐसा नहीं सोचते। ये हमारे बीच पूरे हो रहे हैं — कभी जल्दी, कभी धीरे। अगर हम इनके लिए काम करें, तो ये हमेशा साकार होंगे। |
+| 84 | And we have ceased fighting anything or anyone— even alcohol. | और हमने किसी भी चीज़ या किसी भी व्यक्ति से लड़ना बंद कर दिया है — शराब से भी। |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | हम शराब की लत से ठीक नहीं हुए हैं। असल में हमारे पास जो है, वह रोज़ की मोहलत है, जो हमारी आध्यात्मिक स्थिति को बनाए रखने पर निर्भर है। |
+| 86 | On awakening let us think about the twenty-four hours ahead. | जागने पर, आइए आने वाले चौबीस घंटों के बारे में सोचें। |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | व्यावहारिक अनुभव बताता है कि दूसरे शराबियों के साथ गहन काम जितना शराब से बचाव पक्का करता है, उतना और कुछ नहीं। |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | हर व्यक्ति की चेतना में यह विचार गहराई से बिठा दीजिए कि वह ठीक हो सकता है, चाहे कोई और कुछ भी करे। एकमात्र शर्त यह है कि वह ईश्वर पर भरोसा रखे और अपना घर साफ़ करे। |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | स्वयं को ईश्वर को, जैसा आप उन्हें समझते हैं, समर्पित कर दीजिए। अपनी ग़लतियाँ उनके सामने और अपने साथियों के सामने स्वीकार कीजिए। अपने अतीत का मलबा साफ़ कीजिए। |
+| 164 | We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny. | हम आत्मा की संगति में आपके साथ होंगे, और सुखद नियति की राह पर क़दम-क़दम चलते हुए आप हममें से कुछ से ज़रूर मिलेंगे। |
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | यह विचार कि किसी तरह, किसी दिन वह अपनी शराब पर क़ाबू रखकर उसका आनंद ले सकेगा, हर असामान्य पीने वाले का सबसे बड़ा जुनून है। |
+| 53 | God either is, or He isn’t. | या तो ईश्वर हैं, या नहीं हैं। |
+| 53 | God is everything or else He is nothing. | ईश्वर या तो सब कुछ हैं, या फिर कुछ भी नहीं। |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | स्वार्थ — आत्म-केंद्रितता! हमारे विचार में, यही हमारी परेशानियों की जड़ है। |
+| 64 | Resentment is the “number one’’ offender. It destroys more alcoholics than anything else. | नाराज़गी “नंबर एक” अपराधी है। यह किसी भी और चीज़ से ज़्यादा शराबियों को नष्ट करती है। |
+| 63 | the Third Step prayer | "Prayers and fixed texts" above |
+| 76 | the Seventh Step prayer | "Prayers and fixed texts" above |
+| 417 | And acceptance is the answer to all my problems today. … | `core.json` 1b08a63f6559 (the whole line) |
+| 561–566 | the Traditions, short and long form | the two Traditions sections above (and `core.json`) |
+| 574–575 | the Concepts | the Concepts section above (and `core.json`, which has the second sentences) |
+
+A Promise quoted alone takes its sentence from the pp. 83–84 row. The site's most-cited pages, for your bearings: 563–566, 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
+
 ## Site words
 | English | Hindi |
 |---|---|

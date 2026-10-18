@@ -18,6 +18,8 @@ for (const f of files) {
   const t = readJson(path.join(dir, f), null);
   if (!t) { problems.push(`${f}: not valid JSON`); continue; }
   for (const [id, x] of Object.entries(t)) {
+    // a language's own line with no English (hi_ours_note, build.mjs OURS_NOTE): only that it isn't empty
+    if (id.startsWith(`${lang}_`)) { if (typeof x !== "string" || !x.trim()) problems.push(`${f} ${id}: empty`); continue; }
     const s = seg[id];
     if (!s) { problems.push(`${f} ${id}: no such segment (stale? re-run extract.mjs)`); continue; }
     if (typeof x !== "string" || !x.trim()) { problems.push(`${f} ${id}: empty`); continue; }

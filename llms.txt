@@ -183,7 +183,15 @@ in their language with the page in their language.
 ### हिन्दी — Hindi (hi)
 - Note: the Hindi Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page; A.A. publishes no Hindi text of them online.
 - Home: https://recoverystarts.com/hi/
+- The 12 Steps: https://recoverystarts.com/hi/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/hi/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/hi/12-traditions/history/
 - AA info: Traditions and Concepts: https://recoverystarts.com/hi/aa-info/
+- Daily Traditions: https://recoverystarts.com/hi/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/hi/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/hi/big-book/pages/
+- Big Book search: https://recoverystarts.com/hi/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/hi/aa-questions/
 - Meetings: https://recoverystarts.com/hi/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-hi.xml
 

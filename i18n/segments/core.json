@@ -1438,8 +1438,8 @@
    "download/index.html"
   ]
  },
- "3d33c26b8603": {
-  "t": "Download Recovery Einstein — an AI-powered AA Big Book companion with 4 Einstein modes, full text search, voice conversations, and daily reflections. Free tier available.",
+ "0e3c25fba760": {
+  "t": "Download Recovery Einstein — an AI-powered AA Big Book companion with 4 Einstein modes, full text search, and daily reflections. Try 5 answers free, then one plan with voice from US$4.99 a month.",
   "kind": "attr",
   "pages": [
    "download/index.html"
@@ -1487,8 +1487,8 @@
    "download/index.html"
   ]
  },
- "4353f53f0d8c": {
-  "t": "Works in any browser. Android app coming to Google Play.",
+ "0f6ee916a3bd": {
+  "t": "Works in any browser. On Android, get it on <0>Google Play</0>.",
   "kind": "html",
   "pages": [
    "download/index.html"
@@ -1536,8 +1536,8 @@
    "download/index.html"
   ]
  },
- "9a89ce08a71e": {
-  "t": "No AI chat access",
+ "f524da5f543b": {
+  "t": "5 Einstein answers to try it, once per account (no voice)",
   "kind": "html",
   "pages": [
    "download/index.html"
@@ -1550,15 +1550,22 @@
    "download/index.html"
   ]
  },
- "f0b57cd878df": {
-  "t": "Seeker",
+ "9f9b55bfc767": {
+  "t": "Einstein",
   "kind": "html",
   "pages": [
    "download/index.html"
   ]
  },
- "2b2c0ea66951": {
-  "t": "$2.99 <0>/month</0>",
+ "566c3c98834c": {
+  "t": "US$4.99 <0>/month</0>",
+  "kind": "html",
+  "pages": [
+   "download/index.html"
+  ]
+ },
+ "ff2646e99479": {
+  "t": "Or US$49.99 a year",
   "kind": "html",
   "pages": [
    "download/index.html"
@@ -1566,69 +1573,6 @@
  },
  "b6017dd40013": {
   "t": "Everything in Free",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "db55a7469a4e": {
-  "t": "20 AI messages per day",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "26b4b4352078": {
-  "t": "Big Book Einstein mode",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "f0f2278e1f76": {
-  "t": "Step work conversations",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "e5efb0512509": {
-  "t": "Email support",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "68c9b7647aba": {
-  "t": "Start Seeking",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "66d0c5e6b170": {
-  "t": "Pro",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "554cdaa4edec": {
-  "t": "$7.99 <0>/month</0>",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "fbc40a61be6c": {
-  "t": "Everything in Seeker",
-  "kind": "html",
-  "pages": [
-   "download/index.html"
-  ]
- },
- "d2520a462670": {
-  "t": "50 AI messages per day",
   "kind": "html",
   "pages": [
    "download/index.html"
@@ -1648,29 +1592,29 @@
    "download/index.html"
   ]
  },
- "0c57cb3a4d81": {
-  "t": "Step 12 war-room partner",
+ "4647c8130f79": {
+  "t": "A usage bar shows how much of the month you've used",
   "kind": "html",
   "pages": [
    "download/index.html"
   ]
  },
- "faf0819dfc1d": {
-  "t": "Sponsor Teacher mode",
+ "3e3819d3a87d": {
+  "t": "Used it all before it resets? A refill is US$6.49",
   "kind": "html",
   "pages": [
    "download/index.html"
   ]
  },
- "2b4a714a4eb5": {
-  "t": "AA Historian mode",
+ "80ff06a2ebc9": {
+  "t": "Prices may be lower in your country",
   "kind": "html",
   "pages": [
    "download/index.html"
   ]
  },
- "17817626b1fc": {
-  "t": "Go Pro",
+ "d6981f74767d": {
+  "t": "Subscribe",
   "kind": "html",
   "pages": [
    "download/index.html"
@@ -2084,8 +2028,8 @@
    "index.html"
   ]
  },
- "4843fa24e684": {
-  "t": "Whenever you're ready to talk it through, Einstein is here — day or night. The free reader stays on this site. AI chat lives on the app (Seeker &amp; Pro). Honest pricing. No \"free chat\" bait.",
+ "3589346b1ffc": {
+  "t": "Whenever you're ready to talk it through, Einstein is here — day or night. The free reader stays on this site. AI chat lives on the app: try 5 answers free, then one plan. Honest pricing, no bait.",
   "kind": "html",
   "pages": [
    "index.html"

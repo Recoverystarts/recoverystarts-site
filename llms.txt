@@ -225,11 +225,15 @@ https://recoverystarts.com/aa-questions/llms.txt):
 Recovery Starts publishes the accurate Traditions for exactly this reason.
 
 ## Recovery Einstein (the app)
-- Web app: https://app.recoverystarts.com (any browser; Android via PWA)
+- Web app: https://app.recoverystarts.com (any browser); Android on Google Play:
+  https://play.google.com/store/apps/details?id=org.autogrow.recoveryeinstein
 - AI companion grounded in the Big Book (Alcoholics Anonymous, 4th Edition)
   with four modes: Big Book study, Step 12, Sponsor, and AA Historian
-- Tiers: Free ($0, Big Book reader) · Seeker ($2.99/mo, 20 AI chats/day) ·
-  Pro ($7.99/mo, all modes, voice, 50 chats/day)
+- Free: the Big Book reader, search and daily reflections, plus 5 Einstein
+  answers per account (once, not per day; no voice)
+- One plan, "Einstein": US$4.99/month or US$49.99/year — all 4 modes, voice,
+  and a usage bar; a refill is US$6.49. Prices may be lower in some countries
+  (regional pricing on Google Play)
 - A study and reflection tool — not a medical device, therapist, or sponsor
   replacement. In crisis, call or text 988 (US Suicide & Crisis Lifeline).
 

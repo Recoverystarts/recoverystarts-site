@@ -61,6 +61,9 @@ function localDigits(s, lang) {
     const prev = all[at - 1] ?? "", prev2 = all[at - 2] ?? "", next = all[at + tok.length] ?? "";
     if (/[A-Za-z\/:@#?=&_%+]/.test(prev) || /[A-Za-z\/@_%]/.test(next)) return tok;
     if (/[-.]/.test(prev) && /[A-Za-z0-9]/.test(prev2)) return tok;
+    // an app price ("US$4.99") stays Latin, as the glossary says; the decimals after the point already do, so the whole
+    // price reads one way (dl1, 2026-10-18: the old card showed "$۲.99"). History's "$10,000" isn't marked US$ and still turns.
+    if (all.slice(Math.max(0, at - 3), at) === "US$") return tok;
     if (PHONE.test(tok) && !PAGEWORD.test(all.slice(Math.max(0, at - 14), at))) return tok;
     return tok.replace(/\d/g, (d) => D[+d]);
   });

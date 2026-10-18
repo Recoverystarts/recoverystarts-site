@@ -560,50 +560,50 @@ img { max-width: 100%; height: auto; display: block; }
   .nav-links .has-sub > .sub-menu .sub-today a { color: var(--ink); font-weight: 400; }
 }
 
-/* ===== 6. FLOATING EINSTEIN PILL (stamped by fix-nav.js) ================= */
-
-.einstein-cta {
-  position: fixed;
-  left: clamp(14px, 3vw, 28px);
-  bottom: clamp(14px, 3vw, 24px);
-  z-index: 900;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--sky);
-  border: 1px solid var(--sky-rule);
-  border-radius: var(--radius-pill);
-  padding: 10px 14px 10px 18px;
-  box-shadow: 0 10px 30px rgba(16, 20, 31, 0.28);
-  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
-}
-.einstein-cta:hover {
-  transform: translateY(-2px);
-  border-color: var(--sky-gold);
-  box-shadow: 0 14px 36px rgba(16, 20, 31, 0.38);
-}
-.ec-dot {
+/* ===== 6. THE BIG BOOK APP IN THE TOP BAR (stamped by fix-nav.js) ======= */
+/* Recovery Einstein's round face, as the meeting map's bar has it (meeting-finder sitenav.mjs .rsn-bb). It was a
+   floating pill at the bottom right until 2026-10-18 (WO-ADS A7: the bottom of the screen is kept for an ad bar).
+   It comes right after the brand in the HTML; `order` puts it at the end of the menu, next to the globe (order 9). */
+.rs-bb {
+  order: 8;
   flex: none;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--sky-gold);
+  display: inline-flex;
+  margin-right: 14px;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  background: rgba(45, 212, 191, 0.08);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .ec-dot { animation: ec-breathe 2.8s ease-in-out infinite; }
-  @keyframes ec-breathe {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(224, 177, 94, 0.35); }
-    50% { box-shadow: 0 0 0 7px rgba(224, 177, 94, 0); }
-  }
+.rs-bb i { display: block; width: 30px; height: 30px; border-radius: 50%; background: #8fd3d0 url(/assets/play/icon-96.png) center/cover; }
+.rs-bb:hover { border-color: var(--accent); }
+.rs-bb ~ .nav-links { margin-right: auto; }
+/* the face alone here, its words only for screen readers (aria-label): the site's menu is longer than the map's, and on a
+   desktop the face's 42 px is all it can take before a 1366 screen in Spanish or Dutch would fall back to the ☰ */
+.rs-bb span { display: none; }
+@media (min-width: 1021px) {
+  .rs-bb { margin-right: 8px; padding: 2px; }
+  .rs-bb i { width: 28px; height: 28px; }
+  /* a translated menu (globe.mjs gives it 0.84rem words and a clamp(0.45rem, 0.8vw, 0.9rem) gap so it fits a 1366
+     screen): the gap gives the face its room, so Spanish, Portuguese and Dutch still show the whole menu at 1366 */
+  html:not([lang="en"]) .rs-bb ~ .nav-links { gap: clamp(0.4rem, 0.6vw, 0.9rem); }
 }
-.ec-text { display: flex; flex-direction: column; line-height: 1.25; font-family: var(--font-ui); }
-.ec-text strong { color: var(--sky-ink); font-size: 0.9rem; font-weight: 600; }
-.ec-text small { color: var(--sky-soft); font-size: 0.72rem; }
-.einstein-cta:hover .ec-text strong { color: var(--sky-gold); }
-@media (max-width: 640px) {
-  .einstein-cta { padding: 9px 12px 9px 14px; }
-  .ec-text strong { font-size: 0.84rem; }
-  .ec-text small { display: none; }
+@media (max-width: 1020px) {
+  .rs-bb { order: 1; margin-right: auto; margin-left: 8px; }
+  .nav-inner .rs-bb ~ .rs-globe { margin-right: 0; }
+  .nav-toggle { order: 2; }
+}
+/* the globe's fit script (scripts/i18n/globe.mjs) sets .rs-tight when the words don't fit: the phone layout */
+.rs-tight .rs-bb { order: 1; margin-right: auto; margin-left: 8px; padding: 3px; }
+.rs-tight .rs-bb i { width: 30px; height: 30px; }
+.rs-tight .rs-bb ~ .rs-globe { margin-right: 0; }
+.rs-tight .nav-toggle { order: 2; }
+/* the narrowest phones (320): a smaller face and closer buttons, so the brand keeps a little air */
+@media (max-width: 360px) {
+  .rs-bb { padding: 2px; margin-left: 4px; }
+  .rs-bb i { width: 28px; height: 28px; }
+  .nav-inner .rs-globe { margin-left: 4px; }
+  .nav-toggle { padding: 0.5rem 0.3rem; }
+  .nav-brand { margin-left: 8px; }
 }
 
 /* ===== 7. LAYOUT ========================================================= */

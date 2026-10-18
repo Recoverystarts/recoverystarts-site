@@ -158,3 +158,8 @@ export function fromTemplate(tr, en) {
   const safe = String(tr).replace(/<(\/?\d+\/?)>|[<>]|&(?![a-zA-Z]+;|#\d+;|#x[0-9a-fA-F]+;)/g, (m, ph) => (ph ? m : m === "<" ? "&lt;" : m === ">" ? "&gt;" : "&amp;"));
   return safe.replace(/<(\/?)(\d+)(\/?)>/g, (m, close, i, self) => { const g = tags[+i]; if (!g) return ""; return close ? g.close : g.open; });
 }
+
+// The Big Book app's face in the top bar (fix-nav.js, 2026-10-18): `notranslate`, so it's no segment; a language's page
+// takes its words from that language's phrasebook (_phrases.json "Big Book app"), in the label and the aria-label.
+const FACE_RX = /(<a class="rs-bb notranslate"[^>]*? aria-label=")Big Book app( — [^"]*"[^>]*>[\s\S]*?<span>)Big Book app(<\/span>)/;
+export const localizeFace = (html, word) => (word ? html.replace(FACE_RX, (m, a, b, c) => `${a}${word.replace(/[&<>"]/g, (x) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[x]))}${b}${word.replace(/[&<>]/g, (x) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[x]))}${c}`) : html);

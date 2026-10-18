@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
-import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate } from "./lib.mjs";
+import { ROOT, I18N, LANGS, tagOf, segmentsOf, idOf, translations, readJson, fromTemplate, localizeFace } from "./lib.mjs";
 import { stampGlobe } from "./globe.mjs";
 import { writeSitemaps } from "./sitemap.mjs";
 import { rtlPage } from "./rtl.mjs";
@@ -116,6 +116,8 @@ for (const rel of Object.keys(pageIds)) {
   html = html.replace(/(<meta property="og:locale" content=")[^"]*"/i, `$1${OG[lang] ?? lang}"`);
   if (!/property="og:locale"/i.test(html)) html = html.replace(/(<meta property="og:type"[^>]*>)/i, `$1\n  <meta property="og:locale" content="${OG[lang] ?? lang}">`);
   html = html.replace(/(<meta property="og:url" content=")[^"]*"/i, `$1${url}"`);
+  // the Big Book app's face in the top bar, in this language's words (lib.mjs localizeFace)
+  html = localizeFace(html, ph?.p?.["Big Book app"]);
   // words the site's own scripts write in the browser (donate.js, play-badge.js): the phrasebook, /rs-t.js
   if (book) { const tag = `<script>window.RS_T=${book};</script><script src="/rs-t.js?v=1"></script>\n</body>`; html = html.replace(/<\/body>/i, () => tag); }
   // the 🌐: English, this language, and every other language this page is built in

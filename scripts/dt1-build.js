@@ -106,7 +106,10 @@ const goldOf = (html) => (html.match(/id="month-([a-z]+)" href="[^"]*" style="bo
 for (const f of [rel("daily-tradition", "index.html"), ...LIVE.map((m) => rel("daily-tradition", m, "index.html"))]) {
   if (!fs.existsSync(f)) continue;
   const html = fs.readFileSync(f, "utf8");
-  write(f, R.stampMonthStrip(html, LIVE, goldOf(html) || path.basename(path.dirname(f))));
+  // #367 (2026-10-23): the hub marks the reader's own current month in the browser (.dt-month.now), so it gets no
+  // baked-in gold; a month page keeps gold on its own month.
+  const isHub = path.basename(path.dirname(f)) === "daily-tradition";
+  write(f, R.stampMonthStrip(html, LIVE, isHub ? null : (goldOf(html) || path.basename(path.dirname(f)))));
 }
 const SKIP = new Set(["node_modules", ".git", "functions", "scripts", "tests", "assets", "data", "grok-handoff", "es", "pt", "fr", "i18n"]);
 let menus = 0;

@@ -17,9 +17,9 @@
  * spot has a display-unit id in SLOT (AdSense → Ads → By ad unit → Display ads); an empty id shows nothing.
  */
 (function () {
-  var ON = false;
+  var ON = true;
   var CLIENT = "ca-pub-9748639819382646";
-  var SLOT = { A: "", B: "", C: "", E: "", F: "" };
+  var SLOT = { A: "4629316546", B: "3009820959", C: "8070575948", E: "7316023780", F: "8230358040" };
 
   if (!ON || window.__rsAds) return;
   window.__rsAds = true;
@@ -44,9 +44,7 @@
     ".rs-ad{clear:both;margin:24px auto;max-width:728px;text-align:center}" +
     ".rs-ad-l{font:11px/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;opacity:.6;margin:0 0 4px}" +
     ".rs-ad ins.adsbygoogle{display:block;min-height:250px}" +
-    ".rs-ad:has(ins[data-ad-status=unfilled]){display:none}" +
-    // the floating Big Book app badge sits where the anchor goes; A7 moves the app into the top bar
-    "html.rs-ads .pb{display:none!important}";
+    ".rs-ad:has(ins[data-ad-status=unfilled]){display:none}";
   doc.head.appendChild(css);
 
   function box(spot) {

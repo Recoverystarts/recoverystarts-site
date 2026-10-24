@@ -6,7 +6,7 @@
  *   ON = false  nothing else happens: no Google script, no boxes, the pages look exactly as they did.
  *   ON = true   loads AdSense (ca-pub-9748639819382646) with its anchor held at the bottom of the screen, and puts
  *               in-content boxes where Derick said they're fine (2026-10-18 15:48, decisions for this build):
- *                 meeting pages      A above the meeting list, B after the 3rd meeting, C after the last one
+ *                 meeting pages      A above the meeting list, C after the last one (never between meetings)
  *                 Daily Reflection   E after the reading (and its "Something to sit with")
  *                 home page          F after "Four doors"
  *               The map (/meetings/find/) and every other page get the anchor only.
@@ -19,7 +19,7 @@
 (function () {
   var ON = true;
   var CLIENT = "ca-pub-9748639819382646";
-  var SLOT = { A: "4629316546", B: "3009820959", C: "8070575948", E: "7316023780", F: "8230358040" };
+  var SLOT = { A: "4629316546", B: "", C: "8070575948", E: "7316023780", F: "8230358040" };
 
   if (!ON || window.__rsAds) return;
   window.__rsAds = true;
@@ -112,7 +112,8 @@
       var first = cards[0], head = first.previousElementSibling;
       while (head && head.classList.contains("card")) head = head.previousElementSibling;
       put("A", head && head.classList.contains("dayhead") ? head : first, "before");
-      if (n >= 6) put("B", cards[2], "after");
+      // B (after the 3rd meeting) removed 2026-10-23 19:00, Derick: "we worked hard to try have the meeting boxes not
+      // feel clastorphobic, we shouldnt have an add right in there". No ad goes between meetings.
       if (n >= 4) put("C", cards[n - 1], "after");
     }
   }

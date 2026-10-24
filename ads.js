@@ -41,9 +41,9 @@
 
   var css = doc.createElement("style");
   css.textContent =
-    ".rs-ad{clear:both;margin:24px auto;max-width:728px;text-align:center}" +
+    ".rs-ad{clear:both;margin:20px auto;max-width:728px;text-align:center;overflow:hidden}" +
     ".rs-ad-l{font:11px/1.4 system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;opacity:.6;margin:0 0 4px}" +
-    ".rs-ad ins.adsbygoogle{display:block;min-height:250px}" +
+    ".rs-ad ins.adsbygoogle{display:inline-block}" +
     ".rs-ad:has(ins[data-ad-status=unfilled]){display:none}";
   doc.head.appendChild(css);
 
@@ -59,8 +59,11 @@
     ins.className = "adsbygoogle";
     ins.setAttribute("data-ad-client", CLIENT);
     ins.setAttribute("data-ad-slot", SLOT[spot]);
-    ins.setAttribute("data-ad-format", "auto");
-    ins.setAttribute("data-full-width-responsive", "true");
+    // Fixed, small sizes so a box can never grow over the page (Derick, 2026-10-23 18:54: "make it smaller so it
+    // doesnt overlap"). Phones: a 320x100 strip. Wider screens: a 728x90 bar. Google then fills only that size.
+    var wide = (window.innerWidth || root.clientWidth || 0) >= 760;
+    ins.style.width = wide ? "728px" : "320px";
+    ins.style.height = wide ? "90px" : "100px";
     d.appendChild(l);
     d.appendChild(ins);
     return d;

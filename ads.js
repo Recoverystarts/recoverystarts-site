@@ -76,6 +76,27 @@
   // a built language copy of a site page lives under /<code>/ (/es/, /hi/…); meeting pages keep their path (?hl=)
   var path = location.pathname.replace(/^\/(es|pt|fr|fa|pl|de|sv|nl|hi)(?=\/)/, "");
 
+  // The map (/meetings/find/) fills the screen exactly. A bottom anchor makes Google pad the page so nothing sits under
+  // it, which on the map leaves a dark strip below it, even with the ad folded (Derick, 2026-10-23 18:31: "it blocks out
+  // the bottom of the screen now instead of overlay"). On the map only, take that padding back off, so the anchor floats
+  // over the map like an overlay and folding it gives the whole map back.
+  if (/^\/meetings\/find\//.test(path)) {
+    root.classList.add("rs-map");
+    css.textContent += "html.rs-map,html.rs-map body{padding-bottom:0!important}";
+    var unpad = function () {
+      [root, doc.body].forEach(function (el) {
+        if (el && el.style && el.style.paddingBottom) el.style.removeProperty("padding-bottom");
+      });
+    };
+    var mo = new MutationObserver(unpad);
+    var watch = function () {
+      mo.observe(root, { attributes: true, attributeFilter: ["style"] });
+      if (doc.body) mo.observe(doc.body, { attributes: true, attributeFilter: ["style"] });
+      unpad();
+    };
+    if (doc.body) watch(); else doc.addEventListener("DOMContentLoaded", watch);
+  }
+
   if (path === "/" || path === "/index.html") {
     put("F", doc.querySelector("#doors .door-grid"), "after");
   } else if (/^\/daily-reflection\/[a-z]+-\d+\/$/.test(path)) {

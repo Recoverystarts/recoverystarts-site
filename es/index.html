@@ -188,20 +188,25 @@
     <section class="section" id="demo">
       <div class="section-head">
         <p class="eyebrow">Míralo una vez</p>
-        <h2>Cómo funciona Recovery Einstein</h2>
+        <h2 id="demo-title">Cómo funciona Recovery Einstein</h2>
         <p class="section-sub">
           Un recorrido corto por la app real — mírala funcionar antes de registrarte.
         </p>
       </div>
       <div class="glass-panel video-slot">
         <div class="video-frame">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/CT9sys30QZM"
+          <!-- click-to-play (wave 2026-10-26-ads S2): the video's own poster and a play button; YouTube's ~1 MB player
+               loads only when someone taps it. Way back: the iframe below, out of its <template>, without ?autoplay=1. -->
+          <button type="button" class="video-facade" aria-labelledby="demo-title" onclick="var f=this.parentNode;f.replaceChildren(f.querySelector('template').content.cloneNode(true));f.querySelector('iframe').focus()">
+            <img src="/assets/video/walkthrough-640.webp" srcset="/assets/video/walkthrough-640.webp 640w, /assets/video/walkthrough-960.webp 960w, /assets/video/walkthrough-1280.webp 1280w" sizes="(min-width: 1100px) 1000px, 92vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
+            <svg class="video-play" viewBox="0 0 68 48" aria-hidden="true"><path class="video-play-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
+          </button>
+          <template><iframe
+            src="https://www.youtube-nocookie.com/embed/CT9sys30QZM?autoplay=1"
             title="Recovery Einstein — app walkthrough"
-            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
+            allowfullscreen></iframe></template>
         </div>
       </div>
     </section>

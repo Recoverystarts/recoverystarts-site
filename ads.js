@@ -6,7 +6,8 @@
  *   ON = false  nothing else happens: no Google script, no boxes, the pages look exactly as they did.
  *   ON = true   loads AdSense (ca-pub-9748639819382646) with its anchor held at the bottom of the screen, and puts
  *               in-content boxes where Derick said they're fine (2026-10-18 15:48, decisions for this build):
- *                 meeting pages      A above the meeting list, C after the last one (never between meetings)
+ *                 meeting pages      A above the meeting list (on a phone: after the first day's meetings),
+ *                                    C after the last one (never between two meetings of one day)
  *                 Daily Reflection   E after the reading (and its "Something to sit with")
  *                 home page          F after "Four doors"
  *               The map (/meetings/find/) and every other page get the anchor only.
@@ -24,6 +25,10 @@
   if (!ON || window.__rsAds) return;
   window.__rsAds = true;
   if (!/(^|\.)recoverystarts\.com$/.test(location.hostname)) return; // not on preview deploys or the Railway origin
+  // A browser driven by a program (our own Playwright and Lighthouse checks, other headless robots) gets no ads at all:
+  // our tests must never make an ad impression (wave 2026-10-26-ads S1). To measure a page with ads, launch Chrome with
+  // --disable-blink-features=AutomationControlled.
+  if (navigator.webdriver) return;
 
   var doc = document, root = doc.documentElement;
   root.classList.add("rs-ads");
@@ -33,7 +38,26 @@
   s.crossOrigin = "anonymous";
   s.setAttribute("data-overlays", "bottom"); // the anchor stays at the bottom, never the top (AdSense help 7478225)
   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + CLIENT;
-  doc.head.appendChild(s);
+  // AdSense's script costs a phone seconds of main-thread work, so it waits until the page has drawn: the window's load
+  // event (or 8 s, if a slow image holds load back), then the first idle moment, at most 3 s later (wave 2026-10-26-ads
+  // S1: speed is part of what a reviewing ad network looks at, and what a person on an old phone feels). The boxes below
+  // still go in now at their fixed size, so nothing moves when the ads arrive; their push({}) waits in the
+  // window.adsbygoogle queue, which AdSense reads when it loads. Way back: put `doc.head.appendChild(s);` here again.
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    doc.head.appendChild(s);
+  }
+  function whenIdle() {
+    if (window.requestIdleCallback) requestIdleCallback(load, { timeout: 3000 });
+    else setTimeout(load, 1000); // Safari has no requestIdleCallback
+  }
+  if (doc.readyState === "complete") whenIdle();
+  else {
+    window.addEventListener("load", whenIdle);
+    setTimeout(whenIdle, 8000);
+  }
 
   // the label AdSense allows ("Advertisements"), in the page's language
   var LABEL = { en: "Advertisements", es: "Anuncios", pt: "Anúncios", fr: "Annonces", fa: "تبلیغات", pl: "Reklamy", de: "Anzeigen", sv: "Annonser", nl: "Advertenties", hi: "विज्ञापन" };
@@ -108,10 +132,20 @@
     var cards = doc.querySelectorAll(".card.m");
     var n = cards.length;
     if (n) {
-      // A: above the list, i.e. above the day heading the first meeting sits under (when it has one)
-      var first = cards[0], head = first.previousElementSibling;
-      while (head && head.classList.contains("card")) head = head.previousElementSibling;
-      put("A", head && head.classList.contains("dayhead") ? head : first, "before");
+      var first = cards[0];
+      if ((window.innerWidth || root.clientWidth || 0) >= 760) {
+        // A, wider screens: above the list, i.e. above the day heading the first meeting sits under (when it has one)
+        var head = first.previousElementSibling;
+        while (head && head.classList.contains("card")) head = head.previousElementSibling;
+        put("A", head && head.classList.contains("dayhead") ? head : first, "before");
+      } else {
+        // A, phones: after the first day's meetings, just above the second day's heading, so the first meeting is the
+        // first thing under the town's name (Derick, 2026-10-26 17:30, "option B"). Never between two meetings of one
+        // day; a town with a single day of meetings gets no A on a phone (it would sit right beside C).
+        var next = first.nextElementSibling;
+        while (next && !next.classList.contains("dayhead")) next = next.nextElementSibling;
+        if (next) put("A", next, "before");
+      }
       // B (after the 3rd meeting) removed 2026-10-23 19:00, Derick: "we worked hard to try have the meeting boxes not
       // feel clastorphobic, we shouldnt have an add right in there". No ad goes between meetings.
       if (n >= 4) put("C", cards[n - 1], "after");

@@ -1,0 +1,5 @@
+# Response headers for Cloudflare Pages (https://developers.cloudflare.com/pages/configuration/headers/).
+# The self-hosted fonts never change under a name (a new font gets a new file name), so phones keep them for a year
+# instead of asking again on every page (wave 2026-10-26-ads S2). Way back: delete this file.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

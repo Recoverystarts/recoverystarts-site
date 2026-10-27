@@ -143,6 +143,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   window.gtag = gtag;
+  // A browser driven by a program (our own Playwright and Lighthouse checks) sends no hits: they were showing up as
+  // "(not set)" Direct sessions, ~60 on 2026-10-26 (wave 2026-10-26-ads S4). gtag() stays defined, so callers like
+  // donate.js just queue into a dataLayer nobody sends. Same rule as /ads.js.
+  if (navigator.webdriver) return;
   gtag('js', new Date());
   gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true });
   var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);

@@ -131,6 +131,9 @@ const TWELVE = TRAD.traditions;
 
 // A one-line plain-language note per Tradition — clearly OURS, clearly separate
 // from A.A.'s text, never a substitute for it. The Tradition's own words lead.
+// 2026-10-28 (CEO: reach, #444): each Tradition links to its answer page in /aa-questions/, so the indexed hub passes
+// readers and crawlers to the long answers (they were reachable only from /aa-questions/). Mirrors the hand edit.
+const MORE = {"1": ["tradition-1-unity", "Tradition One: does it mean \"my sobriety comes first\"?"], "2": ["tradition-2-authority", "Tradition Two: does anyone have authority in A.A.?"], "3": ["only-requirement-membership", "What is the only requirement for A.A. membership?"], "4": ["tradition-4-autonomy", "Tradition Four: can GSO tell a group what to do?"], "5": ["tradition-5-primary-purpose", "Tradition Five: what is a group's one purpose?"], "6": ["tradition-6-treatment-centres", "Tradition Six: can an A.A. group partner with a treatment centre?"], "7": ["tradition-7-outside-money", "Tradition Seven: does A.A. take outside money?"], "8": ["tradition-8-paid-twelfth-step", "Tradition Eight: can anyone be paid for Twelfth Step work?"], "9": ["tradition-9-organized", "Tradition Nine: is A.A. organized? Who runs it?"], "10": ["tradition-10-outside-issues", "Tradition Ten: does A.A. take sides on outside issues?"], "11": ["tradition-11-advertising", "Tradition Eleven: does A.A. advertise?"], "12": ["tradition-12-anonymity-secret", "Tradition Twelve: does anonymity mean keeping A.A. secret?"]};
 const PLAIN = {
   1: "A.A. survives only if it holds together. That is why unity comes first.",
   2: "Structural, not theological: the group decides, and no one person is in charge.",
@@ -237,6 +240,7 @@ const twelveHtml = TWELVE.map((t) => `        <article class="tt-t" id="traditio
           </div>
 
           <p class="tt-plain"><span>In plain terms</span> ${esc(PLAIN[t.n] || "")}</p>
+          ${MORE[t.n] ? `<p class="tt-more"><a href="/aa-questions/${MORE[t.n][0]}/">${esc(MORE[t.n][1])} Read it from the books →</a></p>` : ""}
         </article>`).join("\n");
 
 const html = `<!DOCTYPE html>
@@ -290,6 +294,8 @@ ${ld.map((o) => `  <script type="application/ld+json">\n  ${JSON.stringify(o)}\n
     .tt-long .tt-form-lbl { color: var(--gold); }
     .tt-long .tt-form-lbl em { color: var(--text-dim); }
     .tt-long blockquote { border-left: 3px solid var(--gold); color: var(--text); background: rgba(200,169,81,0.04); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .tt-more { margin: 10px 0 0; font-size: 0.86rem; }
+    .tt-more a { color: var(--accent, #2DD4BF); }
     .tt-plain { margin: 0; padding-top: 12px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; }
     .tt-plain span { color: var(--text-dim); font-size: 0.64rem; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 700; margin-right: 8px; }
     .tt-faqs { max-width: 820px; margin: 0 auto; }

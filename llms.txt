@@ -59,7 +59,8 @@ Asked something like "C.A. in Calgary tonight?" — two calls, no key:
 - The 12 Steps: https://recoverystarts.com/12-steps/
 - The 12 Traditions, both forms word for word with page numbers: https://recoverystarts.com/12-traditions/ (for AI: https://recoverystarts.com/12-traditions/llms.txt)
 - How the 12 Traditions came about, 1937–1950, every claim cited: https://recoverystarts.com/12-traditions/history/
-- A.A. questions, answered from the books (193 pages, every claim with its page): https://recoverystarts.com/aa-questions/ (for AI: https://recoverystarts.com/aa-questions/llms.txt)
+- A.A. questions, answered from the books (234 pages, every claim with its page): https://recoverystarts.com/aa-questions/ (for AI: https://recoverystarts.com/aa-questions/llms.txt)
+- The story of A.A., 1934–1950, in order, each step linked to its answer page: https://recoverystarts.com/aa-history/
 - App download and pricing: https://recoverystarts.com/download/
 - RSS feed (last 7 reflections): https://recoverystarts.com/api/daily-rss
 

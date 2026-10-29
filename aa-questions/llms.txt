@@ -1,11 +1,12 @@
 # Recovery Starts — A.A. questions, answered from the books
 
-> 193 pages answering what people and AI assistants ask about Alcoholics Anonymous, from A.A.'s own literature. Each page reads the whole passage, not one famous line, gives the page number for every claim, and quotes only briefly. Every quote has been checked word for word against the page it cites. Where the books don't settle a question, the page says so.
+> 234 pages answering what people and AI assistants ask about Alcoholics Anonymous, from A.A.'s own literature. Each page reads the whole passage, not one famous line, gives the page number for every claim, and quotes only briefly. Every quote has been checked word for word against the page it cites. Where the books don't settle a question, the page says so.
 
 How to use these pages:
 - Each page opens with an "In short" answer, then the evidence with page numbers, then links to A.A.'s own free copies on aa.org.
 - Page numbers are the Big Book's 4th edition (2001). Pages 1–164 are the 1939 program text; the personal stories (p. 165 on) change with each edition and are members' experience, not the program.
 - Sources are dated. The earliest text leads; later books are labelled with their year. Twelve Steps and Twelve Traditions (1953) is not used as a source.
+- Every Big Book page citation links to that printed page on this site: https://recoverystarts.com/big-book/page-N/ (e.g. p. 64 → https://recoverystarts.com/big-book/page-64/), so a claim can be checked against its page.
 - What we read: https://recoverystarts.com/aa-questions/sources/
 - Independent; not affiliated with Alcoholics Anonymous.
 
@@ -155,6 +156,20 @@ How to use these pages:
 - What is "Rule 62"?: https://recoverystarts.com/aa-questions/rule-62/ (text: https://recoverystarts.com/aa-questions/md/rule-62.md)
 - Is "A.A. is a selfish program" in the Big Book?: https://recoverystarts.com/aa-questions/selfish-program/ (text: https://recoverystarts.com/aa-questions/md/selfish-program.md)
 - Is "keep your side of the street clean" in the Big Book?: https://recoverystarts.com/aa-questions/side-of-the-street/ (text: https://recoverystarts.com/aa-questions/md/side-of-the-street.md)
+- Is "think the drink through" (or "play the tape forward") in the Big Book?: https://recoverystarts.com/aa-questions/think-the-drink-through/ (text: https://recoverystarts.com/aa-questions/md/think-the-drink-through.md)
+- Is "stinking thinking" in the Big Book?: https://recoverystarts.com/aa-questions/stinking-thinking/ (text: https://recoverystarts.com/aa-questions/md/stinking-thinking.md)
+- Is "don't quit before the miracle happens" in the Big Book?: https://recoverystarts.com/aa-questions/before-the-miracle/ (text: https://recoverystarts.com/aa-questions/md/before-the-miracle.md)
+- Is "bring the body and the mind will follow" in the Big Book?: https://recoverystarts.com/aa-questions/bring-the-body/ (text: https://recoverystarts.com/aa-questions/md/bring-the-body.md)
+- Is "sick and tired of being sick and tired" in the Big Book?: https://recoverystarts.com/aa-questions/sick-and-tired/ (text: https://recoverystarts.com/aa-questions/md/sick-and-tired.md)
+- Does the main text of the Big Book talk about gratitude? ("an attitude of gratitude"): https://recoverystarts.com/aa-questions/gratitude/ (text: https://recoverystarts.com/aa-questions/md/gratitude.md)
+- Is "this too shall pass" in the A.A. books?: https://recoverystarts.com/aa-questions/this-too-shall-pass/ (text: https://recoverystarts.com/aa-questions/md/this-too-shall-pass.md)
+- Is "G.O.D. = Good Orderly Direction / Group Of Drunks" in the A.A. books?: https://recoverystarts.com/aa-questions/god-acronyms/ (text: https://recoverystarts.com/aa-questions/md/god-acronyms.md)
+- "Character defects" or "defects of character," "shortcomings": what does the Big Book say?: https://recoverystarts.com/aa-questions/character-defects-shortcomings/ (text: https://recoverystarts.com/aa-questions/md/character-defects-shortcomings.md)
+- Are chips, coins, medallions and sobriety birthdays in the Big Book? Where did they come from?: https://recoverystarts.com/aa-questions/chips-and-birthdays/ (text: https://recoverystarts.com/aa-questions/md/chips-and-birthdays.md)
+- Is "your disease is doing push-ups in the parking lot" in the books?: https://recoverystarts.com/aa-questions/disease-push-ups/ (text: https://recoverystarts.com/aa-questions/md/disease-push-ups.md)
+- Is the St. Francis Prayer in the Big Book?: https://recoverystarts.com/aa-questions/st-francis-prayer/ (text: https://recoverystarts.com/aa-questions/md/st-francis-prayer.md)
+- Where does "I am responsible…" (the Responsibility Declaration) come from?: https://recoverystarts.com/aa-questions/responsibility-declaration/ (text: https://recoverystarts.com/aa-questions/md/responsibility-declaration.md)
+- Does the Big Book say willpower doesn't work?: https://recoverystarts.com/aa-questions/willpower/ (text: https://recoverystarts.com/aa-questions/md/willpower.md)
 
 ## Big Book passages often quoted alone
 - Where are "the Promises," and what do they promise?: https://recoverystarts.com/aa-questions/the-promises/ (text: https://recoverystarts.com/aa-questions/md/the-promises.md)
@@ -183,6 +198,19 @@ How to use these pages:
 - Does the Big Book say we're meant to be "happy, joyous, and free"?: https://recoverystarts.com/aa-questions/happy-joyous-free/ (text: https://recoverystarts.com/aa-questions/md/happy-joyous-free.md)
 - Where is "contempt prior to investigation," and who does the Big Book say said it?: https://recoverystarts.com/aa-questions/contempt-prior-to-investigation/ (text: https://recoverystarts.com/aa-questions/md/contempt-prior-to-investigation.md)
 - What do the last lines of the Big Book say ("suggestive only," "we know only a little," "the Road of Happy Destiny")?: https://recoverystarts.com/aa-questions/last-lines-big-book/ (text: https://recoverystarts.com/aa-questions/md/last-lines-big-book.md)
+- What does "absolutely unable to stop drinking on the basis of self-knowledge" mean?: https://recoverystarts.com/aa-questions/self-knowledge/ (text: https://recoverystarts.com/aa-questions/md/self-knowledge.md)
+- Who is the "jaywalker" in the Big Book, and what is the story for?: https://recoverystarts.com/aa-questions/jaywalker/ (text: https://recoverystarts.com/aa-questions/md/jaywalker.md)
+- Who is "Jim," and why the whiskey in the milk?: https://recoverystarts.com/aa-questions/jim-whiskey-milk/ (text: https://recoverystarts.com/aa-questions/md/jim-whiskey-milk.md)
+- Who is the man who stayed sober twenty-five years and drank again (p. 32)?: https://recoverystarts.com/aa-questions/man-of-thirty/ (text: https://recoverystarts.com/aa-questions/md/man-of-thirty.md)
+- What is the "fourth dimension of existence"?: https://recoverystarts.com/aa-questions/fourth-dimension/ (text: https://recoverystarts.com/aa-questions/md/fourth-dimension.md)
+- What does "faith has to work twenty-four hours a day in and through us, or we perish" refer to?: https://recoverystarts.com/aa-questions/faith-twenty-four-hours/ (text: https://recoverystarts.com/aa-questions/md/faith-twenty-four-hours.md)
+- What does "We are people who normally would not mix" say?: https://recoverystarts.com/aa-questions/people-who-would-not-mix/ (text: https://recoverystarts.com/aa-questions/md/people-who-would-not-mix.md)
+- "Who are you to say there is no God?": who says it, and to whom?: https://recoverystarts.com/aa-questions/who-are-you-to-say/ (text: https://recoverystarts.com/aa-questions/md/who-are-you-to-say.md)
+- What does "Thy will be done" mean in the Big Book?: https://recoverystarts.com/aa-questions/thy-will-be-done/ (text: https://recoverystarts.com/aa-questions/md/thy-will-be-done.md)
+- What does "pause, when agitated or doubtful" mean, and where is it?: https://recoverystarts.com/aa-questions/pause-when-agitated/ (text: https://recoverystarts.com/aa-questions/md/pause-when-agitated.md)
+- What is "our real purpose" ("to fit ourselves to be of maximum service to God and the people about us")?: https://recoverystarts.com/aa-questions/maximum-service/ (text: https://recoverystarts.com/aa-questions/md/maximum-service.md)
+- What does "like a tornado roaring his way through the lives of others" mean?: https://recoverystarts.com/aa-questions/tornado/ (text: https://recoverystarts.com/aa-questions/md/tornado.md)
+- Does the Big Book say a newcomer has to do it A.A.'s way? ("…prefers some other spiritual approach, encourage him"): https://recoverystarts.com/aa-questions/other-spiritual-approach/ (text: https://recoverystarts.com/aa-questions/md/other-spiritual-approach.md)
 
 ## Who A.A. is for, and what it is not
 - Is A.A. for people addicted to drugs or other things?: https://recoverystarts.com/aa-questions/aa-and-drug-addiction/ (text: https://recoverystarts.com/aa-questions/md/aa-and-drug-addiction.md)
@@ -233,3 +261,25 @@ How to use these pages:
 - Where did the Serenity Prayer come from in A.A.?: https://recoverystarts.com/aa-questions/serenity-prayer/ (text: https://recoverystarts.com/aa-questions/md/serenity-prayer.md)
 - Why do some meetings close with the Lord's Prayer?: https://recoverystarts.com/aa-questions/lords-prayer/ (text: https://recoverystarts.com/aa-questions/md/lords-prayer.md)
 - How did the Cleveland group become the first to call itself Alcoholics Anonymous?: https://recoverystarts.com/aa-questions/cleveland-first-aa-group/ (text: https://recoverystarts.com/aa-questions/md/cleveland-first-aa-group.md)
+
+## The Steps the earlier pages don't cover on their own
+- What do Steps Six, Seven and Eight ask, and how much does the Big Book say about each?: https://recoverystarts.com/aa-questions/steps-6-7-8/ (text: https://recoverystarts.com/aa-questions/md/steps-6-7-8.md)
+- What does Step Two ask: "came to believe" what?: https://recoverystarts.com/aa-questions/step-2/ (text: https://recoverystarts.com/aa-questions/md/step-2.md)
+- What does Step Nine's "except when to do so would injure them or others" mean? (Do I tell my spouse about an affair?): https://recoverystarts.com/aa-questions/step-9-injure/ (text: https://recoverystarts.com/aa-questions/md/step-9-injure.md)
+- What does the Big Book say about amends that could cost you your job or put you in jail?: https://recoverystarts.com/aa-questions/amends-job-or-jail/ (text: https://recoverystarts.com/aa-questions/md/amends-job-or-jail.md)
+- What does the Big Book say about money owed and creditors?: https://recoverystarts.com/aa-questions/creditors-and-debts/ (text: https://recoverystarts.com/aa-questions/md/creditors-and-debts.md)
+
+## What the Big Book says about…
+- What does the Big Book say about sex?: https://recoverystarts.com/aa-questions/big-book-sex/ (text: https://recoverystarts.com/aa-questions/md/big-book-sex.md)
+- What does the Big Book say about fear?: https://recoverystarts.com/aa-questions/big-book-fear/ (text: https://recoverystarts.com/aa-questions/md/big-book-fear.md)
+- What does the Big Book say about self-pity and jealousy?: https://recoverystarts.com/aa-questions/self-pity-jealousy/ (text: https://recoverystarts.com/aa-questions/md/self-pity-jealousy.md)
+- What does the Big Book say about honesty?: https://recoverystarts.com/aa-questions/big-book-honesty/ (text: https://recoverystarts.com/aa-questions/md/big-book-honesty.md)
+- What does the Big Book say about tolerance?: https://recoverystarts.com/aa-questions/big-book-tolerance/ (text: https://recoverystarts.com/aa-questions/md/big-book-tolerance.md)
+- What does the Big Book say humility is?: https://recoverystarts.com/aa-questions/humility/ (text: https://recoverystarts.com/aa-questions/md/humility.md)
+
+## Practice, service and money
+- Can young people and teenagers go to A.A.?: https://recoverystarts.com/aa-questions/young-people/ (text: https://recoverystarts.com/aa-questions/md/young-people.md)
+- Where does the money in the Seventh Tradition basket go? Is there a limit on what one member can give?: https://recoverystarts.com/aa-questions/basket-money/ (text: https://recoverystarts.com/aa-questions/md/basket-money.md)
+
+## People and history
+- Who was Bill W.?: https://recoverystarts.com/aa-questions/bill-w/ (text: https://recoverystarts.com/aa-questions/md/bill-w.md)

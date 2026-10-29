@@ -98,6 +98,8 @@ const crumbSchema = {
 
 const DESC = "The Twelve Concepts for World Service, both forms, in full. The Concepts govern A.A.'s service structure — Big Book Appendix VII carries the short form only; the long form is here.";
 
+// 2026-10-28 (CEO: reach, #444): each Concept links to its answer page in /aa-questions/ (mirrors the hand edit)
+const MORE = {"1": ["concept-01", "Concept I: who has the final say in A.A.?"], "2": ["concept-02", "Concept II: what is the General Service Conference, and what can it decide?"], "3": ["concept-03", "Concept III: what is the Right of Decision, and must a delegate vote the way the group says?"], "4": ["concept-04", "Concept IV: what is the Right of Participation, and who votes at the Conference?"], "5": ["concept-05", "Concept V: what are the Rights of Appeal and Petition?"], "6": ["concept-06", "Concept VI: what do the trustees of the General Service Board do?"], "7": ["concept-07", "Concept VII: who really holds power, the Conference or the trustees?"], "8": ["concept-08", "Concept VIII: do the trustees run the General Service Office and the Grapevine?"], "9": ["concept-09", "Concept IX: what makes a good leader in A.A. service?"], "10": ["concept-10", "Concept X: why must service authority equal service responsibility?"], "11": ["concept-11", "Concept XI: who helps the trustees, and how should paid A.A. workers be treated?"], "12": ["concept-12", "Concept XII: what are the General Warranties of the Conference?"]};
 const conceptsHtml = TWELVE.map((c) => `
       <article class="tt-t" id="concept-${c.n}">
         <h2 class="tt-t-h"><span class="tt-t-n">Concept ${esc(c.roman)}</span></h2>
@@ -108,7 +110,8 @@ const conceptsHtml = TWELVE.map((c) => `
         <div class="tt-form tt-long">
           <span class="tt-form-lbl">Long form <em>— the full statement, where the reasoning lives</em></span>
           <blockquote>${esc(c.long)}</blockquote>
-        </div>
+        </div>${MORE[c.n] ? `
+        <p class="tt-more"><a href="/aa-questions/${MORE[c.n][0]}/">${esc(MORE[c.n][1])} Read the answer →</a></p>` : ""}
       </article>`).join("\n");
 
 const html = `<!DOCTYPE html>

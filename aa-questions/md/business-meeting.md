@@ -2,17 +2,17 @@
 
 **In short:**
 - A business meeting is where a group looks after its own affairs: choosing its trusted servants, handling its money, planning its meetings, and hearing from the people who serve it. P-16 (2018) lists these jobs.
-- The Long Form doesn't use the phrase "business meeting," but it covers everything such a meeting decides. A group answers only to "its own conscience" in its own affairs (p. 563), its leaders "do not govern" (p. 565), it pays its own way and avoids piling up money (p. 564), and its one purpose is carrying the message to the alcoholic who still suffers (p. 563).
+- The Long Form doesn't use the phrase "business meeting," but it covers everything such a meeting decides. A group answers only to "its own conscience" in its own affairs ([p. 563](https://recoverystarts.com/big-book/page-563/)), its leaders "do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)), it pays its own way and avoids piling up money ([p. 564](https://recoverystarts.com/big-book/page-564/)), and its one purpose is carrying the message to the alcoholic who still suffers ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - So the Traditions are the guide for a business meeting. P-16 says the same: the spiritual nature of the Fellowship, "embodied in our Traditions and Concepts," gives ample guidance (P-16, 2018, p. 30).
 
 ## What the Long Form gives a business meeting to work with (1946)
 
-- **Whose decision it is.** For its group purpose there is but one ultimate authority, "a loving God as He may express Himself in our group conscience" (p. 563). In its own affairs each group "should be responsible to no other authority than its own conscience" (p. 563).
-- **When to look beyond the group.** If its plans affect neighbouring groups, they should be consulted; and nobody should take action that might greatly affect A.A. as a whole without conferring with the trustees (p. 563). "On such issues our common welfare is paramount" (p. 563).
-- **The money.** The group is supported by its own members' voluntary contributions (p. 564). Large gifts and contributions with strings are unwise, and treasuries that keep growing "beyond prudent reserves" for no stated A.A. purpose are a concern (p. 564).
-- **The officers.** A group needs "the least possible organization," rotating leadership is best, and a small group may elect a secretary, a large one a rotating committee (p. 565). They are servants: "They derive no real authority from their titles; they do not govern" (p. 565).
-- **What's off the table.** Going into business, affiliating with or endorsing anything outside A.A. (p. 564), and taking positions on outside controversial issues (p. 565).
-- **What everything serves.** "But one primary purpose — that of carrying its message to the alcoholic who still suffers" (p. 563).
+- **Whose decision it is.** For its group purpose there is but one ultimate authority, "a loving God as He may express Himself in our group conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)). In its own affairs each group "should be responsible to no other authority than its own conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **When to look beyond the group.** If its plans affect neighbouring groups, they should be consulted; and nobody should take action that might greatly affect A.A. as a whole without conferring with the trustees ([p. 563](https://recoverystarts.com/big-book/page-563/)). "On such issues our common welfare is paramount" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **The money.** The group is supported by its own members' voluntary contributions ([p. 564](https://recoverystarts.com/big-book/page-564/)). Large gifts and contributions with strings are unwise, and treasuries that keep growing "beyond prudent reserves" for no stated A.A. purpose are a concern ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- **The officers.** A group needs "the least possible organization," rotating leadership is best, and a small group may elect a secretary, a large one a rotating committee ([p. 565](https://recoverystarts.com/big-book/page-565/)). They are servants: "They derive no real authority from their titles; they do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- **What's off the table.** Going into business, affiliating with or endorsing anything outside A.A. ([p. 564](https://recoverystarts.com/big-book/page-564/)), and taking positions on outside controversial issues ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- **What everything serves.** "But one primary purpose — that of carrying its message to the alcoholic who still suffers" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 ## How groups actually worked (Bill W., 1947)
 
@@ -35,7 +35,7 @@ P-16 isn't entirely consistent on how decisions are made. Its introduction says 
 The Long Form doesn't prescribe a format or an agenda. It settles who decides (the group's own conscience, under God as expressed there), who doesn't (any officer, committee or outside body), what the money is for, and what the group exists to do. A business meeting run on those lines is the Traditions at work in one group.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Will A.A. Ever Have a Personal Government?", pp. 37–40): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group* (pp. 28–30): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *What is a home group, and how do the Traditions guide it?* · *Tradition Two: does anyone have authority in A.A.?* · *Tradition Nine: is A.A. organized? Who runs it?*

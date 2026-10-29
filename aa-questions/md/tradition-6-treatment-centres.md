@@ -1,24 +1,24 @@
 # Tradition Six: can an A.A. group partner with a treatment centre?
 
 **In short:**
-- No. The Long Form says an A.A. group "may cooperate with anyone," but "such cooperation ought never go so far as affiliation or endorsement, actual or implied" (p. 564). "An A.A. group can bind itself to no one" (p. 564).
-- The 1946 text doesn't use the words "treatment centre." Its words are "hospitals, as well as other places of recuperation," and it says they "ought to be well outside A.A.—and medically supervised" (p. 564).
+- No. The Long Form says an A.A. group "may cooperate with anyone," but "such cooperation ought never go so far as affiliation or endorsement, actual or implied" ([p. 564](https://recoverystarts.com/big-book/page-564/)). "An A.A. group can bind itself to no one" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- The 1946 text doesn't use the words "treatment centre." Its words are "hospitals, as well as other places of recuperation," and it says they "ought to be well outside A.A.—and medically supervised" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 - Cooperation is fine. In 1946 Bill W. wrote, "Everywhere we cooperate with hospitals" (P-17, "Money", 1946), and today's group pamphlet describes groups renting rooms in facilities and members taking A.A. to patients (P-16, 2018). A partnership, a shared name, money in either direction, or anything that makes the group look like part of the facility is not.
 - The Tradition binds A.A. groups. It doesn't govern treatment centres, which are free to run as their owners decide.
 
 ## What the Long Form says
 
-Tradition Six is the longest of the twelve (pp. 563–564). In order:
-- Money, property and authority "may easily divert us from our primary spiritual aim" (p. 563).
-- Property of real use to A.A. should be separately incorporated, "thus dividing the material from the spiritual" (p. 564).
-- "An A.A. group, as such, should never go into business." (p. 564).
-- Clubs and hospitals that need much property or administration should be incorporated "and so set apart that, if necessary, they can be freely discarded by the groups" (p. 564). "Hence such facilities ought not to use the A.A. name." (p. 564). Running them is "the sole responsibility of those people who financially support them" (p. 564).
-- "But hospitals, as well as other places of recuperation, ought to be well outside A.A.—and medically supervised." (p. 564).
-- Cooperation with anyone, but never "affiliation or endorsement, actual or implied" (p. 564). "An A.A. group can bind itself to no one." (p. 564).
+Tradition Six is the longest of the twelve ([pp. 563–564](https://recoverystarts.com/big-book/page-563/)). In order:
+- Money, property and authority "may easily divert us from our primary spiritual aim" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- Property of real use to A.A. should be separately incorporated, "thus dividing the material from the spiritual" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- "An A.A. group, as such, should never go into business." ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- Clubs and hospitals that need much property or administration should be incorporated "and so set apart that, if necessary, they can be freely discarded by the groups" ([p. 564](https://recoverystarts.com/big-book/page-564/)). "Hence such facilities ought not to use the A.A. name." ([p. 564](https://recoverystarts.com/big-book/page-564/)). Running them is "the sole responsibility of those people who financially support them" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- "But hospitals, as well as other places of recuperation, ought to be well outside A.A.—and medically supervised." ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- Cooperation with anyone, but never "affiliation or endorsement, actual or implied" ([p. 564](https://recoverystarts.com/big-book/page-564/)). "An A.A. group can bind itself to no one." ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
-Tradition Three's Long Form makes the same point from the other side: two or three alcoholics may call themselves an A.A. group "provided that, as a group, they have no other affiliation" (p. 563).
+Tradition Three's Long Form makes the same point from the other side: two or three alcoholics may call themselves an A.A. group "provided that, as a group, they have no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
-The short form keeps the core: "An A.A. group ought never endorse, finance or lend the A.A. name to any related facility or outside enterprise" (p. 562). A treatment centre is a related facility.
+The short form keeps the core: "An A.A. group ought never endorse, finance or lend the A.A. name to any related facility or outside enterprise" ([p. 562](https://recoverystarts.com/big-book/page-562/)). A treatment centre is a related facility.
 
 ## Why: what A.A. tried in the 1940s
 
@@ -38,7 +38,7 @@ In 1957 he was specific about treatment. Nor should an A.A. group ally itself, h
 
 Putting the Long Form and the essays together:
 - **Fine:** a group renting a room in a treatment facility; members carrying meetings into a facility; members working at a facility as individuals; giving staff information about A.A.
-- **Not fine for a group:** being run, funded or paid by a facility, or funding one; a facility using the group's A.A. name, or the group taking the facility's name; any joint program or "partnership" that would make the group look like part of the facility, even by implication ("actual or implied," p. 564).
+- **Not fine for a group:** being run, funded or paid by a facility, or funding one; a facility using the group's A.A. name, or the group taking the facility's name; any joint program or "partnership" that would make the group look like part of the facility, even by implication ("actual or implied," [p. 564](https://recoverystarts.com/big-book/page-564/)).
 
 A later pamphlet applies the same reasoning to group names: a group that meets in a treatment facility should call itself something quite different from the facility, so it's clear the group "simply rents space there for meetings" (P-16, 2018). It sums up the policy as "cooperation but not affiliation" (P-16, 2018).
 
@@ -46,10 +46,10 @@ A later pamphlet applies the same reasoning to group names: a group that meets i
 
 It doesn't judge treatment. The Long Form says hospitals and places of recuperation belong outside A.A. and under medical supervision; it doesn't say they're bad. Bill thought hospitalization was the doctor's job (P-17, "Money", 1946), and praised the A.A. members who managed such places well (P-17, "Hospitals and A.A.", 1947).
 
-And it doesn't bind the treatment centre. The Traditions govern A.A. groups and A.A. as a whole. A facility is responsible to the people who pay for it (p. 564), not to A.A.'s Traditions. The question the Tradition answers is what an A.A. group may tie itself to, and the answer is no one.
+And it doesn't bind the treatment centre. The Traditions govern A.A. groups and A.A. as a whole. A facility is responsible to the people who pay for it ([p. 564](https://recoverystarts.com/big-book/page-564/)), not to A.A.'s Traditions. The question the Tradition answers is what an A.A. group may tie itself to, and the answer is no one.
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed* ("Hospitals and A.A.," "Money," "Dangers in Linking A.A. to Other Projects"): https://www.aa.org/aa-tradition-how-it-developed
 - P-16, *The A.A. Group* ("Naming an A.A. Group"): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Does the Big Book endorse treatment centres?* · *Tradition Five: what is a group's one purpose?*

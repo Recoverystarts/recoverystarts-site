@@ -4,14 +4,14 @@
 - Concept XII is Article 12 of the Conference Charter (1955): six promises binding the General Service Conference to "observe the spirit of the A.A. Tradition" (Twelve Concepts for World Service, Concept XII). In order: never the seat of perilous wealth or power; enough operating funds plus an ample reserve; no member in unqualified authority over another; important decisions by discussion, vote and, whenever possible, substantial unanimity; no punitive action and no public controversy; never any acts of government, and always democratic.
 - It is the hardest Concept to change. The Conference can amend the rest of its Charter, but changing a Warranty needs the written consent of three-quarters of the groups that respond, with six months to consider.
 - Bill W.'s 1962 essay calls them "counsels of prudence" (Twelve Concepts for World Service, Concept XII), protection against "our very natural human temptations to wealth, prestige, power, and the like."
-- Several of the Warranties echo what the 1946 Long Form already said to the groups: prudent reserves, no large gifts, no controversy, "they do not govern" (p. 565).
+- Several of the Warranties echo what the 1946 Long Form already said to the groups: prudent reserves, no large gifts, no controversy, "they do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 ## The earlier texts first (1946–47)
 
-- **Wealth and reserves.** Long Form Seven (1946): accepting large gifts or gifts with obligations "is unwise," and "we view with much concern those A.A. treasuries which continue, beyond prudent reserves, to accumulate funds for no stated A.A. purpose" (p. 564).
-- **Authority.** Long Form Nine: A.A.'s servants "do not govern" (p. 565). Bill in 1947: "So long as we avoid any menacing accumulation of wealth or the growth of personal government at these centers, we cannot go astray" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
-- **Controversy.** Long Form Ten: "The Alcoholics Anonymous groups oppose no one" (p. 565).
-- **Freedom.** Long Form Three: membership never to depend "upon money or conformity" (p. 563).
+- **Wealth and reserves.** Long Form Seven (1946): accepting large gifts or gifts with obligations "is unwise," and "we view with much concern those A.A. treasuries which continue, beyond prudent reserves, to accumulate funds for no stated A.A. purpose" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- **Authority.** Long Form Nine: A.A.'s servants "do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Bill in 1947: "So long as we avoid any menacing accumulation of wealth or the growth of personal government at these centers, we cannot go astray" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
+- **Controversy.** Long Form Ten: "The Alcoholics Anonymous groups oppose no one" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- **Freedom.** Long Form Three: membership never to depend "upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 Concept XII turns these into promises made by the Conference itself.
 
@@ -39,7 +39,7 @@ On protecting the name: A.A. once considered incorporating it everywhere and ask
 
 ## Dates and changes worth knowing
 
-- **"No other purpose or affiliation."** Long Form Three (1946) says a group may call itself an A.A. group "provided that, as a group, they have no other affiliation" (p. 563). Bill's 1962 list adds "purpose."
+- **"No other purpose or affiliation."** Long Form Three (1946) says a group may call itself an A.A. group "provided that, as a group, they have no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Bill's 1962 list adds "purpose."
 - **The original wording.** The 1955 Charter's Article 12 read "an incitement to serious public controversy" (The A.A. Service Manual, 2024–2026, Appendix K, Original Conference Charter, 1955). The current Charter and the Concept say "public controversy," without "serious." Our copy doesn't say when it changed.
 - **Two-thirds, then three-quarters.** The 1955 Charter as first printed required the written consent of two-thirds of all groups to change the Tradition; the St. Louis resolution the same year asked for three-quarters of the registered groups who respond. The 1957 Conference amended the Charter to three-quarters, covering Article 12, the Traditions and the Steps (Appendix K, footnote 4); a 1976 resolution confirmed the Steps (Appendix L, footnote 3).
 - **The name.** Bill's 1962 text says the Conference decided against legal protection of the name. A 2024–2026 footnote adds: "However, the name Alcoholics Anonymous and the abbreviation A.A. were all legally registered in 1972" (Twelve Concepts for World Service, Concept XII, footnote 3).
@@ -47,8 +47,8 @@ On protecting the name: A.A. once considered incorporating it everywhere and ask
 
 
 ## Read it yourself
-- Long Form Three, Seven, Nine and Ten (Appendix I, pp. 563–565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept XII, short form (Appendix VII, p. 575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Three, Seven, Nine and Ten (Appendix I, [pp. 563–565](https://recoverystarts.com/big-book/page-563/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept XII, short form (Appendix VII, [p. 575](https://recoverystarts.com/big-book/page-575/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1947 essay on government: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay and the Conference Charter are in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org, as is *A.A. Comes of Age*)
@@ -57,11 +57,11 @@ On protecting the name: A.A. once considered incorporating it everywhere and ask
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Three, Seven, Nine, Ten | pp. 563–565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Three, Seven, Nine, Ten | [pp. 563–565](https://recoverystarts.com/big-book/page-563/) | 1946 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
 | Conference Charter, Article 12 (original and current); St. Louis resolution | *The A.A. Service Manual*, 2024–2026, Appendices K and L | 1955; amendments 1957 onward |
 | *A.A. Comes of Age* | — | 1957 |
-| *Alcoholics Anonymous*, Appendix VII, Concept XII (short form) | p. 575 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept XII (short form) | [p. 575](https://recoverystarts.com/big-book/page-575/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept XII, with later footnotes | in *The A.A. Service Manual*, 2024–2026 edition | 1962; footnotes to 2024 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

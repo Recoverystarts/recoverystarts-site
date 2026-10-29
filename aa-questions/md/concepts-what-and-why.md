@@ -2,7 +2,7 @@
 
 **In short:**
 - The Twelve Concepts for World Service are twelve statements, each with a long essay, written by Bill W. in 1962 about how A.A.'s world services are run: the groups, the General Service Conference, the trustees of the General Service Board, and the service corporations and their staffs. The 12th General Service Conference adopted them on April 26, 1962.
-- They are not about personal recovery or about how a group runs itself. The Big Book's Appendix VII puts it in one line each: the Steps are for personal recovery, the Traditions for unity, and the Concepts help keep the service structure "responsive and responsible to those they serve" (p. 574).
+- They are not about personal recovery or about how a group runs itself. The Big Book's Appendix VII puts it in one line each: the Steps are for personal recovery, the Traditions for unity, and the Concepts help keep the service structure "responsive and responsible to those they serve" ([p. 574](https://recoverystarts.com/big-book/page-574/)).
 - Bill says he wrote them to record the "why" of the service structure so its lessons would not be lost once the founders were gone. Dr. Bob had died in 1950; Bill was preparing to step back.
 - They are later than the Traditions (1946) and Dr. Bob's death. Where the 1946–47 texts already state a principle, the Concepts build on it, and these pages show the earlier text first.
 
@@ -12,7 +12,7 @@ The Concepts' own title page says they were written "by Bill W." and adopted "by
 
 A 1985 preface from the General Service Office says they "were written by Bill W. in 1962" (Twelve Concepts for World Service, Preface, 1985). Details went out of date, so the 1985 Conference asked that they be printed "in the original 1962 version, with required factual changes provided as numbered footnotes at the end of each chapter" (Twelve Concepts for World Service, Preface, 1985). That is how our copy reads: Bill's 1962 text, with footnotes added as late as the 2024–2026 edition.
 
-A one-sentence "short form" of each Concept came later. It was approved by the 1971 Conference and put in the Service Manual in 1974 (Twelve Concepts for World Service, Preface, 1985). The Big Book has printed that short form since the fourth edition (p. xii), as Appendix VII on pages 574–575, which says the Concepts were "Written by co-founder Bill W. in 1962" (p. 574).
+A one-sentence "short form" of each Concept came later. It was approved by the 1971 Conference and put in the Service Manual in 1974 (Twelve Concepts for World Service, Preface, 1985). The Big Book has printed that short form since the fourth edition ([p. xii](https://recoverystarts.com/big-book/page-xii/)), as Appendix VII on pages 574–575, which says the Concepts were "Written by co-founder Bill W. in 1962" ([p. 574](https://recoverystarts.com/big-book/page-574/)).
 
 ## Why Bill wrote them
 
@@ -28,7 +28,7 @@ Bill says each Concept is hard to state briefly: "Since each Concept is really a
 
 ## The earlier texts they rest on
 
-The service structure didn't start in 1962. The Long Form of the Traditions (1946) already says "The trustees of the General Service Board are, in effect, our A.A. General Service Committee" (p. 565), that they look after the General Service Office and public relations, and that all such servants "derive no real authority from their titles; they do not govern" (p. 565). (The 1946 original named the trustees of the Alcoholic Foundation; the board was renamed the General Service Board in 1954, and the Big Book prints the new name.)
+The service structure didn't start in 1962. The Long Form of the Traditions (1946) already says "The trustees of the General Service Board are, in effect, our A.A. General Service Committee" ([p. 565](https://recoverystarts.com/big-book/page-565/)), that they look after the General Service Office and public relations, and that all such servants "derive no real authority from their titles; they do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)). (The 1946 original named the trustees of the Alcoholic Foundation; the board was renamed the General Service Board in 1954, and the Big Book prints the new name.)
 
 Bill's 1947 Grapevine essay on government says the same of the New York office: "we can merely supply certain indispensable services" (P-17, Will A.A. Ever Have a Personal Government?, 1947). The trustees, he wrote then, are custodians, "caretakers only" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
 
@@ -59,11 +59,11 @@ The Concepts are Bill's work from 1962, twelve years after Dr. Bob died, about a
 One change is worth knowing: a footnote to Concept XI says that, by an Advisory Action of the 66th General Service Conference, two paragraphs were removed from the published version of Concept XI, and are available on request from GSO's Archives (Twelve Concepts for World Service, Concept XI, footnote 10). Our copy doesn't say what they contained. (Counting from the first Conference in 1951, the 66th met in 2016.)
 
 ## Read it yourself
-- The Concepts, short form (Big Book Appendix VII, pp. 574–575), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- The Concepts, short form (Big Book Appendix VII, [pp. 574–575](https://recoverystarts.com/big-book/page-574/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - The Concepts, long form statements: https://www.aa.org/twelve-concepts-world-service-long-form
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essays are in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
-- The Long Form of the Traditions (Appendix I, pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- The Long Form of the Traditions (Appendix I, [pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - Related: *Are the Concepts the same as the Traditions?* · *Who has the final say in A.A.?*
 
@@ -71,9 +71,9 @@ One change is worth knowing: a footnote to Concept XI says that, by an Advisory 
 | Source | Where | Written / first published |
 |---|---|---|
 | *Twelve Concepts for World Service* (Bill W.), title page, Preface, Introduction, Concepts I, IX, XI | in *The A.A. Service Manual*, 2024–2026 edition | Concepts 1962; Preface 1985; footnotes to 2024 |
-| *Alcoholics Anonymous*, Appendix VII, Twelve Concepts (short form) | pp. 574–575 | short form 1971; in the Big Book since the 4th edition, 2001 |
-| *Alcoholics Anonymous*, Preface | p. xii | 4th edition, 2001 |
-| *Alcoholics Anonymous*, Appendix I, Long Form Nine | p. 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix VII, Twelve Concepts (short form) | [pp. 574–575](https://recoverystarts.com/big-book/page-574/) | short form 1971; in the Big Book since the 4th edition, 2001 |
+| *Alcoholics Anonymous*, Preface | [p. xii](https://recoverystarts.com/big-book/page-xii/) | 4th edition, 2001 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Nine | [p. 565](https://recoverystarts.com/big-book/page-565/) | 1946 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; revised 1988; © 2017 |
 

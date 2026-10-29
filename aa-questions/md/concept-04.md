@@ -1,14 +1,14 @@
 # Concept IV: what is the Right of Participation, and who votes at the Conference?
 
 **In short:**
-- Concept IV says each kind of world servant should have a vote in proportion to its responsibility: "At all responsible levels, we ought to maintain a traditional ‘Right of Participation,’ allowing a voting representation in reasonable proportion to the responsibility that each must discharge" (p. 574).
+- Concept IV says each kind of world servant should have a vote in proportion to its responsibility: "At all responsible levels, we ought to maintain a traditional ‘Right of Participation,’ allowing a voting representation in reasonable proportion to the responsibility that each must discharge" ([p. 574](https://recoverystarts.com/big-book/page-574/)).
 - So the General Service Conference isn't only delegates. Under its Charter the trustees, the directors of the service corporations and their staff also vote; and the service corporations' boards include trustees, outside volunteer experts and paid staff, all voting.
 - Bill W.'s reason, written in 1962, is hard experience: when the early trustees held all the authority and the office staff all the work, the result was "grievous trouble." His deeper reason is that there should be no "second-class" servants.
 - There are limits: paid staff can't become trustees, and trustees and staff shouldn't vote on reports of their own past work.
 
 ## The earlier texts first (1946–47)
 
-Long Form Eight (1946) already allowed A.A. to employ alcoholics for special services: "Such special services may be well recompensed" (p. 564). Bill's 1946 essay explains the principle: a secretary can run an office, an editor get out a paper, without professionalizing A.A.; "Clearly the principle seems to be that we may pay well for special services — but never for straight Twelfth Step work" (P-17, Money, 1946).
+Long Form Eight (1946) already allowed A.A. to employ alcoholics for special services: "Such special services may be well recompensed" ([p. 564](https://recoverystarts.com/big-book/page-564/)). Bill's 1946 essay explains the principle: a secretary can run an office, an editor get out a paper, without professionalizing A.A.; "Clearly the principle seems to be that we may pay well for special services — but never for straight Twelfth Step work" (P-17, Money, 1946).
 
 His 1947 essay names, among A.A.'s freedoms, "no one set in personal authority over anyone else" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
 
@@ -37,8 +37,8 @@ Concept IV puts these together: paid workers are legitimate, and no class of ser
 - P-8 (© 2017) adds that the Right of Participation "reinforces Tradition Two, that no member is placed in ‘ultimate authority’ over another" (P-8). Tradition Two itself doesn't say that; the idea is closer to Bill's 1947 essay and to Concept XII's Third Warranty.
 
 ## Read it yourself
-- Long Form Eight (Appendix I, pp. 564–565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept IV, short form (Appendix VII, p. 574): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Eight (Appendix I, [pp. 564–565](https://recoverystarts.com/big-book/page-564/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept IV, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 and 1947 essays: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -47,9 +47,9 @@ Concept IV puts these together: paid workers are legitimate, and no class of ser
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Eight | p. 564 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Eight | [p. 564](https://recoverystarts.com/big-book/page-564/) | 1946 |
 | P-17, Money; Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1946 and 1947 |
-| *Alcoholics Anonymous*, Appendix VII, Concept IV (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept IV (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept IV, with later footnotes | in *The A.A. Service Manual*, 2024–2026 edition | 1962; footnotes later |
 | *The A.A. Service Manual*, Chapter 6 | — | 2024–2026 edition |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |

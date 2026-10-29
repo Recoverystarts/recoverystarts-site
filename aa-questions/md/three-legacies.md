@@ -8,7 +8,7 @@
 
 ## Where the idea comes from
 
-The term isn't in the Big Book's 1939 text. It comes from 1955, after Dr. Bob's death, when A.A. was twenty years old. The Big Book's own pages show the first two Legacies (the Steps, p. 59–60; the Traditions, Appendix I, pp. 561–566) but not the name.
+The term isn't in the Big Book's 1939 text. It comes from 1955, after Dr. Bob's death, when A.A. was twenty years old. The Big Book's own pages show the first two Legacies (the Steps, [p. 59–60](https://recoverystarts.com/big-book/page-59/); the Traditions, Appendix I, [pp. 561–566](https://recoverystarts.com/big-book/page-561/)) but not the name.
 
 ## The handover, July 1955
 
@@ -34,8 +34,8 @@ In Bill's telling, Service is not paperwork added on top of the program. It is t
 
 ## Read it yourself
 - P-44, *A.A.'s Legacy of Service*, on aa.org: https://www.aa.org/aas-legacy-service
-- The Twelve Steps, Chapter 5 (pp. 58–71), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
-- The Twelve Traditions, Appendix I (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- The Twelve Steps, Chapter 5 ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- The Twelve Traditions, Appendix I ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - *A.A. Comes of Age* is sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What does Step 12 really say?* · *What changed in A.A. between 1939 and 1950?*
 

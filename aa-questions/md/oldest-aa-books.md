@@ -12,12 +12,12 @@ Each date is read from the source's own pages where it prints one.
 
 | Source | Written or first published | How we know |
 |---|---|---|
-| *Alcoholics Anonymous*, Foreword to the First Edition and pp. 1–164 | 1939 | The foreword is printed "as it appeared in the first printing of the first edition in 1939" (p. xiii); the copyright page lists the first edition, 1939–1955 (p. iv); footnotes in Chapter 11 mark passages "Written in 1939" (pp. 161, 162) |
-| Early personal stories (e.g. "Doctor Bob's Nightmare") | 1939 | Dr. Bob writes that "nearly four years have passed" since June 1935 (p. 180) |
-| Appendix II, *Spiritual Experience* | after the first printing; in the book's appendices since the second edition, 1955 (Preface, p. xi) | the appendix says "our first printing gave many readers the impression" (p. 567) it corrects; our text doesn't print the year |
+| *Alcoholics Anonymous*, Foreword to the First Edition and [pp. 1–164](https://recoverystarts.com/big-book/page-1/) | 1939 | The foreword is printed "as it appeared in the first printing of the first edition in 1939" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)); the copyright page lists the first edition, 1939–1955 (p. iv); footnotes in Chapter 11 mark passages "Written in 1939" ([pp. 161](https://recoverystarts.com/big-book/page-161/), 162) |
+| Early personal stories (e.g. "Doctor Bob's Nightmare") | 1939 | Dr. Bob writes that "nearly four years have passed" since June 1935 ([p. 180](https://recoverystarts.com/big-book/page-180/)) |
+| Appendix II, *Spiritual Experience* | after the first printing; in the book's appendices since the second edition, 1955 (Preface, [p. xi](https://recoverystarts.com/big-book/page-xi/)) | the appendix says "our first printing gave many readers the impression" ([p. 567](https://recoverystarts.com/big-book/page-567/)) it corrects; our text doesn't print the year |
 | The Traditions, Long Form | Grapevine, April 1946 | P-44 (P-44); now Appendix I, pp. 561–566 |
 | P-17, Bill W.'s Grapevine essays on the Traditions | 1946–47 (pamphlet © 2019) | each essay is dated in the pamphlet |
-| Foreword to the Second Edition; Appendix I placed in the book | 1955 | "Figures given in this foreword describe the Fellowship as it was in 1955." (p. xv) |
+| Foreword to the Second Edition; Appendix I placed in the book | 1955 | "Figures given in this foreword describe the Fellowship as it was in 1955." ([p. xv](https://recoverystarts.com/big-book/page-xv/)) |
 | P-44, *A.A.'s Legacy of Service* (Bill W.) | text describes events through 1955; later updates in brackets; pamphlet © 2018 | P-44 front and back matter |
 | *A.A. Comes of Age* | 1957 | its own timeline says it was published in October 1957; our copy is a later printing, with a letter from Bill dated March 1967 |
 | Twelve Concepts for World Service | 1962 | *A.A. Comes of Age* timeline |
@@ -32,10 +32,10 @@ Each date is read from the source's own pages where it prints one.
 ## Why the date matters: examples from these pages
 
 Reading the sources side by side shows details shifting as the story was retold:
-- **Bill D., A.A. number three.** His own story says he was hospitalized eight times in six months and came to on June 26, 1935 (p. 184). Bill W.'s 1957 account has him say six times in four months and puts the visit within days of June 10 (A.A. Comes of Age, 1957). See *Who was the third member, and how was he found?*
+- **Bill D., A.A. number three.** His own story says he was hospitalized eight times in six months and came to on June 26, 1935 ([p. 184](https://recoverystarts.com/big-book/page-184/)). Bill W.'s 1957 account has him say six times in four months and puts the visit within days of June 10 (A.A. Comes of Age, 1957). See *Who was the third member, and how was he found?*
 - **Where Dr. Bob trained.** P-53 and the 1980 biography put his internship at City Hospital, Akron; Bill's 1957 account says Chicago (A.A. Comes of Age, 1957). See *Who was Dr. Bob?*
-- **The first meeting.** The 1955 foreword says June 1935 (p. xv); Dr. Bob's own 1939 story puts it on Mother's Day, weeks before June 10 (p. 179). See *How did Bill W. and Dr. Bob meet?*
-- **Names appear later.** The 1939 text names no one in the founding story; the hotel, the minister and Henrietta Seiberling are named in 1948 and 1957 accounts. That isn't a contradiction: the 1939 book asked its members to stay anonymous in print (p. xiii), and the names came out later.
+- **The first meeting.** The 1955 foreword says June 1935 ([p. xv](https://recoverystarts.com/big-book/page-xv/)); Dr. Bob's own 1939 story puts it on Mother's Day, weeks before June 10 ([p. 179](https://recoverystarts.com/big-book/page-179/)). See *How did Bill W. and Dr. Bob meet?*
+- **Names appear later.** The 1939 text names no one in the founding story; the hotel, the minister and Henrietta Seiberling are named in 1948 and 1957 accounts. That isn't a contradiction: the 1939 book asked its members to stay anonymous in print ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and the names came out later.
 
 The later books are honest about this risk themselves. *Dr. Bob and the Good Oldtimers* quotes an oldtimer saying people are "always repeating things Dr. Bob said that I know he didn't" (Dr. Bob and the Good Oldtimers, 1980).
 

@@ -1,7 +1,7 @@
 # Concept VII: who really holds power, the Conference or the trustees?
 
 **In short:**
-- Concept VII says the trustees' Charter and Bylaws are legal instruments that fully empower them to manage A.A.'s world services, while "The Conference Charter is not a legal document; it relies upon tradition and the A.A. purse for final effectiveness" (p. 575).
+- Concept VII says the trustees' Charter and Bylaws are legal instruments that fully empower them to manage A.A.'s world services, while "The Conference Charter is not a legal document; it relies upon tradition and the A.A. purse for final effectiveness" ([p. 575](https://recoverystarts.com/big-book/page-575/)).
 - Bill W.'s answer, written in 1962, is both. The trustees hold the legal power; the Conference holds the practical power, and that practical power "will nearly always be superior" (Twelve Concepts for World Service, Concept VII), because most of its members are group-chosen delegates who could, in the last resort, cut off the groups' money.
 - The trustees keep a legal veto. Bill expected it to be used seldom, and names three situations where using it would be their duty.
 - The idea that services are kept in line by members' money is already in Bill's 1946 essay: "These services must always serve us well or go out of business" (P-17, Money, 1946).
@@ -10,7 +10,7 @@
 
 Bill's 1946 essay on money explains why A.A.'s offices can't take over: "These are places of service; they cannot really control or govern A.A." (P-17, Money, 1946). If one grew inefficient or overbearing, "The average A.A. would stop his financial support until conditions were changed" (P-17, Money, 1946). That is the "power of the A.A. purse" sixteen years before Concept VII named it.
 
-Long Form Four (1946) asks that no one take action greatly affecting A.A. as a whole "without conferring with the trustees of the General Service Board" (p. 563), and Long Form Nine makes the trustees the receivers of the groups' contributions (p. 565). So from the start the trustees held the money and the groups supplied it.
+Long Form Four (1946) asks that no one take action greatly affecting A.A. as a whole "without conferring with the trustees of the General Service Board" ([p. 563](https://recoverystarts.com/big-book/page-563/)), and Long Form Nine makes the trustees the receivers of the groups' contributions ([p. 565](https://recoverystarts.com/big-book/page-565/)). So from the start the trustees held the money and the groups supplied it.
 
 ## What Bill's Concept VII essay says (1962)
 
@@ -41,8 +41,8 @@ So "the Conference was given the right to reject, but not to elect, new Trustee 
 
 
 ## Read it yourself
-- Long Form Four and Nine (Appendix I, pp. 563, 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept VII, short form (Appendix VII, p. 575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Four and Nine (Appendix I, [pp. 563](https://recoverystarts.com/big-book/page-563/), 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept VII, short form (Appendix VII, [p. 575](https://recoverystarts.com/big-book/page-575/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 essay on money: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -52,8 +52,8 @@ So "the Conference was given the right to reject, but not to elect, new Trustee 
 | Source | Where | Written / first published |
 |---|---|---|
 | P-17, Money (Bill W.) | — | Grapevine, 1946 |
-| *Alcoholics Anonymous*, Appendix I, Long Form Four and Nine | pp. 563, 565 | 1946 |
-| *Alcoholics Anonymous*, Appendix VII, Concept VII (short form) | p. 575 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Four and Nine | [pp. 563](https://recoverystarts.com/big-book/page-563/), 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix VII, Concept VII (short form) | [p. 575](https://recoverystarts.com/big-book/page-575/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept VII, with later footnote | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | Conference Charter, current text | *The A.A. Service Manual*, 2024–2026, Appendix K | 1955, as amended |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |

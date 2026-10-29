@@ -6,17 +6,17 @@
 - Bill W.'s 1946 essay "Money" shows A.A. did take outside help in its first years and was grateful for it. By 1946, he wrote, a strong feeling had spread among members that A.A. could and should pay its own way, and the trustees had resolved to decline gifts carrying any obligation.
 - The Tradition is about A.A. groups and A.A. as a whole. It isn't a rule about members' own jobs or about the charities they support.
 
-## What the Long Form says (p. 564)
+## What the Long Form says ([p. 564](https://recoverystarts.com/big-book/page-564/))
 
 The Seventh Tradition's Long Form says five things, in this order:
 
-1. **Members pay.** The groups "ought to be fully supported by the voluntary contributions of their own members" (p. 564). In 1946 this was still a goal; the text says each group "should soon achieve this ideal" (p. 564).
-2. **No public appeals in A.A.'s name.** Public solicitation of funds using the A.A. name is "highly dangerous," whoever does it: groups, clubs, hospitals or outside agencies (p. 564).
-3. **No big gifts, and no strings.** Accepting "large gifts from any source," or contributions "carrying any obligation whatever," is unwise (p. 564). "Any source" includes members.
-4. **No hoarding.** It views "with much concern" group treasuries that keep accumulating money, beyond prudent reserves, for no stated A.A. purpose (p. 564).
-5. **Why.** "Experience has often warned us that nothing can so surely destroy our spiritual heritage as futile disputes over property, money, and authority" (p. 564).
+1. **Members pay.** The groups "ought to be fully supported by the voluntary contributions of their own members" ([p. 564](https://recoverystarts.com/big-book/page-564/)). In 1946 this was still a goal; the text says each group "should soon achieve this ideal" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+2. **No public appeals in A.A.'s name.** Public solicitation of funds using the A.A. name is "highly dangerous," whoever does it: groups, clubs, hospitals or outside agencies ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+3. **No big gifts, and no strings.** Accepting "large gifts from any source," or contributions "carrying any obligation whatever," is unwise ([p. 564](https://recoverystarts.com/big-book/page-564/)). "Any source" includes members.
+4. **No hoarding.** It views "with much concern" group treasuries that keep accumulating money, beyond prudent reserves, for no stated A.A. purpose ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+5. **Why.** "Experience has often warned us that nothing can so surely destroy our spiritual heritage as futile disputes over property, money, and authority" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
-The short form, "Every A.A. group ought to be fully self-supporting, declining outside contributions" (p. 562), condenses all of this into one line.
+The short form, "Every A.A. group ought to be fully self-supporting, declining outside contributions" ([p. 562](https://recoverystarts.com/big-book/page-562/)), condenses all of this into one line.
 
 ## How it came about: Bill W.'s "Money" (1946)
 
@@ -36,14 +36,14 @@ The short form, "Every A.A. group ought to be fully self-supporting, declining o
 
 The Long Form governs the A.A. groups and A.A.'s own services. It doesn't tell members not to earn a living, give to other causes, or work for organizations that do take outside money. Bill's concern throughout is A.A.'s name and A.A.'s treasuries.
 
-The Long Form says large gifts and gifts with obligations are "unwise" and public appeals are "highly dangerous" (p. 564). The flat wording "declining outside contributions" belongs to the short form (p. 562).
+The Long Form says large gifts and gifts with obligations are "unwise" and public appeals are "highly dangerous" ([p. 564](https://recoverystarts.com/big-book/page-564/)). The flat wording "declining outside contributions" belongs to the short form ([p. 562](https://recoverystarts.com/big-book/page-562/)).
 
 ## Later, for comparison (dated)
 
 *The Twelve Traditions Illustrated* (P-43, 1971, updated 2023) adds that A.A. limits how much a member may give each year or leave in a will, "so that none of us can buy influence in A.A." (P-43, 1971, "The Seventh Tradition"). That limit is later practice, not part of the 1946 text.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Money," pp. 27–35): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-43, *The Twelve Traditions Illustrated*: https://www.aa.org/sites/default/files/literature/P-43_0625.pdf
 - Related: *What did Bill W. say about clubs and A.A.?* · *Tradition Eight: can anyone be paid for Twelfth Step work?*

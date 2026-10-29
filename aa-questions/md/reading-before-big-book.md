@@ -4,7 +4,7 @@
 - Mostly the Bible. Dr. Bob said in 1948 that the older members found three parts "absolutely essential": the Sermon on the Mount, the thirteenth chapter of First Corinthians, and the Book of James (P-53).
 - In Akron, members' recollections gathered in 1980 add three small books that were passed around by 1938–39, while the Big Book was being written: *The Upper Room* (a Methodist booklet of daily readings), Emmet Fox's *The Sermon on the Mount*, and Henry Drummond's *The Greatest Thing in the World*.
 - That reading came with the Oxford Group's morning "quiet time." The program itself was passed on by word of mouth. A member's story describing Akron in 1937 says there was "no literature except various religious pamphlets" (p. 262).
-- The 1939 Big Book doesn't list any of these books. It says only that "There are many helpful books also" (p. 87) and sends the reader to a priest, minister or rabbi for suggestions.
+- The 1939 Big Book doesn't list any of these books. It says only that "There are many helpful books also" ([p. 87](https://recoverystarts.com/big-book/page-87/)) and sends the reader to a priest, minister or rabbi for suggestions.
 
 ## Dr. Bob's own account (1948)
 
@@ -36,19 +36,19 @@ The same book is plain about what was missing: "there was definitely a need for 
 
 ## What the Big Book and its stories say
 
-The 1939 main text names no devotional book. In its section on morning meditation it says members who belong to a religious body follow its practice, others may memorize a few prayers, and "There are many helpful books also." (p. 87). Suggestions are to come from "one's priest, minister, or rabbi" (p. 87).
+The 1939 main text names no devotional book. In its section on morning meditation it says members who belong to a religious body follow its practice, others may memorize a few prayers, and "There are many helpful books also." ([p. 87](https://recoverystarts.com/big-book/page-87/)). Suggestions are to come from "one's priest, minister, or rabbi" ([p. 87](https://recoverystarts.com/big-book/page-87/)).
 
-"He Sold Himself Short," a story in Part I describing Akron in 1937, says that at his first meeting "The big A.A. book had not been written, and there was no literature except various religious pamphlets." (p. 262). "The program was carried on entirely by word of mouth." (p. 262).
+"He Sold Himself Short," a story in Part I describing Akron in 1937, says that at his first meeting "The big A.A. book had not been written, and there was no literature except various religious pamphlets." ([p. 262](https://recoverystarts.com/big-book/page-262/)). "The program was carried on entirely by word of mouth." ([p. 262](https://recoverystarts.com/big-book/page-262/)).
 
-**A note on "upper room."** Chapter 11 describes a newcomer who heard a member's story "in an upper room of this house" (p. 160). That is a room upstairs in the home the chapter describes, not the booklet.
+**A note on "upper room."** Chapter 11 describes a newcomer who heard a member's story "in an upper room of this house" ([p. 160](https://recoverystarts.com/big-book/page-160/)). That is a room upstairs in the home the chapter describes, not the booklet.
 
 ## New York
 
 Our sources say much less about New York. Bill's own reading was William James's *The Varieties of Religious Experience*, which he says a friend, Ebby he thinks, brought him at Towns Hospital in 1934 (A.A. Comes of Age, 1957). By 1938 the word-of-mouth program's basic ideas, as he put it, "had come from the Oxford Groups, William James, and Dr. Silk-worth" (A.A. Comes of Age, 1957). See *Why does the Big Book mention William James?*
 
 ## Read it yourself
-- Chapter 6, "Into Action" (pp. 72–88), on morning meditation and "helpful books": https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
-- Personal Stories Part I, "He Sold Himself Short" (pp. 258–267): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- Chapter 6, "Into Action" ([pp. 72–88](https://recoverystarts.com/big-book/page-72/)), on morning meditation and "helpful books": https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
+- Personal Stories Part I, "He Sold Himself Short" ([pp. 258–267](https://recoverystarts.com/big-book/page-258/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous* (Dr. Bob's 1948 talk): https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *Dr. Bob and the Good Oldtimers*, *A.A. Comes of Age* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What did early A.A. take from the Oxford Group, and why did it separate?* · *What were the "six steps" used before the Twelve Steps?* · *What were the "Four Absolutes"? Are they in the Big Book?* · *Is "faith without works is dead" in the Big Book?*

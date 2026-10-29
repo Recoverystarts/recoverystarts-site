@@ -2,8 +2,8 @@
 
 **In short:**
 - "There are no musts in A.A." isn't in the Big Book. In our sources it appears once, in *Dr. Bob and the Good Oldtimers* (1980), as a one-line gloss on something Dr. Bob wrote in 1948.
-- The 1939 program text uses "must" more than sixty times in Chapters 1 to 11, most often as "we must." Examples: "We must, or it kills us!" (p. 62), and "We must be entirely honest with somebody" (p. 73).
-- The book is just as clear that no one should order anyone to follow it. The Steps are "suggested" (p. 59), the writers lay down "no rule of any sort" (p. 81), and "it is best that no one tell him he must abide by its suggestions" (p. 144).
+- The 1939 program text uses "must" more than sixty times in Chapters 1 to 11, most often as "we must." Examples: "We must, or it kills us!" ([p. 62](https://recoverystarts.com/big-book/page-62/)), and "We must be entirely honest with somebody" ([p. 73](https://recoverystarts.com/big-book/page-73/)).
+- The book is just as clear that no one should order anyone to follow it. The Steps are "suggested" ([p. 59](https://recoverystarts.com/big-book/page-59/)), the writers lay down "no rule of any sort" ([p. 81](https://recoverystarts.com/big-book/page-81/)), and "it is best that no one tell him he must abide by its suggestions" ([p. 144](https://recoverystarts.com/big-book/page-144/)).
 - So both halves are true. No one in A.A. can make you do anything. The book still says, from its writers' experience, that some things must be done if you want to recover.
 
 ## Where "no musts" comes from
@@ -27,33 +27,33 @@ The same 1980 book also uses "musts" the other way, about early Akron. Besides h
 **The writers took "you must" out on purpose.** Bill tells in *A.A. Comes of Age* (1957) that a psychiatrist who read the draft sent out before publication, Dr. Howard, said the text "was too full of the words 'you' and 'must'" (*A.A. Comes of Age*, 1957). He suggested changing them where possible to "we ought" or "we should," to remove all coercion. Bill gave in: "it was perfectly apparent that the doctor was dead right" (*A.A. Comes of Age*, 1957).
 
 **The commonest form left is "we must."** A count of the fourth-edition text of Chapters 1–11 finds "must" or "mustn't" about sixty-eight times. The most common form by far is "we must" (twenty-three times, six of them in a list of rules the book rejects, below), against seven "you must." Many of the musts that remain report what the writers found they had to do:
-- On selfishness: above everything, alcoholics must be rid of it. "We must, or it kills us!" (p. 62).
-- On the Fifth Step: "We must be entirely honest with somebody if we expect to live long or happily in this world" (pp. 73–74).
-- On amends: "We must not shrink at anything" (p. 79). "We must lose our fear of creditors" (p. 78).
-- On daily life: "Every day is a day when we must carry the vision of God's will into all of our activities" (p. 85).
-- On spiritual life: "we must find a spiritual basis of life—or else" (p. 44).
+- On selfishness: above everything, alcoholics must be rid of it. "We must, or it kills us!" ([p. 62](https://recoverystarts.com/big-book/page-62/)).
+- On the Fifth Step: "We must be entirely honest with somebody if we expect to live long or happily in this world" ([pp. 73–74](https://recoverystarts.com/big-book/page-73/)).
+- On amends: "We must not shrink at anything" ([p. 79](https://recoverystarts.com/big-book/page-79/)). "We must lose our fear of creditors" ([p. 78](https://recoverystarts.com/big-book/page-78/)).
+- On daily life: "Every day is a day when we must carry the vision of God's will into all of our activities" ([p. 85](https://recoverystarts.com/big-book/page-85/)).
+- On spiritual life: "we must find a spiritual basis of life—or else" ([p. 44](https://recoverystarts.com/big-book/page-44/)).
 
-**Where the book refuses a "must."** Chapter 7 lists the musts other people had laid on alcoholics: "we must not go where liquor is served"; "we must shun friends who drink"; "we must not go into bars" (pp. 100–101). "Our experience shows that this is not necessarily so" (p. 101).
+**Where the book refuses a "must."** Chapter 7 lists the musts other people had laid on alcoholics: "we must not go where liquor is served"; "we must shun friends who drink"; "we must not go into bars" ([pp. 100–101](https://recoverystarts.com/big-book/page-100/)). "Our experience shows that this is not necessarily so" ([p. 101](https://recoverystarts.com/big-book/page-101/)).
 
-**It never lets one person order another.** A man given the book should not be told "he must abide by its suggestions" (p. 144). "The man must decide for himself" (p. 144). The newcomer, after reading, "must decide for himself whether he wants to go on" (p. 95). A wife should "never tell him what he must do about his drinking" (p. 111). The Traditions say the same about membership: it should never depend "upon money or conformity" (p. 563).
+**It never lets one person order another.** A man given the book should not be told "he must abide by its suggestions" ([p. 144](https://recoverystarts.com/big-book/page-144/)). "The man must decide for himself" ([p. 144](https://recoverystarts.com/big-book/page-144/)). The newcomer, after reading, "must decide for himself whether he wants to go on" ([p. 95](https://recoverystarts.com/big-book/page-95/)). A wife should "never tell him what he must do about his drinking" ([p. 111](https://recoverystarts.com/big-book/page-111/)). The Traditions say the same about membership: it should never depend "upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
-**The Steps are suggested.** "Here are the steps we took, which are suggested as a program of recovery" (p. 59). Bill says the suggestion wording was added in the same last-minute compromise as "God as we understood Him": the Steps "were to be suggestions only" (*A.A. Comes of Age*, 1957). On a hard question about amends at home, the writers say they wish "to lay down no rule of any sort" (p. 81).
+**The Steps are suggested.** "Here are the steps we took, which are suggested as a program of recovery" ([p. 59](https://recoverystarts.com/big-book/page-59/)). Bill says the suggestion wording was added in the same last-minute compromise as "God as we understood Him": the Steps "were to be suggestions only" (*A.A. Comes of Age*, 1957). On a hard question about amends at home, the writers say they wish "to lay down no rule of any sort" ([p. 81](https://recoverystarts.com/big-book/page-81/)).
 
-**But "suggested" isn't "unimportant."** The same pages report what happened when people skipped things. "Half measures availed us nothing" (p. 59). "If we skip this vital step, we may not overcome drinking" (p. 72).
+**But "suggested" isn't "unimportant."** The same pages report what happened when people skipped things. "Half measures availed us nothing" ([p. 59](https://recoverystarts.com/big-book/page-59/)). "If we skip this vital step, we may not overcome drinking" ([p. 72](https://recoverystarts.com/big-book/page-72/)).
 
 ## What this means
 
-"There are no musts in A.A." is fair about authority. No one in A.A. can order a member to do anything, and the book was deliberately rewritten to avoid "you must." It isn't fair about the content. The book's writers say, many times and in their own voice, that certain things *must* be done: honesty, getting rid of selfishness, amends, daily reliance on God, helping others. It presents them as what they found necessary to stay alive, offered to anyone who wants what they have (p. 58).
+"There are no musts in A.A." is fair about authority. No one in A.A. can order a member to do anything, and the book was deliberately rewritten to avoid "you must." It isn't fair about the content. The book's writers say, many times and in their own voice, that certain things *must* be done: honesty, getting rid of selfishness, amends, daily reliance on God, helping others. It presents them as what they found necessary to stay alive, offered to anyone who wants what they have ([p. 58](https://recoverystarts.com/big-book/page-58/)).
 
-It's sometimes said there are no "musts" or requirements for A.A. membership or for sobriety. The membership half is right (Long Form Three, p. 563). The sobriety half goes beyond the book, which does name what its writers found they must do.
+It's sometimes said there are no "musts" or requirements for A.A. membership or for sobriety. The membership half is right (Long Form Three, [p. 563](https://recoverystarts.com/big-book/page-563/)). The sobriety half goes beyond the book, which does name what its writers found they must do.
 
 See also: *Are the Steps rules or suggestions?*
 
 ## Read it yourself
-- Chapter 5, "How It Works" (pp. 58–71): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
-- Chapter 6, "Into Action" (pp. 72–88): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
-- Chapter 7, "Working With Others" (pp. 89–103): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
-- Chapter 10, "To Employers" (p. 144): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
+- Chapter 5, "How It Works" ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- Chapter 6, "Into Action" ([pp. 72–88](https://recoverystarts.com/big-book/page-72/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
+- Chapter 7, "Working With Others" ([pp. 89–103](https://recoverystarts.com/big-book/page-89/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+- Chapter 10, "To Employers" ([p. 144](https://recoverystarts.com/big-book/page-144/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 
 ## Sources
@@ -66,6 +66,6 @@ See also: *Are the Steps rules or suggestions?*
 | Dr. Bob, Grapevine article, quoted in *Dr. Bob and the Good Oldtimers* | — | article September 1948; book 1980 (the "no musts" gloss is the book's) |
 | *Dr. Bob and the Good Oldtimers* on early Akron's "musts" | — | 1980, about the early Akron years (one passage reads a 1938 report); after 1950 |
 
-Big Book page numbers are from the fourth edition. The count of "must" is from our fourth-edition text; the Preface says these chapters are "largely untouched" since 1939 (p. xi).
+Big Book page numbers are from the fourth edition. The count of "must" is from our fourth-edition text; the Preface says these chapters are "largely untouched" since 1939 ([p. xi](https://recoverystarts.com/big-book/page-xi/)).
 
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, A.A. Comes of Age and Dr. Bob and the Good Oldtimers are © A.A. World Services, Inc.*

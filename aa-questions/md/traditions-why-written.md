@@ -1,18 +1,18 @@
 # Why were the Twelve Traditions written?
 
 **In short:**
-- The Traditions were written to keep A.A. alive and in one piece. The Big Book says they answer two questions: "How can A.A. best function?" and "How can A.A. best stay whole and so survive?" (p. 561).
+- The Traditions were written to keep A.A. alive and in one piece. The Big Book says they answer two questions: "How can A.A. best function?" and "How can A.A. best stay whole and so survive?" ([p. 561](https://recoverystarts.com/big-book/page-561/)).
 - They came out of real trouble in the 1940s, as A.A. grew from about a hundred members to many thousands: fights over membership, leadership, money, property and publicity.
 - Bill W. put the lessons into words and published them in the A.A. Grapevine in 1946. He said he hadn't invented them; the groups had learned them the hard way.
-- The reason given is survival, for the members as much as for A.A.: "A.A. must continue to live or most of us will surely die" (p. 563).
+- The reason given is survival, for the members as much as for A.A.: "A.A. must continue to live or most of us will surely die" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 ## What the Big Book says
 
-Appendix I, "The A.A. Tradition," opens by saying A.A. has made the difference between misery and sobriety, often between life and death, for those in it, and could do the same for alcoholics not yet reached (p. 561). So no society ever had "a more urgent need for continuous effectiveness and permanent unity" (p. 561). Alcoholics have to "work together and hang together" or most will "die alone" (p. 561).
+Appendix I, "The A.A. Tradition," opens by saying A.A. has made the difference between misery and sobriety, often between life and death, for those in it, and could do the same for alcoholics not yet reached ([p. 561](https://recoverystarts.com/big-book/page-561/)). So no society ever had "a more urgent need for continuous effectiveness and permanent unity" ([p. 561](https://recoverystarts.com/big-book/page-561/)). Alcoholics have to "work together and hang together" or most will "die alone" ([p. 561](https://recoverystarts.com/big-book/page-561/)).
 
-The Long Form itself opens with the words "Our A.A. experience has taught us that:" (p. 563). Each Tradition is stated as something experience taught, not as a plan worked out in advance.
+The Long Form itself opens with the words "Our A.A. experience has taught us that:" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Each Tradition is stated as something experience taught, not as a plan worked out in advance.
 
-The Foreword to the Second Edition (1955) tells the same story in brief. After the publicity of 1939–1941, A.A. entered an "adolescent period" (p. xviii). Could thousands of alcoholics meet and work together? Would there be quarrels over membership, leadership and money, or splits that broke A.A. apart (pp. xviii–xix)? The answer that grew out of it was that "A.A.'s had to hang together or die separately" (p. xix). Just as the Steps were principles an alcoholic could live by, the groups and A.A. as a whole needed principles to "survive and function effectively" (p. xix).
+The Foreword to the Second Edition (1955) tells the same story in brief. After the publicity of 1939–1941, A.A. entered an "adolescent period" ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)). Could thousands of alcoholics meet and work together? Would there be quarrels over membership, leadership and money, or splits that broke A.A. apart ([pp. xviii–xix](https://recoverystarts.com/big-book/page-xviii/))? The answer that grew out of it was that "A.A.'s had to hang together or die separately" ([p. xix](https://recoverystarts.com/big-book/page-xix/)). Just as the Steps were principles an alcoholic could live by, the groups and A.A. as a whole needed principles to "survive and function effectively" ([p. xix](https://recoverystarts.com/big-book/page-xix/)).
 
 ## What Bill W. said when he wrote them (1946–1947)
 
@@ -34,11 +34,11 @@ He is clear that he only wrote down what the groups had already learned. The fir
 
 ## What the texts don't say
 
-None of these sources says the Traditions were written to govern an individual member's private life or recovery. That job belongs to the Steps. The Traditions are about how A.A. groups, and members acting as A.A., relate to each other and to the world (see *Are the Traditions rules? Who do they apply to?*).
+None of these sources says the Traditions were written to govern an individual member's private life or recovery. That job belongs to the Steps. The Traditions are about how A.A. groups, and members acting as A.A., relate to each other and to the world (see *Are the Traditions rules? Who do they apply to — groups or members?*).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - P-17, *A.A. Tradition — How It Developed* (Bill W.'s 1946–47 essays): https://www.aa.org/aa-tradition-how-it-developed
 - *Alcoholics Anonymous Comes of Age* is sold by A.A. World Services at https://onlineliterature.aa.org
 - Related: *Were the Traditions written with the Steps?* · *What is the Long Form?*

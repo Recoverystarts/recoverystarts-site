@@ -8,7 +8,7 @@
 
 ## The earliest texts (1946–47)
 
-**Long Form Nine (1946).** "Each A.A. group needs the least possible organization" (p. 565). Groups elect a secretary or a rotating committee; the trustees act as A.A.'s General Service Committee. All such representatives "derive no real authority from their titles; they do not govern" (p. 565).
+**Long Form Nine (1946).** "Each A.A. group needs the least possible organization" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Groups elect a secretary or a rotating committee; the trustees act as A.A.'s General Service Committee. All such representatives "derive no real authority from their titles; they do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 **Bill's 1946 essay on money.** Of clubs, local offices and the New York office: "These are places of service; they cannot really control or govern A.A." (P-17, Money, 1946). If one became overbearing, members could simply stop paying for it: "These services must always serve us well or go out of business" (P-17, Money, 1946).
 
@@ -41,9 +41,9 @@ Concept XII is the Conference's own bond with A.A. It "shall never perform any a
 P-16, *The A.A. Group* (© 2018), says the same in plain words: "A.A. has no central authority, minimal organization, and a handful of Traditions instead of laws" (P-16).
 
 ## Read it yourself
-- Long Form Nine (Appendix I, p. 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Long Form Nine (Appendix I, [p. 565](https://recoverystarts.com/big-book/page-565/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, with Bill's 1946 and 1947 essays: https://www.aa.org/aa-tradition-how-it-developed
-- The Concepts, short form (Appendix VII, pp. 574–575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- The Concepts, short form (Appendix VII, [pp. 574–575](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - The full Concepts essays are in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -52,7 +52,7 @@ P-16, *The A.A. Group* (© 2018), says the same in plain words: "A.A. has no cen
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Nine | p. 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Nine | [p. 565](https://recoverystarts.com/big-book/page-565/) | 1946 |
 | P-17, Money (Bill W.) | — | Grapevine, 1946 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
 | *Twelve Concepts for World Service* (Bill W.), Concepts I, II, VI, IX, X, XI, XII | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |

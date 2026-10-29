@@ -1,14 +1,14 @@
 # Concept V: what are the Rights of Appeal and Petition?
 
 **In short:**
-- Concept V says: "Throughout our structure, a traditional ‘Right of Appeal’ ought to prevail, so that minority opinion will be heard and personal grievances receive careful consideration" (p. 574).
+- Concept V says: "Throughout our structure, a traditional ‘Right of Appeal’ ought to prevail, so that minority opinion will be heard and personal grievances receive careful consideration" ([p. 574](https://recoverystarts.com/big-book/page-574/)).
 - The **Right of Appeal** lets a minority on any staff, committee, board or among the trustees file a minority report, and on a grave issue obliges it to bring the report to the General Service Conference.
 - The **Right of Petition** lets anyone working in A.A.'s service structure, paid or unpaid, take a personal grievance directly to the General Service Board "without prejudice or fear of reprisal" (Twelve Concepts for World Service, Concept V).
 - Bill W. wrote it in 1962, but said these practices were already in use: he was writing them down only as a way of "helping to confirm and enlarge their future applications" (Twelve Concepts for World Service, Concept V).
 
 ## The earlier texts first (1946–47)
 
-- Long Form Three (1946): A.A. "may refuse none who wish to recover," and membership should never depend "upon money or conformity" (p. 563).
+- Long Form Three (1946): A.A. "may refuse none who wish to recover," and membership should never depend "upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - Bill's essay on money (1946), on clubs some members didn't want: "But the majority ought not to try to coerce the minority into supporting clubs they do not want or need" (P-17, Money, 1946).
 - Bill's essay on government (1947): A.A. has "no one set in personal authority over anyone else" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
 - The Conference Charter (1955): delegates elected "by a two-thirds written ballot or by lot" (The A.A. Service Manual, 2024–2026, Appendix K, Original Conference Charter, 1955), so a narrow majority can't simply sweep the field.
@@ -44,8 +44,8 @@ Concept XII's Fourth Warranty (same 1962 text) says a minority may not use subst
 
 
 ## Read it yourself
-- Long Form Three (Appendix I, p. 563), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept V, short form (Appendix VII, p. 574): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Three (Appendix I, [p. 563](https://recoverystarts.com/big-book/page-563/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept V, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 and 1947 essays: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -54,10 +54,10 @@ Concept XII's Fourth Warranty (same 1962 text) says a minority may not use subst
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Three | p. 563 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Three | [p. 563](https://recoverystarts.com/big-book/page-563/) | 1946 |
 | P-17, Money; Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1946 and 1947 |
 | Conference Charter, original text; current text | *The A.A. Service Manual*, 2024–2026, Appendix K | 1955; current as amended |
-| *Alcoholics Anonymous*, Appendix VII, Concept V (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept V (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concepts V and XII | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

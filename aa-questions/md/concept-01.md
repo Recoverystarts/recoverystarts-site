@@ -1,14 +1,14 @@
 # Concept I: who has the final say in A.A.?
 
 **In short:**
-- Concept I says: "Final responsibility and ultimate authority for A.A. world services should always reside in the collective conscience of our whole Fellowship" (p. 574). In plain terms, the A.A. groups, together, have the last word over A.A.'s shared services, not the trustees or the General Service Office.
+- Concept I says: "Final responsibility and ultimate authority for A.A. world services should always reside in the collective conscience of our whole Fellowship" ([p. 574](https://recoverystarts.com/big-book/page-574/)). In plain terms, the A.A. groups, together, have the last word over A.A.'s shared services, not the trustees or the General Service Office.
 - Bill W. wrote it in 1962. The groups had taken that authority over from the co-founders at the St. Louis convention in 1955. What made it urgent, Bill says, was the news in 1948 that Dr. Bob was fatally ill; he died in 1950.
-- Bill grounds it in Tradition Two, first printed in 1946: one ultimate authority, "a loving God as He may express Himself in our group conscience" (p. 563).
+- Bill grounds it in Tradition Two, first printed in 1946: one ultimate authority, "a loving God as He may express Himself in our group conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - Concept I is about world services. It doesn't give anyone authority over a group's own affairs.
 
 ## The earlier text first: Tradition Two (1946)
 
-The Long Form of Tradition Two: "For our group purpose there is but one ultimate authority—a loving God as He may express Himself in our group conscience" (p. 563). Long Form Nine adds that the trustees are, "in effect, our A.A. General Service Committee" (p. 565), and that A.A.'s servants "derive no real authority from their titles; they do not govern" (p. 565).
+The Long Form of Tradition Two: "For our group purpose there is but one ultimate authority—a loving God as He may express Himself in our group conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Long Form Nine adds that the trustees are, "in effect, our A.A. General Service Committee" ([p. 565](https://recoverystarts.com/big-book/page-565/)), and that A.A.'s servants "derive no real authority from their titles; they do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 In 1947 Bill described the trustees of the Alcoholic Foundation as "simple custodians" of the office, the Grapevine, A.A.'s funds and Traditions: "caretakers only" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
 
@@ -42,8 +42,8 @@ Concept I gives the groups ultimate authority, and the next Concepts explain why
 The short form of Concept I names "collective conscience"; Tradition Two names "a loving God as He may express Himself in our group conscience." Bill's essay treats them as one principle and doesn't say what would happen if they were thought to differ.
 
 ## Read it yourself
-- Tradition Two, short and long form (Appendix I, pp. 562–563), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept I, short form (Appendix VII, p. 574): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Tradition Two, short and long form (Appendix I, [pp. 562–563](https://recoverystarts.com/big-book/page-562/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept I, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1947 essay on government: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -52,9 +52,9 @@ The short form of Concept I names "collective conscience"; Tradition Two names "
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Two and Nine | pp. 563, 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Two and Nine | [pp. 563](https://recoverystarts.com/big-book/page-563/), 565 | 1946 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
-| *Alcoholics Anonymous*, Appendix VII, Concept I (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept I (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept I | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

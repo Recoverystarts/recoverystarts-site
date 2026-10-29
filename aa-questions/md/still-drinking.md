@@ -1,16 +1,16 @@
 # Can I go to A.A. if I'm still drinking?
 
 **In short:**
-- Yes, as A.A.'s own literature describes it. Tradition Three, in its short form (by 1950), asks for a desire to stop drinking, not for having stopped (p. 562). The 1946 Long Form says A.A. "may refuse none who wish to recover" (p. 563).
+- Yes, as A.A.'s own literature describes it. Tradition Three, in its short form (by 1950), asks for a desire to stop drinking, not for having stopped ([p. 562](https://recoverystarts.com/big-book/page-562/)). The 1946 Long Form says A.A. "may refuse none who wish to recover" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - Bill W. wrote in 1946 that under the groups' old membership rules most of the early members would have been thrown out, for reasons that included that they "slipped too much." A member who keeps coming to meetings drunk "may be led outside," but in most groups he can come back the next day if sober, and "He is a member as long as he says he is." (P-17, "Who Is a Member of Alcoholics Anonymous?", 1946).
-- The 1939 text was written to reach people who were still drinking. Chapter 7 is a guide to approaching them (pp. 89–96).
+- The 1939 text was written to reach people who were still drinking. Chapter 7 is a guide to approaching them ([pp. 89–96](https://recoverystarts.com/big-book/page-89/)).
 - The texts set no rule about how long you must be sober to attend. Today's group pamphlet leaves sobriety minimums for speakers and officers to each group (P-16, 2018).
 
 ## What Tradition Three asks
 
-The short form: "The only requirement for A.A. membership is a desire to stop drinking." (p. 562). The 1939 Foreword said "an honest desire to stop drinking" (p. xiv). Neither says a person must already have stopped.
+The short form: "The only requirement for A.A. membership is a desire to stop drinking." ([p. 562](https://recoverystarts.com/big-book/page-562/)). The 1939 Foreword said "an honest desire to stop drinking" ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)). Neither says a person must already have stopped.
 
-The Long Form puts it more widely: "Our membership ought to include all who suffer from alcoholism." (p. 563). Hence A.A. "may refuse none who wish to recover" (p. 563). See *What is the only requirement for A.A. membership?*
+The Long Form puts it more widely: "Our membership ought to include all who suffer from alcoholism." ([p. 563](https://recoverystarts.com/big-book/page-563/)). Hence A.A. "may refuse none who wish to recover" ([p. 563](https://recoverystarts.com/big-book/page-563/)). See *What is the only requirement for A.A. membership?*
 
 ## What Bill W. wrote in 1946
 
@@ -26,11 +26,11 @@ So the 1946 picture, which Bill says was "not yet unanimous" (same essay) but wa
 ## What the 1939 text says about drinkers
 
 The Big Book's way of carrying the message starts with people who are still drinking:
-- Find drinkers who want to recover (p. 89). If a man doesn't want to stop, don't waste time persuading him (p. 90).
-- "Don't deal with him when he is very drunk, unless he is ugly and the family needs your help." (p. 90). Wait for the end of the spree, or a lucid interval (p. 90). Call on him "while he is still jittery" (p. 91).
-- Chapter 11's first weekly meeting, in the western city a later footnote identifies as Akron (p. 156), was set apart as "a time and place where new people might bring their problems" (p. 160).
+- Find drinkers who want to recover ([p. 89](https://recoverystarts.com/big-book/page-89/)). If a man doesn't want to stop, don't waste time persuading him ([p. 90](https://recoverystarts.com/big-book/page-90/)).
+- "Don't deal with him when he is very drunk, unless he is ugly and the family needs your help." ([p. 90](https://recoverystarts.com/big-book/page-90/)). Wait for the end of the spree, or a lucid interval ([p. 90](https://recoverystarts.com/big-book/page-90/)). Call on him "while he is still jittery" ([p. 91](https://recoverystarts.com/big-book/page-91/)).
+- Chapter 11's first weekly meeting, in the western city a later footnote identifies as Akron ([p. 156](https://recoverystarts.com/big-book/page-156/)), was set apart as "a time and place where new people might bring their problems" ([p. 160](https://recoverystarts.com/big-book/page-160/)).
 
-The book is also plain that some people drink again after starting. Chapter 3 says the many remedies members tried brought, at best, "brief recovery, followed always by a still worse relapse" (p. 31). Chapter 8 tells a wife whose husband comes home drunk after a fair start that it is "infinitely better that he have no relapse at all," but that a relapse "is by no means a bad thing in some cases" if he really wants to stop (p. 120). The Foreword to the Second Edition (1955) reports that of those who came to A.A. and really tried, 25% "sobered up after some relapses" (p. xx).
+The book is also plain that some people drink again after starting. Chapter 3 says the many remedies members tried brought, at best, "brief recovery, followed always by a still worse relapse" ([p. 31](https://recoverystarts.com/big-book/page-31/)). Chapter 8 tells a wife whose husband comes home drunk after a fair start that it is "infinitely better that he have no relapse at all," but that a relapse "is by no means a bad thing in some cases" if he really wants to stop ([p. 120](https://recoverystarts.com/big-book/page-120/)). The Foreword to the Second Edition (1955) reports that of those who came to A.A. and really tried, 25% "sobered up after some relapses" ([p. xx](https://recoverystarts.com/big-book/page-xx/)).
 
 ## Later (2018)
 
@@ -41,9 +41,9 @@ The book is also plain that some people drink again after starting. Chapter 3 sa
 None of these texts says a person has to arrive sober, or has to have stopped drinking for any length of time, to attend an A.A. meeting or to be a member. They don't promise that a group will put up with any behavior either: the 1946 essay expects a drunk who disrupts meetings to be led outside, for the day.
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Chapter 7, "Working With Others" (pp. 89–103): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Chapter 7, "Working With Others" ([pp. 89–103](https://recoverystarts.com/big-book/page-89/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Can anyone be thrown out of A.A.?* · *What is the only requirement for A.A. membership?* · *How do I know if I'm an alcoholic?*

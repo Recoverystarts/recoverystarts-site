@@ -8,11 +8,11 @@
 
 ## What the book says about itself
 
-**Foreword to the First Edition (1939).** The first paragraph states the aim: "To show other alcoholics precisely how we have recovered is the main purpose of this book." (p. xiii). It also hopes to help everyone understand that the alcoholic is a very sick person (p. xiii), and it asks to hear from readers who get results, "particularly from those who have commenced work with other alcoholics" (p. xiv).
+**Foreword to the First Edition (1939).** The first paragraph states the aim: "To show other alcoholics precisely how we have recovered is the main purpose of this book." ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). It also hopes to help everyone understand that the alcoholic is a very sick person ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and it asks to hear from readers who get results, "particularly from those who have commenced work with other alcoholics" ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)).
 
-**Chapter 11, "A Vision for You" (1939).** The last chapter pictures what the authors hoped the book would do: that "when this chip of a book is launched on the world tide of alcoholism" (p. 153), defeated drinkers would follow it, approach other sick drinkers, and start fellowships in every city (p. 153). It speaks directly to a reader who may never meet them: "We believe and hope it contains all you will need to begin." (p. 163). And it stays modest: "Our book is meant to be suggestive only." (Chapter 11, p. 164).
+**Chapter 11, "A Vision for You" (1939).** The last chapter pictures what the authors hoped the book would do: that "when this chip of a book is launched on the world tide of alcoholism" ([p. 153](https://recoverystarts.com/big-book/page-153/)), defeated drinkers would follow it, approach other sick drinkers, and start fellowships in every city ([p. 153](https://recoverystarts.com/big-book/page-153/)). It speaks directly to a reader who may never meet them: "We believe and hope it contains all you will need to begin." ([p. 163](https://recoverystarts.com/big-book/page-163/)). And it stays modest: "Our book is meant to be suggestive only." (Chapter 11, [p. 164](https://recoverystarts.com/big-book/page-164/)).
 
-**Foreword to the Second Edition (1955).** Looking back, it says that by late 1937 enough members had lasting sobriety to convince them "a new light had entered the dark world of the alcoholic" (p. xvii). "It was now time, the struggling groups thought, to place their message and unique experience before the world." (p. xvii). The result was this volume, published in the spring of 1939, when membership "had then reached about 100 men and women" (p. xvii). "The fledgling society, which had been nameless, now began to be called Alcoholics Anonymous, from the title of its own book." (p. xvii).
+**Foreword to the Second Edition (1955).** Looking back, it says that by late 1937 enough members had lasting sobriety to convince them "a new light had entered the dark world of the alcoholic" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)). "It was now time, the struggling groups thought, to place their message and unique experience before the world." ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)). The result was this volume, published in the spring of 1939, when membership "had then reached about 100 men and women" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)). "The fledgling society, which had been nameless, now began to be called Alcoholics Anonymous, from the title of its own book." ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)).
 
 ## How the decision was made (later accounts)
 
@@ -28,18 +28,18 @@
 | Bill drafts the first two chapters | late spring 1938 | P-44 |
 | The Twelve Steps are written | 1938 | P-53, Bill W.'s 1969 talk; Dr. Bob's 1948 talk ("It wasn't until 1938") |
 | Story section and text finished | late January 1939 | *Comes of Age* (1957) |
-| Book published | April 1939 ("spring of 1939" in the 1955 foreword, p. xvii) | P-44; *Comes of Age* (1957) |
+| Book published | April 1939 ("spring of 1939" in the 1955 foreword, [p. xvii](https://recoverystarts.com/big-book/page-xvii/)) | P-44; *Comes of Age* (1957) |
 
 The sources agree on these dates. The Big Book itself, in 1939, doesn't date its own writing; the details come from Bill's later accounts.
 
 ## Why it matters
 
-The reason the book gives for itself is practical: there were only about a hundred members, and they wanted to show other alcoholics precisely how they had recovered (p. xiii). Bill's later accounts add that they couldn't reach every drinker in person and wanted a text that would carry the message without being twisted (A.A. Comes of Age, 1957). It was written so that "one man with this book in your hand" (p. 163) could begin the same work alone.
+The reason the book gives for itself is practical: there were only about a hundred members, and they wanted to show other alcoholics precisely how they had recovered ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). Bill's later accounts add that they couldn't reach every drinker in person and wanted a text that would carry the message without being twisted (A.A. Comes of Age, 1957). It was written so that "one man with this book in your hand" ([p. 163](https://recoverystarts.com/big-book/page-163/)) could begin the same work alone.
 
 ## Read it yourself
-- Foreword to the First Edition (pp. xiii–xiv), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
-- Chapter 11, *A Vision for You* (pp. 151–164): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Chapter 11, *A Vision for You* ([pp. 151–164](https://recoverystarts.com/big-book/page-151/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
 - P-44, *A.A.'s Legacy of Service*, on aa.org: https://www.aa.org/aas-legacy-service
 - *A.A. Comes of Age* is sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What does the Foreword to the First Edition say A.A. is for?* · *How many members were there in 1939?*

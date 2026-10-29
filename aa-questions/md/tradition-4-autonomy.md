@@ -1,20 +1,20 @@
 # Tradition Four: can GSO tell a group what to do?
 
 **In short:**
-- Not about the group's own affairs. The Long Form says that in its own affairs each group "should be responsible to no other authority than its own conscience" (p. 563).
-- The Long Form does set limits on the group, though. If its plans affect neighbouring groups, it should consult them. And no group, committee or individual should take an action that might greatly affect A.A. as a whole "without conferring with the trustees of the General Service Board" (p. 563).
+- Not about the group's own affairs. The Long Form says that in its own affairs each group "should be responsible to no other authority than its own conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- The Long Form does set limits on the group, though. If its plans affect neighbouring groups, it should consult them. And no group, committee or individual should take an action that might greatly affect A.A. as a whole "without conferring with the trustees of the General Service Board" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - Conferring isn't obeying. Bill W. wrote in 1947 that there is no human authority in A.A. that "can compel an A.A. group to do anything" (P-17, "Will A.A. Ever Have a Personal Government?", 1947). The New York office gives information and advice; a group is free to take it or leave it, and free to be wrong.
 
 ## What the Long Form says
 
-Tradition Four in its original form has three parts (p. 563):
-1. **Its own affairs.** "With respect to its own affairs, each A.A. group should be responsible to no other authority than its own conscience." (p. 563).
-2. **Its neighbours.** When a group's plans concern the welfare of neighbouring groups, "those groups ought to be consulted" (p. 563).
-3. **A.A. as a whole.** No group, regional committee or individual should take any action that might greatly affect A.A. as a whole without conferring with the trustees. "On such issues our common welfare is paramount." (p. 563).
+Tradition Four in its original form has three parts ([p. 563](https://recoverystarts.com/big-book/page-563/)):
+1. **Its own affairs.** "With respect to its own affairs, each A.A. group should be responsible to no other authority than its own conscience." ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+2. **Its neighbours.** When a group's plans concern the welfare of neighbouring groups, "those groups ought to be consulted" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+3. **A.A. as a whole.** No group, regional committee or individual should take any action that might greatly affect A.A. as a whole without conferring with the trustees. "On such issues our common welfare is paramount." ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
-The short form shrinks this to "Each group should be autonomous except in matters affecting other groups or A.A. as a whole" (p. 562). The Long Form makes clear what "except" asks for: consulting and conferring.
+The short form shrinks this to "Each group should be autonomous except in matters affecting other groups or A.A. as a whole" ([p. 562](https://recoverystarts.com/big-book/page-562/)). The Long Form makes clear what "except" asks for: consulting and conferring.
 
-A note on names. In 1946 the text said "the trustees of The Alcoholic Foundation" (P-17, Foreword, 1955). The Foundation was renamed the General Service Board in 1954, and "the Foundation office is now the General Service Office" (P-17, Foreword, 1955). So "GSO" is the office the trustees oversee. The Big Book's printing of the Long Form uses the new name (p. 563).
+A note on names. In 1946 the text said "the trustees of The Alcoholic Foundation" (P-17, Foreword, 1955). The Foundation was renamed the General Service Board in 1954, and "the Foundation office is now the General Service Office" (P-17, Foreword, 1955). So "GSO" is the office the trustees oversee. The Big Book's printing of the Long Form uses the new name ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 ## What the office can and can't do (1946–47)
 
@@ -34,12 +34,12 @@ That story shows Tradition Four working both ways. New York gave its experience;
 
 ## What the Tradition doesn't say
 
-It doesn't say a group may do anything at all. Its own conscience is the authority over its own affairs, but the Long Form asks it to think of other groups and of A.A. as a whole, and the other Traditions still apply to it: no outside affiliation (p. 563), no business, no endorsements (p. 564).
+It doesn't say a group may do anything at all. Its own conscience is the authority over its own affairs, but the Long Form asks it to think of other groups and of A.A. as a whole, and the other Traditions still apply to it: no outside affiliation ([p. 563](https://recoverystarts.com/big-book/page-563/)), no business, no endorsements ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
 It also doesn't make the trustees or GSO a court that rules on what a group does. The Long Form asks groups to confer with the trustees on A.A.-wide matters; it gives the trustees no power to command, and the 1946–47 essays say plainly they have none.
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - *Alcoholics Anonymous Comes of Age* is sold by A.A. World Services at https://onlineliterature.aa.org
 - Related: *Tradition Two: does anyone have authority in A.A.?*

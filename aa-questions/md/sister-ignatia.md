@@ -3,12 +3,12 @@
 **In short:**
 - Sister Ignatia was a nun of the Sisters of Charity of St. Augustine who worked in the admitting office of St. Thomas Hospital in Akron, Ohio. Starting around 1939–40, she and Dr. Bob admitted alcoholics there for treatment, the first religious hospital to take A.A. prospects on a regular basis.
 - In the St. Thomas ward a newcomer was treated medically and visited by A.A. members, and Dr. Bob saw the patients without charge. By the time he died in 1950, the sources say about 5,000 alcoholics had passed through.
-- Today's Big Book calls her "one of the greatest friends our Fellowship will ever know" (p. 171). That line is in the introduction to Dr. Bob's story, written after 1950; the 1939 text doesn't mention her.
+- Today's Big Book calls her "one of the greatest friends our Fellowship will ever know" ([p. 171](https://recoverystarts.com/big-book/page-171/)). That line is in the introduction to Dr. Bob's story, written after 1950; the 1939 text doesn't mention her.
 - She later ran an alcoholic ward at St. Vincent Charity Hospital in Cleveland. Our later printing of *A.A. Comes of Age* says she died in 1966.
 
 ## What the Big Book says
 
-The 1939 Big Book doesn't mention Sister Ignatia or St. Thomas Hospital. The introduction to "Doctor Bob's Nightmare" in today's edition, written after his death in 1950, says that he carried the message to more than 5,000 alcoholics and gave his medical services "without thought of charge" (p. 171), and that "In this prodigy of service, he was well assisted by Sister Ignatia at St. Thomas Hospital in Akron, Ohio" (p. 171), "one of the greatest friends our Fellowship will ever know" (p. 171).
+The 1939 Big Book doesn't mention Sister Ignatia or St. Thomas Hospital. The introduction to "Doctor Bob's Nightmare" in today's edition, written after his death in 1950, says that he carried the message to more than 5,000 alcoholics and gave his medical services "without thought of charge" ([p. 171](https://recoverystarts.com/big-book/page-171/)), and that "In this prodigy of service, he was well assisted by Sister Ignatia at St. Thomas Hospital in Akron, Ohio" ([p. 171](https://recoverystarts.com/big-book/page-171/)), "one of the greatest friends our Fellowship will ever know" ([p. 171](https://recoverystarts.com/big-book/page-171/)).
 
 ## The co-founders' own words (1948, 1969)
 
@@ -32,11 +32,11 @@ It describes how the ward worked: a priest she sent to look into A.A. reported w
 
 ## Where the sources differ
 - **When it started.** *Dr. Bob and the Good Oldtimers* (1980) says August 1939 . Bill (1957) says "From 1939" (A.A. Comes of Age, 1957), but in the same passage calls 1950 "ten years after the start of Dr. Bob's and Sister Ignatia's pioneering" (A.A. Comes of Age, 1957). In 1969 he said "Between 1940 and 1950" (P-53).
-- **How many.** About 5,000 (p. 171; P-53; P-44); "over 5,000" (A.A. Comes of Age, 1957); "several thousand alcoholics by the time of Dr. Bob's death in 1950" (A.A. Comes of Age, 1957); 4,800 admitted under his care (Dr. Bob and the Good Oldtimers, 1980). The 1939 Big Book gives no figure, since the ward hadn't begun.
+- **How many.** About 5,000 ([p. 171](https://recoverystarts.com/big-book/page-171/); P-53; P-44); "over 5,000" (A.A. Comes of Age, 1957); "several thousand alcoholics by the time of Dr. Bob's death in 1950" (A.A. Comes of Age, 1957); 4,800 admitted under his care (Dr. Bob and the Good Oldtimers, 1980). The 1939 Big Book gives no figure, since the ward hadn't begun.
 - **Treated, or recovered.** Most sources say treated or admitted; P-53's sketch says he "guided some 5,000 fellow alcoholics to recovery" (P-53). Our sources don't say how many of those treated stayed sober.
 
 ## Read it yourself
-- "Doctor Bob's Nightmare" and its introduction (pp. 171–181), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- "Doctor Bob's Nightmare" and its introduction ([pp. 171–181](https://recoverystarts.com/big-book/page-171/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Who was Dr. Bob?* · *When did Dr. Bob die, and what were his last words to A.A.?* · *Does the Big Book endorse treatment centres?*
@@ -51,4 +51,5 @@ It describes how the ward worked: a priest she sent to look into A.A. reported w
 | *Dr. Bob and the Good Oldtimers* | — | 1980 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44, P-53,* A.A. Comes of Age *and* Dr. Bob and the Good Oldtimers *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

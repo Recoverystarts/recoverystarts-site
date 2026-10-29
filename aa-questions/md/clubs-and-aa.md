@@ -22,7 +22,7 @@
 
 ## The Long Form of Tradition Six (1946)
 
-The Long Form puts the same experience into one paragraph. Any considerable property of real use to A.A. should be separately incorporated and managed, "thus dividing the material from the spiritual" (p. 564). An A.A. group shouldn't go into business. Secondary aids "such as clubs or hospitals" should be incorporated and set apart so that, if necessary, "they can be freely discarded by the groups" (p. 564). They shouldn't use the A.A. name, and they should be managed by those who pay for them. "For clubs, A.A. managers are usually preferred" (p. 564), while hospitals belong well outside A.A.
+The Long Form puts the same experience into one paragraph. Any considerable property of real use to A.A. should be separately incorporated and managed, "thus dividing the material from the spiritual" ([p. 564](https://recoverystarts.com/big-book/page-564/)). An A.A. group shouldn't go into business. Secondary aids "such as clubs or hospitals" should be incorporated and set apart so that, if necessary, "they can be freely discarded by the groups" ([p. 564](https://recoverystarts.com/big-book/page-564/)). They shouldn't use the A.A. name, and they should be managed by those who pay for them. "For clubs, A.A. managers are usually preferred" ([p. 564](https://recoverystarts.com/big-book/page-564/)), while hospitals belong well outside A.A.
 
 ## In "Money" (1946)
 
@@ -34,7 +34,7 @@ The 2018 pamphlet *The A.A. Group* (P-16) carries this forward: owning and manag
 
 ## Read it yourself
 - P-17, *A.A. Tradition: How It Developed* ("Clubs in A.A." pp. 17–22; "Money" pp. 27–35), free from A.A.: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
-- Appendix I, the Long Form of the Traditions (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Tradition Six: can an A.A. group partner with a treatment centre?* · *What does "no outside affiliation" mean in practice?* · *Tradition Seven: does A.A. take outside money?*
 

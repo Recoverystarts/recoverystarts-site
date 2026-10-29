@@ -1,25 +1,25 @@
 # What does "no outside affiliation" mean in practice?
 
 **In short:**
-- It means an A.A. group may cooperate with anyone, but never so far as "affiliation or endorsement, actual or implied." "An A.A. group can bind itself to no one" (p. 564).
-- A group is an A.A. group only if, as a group, it has "no other affiliation" (p. 563). It doesn't go into business, lend A.A.'s name to any facility or cause, take money with strings, or take sides on outside controversies.
+- It means an A.A. group may cooperate with anyone, but never so far as "affiliation or endorsement, actual or implied." "An A.A. group can bind itself to no one" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- A group is an A.A. group only if, as a group, it has "no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)). It doesn't go into business, lend A.A.'s name to any facility or cause, take money with strings, or take sides on outside controversies.
 - It limits A.A. groups and A.A. as a whole. In 1947 Bill W. wrote that individual members are free to work in hospitals, research or education, as individuals, so long as they keep A.A.'s name out of it.
 - In practice it was learned from failures: groups that ran drying-out places and "A.A. hospitals," and members who tied A.A.'s name to causes.
 
 ## What the Long Form says (1946)
 
-**Tradition Three: what a group is.** Any two or three alcoholics gathered for sobriety may call themselves an A.A. group, "provided that, as a group, they have no other affiliation" (p. 563).
+**Tradition Three: what a group is.** Any two or three alcoholics gathered for sobriety may call themselves an A.A. group, "provided that, as a group, they have no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
-**Tradition Six: how far cooperation goes.** Problems of money, property and authority "may easily divert us from our primary spiritual aim" (p. 563). So:
-- Any considerable property useful to A.A. should be separately incorporated, dividing the material from the spiritual (pp. 563–564).
-- "An A.A. group, as such, should never go into business" (p. 564).
-- Clubs and hospitals should be set apart so the groups can drop them if necessary, and shouldn't use the A.A. name (p. 564).
-- Hospitals and places of recuperation "ought to be well outside A.A. — and medically supervised" (p. 564).
-- "While an A.A. group may cooperate with anyone, such cooperation ought never go so far as affiliation or endorsement, actual or implied" (p. 564).
+**Tradition Six: how far cooperation goes.** Problems of money, property and authority "may easily divert us from our primary spiritual aim" ([p. 563](https://recoverystarts.com/big-book/page-563/)). So:
+- Any considerable property useful to A.A. should be separately incorporated, dividing the material from the spiritual ([pp. 563–564](https://recoverystarts.com/big-book/page-563/)).
+- "An A.A. group, as such, should never go into business" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- Clubs and hospitals should be set apart so the groups can drop them if necessary, and shouldn't use the A.A. name ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- Hospitals and places of recuperation "ought to be well outside A.A. — and medically supervised" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- "While an A.A. group may cooperate with anyone, such cooperation ought never go so far as affiliation or endorsement, actual or implied" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
-**Tradition Seven: no strings.** No contributions "carrying any obligation whatever" (p. 564), and no public fund-raising in A.A.'s name, whether by groups, clubs, hospitals or outside agencies (p. 564).
+**Tradition Seven: no strings.** No contributions "carrying any obligation whatever" ([p. 564](https://recoverystarts.com/big-book/page-564/)), and no public fund-raising in A.A.'s name, whether by groups, clubs, hospitals or outside agencies ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
-**Tradition Ten: no sides.** "The Alcoholics Anonymous groups oppose no one" (p. 565).
+**Tradition Ten: no sides.** "The Alcoholics Anonymous groups oppose no one" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 ## What it looked like in practice (Bill W., 1946–47)
 
@@ -40,7 +40,7 @@ Bill's 1955 foreword asks A.A. to "steadfastly decline all political, sectarian,
 It doesn't mean groups can't meet in churches, hospitals or treatment centres (a later pamphlet describes such groups as renting space there; P-16, 2018, pp. 17–18), or that A.A. can't work alongside hospitals and doctors; all of that is cooperation. It doesn't stop individual members working in other fields as individuals, provided they keep A.A.'s name out of it, and it doesn't bind outside organizations. What it rules out is a group, or A.A., belonging to, endorsing, financing, or lending its name to anything outside A.A.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Hospitals and A.A.," pp. 15–16; "Dangers in Linking A.A. to Other Projects," pp. 23–26; "Money," pp. 27–35): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - Related: *Tradition Six: can an A.A. group partner with a treatment centre?* · *Can an A.A. group be named after a treatment centre or a person?* · *Tradition Ten: does A.A. take sides on outside issues?*
 

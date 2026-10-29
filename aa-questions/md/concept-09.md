@@ -1,14 +1,14 @@
 # Concept IX: what makes a good leader in A.A. service?
 
 **In short:**
-- Concept IX says: "Good service leadership at all levels is indispensable for our future functioning and safety" (p. 575), and that the world service leadership once given by the founders must now be taken on by the trustees.
+- Concept IX says: "Good service leadership at all levels is indispensable for our future functioning and safety" ([p. 575](https://recoverystarts.com/big-book/page-575/)), and that the world service leadership once given by the founders must now be taken on by the trustees.
 - Bill W.'s answer to the question, mostly from a 1959 Grapevine article he includes in the 1962 essay: a leader is neither a faceless order-taker nor a boss. Good leadership makes plans but consults widely, gives credit, never passes the buck, gives reasons, compromises when it can and stands firm when it must, takes criticism, and thinks ahead.
-- The earlier texts already said the core of it. Long Form Nine (1946): "Rotating leadership is the best" (p. 565). Bill in 1947: a leader "can always guide by example or persuasion" but "can never boss" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
+- The earlier texts already said the core of it. Long Form Nine (1946): "Rotating leadership is the best" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Bill in 1947: a leader "can always guide by example or persuasion" but "can never boss" (P-17, Will A.A. Ever Have a Personal Government?, 1947).
 - Bill also says the leadership question can never be solved for good: good leaders "can be here today and gone tomorrow."
 
 ## The earlier texts first (1946–47)
 
-Long Form Nine (1946) asks for the least possible organization in each group, and says: "Rotating leadership is the best" (p. 565). All representatives "are to be guided in the spirit of service, for true leaders in A.A. are but trusted and experienced servants of the whole" (p. 565). "Universal respect is the key to their usefulness" (p. 565).
+Long Form Nine (1946) asks for the least possible organization in each group, and says: "Rotating leadership is the best" ([p. 565](https://recoverystarts.com/big-book/page-565/)). All representatives "are to be guided in the spirit of service, for true leaders in A.A. are but trusted and experienced servants of the whole" ([p. 565](https://recoverystarts.com/big-book/page-565/)). "Universal respect is the key to their usefulness" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 Bill's 1947 essay: some groups elect leaders, but "even with such a mandate each leader soon discovers that while he can always guide by example or persuasion he can never boss" (P-17, Will A.A. Ever Have a Personal Government?, 1947), or he'll be passed over at the next election.
 
@@ -45,8 +45,8 @@ Concept IX says the board's leadership needs strengthening and that the change o
 P-8 (© 2017) reprints most of the leadership points and adds that GSRs, together in their areas, elect the area's candidates for trustee. P-8 describes the GSR as the indispensable link between the group and A.A. as a whole; Bill calls GSRs, committee members and delegates together the indispensable linkage between the Fellowship and its world service.
 
 ## Read it yourself
-- Long Form Nine (Appendix I, p. 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept IX, short form (Appendix VII, p. 575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Nine (Appendix I, [p. 565](https://recoverystarts.com/big-book/page-565/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept IX, short form (Appendix VII, [p. 575](https://recoverystarts.com/big-book/page-575/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1947 essay on government: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -55,9 +55,9 @@ P-8 (© 2017) reprints most of the leadership points and adds that GSRs, togethe
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Nine | p. 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Nine | [p. 565](https://recoverystarts.com/big-book/page-565/) | 1946 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
-| *Alcoholics Anonymous*, Appendix VII, Concept IX (short form) | p. 575 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept IX (short form) | [p. 575](https://recoverystarts.com/big-book/page-575/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept IX, including "Leadership in A.A.: Ever a Vital Need" | in *The A.A. Service Manual*, 2024–2026 edition | essay 1962; article Grapevine 1959 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

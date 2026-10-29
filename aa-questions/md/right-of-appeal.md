@@ -1,14 +1,14 @@
 # What is the Right of Appeal, and why does the minority matter?
 
 **In short:**
-- The Right of Appeal is Bill W.'s Fifth Concept (1962): throughout A.A.'s world service structure, "minority opinion will be heard and personal grievances receive careful consideration" (p. 574).
+- The Right of Appeal is Bill W.'s Fifth Concept (1962): throughout A.A.'s world service structure, "minority opinion will be heard and personal grievances receive careful consideration" ([p. 574](https://recoverystarts.com/big-book/page-574/)).
 - It has two parts. A minority that thinks the majority is badly wrong is encouraged to file a minority report, and on a grave issue has a duty to take it to the General Service Conference. And anyone working in the structure, paid or unpaid, may petition the General Service Board over a personal grievance "without prejudice or fear of reprisal" (Twelve Concepts for World Service, Concept V).
 - Why: minorities are often right, and even when they're wrong they force a real debate. "The well-heard minority, therefore, is our chief protection against an uninformed, misinformed, hasty or angry majority" (Twelve Concepts for World Service, Concept V).
 - A related idea is older than the Concepts. In 1946, writing about who should pay for clubs, Bill said that "the majority ought not to try to coerce the minority" (P-17, Money, 1946).
 
 ## Earlier texts (1946–47)
 
-The Long Form of the Traditions protects the individual first: A.A. "may refuse none who wish to recover," and membership should never depend "upon money or conformity" (p. 563).
+The Long Form of the Traditions protects the individual first: A.A. "may refuse none who wish to recover," and membership should never depend "upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 Bill's 1946 essay on money applies it to a disagreement. Most members liked clubs, but not all, so club support should come from those who wanted them: "But the majority ought not to try to coerce the minority into supporting clubs they do not want or need" (P-17, Money, 1946).
 
@@ -48,7 +48,7 @@ Concept XII's Fourth Warranty asks for decisions by "substantial unanimity" when
 Concept V was written for the world service structure: staffs, committees, boards, trustees, the Conference. It doesn't set out a procedure for a member who disagrees with a home group's decision. Bill's introduction says these principles "can of course be used to good effect throughout our entire structure" (Twelve Concepts for World Service, Introduction), and P-8 says the same principle should apply to area committees and boards, but neither lays down rules for a group.
 
 ## Read it yourself
-- The Concepts, short form (Appendix VII, p. 574), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- The Concepts, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 and 1947 essays: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full Concept V essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -57,10 +57,10 @@ Concept V was written for the world service structure: staffs, committees, board
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Three | p. 563 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Three | [p. 563](https://recoverystarts.com/big-book/page-563/) | 1946 |
 | P-17, Money; Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1946 and 1947 |
 | Conference Charter, original text | *The A.A. Service Manual*, 2024–2026, Appendix K | 1955 |
-| *Alcoholics Anonymous*, Appendix VII, Concept V (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept V (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Introduction, Concepts V and XII | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 | *The A.A. Service Manual*, Chapter 6; current Conference Charter | — | 2024–2026 edition |

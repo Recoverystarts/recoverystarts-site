@@ -8,7 +8,7 @@
 
 ## The earliest text: Long Form Nine (1946)
 
-The 1946 Long Form describes the service A.A. had then: "The small group may elect its secretary, the large group its rotating committee, and the groups of a large metropolitan area their central or intergroup committee, which often employs a full-time secretary" (p. 565). Above them were the trustees, A.A.'s General Service Committee in New York (p. 565). There were no GSRs, districts or delegates yet; the Conference that needed them came in 1951.
+The 1946 Long Form describes the service A.A. had then: "The small group may elect its secretary, the large group its rotating committee, and the groups of a large metropolitan area their central or intergroup committee, which often employs a full-time secretary" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Above them were the trustees, A.A.'s General Service Committee in New York ([p. 565](https://recoverystarts.com/big-book/page-565/)). There were no GSRs, districts or delegates yet; the Conference that needed them came in 1951.
 
 ## The 1955 Charter and the 1962 Concepts
 
@@ -34,7 +34,7 @@ Concept III adds what the delegate is for. Delegates are "primarily the world se
 - **Not the intergroup.** Intergroups and central offices keep local meeting lists and phones. The manual says they are an important part of A.A. but "they are not part of the general service structure or a satellite of GSO" (The A.A. Service Manual, 2024–2026, Introduction).
 
 ## Read it yourself
-- Long Form Nine (Appendix I, p. 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Long Form Nine (Appendix I, [p. 565](https://recoverystarts.com/big-book/page-565/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-16, *The A.A. Group* (the GSR and the structure chart): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
@@ -43,7 +43,7 @@ Concept III adds what the delegate is for. Delegates are "primarily the world se
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Nine | p. 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Nine | [p. 565](https://recoverystarts.com/big-book/page-565/) | 1946 |
 | Conference Charter, original text and footnoted amendments | *The A.A. Service Manual*, 2024–2026, Appendix K | 1955; amendments 1971, 1978 |
 | *Twelve Concepts for World Service* (Bill W.), Concepts III, IX, XII | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | *The A.A. Service Manual*, Introduction, Chapters 1, 2, 6, Glossary | — | 2024–2026 edition (current procedure) |

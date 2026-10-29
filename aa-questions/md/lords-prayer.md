@@ -1,14 +1,14 @@
 # Why do some meetings close with the Lord's Prayer?
 
 **In short:**
-- The Big Book's program text (pp. 1–164) never mentions the Lord's Prayer, and nothing in our sources say A.A. adopted it as a rule or explains where the custom began.
+- The Big Book's program text ([pp. 1–164](https://recoverystarts.com/big-book/page-1/)) never mentions the Lord's Prayer, and nothing in our sources say A.A. adopted it as a rule or explains where the custom began.
 - What our sources do show is that it was already the custom before the Big Book. A member's story and members' recollections describe Akron meetings in the late 1930s, including those in an Oxford Group home, closing with the Lord's Prayer, and early Cleveland meetings did the same.
 - Writing in 1957 about the early 1940s, Bill W. called it one of A.A.'s "favorites," alongside the Prayer of St. Francis, when the Serenity Prayer joined them (A.A. Comes of Age, 1957).
 - The fourth-edition stories show members experiencing it differently: one found deep meaning in it, and a Jewish member was told by his sponsor he could say something else.
 
 ## What the Big Book's main text says
 
-The first 164 pages don't name the Lord's Prayer. They suggest prayer in the member's own words, with sample prayers and the line "Thy will be done" (pp. 67, 88), and they say members who aren't in a religious body sometimes "select and memorize a few set prayers" (p. 87). The book doesn't say which prayer, if any, should open or close a meeting.
+The first 164 pages don't name the Lord's Prayer. They suggest prayer in the member's own words, with sample prayers and the line "Thy will be done" ([pp. 67](https://recoverystarts.com/big-book/page-67/), 88), and they say members who aren't in a religious body sometimes "select and memorize a few set prayers" ([p. 87](https://recoverystarts.com/big-book/page-87/)). The book doesn't say which prayer, if any, should open or close a meeting.
 
 ## The earliest pictures of the custom
 
@@ -32,25 +32,25 @@ An early Ohio member, Oscar W., speaking of the 1940s, said: "Most of us in Akro
 ## Members' stories today
 
 The fourth edition's stories show the range:
-- In "It Might Have Been Worse," a member lists what spiritual experience meant to him, including "hearing the Lord's Prayer, which in an A.A. meeting has such great meaning" (p. 356).
-- In "A Drunk, Like You," a Jewish member found closing with it "the last big hurdle" (p. 406). His sponsor told him to "say something else that you like" (p. 406), and he came to separate religion from A.A.'s spiritual program (p. 406).
+- In "It Might Have Been Worse," a member lists what spiritual experience meant to him, including "hearing the Lord's Prayer, which in an A.A. meeting has such great meaning" ([p. 356](https://recoverystarts.com/big-book/page-356/)).
+- In "A Drunk, Like You," a Jewish member found closing with it "the last big hurdle" ([p. 406](https://recoverystarts.com/big-book/page-406/)). His sponsor told him to "say something else that you like" ([p. 406](https://recoverystarts.com/big-book/page-406/)), and he came to separate religion from A.A.'s spiritual program ([p. 406](https://recoverystarts.com/big-book/page-406/)).
 
 These are members' experiences, not program text. See *Are the personal stories part of the A.A. program?*
 
-Nothing in our sources prescribes a closing prayer for meetings. On how much a group decides for itself, see *Tradition Four: can GSO tell a group what to do?*; on religion, *Is A.A. a religious organization?* The 1955 Foreword says plainly: "Alcoholics Anonymous is not a religious organization." (p. xx).
+Nothing in our sources prescribes a closing prayer for meetings. On how much a group decides for itself, see *Tradition Four: can GSO tell a group what to do?*; on religion, *Is A.A. a religious organization?* The 1955 Foreword says plainly: "Alcoholics Anonymous is not a religious organization." ([p. xx](https://recoverystarts.com/big-book/page-xx/)).
 
 ## Read it yourself
-- Chapter 6, "Into Action" (pp. 72–88): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
-- Personal Stories Part I, "He Sold Himself Short" (pp. 258–267): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
-- Personal Stories Part II (pp. 356, 406): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partII.pdf
-- Foreword to the Second Edition (p. xx): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Chapter 6, "Into Action" ([pp. 72–88](https://recoverystarts.com/big-book/page-72/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
+- Personal Stories Part I, "He Sold Himself Short" ([pp. 258–267](https://recoverystarts.com/big-book/page-258/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- Personal Stories Part II ([pp. 356](https://recoverystarts.com/big-book/page-356/), 406): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partII.pdf
+- Foreword to the Second Edition ([p. xx](https://recoverystarts.com/big-book/page-xx/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Where did the Serenity Prayer come from in A.A.?* · *What did the first members read before the Big Book existed?* · *What did early A.A. take from the Oxford Group, and why did it separate?* · *What happens at an A.A. meeting?*
 
 ## Sources
 | Source | Pages | Date |
 |---|---|---|
-| *Alcoholics Anonymous*, Chapters 5 and 6 (pp. 1–164 searched in full) | 67, 87, 88 | 1939 |
+| *Alcoholics Anonymous*, Chapters 5 and 6 ([pp. 1–164](https://recoverystarts.com/big-book/page-1/) searched in full) | 67, 87, 88 | 1939 |
 | *Alcoholics Anonymous*, Foreword to the Second Edition | xx | 1955 |
 | "He Sold Himself Short," Personal Stories Part I | 262 | story describes Akron in 1937; fourth edition 2001 |
 | "It Might Have Been Worse" and "A Drunk, Like You," Part II | 356, 406 | fourth edition, 2001 |

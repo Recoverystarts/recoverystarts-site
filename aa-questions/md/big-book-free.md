@@ -11,25 +11,25 @@
 All links below are A.A.'s own PDFs and were checked on 2026-10-04.
 
 **Front matter**
-- Preface (pp. xi–xii): https://www.aa.org/sites/default/files/2021-11/en_bigbook_preface.pdf
-- Foreword to the First Edition, 1939 (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Foreword to the Second Edition, 1955 (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
-- Foreword to the Third Edition (p. xxii): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordthirdedition.pdf
-- Foreword to the Fourth Edition (pp. xxiii–xxiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfourthedition.pdf
-- The Doctor's Opinion (pp. xxv–xxxii): https://www.aa.org/sites/default/files/2021-11/en_bigbook_foreworddoctorsopinion.pdf
+- Preface ([pp. xi–xii](https://recoverystarts.com/big-book/page-xi/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_preface.pdf
+- Foreword to the First Edition, 1939 ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the Second Edition, 1955 ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the Third Edition ([p. xxii](https://recoverystarts.com/big-book/page-xxii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordthirdedition.pdf
+- Foreword to the Fourth Edition ([pp. xxiii–xxiv](https://recoverystarts.com/big-book/page-xxiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfourthedition.pdf
+- The Doctor's Opinion ([pp. xxv–xxxii](https://recoverystarts.com/big-book/page-xxv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_foreworddoctorsopinion.pdf
 
-**The program, pp. 1–164 (the 1939 text)**
-1. *Bill's Story* (pp. 1–16): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
-2. *There Is a Solution* (pp. 17–29): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
-3. *More About Alcoholism* (pp. 30–43): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt3.pdf
-4. *We Agnostics* (pp. 44–57): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt4.pdf
-5. *How It Works* (pp. 58–71): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
-6. *Into Action* (pp. 72–88): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
-7. *Working With Others* (pp. 89–103): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
-8. *To Wives* (pp. 104–121): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
-9. *The Family Afterward* (pp. 122–135): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
-10. *To Employers* (pp. 136–150): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
-11. *A Vision for You* (pp. 151–164): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
+**The program, [pp. 1–164](https://recoverystarts.com/big-book/page-1/) (the 1939 text)**
+1. *Bill's Story* ([pp. 1–16](https://recoverystarts.com/big-book/page-1/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
+2. *There Is a Solution* ([pp. 17–29](https://recoverystarts.com/big-book/page-17/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
+3. *More About Alcoholism* ([pp. 30–43](https://recoverystarts.com/big-book/page-30/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt3.pdf
+4. *We Agnostics* ([pp. 44–57](https://recoverystarts.com/big-book/page-44/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt4.pdf
+5. *How It Works* ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+6. *Into Action* ([pp. 72–88](https://recoverystarts.com/big-book/page-72/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
+7. *Working With Others* ([pp. 89–103](https://recoverystarts.com/big-book/page-89/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+8. *To Wives* ([pp. 104–121](https://recoverystarts.com/big-book/page-104/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
+9. *The Family Afterward* ([pp. 122–135](https://recoverystarts.com/big-book/page-122/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
+10. *To Employers* ([pp. 136–150](https://recoverystarts.com/big-book/page-136/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
+11. *A Vision for You* ([pp. 151–164](https://recoverystarts.com/big-book/page-151/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
 
 **Personal stories (from p. 165)**
 - Introduction: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories.pdf
@@ -38,13 +38,13 @@ All links below are A.A.'s own PDFs and were checked on 2026-10-04.
 - Part III, *They Lost Nearly All*: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partIII.pdf
 
 **Appendices**
-- I, *The A.A. Tradition*, with the Long Form (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- II, *Spiritual Experience* (pp. 567–568): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
-- III, *The Medical View on A.A.* (pp. 569–570): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceiii.pdf
-- IV, *The Lasker Award* (p. 571): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceiv.pdf
-- V, *The Religious View on A.A.* (p. 572): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicev.pdf
+- I, *The A.A. Tradition*, with the Long Form ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- II, *Spiritual Experience* ([pp. 567–568](https://recoverystarts.com/big-book/page-567/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
+- III, *The Medical View on A.A.* ([pp. 569–570](https://recoverystarts.com/big-book/page-569/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceiii.pdf
+- IV, *The Lasker Award* ([p. 571](https://recoverystarts.com/big-book/page-571/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceiv.pdf
+- V, *The Religious View on A.A.* ([p. 572](https://recoverystarts.com/big-book/page-572/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicev.pdf
 - VI, *How to Get in Touch With A.A.*: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevi.pdf
-- VII, *Twelve Concepts (Short Form)* (pp. 574–575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- VII, *Twelve Concepts (Short Form)* ([pp. 574–575](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 
 Also: the title page, contents and copyright page are linked from https://www.aa.org/the-big-book.
 
@@ -55,7 +55,7 @@ Also: the title page, contents and copyright page are linked from https://www.aa
 
 ## Which parts are oldest
 
-The forewords and chapters aren't all from the same year. The Foreword to the First Edition is printed as it appeared in 1939 (p. xiii), and the Preface says the program portion, Chapters 1–11, "has been left largely untouched" since then (p. xi). The Foreword to the Second Edition describes A.A. as it was in 1955 (p. xv). The personal stories have changed from edition to edition, and the appendices came with the second edition, 1955, except the Twelve Concepts, added in the fourth (pp. xi–xii). See: *Which A.A. books are oldest, and why does the date matter?*
+The forewords and chapters aren't all from the same year. The Foreword to the First Edition is printed as it appeared in 1939 ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and the Preface says the program portion, Chapters 1–11, "has been left largely untouched" since then ([p. xi](https://recoverystarts.com/big-book/page-xi/)). The Foreword to the Second Edition describes A.A. as it was in 1955 ([p. xv](https://recoverystarts.com/big-book/page-xv/)). The personal stories have changed from edition to edition, and the appendices came with the second edition, 1955, except the Twelve Concepts, added in the fourth ([pp. xi–xii](https://recoverystarts.com/big-book/page-xi/)). See: *Which A.A. books are oldest, and why does the date matter?*
 
 ## Read the whole chapter
 

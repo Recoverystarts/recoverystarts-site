@@ -8,7 +8,7 @@
 
 ## The earlier texts first (1946–47)
 
-Long Form Four (1946) already treated the trustees as the body to consult on matters affecting all of A.A.: no group, regional committee or individual should take action that might greatly affect A.A. as a whole "without conferring with the trustees of the General Service Board" (p. 563); in 1946 that was the Alcoholic Foundation, renamed in 1954. Long Form Nine says the trustees "are authorized by the groups to handle our over-all public relations" (p. 565).
+Long Form Four (1946) already treated the trustees as the body to consult on matters affecting all of A.A.: no group, regional committee or individual should take action that might greatly affect A.A. as a whole "without conferring with the trustees of the General Service Board" ([p. 563](https://recoverystarts.com/big-book/page-563/)); in 1946 that was the Alcoholic Foundation, renamed in 1954. Long Form Nine says the trustees "are authorized by the groups to handle our over-all public relations" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 In 1946 Bill called the Foundation's trustees "our over-all service committee" (P-17, Money, 1946). So delegation from the groups to a service body was there from the start. What changed with the Conference was who stood between the groups and the trustees: no longer the two founders, but delegates the groups elected.
 
@@ -40,8 +40,8 @@ The 1955 St. Louis resolution made the Conference "the voice of the group consci
 
 
 ## Read it yourself
-- Long Form Four and Nine (Appendix I, pp. 563, 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept II, short form (Appendix VII, p. 574): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Four and Nine (Appendix I, [pp. 563](https://recoverystarts.com/big-book/page-563/), 565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept II, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 essay on money: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -50,9 +50,9 @@ The 1955 St. Louis resolution made the Conference "the voice of the group consci
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Four and Nine | pp. 563, 565 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Four and Nine | [pp. 563](https://recoverystarts.com/big-book/page-563/), 565 | 1946 |
 | P-17, Money (Bill W.) | — | Grapevine, 1946 |
-| *Alcoholics Anonymous*, Appendix VII, Concept II (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept II (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept II | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | St. Louis resolution; Conference Charter | *The A.A. Service Manual*, 2024–2026, Appendices K and L | 1955; current text as amended |
 | *The A.A. Service Manual*, Chapter 6 (quoting Bill's first manual) | — | quote from the manual's first edition (date not given); manual 2024–2026 |

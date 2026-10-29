@@ -2,8 +2,8 @@
 
 **In short:**
 - The phrase isn't in the Big Book, in the 1946 Long Form or in Bill W.'s 1946–47 essays. In our sources it appears in later pamphlets: *The Twelve Traditions Illustrated* (P-43, © 1971, this printing updated 2023), *The A.A. Group* (P-16, 2018), and a Conference policy statement printed in P-17, which words it "cooperation but nonafiliation" (so spelled in P-17, "A.A. and Alcoholism").
-- The idea is in the Long Form of Tradition Six (1946): "While an A.A. group may cooperate with anyone, such cooperation ought never go so far as affiliation or endorsement, actual or implied." (p. 564).
-- The cooperation half goes back to 1939. Chapter 7 tells members finding drinkers through doctors and ministers: "So cooperate; never criticize." (p. 89).
+- The idea is in the Long Form of Tradition Six (1946): "While an A.A. group may cooperate with anyone, such cooperation ought never go so far as affiliation or endorsement, actual or implied." ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- The cooperation half goes back to 1939. Chapter 7 tells members finding drinkers through doctors and ministers: "So cooperate; never criticize." ([p. 89](https://recoverystarts.com/big-book/page-89/)).
 - It describes how A.A. and its groups relate to others. It doesn't bind the organizations A.A. cooperates with.
 
 ## The search
@@ -12,9 +12,9 @@ All our sources were searched for the words *cooperation but* and *cooperate but
 
 ## The idea, in the earliest texts
 
-**1939.** The Big Book's members cooperated with doctors, ministers and hospitals from the start. To find drinkers who want to recover, ask "a few doctors, ministers, priests or hospitals" (p. 89); "Ministers and doctors are competent and you can learn much from them if you wish" (p. 89); "So cooperate; never criticize." (p. 89). "To be helpful is our only aim." (p. 89). An approach through a doctor or an institution "is a better bet" than through the family (p. 91). The book thanks a hospital that suggested A.A. to its patients (p. 162). The 1939 Foreword: "We are not allied with any particular faith, sect or denomination, nor do we oppose anyone." (p. xiv).
+**1939.** The Big Book's members cooperated with doctors, ministers and hospitals from the start. To find drinkers who want to recover, ask "a few doctors, ministers, priests or hospitals" ([p. 89](https://recoverystarts.com/big-book/page-89/)); "Ministers and doctors are competent and you can learn much from them if you wish" ([p. 89](https://recoverystarts.com/big-book/page-89/)); "So cooperate; never criticize." ([p. 89](https://recoverystarts.com/big-book/page-89/)). "To be helpful is our only aim." ([p. 89](https://recoverystarts.com/big-book/page-89/)). An approach through a doctor or an institution "is a better bet" than through the family ([p. 91](https://recoverystarts.com/big-book/page-91/)). The book thanks a hospital that suggested A.A. to its patients ([p. 162](https://recoverystarts.com/big-book/page-162/)). The 1939 Foreword: "We are not allied with any particular faith, sect or denomination, nor do we oppose anyone." ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)).
 
-**1946, the Long Form.** Tradition Six draws the line the later phrase names: an A.A. group "may cooperate with anyone," but never as far as "affiliation or endorsement, actual or implied" (p. 564). "An A.A. group can bind itself to no one." (p. 564). Tradition Three adds that two or three alcoholics may call themselves an A.A. group "provided that, as a group, they have no other affiliation" (p. 563).
+**1946, the Long Form.** Tradition Six draws the line the later phrase names: an A.A. group "may cooperate with anyone," but never as far as "affiliation or endorsement, actual or implied" ([p. 564](https://recoverystarts.com/big-book/page-564/)). "An A.A. group can bind itself to no one." ([p. 564](https://recoverystarts.com/big-book/page-564/)). Tradition Three adds that two or three alcoholics may call themselves an A.A. group "provided that, as a group, they have no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 **1946–47, Bill W.'s essays.**
 - "Everywhere we cooperate with hospitals." Many give A.A. special privileges and working arrangements, "But none of these institutions are known as 'A.A. hospitals.'" (P-17, "Money", 1946).
@@ -22,7 +22,7 @@ All our sources were searched for the words *cooperation but* and *cooperate but
 
 **1955 and 1957.**
 - "We will cooperate with practically everybody, yet we decline to marry our Society to anyone." (P-17, "Why Alcoholics Anonymous Is Anonymous", 1955).
-- The Foreword to the Second Edition (1955): A.A. doesn't take any particular medical point of view, "though we cooperate widely with the men of medicine as well as with the men of religion" (p. xx).
+- The Foreword to the Second Edition (1955): A.A. doesn't take any particular medical point of view, "though we cooperate widely with the men of medicine as well as with the men of religion" ([p. xx](https://recoverystarts.com/big-book/page-xx/)).
 - *A.A. Comes of Age* (1957): no A.A. group should ally itself "with any particular brand of medical or psychiatric treatment" (*A.A. Comes of Age*, 1957). In the next breath: "We can cooperate with anyone." (*A.A. Comes of Age*, 1957).
 
 ## The phrase itself, in later pamphlets
@@ -36,8 +36,8 @@ All our sources were searched for the words *cooperation but* and *cooperate but
 In all these texts the phrase describes what A.A. and A.A. groups do: work alongside doctors, hospitals, treatment facilities, courts and others, while never becoming part of them, financing them, endorsing them or lending them the A.A. name. It doesn't tell those organizations how to run, and A.A. members working in them do so as individuals. See *What does "no outside affiliation" mean in practice?* and *Tradition Six: can an A.A. group partner with a treatment centre?*
 
 ## Read it yourself
-- Chapter 7, "Working With Others" (pp. 89–103): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
-- Appendix I, "The A.A. Tradition" (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Chapter 7, "Working With Others" ([pp. 89–103](https://recoverystarts.com/big-book/page-89/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group* ("Cooperation but not Affiliation," pp. 39–40): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *What does "no outside affiliation" mean in practice?* · *Tradition Six: can an A.A. group partner with a treatment centre?*

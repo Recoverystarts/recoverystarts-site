@@ -1,24 +1,24 @@
 # Does A.A. cost anything?
 
 **In short:**
-- No. Membership costs nothing. The 1939 Foreword says: "There are no fees or dues whatsoever." (p. xiv). The 1946 Long Form says membership should never depend "upon money or conformity" (p. 563).
+- No. Membership costs nothing. The 1939 Foreword says: "There are no fees or dues whatsoever." ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)). The 1946 Long Form says membership should never depend "upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - Groups do have expenses, such as rent, coffee and literature, and they pay them from members' voluntary contributions, often by passing a basket. Giving is not a condition of membership: Bill W. wrote in 1946 that contributions are "in no wise a condition of our A.A. membership" (P-17, "Money", 1946).
-- A.A. groups pay their own way and decline outside contributions (Tradition Seven, short form, p. 562; the Long Form on p. 564 says the same).
+- A.A. groups pay their own way and decline outside contributions (Tradition Seven, short form, [p. 562](https://recoverystarts.com/big-book/page-562/); the Long Form on [p. 564](https://recoverystarts.com/big-book/page-564/) says the same).
 - The Big Book itself is sold by A.A., and A.A. also publishes it free on aa.org.
 
 ## What the 1939 text says
 
-- **No fees or dues.** "There are no fees or dues whatsoever." (p. xiv).
-- **Nothing to pay the person who helps you.** Among the conditions the early members found most effective when approaching a drinker: "there are no fees to pay, no axes to grind, no people to please, no lectures to be endured" (p. 18).
-- **The work is unpaid.** "None of us makes a sole vocation of this work" (p. 19). The Foreword calls it "an avocation" (p. xiii).
+- **No fees or dues.** "There are no fees or dues whatsoever." ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)).
+- **Nothing to pay the person who helps you.** Among the conditions the early members found most effective when approaching a drinker: "there are no fees to pay, no axes to grind, no people to please, no lectures to be endured" ([p. 18](https://recoverystarts.com/big-book/page-18/)).
+- **The work is unpaid.** "None of us makes a sole vocation of this work" ([p. 19](https://recoverystarts.com/big-book/page-19/)). The Foreword calls it "an avocation" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)).
 
-What the 1939 text describes members spending is their own: time, sleep, and sometimes "sharing your money and your home" with a newcomer (p. 97).
+What the 1939 text describes members spending is their own: time, sleep, and sometimes "sharing your money and your home" with a newcomer ([p. 97](https://recoverystarts.com/big-book/page-97/)).
 
 ## The 1946 Long Form
 
-- **Tradition Three:** "Nor ought A.A. membership ever depend upon money or conformity." (p. 563).
-- **Tradition Seven:** "The A.A. groups themselves ought to be fully supported by the voluntary contributions of their own members." (p. 564). Public solicitation using A.A.'s name is "highly dangerous" (p. 564), and large gifts, or contributions carrying any obligation, are unwise (p. 564).
-- **Tradition Eight:** A.A.'s Twelfth Step work "is never to be paid for" (pp. 564–565).
+- **Tradition Three:** "Nor ought A.A. membership ever depend upon money or conformity." ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **Tradition Seven:** "The A.A. groups themselves ought to be fully supported by the voluntary contributions of their own members." ([p. 564](https://recoverystarts.com/big-book/page-564/)). Public solicitation using A.A.'s name is "highly dangerous" ([p. 564](https://recoverystarts.com/big-book/page-564/)), and large gifts, or contributions carrying any obligation, are unwise ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- **Tradition Eight:** A.A.'s Twelfth Step work "is never to be paid for" ([pp. 564–565](https://recoverystarts.com/big-book/page-564/)).
 
 ## What Bill W. wrote (1946–47)
 
@@ -28,7 +28,7 @@ What the 1939 text describes members spending is their own: time, sleep, and som
 - "In A.A. we have no fees or compulsory dues." (P-17, "Clubs in A.A.", 1947). Even a club, he suggested, should let any A.A. member enjoy its ordinary privileges "whether he makes a regular voluntary contribution or not" (P-17, "Clubs in A.A.", 1947).
 - On a nonalcoholic friend at a meeting: it is hardly an exception to self-support "if a nonalcoholic friend comes to a meeting and drops a dollar in the hat" (P-17, "Money", 1946).
 
-The Foreword to the Second Edition (1955) sums up the principle as it had settled: "There were to be no fees or dues; our expenses were to be met by our own voluntary contributions." (p. xix).
+The Foreword to the Second Edition (1955) sums up the principle as it had settled: "There were to be no fees or dues; our expenses were to be met by our own voluntary contributions." ([p. xix](https://recoverystarts.com/big-book/page-xix/)).
 
 ## Today (2018)
 
@@ -36,12 +36,12 @@ The Foreword to the Second Edition (1955) sums up the principle as it had settle
 
 ## The book
 
-*Alcoholics Anonymous* is sold by A.A. World Services through its bookstore (https://onlineliterature.aa.org), and the whole fourth edition is also free on aa.org (see *Where can I read the Big Book free, from A.A. itself?*). In 1939 the book itself told members, on a first visit, to lend a prospect their own copy if he showed interest (p. 94).
+*Alcoholics Anonymous* is sold by A.A. World Services through its bookstore (https://onlineliterature.aa.org), and the whole fourth edition is also free on aa.org (see *Where can I read the Big Book free, from A.A. itself?*). In 1939 the book itself told members, on a first visit, to lend a prospect their own copy if he showed interest ([p. 94](https://recoverystarts.com/big-book/page-94/)).
 
 ## Read it yourself
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Chapter 2, "There Is a Solution" (pp. 17–29): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
-- Appendix I, "The A.A. Tradition" (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Chapter 2, "There Is a Solution" ([pp. 17–29](https://recoverystarts.com/big-book/page-17/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed* ("Money," "Clubs in A.A."): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group* ("Self-support: The Seventh Tradition," p. 16): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Tradition Seven: does A.A. take outside money?* · *Is the A.A. Preamble in the Big Book? Where did it come from?*

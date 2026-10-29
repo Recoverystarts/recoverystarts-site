@@ -8,11 +8,11 @@
 
 ## The earliest texts
 
-The 1939 Big Book doesn't mention Rockefeller. The Traditions' Long Form, first published in 1946 and printed in today's book, states the principle without names: the groups should be supported by their own members' contributions, and "acceptance of large gifts from any source, or of contributions carrying any obligation whatever, is unwise" (pp. 564–565). See *Tradition Seven: does A.A. take outside money?*
+The 1939 Big Book doesn't mention Rockefeller. The Traditions' Long Form, first published in 1946 and printed in today's book, states the principle without names: the groups should be supported by their own members' contributions, and "acceptance of large gifts from any source, or of contributions carrying any obligation whatever, is unwise" ([pp. 564–565](https://recoverystarts.com/big-book/page-564/)). See *Tradition Seven: does A.A. take outside money?*
 
 Bill's 1946 Grapevine essay on money, in P-17, looks back without naming anyone: "There was a time some years ago when we desperately needed a little outside aid. This we received." (P-17, 1946). Those gifts, he says, made possible the Alcoholic Foundation, the book and the office, but times had changed (P-17, 1946).
 
-The 1955 Foreword to the Second Edition mentions only the dinner: "In the spring of 1940, John D. Rockefeller, Jr. gave a dinner for many of his friends to which he invited A.A. members to tell their stories." (p. xviii). The publicity brought inquiries and book sales (p. xviii).
+The 1955 Foreword to the Second Edition mentions only the dinner: "In the spring of 1940, John D. Rockefeller, Jr. gave a dinner for many of his friends to which he invited A.A. members to tell their stories." ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)). The publicity brought inquiries and book sales ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)).
 
 ## 1937–38: Rockefeller says no (A.A. Comes of Age, 1957)
 
@@ -39,8 +39,8 @@ P-44 (Bill, describing events through 1955) tells it the same way: Rockefeller d
 - **When the help stopped.** In one chapter Bill says they wrote "Four years later" than 1940 (A.A. Comes of Age, 1957); in another, "In 1945 we wrote Mr. John D. Rockefeller, Jr., and the 1940 dinner guests that we would no longer need their financial help." (A.A. Comes of Age, 1957).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition," with the Long Form (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Appendix I, "The A.A. Tradition," with the Long Form ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Tradition Seven: does A.A. take outside money?* · *What was the Alcoholic Foundation?* · *How was the Big Book paid for and published (Works Publishing)?* · *Tradition Eight: can anyone be paid for Twelfth Step work?*
 
@@ -56,4 +56,5 @@ P-44 (Bill, describing events through 1955) tells it the same way: Rockefeller d
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; P-17's articles are © AA Grapevine, Inc.*

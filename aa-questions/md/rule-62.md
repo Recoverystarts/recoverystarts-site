@@ -25,20 +25,20 @@ The number follows from the story: he had written sixty-one rules, and this was 
 ## The Traditions behind the story
 
 The story touches two of the Traditions, both in the Long Form of 1946 (now in the Big Book's Appendix I):
-- **Autonomy.** Each group "should be responsible to no other authority than its own conscience," but when its plans affect neighboring groups or A.A. as a whole, others should be consulted (p. 563). The group was free to try. See *Tradition Four: can GSO tell a group what to do?*
-- **Keeping property apart.** "An A.A. group, as such, should never go into business" (p. 564). Clubs and hospitals should be separately incorporated, kept outside A.A., and set apart so that "they can be freely discarded by the groups" if necessary (p. 564). The promoter did plan three corporations, but it was the group's project: his fellow members backed it and he asked New York for a "super-charter" (*A.A. Comes of Age*, 1957). His letter afterward admits New York had told him such enterprises "could not be mixed with A.A." (*A.A. Comes of Age*, 1957). See *What did Bill W. say about clubs and A.A.?*
+- **Autonomy.** Each group "should be responsible to no other authority than its own conscience," but when its plans affect neighboring groups or A.A. as a whole, others should be consulted ([p. 563](https://recoverystarts.com/big-book/page-563/)). The group was free to try. See *Tradition Four: can GSO tell a group what to do?*
+- **Keeping property apart.** "An A.A. group, as such, should never go into business" ([p. 564](https://recoverystarts.com/big-book/page-564/)). Clubs and hospitals should be separately incorporated, kept outside A.A., and set apart so that "they can be freely discarded by the groups" if necessary ([p. 564](https://recoverystarts.com/big-book/page-564/)). The promoter did plan three corporations, but it was the group's project: his fellow members backed it and he asked New York for a "super-charter" (*A.A. Comes of Age*, 1957). His letter afterward admits New York had told him such enterprises "could not be mixed with A.A." (*A.A. Comes of Age*, 1957). See *What did Bill W. say about clubs and A.A.?*
 
 ## The same spirit in the 1939 text
 
 The Big Book has no Rule 62, but it says something close in its own words:
-- "But we aren't a glum lot" (p. 132). If newcomers saw no joy or fun in A.A., they wouldn't want it. "We absolutely insist on enjoying life" (p. 132).
-- "So we think cheerfulness and laughter make for usefulness" (p. 132). Why shouldn't we laugh, the book asks: "We have recovered, and have been given the power to help others" (p. 132).
-- Bill's story: "There is, however, a vast amount of fun about it all" (p. 16), with "deadly earnestness" just underneath (p. 16).
-- And the book's picture of self-will is a man who "wants to run the whole show" (p. 60), which fits a promoter who planned to be general manager of it all.
+- "But we aren't a glum lot" ([p. 132](https://recoverystarts.com/big-book/page-132/)). If newcomers saw no joy or fun in A.A., they wouldn't want it. "We absolutely insist on enjoying life" ([p. 132](https://recoverystarts.com/big-book/page-132/)).
+- "So we think cheerfulness and laughter make for usefulness" ([p. 132](https://recoverystarts.com/big-book/page-132/)). Why shouldn't we laugh, the book asks: "We have recovered, and have been given the power to help others" ([p. 132](https://recoverystarts.com/big-book/page-132/)).
+- Bill's story: "There is, however, a vast amount of fun about it all" ([p. 16](https://recoverystarts.com/big-book/page-16/)), with "deadly earnestness" just underneath ([p. 16](https://recoverystarts.com/big-book/page-16/)).
+- And the book's picture of self-will is a man who "wants to run the whole show" ([p. 60](https://recoverystarts.com/big-book/page-60/)), which fits a promoter who planned to be general manager of it all.
 
 ## Read it yourself
-- Appendix I, the Twelve Traditions, short and long forms (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Chapter 9, "The Family Afterward" (pp. 132–133): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
+- Appendix I, the Twelve Traditions, short and long forms ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Chapter 9, "The Family Afterward" ([pp. 132–133](https://recoverystarts.com/big-book/page-132/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
 - *A.A. Comes of Age* is sold by A.A. World Services: https://onlineliterature.aa.org
 
 ## Sources

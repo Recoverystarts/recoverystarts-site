@@ -1,16 +1,16 @@
 # How did Alcoholics Anonymous get its name? Was "The Way Out" the title?
 
 **In short:**
-- Until 1939 the fellowship had no name. The name came from the title of its book, *Alcoholics Anonymous*, and the fellowship "began to be called Alcoholics Anonymous, from the title of its own book" (p. xvii).
+- Until 1939 the fellowship had no name. The name came from the title of its book, *Alcoholics Anonymous*, and the fellowship "began to be called Alcoholics Anonymous, from the title of its own book" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)).
 - "The Way Out" was the other leading choice. In Bill W.'s accounts the Akron and New York groups voted, and "The Way Out" won by a narrow majority. Then Fitz M. checked the Library of Congress and found many books already called "The Way Out" and none called "Alcoholics Anonymous," and the members didn't want to be one more "way out." So "The Way Out" was never the book's published title.
 - Bill says nobody knows who first used the words "Alcoholics Anonymous"; he thought the phrase grew out of the New Yorkers calling themselves a "nameless bunch of alcoholics." Later books trace written uses back to mid-1938, and one says as early as 1937.
 - The sources disagree on the details: how many titles were considered, and how many books Fitz found.
 
 ## The 1939 Big Book
 
-The Foreword to the First Edition already uses the name for the people as well as the book: "We, of Alcoholics Anonymous, are more than one hundred men and women" (p. xiii). It asks each member writing or speaking publicly to omit his name, "designating himself instead as 'a member of Alcoholics Anonymous.'" (p. xiii), and it is signed "Alcoholics Anonymous." (p. xiv). The book itself doesn't tell how the name was chosen. See *What does the Foreword to the First Edition say A.A. is for?*
+The Foreword to the First Edition already uses the name for the people as well as the book: "We, of Alcoholics Anonymous, are more than one hundred men and women" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). It asks each member writing or speaking publicly to omit his name, "designating himself instead as 'a member of Alcoholics Anonymous.'" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and it is signed "Alcoholics Anonymous." ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)). The book itself doesn't tell how the name was chosen. See *What does the Foreword to the First Edition say A.A. is for?*
 
-The 1955 Foreword to the Second Edition: "The fledgling society, which had been nameless, now began to be called Alcoholics Anonymous, from the title of its own book." (p. xvii).
+The 1955 Foreword to the Second Edition: "The fledgling society, which had been nameless, now began to be called Alcoholics Anonymous, from the title of its own book." ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)).
 
 ## Bill's first account (1946)
 
@@ -36,8 +36,8 @@ He confesses a temptation: with "The Way Out" he could sign the book himself, an
 - For which group first called itself by the name, see *How did the Cleveland group become the first to call itself Alcoholics Anonymous?*
 
 ## Read it yourself
-- Foreword to the First Edition (pp. xiii–xiv), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Why is A.A. anonymous?* · *How did the Cleveland group become the first to call itself Alcoholics Anonymous?* · *Was there a draft of the Big Book before 1939?* · *What does the Foreword to the First Edition say A.A. is for?*
 
@@ -52,4 +52,5 @@ He confesses a temptation: with "The Way Out" he could sign the book himself, an
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; P-17's articles are © AA Grapevine, Inc.*

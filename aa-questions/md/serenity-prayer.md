@@ -1,14 +1,14 @@
 # Where did the Serenity Prayer come from in A.A.?
 
 **In short:**
-- The Serenity Prayer is not in the Big Book's program text (pp. 1–164), its forewords or its appendices. It appears only in some of the members' stories at the back of the fourth edition.
+- The Serenity Prayer is not in the Big Book's program text ([pp. 1–164](https://recoverystarts.com/big-book/page-1/)), its forewords or its appendices. It appears only in some of the members' stories at the back of the fourth edition.
 - It came into A.A. in New York in the early 1940s. A member saw it in a newspaper obituary notice and brought it to the office, and A.A. began printing it on cards and putting one in every letter it sent out.
 - Bill W. wrote in 1957: "No one can tell for sure who first wrote the Serenity Prayer" (A.A. Comes of Age, 1957). He listed several claims, including the one that it was by Reinhold Niebuhr.
 - The sources disagree on the date (1941 or early 1942), on the exact wording of the clipping, and on the name of the man who paid for the first cards.
 
 ## Not in the program text
 
-A search of the whole fourth edition finds the prayer only in the personal stories, for example pp. 345, 357, 401, 419 and 559. The word "serenity" does appear in the main text, in other senses: Bill's peace and serenity after his experience at Towns Hospital (p. 14), the hope "to match calamity with serenity" (p. 68), and the promise "We will comprehend the word serenity and we will know peace" (p. 84). None of these is the prayer.
+A search of the whole fourth edition finds the prayer only in the personal stories, for example [pp. 345](https://recoverystarts.com/big-book/page-345/), 357, 401, 419 and 559. The word "serenity" does appear in the main text, in other senses: Bill's peace and serenity after his experience at Towns Hospital ([p. 14](https://recoverystarts.com/big-book/page-14/)), the hope "to match calamity with serenity" ([p. 68](https://recoverystarts.com/big-book/page-68/)), and the promise "We will comprehend the word serenity and we will know peace" ([p. 84](https://recoverystarts.com/big-book/page-84/)). None of these is the prayer.
 
 ## How it came into A.A.: Bill's account (1957)
 
@@ -32,7 +32,7 @@ A note in *Pass It On* says the prayer's origins are obscure: it may go back to 
 
 ## How it is used now
 
-Later A.A. literature describes the prayer as a common part of meetings. P-16, *The A.A. Group* (© 2018), describing how a chairperson usually opens a meeting with the Preamble, adds: "Some call for a moment of silence and/or recite the Serenity Prayer" (P-16). In one fourth-edition story, a member describes the slogans on a meeting-room wall, ending with "The Serenity Prayer" (p. 345). Another says he had misread "the courage to change" as being about changing his marriage, when it meant changing himself (p. 419).
+Later A.A. literature describes the prayer as a common part of meetings. P-16, *The A.A. Group* (© 2018), describing how a chairperson usually opens a meeting with the Preamble, adds: "Some call for a moment of silence and/or recite the Serenity Prayer" (P-16). In one fourth-edition story, a member describes the slogans on a meeting-room wall, ending with "The Serenity Prayer" ([p. 345](https://recoverystarts.com/big-book/page-345/)). Another says he had misread "the courage to change" as being about changing his marriage, when it meant changing himself ([p. 419](https://recoverystarts.com/big-book/page-419/)).
 
 ## Where the sources differ
 - **When.** Bill (1957) puts it just before Ruth Hock left in early 1942 (A.A. Comes of Age, 1957). *Pass It On* (1984) says an early June 1941 newspaper (Pass It On, 1984).
@@ -41,7 +41,7 @@ Later A.A. literature describes the prayer as a common part of meetings. P-16, *
 - **Who wrote it.** Bill (1957) says no one can be sure (A.A. Comes of Age, 1957), and *Pass It On* (1984) calls the origins obscure (Pass It On, 1984). Both mention Niebuhr as the usual attribution; neither settles it, and neither does our sources.
 
 ## Read it yourself
-- Personal Stories Part II (the stories on pp. 345, 357, 401 and 419): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partII.pdf
+- Personal Stories Part II (the stories on [pp. 345](https://recoverystarts.com/big-book/page-345/), 357, 401 and 419): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partII.pdf
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - *A.A. Comes of Age*, *Pass It On* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Why do some meetings close with the Lord's Prayer?* · *What happens at an A.A. meeting?* · *Is "one day at a time" in the Big Book?*
@@ -49,7 +49,7 @@ Later A.A. literature describes the prayer as a common part of meetings. P-16, *
 ## Sources
 | Source | Pages | Date |
 |---|---|---|
-| *Alcoholics Anonymous*, pp. 1–164, forewords and appendices (searched in full) | 14, 68, 84 | 1939 text; later forewords and appendices |
+| *Alcoholics Anonymous*, [pp. 1–164](https://recoverystarts.com/big-book/page-1/), forewords and appendices (searched in full) | 14, 68, 84 | 1939 text; later forewords and appendices |
 | *Alcoholics Anonymous*, personal stories | 345, 357, 401, 419, 559 | fourth edition, 2001 (some stories older) |
 | *A.A. Comes of Age* (Bill W.) | — | 1957 |
 | *Dr. Bob and the Good Oldtimers* | — | 1980 |

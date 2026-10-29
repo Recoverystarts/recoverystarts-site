@@ -8,7 +8,7 @@
 
 ## When he died
 
-The Big Book gives the year twice: the introduction to his story says he carried the message to more than 5,000 alcoholics "To 1950, the year of his death" (p. 171), and the 1955 foreword says he never drank again "up to the moment of his death in 1950" (p. xvi).
+The Big Book gives the year twice: the introduction to his story says he carried the message to more than 5,000 alcoholics "To 1950, the year of his death" ([p. 171](https://recoverystarts.com/big-book/page-171/)), and the 1955 foreword says he never drank again "up to the moment of his death in 1950" ([p. xvi](https://recoverystarts.com/big-book/page-xvi/)).
 
 P-53 gives the date and cause: "He died of cancer at City Hospital, Akron, November 16, 1950." (P-53). It says he had been stricken in the summer of 1948 (P-53). *A.A. Comes of Age* (1957) and *Dr. Bob and the Good Oldtimers* (1980) give the same date (A.A. Comes of Age, 1957). Bill's 1969 talk, also in P-53, says an operation around 1947 missed the cancer (P-53).
 
@@ -41,8 +41,8 @@ Neither account is from someone our sources show was in the room, and our source
 *A.A. Comes of Age* also calls "Let's not louse this thing up; let's keep it simple" Dr. Bob's "famous final admonition" to A.A. (A.A. Comes of Age, 1957). *Dr. Bob and the Good Oldtimers* adds a warning: people often say "Dr. Bob said…" to give weight to their own point, and "Apart from 'Let's keep it simple,'" it is hard to tell which sayings are really his (Dr. Bob and the Good Oldtimers, 1980). If a quotation credited to Dr. Bob isn't in his story, his talks in P-53, or these books, treat it with care.
 
 ## Read it yourself
-- "Doctor Bob's Nightmare" and its introduction (pp. 171–181), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- "Doctor Bob's Nightmare" and its introduction ([pp. 171–181](https://recoverystarts.com/big-book/page-171/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Who was Dr. Bob?* · *What happened at the 1950 Cleveland convention?*

@@ -3,18 +3,18 @@
 **In short:**
 - The friend who phoned Bill W. in November 1934 and came to his kitchen sober was Ebby T., a boyhood friend and old drinking companion from Vermont. The 1939 Big Book doesn't name him; later accounts do.
 - Ebby had sobered up a few months earlier through the Oxford Group, after friends from that group, among them Rowland H., came to him when he was in trouble with the law. He passed on to Bill what he had been given: admit you are licked, take stock of yourself, confess your defects to another person, make restitution, give of yourself, and pray to whatever God you think there is.
-- He is the friend who told Bill to choose his own conception of God (p. 12). In his 1957 book Bill calls him "my sponsor."
+- He is the friend who told Bill to choose his own conception of God ([p. 12](https://recoverystarts.com/big-book/page-12/)). In his 1957 book Bill calls him "my sponsor."
 - Ebby later drank again, for years. Our 1984 biography of Bill says he died sober in 1966.
 
 ## What "Bill's Story" says (1939)
 
-Near the end of a bleak November in 1934, as Bill drank at his kitchen table, "an old school friend" phoned and asked to come over (p. 8). "He was sober." (p. 9). Rumor had it he had been committed for alcoholic insanity; instead "two men had appeared in court, persuading the judge to suspend his commitment" (p. 9). They had told him of a simple religious idea and a practical program of action. "That was two months ago and the result was self-evident." (p. 9).
+Near the end of a bleak November in 1934, as Bill drank at his kitchen table, "an old school friend" phoned and asked to come over ([p. 8](https://recoverystarts.com/big-book/page-8/)). "He was sober." ([p. 9](https://recoverystarts.com/big-book/page-9/)). Rumor had it he had been committed for alcoholic insanity; instead "two men had appeared in court, persuading the judge to suspend his commitment" ([p. 9](https://recoverystarts.com/big-book/page-9/)). They had told him of a simple religious idea and a practical program of action. "That was two months ago and the result was self-evident." ([p. 9](https://recoverystarts.com/big-book/page-9/)).
 
-When Bill offered him a drink, he refused, and said simply: "I've got religion." (p. 9). He told Bill that God had done for him what he could not do for himself (p. 11). When Bill balked at a God personal to him, his friend suggested: "Why don't you choose your own conception of God?" (p. 12). That, Bill writes, "hit me hard" (p. 12).
+When Bill offered him a drink, he refused, and said simply: "I've got religion." ([p. 9](https://recoverystarts.com/big-book/page-9/)). He told Bill that God had done for him what he could not do for himself ([p. 11](https://recoverystarts.com/big-book/page-11/)). When Bill balked at a God personal to him, his friend suggested: "Why don't you choose your own conception of God?" ([p. 12](https://recoverystarts.com/big-book/page-12/)). That, Bill writes, "hit me hard" ([p. 12](https://recoverystarts.com/big-book/page-12/)).
 
-The friend kept coming. In the hospital he heard Bill's problems and deficiencies, and they made a list of people Bill had hurt (p. 13). He promised a new relationship with the Creator once these things were done (p. 13), and he stressed working with others: "Faith without works was dead, he said." (p. 14). The story ends with "my friend's simple talk in our kitchen" multiplying itself in a widening circle (p. 16).
+The friend kept coming. In the hospital he heard Bill's problems and deficiencies, and they made a list of people Bill had hurt ([p. 13](https://recoverystarts.com/big-book/page-13/)). He promised a new relationship with the Creator once these things were done ([p. 13](https://recoverystarts.com/big-book/page-13/)), and he stressed working with others: "Faith without works was dead, he said." ([p. 14](https://recoverystarts.com/big-book/page-14/)). The story ends with "my friend's simple talk in our kitchen" multiplying itself in a widening circle ([p. 16](https://recoverystarts.com/big-book/page-16/)).
 
-The 1955 Foreword to the Second Edition calls him "an alcoholic friend who had been in contact with the Oxford Groups of that day" (pp. xv–xvi). Bill's biographical sketch in P-53 (pamphlet © 2017) names him: in November 1934 Bill "learned from an old friend, Ebby, how the Oxford Group was able sometimes to help alcoholics; Ebby himself was a recent example." (P-53).
+The 1955 Foreword to the Second Edition calls him "an alcoholic friend who had been in contact with the Oxford Groups of that day" ([pp. xv–xvi](https://recoverystarts.com/big-book/page-xv/)). Bill's biographical sketch in P-53 (pamphlet © 2017) names him: in November 1934 Bill "learned from an old friend, Ebby, how the Oxford Group was able sometimes to help alcoholics; Ebby himself was a recent example." (P-53).
 
 ## Bill's longer account (A.A. Comes of Age, 1957)
 
@@ -31,15 +31,15 @@ He is also candid about what came after. By late 1937 "Ebby had slipped" (A.A. C
 Ebby's sobriety lasted until April 1937: "That was after two years and approximately seven months of sobriety" (Pass It On, 1984). Bill supported him for the rest of his life, "until Ebby died — sober — in 1966" (Pass It On, 1984). Lois is quoted in *Dr. Bob and the Good Oldtimers* (1980) as saying that with Ebby "it was more gratitude — and nostalgia" than close friendship (Dr. Bob and the Good Oldtimers, 1980).
 
 ## Where the sources differ
-- **The court.** The 1939 story says two men persuaded the judge to suspend Ebby's commitment (p. 9). *Pass It On* (1984) has one man, Rowland H., telling the judge he would be responsible for Ebby after an arrest (Pass It On, 1984).
-- **How long Ebby had been sober.** The 1939 story says two months (p. 9). In Bill's 1957 account Ebby says he hasn't had a drink "for months" (A.A. Comes of Age, 1957); a mission worker quoted in *Pass It On* heard him testify to "a number of months" (Pass It On, 1984).
-- **"School friend."** The 1939 text says "an old school friend" (p. 8); Bill in 1957 says boarding-school friend (A.A. Comes of Age, 1957); *Pass It On* says they were classmates for one season (Pass It On, 1984).
+- **The court.** The 1939 story says two men persuaded the judge to suspend Ebby's commitment ([p. 9](https://recoverystarts.com/big-book/page-9/)). *Pass It On* (1984) has one man, Rowland H., telling the judge he would be responsible for Ebby after an arrest (Pass It On, 1984).
+- **How long Ebby had been sober.** The 1939 story says two months ([p. 9](https://recoverystarts.com/big-book/page-9/)). In Bill's 1957 account Ebby says he hasn't had a drink "for months" (A.A. Comes of Age, 1957); a mission worker quoted in *Pass It On* heard him testify to "a number of months" (Pass It On, 1984).
+- **"School friend."** The 1939 text says "an old school friend" ([p. 8](https://recoverystarts.com/big-book/page-8/)); Bill in 1957 says boarding-school friend (A.A. Comes of Age, 1957); *Pass It On* says they were classmates for one season (Pass It On, 1984).
 - **When the slip began.** Bill's 1957 account mentions it as of November 1937 (A.A. Comes of Age, 1957); Ebby, in *Pass It On*, dates it to April 1937 (Pass It On, 1984). These agree.
 - Our sources give his surname only as "T." and doesn't say more about his last years than *Pass It On*'s one line.
 
 ## Read it yourself
-- "Bill's Story," Chapter 1 (pp. 1–16), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- "Bill's Story," Chapter 1 ([pp. 1–16](https://recoverystarts.com/big-book/page-1/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What happened to Bill W. at Towns Hospital?* · *What part did Carl Jung play in A.A.'s beginning?* · *Is the word "sponsor" in the Big Book?* · *Is "faith without works is dead" in the Big Book?*
@@ -55,4 +55,5 @@ Ebby's sobriety lasted until April 1937: "That was after two years and approxima
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.*

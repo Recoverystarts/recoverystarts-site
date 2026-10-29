@@ -1,21 +1,21 @@
 # Tradition Ten: does A.A. take sides on outside issues?
 
 **In short:**
-- No. The Long Form of Tradition Ten says no A.A. group or member should ever express an opinion on outside controversial issues "in such a way as to implicate A.A." It names politics, alcohol reform and sectarian religion in particular (p. 565).
-- "The Alcoholics Anonymous groups oppose no one" (p. 565). On such matters the groups express no views at all.
+- No. The Long Form of Tradition Ten says no A.A. group or member should ever express an opinion on outside controversial issues "in such a way as to implicate A.A." It names politics, alcohol reform and sectarian religion in particular ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- "The Alcoholics Anonymous groups oppose no one" ([p. 565](https://recoverystarts.com/big-book/page-565/)). On such matters the groups express no views at all.
 - The Tradition doesn't ask members to have no opinions. It asks them never to put A.A.'s name behind one.
 
-## What the Long Form says (p. 565)
+## What the Long Form says ([p. 565](https://recoverystarts.com/big-book/page-565/))
 
 The whole Tenth Tradition is three sentences:
 
-- No A.A. group or member should ever, "in such a way as to implicate A.A.," express any opinion on outside controversial issues, "particularly those of politics, alcohol reform, or sectarian religion" (p. 565).
-- "The Alcoholics Anonymous groups oppose no one" (p. 565).
-- "Concerning such matters they can express no views whatever" (p. 565).
+- No A.A. group or member should ever, "in such a way as to implicate A.A.," express any opinion on outside controversial issues, "particularly those of politics, alcohol reform, or sectarian religion" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- "The Alcoholics Anonymous groups oppose no one" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- "Concerning such matters they can express no views whatever" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 Notice who it covers and how. The groups have no views on these issues at all. A member is covered too, but the limit is on speaking in a way that drags A.A. in. The text doesn't say a member can't vote, hold beliefs or take part in public life.
 
-The idea is older than the Traditions. The Big Book's 1939 foreword already said A.A. was not allied with any faith, sect or denomination, "nor do we oppose anyone" (p. xiv).
+The idea is older than the Traditions. The Big Book's 1939 foreword already said A.A. was not allied with any faith, sect or denomination, "nor do we oppose anyone" ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)).
 
 ## Why: Bill W.'s essays
 
@@ -34,9 +34,9 @@ The idea is older than the Traditions. The Big Book's 1939 foreword already said
 The Long Form gives three examples of outside issues, politics, alcohol reform and sectarian religion, introduced with "particularly." It doesn't list everything else that counts, and it doesn't name treatment methods or any modern topic. Deciding whether a new question is an "outside controversial issue" is left to experience.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Dangers in Linking A.A. to Other Projects," pp. 23–26; "Money," pp. 27–35; "Why Alcoholics Anonymous Is Anonymous," pp. 48–58): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
 - Related: *What does "no outside affiliation" mean in practice?* · *Tradition Six: can an A.A. group partner with a treatment centre?*
 
 ## Sources

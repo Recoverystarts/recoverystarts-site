@@ -1,14 +1,14 @@
 # Concept VIII: do the trustees run the General Service Office and the Grapevine?
 
 **In short:**
-- Not day to day. Concept VIII says the trustees act in two ways: on large matters of overall policy and finance they plan and manage directly, but over the separately incorporated active services they have "custodial oversight," exercised "through their ability to elect all the directors of these entities" (p. 575).
+- Not day to day. Concept VIII says the trustees act in two ways: on large matters of overall policy and finance they plan and manage directly, but over the separately incorporated active services they have "custodial oversight," exercised "through their ability to elect all the directors of these entities" ([p. 575](https://recoverystarts.com/big-book/page-575/)).
 - So A.A. World Services (which runs the General Service Office and publishing) and the Grapevine each have their own board, executive, staff, money and offices. The trustees choose those boards and keep watch; they don't manage.
 - Bill W.'s reasons, written in 1962: early attempts to run the office through trustee committees failed, and "There is always a powerful connection between money and authority" (Twelve Concepts for World Service, Concept VIII).
-- The earlier text (1946) already wanted anything requiring much money or management separately incorporated, "thus dividing the material from the spiritual" (p. 564).
+- The earlier text (1946) already wanted anything requiring much money or management separately incorporated, "thus dividing the material from the spiritual" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
 ## The earlier texts first (1946–47)
 
-Long Form Six (1946): considerable property "should be separately incorporated and managed, thus dividing the material from the spiritual" (p. 564).
+Long Form Six (1946): considerable property "should be separately incorporated and managed, thus dividing the material from the spiritual" ([p. 564](https://recoverystarts.com/big-book/page-564/)).
 
 Bill's 1946 essay on money notes "an encouraging tendency to incorporate all such special functions separately if they involve any great amount of money, property or management" (P-17, Money, 1946), because an A.A. group "is a spiritual entity, not a business concern."
 
@@ -35,8 +35,8 @@ His 1947 essay describes the Foundation's trustees as custodians "who guarantee 
 - In 2020, 90% of the trustees lived "out of town" (footnote 2); in 1962 it was about half.
 
 ## Read it yourself
-- Long Form Six (Appendix I, pp. 563–564), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept VIII, short form (Appendix VII, p. 575): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Long Form Six (Appendix I, [pp. 563–564](https://recoverystarts.com/big-book/page-563/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept VIII, short form (Appendix VII, [p. 575](https://recoverystarts.com/big-book/page-575/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1946 and 1947 essays: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -45,9 +45,9 @@ His 1947 essay describes the Foundation's trustees as custodians "who guarantee 
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Long Form Six | pp. 563–564 | 1946 |
+| *Alcoholics Anonymous*, Appendix I, Long Form Six | [pp. 563–564](https://recoverystarts.com/big-book/page-563/) | 1946 |
 | P-17, Money; Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1946 and 1947 |
-| *Alcoholics Anonymous*, Appendix VII, Concept VIII (short form) | p. 575 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept VIII (short form) | [p. 575](https://recoverystarts.com/big-book/page-575/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept VIII, with later footnotes | in *The A.A. Service Manual*, 2024–2026 edition | 1962; footnotes to 2020s |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

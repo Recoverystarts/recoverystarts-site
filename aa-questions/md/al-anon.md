@@ -1,8 +1,8 @@
 # Is Al-Anon part of A.A.?
 
 **In short:**
-- No. A.A.'s own literature calls Al-Anon a separate fellowship. The Big Book's later-edition note says Al-Anon Family Groups, "Though it is entirely separate from Alcoholics Anonymous," uses the general principles of the A.A. program as a guide for those close to alcoholics (p. 121).
-- Al-Anon didn't exist when the Big Book was written. The same note says it was formed "about thirteen years after this chapter was written" (p. 121); a later history gives 1951 as the year it took its present form (*Dr. Bob and the Good Oldtimers*, 1980).
+- No. A.A.'s own literature calls Al-Anon a separate fellowship. The Big Book's later-edition note says Al-Anon Family Groups, "Though it is entirely separate from Alcoholics Anonymous," uses the general principles of the A.A. program as a guide for those close to alcoholics ([p. 121](https://recoverystarts.com/big-book/page-121/)).
+- Al-Anon didn't exist when the Big Book was written. The same note says it was formed "about thirteen years after this chapter was written" ([p. 121](https://recoverystarts.com/big-book/page-121/)); a later history gives 1951 as the year it took its present form (*Dr. Bob and the Good Oldtimers*, 1980).
 - It grew out of A.A.'s own families. *A.A. Comes of Age* (1957) credits Anne Smith, Lois W. and others with urging the Twelve Steps on nonalcoholic husbands and wives, and family groups formed in many places before 1951.
 - The 1939 text's own word to families is in Chapters 8 and 9; Chapter 8 is written in the voice of members' wives.
 
@@ -10,9 +10,9 @@
 
 Before there was any Al-Anon, the Big Book spoke to the people around the drinker:
 - Chapter 8, "To Wives," speaks in the voice of members' wives to the wives of men who drink (later histories say Bill W. wrote it: *Pass It On*, 1984; *Dr. Bob and the Good Oldtimers*, 1980), and "What they say will apply to nearly everyone bound by ties of blood or affection to an alcoholic." (p. 104). It urges the wife to try the program herself (pp. 116–117). See *My husband (or wife) drinks. What does the Big Book say to do?*
-- Chapter 9, "The Family Afterward," is about the whole family once the drinking stops (pp. 122–135). See *What happens to the family after the drinking stops?*
-- Chapter 7 tells the member to keep helping a drinker's family even if the drinker doesn't respond: "The family should be offered your way of life." (p. 97). See *What does the Big Book say about helping the drinker's family?*
-- The house where Chapter 11's weekly meeting was held welcomed wives, who found "loving and understanding companionship among women who knew her problem" (p. 160).
+- Chapter 9, "The Family Afterward," is about the whole family once the drinking stops ([pp. 122–135](https://recoverystarts.com/big-book/page-122/)). See *What happens to the family after the drinking stops?*
+- Chapter 7 tells the member to keep helping a drinker's family even if the drinker doesn't respond: "The family should be offered your way of life." ([p. 97](https://recoverystarts.com/big-book/page-97/)). See *What does the Big Book say about helping the drinker's family?*
+- The house where Chapter 11's weekly meeting was held welcomed wives, who found "loving and understanding companionship among women who knew her problem" ([p. 160](https://recoverystarts.com/big-book/page-160/)).
 
 ## How Al-Anon began (later texts, dated)
 
@@ -22,12 +22,12 @@ Before there was any Al-Anon, the Big Book spoke to the people around the drinke
 
 ## Today
 
-- The Big Book's Appendix VI, "How to Get in Touch With A.A.," suggests that a relative or friend of an alcoholic "who shows no immediate interest in A.A." (Appendix VI, p. 573) write to Al-Anon Family Groups, and gives its world service office.
+- The Big Book's Appendix VI, "How to Get in Touch With A.A.," suggests that a relative or friend of an alcoholic "who shows no immediate interest in A.A." (Appendix VI, [p. 573](https://recoverystarts.com/big-book/page-573/)) write to Al-Anon Family Groups, and gives its world service office.
 - *The A.A. Group* (P-16, 2018) calls Al-Anon "a fellowship entirely separate from A.A." (P-16, 2018). It reports a General Service Conference recommendation that "family" meetings not be listed in A.A. directories, partly because the word "family" might be confused with Al-Anon. It lists an A.A. Guideline, "Relationship Between A.A. and Al-Anon," which is not in our sources.
 
 ## Read it yourself
-- Chapter 8, "To Wives," with the note on Al-Anon (pp. 104–121): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
-- Chapter 9, "The Family Afterward" (pp. 122–135): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
+- Chapter 8, "To Wives," with the note on Al-Anon ([pp. 104–121](https://recoverystarts.com/big-book/page-104/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
+- Chapter 9, "The Family Afterward" ([pp. 122–135](https://recoverystarts.com/big-book/page-122/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
 - Appendix VI, "How to Get in Touch With A.A.": https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevi.pdf
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *What does the Big Book say about helping the drinker's family?* · *What's the difference between open and closed meetings? Can family or friends come?*

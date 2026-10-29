@@ -3,7 +3,7 @@
 **In short:**
 - The phrase "singleness of purpose" is not in the Big Book. It isn't in the 1946 Long Form of the Traditions or in Bill W.'s 1946–47 essays either.
 - In our sources it first appears in Bill W.'s own history of how the Traditions were written, from around 1955 (*A.A.'s Legacy of Service*, P-44) and in *A.A. Comes of Age* (1957). There it names one of the subjects a code of traditions would cover: "membership, group autonomy, singleness of purpose, nonendorsement of other enterprises…" (*A.A. Comes of Age*, 1957).
-- The idea is older than the phrase. The Long Form gives each group "but one primary purpose—that of carrying its message to the alcoholic who still suffers" (p. 564), and the 1939 text says of working with alcoholics, "To be helpful is our only aim." (p. 89).
+- The idea is older than the phrase. The Long Form gives each group "but one primary purpose—that of carrying its message to the alcoholic who still suffers" ([p. 564](https://recoverystarts.com/big-book/page-564/)), and the 1939 text says of working with alcoholics, "To be helpful is our only aim." ([p. 89](https://recoverystarts.com/big-book/page-89/)).
 - In our sources the phrase is about what A.A. and its groups do: carry the message to alcoholics, and not take on other causes, however good.
 
 ## The search
@@ -14,10 +14,10 @@ The nearest early wording is in Bill's 1947 essay on government: most groups, he
 
 ## The idea in 1939 and 1946
 
-- The Foreword to the First Edition: "We simply wish to be helpful to those who are afflicted." (p. xiv).
-- Chapter 7, on carrying the message: "To be helpful is our only aim." (p. 89).
-- The Long Form of Tradition Five: "Each Alcoholics Anonymous group ought to be a spiritual entity having but one primary purpose—that of carrying its message to the alcoholic who still suffers." (p. 564). The short form keeps the core: "Each group has but one primary purpose—to carry its message to the alcoholic who still suffers." (p. 562).
-- Tradition Six warns that money, property and authority "may easily divert us from our primary spiritual aim" (p. 563).
+- The Foreword to the First Edition: "We simply wish to be helpful to those who are afflicted." ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)).
+- Chapter 7, on carrying the message: "To be helpful is our only aim." ([p. 89](https://recoverystarts.com/big-book/page-89/)).
+- The Long Form of Tradition Five: "Each Alcoholics Anonymous group ought to be a spiritual entity having but one primary purpose—that of carrying its message to the alcoholic who still suffers." ([p. 564](https://recoverystarts.com/big-book/page-564/)). The short form keeps the core: "Each group has but one primary purpose—to carry its message to the alcoholic who still suffers." ([p. 562](https://recoverystarts.com/big-book/page-562/)).
+- Tradition Six warns that money, property and authority "may easily divert us from our primary spiritual aim" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
 ## Where the phrase appears, and what it means there
 
@@ -34,8 +34,8 @@ The nearest early wording is in Bill's 1947 essay on government: most groups, he
 In every passage found, "singleness of purpose" or "single purpose" is about what A.A. as a society, or an A.A. group, sets out to do. Who may belong is a separate subject in Bill's own list ("membership" comes first), and the Traditions answer it in Tradition Three (see *What is the only requirement for A.A. membership?*).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Chapter 7, "Working With Others" (pp. 89–103): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Chapter 7, "Working With Others" ([pp. 89–103](https://recoverystarts.com/big-book/page-89/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group* ("A.A.'s Single Purpose," p. 7): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Tradition Five: what is a group's one purpose?*

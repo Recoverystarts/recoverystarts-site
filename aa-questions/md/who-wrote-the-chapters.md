@@ -1,20 +1,20 @@
 # Who wrote the Big Book's chapters, including "To Wives"?
 
 **In short:**
-- The Big Book names no author. It presents itself as the work of "more than one hundred men and women" (p. xiii), and "The Doctor's Opinion" is by Dr. William D. Silkworth (p. xi).
+- The Big Book names no author. It presents itself as the work of "more than one hundred men and women" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and "The Doctor's Opinion" is by Dr. William D. Silkworth ([p. xi](https://recoverystarts.com/big-book/page-xi/)).
 - The later histories agree that Bill W. drafted the main chapters in 1938, reading them to the New York group, which argued over them hard, and sending them to Dr. Bob in Akron for comment. Bill himself said he was "much more of an umpire than I ever was an author" (P-44).
-- "To Wives" is written in the voice of the wives of A.A. members (p. 104), but the 1980 and 1984 histories both say Bill wrote it. Lois W. said she offered and was told no.
+- "To Wives" is written in the voice of the wives of A.A. members ([p. 104](https://recoverystarts.com/big-book/page-104/)), but the 1980 and 1984 histories both say Bill wrote it. Lois W. said she offered and was told no.
 - *Pass It On* (1984) says Bill wrote at least ten of the opening chapters and that "To Employers" may have been written by Hank P. No other source in our sources say so, and none names a different author for any other main chapter.
 
 ## What the Big Book itself says
 
-The book signs itself only as Alcoholics Anonymous (p. xiv). The Foreword to the First Edition speaks for "more than one hundred men and women who have recovered" (p. xiii), and the last chapter addresses a reader who may never meet "you who write this book" (p. 164).
+The book signs itself only as Alcoholics Anonymous ([p. xiv](https://recoverystarts.com/big-book/page-xiv/)). The Foreword to the First Edition speaks for "more than one hundred men and women who have recovered" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)), and the last chapter addresses a reader who may never meet "you who write this book" ([p. 164](https://recoverystarts.com/big-book/page-164/)).
 
 Two chapters say who is speaking:
-- **"To Wives."** The chapter says the members want "the wives of Alcoholics Anonymous to address the wives of men who drink too much" (p. 104), and it goes on in the wives' voice: "As wives of Alcoholics Anonymous, we would like you to feel that we understand" (p. 104). A footnote added later says it was "Written in 1939, when there were few women in A.A." (p. 104).
-- **"To Employers."** The chapter opens by introducing one member who had spent much of his life in big business and had hired and fired hundreds of men, then hands over to him: "But let him tell you:" (p. 136). The rest is in his first person.
+- **"To Wives."** The chapter says the members want "the wives of Alcoholics Anonymous to address the wives of men who drink too much" ([p. 104](https://recoverystarts.com/big-book/page-104/)), and it goes on in the wives' voice: "As wives of Alcoholics Anonymous, we would like you to feel that we understand" ([p. 104](https://recoverystarts.com/big-book/page-104/)). A footnote added later says it was "Written in 1939, when there were few women in A.A." ([p. 104](https://recoverystarts.com/big-book/page-104/)).
+- **"To Employers."** The chapter opens by introducing one member who had spent much of his life in big business and had hired and fired hundreds of men, then hands over to him: "But let him tell you:" ([p. 136](https://recoverystarts.com/big-book/page-136/)). The rest is in his first person.
 
-**"The Doctor's Opinion"** is Dr. Silkworth's, kept intact "just as it was originally written in 1939" (p. xi). See *What is "The Doctor's Opinion," and who wrote it?*
+**"The Doctor's Opinion"** is Dr. Silkworth's, kept intact "just as it was originally written in 1939" ([p. xi](https://recoverystarts.com/big-book/page-xi/)). See *What is "The Doctor's Opinion," and who wrote it?*
 
 The book doesn't say who drafted the other chapters. For that our sources have only accounts written later.
 
@@ -49,9 +49,9 @@ The same book says that although Bill was "the nominal author of the fifth chapt
 - **"To Employers."** Only the 1984 book raises Hank P., and only as "some reason to believe" (Pass It On, 1984). Our sources don't settle it.
 
 ## Read it yourself
-- Chapter 8, "To Wives" (pp. 104–121): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
-- Chapter 10, "To Employers" (pp. 136–150): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Chapter 8, "To Wives" ([pp. 104–121](https://recoverystarts.com/big-book/page-104/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt8.pdf
+- Chapter 10, "To Employers" ([pp. 136–150](https://recoverystarts.com/big-book/page-136/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt10.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
 - P-44, *A.A.'s Legacy of Service*: https://www.aa.org/aas-legacy-service
 - *Alcoholics Anonymous*, *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Was there a draft of the Big Book before 1939?* · *How were the Twelve Steps written?* · *How was the Big Book paid for and published (Works Publishing)?* · *What is "The Doctor's Opinion," and who wrote it?*
@@ -59,7 +59,7 @@ The same book says that although Bill was "the nominal author of the fifth chapt
 ## Sources
 | Source | Pages | Date |
 |---|---|---|
-| *Alcoholics Anonymous*, Foreword to the First Edition; Chapters 8, 10, 11 | xiii–xiv, 104, 136, 164 | 1939 (the footnote on p. 104 was added later) |
+| *Alcoholics Anonymous*, Foreword to the First Edition; Chapters 8, 10, 11 | xiii–xiv, 104, 136, 164 | 1939 (the footnote on [p. 104](https://recoverystarts.com/big-book/page-104/) was added later) |
 | *Alcoholics Anonymous*, Preface | xi | fourth edition, 2001 |
 | P-44, *A.A.'s Legacy of Service* (Bill W.) | — | around 1955; pamphlet © 2018 |
 | *A.A. Comes of Age* (Bill W.) | — | 1957 |

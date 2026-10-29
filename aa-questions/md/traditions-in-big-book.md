@@ -7,11 +7,11 @@
 
 ## Page by page
 
-**Page 561: the introduction.** Appendix I begins by saying why the Traditions matter and what they are: the best answers experience has given to "How can A.A. best function?" and "How can A.A. best stay whole and so survive?" (p. 561). It then explains that the next page has the short form, "the form in general use today" (p. 561), and that the original long form is reproduced too, because it "is more explicit and of possible historic value" (p. 561).
+**Page 561: the introduction.** Appendix I begins by saying why the Traditions matter and what they are: the best answers experience has given to "How can A.A. best function?" and "How can A.A. best stay whole and so survive?" ([p. 561](https://recoverystarts.com/big-book/page-561/)). It then explains that the next page has the short form, "the form in general use today" ([p. 561](https://recoverystarts.com/big-book/page-561/)), and that the original long form is reproduced too, because it "is more explicit and of possible historic value" ([p. 561](https://recoverystarts.com/big-book/page-561/)).
 
-**Page 562: the short form.** All twelve Traditions in their short wording (p. 562), the version the appendix calls "the form in general use today" (p. 561).
+**Page 562: the short form.** All twelve Traditions in their short wording ([p. 562](https://recoverystarts.com/big-book/page-562/)), the version the appendix calls "the form in general use today" ([p. 561](https://recoverystarts.com/big-book/page-561/)).
 
-**Pages 563–566: the Long Form.** The original wording, headed "Our A.A. experience has taught us that:" (p. 563). Where each one is:
+**Pages 563–566: the Long Form.** The original wording, headed "Our A.A. experience has taught us that:" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Where each one is:
 
 | Tradition | Long Form page |
 |---|---|
@@ -32,19 +32,19 @@ The first five are short enough to fit together on page 563. Six is the longest 
 
 ## Why they're at the back
 
-The main text of the Big Book, Chapters 1 to 11, comes from the first edition of 1939, when A.A. was "more than one hundred men and women" (p. xiii). The Traditions grew out of the problems of the 1940s and were first printed in 1946 (p. 561). They were added to the book later. The Foreword to the Second Edition (1955) summarizes them and points the reader to where they're "stated in full" in the back of the book (p. xix).
+The main text of the Big Book, Chapters 1 to 11, comes from the first edition of 1939, when A.A. was "more than one hundred men and women" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). The Traditions grew out of the problems of the 1940s and were first printed in 1946 ([p. 561](https://recoverystarts.com/big-book/page-561/)). They were added to the book later. The Foreword to the Second Edition (1955) summarizes them and points the reader to where they're "stated in full" in the back of the book ([p. xix](https://recoverystarts.com/big-book/page-xix/)).
 
-What the 1939 text does have is the seed of a few of them, in the Foreword to the First Edition: no fees or dues, "an honest desire to stop drinking" as the only requirement for membership, no alliance with any sect, and anonymity in the press (pp. xiii–xiv).
+What the 1939 text does have is the seed of a few of them, in the Foreword to the First Edition: no fees or dues, "an honest desire to stop drinking" as the only requirement for membership, no alliance with any sect, and anonymity in the press ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)).
 
 ## Other places to find them
 
 The Long Form also appears, in its original 1946 wording, at the front of the pamphlet P-17, *A.A. Tradition — How It Developed*, as Bill W.'s "Twelve Points to Assure Our Future" (P-17, Foreword, 1955), with the short form printed under each one. The two copies differ in small ways; see *What is the Long Form?*
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - The full book, *Alcoholics Anonymous*, is sold by A.A. World Services at https://onlineliterature.aa.org
-- Related: *What is the Long Form, and why read it?* · *Were the Traditions written with the Steps?*
+- Related: *What is the Long Form, and why read it instead of the short form?* · *Were the Traditions written with the Steps?*
 
 ## Sources
 | Source | Pages | First published |

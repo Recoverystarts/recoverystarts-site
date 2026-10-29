@@ -8,7 +8,7 @@
 
 ## What the Big Book says (1955)
 
-The Foreword to the Second Edition, written five years later, describes the Traditions and then says: "Though none of these principles had the force of rules or laws, they had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland." (p. xix). The foreword calls it a "Conference"; the other sources call it a convention.
+The Foreword to the Second Edition, written five years later, describes the Traditions and then says: "Though none of these principles had the force of rules or laws, they had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland." ([p. xix](https://recoverystarts.com/big-book/page-xix/)). The foreword calls it a "Conference"; the other sources call it a convention.
 
 ## Bill W.'s accounts
 
@@ -36,8 +36,8 @@ The same book says the effort left him so weak that he had to leave the stage at
 - **Exact days.** Our sources give only "July, 1950" (A.A. Comes of Age, 1957) and "the summer of 1950" (A.A. Comes of Age, 1957).
 
 ## Read it yourself
-- Foreword to the Second Edition (pp. xv–xxi), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
-- The Twelve Traditions, Appendix I (pp. 561–566): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- The Twelve Traditions, Appendix I ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-44, *A.A.'s Legacy of Service*, on aa.org: https://www.aa.org/aas-legacy-service
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org

@@ -2,8 +2,8 @@
 
 **In short:**
 - "Home group" isn't a phrase the Big Book's program, the 1946 Long Form or Bill W.'s 1946–47 essays use. It shows up in later writing: P-16 (2018) describes the home group as the one group a member belongs to, does service in and votes in.
-- What the Long Form does define is the A.A. group itself: any two or three alcoholics gathered for sobriety, with no other affiliation (p. 563), "a spiritual entity" with one primary purpose, carrying its message to the alcoholic who still suffers (p. 563).
-- Every Tradition guides a group: its own conscience decides its affairs (p. 563), it pays its own way (p. 564), it keeps the least possible organization with rotating leaders (p. 565), and it puts its purpose ahead of anyone's personality.
+- What the Long Form does define is the A.A. group itself: any two or three alcoholics gathered for sobriety, with no other affiliation ([p. 563](https://recoverystarts.com/big-book/page-563/)), "a spiritual entity" with one primary purpose, carrying its message to the alcoholic who still suffers ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- Every Tradition guides a group: its own conscience decides its affairs ([p. 563](https://recoverystarts.com/big-book/page-563/)), it pays its own way ([p. 564](https://recoverystarts.com/big-book/page-564/)), it keeps the least possible organization with rotating leaders ([p. 565](https://recoverystarts.com/big-book/page-565/)), and it puts its purpose ahead of anyone's personality.
 
 ## Where the phrase is, and isn't
 
@@ -11,12 +11,12 @@ Searching every text in our sources, the phrase doesn't appear in the Big Book's
 
 ## What the Long Form says a group is (1946)
 
-- **Who can form one.** "Any two or three alcoholics gathered together for sobriety may call themselves an A.A. group, provided that, as a group, they have no other affiliation" (p. 563). Membership can't depend "upon money or conformity," and a group "may refuse none who wish to recover" (p. 563).
-- **What it's for.** Each group "ought to be a spiritual entity having but one primary purpose — that of carrying its message to the alcoholic who still suffers" (p. 563).
-- **Who it answers to.** In its own affairs, only "its own conscience" (p. 563), with the ultimate authority for its group purpose being a loving God as He may express Himself in the group conscience (p. 563). It consults neighbouring groups when its plans affect them (p. 563).
-- **How it's paid for.** By its own members' voluntary contributions (p. 564), and it shouldn't build up money beyond prudent reserves for no A.A. purpose (p. 564).
-- **How it's run.** With "the least possible organization," and rotating leadership is best (p. 565); a small group may elect a secretary, a larger one a rotating committee (p. 565). Its leaders "do not govern" (p. 565).
-- **What it must not do.** Go into business, or let cooperation turn into affiliation or endorsement (p. 564), or express views on outside controversial issues (p. 565).
+- **Who can form one.** "Any two or three alcoholics gathered together for sobriety may call themselves an A.A. group, provided that, as a group, they have no other affiliation" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Membership can't depend "upon money or conformity," and a group "may refuse none who wish to recover" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **What it's for.** Each group "ought to be a spiritual entity having but one primary purpose — that of carrying its message to the alcoholic who still suffers" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **Who it answers to.** In its own affairs, only "its own conscience" ([p. 563](https://recoverystarts.com/big-book/page-563/)), with the ultimate authority for its group purpose being a loving God as He may express Himself in the group conscience ([p. 563](https://recoverystarts.com/big-book/page-563/)). It consults neighbouring groups when its plans affect them ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- **How it's paid for.** By its own members' voluntary contributions ([p. 564](https://recoverystarts.com/big-book/page-564/)), and it shouldn't build up money beyond prudent reserves for no A.A. purpose ([p. 564](https://recoverystarts.com/big-book/page-564/)).
+- **How it's run.** With "the least possible organization," and rotating leadership is best ([p. 565](https://recoverystarts.com/big-book/page-565/)); a small group may elect a secretary, a larger one a rotating committee ([p. 565](https://recoverystarts.com/big-book/page-565/)). Its leaders "do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+- **What it must not do.** Go into business, or let cooperation turn into affiliation or endorsement ([p. 564](https://recoverystarts.com/big-book/page-564/)), or express views on outside controversial issues ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 Bill W. described the same group from experience in 1947: most groups preferred rotating committees, and each committee "carries out what it believes to be the wishes of its group" (P-17, "Will A.A. Ever Have a Personal Government?", 1947, p. 38).
 
@@ -31,7 +31,7 @@ Bill W. described the same group from experience in 1947: most groups preferred 
 That last point connects the home group back to the Long Form's purpose. A group is defined by what it does for the alcoholic who still suffers, not by the hour it meets.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-16, *The A.A. Group* (pp. 12–16): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - P-17, *A.A. Tradition: How It Developed*: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - Related: *What is a group business meeting for?* · *Tradition Five: what is a group's one purpose?* · *What is the only requirement for membership?*

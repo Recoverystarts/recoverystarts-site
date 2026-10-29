@@ -8,11 +8,11 @@
 
 ## What the 1939 Big Book says
 
-Chapter 11, "A Vision for You," describes the "western city" (Akron) without naming it. After the first three, "A year and six months later these three had succeeded with seven more." (p. 159). A weekly meeting began, open to anyone interested in a spiritual way of life (pp. 159–160), and a couple "placed their large home at the disposal of this strangely assorted crowd" (p. 160). By 1939 that house drew sixty or eighty a week, and a community thirty miles away had fifteen members (p. 161).
+Chapter 11, "A Vision for You," describes the "western city" (Akron) without naming it. After the first three, "A year and six months later these three had succeeded with seven more." ([p. 159](https://recoverystarts.com/big-book/page-159/)). A weekly meeting began, open to anyone interested in a spiritual way of life ([pp. 159–160](https://recoverystarts.com/big-book/page-159/)), and a couple "placed their large home at the disposal of this strangely assorted crowd" ([p. 160](https://recoverystarts.com/big-book/page-160/)). By 1939 that house drew sixty or eighty a week, and a community thirty miles away had fifteen members ([p. 161](https://recoverystarts.com/big-book/page-161/)).
 
-Then: "Under only slightly different conditions, the same thing is taking place in many eastern cities." (p. 161). In one of them was a hospital where a doctor sent them patients, and there were informal meetings "where you may now see scores of members" (p. 162). "There is a good bit of travel between East and West and we foresee a great increase in this helpful interchange." (p. 162).
+Then: "Under only slightly different conditions, the same thing is taking place in many eastern cities." ([p. 161](https://recoverystarts.com/big-book/page-161/)). In one of them was a hospital where a doctor sent them patients, and there were informal meetings "where you may now see scores of members" ([p. 162](https://recoverystarts.com/big-book/page-162/)). "There is a good bit of travel between East and West and we foresee a great increase in this helpful interchange." ([p. 162](https://recoverystarts.com/big-book/page-162/)).
 
-The 1955 Foreword to the Second Edition gives the order: the first group formed at Akron in the summer of 1935, "though no one realized it at the time" (p. xvii); "A second small group promptly took shape at New York" (p. xvii), followed by Cleveland.
+The 1955 Foreword to the Second Edition gives the order: the first group formed at Akron in the summer of 1935, "though no one realized it at the time" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)); "A second small group promptly took shape at New York" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)), followed by Cleveland.
 
 ## New York's slow start (A.A. Comes of Age, 1957)
 
@@ -37,8 +37,8 @@ The New Yorkers parted from the Oxford Groups in the latter part of 1937 (A.A. C
 - **The meditation.** Bill later wondered why Wally and Annabelle G. sobered up so many in their Akron home while he and Lois sobered none in theirs. He wasn't sure: "Maybe they just hit the right cases." (Dr. Bob and the Good Oldtimers, 1980). But he also said, "I sort of always felt that something was lost from A.A. when we stopped emphasizing the morning meditation." (Dr. Bob and the Good Oldtimers, 1980). The same book adds that "it was all one Fellowship" (Dr. Bob and the Good Oldtimers, 1980).
 
 ## Read it yourself
-- Chapter 11, "A Vision for You" (pp. 151–164), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Chapter 11, "A Vision for You" ([pp. 151–164](https://recoverystarts.com/big-book/page-151/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How did A.A. grow from two people?* · *What did early A.A. take from the Oxford Group, and why did it separate?* · *How did the Cleveland group become the first to call itself Alcoholics Anonymous?* · *How many members did A.A. have in 1939?*
 
@@ -52,4 +52,5 @@ The New Yorkers parted from the Oxford Groups in the latter part of 1937 (A.A. C
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.*

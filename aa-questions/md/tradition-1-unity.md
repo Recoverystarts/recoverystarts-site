@@ -1,21 +1,21 @@
 # Tradition One: does it mean "my sobriety comes first"?
 
 **In short:**
-- No. Tradition One says the opposite order: "our common welfare comes first. But individual welfare follows close afterward" (p. 563).
-- The reason it gives is that the individual's life depends on A.A.'s: "A.A. must continue to live or most of us will surely die" (p. 563). Putting A.A.'s unity first is how members protect their own recovery, and the recovery of alcoholics who haven't arrived yet.
+- No. Tradition One says the opposite order: "our common welfare comes first. But individual welfare follows close afterward" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- The reason it gives is that the individual's life depends on A.A.'s: "A.A. must continue to live or most of us will surely die" ([p. 563](https://recoverystarts.com/big-book/page-563/)). Putting A.A.'s unity first is how members protect their own recovery, and the recovery of alcoholics who haven't arrived yet.
 - The individual isn't dismissed. The Long Form keeps him in the same sentence: second, and "close afterward."
 
 ## What the Long Form says
 
-The whole of Tradition One in its original form is four short sentences (p. 563):
-- Each member is "but a small part of a great whole" (p. 563).
+The whole of Tradition One in its original form is four short sentences ([p. 563](https://recoverystarts.com/big-book/page-563/)):
+- Each member is "but a small part of a great whole" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 - A.A. must go on living, or most members will die.
-- "Hence our common welfare comes first" (p. 563).
-- "But individual welfare follows close afterward" (p. 563).
+- "Hence our common welfare comes first" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
+- "But individual welfare follows close afterward" ([p. 563](https://recoverystarts.com/big-book/page-563/)).
 
-The short form keeps the first half of the idea and the reason behind it: "Our common welfare should come first; personal recovery depends upon A.A. unity" (p. 562). The line about individual welfare following close behind is only in the Long Form.
+The short form keeps the first half of the idea and the reason behind it: "Our common welfare should come first; personal recovery depends upon A.A. unity" ([p. 562](https://recoverystarts.com/big-book/page-562/)). The line about individual welfare following close behind is only in the Long Form.
 
-The opening of Appendix I gives the same reasoning. Because A.A. makes the difference between life and death for its members, and could for many more, it needs "permanent unity" (p. 561). Alcoholics must "work together and hang together" or most will "die alone" (p. 561).
+The opening of Appendix I gives the same reasoning. Because A.A. makes the difference between life and death for its members, and could for many more, it needs "permanent unity" ([p. 561](https://recoverystarts.com/big-book/page-561/)). Alcoholics must "work together and hang together" or most will "die alone" ([p. 561](https://recoverystarts.com/big-book/page-561/)).
 
 ## Where "my sobriety comes first" goes wrong
 
@@ -36,7 +36,7 @@ He also compares the early members to a crew adrift on a raft after a plane cras
 *The Twelve Traditions Illustrated* (P-43, 1971) takes up the "selfish program" idea under Tradition One directly. It asks, "Oh well, it's a selfish program, isn't it?" (P-43, 1971), and answers that self-indulgence threatens both the member's own sobriety and the unity of the group.
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - P-43, *The Twelve Traditions Illustrated*: https://www.aa.org/twelve-traditions-illustrated
 - *Alcoholics Anonymous Comes of Age* is sold by A.A. World Services at https://onlineliterature.aa.org

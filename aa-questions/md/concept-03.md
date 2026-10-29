@@ -8,7 +8,7 @@
 
 ## The earlier texts first
 
-Tradition Two's short form ends: "Our leaders are but trusted servants; they do not govern" (p. 562). The Long Form of Nine calls true leaders "trusted and experienced servants of the whole" (p. 565).
+Tradition Two's short form ends: "Our leaders are but trusted servants; they do not govern" ([p. 562](https://recoverystarts.com/big-book/page-562/)). The Long Form of Nine calls true leaders "trusted and experienced servants of the whole" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 Bill's 1947 essay describes how group committees saw themselves then: "they have only the authorization to serve, never to command" (P-17, Will A.A. Ever Have a Personal Government?, 1947), and "Each committee carries out what it believes to be the wishes of its group" (P-17, Will A.A. Ever Have a Personal Government?, 1947). That leans toward the servant following the group, though "what it believes" already leaves the committee some judgment. Concept III, fifteen years later, gives servants more discretion explicitly.
 
@@ -43,8 +43,8 @@ P-8 (© 2017) applies the same idea one level down: if groups instruct their GSR
 
 
 ## Read it yourself
-- Tradition Two and Long Form Nine (Appendix I, pp. 562–565), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Concept III, short form (Appendix VII, p. 574): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
+- Tradition Two and Long Form Nine (Appendix I, [pp. 562–565](https://recoverystarts.com/big-book/page-562/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Concept III, short form (Appendix VII, [p. 574](https://recoverystarts.com/big-book/page-574/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicevii_.pdf
 - P-17, with Bill's 1947 essay on government: https://www.aa.org/aa-tradition-how-it-developed
 - P-8, *The Twelve Concepts for World Service Illustrated*: https://www.aa.org/twelve-concepts-illustrated
 - The full essay is in *The A.A. Service Manual combined with Twelve Concepts for World Service*: https://www.aa.org/aa-service-manual (sold at https://onlineliterature.aa.org)
@@ -53,10 +53,10 @@ P-8 (© 2017) applies the same idea one level down: if groups instruct their GSR
 ## Sources
 | Source | Where | Written / first published |
 |---|---|---|
-| *Alcoholics Anonymous*, Appendix I, Tradition Two; Long Form Nine | pp. 562, 565 | 1946; short form by 1950 |
+| *Alcoholics Anonymous*, Appendix I, Tradition Two; Long Form Nine | [pp. 562](https://recoverystarts.com/big-book/page-562/), 565 | 1946; short form by 1950 |
 | P-17, Will A.A. Ever Have a Personal Government? (Bill W.) | — | Grapevine, 1947 |
 | Conference Charter, original text, Article 3 | *The A.A. Service Manual*, 2024–2026, Appendix K | 1955 |
-| *Alcoholics Anonymous*, Appendix VII, Concept III (short form) | p. 574 | Concepts 1962; short form 1971 |
+| *Alcoholics Anonymous*, Appendix VII, Concept III (short form) | [p. 574](https://recoverystarts.com/big-book/page-574/) | Concepts 1962; short form 1971 |
 | *Twelve Concepts for World Service* (Bill W.), Concept III | in *The A.A. Service Manual*, 2024–2026 edition | 1962 |
 | P-8, *The Twelve Concepts for World Service Illustrated* | — | first printed 1986; © 2017 |
 

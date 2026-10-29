@@ -8,9 +8,9 @@
 
 ## What the 1939 Big Book shows instead
 
-The 1939 text never uses the phrase "six steps." What it does give is the program as Bill received it in late 1934. In "Bill's Story," his old school friend tells him to choose his own conception of God (p. 12). In the hospital Bill offered himself to God, faced his sins, and became willing to have them taken away (p. 13). His friend came back; they made a list of people Bill had hurt, and Bill became willing to go to them and admit his wrongs (p. 13). He was to sit quietly when in doubt, asking only for direction (p. 13), and to work with others as his friend had worked with him: "Faith without works was dead, he said." (p. 14).
+The 1939 text never uses the phrase "six steps." What it does give is the program as Bill received it in late 1934. In "Bill's Story," his old school friend tells him to choose his own conception of God ([p. 12](https://recoverystarts.com/big-book/page-12/)). In the hospital Bill offered himself to God, faced his sins, and became willing to have them taken away ([p. 13](https://recoverystarts.com/big-book/page-13/)). His friend came back; they made a list of people Bill had hurt, and Bill became willing to go to them and admit his wrongs ([p. 13](https://recoverystarts.com/big-book/page-13/)). He was to sit quietly when in doubt, asking only for direction ([p. 13](https://recoverystarts.com/big-book/page-13/)), and to work with others as his friend had worked with him: "Faith without works was dead, he said." ([p. 14](https://recoverystarts.com/big-book/page-14/)).
 
-The 1955 Foreword to the Second Edition puts the same ideas in a list, still not called steps: the broker "was convinced of the need for moral inventory, confession of personality defects, restitution to those harmed, helpfulness to others, and the necessity of belief in and dependence upon God." (p. xvi).
+The 1955 Foreword to the Second Edition puts the same ideas in a list, still not called steps: the broker "was convinced of the need for moral inventory, confession of personality defects, restitution to those harmed, helpfulness to others, and the necessity of belief in and dependence upon God." ([p. xvi](https://recoverystarts.com/big-book/page-xvi/)).
 
 ## Bill's six steps (A.A. Comes of Age, 1957)
 
@@ -29,16 +29,16 @@ The same book has Ebby giving Bill nearly the same points in 1934: admit you are
 
 ## The Akron version (a Big Book story, written after 1939)
 
-"He Sold Himself Short," a story in Part I of today's Big Book, was written after the book was printed (it mentions the spring of 1939, p. 265) and describes Akron in 1937 (p. 260). The day before the writer went home to Chicago, Dr. Bob spent three or four hours "formally going through the Six-Step program as it was at that time" (p. 263):
+"He Sold Himself Short," a story in Part I of today's Big Book, was written after the book was printed (it mentions the spring of 1939, [p. 265](https://recoverystarts.com/big-book/page-265/)) and describes Akron in 1937 ([p. 260](https://recoverystarts.com/big-book/page-260/)). The day before the writer went home to Chicago, Dr. Bob spent three or four hours "formally going through the Six-Step program as it was at that time" ([p. 263](https://recoverystarts.com/big-book/page-263/)):
 
 1. Complete deflation.
 2. Dependence and guidance from a Higher Power.
 3. Moral inventory.
 4. Confession.
 5. Restitution.
-6. Continued work with other alcoholics. (p. 263)
+6. Continued work with other alcoholics. ([p. 263](https://recoverystarts.com/big-book/page-263/))
 
-At the inventory, Dr. Bob named the man's defects, asked if he wanted them removed, and the two knelt and prayed (p. 263). The writer says Dr. Bob "always emphasized the religious angle very strongly" (p. 263).
+At the inventory, Dr. Bob named the man's defects, asked if he wanted them removed, and the two knelt and prayed ([p. 263](https://recoverystarts.com/big-book/page-263/)). The writer says Dr. Bob "always emphasized the religious angle very strongly" ([p. 263](https://recoverystarts.com/big-book/page-263/)).
 
 ## Other early descriptions (later books, dated)
 
@@ -52,9 +52,9 @@ At the inventory, Dr. Bob named the man's defects, asked if he wanted them remov
 - **Where they came from.** Bill credits the Oxford Groups, William James and Dr. Silkworth for most of the basic ideas (A.A. Comes of Age, 1957). The saying that the six steps were an Oxford Group program isn't confirmed by our sources, and *Pass It On* (1984) says there is no evidence for it.
 
 ## Read it yourself
-- "Bill's Story," Chapter 1 (pp. 1–16), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
-- "He Sold Himself Short" (pp. 258–267), in Personal Stories Part I: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- "Bill's Story," Chapter 1 ([pp. 1–16](https://recoverystarts.com/big-book/page-1/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- "He Sold Himself Short" ([pp. 258–267](https://recoverystarts.com/big-book/page-258/)), in Personal Stories Part I: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How were the Twelve Steps written?* · *Where are the Twelve Steps in the Big Book?* · *What did early A.A. take from the Oxford Group, and why did it separate?*
@@ -71,4 +71,5 @@ At the inventory, Dr. Bob named the man's defects, asked if he wanted them remov
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

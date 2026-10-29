@@ -1,16 +1,16 @@
 # Tradition Twelve: does anonymity mean keeping A.A. secret?
 
 **In short:**
-- No. The Long Form of Tradition Twelve is about humility, not secrecy: anonymity "reminds us that we are to place principles before personalities; that we are actually to practice a genuine humility" (p. 566).
+- No. The Long Form of Tradition Twelve is about humility, not secrecy: anonymity "reminds us that we are to place principles before personalities; that we are actually to practice a genuine humility" ([p. 566](https://recoverystarts.com/big-book/page-566/)).
 - In 1946 Bill W. wrote that few members were anonymous in daily life, and that they had dropped anonymity with friends and associates on purpose, because those people "ought to know about Alcoholics Anonymous."
 - The one firm line is at the level of the public media: no full names or pictures as A.A. members in the press, radio or film. Everything closer to home is left to each member and group.
 - Each member may keep as much personal anonymity as he wants, and others must respect it.
 
-## What the Long Form says (pp. 565–566)
+## What the Long Form says ([pp. 565–566](https://recoverystarts.com/big-book/page-565/))
 
-The Twelfth Tradition is the last of the twelve. A.A. believes that the principle of anonymity has "an immense spiritual" significance (pp. 565–566). It reminds members to put principles before personalities and to practice "a genuine humility" (p. 566). The purpose: "that our great blessings may never spoil us; that we shall forever live in thankful contemplation of Him who presides over us all" (p. 566).
+The Twelfth Tradition is the last of the twelve. A.A. believes that the principle of anonymity has "an immense spiritual" significance ([pp. 565–566](https://recoverystarts.com/big-book/page-565/)). It reminds members to put principles before personalities and to practice "a genuine humility" ([p. 566](https://recoverystarts.com/big-book/page-566/)). The purpose: "that our great blessings may never spoil us; that we shall forever live in thankful contemplation of Him who presides over us all" ([p. 566](https://recoverystarts.com/big-book/page-566/)).
 
-There's nothing in it about hiding A.A., hiding meetings, or hiding that you belong. The practical rule about names is in Tradition Eleven, and it's about the public media: members' names and pictures "as A.A. members ought not be broadcast, filmed, or publicly printed" (p. 565).
+There's nothing in it about hiding A.A., hiding meetings, or hiding that you belong. The practical rule about names is in Tradition Eleven, and it's about the public media: members' names and pictures "as A.A. members ought not be broadcast, filmed, or publicly printed" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
 ## What Bill W. wrote in "Anonymity" (1946)
 
@@ -38,7 +38,7 @@ Nine years later he was just as clear: "no A.A. need be anonymous to" family, fr
 Anonymity in the Traditions isn't a vow of secrecy. It's humility (no personal glory from A.A.) plus one public rule (no names and faces as A.A. members in the media), plus respect for anyone who wants to stay private. Telling your friends and associates that you're in A.A. is something the 1946 text describes members doing as a matter of course, and the 1955 piece adds family and neighbours.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Anonymity," pp. 41–47; "Why Alcoholics Anonymous Is Anonymous," pp. 48–58): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - Related: *Why is A.A. anonymous?* · *Tradition Eleven: does A.A. advertise?*
 

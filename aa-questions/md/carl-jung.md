@@ -8,9 +8,9 @@
 
 ## What the Big Book says (Chapter 2)
 
-Chapter 2, *There Is a Solution*, tells of an American businessman of ability and high character who went to Europe for treatment by "a celebrated physician (the psychiatrist, Dr. Jung)" (p. 26). He left with great confidence and was soon drunk (p. 26). When he went back and asked why, "In the doctor's judgment he was utterly hopeless" (p. 26). Asked whether there was any exception, the doctor said: "Here and there, once in a while, alcoholics have had what are called vital spiritual experiences." (p. 27). He described them as "huge emotional displacements and rearrangements" (p. 27). The man's religious convictions, the doctor told him, did not amount to that experience (p. 27).
+Chapter 2, *There Is a Solution*, tells of an American businessman of ability and high character who went to Europe for treatment by "a celebrated physician (the psychiatrist, Dr. Jung)" ([p. 26](https://recoverystarts.com/big-book/page-26/)). He left with great confidence and was soon drunk ([p. 26](https://recoverystarts.com/big-book/page-26/)). When he went back and asked why, "In the doctor's judgment he was utterly hopeless" ([p. 26](https://recoverystarts.com/big-book/page-26/)). Asked whether there was any exception, the doctor said: "Here and there, once in a while, alcoholics have had what are called vital spiritual experiences." ([p. 27](https://recoverystarts.com/big-book/page-27/)). He described them as "huge emotional displacements and rearrangements" ([p. 27](https://recoverystarts.com/big-book/page-27/)). The man's religious convictions, the doctor told him, did not amount to that experience ([p. 27](https://recoverystarts.com/big-book/page-27/)).
 
-The chapter goes on to say the man later had the experience and is free (pp. 26, 28), and that the other members "sought the same escape with all the desperation of drowning men" (p. 28). A footnote, added when the appendices were, points to Appendix II on spiritual experience (p. 27). See *What is the "spiritual awakening" in Step 12?*
+The chapter goes on to say the man later had the experience and is free ([pp. 26](https://recoverystarts.com/big-book/page-26/), 28), and that the other members "sought the same escape with all the desperation of drowning men" ([p. 28](https://recoverystarts.com/big-book/page-28/)). A footnote, added when the appendices were, points to Appendix II on spiritual experience ([p. 27](https://recoverystarts.com/big-book/page-27/)). See *What is the "spiritual awakening" in Step 12?*
 
 The Big Book names neither the patient nor Ebby's connection to him. Today's text names Jung in parentheses; our sources have only the fourth edition, so it can't say whether that parenthesis was in the first printing.
 
@@ -28,12 +28,12 @@ In January 1961 Bill wrote to Jung to tell him that this conversation was "the f
 
 ## Where the sources differ
 - **The year of the treatment.** The timeline in our later printing of *A.A. Comes of Age* says Jung's help to the alcoholic came in 1930 and was "later seen as" the first step toward A.A. (A.A. Comes of Age, 1957). Bill's 1961 letter, as *Pass It On* quotes it, says the man became Jung's patient about 1931 (Pass It On, 1984). The Big Book gives no year.
-- **What Jung advised.** The Big Book has the doctor say only that vital spiritual experiences sometimes happen and that the man's religious convictions weren't enough (p. 27). *Pass It On* adds that Jung told him to join a religious movement (Pass It On, 1984), and Bill's 1961 letter says Jung recommended that he "place himself in a religious atmosphere and hope for the best" (Pass It On, 1984).
+- **What Jung advised.** The Big Book has the doctor say only that vital spiritual experiences sometimes happen and that the man's religious convictions weren't enough ([p. 27](https://recoverystarts.com/big-book/page-27/)). *Pass It On* adds that Jung told him to join a religious movement (Pass It On, 1984), and Bill's 1961 letter says Jung recommended that he "place himself in a religious atmosphere and hope for the best" (Pass It On, 1984).
 - **"Founder" sayings.** Our sources don't support calling Jung a founder or member of A.A. The sources describe one conversation with one patient, which Bill came to see as the first link in a chain (Pass It On, 1984).
 
 ## Read it yourself
-- Chapter 2, "There Is a Solution" (pp. 17–29), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
-- Appendix II, "Spiritual Experience" (pp. 567–568): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
+- Chapter 2, "There Is a Solution" ([pp. 17–29](https://recoverystarts.com/big-book/page-17/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
+- Appendix II, "Spiritual Experience" ([pp. 567–568](https://recoverystarts.com/big-book/page-567/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
 - *A.A. Comes of Age* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Who was the old school friend in "Bill's Story" (Ebby)?* · *Why does the Big Book mention William James?* · *What happened to Bill W. at Towns Hospital?* · *What did early A.A. take from the Oxford Group, and why did it separate?*
 
@@ -45,4 +45,5 @@ In January 1961 Bill wrote to Jung to tell him that this conversation was "the f
 | *Pass It On* (including the Bill W.–Jung letters of January–March 1961) | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book,* A.A. Comes of Age *and* Pass It On *are © A.A. World Services, Inc.*

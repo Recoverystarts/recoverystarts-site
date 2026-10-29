@@ -8,17 +8,17 @@
 
 ## In his own words (written 1939)
 
-"Doctor Bob's Nightmare" opens the personal stories in the Big Book. He wrote it when he was "nearly four years" sober (p. 180). It names no places, but tells the whole arc:
+"Doctor Bob's Nightmare" opens the personal stories in the Big Book. He wrote it when he was "nearly four years" sober ([p. 180](https://recoverystarts.com/big-book/page-180/)). It names no places, but tells the whole arc:
 
-- **Childhood.** An only child in a small New England village, made to go to church so often that he resolved never to go again once he was free, and kept that resolution for forty years (pp. 171–172). He thought being an only child "perhaps engendered the selfishness" that helped bring on his alcoholism (p. 172).
-- **College and medical school.** Heavy drinking from college on (p. 172). In medical school he left once, came back, and later handed in blank exam books because his hand shook too much to hold a pencil; he had to stay dry for two more quarters to graduate (pp. 173–174).
-- **Practice.** After an internship he opened an office, and drank to ease his stomach trouble; he checked himself into sanitariums at least a dozen times (p. 174). Through Prohibition and after, he spent about seventeen years in a cycle of drinking at night and sedatives in the morning so he could work (pp. 175–177). "It was really a horrible nightmare" (p. 177).
-- **The spiritual search that didn't work.** For two and a half years before meeting Bill he studied the spiritual ideas of a group he had met, read everything, and still got drunk every night (p. 178).
-- **The meeting.** A man who knew alcoholism from his own experience "talked my language" (p. 180). His last drink was June 10, 1935 (p. 180).
+- **Childhood.** An only child in a small New England village, made to go to church so often that he resolved never to go again once he was free, and kept that resolution for forty years ([pp. 171–172](https://recoverystarts.com/big-book/page-171/)). He thought being an only child "perhaps engendered the selfishness" that helped bring on his alcoholism ([p. 172](https://recoverystarts.com/big-book/page-172/)).
+- **College and medical school.** Heavy drinking from college on ([p. 172](https://recoverystarts.com/big-book/page-172/)). In medical school he left once, came back, and later handed in blank exam books because his hand shook too much to hold a pencil; he had to stay dry for two more quarters to graduate ([pp. 173–174](https://recoverystarts.com/big-book/page-173/)).
+- **Practice.** After an internship he opened an office, and drank to ease his stomach trouble; he checked himself into sanitariums at least a dozen times ([p. 174](https://recoverystarts.com/big-book/page-174/)). Through Prohibition and after, he spent about seventeen years in a cycle of drinking at night and sedatives in the morning so he could work ([pp. 175–177](https://recoverystarts.com/big-book/page-175/)). "It was really a horrible nightmare" ([p. 177](https://recoverystarts.com/big-book/page-177/)).
+- **The spiritual search that didn't work.** For two and a half years before meeting Bill he studied the spiritual ideas of a group he had met, read everything, and still got drunk every night ([p. 178](https://recoverystarts.com/big-book/page-178/)).
+- **The meeting.** A man who knew alcoholism from his own experience "talked my language" ([p. 180](https://recoverystarts.com/big-book/page-180/)). His last drink was June 10, 1935 ([p. 180](https://recoverystarts.com/big-book/page-180/)).
 
-He gives four reasons he spends so much time passing it on: a sense of duty, pleasure, paying his debt to the man who passed it to him, and "a little more insurance for myself against a possible slip" (p. 181). He also admits his craving for liquor stayed with him for the first two and a half years (p. 181).
+He gives four reasons he spends so much time passing it on: a sense of duty, pleasure, paying his debt to the man who passed it to him, and "a little more insurance for myself against a possible slip" ([p. 181](https://recoverystarts.com/big-book/page-181/)). He also admits his craving for liquor stayed with him for the first two and a half years ([p. 181](https://recoverystarts.com/big-book/page-181/)).
 
-The book's introduction to the story calls him a co-founder and says the Society's birth "dates from his first day of permanent sobriety, June 10, 1935" (p. 171). It says that to 1950, the year he died, he carried the message to more than 5,000 alcoholics and gave all of them his medical services "without thought of charge" (p. 171).
+The book's introduction to the story calls him a co-founder and says the Society's birth "dates from his first day of permanent sobriety, June 10, 1935" ([p. 171](https://recoverystarts.com/big-book/page-171/)). It says that to 1950, the year he died, he carried the message to more than 5,000 alcoholics and gave all of them his medical services "without thought of charge" ([p. 171](https://recoverystarts.com/big-book/page-171/)).
 
 ## The facts of his life (P-53)
 
@@ -44,7 +44,7 @@ P-53 names three things he held in high regard: simplicity, tolerance of other p
 - **The internship.** P-53 and the 1980 biography put it at City Hospital, Akron (P-53). Bill's 1957 account says his medical school and internship were "in Chicago" (A.A. Comes of Age, 1957). Dr. Bob's 1939 story says only "a western city" (p. 174).
 
 ## Read it yourself
-- "Doctor Bob's Nightmare" (pp. 171–181), free from A.A. in Personal Stories Part I: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- "Doctor Bob's Nightmare" ([pp. 171–181](https://recoverystarts.com/big-book/page-171/)), free from A.A. in Personal Stories Part I: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*, free from A.A.: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age* and *Dr. Bob and the Good Oldtimers* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How did Bill W. and Dr. Bob meet?* · *When did Dr. Bob die, and what were his last words to A.A.?*
@@ -52,7 +52,7 @@ P-53 names three things he held in high regard: simplicity, tolerance of other p
 ## Sources
 | Source | Pages | Date |
 |---|---|---|
-| "Doctor Bob's Nightmare," Personal Stories Part I | 171–181 | written 1939 (p. 180); the introductory note mentions his death, so it was added after 1950 |
+| "Doctor Bob's Nightmare," Personal Stories Part I | 171–181 | written 1939 ([p. 180](https://recoverystarts.com/big-book/page-180/)); the introductory note mentions his death, so it was added after 1950 |
 | P-53, biographical sketch | — | pamphlet © 2017 |
 | P-53, Dr. Bob's last major talk (Detroit) | — | talk December 1948; first printed 1973 |
 | *A.A. Comes of Age* | — | 1957 |

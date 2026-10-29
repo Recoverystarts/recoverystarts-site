@@ -8,9 +8,9 @@
 
 ## What the earliest texts say
 
-**The 1939 Big Book** describes the program but doesn't name the Oxford Group anywhere in its text. Bill's friend simply has "a simple religious idea and a practical program of action" (p. 9).
+**The 1939 Big Book** describes the program but doesn't name the Oxford Group anywhere in its text. Bill's friend simply has "a simple religious idea and a practical program of action" ([p. 9](https://recoverystarts.com/big-book/page-9/)).
 
-**The 1955 Foreword to the Second Edition** gives the connection in one sentence: the broker had met "an alcoholic friend who had been in contact with the Oxford Groups of that day" (pp. xv–xvi). "Though he could not accept all the tenets of the Oxford Groups" (p. xvi), he was convinced of the need for moral inventory, confession of defects, restitution, helpfulness to others, and dependence on God (p. xvi).
+**The 1955 Foreword to the Second Edition** gives the connection in one sentence: the broker had met "an alcoholic friend who had been in contact with the Oxford Groups of that day" ([pp. xv–xvi](https://recoverystarts.com/big-book/page-xv/)). "Though he could not accept all the tenets of the Oxford Groups" ([p. xvi](https://recoverystarts.com/big-book/page-xvi/)), he was convinced of the need for moral inventory, confession of defects, restitution, helpfulness to others, and dependence on God ([p. xvi](https://recoverystarts.com/big-book/page-xvi/)).
 
 **Dr. Bob, 1948** (his last major talk, printed in P-53). Both men had been associated with the Oxford Group, "Bill in New York, for five months, and I in Akron, for two and a half years" (P-53). The group had told Dr. Bob to attend meetings, join a church and pray, and he did, but kept getting drunk (P-53). "Bill had acquired their idea of service. I had not" (P-53). The one thing they hadn't told him was what Bill did that first Sunday: "attempt to be helpful to somebody else." (P-53). He also said the Oxford Group's Four Absolutes were "the only yardsticks we had in the early days, before the Steps" (P-53). See *What were the "Four Absolutes"? Are they in the Big Book?*
 
@@ -38,7 +38,7 @@ Bill says the New York alcoholics worked alongside the Oxford Groups until the m
 - **The new name, Moral Re-Armament.** *Dr. Bob and the Good Oldtimers* says Buchman renamed the movement in 1939 (Dr. Bob and the Good Oldtimers, 1980); *Pass It On* says 1938 (Pass It On, 1984).
 
 ## Read it yourself
-- Foreword to the Second Edition (pp. xv–xxi), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - "Bill's Story," Chapter 1: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
@@ -55,4 +55,5 @@ Bill says the New York alcoholics worked alongside the Oxford Groups until the m
 | *Pass It On* (including Bill's letter of October 30, 1940) | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

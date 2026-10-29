@@ -8,7 +8,7 @@
 
 ## What the book itself shows
 
-The 1939 text doesn't tell how it was financed. The copyright page of today's edition lists the first edition as running from 1939 to 1955, and the copyright is now held by A.A. World Services, Inc. (p. iv). The 1955 foreword says only that the members' determination "bore fruit in the spring of 1939 by the publication of this volume" (p. xvii). See *Why was the Big Book written, and when?*
+The 1939 text doesn't tell how it was financed. The copyright page of today's edition lists the first edition as running from 1939 to 1955, and the copyright is now held by A.A. World Services, Inc. (p. iv). The 1955 foreword says only that the members' determination "bore fruit in the spring of 1939 by the publication of this volume" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)). See *Why was the Big Book written, and when?*
 
 ## The decision to self-publish (1957, and P-44)
 
@@ -37,7 +37,7 @@ By 1940 some cash subscribers wanted their money back (A.A. Comes of Age, 1957).
 - **Who was responsible.** *Pass It On* reports Hank's son's view that Hank got the project rolling, and Ruth Hock's that the two were about equally responsible: without Bill it wouldn't have been written, and "it wouldn't have been published without Hank" (Pass It On, 1984).
 
 ## Read it yourself
-- Foreword to the Second Edition (pp. xv–xxi), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - The copyright page (p. iv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_copyright.pdf
 - *A.A. Comes of Age* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Why was the Big Book written, and when?* · *Was there a draft of the Big Book before 1939?* · *What was the Alcoholic Foundation?* · *Why did early A.A. turn down Rockefeller money?*
@@ -51,4 +51,5 @@ By 1940 some cash subscribers wanted their money back (A.A. Comes of Age, 1957).
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44,* A.A. Comes of Age *and* Pass It On *are © A.A. World Services, Inc.*

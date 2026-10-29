@@ -1,26 +1,26 @@
 # Are the personal stories part of the A.A. program?
 
 **In short:**
-- The Big Book itself separates the two. The program is set out in the first part of the book, the "clear-cut directions" (p. 29), with the Steps offered "as a program of recovery" (p. 59). The personal stories that follow are members' accounts of their own recovery.
-- The book says what the stories are for: each writer tells "in his own language and from his own point of view" (p. 29) how he found his relationship with God, so a reader can recognize himself and say, "Yes, I am one of them too" (p. 29).
-- The stories change with every edition; the program text has been "left largely untouched" since 1939 (p. xi). Most of today's stories were written long after 1939.
-- So a line from a story is one member's experience, not program text, however well it's loved. The program text has a few stories of its own, above all Bill's in Chapter 1, and those are 1939 text; Bill's story and Dr. Bob's, which opens the story section, were kept intact when the stories were revised in 1955 (p. xi).
+- The Big Book itself separates the two. The program is set out in the first part of the book, the "clear-cut directions" ([p. 29](https://recoverystarts.com/big-book/page-29/)), with the Steps offered "as a program of recovery" ([p. 59](https://recoverystarts.com/big-book/page-59/)). The personal stories that follow are members' accounts of their own recovery.
+- The book says what the stories are for: each writer tells "in his own language and from his own point of view" ([p. 29](https://recoverystarts.com/big-book/page-29/)) how he found his relationship with God, so a reader can recognize himself and say, "Yes, I am one of them too" ([p. 29](https://recoverystarts.com/big-book/page-29/)).
+- The stories change with every edition; the program text has been "left largely untouched" since 1939 ([p. xi](https://recoverystarts.com/big-book/page-xi/)). Most of today's stories were written long after 1939.
+- So a line from a story is one member's experience, not program text, however well it's loved. The program text has a few stories of its own, above all Bill's in Chapter 1, and those are 1939 text; Bill's story and Dr. Bob's, which opens the story section, were kept intact when the stories were revised in 1955 ([p. xi](https://recoverystarts.com/big-book/page-xi/)).
 
 ## How the Big Book describes its own parts
 
-**Chapter 2, "There Is a Solution" (1939).** The book lays out its plan: chapters explaining alcoholism and addressing the agnostic, then "Further on, clear-cut directions are given showing how we recovered. These are followed by forty-two personal experiences." (p. 29). The stories, it says, "give a fair cross section of our membership" (p. 29) and show what has actually happened in the writers' lives. Their purpose is identification: the authors believe that only by disclosing themselves will readers be "persuaded to say, 'Yes, I am one of them too; I must have this thing.'" (p. 29).
+**Chapter 2, "There Is a Solution" (1939).** The book lays out its plan: chapters explaining alcoholism and addressing the agnostic, then "Further on, clear-cut directions are given showing how we recovered. These are followed by forty-two personal experiences." ([p. 29](https://recoverystarts.com/big-book/page-29/)). The stories, it says, "give a fair cross section of our membership" ([p. 29](https://recoverystarts.com/big-book/page-29/)) and show what has actually happened in the writers' lives. Their purpose is identification: the authors believe that only by disclosing themselves will readers be "persuaded to say, 'Yes, I am one of them too; I must have this thing.'" ([p. 29](https://recoverystarts.com/big-book/page-29/)).
 
-**Chapter 4, "We Agnostics" (1939).** The stories are where the book shows how differently members understand God: "In our personal stories you will find a wide variation in the way each teller approaches and conceives of the Power which is greater than himself." (p. 50). Whether a reader agrees with any one of them "seems to make little difference" (p. 50); such questions are "for each individual to settle for himself" (p. 50).
+**Chapter 4, "We Agnostics" (1939).** The stories are where the book shows how differently members understand God: "In our personal stories you will find a wide variation in the way each teller approaches and conceives of the Power which is greater than himself." ([p. 50](https://recoverystarts.com/big-book/page-50/)). Whether a reader agrees with any one of them "seems to make little difference" ([p. 50](https://recoverystarts.com/big-book/page-50/)); such questions are "for each individual to settle for himself" ([p. 50](https://recoverystarts.com/big-book/page-50/)).
 
-**Chapter 5, "How It Works" (1939).** The chapter moves from the stories to the program: "Our stories disclose in a general way what we used to be like, what happened, and what we are like now." (p. 58). Then, for a reader who wants what they have: "Here are the steps we took, which are suggested as a program of recovery" (p. 59).
+**Chapter 5, "How It Works" (1939).** The chapter moves from the stories to the program: "Our stories disclose in a general way what we used to be like, what happened, and what we are like now." ([p. 58](https://recoverystarts.com/big-book/page-58/)). Then, for a reader who wants what they have: "Here are the steps we took, which are suggested as a program of recovery" ([p. 59](https://recoverystarts.com/big-book/page-59/)).
 
-**The story section itself.** Its title page says the stories show "How Forty-Two Alcoholics Recovered From Their Malady" (p. 165), and each part has its own aim: Part I shows "that sobriety in A.A. can be lasting," Part II may help a reader decide whether he is alcoholic and whether A.A. is for him, and Part III offers hope to those who think their drinking hopeless (p. 167).
+**The story section itself.** Its title page says the stories show "How Forty-Two Alcoholics Recovered From Their Malady" (p. 165), and each part has its own aim: Part I shows "that sobriety in A.A. can be lasting," Part II may help a reader decide whether he is alcoholic and whether A.A. is for him, and Part III offers hope to those who think their drinking hopeless ([p. 167](https://recoverystarts.com/big-book/page-167/)).
 
 ## The stories change; the program doesn't
 
-The Preface (fourth edition, 2001) explains that, because the book has become A.A.'s basic text, "the first portion of this volume, describing the A.A. recovery program, has been left largely untouched" in the 1955, 1976 and 2001 revisions (p. xi). "But the chief change was in the section of personal stories" (p. xi): stories were added, edited and removed in every edition (pp. xi–xii). The reason given is "to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics" (p. xii). The Preface's hope is that a reader will pause in a story and think, most important of all, "Yes, I believe this program can work for me too." (p. xii). The story leads to the program; it isn't the program.
+The Preface (fourth edition, 2001) explains that, because the book has become A.A.'s basic text, "the first portion of this volume, describing the A.A. recovery program, has been left largely untouched" in the 1955, 1976 and 2001 revisions ([p. xi](https://recoverystarts.com/big-book/page-xi/)). "But the chief change was in the section of personal stories" ([p. xi](https://recoverystarts.com/big-book/page-xi/)): stories were added, edited and removed in every edition ([pp. xi–xii](https://recoverystarts.com/big-book/page-xi/)). The reason given is "to represent the current membership of Alcoholics Anonymous more accurately, and thereby to reach more alcoholics" ([p. xii](https://recoverystarts.com/big-book/page-xii/)). The Preface's hope is that a reader will pause in a story and think, most important of all, "Yes, I believe this program can work for me too." ([p. xii](https://recoverystarts.com/big-book/page-xii/)). The story leads to the program; it isn't the program.
 
-Even the count in Chapter 2 follows the story section: the fourth edition's p. 29 says "forty-two," the number of stories in the fourth edition (p. xii). See *What changed between the four editions of the Big Book?*
+Even the count in Chapter 2 follows the story section: the fourth edition's [p. 29](https://recoverystarts.com/big-book/page-29/) says "forty-two," the number of stories in the fourth edition ([p. xii](https://recoverystarts.com/big-book/page-xii/)). See *What changed between the four editions of the Big Book?*
 
 ## What the early writers said the stories were for
 
@@ -31,18 +31,18 @@ Both describe the stories as evidence that the program works and as a bridge to 
 
 ## Stories inside the program text
 
-Personal stories aren't only at the back. Chapter 1 is "Bill's Story," and the Preface says it, "Doctor Bob's Nightmare" and one other first-edition story were "retained intact" in 1955 (p. xi). Chapter 10, "To Employers," is told largely by one member (p. 136), and Chapter 11 tells the story of the Akron beginnings (pp. 153–158). These belong to the 1939 text, and the book uses them to show the program at work. The stories that change from edition to edition are the ones from p. 165 on.
+Personal stories aren't only at the back. Chapter 1 is "Bill's Story," and the Preface says it, "Doctor Bob's Nightmare" and one other first-edition story were "retained intact" in 1955 ([p. xi](https://recoverystarts.com/big-book/page-xi/)). Chapter 10, "To Employers," is told largely by one member ([p. 136](https://recoverystarts.com/big-book/page-136/)), and Chapter 11 tells the story of the Akron beginnings ([pp. 153–158](https://recoverystarts.com/big-book/page-153/)). These belong to the 1939 text, and the book uses them to show the program at work. The stories that change from edition to edition are the ones from p. 165 on.
 
 ## Why this matters
 
-Lines from the stories are often quoted at meetings as if they were Big Book program text. Some well-known examples: "acceptance is the answer" is from a story that wasn't in the 1939 book (see *Is "Acceptance is the answer" part of the main text?*), and the word "sponsor" appears only in the stories, never in the program text (see *Is the word "sponsor" in the Big Book?*). A story is a member's honest experience, and the book offers it as such: "in his own language and from his own point of view" (p. 29). That's why Recovery Starts pages say "a member's story, not the program text" when they quote one.
+Lines from the stories are often quoted at meetings as if they were Big Book program text. Some well-known examples: "acceptance is the answer" is from a story that wasn't in the 1939 book (see *Is "Acceptance is the answer" part of the main text?*), and the word "sponsor" appears only in the stories, never in the program text (see *Is the word "sponsor" in the Big Book?*). A story is a member's honest experience, and the book offers it as such: "in his own language and from his own point of view" ([p. 29](https://recoverystarts.com/big-book/page-29/)). That's why Recovery Starts pages say "a member's story, not the program text" when they quote one.
 
-The book is modest even about its program text: "Our book is meant to be suggestive only." (p. 164).
+The book is modest even about its program text: "Our book is meant to be suggestive only." ([p. 164](https://recoverystarts.com/big-book/page-164/)).
 
 ## Read it yourself
-- Preface (pp. xi–xii): https://www.aa.org/sites/default/files/2021-11/en_bigbook_preface.pdf
-- Chapter 2, "There Is a Solution" (pp. 17–29): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
-- Chapter 5, "How It Works" (pp. 58–71): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- Preface ([pp. xi–xii](https://recoverystarts.com/big-book/page-xi/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_preface.pdf
+- Chapter 2, "There Is a Solution" ([pp. 17–29](https://recoverystarts.com/big-book/page-17/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt2.pdf
+- Chapter 5, "How It Works" ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
 - The story section's introduction (pp. 165–167): https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories.pdf
 - *Experience, Strength and Hope* and *A.A. Comes of Age* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What changed between the four editions of the Big Book?* · *Is "Acceptance is the answer" part of the main text?* · *Is the word "sponsor" in the Big Book?* · *Who wrote the Big Book's chapters, including "To Wives"?*
@@ -50,7 +50,7 @@ The book is modest even about its program text: "Our book is meant to be suggest
 ## Sources
 | Source | Pages | Date |
 |---|---|---|
-| *Alcoholics Anonymous*, Chapters 2, 4, 5, 10, 11 | 29, 50, 58–59, 136, 153–158, 164 | 1939 (the story count on p. 29 is the fourth edition's) |
+| *Alcoholics Anonymous*, Chapters 2, 4, 5, 10, 11 | 29, 50, 58–59, 136, 153–158, 164 | 1939 (the story count on [p. 29](https://recoverystarts.com/big-book/page-29/) is the fourth edition's) |
 | *Alcoholics Anonymous*, Preface | xi–xii | fourth edition, 2001 |
 | *Alcoholics Anonymous*, introduction to the personal stories | 165, 167 | fourth edition, 2001 |
 | *A.A. Comes of Age* (Bill W.) | — | 1957 |

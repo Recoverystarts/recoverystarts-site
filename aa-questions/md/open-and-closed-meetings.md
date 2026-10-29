@@ -3,14 +3,14 @@
 **In short:**
 - Today's definitions come from *The A.A. Group* (P-16, 2018). Closed meetings are "for A.A. members only, or for those who have a drinking problem and 'have a desire to stop drinking.'" Open meetings are available to anyone interested in A.A.'s program, and "Nonalcoholics may attend open meetings as observers." (P-16, 2018).
 - So family and friends can come to open meetings. Closed meetings are for alcoholics.
-- The 1939 text has no such distinction. The first weekly meeting it describes was for "anyone or everyone interested in a spiritual way of life" (p. 160), and wives came too (p. 160).
+- The 1939 text has no such distinction. The first weekly meeting it describes was for "anyone or everyone interested in a spiritual way of life" ([p. 160](https://recoverystarts.com/big-book/page-160/)), and wives came too ([p. 160](https://recoverystarts.com/big-book/page-160/)).
 - The distinction grew up later and unevenly. In 1946 Bill W. described some groups that kept out even wives and others that held public meetings (P-17, "Anonymity", 1946). Akron's meetings were open; closed meetings came later (*Dr. Bob and the Good Oldtimers*, 1980).
 
 ## The 1939 picture
 
-Chapter 11 describes the fellowship in "a certain western city" (p. 153), Akron (p. 156, later footnote), as it was when the book was written. Members met informally in each other's homes most evenings, and it became customary to "set apart one night a week for a meeting" (p. 159), open to anyone or everyone interested in a spiritual way of life. Its prime object was "to provide a time and place where new people might bring their problems" (p. 160).
+Chapter 11 describes the fellowship in "a certain western city" ([p. 153](https://recoverystarts.com/big-book/page-153/)), Akron ([p. 156](https://recoverystarts.com/big-book/page-156/), later footnote), as it was when the book was written. Members met informally in each other's homes most evenings, and it became customary to "set apart one night a week for a meeting" ([p. 159](https://recoverystarts.com/big-book/page-159/)), open to anyone or everyone interested in a spiritual way of life. Its prime object was "to provide a time and place where new people might bring their problems" ([p. 160](https://recoverystarts.com/big-book/page-160/)).
 
-The home where that meeting was held was open to families. "Many a distracted wife has visited this house to find loving and understanding companionship among women who knew her problem" (p. 160). A new man and his wife would leave "elated by the thought of what they could now do for some stricken acquaintance and his family" (p. 161), and families drove long distances to be there (p. 161).
+The home where that meeting was held was open to families. "Many a distracted wife has visited this house to find loving and understanding companionship among women who knew her problem" ([p. 160](https://recoverystarts.com/big-book/page-160/)). A new man and his wife would leave "elated by the thought of what they could now do for some stricken acquaintance and his family" ([p. 161](https://recoverystarts.com/big-book/page-161/)), and families drove long distances to be there ([p. 161](https://recoverystarts.com/big-book/page-161/)).
 
 The 1939 text doesn't use the words "open meeting" or "closed meeting."
 
@@ -36,10 +36,10 @@ By 1957 Bill could write that doctors and clergy "are often seen at A.A.'s open 
 
 The pamphlet doesn't say which meetings must be open or closed; each group decides, under its own autonomy.
 
-For families who want help of their own, the Big Book's later-edition note points to Al-Anon Family Groups, "entirely separate from Alcoholics Anonymous" (p. 121). See *Is Al-Anon part of A.A.?*
+For families who want help of their own, the Big Book's later-edition note points to Al-Anon Family Groups, "entirely separate from Alcoholics Anonymous" ([p. 121](https://recoverystarts.com/big-book/page-121/)). See *Is Al-Anon part of A.A.?*
 
 ## Read it yourself
-- Chapter 11, "A Vision for You" (pp. 151–164): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
+- Chapter 11, "A Vision for You" ([pp. 151–164](https://recoverystarts.com/big-book/page-151/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
 - P-17, *A.A. Tradition — How It Developed* ("Anonymity"): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group* ("The Difference Between Open and Closed A.A. Meetings," p. 13): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *What happens at an A.A. meeting?* · *Is what I say at a meeting kept private?*

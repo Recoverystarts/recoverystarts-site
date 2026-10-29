@@ -8,7 +8,7 @@
 
 ## The earliest texts
 
-The 1939 Big Book doesn't name the Foundation. In 1946 the Traditions' Long Form described its trustees' role: "The trustees of The Alcoholic Foundation are, in effect, our A.A. General Service Committee." (P-17, 1946). They were "the custodians of our A.A. tradition" and received the voluntary contributions that kept up the office in New York (P-17, 1946). In today's Big Book the same sentence reads: "The trustees of the General Service Board are, in effect, our A.A. General Service Committee." (p. 565), and P-17 notes the change of name in a footnote (P-17).
+The 1939 Big Book doesn't name the Foundation. In 1946 the Traditions' Long Form described its trustees' role: "The trustees of The Alcoholic Foundation are, in effect, our A.A. General Service Committee." (P-17, 1946). They were "the custodians of our A.A. tradition" and received the voluntary contributions that kept up the office in New York (P-17, 1946). In today's Big Book the same sentence reads: "The trustees of the General Service Board are, in effect, our A.A. General Service Committee." ([p. 565](https://recoverystarts.com/big-book/page-565/)), and P-17 notes the change of name in a footnote (P-17).
 
 Bill's 1946 essay on money says the gifts of "devoted friends" had "made possible The Alcoholic Foundation, the book Alcoholics Anonymous and our General Office" (P-17, 1946), and reports a new resolution of the trustees to decline gifts carrying any obligation (P-17, 1946).
 
@@ -32,7 +32,7 @@ In 1969 Bill recalled that "the original Foundation, now our General Service Boa
 - **When it was renamed.** P-17's footnote and the Concepts say 1954 (P-17; Service Manual, Concepts, 1962). Bill's 1957 narrative says two years after the first Conference's suggestion (A.A. Comes of Age, 1957), without naming a year; the timeline in our later printing of his book puts it in October 1954 (A.A. Comes of Age, 1957). P-44 tells it as if the renaming came quickly after the first Conference (P-44).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition," Long Form (pp. 563–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition," Long Form ([pp. 563–566](https://recoverystarts.com/big-book/page-563/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Pass It On* and *The A.A. Service Manual* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *Why did early A.A. turn down Rockefeller money?* · *How was the Big Book paid for and published (Works Publishing)?* · *Concept VI: what do the trustees of the General Service Board do?* · *Tradition Nine: is A.A. organized? Who runs it?*
@@ -49,4 +49,5 @@ In 1969 Bill recalled that "the original Foundation, now our General Service Boa
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44, P-53, the Service Manual,* A.A. Comes of Age *and* Pass It On *are © A.A. World Services, Inc.; P-17's articles are © AA Grapevine, Inc.*

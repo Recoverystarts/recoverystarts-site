@@ -3,14 +3,14 @@
 **In short:**
 - It was a feature article about A.A. by Jack Alexander, a feature writer for the *Saturday Evening Post*, published in the issue of March 1, 1941.
 - Alexander, who was not an alcoholic, came to it a skeptic and spent about a month with A.A. members in several cities before he wrote it.
-- The Big Book's 1955 foreword says it brought a deluge of alcoholics asking for help: membership went from 2,000 in March 1941 to 8,000 by the end of the year, and "A.A. had become a national institution" (p. xviii).
+- The Big Book's 1955 foreword says it brought a deluge of alcoholics asking for help: membership went from 2,000 in March 1941 to 8,000 by the end of the year, and "A.A. had become a national institution" ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)).
 - The flood of letters led the New York office to ask the groups for money for the first time, and the rush of new groups brought the quarrels out of which, Bill W. says, the Traditions came.
 
 ## The Big Book's own account (1955)
 
-The Foreword to the Second Edition, written in 1955, gives the outline. After the book appeared in 1939, a magazine article and Mr. Rockefeller's dinner had brought membership to 2,000 by March 1941 (p. xviii). "Then Jack Alexander wrote a feature article in the Saturday Evening Post and placed such a compelling picture of A.A. before the general public that alcoholics in need of help really deluged us." (p. xviii). By the close of 1941 there were 8,000 members (p. xviii).
+The Foreword to the Second Edition, written in 1955, gives the outline. After the book appeared in 1939, a magazine article and Mr. Rockefeller's dinner had brought membership to 2,000 by March 1941 ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)). "Then Jack Alexander wrote a feature article in the Saturday Evening Post and placed such a compelling picture of A.A. before the general public that alcoholics in need of help really deluged us." ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)). By the close of 1941 there were 8,000 members ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)).
 
-The foreword then says what came next: A.A. entered "a fearsome and exciting adolescent period" (p. xviii), with quarrels over membership, leadership and money, and out of that experience grew the principles later called the Twelve Traditions (p. xix).
+The foreword then says what came next: A.A. entered "a fearsome and exciting adolescent period" ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)), with quarrels over membership, leadership and money, and out of that experience grew the principles later called the Twelve Traditions ([p. xix](https://recoverystarts.com/big-book/page-xix/)).
 
 ## Bill W.'s accounts (around 1955, 1957, 1969)
 
@@ -33,10 +33,10 @@ Our sources don't hold the article itself, only the short passages these books q
 ## Where the sources differ
 - **"6,000."** Bill (around 1955 and 1957) uses it for the appeals and inquiries that came in (P-44; A.A. Comes of Age, 1957). *Pass It On* (1984) quotes Lois W. estimating that 6,000 A.A.'s owe the start of their sobriety to the article (Pass It On, 1984). Those are different claims.
 - **Who reached the *Post*.** Bill (1957) credits Dr. Hammer's friendship with Curtis Bok (A.A. Comes of Age, 1957;), though on the same page he names Dr. C. Dudley Saul among the three Philadelphia physicians who took an interest in A.A. (A.A. Comes of Age, 1957). *Pass It On* (1984) says Bok heard of A.A. through both Hammer and Saul (Pass It On, 1984).
-- **Membership before the article.** The 1955 foreword says 2,000 by March 1941 (p. xviii); P-44 says the year began with two thousand (P-44); Bill (1957) says 2,000 in the spring of 1941, "a gain of 1,200 in a single year" (A.A. Comes of Age, 1957). Bill in 1969 put it a year earlier: "By 1940, membership had jumped to about 2,000" (P-53). The foreword, P-44 and Bill's 1957 book all give 8,000 by the end of 1941.
+- **Membership before the article.** The 1955 foreword says 2,000 by March 1941 ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)); P-44 says the year began with two thousand (P-44); Bill (1957) says 2,000 in the spring of 1941, "a gain of 1,200 in a single year" (A.A. Comes of Age, 1957). Bill in 1969 put it a year earlier: "By 1940, membership had jumped to about 2,000" (P-53). The foreword, P-44 and Bill's 1957 book all give 8,000 by the end of 1941.
 
 ## Read it yourself
-- Foreword to the Second Edition (pp. xv–xxi), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - P-44, *A.A.'s Legacy of Service*: https://www.aa.org/aas-legacy-service
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org

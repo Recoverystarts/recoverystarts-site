@@ -1,16 +1,16 @@
 # Is group conscience a majority vote?
 
 **In short:**
-- The Long Form doesn't say. Tradition Two names the group conscience as the way "a loving God" expresses Himself for the group's purpose (p. 563), and it says nothing about votes, majorities or procedure.
-- Groups did vote from the start: the Long Form has them electing secretaries and committees (p. 565). But Bill W.'s 1946 essay on money says the majority "ought not to try to coerce" the minority (there, into paying for clubs it doesn't want), and his 1947 essays say the group's leaders only carry out what they believe the group wants.
+- The Long Form doesn't say. Tradition Two names the group conscience as the way "a loving God" expresses Himself for the group's purpose ([p. 563](https://recoverystarts.com/big-book/page-563/)), and it says nothing about votes, majorities or procedure.
+- Groups did vote from the start: the Long Form has them electing secretaries and committees ([p. 565](https://recoverystarts.com/big-book/page-565/)). But Bill W.'s 1946 essay on money says the majority "ought not to try to coerce" the minority (there, into paying for clubs it doesn't want), and his 1947 essays say the group's leaders only carry out what they believe the group wants.
 - The idea that a group conscience means "substantial unanimity," reached after everyone has been heard, is spelled out in later literature (the 1962 Concepts; the 2018 group pamphlet). Even there, the group still votes in the end.
 - So: not simply a show of hands, and not a rule against voting either. The early texts protect the minority more than they prescribe a method.
 
 ## What the Long Form says, and doesn't
 
-Tradition Two: "For our group purpose there is but one ultimate authority—a loving God as He may express Himself in our group conscience." (p. 563). That's the whole of it. The group conscience is where the Tradition locates the authority, but the text doesn't describe how a group arrives at it.
+Tradition Two: "For our group purpose there is but one ultimate authority—a loving God as He may express Himself in our group conscience." ([p. 563](https://recoverystarts.com/big-book/page-563/)). That's the whole of it. The group conscience is where the Tradition locates the authority, but the text doesn't describe how a group arrives at it.
 
-Other Traditions show that groups made decisions in ordinary ways. "The small group may elect its secretary, the large group its rotating committee" (p. 565). Those elected are "trusted and experienced servants of the whole" who "do not govern" (p. 565). Elections were normal; government by the winners was not.
+Other Traditions show that groups made decisions in ordinary ways. "The small group may elect its secretary, the large group its rotating committee" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Those elected are "trusted and experienced servants of the whole" who "do not govern" ([p. 565](https://recoverystarts.com/big-book/page-565/)). Elections were normal; government by the winners was not.
 
 ## What the 1946–47 essays say about majorities
 
@@ -37,7 +37,7 @@ The A.A. group pamphlet (P-16, 2018) applies that to groups. It describes group 
 The text of Tradition Two doesn't settle the mechanics, and we shouldn't pretend it does. What the early writing does settle is the spirit: no one rules, the minority isn't steamrolled, and those who serve carry out the group's wishes rather than their own. A group that votes after a full hearing is consistent with all of it. A narrow majority pushing through something a large minority opposes runs against the spirit of what Bill wrote in 1946 and 1947, though his only direct words on it are about making the minority pay for clubs.
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - P-16, *The A.A. Group* ("What Is an Informed A.A. Group Conscience?", pp. 28–29): https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *Tradition Two: does anyone have authority in A.A.?*

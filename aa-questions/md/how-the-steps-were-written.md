@@ -4,11 +4,11 @@
 - Bill W. wrote the Twelve Steps in 1938, while drafting the Big Book's fifth chapter. Both co-founders date them to 1938; Dr. Bob said he had nothing to do with the writing, though he thought their long talks in 1935 must have influenced them.
 - In Bill's 1957 account he wrote the first draft one night in bed at 182 Clinton Street, Brooklyn, in about half an hour, breaking the six-step word-of-mouth program into smaller pieces. They came to twelve.
 - The draft was argued over for months. The words "a Power greater than ourselves," "God as we understood Him," and the line calling the Steps "suggested as a program of recovery" were compromises made with the atheist and agnostic members; "on our knees" was taken out of Step Seven. Bill says he doesn't know who first proposed the compromise words.
-- The first draft itself is lost. The Big Book (1939) prints the finished Steps on pp. 59–60.
+- The first draft itself is lost. The Big Book (1939) prints the finished Steps on [pp. 59–60](https://recoverystarts.com/big-book/page-59/).
 
 ## What the Big Book shows (1939)
 
-The Steps appear in Chapter 5, "How It Works," introduced as "the steps we took, which are suggested as a program of recovery" (p. 59). Right after them the book says no member has kept to them perfectly: "We are not saints." (p. 60). "The principles we have set down are guides to progress." (p. 60). The book doesn't tell how the Steps were written; that comes from later accounts. See *Where are the Twelve Steps in the Big Book?* and *Are the Steps rules or suggestions?*
+The Steps appear in Chapter 5, "How It Works," introduced as "the steps we took, which are suggested as a program of recovery" ([p. 59](https://recoverystarts.com/big-book/page-59/)). Right after them the book says no member has kept to them perfectly: "We are not saints." ([p. 60](https://recoverystarts.com/big-book/page-60/)). "The principles we have set down are guides to progress." ([p. 60](https://recoverystarts.com/big-book/page-60/)). The book doesn't tell how the Steps were written; that comes from later accounts. See *Where are the Twelve Steps in the Big Book?* and *Are the Steps rules or suggestions?*
 
 ## The co-founders date them to 1938
 
@@ -49,7 +49,7 @@ Bill called this "the great contribution of our atheists and agnostics" (A.A. Co
 - **The first draft's wording.** No copy survives in our sources; *Pass It On*'s version is labelled a reconstruction (Pass It On, 1984).
 
 ## Read it yourself
-- Chapter 5, "How It Works" (pp. 58–71), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- Chapter 5, "How It Works" ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What were the "six steps" used before the Twelve Steps?* · *Where are the Twelve Steps in the Big Book?* · *Are the Steps rules or suggestions?* · *Were the Traditions written with the Steps?*
@@ -65,4 +65,5 @@ Bill called this "the great contribution of our atheists and agnostics" (A.A. Co
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

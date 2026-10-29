@@ -17,7 +17,7 @@ All our sources were searched for "thirteenth step," "13th step," "step thirteen
 
 ## What the books say about it, without the phrase
 
-The 1939 program text doesn't take this up as a group matter. On a member's own sex conduct, Chapter 5 asks of every relationship "was it selfish or not?" (p. 69), and asks where we had "unjustifiably" aroused jealousy, suspicion or bitterness (p. 69). Chapter 7's instructions for a helper put the newcomer's welfare first throughout, and say to keep your work with him free of any claim on him: he "is under no obligation to you" (p. 94).
+The 1939 program text doesn't take this up as a group matter. On a member's own sex conduct, Chapter 5 asks of every relationship "was it selfish or not?" ([p. 69](https://recoverystarts.com/big-book/page-69/)), and asks where we had "unjustifiably" aroused jealousy, suspicion or bitterness ([p. 69](https://recoverystarts.com/big-book/page-69/)). Chapter 7's instructions for a helper put the newcomer's welfare first throughout, and say to keep your work with him free of any claim on him: he "is under no obligation to you" ([p. 94](https://recoverystarts.com/big-book/page-94/)).
 
 The modern pamphlet *The A.A. Group* (P-16, 2018) lists, among common group problems for an informed group conscience to work out, "another's attempts to attract the romantic interest of newcomers" (P-16, 2018). It doesn't call this the Thirteenth Step, and it gives no rule beyond the group conscience.
 
@@ -28,7 +28,7 @@ None of the books in our sources defines "Thirteenth Step." Many people use it t
 ## Read it yourself
 - P-17, *A.A. Tradition: How It Developed* ("Clubs in A.A.," p. 17; "Anonymity," p. 42), free from A.A.: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-16, *The A.A. Group*, free from A.A.: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
-- Chapter 5, "How It Works" (p. 69), and Chapter 7, "Working With Others" (p. 94): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf and https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
+- Chapter 5, "How It Works" ([p. 69](https://recoverystarts.com/big-book/page-69/)), and Chapter 7, "Working With Others" ([p. 94](https://recoverystarts.com/big-book/page-94/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf and https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt7.pdf
 - *Dr. Bob and the Good Oldtimers* and *A.A. Comes of Age* are sold by A.A. World Services: https://onlineliterature.aa.org
 
 ## Sources

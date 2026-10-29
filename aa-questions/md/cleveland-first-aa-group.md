@@ -3,7 +3,7 @@
 **In short:**
 - In May or June 1939, Cleveland members who had been driving to the Akron meeting, held in an Oxford Group home, started their own meeting in Cleveland, open only to alcoholics and their families. Clarence S., one of its founders, said that they took the name "Alcoholics Anonymous" from the new book.
 - That Cleveland was the *first* group to use the name is Clarence's claim, as *Pass It On* (1984) reports it, right after saying the debate "continues." Our sources don't settle it.
-- The name itself is older than the Cleveland meeting: the Big Book, out in April 1939, already speaks for "Alcoholics Anonymous" (p. xiii). Bill W. dated the title to about October 1938; *Pass It On* (1984) finds it in letters from June and July 1938.
+- The name itself is older than the Cleveland meeting: the Big Book, out in April 1939, already speaks for "Alcoholics Anonymous" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). Bill W. dated the title to about October 1938; *Pass It On* (1984) finds it in letters from June and July 1938.
 - The sources disagree on dates: May or June 1939 for the first Cleveland meeting, and the 1955 foreword even speaks of a group at Cleveland starting in 1937.
 
 ## Background: Clevelanders at the Akron meeting
@@ -31,7 +31,7 @@ The book adds that Dr. Bob supported the Cleveland group from the start and went
 *Pass It On* (1984) reports the claim alongside the doubts. The book's title quickly became the fellowship's name, "although debate continues about where and how the name was first used by a group" (Pass It On, 1984). "Oldtimer Clarence S. stated that the Cleveland group he founded in May 1939 was actually the first group to use the name" (Pass It On, 1984). Whatever individual groups called themselves, it says, the name was used earlier for the fellowship as a whole, and it points to the Big Book's own foreword (Pass It On, 1984).
 
 The earlier uses are in our sources:
-- The Foreword to the First Edition (April 1939) opens: "We, of Alcoholics Anonymous, are more than one hundred men and women" (p. xiii).
+- The Foreword to the First Edition (April 1939) opens: "We, of Alcoholics Anonymous, are more than one hundred men and women" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)).
 - Bill (1957) says the title "had appeared very early in the discussion, probably in October, 1938" (A.A. Comes of Age, 1957).
 - *Pass It On* (1984) says "The first documented use of the name in the A.A. archives is in a letter from Frank Amos to Albert Scott dated June 24, 1938." (Pass It On, 1984), and cites a letter from Dr. Richards of Johns Hopkins, July 18, 1938, showing Bill already using "Alcoholics Anonymous" as the book's working title and the fellowship's name (Pass It On, 1984).
 - *Dr. Bob and the Good Oldtimers* (1980) says the name was "already in some limited use as a name for the Fellowship; references to it may be found as early as 1937" (Dr. Bob and the Good Oldtimers, 1980). It doesn't say what those references are.
@@ -44,14 +44,14 @@ In the fall of 1939 the Cleveland Plain Dealer ran a series of articles on A.A.,
 
 ## Where the sources differ
 - **The first Cleveland meeting.** May 11, 1939 (Clarence, in the 1980 book); "Toward the middle of May 1939" (Al G., same book); June 1939 at Abby G.'s home (Bill, 1957: A.A. Comes of Age, 1957).
-- **1937?** The Big Book's 1955 foreword says a second group took shape in New York, "to be followed in 1937 with the start of a third at Cleveland" (p. xvii). That doesn't fit the 1957, 1980 and 1984 accounts, which have Clevelanders going to Akron until 1939. Our sources don't explain it.
+- **1937?** The Big Book's 1955 foreword says a second group took shape in New York, "to be followed in 1937 with the start of a third at Cleveland" ([p. xvii](https://recoverystarts.com/big-book/page-xvii/)). That doesn't fit the 1957, 1980 and 1984 accounts, which have Clevelanders going to Akron until 1939. Our sources don't explain it.
 - **When the name first appeared.** Bill (1957) says "probably in October, 1938" (A.A. Comes of Age, 1957); *Pass It On* (1984) cites letters of June 24 and July 18, 1938 (Pass It On, 1984); the 1980 book says references go back to 1937 (Dr. Bob and the Good Oldtimers, 1980).
 - **The name.** Clarence says they took it from the book at once; Dorothy says they had no name; Al G. says they settled on it after debate (Dr. Bob and the Good Oldtimers, 1980).
 - **The first all-A.A. group.** Warren C. names the Borton Group, November 1939 (Dr. Bob and the Good Oldtimers, 1980), not the May meeting.
 
 ## Read it yourself
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How did Alcoholics Anonymous get its name? Was "The Way Out" the title?* · *What did early A.A. take from the Oxford Group, and why did it separate?* · *What happened at the 1950 Cleveland convention?* · *How were Akron and New York different in the early years?*
 

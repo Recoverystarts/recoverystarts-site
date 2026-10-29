@@ -8,7 +8,7 @@
 
 ## What the Big Book says (and doesn't)
 
-The phrase "Four Absolutes" and the set "absolute honesty, absolute purity, absolute unselfishness, absolute love" don't appear anywhere in the fourth edition. The book does use some of the same words separately, as ordinary goals rather than absolutes; for example, a recovering man is unlikely to get far "if he fails to show unselfishness and love under his own roof" (p. 127), and members "have begun to learn tolerance, patience and good will toward all men" (p. 70). The program it does set out is the Twelve Steps, which, it says, are "guides to progress" (p. 60), with "spiritual progress rather than spiritual perfection" as the aim (p. 60). See *Is "progress, not perfection" in the Big Book?*
+The phrase "Four Absolutes" and the set "absolute honesty, absolute purity, absolute unselfishness, absolute love" don't appear anywhere in the fourth edition. The book does use some of the same words separately, as ordinary goals rather than absolutes; for example, a recovering man is unlikely to get far "if he fails to show unselfishness and love under his own roof" ([p. 127](https://recoverystarts.com/big-book/page-127/)), and members "have begun to learn tolerance, patience and good will toward all men" ([p. 70](https://recoverystarts.com/big-book/page-70/)). The program it does set out is the Twelve Steps, which, it says, are "guides to progress" ([p. 60](https://recoverystarts.com/big-book/page-60/)), with "spiritual progress rather than spiritual perfection" as the aim ([p. 60](https://recoverystarts.com/big-book/page-60/)). See *Is "progress, not perfection" in the Big Book?*
 
 ## Dr. Bob: "the only yardsticks" (1948)
 
@@ -29,8 +29,8 @@ In his last major talk, printed in P-53, Dr. Bob said the Four Absolutes "were t
 - **The order.** Bill lists honesty, purity, unselfishness, love (A.A. Comes of Age, 1957); Dr. Bob lists honesty, unselfishness, purity, love (P-53). The order doesn't change the meaning.
 
 ## Read it yourself
-- Chapter 5, "How It Works" (pp. 58–71), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
-- Chapter 9, "The Family Afterward" (pp. 122–135): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
+- Chapter 5, "How It Works" ([pp. 58–71](https://recoverystarts.com/big-book/page-58/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- Chapter 9, "The Family Afterward" ([pp. 122–135](https://recoverystarts.com/big-book/page-122/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt9.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous* (Dr. Bob's 1948 talk): https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *What did early A.A. take from the Oxford Group, and why did it separate?* · *What were the "six steps" used before the Twelve Steps?* · *Who was Dr. Bob?*
@@ -45,4 +45,5 @@ In his last major talk, printed in P-53, Dr. Bob said the Four Absolutes "were t
 | *Pass It On* (including Bill's letter of October 30, 1940) | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

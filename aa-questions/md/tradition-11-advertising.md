@@ -1,21 +1,21 @@
 # Tradition Eleven: does A.A. advertise?
 
 **In short:**
-- The Long Form of Tradition Eleven says A.A. "ought to avoid sensational advertising," that members' names and pictures as A.A. members should not be broadcast, filmed or printed, and that public relations should rest on "attraction rather than promotion" (p. 565).
+- The Long Form of Tradition Eleven says A.A. "ought to avoid sensational advertising," that members' names and pictures as A.A. members should not be broadcast, filmed or printed, and that public relations should rest on "attraction rather than promotion" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 - It doesn't say A.A. must stay hidden. In 1946 Bill W. criticized groups that shunned all publicity, because they forgot the alcoholics in town who hadn't heard A.A. existed.
-- What A.A. avoids is selling itself and praising itself: "There is never need to praise ourselves. We feel it better to let our friends recommend us" (p. 565).
+- What A.A. avoids is selling itself and praising itself: "There is never need to praise ourselves. We feel it better to let our friends recommend us" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
-## What the Long Form says (p. 565)
+## What the Long Form says ([p. 565](https://recoverystarts.com/big-book/page-565/))
 
 The Eleventh Tradition's Long Form has five sentences:
 
-1. Relations with the general public "should be characterized by personal anonymity" (p. 565).
-2. "We think A.A. ought to avoid sensational advertising" (p. 565).
-3. Members' names and pictures as A.A. members "ought not be broadcast, filmed, or publicly printed" (p. 565).
-4. Public relations "should be guided by the principle of attraction rather than promotion" (p. 565).
-5. "There is never need to praise ourselves. We feel it better to let our friends recommend us" (p. 565).
+1. Relations with the general public "should be characterized by personal anonymity" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+2. "We think A.A. ought to avoid sensational advertising" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+3. Members' names and pictures as A.A. members "ought not be broadcast, filmed, or publicly printed" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+4. Public relations "should be guided by the principle of attraction rather than promotion" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
+5. "There is never need to praise ourselves. We feel it better to let our friends recommend us" ([p. 565](https://recoverystarts.com/big-book/page-565/)).
 
-The word in the Long Form is *sensational* advertising. The short form drops that and keeps "attraction rather than promotion" together with personal anonymity at the level of press, radio and films (p. 562). The Long Form doesn't forbid letting the public know A.A. exists. It also gives the trustees the job of handling A.A.'s overall public relations, on the groups' authority (p. 565), which assumes A.A. has public relations.
+The word in the Long Form is *sensational* advertising. The short form drops that and keeps "attraction rather than promotion" together with personal anonymity at the level of press, radio and films ([p. 562](https://recoverystarts.com/big-book/page-562/)). The Long Form doesn't forbid letting the public know A.A. exists. It also gives the trustees the job of handling A.A.'s overall public relations, on the groups' authority ([p. 565](https://recoverystarts.com/big-book/page-565/)), which assumes A.A. has public relations.
 
 ## What Bill W. wrote in "Anonymity" (1946)
 
@@ -40,7 +40,7 @@ In 1955 Bill told of members who tried to use A.A.'s name commercially, includin
 A.A. doesn't promote itself, praise itself, use sensational advertising or put members' faces and names before the public. It does make itself known, and the 1946 text treats a group that hides from the alcoholics around it as failing them. Where exactly "making known" becomes "promotion" isn't spelled out; the Long Form gives the principle, not a list.
 
 ## Read it yourself
-- Appendix I, the Long Form of the Traditions (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, the Long Form of the Traditions ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition: How It Developed* ("Anonymity," pp. 41–47; "Why Alcoholics Anonymous Is Anonymous," pp. 48–58): https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - P-43, *The Twelve Traditions Illustrated*: https://www.aa.org/sites/default/files/literature/P-43_0625.pdf
 - Related: *Tradition Twelve: does anonymity mean keeping A.A. secret?* · *Why is A.A. anonymous?*

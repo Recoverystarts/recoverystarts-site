@@ -4,7 +4,7 @@
 - The phrase "dry drunk" is not in the Big Book: not in the 1939 program text, pages 1 to 164, nor in the forewords, the appendices, or any of the personal stories in the fourth edition.
 - In all our sources the phrase appears once, in *Pass It On* (1984). Describing Bill W. in late 1940, it says some people called him "on a dry drunk," which it explains as having "all the symptoms of being drunk except the alcohol."
 - An older, similar phrase, "dry bender," is in *A.A. Comes of Age* (1957). Bill uses it for a sober member in 1940 who was angry and unreasonable, and for himself in the late 1940s.
-- The Big Book doesn't use either phrase, but it does say that staying sober isn't the whole job (p. 82), and that what a member has is "a daily reprieve contingent on the maintenance of our spiritual condition" (p. 85).
+- The Big Book doesn't use either phrase, but it does say that staying sober isn't the whole job ([p. 82](https://recoverystarts.com/big-book/page-82/)), and that what a member has is "a daily reprieve contingent on the maintenance of our spiritual condition" ([p. 85](https://recoverystarts.com/big-book/page-85/)).
 
 ## What the search found
 
@@ -20,21 +20,21 @@ All our sources were searched for "dry drunk," "dry drunks," "dry bender," "whit
 
 So by 1957 Bill could call "dry bender" something "we nowadays" say. In both of his uses about people, the man is sober and behaving badly: "adamant and violent" in one case (*A.A. Comes of Age*, 1957), sending "blistering memorandums" in the other (*A.A. Comes of Age*, 1957). Bill doesn't define the phrase further.
 
-**"White-knuckling"** turns up once, in a fourth-edition story, "On the Move" (Part III): "After white-knuckling it for almost two years in A.A., I finally broke down and saw that I could not stay sober all by myself" (p. 491). That is one member's word for staying dry on one's own strength; the story doesn't call it a dry drunk.
+**"White-knuckling"** turns up once, in a fourth-edition story, "On the Move" (Part III): "After white-knuckling it for almost two years in A.A., I finally broke down and saw that I could not stay sober all by myself" ([p. 491](https://recoverystarts.com/big-book/page-491/)). That is one member's word for staying dry on one's own strength; the story doesn't call it a dry drunk.
 
 ## What the Big Book says on the same subject
 
 The program text doesn't use either phrase. These are the passages that speak to an alcoholic who is sober but still in trouble. They are given here for comparison, not as a definition of "dry drunk."
-- **Sobriety alone isn't enough.** Some alcoholics say all they need to do is keep sober. "Certainly he must keep sober," the book answers, but he's "yet a long way from making good" to his family (p. 82). A man who says sobriety is enough is like the farmer who came up from his cyclone cellar to a wrecked home and said, "Ain't it grand the wind stopped blowin'?" (p. 82).
-- **Not cured.** "We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition" (p. 85). It's easy "to let up on the spiritual program of action and rest on our laurels," and that leads to trouble (p. 85).
-- **Restless before the drink.** In "The Doctor's Opinion" (1939), Dr. Silkworth describes drinkers who, without alcohol, are "restless, irritable and discontented" unless they can again feel the ease a few drinks bring (pp. xxviii–xxix). He is describing the state that leads back to drinking, not a sober member of A.A.
-- **Resentment.** "If we were to live, we had to be free of anger" (p. 66). Harbored resentment shuts a man off from "the sunlight of the Spirit," and the insanity of alcohol returns (p. 66).
-- **Crankiness after the drinking stops.** Chapter 9 tells the family that the man, "though marvelously improved, is still convalescing," and that his "periods of crankiness, depression, or apathy" will pass with tolerance, love and spiritual understanding (p. 127).
+- **Sobriety alone isn't enough.** Some alcoholics say all they need to do is keep sober. "Certainly he must keep sober," the book answers, but he's "yet a long way from making good" to his family ([p. 82](https://recoverystarts.com/big-book/page-82/)). A man who says sobriety is enough is like the farmer who came up from his cyclone cellar to a wrecked home and said, "Ain't it grand the wind stopped blowin'?" ([p. 82](https://recoverystarts.com/big-book/page-82/)).
+- **Not cured.** "We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition" ([p. 85](https://recoverystarts.com/big-book/page-85/)). It's easy "to let up on the spiritual program of action and rest on our laurels," and that leads to trouble ([p. 85](https://recoverystarts.com/big-book/page-85/)).
+- **Restless before the drink.** In "The Doctor's Opinion" (1939), Dr. Silkworth describes drinkers who, without alcohol, are "restless, irritable and discontented" unless they can again feel the ease a few drinks bring ([pp. xxviii–xxix](https://recoverystarts.com/big-book/page-xxviii/)). He is describing the state that leads back to drinking, not a sober member of A.A.
+- **Resentment.** "If we were to live, we had to be free of anger" ([p. 66](https://recoverystarts.com/big-book/page-66/)). Harbored resentment shuts a man off from "the sunlight of the Spirit," and the insanity of alcohol returns ([p. 66](https://recoverystarts.com/big-book/page-66/)).
+- **Crankiness after the drinking stops.** Chapter 9 tells the family that the man, "though marvelously improved, is still convalescing," and that his "periods of crankiness, depression, or apathy" will pass with tolerance, love and spiritual understanding ([p. 127](https://recoverystarts.com/big-book/page-127/)).
 
 ## Read it yourself
-- Chapter 6, "Into Action" (pp. 82–85): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
-- "The Doctor's Opinion" (pp. xxv–xxxii): https://www.aa.org/sites/default/files/2021-11/en_bigbook_foreworddoctorsopinion.pdf
-- Chapter 5, "How It Works" (p. 66): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
+- Chapter 6, "Into Action" ([pp. 82–85](https://recoverystarts.com/big-book/page-82/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf
+- "The Doctor's Opinion" ([pp. xxv–xxxii](https://recoverystarts.com/big-book/page-xxv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_foreworddoctorsopinion.pdf
+- Chapter 5, "How It Works" ([p. 66](https://recoverystarts.com/big-book/page-66/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf
 - P-17, with "Why Alcoholics Anonymous Is Anonymous" (1955), free from A.A.: https://www.aa.org/sites/default/files/literature/assets/p-17_AATraditions.pdf
 - *Pass It On* and *A.A. Comes of Age* are sold by A.A. World Services: https://onlineliterature.aa.org
 

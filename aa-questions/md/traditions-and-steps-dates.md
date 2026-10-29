@@ -7,19 +7,19 @@
 
 ## The dates, from the books themselves
 
-**1939: the Steps.** The Twelve Steps are in Chapter 5, "How It Works" (pp. 59–60), part of the first edition, whose first printing was in 1939 (p. xiii). The 1939 book has no Traditions. The nearest thing is a few lines in the Foreword to the First Edition: no fees or dues, "The only requirement for membership is an honest desire to stop drinking," no alliance with any sect, and a request that members stay anonymous in the press (pp. xiii–xiv).
+**1939: the Steps.** The Twelve Steps are in Chapter 5, "How It Works" ([pp. 59–60](https://recoverystarts.com/big-book/page-59/)), part of the first edition, whose first printing was in 1939 ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). The 1939 book has no Traditions. The nearest thing is a few lines in the Foreword to the First Edition: no fees or dues, "The only requirement for membership is an honest desire to stop drinking," no alliance with any sect, and a request that members stay anonymous in the press ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)).
 
-**1946: the Long Form.** The Big Book's own appendix calls the short form "a condensed version of the original 'long form' A.A. Traditions as first printed in 1946" (p. 561). Bill W. dates it to "the Grapevine of May, 1946" (*A.A. Comes of Age*, 1957), with more Grapevine pieces explaining each point over the following months. Those essays, from 1946 and 1947, are reprinted in the pamphlet P-17.
+**1946: the Long Form.** The Big Book's own appendix calls the short form "a condensed version of the original 'long form' A.A. Traditions as first printed in 1946" ([p. 561](https://recoverystarts.com/big-book/page-561/)). Bill W. dates it to "the Grapevine of May, 1946" (*A.A. Comes of Age*, 1957), with more Grapevine pieces explaining each point over the following months. Those essays, from 1946 and 1947, are reprinted in the pamphlet P-17.
 
 **About 1947–1950: the short form.** Bill credits Earl T., founder of the Chicago group, with the idea of cutting the Long Form down to statements as short as the Steps. Earl came to him with it "One day in 1947, or thereabouts" (*A.A. Comes of Age*, 1957). After months of refining, the Grapevine printed the new wording in every issue.
 
-**1950: confirmed at Cleveland.** The Foreword to the Second Edition (1955) says the principles "had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland" (p. xix). Bill puts it in July 1950 and records the Convention's "unanimous voice of consent" (*A.A. Comes of Age*, 1957).
+**1950: confirmed at Cleveland.** The Foreword to the Second Edition (1955) says the principles "had become so widely accepted by 1950 that they were confirmed by our first International Conference held at Cleveland" ([p. xix](https://recoverystarts.com/big-book/page-xix/)). Bill puts it in July 1950 and records the Convention's "unanimous voice of consent" (*A.A. Comes of Age*, 1957).
 
 So the Steps came first by seven years, and the Traditions in their familiar form came about eleven years after the Steps.
 
 ## Why they came later
 
-The Traditions grew out of problems that didn't exist in 1939. When the Big Book came out, A.A. was "more than one hundred men and women" (p. xiii). By the close of 1941 it was about 8,000 (p. xviii). Then came what the Second Edition foreword calls a "fearsome and exciting adolescent period" (p. xviii), with quarrels over membership, leadership and money (pp. xviii–xix). The Traditions were the lessons drawn from those years (see *Why were the Twelve Traditions written?*).
+The Traditions grew out of problems that didn't exist in 1939. When the Big Book came out, A.A. was "more than one hundred men and women" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). By the close of 1941 it was about 8,000 ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)). Then came what the Second Edition foreword calls a "fearsome and exciting adolescent period" ([p. xviii](https://recoverystarts.com/big-book/page-xviii/)), with quarrels over membership, leadership and money ([pp. xviii–xix](https://recoverystarts.com/big-book/page-xviii/)). The Traditions were the lessons drawn from those years (see *Why were the Twelve Traditions written?*).
 
 Bill described the order in which things happened: "Nobody invented Alcoholics Anonymous. It grew." (P-17, Foreword, 1955). Lessons were adopted "first as policy and then as tradition" (P-17, Foreword, 1955).
 
@@ -30,9 +30,9 @@ Bill himself compared them. In the foreword to P-17 he wrote that many members a
 A later pamphlet (P-43, 1971) makes the same point about how both were made: "Like the Steps, the Traditions were not figured out in advance" (P-43, 1971).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
-- Foreword to the First Edition (pp. xiii–xiv): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- Foreword to the Second Edition (pp. xv–xxi): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- Foreword to the Second Edition ([pp. xv–xxi](https://recoverystarts.com/big-book/page-xv/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordsecondedition.pdf
 - P-17, *A.A. Tradition — How It Developed*: https://www.aa.org/aa-tradition-how-it-developed
 - P-43, *The Twelve Traditions Illustrated*: https://www.aa.org/twelve-traditions-illustrated
 - *Alcoholics Anonymous Comes of Age* is sold by A.A. World Services at https://onlineliterature.aa.org

@@ -8,7 +8,7 @@
 
 ## What the Big Book itself shows
 
-The book points to its own revisions only after publication. Appendix II says "our first printing gave many readers the impression" that a spiritual experience had to be sudden and spectacular (p. 567), and was added to correct that. The Foreword to the First Edition in today's book is printed "as it appeared in the first printing of the first edition in 1939" (p. xiii). Bill's story ends: "Most of us feel we need look no further for Utopia." (p. 16), the word the Catholic reviewers suggested (see below). See *What changed between the four editions of the Big Book?*
+The book points to its own revisions only after publication. Appendix II says "our first printing gave many readers the impression" that a spiritual experience had to be sudden and spectacular ([p. 567](https://recoverystarts.com/big-book/page-567/)), and was added to correct that. The Foreword to the First Edition in today's book is printed "as it appeared in the first printing of the first edition in 1939" ([p. xiii](https://recoverystarts.com/big-book/page-xiii/)). Bill's story ends: "Most of us feel we need look no further for Utopia." ([p. 16](https://recoverystarts.com/big-book/page-16/)), the word the Catholic reviewers suggested (see below). See *What changed between the four editions of the Big Book?*
 
 ## The working drafts (1938)
 
@@ -42,9 +42,9 @@ Some loan copies went on doing their work. Dr. Tiebout gave one to his patient M
 - **Earlier wording.** The only earlier wordings our sources reports are "Heaven" for "Utopia" (A.A. Comes of Age, 1957), "you must" for "we ought" (A.A. Comes of Age, 1957), "directions" for "path" (Pass It On, 1984), and the reconstructed first draft of the Steps (see *How were the Twelve Steps written?*). Claims about other passages in a pre-publication manuscript can't be confirmed from our sources.
 
 ## Read it yourself
-- Foreword to the First Edition (pp. xiii–xiv), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
-- "Bill's Story," Chapter 1 (pp. 1–16): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
-- Appendix II, "Spiritual Experience" (pp. 567–568): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
+- Foreword to the First Edition ([pp. xiii–xiv](https://recoverystarts.com/big-book/page-xiii/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_forewordfirstedition.pdf
+- "Bill's Story," Chapter 1 ([pp. 1–16](https://recoverystarts.com/big-book/page-1/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt1.pdf
+- Appendix II, "Spiritual Experience" ([pp. 567–568](https://recoverystarts.com/big-book/page-567/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendiceii.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How were the Twelve Steps written?* · *Who wrote the Big Book's chapters, including "To Wives"?* · *How did Alcoholics Anonymous get its name? Was "The Way Out" the title?* · *What changed between the four editions of the Big Book?*
 
@@ -59,4 +59,5 @@ Some loan copies went on doing their work. Dr. Tiebout gave one to his patient M
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-44,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.*

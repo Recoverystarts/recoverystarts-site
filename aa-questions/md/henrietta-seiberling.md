@@ -4,11 +4,11 @@
 - Henrietta Seiberling was a nonalcoholic member of the Oxford Group in Akron, the daughter-in-law of the founder of the Goodyear rubber company. She lived in the gatehouse of the Seiberling estate.
 - On the Saturday before Mother's Day, May 1935, Bill W., stranded in Akron and afraid he would drink, reached her by telephone after a minister's list of names ran out. She knew of a doctor in her Oxford Group who couldn't stop drinking, and the next afternoon she brought Dr. Bob and Bill together in her home.
 - Bill wrote that she was the only one on that list "who had understood enough and cared enough" (A.A. Comes of Age, 1957), and that A.A.'s debt to her was beyond reckoning. Dr. Bob called her "our good friend Henrietta."
-- The 1939 Big Book doesn't name her; Dr. Bob's story calls her only "a lady" (p. 179). A 1980 history, from her own and other members' recollections, shows she later disagreed with the alcoholics on money, on how much to speak of God, on the book, and on leaving the Oxford Group.
+- The 1939 Big Book doesn't name her; Dr. Bob's story calls her only "a lady" ([p. 179](https://recoverystarts.com/big-book/page-179/)). A 1980 history, from her own and other members' recollections, shows she later disagreed with the alcoholics on money, on how much to speak of God, on the book, and on leaving the Oxford Group.
 
 ## What the 1939 Big Book says
 
-In "Doctor Bob's Nightmare," written in 1939: "About this time a lady called up my wife one Saturday afternoon saying she wanted me to come over that evening to meet a friend of hers who might help me." (p. 179). He was in no shape that day; the next day she called again, and they went (p. 179). Chapter 11 tells the same meeting from Bill's side and doesn't mention her at all; the clergyman's call simply "led him presently to a certain resident of the town" (p. 155). See *How did Bill W. and Dr. Bob meet?*
+In "Doctor Bob's Nightmare," written in 1939: "About this time a lady called up my wife one Saturday afternoon saying she wanted me to come over that evening to meet a friend of hers who might help me." ([p. 179](https://recoverystarts.com/big-book/page-179/)). He was in no shape that day; the next day she called again, and they went ([p. 179](https://recoverystarts.com/big-book/page-179/)). Chapter 11 tells the same meeting from Bill's side and doesn't mention her at all; the clergyman's call simply "led him presently to a certain resident of the town" ([p. 155](https://recoverystarts.com/big-book/page-155/)). See *How did Bill W. and Dr. Bob meet?*
 
 ## Dr. Bob's account (1948)
 
@@ -38,8 +38,8 @@ The same book shows her differences with the alcoholics later on. She thought A.
 - **The first visit.** Dr. Bob (1948) says she asked Bill to lunch (P-53); Henrietta (1978) says he stayed for dinner and she told him to come to church with her the next morning (Dr. Bob and the Good Oldtimers, 1980).
 
 ## Read it yourself
-- "Doctor Bob's Nightmare" (pp. 171–181), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
-- Chapter 11, "A Vision for You" (pp. 151–164): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
+- "Doctor Bob's Nightmare" ([pp. 171–181](https://recoverystarts.com/big-book/page-171/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_personalstories_partI.pdf
+- Chapter 11, "A Vision for You" ([pp. 151–164](https://recoverystarts.com/big-book/page-151/)): https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt11.pdf
 - P-53, *The Co-Founders of Alcoholics Anonymous*: https://www.aa.org/sites/default/files/literature/P-53_0725.pdf
 - *A.A. Comes of Age*, *Dr. Bob and the Good Oldtimers* and *Pass It On* are sold by A.A. World Services: https://onlineliterature.aa.org
 - Related: *How did Bill W. and Dr. Bob meet?* · *Who was Dr. Bob?* · *What did early A.A. take from the Oxford Group, and why did it separate?*
@@ -55,4 +55,5 @@ The same book shows her differences with the alcoholics later on. She thought A.
 | *Pass It On* | — | 1984 |
 
 Big Book page numbers are from the fourth edition (2001).
+
 *Recovery Starts is independent and not affiliated with Alcoholics Anonymous. Quotations are brief and cited; the Big Book, P-53,* A.A. Comes of Age, *Dr. Bob and the Good Oldtimers *and* Pass It On *are © A.A. World Services, Inc.; Dr. Bob's 1948 talk in P-53 is © AA Grapevine, Inc.*

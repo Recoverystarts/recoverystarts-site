@@ -1,16 +1,16 @@
 # Can anyone be thrown out of A.A.?
 
 **In short:**
-- No one can be expelled from A.A. itself. The Long Form of Tradition Three says "we may refuse none who wish to recover" (p. 563), and that membership should never depend on money or conformity.
+- No one can be expelled from A.A. itself. The Long Form of Tradition Three says "we may refuse none who wish to recover" ([p. 563](https://recoverystarts.com/big-book/page-563/)), and that membership should never depend on money or conformity.
 - Bill W., writing in 1946: a member "is a member as long as he says he is" (P-17, "Who Is a Member of Alcoholics Anonymous?", 1946).
 - That isn't the same as putting up with anything at a meeting. In 1946 a member who kept turning up drunk could be "led outside" (P-17, "Who Is a Member of Alcoholics Anonymous?", 1946), then welcomed back the next day if sober. A club, which is separate from A.A., could bar him. Neither takes away his membership in A.A.
 - Bill was honest that in 1946 this view was "not yet unanimous" (P-17, "Who Is a Member of Alcoholics Anonymous?", 1946) and membership rules still existed in places. The Tradition is the lesson A.A. drew from those rules.
 
 ## What the Long Form says
 
-Tradition Three in its original form says A.A.'s membership "ought to include all who suffer from alcoholism" (p. 563). From that it follows, in the Tradition's own word "Hence," that "we may refuse none who wish to recover" (p. 563). And membership should never "depend upon money or conformity" (p. 563): not on dues, and not on agreeing with anyone or behaving a certain way.
+Tradition Three in its original form says A.A.'s membership "ought to include all who suffer from alcoholism" ([p. 563](https://recoverystarts.com/big-book/page-563/)). From that it follows, in the Tradition's own word "Hence," that "we may refuse none who wish to recover" ([p. 563](https://recoverystarts.com/big-book/page-563/)). And membership should never "depend upon money or conformity" ([p. 563](https://recoverystarts.com/big-book/page-563/)): not on dues, and not on agreeing with anyone or behaving a certain way.
 
-The short form puts it as one requirement, "a desire to stop drinking" (p. 562). The Long Form puts it the other way round: there's no one A.A. may turn away.
+The short form puts it as one requirement, "a desire to stop drinking" ([p. 562](https://recoverystarts.com/big-book/page-562/)). The Long Form puts it the other way round: there's no one A.A. may turn away.
 
 ## Why: the 1946 essay
 
@@ -29,7 +29,7 @@ The same essay draws the line that answers most real cases. A member who "persis
 So three different things:
 - **A.A. membership** belongs to the person. No group, committee or office can take it away.
 - **A meeting** can ask someone who is disrupting it to leave for now. Bill's 1946 essay on money mentions a steward who can "eject a troublesome drunk" (P-17, "Money", 1946). How a group runs its own meetings is its own affair under Tradition Four (p. 563).
-- **A club** is a separate thing that the Long Form says should be "set apart" from A.A. (p. 564). It can have its own rules for its own premises.
+- **A club** is a separate thing that the Long Form says should be "set apart" from A.A. ([p. 564](https://recoverystarts.com/big-book/page-564/)). It can have its own rules for its own premises.
 
 ## What wasn't settled
 
@@ -42,7 +42,7 @@ The 1946–47 texts deal with drunkenness, slips, panhandling, gossip and "menta
 In 1957 Bill summed up Tradition Three as: "You are an A.A. member if you say so" (*A.A. Comes of Age*, 1957). The A.A. group pamphlet (P-16, 2018) quotes the 1962 Twelve Concepts: "no member to be expelled from A.A. — membership always to be the choice of the individual" (P-16, 2018).
 
 ## Read it yourself
-- Appendix I, "The A.A. Tradition" (pp. 561–566), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
+- Appendix I, "The A.A. Tradition" ([pp. 561–566](https://recoverystarts.com/big-book/page-561/)), free from A.A.: https://www.aa.org/sites/default/files/2021-11/en_bigbook_appendicei.pdf
 - P-17, *A.A. Tradition — How It Developed* ("Who Is a Member of Alcoholics Anonymous?" is the first essay): https://www.aa.org/aa-tradition-how-it-developed
 - P-16, *The A.A. Group*: https://www.aa.org/sites/default/files/literature/p-16_0723.pdf
 - Related: *What is the only requirement for membership?*

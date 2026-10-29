@@ -8,7 +8,7 @@ The chrome (menu, footer, ads, app bar) comes from a stamped A.A. question page 
 aa-library/tools/transplant-into-site.py does it.
 
   python3 scripts/build-aa-history.py /path/to/aa-library     (run from the site root)
-Written 2026-10-28 by CEO: reach, 4th window (Opus 5.5). Way back: delete this file and /aa-history/.
+Written 2026-10-28 by CEO: reach, 4th window (Opus 5.5); 20:2x added Anne Smith, Lois W., Father Ed, the Grapevine, St. Louis 1955. Way back: delete this file and /aa-history/.
 """
 import re, sys, json, html, subprocess, pathlib, datetime
 
@@ -18,12 +18,12 @@ TODAY = datetime.date.today().isoformat()
 URL = "https://recoverystarts.com/aa-history/"
 
 CHAPTERS = [
-    ("1934–1935: how it started", None, ["bill-w", "ebby", "towns-hospital", "oxford-group", "how-bill-and-bob-met", "henrietta-seiberling", "who-was-dr-bob"]),
+    ("1934–1935: how it started", None, ["bill-w", "ebby", "towns-hospital", "oxford-group", "how-bill-and-bob-met", "henrietta-seiberling", "who-was-dr-bob", "anne-smith", "lois-w"]),
     ("1935–1939: two groups, then a book", None, ["how-aa-grew-from-two", "akron-and-new-york", "alcoholic-foundation", "rockefeller-money",
                                                  "big-book-draft", "who-wrote-the-chapters", "works-publishing", "why-the-big-book-was-written", "members-in-1939"]),
-    ("1939–1950: growth, trouble, and the Traditions", "/12-traditions/history/", ["cleveland-first-aa-group", "sister-ignatia", "jack-alexander-article",
+    ("1939–1950: growth, trouble, and the Traditions", "/12-traditions/history/", ["cleveland-first-aa-group", "sister-ignatia", "jack-alexander-article", "father-ed-dowling", "grapevine",
                                                  "aa-1939-to-1950", "traditions-why-written", "cleveland-1950", "dr-bob-death-last-words"]),
-    ("After 1950 (later sources, dated and read with care)", None, ["three-legacies", "concepts-what-and-why"]),
+    ("After 1950 (later sources, dated and read with care)", None, ["st-louis-1955", "three-legacies", "concepts-what-and-why"]),
 ]
 
 def first_short(slug):

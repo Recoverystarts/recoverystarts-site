@@ -731,8 +731,8 @@
    "download/index.html"
   ]
  },
- "c93edc6c766c": {
-  "t": "<0><1>Privacy</1>:</0> We use Google Analytics and Cloudflare Web Analytics to see which pages help people and where to improve; Google sets analytics cookies. We never sell your data or post anything about you. <2>Independence:</2> Not affiliated with any fellowship. <3>No Medical Advice:</3> Not a substitute for professional care.",
+ "b3f6db7baac7": {
+  "t": "<0><1>Privacy</1>:</0> We use Google Analytics and Cloudflare Web Analytics to see which pages help people and where to improve; Google sets analytics cookies. <2>Independence:</2> Not affiliated with any fellowship. <3>No Medical Advice:</3> Not a substitute for professional care.",
   "kind": "html",
   "pages": [
    "404.html",

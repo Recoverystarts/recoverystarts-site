@@ -31,6 +31,7 @@ export const LANGS = {
   sv: { name: "Svenska", dir: "ltr", en: "Swedish" },
   nl: { name: "Nederlands", dir: "ltr", en: "Dutch" },
   hi: { name: "हिन्दी", dir: "ltr", en: "Hindi" },
+  ja: { name: "日本語", dir: "ltr", en: "Japanese" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

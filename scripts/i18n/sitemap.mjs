@@ -14,7 +14,7 @@ import { ROOT, LANGS, tagOf } from "./lib.mjs";
 
 const SITE = "https://recoverystarts.com";
 // the day a language's pages went live: a language page's lastmod is never older than that
-const LIVE = { es: "2026-10-12", pt: "2026-10-12", fr: "2026-10-12", fa: "2026-10-13", pl: "2026-10-13", de: "2026-10-17", sv: "2026-10-17", nl: "2026-10-17", hi: "2026-10-18" };
+const LIVE = { es: "2026-10-12", pt: "2026-10-12", fr: "2026-10-12", fa: "2026-10-13", pl: "2026-10-13", de: "2026-10-17", sv: "2026-10-17", nl: "2026-10-17", hi: "2026-10-18", ja: "2026-11-01" };
 const today = new Date().toISOString().slice(0, 10);
 const EN = path.join(ROOT, "sitemap-en.xml"), INDEX = path.join(ROOT, "sitemap.xml");
 
@@ -70,7 +70,7 @@ export function writeSitemaps({ quiet = false } = {}) {
 // the next "## " on every build; a new language appears here by itself.
 const DOORS = [["", "Home"], ["12-steps/", "The 12 Steps"], ["12-traditions/", "The 12 Traditions (short and long form)"], ["12-traditions/history/", "How the 12 Traditions came about (1937–1950)"], ["aa-info/", "AA info: Traditions and Concepts"], ["daily-tradition/", "Daily Traditions"], ["daily-reflection/", "Daily Reflections"], ["big-book/pages/", "The Big Book, page by page"], ["big-book/search/", "Big Book search"], ["aa-questions/", "A.A. questions, answered from the books"], ["meetings/", "Meetings"]];
 // a language whose A.A. texts are our own translation says so here too (build.mjs OURS_NOTE; wave hi1)
-const OURS = { hi: "the Hindi Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page; A.A. publishes no Hindi text of them online." };
+const OURS = { hi: "the Hindi Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page; A.A. publishes no Hindi text of them online.", ja: "the Japanese Steps, Traditions (short and long form), Concepts (short form) and Preamble are A.A. Japan's own published wording (AA日本ゼネラルサービス, aajapan.org); the Big Book quotes, the Serenity, Third and Seventh Step prayers, the long form of the Concepts and every other quotation from A.A. literature are our own translation from A.A.'s English, marked so on each page." };
 function writeLlms(langs) {
   const f = path.join(ROOT, "llms.txt");
   if (!fs.existsSync(f)) return;

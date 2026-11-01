@@ -1,0 +1,18 @@
+/* Japanese type: loaded after /style.css on /ja/ pages only (scripts/i18n/build.mjs LANG_CSS; wave jalang1, 2026-11-01).
+   Noto Sans JP comes after the site's Latin fonts, so AA, Recovery Einstein and other Latin words keep the site's type
+   and the browser takes kana and kanji from Noto (Google serves it in unicode-range slices, so a page downloads only the
+   characters it uses). Japanese has no italics (a slanted kanji is a fake), wants more line height than Latin, no
+   letter-spacing, and breaks lines where Japanese allows: line-break:strict keeps small kana and 。、」 off a line's
+   start; word-break:normal lets a line break between any two characters, which is how Japanese wraps. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+html:lang(ja){--font-display:'Fraunces','Noto Sans JP','Hiragino Sans','Yu Gothic',Georgia,serif;--font-body:'Outfit','Noto Sans JP','Hiragino Sans','Yu Gothic',system-ui,-apple-system,sans-serif;--font-ui:'Outfit','Noto Sans JP','Hiragino Sans','Yu Gothic',system-ui,-apple-system,sans-serif}
+html:lang(ja) body{line-height:1.8;line-break:strict;word-break:normal;overflow-wrap:break-word}
+html:lang(ja) h1,html:lang(ja) h2,html:lang(ja) h3,html:lang(ja) h4{line-height:1.5;word-break:normal;line-break:strict}
+html:lang(ja) *{letter-spacing:0!important}
+html:lang(ja) *{font-style:normal!important}
+html:lang(ja) em,html:lang(ja) i{font-weight:700}
+html:lang(ja) input,html:lang(ja) textarea,html:lang(ja) select,html:lang(ja) button{font-family:var(--font-ui)}
+/* "our translation" note (build.mjs OURS_NOTE), the same box as Hindi's */
+.rs-ours{margin:.9rem 0 1.3rem;padding:.6rem .9rem;border-left:3px solid var(--gold);background:var(--glass-highlight);border-radius:0 8px 8px 0;color:var(--ink-soft);font-family:var(--font-ui);font-size:var(--step--1);line-height:1.7;max-width:46rem}
+.rs-ours a{color:var(--gold);white-space:nowrap}
+.book-body .rs-ours{margin:.8rem 0 0;padding:.45rem .7rem;font-size:.78rem;line-height:1.6;max-width:none}

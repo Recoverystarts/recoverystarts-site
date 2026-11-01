@@ -33,3 +33,11 @@
 | daily-tradition-3 | 35,463 | 1020 | daily-tradition/february-1/index.html | daily-tradition/march/index.html |
 | daily-tradition-4 | 35,333 | 1021 | daily-tradition/april-1/index.html | daily-tradition/may/index.html |
 | 12-traditions-history | 2,274 | 71 | 12-traditions/history/index.html | 12-traditions/index.html |
+| aa-questions-8 | 26,042 | 631 | aa-questions/aa-1939-to-1950/index.html | aa-questions/big-book-fear/index.html |
+| aa-questions-9 | 26,237 | 685 | aa-questions/big-book-free/index.html | aa-questions/doesnt-want-help/index.html |
+| aa-questions-10 | 25,479 | 595 | aa-questions/dr-bob-death-last-words/index.html | aa-questions/henrietta-seiberling/index.html |
+| aa-questions-11 | 26,067 | 660 | aa-questions/higher-power-anything/index.html | aa-questions/no-crosstalk/index.html |
+| aa-questions-12 | 25,784 | 642 | aa-questions/no-musts/index.html | aa-questions/seventh-step-prayer/index.html |
+| aa-questions-13 | 26,657 | 624 | aa-questions/sick-and-tired/index.html | aa-questions/this-is-a-sick-man/index.html |
+| aa-questions-14 | 25,117 | 617 | aa-questions/this-too-shall-pass/index.html | aa-questions/young-people/index.html |
+| topup-books | 2,663 | 95 | 12-concepts/index.html | privacy/index.html |

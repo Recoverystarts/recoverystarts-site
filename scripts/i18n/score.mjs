@@ -45,6 +45,13 @@
 //             register; ASCII " or „ « » in prose (Hindi quotes “…”); Devanagari digits ०–९ (Hindi here writes Latin digits);
 //             a Hindi sentence ending in a Latin "." instead of the danda «।» (initials and पृ./डॉ. are fine); English left in
 //             (two or more English filler words, or five Latin words in a row, outside a “quoted” title). Each costs score (×2).
+//             ja (wave jalang1): です・ます prose (i18n/ja/GLOSSARY.md); the fixed texts (Steps, Traditions, prayers, Big Book
+//             quotes) keep A.A. Japan's or the glossary's own form, so a plain «だ。/である。» counts only outside 「」 in a segment
+//             that is otherwise です・ます (mixed register).
+//             Flags: 君/お前/貴様 for the reader; ASCII or Western quote marks in prose (Japanese quotes 「」, 『』 inside or for
+//             titles); full-width digits ０–９ or letters (write Latin 0–9); a Latin "." or "," after Japanese text (。、);
+//             English left in (two English filler words, or five Latin words in a row, outside 「」『』“”). Each costs score (×2).
+//             Length: Japanese runs about a third of the English in characters, so "short" for ja is under 18%, not 60%.
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
 import path from "node:path";
@@ -56,7 +63,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -317,6 +324,17 @@ const hiEnglish = (s) => { const u = s.replace(/“[^”]*”|‘[^’]*’/g, "
 // hi: a number written as a word counts too («बारह चरण» for "12 Steps", «चौथा संस्करण», «20 लाख» for 2 million, «चौबीसों घंटे» for 24/7)
 const HI_NUM = [["एक|पहला|पहली|पहले", "1"], ["दो|दूसरा|दूसरी|दूसरे", "2"], ["तीन|तीसरा|तीसरी|तीसरे", "3"], ["चार|चौथा|चौथी|चौथे", "4"], ["पाँच|पांच|पाँचवाँ|पाँचवीं|पाँचवें", "5"], ["छह|छः|छठा|छठी|छठे", "6"], ["सात|सातवाँ|सातवीं|सातवें", "7"], ["आठ|आठवाँ|आठवीं|आठवें", "8"], ["नौ|नौवाँ|नौवीं|नौवें", "9"], ["दस|दसवाँ|दसवीं|दसवें", "10"], ["ग्यारह|ग्यारहवाँ|ग्यारहवीं|ग्यारहवें", "11"], ["बारह|बारहवाँ|बारहवीं|बारहवें", "12"]];
 const hiWords = (s) => { const out = []; for (const [w, n] of HI_NUM) if (new RegExp(`(?<![\\p{L}\\p{M}])(?:${w})(?![\\p{L}\\p{M}])`, "u").test(s)) out.push(n); for (const m of s.matchAll(/(\d+(?:[.,]\d+)?)\s*(लाख|करोड़)/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (m[2] === "लाख" ? 1e5 : 1e7); out.push(String(v), String(v / 1e6)); } if (/चौबीसों घंटे|24 घंटे|दिन-रात|हर समय/u.test(s)) out.push("24", "7"); return out; };
+// ja: full-width digits/letters, a Latin "." or "," after Japanese, English left in, a plain-form sentence end outside 「」 (wave jalang1)
+const JA = "\\p{sc=Han}\\p{sc=Hiragana}\\p{sc=Katakana}ー々";
+const JA_WIDE = /[０-９Ａ-Ｚａ-ｚ]/u;
+const JA_PUNCT = new RegExp(`[${JA}][.,](?=\\s|$|[${JA}])`, "u");
+const JA_PLAIN = new RegExp(`(?:[^でま]だ|である|であった|だった)。`, "u");
+const jaOut = (s) => s.replace(/「[^」]*」|『[^』]*』|“[^”]*”/gu, " ");
+const jaEnglish = (s) => { const u = jaOut(s), w = u.match(/[A-Za-z][A-Za-z'’-]*/g) ?? [], fill = w.filter((x) => HI_FILL.has(x.toLowerCase())); const run = /(?:[A-Za-z]*[a-z][A-Za-z'’-]*[\s,]+){4}[A-Za-z]*[a-z]/.test(u); return fill.length >= 2 || run ? (fill.length >= 2 ? fill : w).slice(0, 4) : []; };
+// ja: a number written in kanji counts too («十二のステップ», «第三», «二十四時間»), and 万/億 (200万 = 2 million)
+const JA_D = { 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
+const jaKanji = (k) => { let n = 0, cur = 0; for (const ch of k) { if (ch in JA_D) cur = JA_D[ch]; else if (ch === "十") { n += (cur || 1) * 10; cur = 0; } else if (ch === "百") { n += (cur || 1) * 100; cur = 0; } else if (ch === "千") { n += (cur || 1) * 1000; cur = 0; } } return n + cur; };
+const jaWords = (s) => { const out = []; for (const m of s.matchAll(/[〇一二三四五六七八九十百千]+/gu)) out.push(String(jaKanji(m[0]))); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(午前|午後)(\d{1,2})時/gu)) out.push(m[2], String(+m[2] + (m[1] === "午後" ? 12 : 0))); for (const m of s.matchAll(/(\d+)万(\d[\d,]*)/gu)) out.push(String(+m[1] * 1e4 + +m[2].replace(/,/g, ""))); for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(万|億)/gu)) { const v = parseFloat(m[1]) * (m[2] === "万" ? 1e4 : 1e8); out.push(String(v), String(v / 1e6), String(v / 1e9)); } if (/二十四時間|24時間|年中無休|いつでも/u.test(s)) out.push("24", "7"); return out; };
 // de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
@@ -333,6 +351,7 @@ const REG = {
   sv: /(?<![\p{L}:])(?:ni|Ni|er|Er|ert|Ert|era|Era|eder|Eder)(?!\p{L})|(?<=[\p{L},;:] )(?:Du|Dig|Din|Ditt|Dina)(?!\p{L})|["“„«»]/gu,
   nl: /(?<!\p{L})(?:u|uw|uzelf|jullie|Jullie)(?!\p{L})|["„«»]/gu,
   hi: /(?<![\p{L}\p{M}])(?:तुम|तू|तुम्हारा|तुम्हारी|तुम्हारे|तुम्हें|तुमको|तुमसे|तेरा|तेरी|तेरे|तुझे|तुझको|तुझसे)(?![\p{L}\p{M}])|["„«»]/gu,
+  ja: /君(?=は|が|を|に|の|も|と|へ|、|。)|きみ(?=は|が|を|に|の)|お前|おまえ|貴様|["“”„«»]/gu,
   pl: /(?<!\p{L})(?:Pan|Pana|Panu|Panem|Pani|Panią|Państwo|Państwa|Państwu|Państwem|możecie|jesteście|macie|chcecie|wasz|wasza|wasze|waszego|waszej|waszym|waszych)(?!\p{L})|["“]/gu,
   pt: /(?<!\p{L})(tu|vós|teu|teus|tua|tuas|vosso|vossa|vossos|vossas|contigo|convosco|és|estás|tens|podes|queres|facto|factos|contacto|contactos|telemóvel|telemóveis|equipa|equipas|utilizador|utilizadores|ecrã|autocarro|casa de banho|registo|registos|(?:está|estão|estamos|estou) a \p{L}+r)(?!\p{L})/giu,
 };
@@ -352,8 +371,8 @@ for (const f of files) {
     if (ew.length >= 4 && strip(t) === strip(e)) { r.same++; flag(id, "left in English"); continue; }
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !ALSO[lang]?.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
-    if (el >= 80 && tl / el < 0.6) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
+    if (el >= 80 && tl / el < (lang === "ja" ? 0.18 : 0.6)) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
@@ -377,6 +396,14 @@ for (const f of files) {
     if (lang === "hi" && !code) {
       const st = strip(t), dig = HI_DIG.test(st), dot = HI_DOT(st), eng = hiEnglish(st);
       if (dig || dot.length) { r.dia++; r.usted++; flag(id, dig ? "Devanagari digits (write Latin 0–9)" : `Latin "." for «।» after: ${dot.slice(0, 3).join(", ")}`); }
+      if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
+    }
+    if (lang === "ja" && !code) {
+      const st = strip(t), wide = JA_WIDE.test(st), punct = JA_PUNCT.exec(st), plain = JA_PLAIN.exec(jaOut(st)), eng = jaEnglish(st);
+      if (wide || punct) { r.dia++; r.usted++; flag(id, wide ? "full-width digits or letters (write Latin 0–9, A–Z)" : `Latin "${punct[0].slice(-1)}" for 。/、 after: ${punct[0].slice(0, -1)}`); }
+      // A.A. Japan's fixed texts and Big Book lines are rightly in plain form; a segment that MIXES です・ます prose with a
+      // plain-form sentence outside 「」 is the slip (an unquoted quote, or prose that lost its register)
+      if (plain && /(?:です|ます|ません|でした|ました|ください)[。？！]/u.test(jaOut(st))) { r.usted++; flag(id, `plain form outside 「」 in です・ます prose: …${plain[0]}`); }
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "pl" && !code) {

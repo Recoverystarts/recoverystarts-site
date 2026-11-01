@@ -440,15 +440,22 @@
    "12-traditions/history/index.html"
   ]
  },
+ "9f57ea830afd": {
+  "t": "The wider story, 1934–1950, step by step with a page from the books for each: <0>The story of A.A., from the books</0>.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/history/index.html"
+  ]
+ },
  "580495967d38": {
   "t": "Read it yourself",
   "kind": "html",
   "pages": [
    "12-traditions/history/index.html",
+   "aa-history/index.html",
    "aa-questions/aa-1939-to-1950/index.html",
    "aa-questions/aa-and-drug-addiction/index.html",
-   "aa-questions/aa-birthday-june-10/index.html",
-   "aa-questions/aa-meeting/index.html"
+   "aa-questions/aa-birthday-june-10/index.html"
   ]
  },
  "9cf155ee5e4e": {
@@ -651,6 +658,13 @@
    "12-traditions/index.html"
   ]
  },
+ "9974c029a5b0": {
+  "t": "<0>Tradition One: does it mean \"my sobriety comes first\"? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "c4e580ab9158": {
   "t": "<0>Tradition 2</0>",
   "kind": "html",
@@ -667,6 +681,13 @@
  },
  "5a66e7943cb2": {
   "t": "<0>In plain terms</0> Structural, not theological: the group decides, and no one person is in charge.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "a723265d2ddd": {
+  "t": "<0>Tradition Two: does anyone have authority in A.A.? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"
@@ -693,6 +714,13 @@
    "12-traditions/index.html"
   ]
  },
+ "d9a660b99930": {
+  "t": "<0>What is the only requirement for A.A. membership? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "81c47dd2b699": {
   "t": "<0>Tradition 4</0>",
   "kind": "html",
@@ -709,6 +737,13 @@
  },
  "86d1709490ee": {
   "t": "<0>In plain terms</0> Each group runs its own affairs, except where it would affect other groups or A.A. as a whole.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "056034bd90ac": {
+  "t": "<0>Tradition Four: can GSO tell a group what to do? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"
@@ -735,6 +770,13 @@
    "12-traditions/index.html"
   ]
  },
+ "ce31d118eace": {
+  "t": "<0>Tradition Five: what is a group's one purpose? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "877c8e16458e": {
   "t": "<0>Tradition 6</0>",
   "kind": "html",
@@ -751,6 +793,13 @@
  },
  "6905187c4eb0": {
   "t": "<0>In plain terms</0> Cooperation must never become affiliation. An A.A. group can bind itself to no one.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "e9172ee4150c": {
+  "t": "<0>Tradition Six: can an A.A. group partner with a treatment centre? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"
@@ -777,6 +826,13 @@
    "12-traditions/index.html"
   ]
  },
+ "bfdc649a8411": {
+  "t": "<0>Tradition Seven: does A.A. take outside money? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "7ff54e2e2c13": {
   "t": "<0>Tradition 8</0>",
   "kind": "html",
@@ -793,6 +849,13 @@
  },
  "a98ec7c55d5a": {
   "t": "<0>In plain terms</0> Twelfth-Step work is never paid for. Service offices may employ workers.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "a0457fdb8084": {
+  "t": "<0>Tradition Eight: can anyone be paid for Twelfth Step work? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"
@@ -819,6 +882,13 @@
    "12-traditions/index.html"
   ]
  },
+ "76f4d27f3632": {
+  "t": "<0>Tradition Nine: is A.A. organized? Who runs it? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "ec8fe2186b07": {
   "t": "<0>Tradition 10</0>",
   "kind": "html",
@@ -835,6 +905,13 @@
  },
  "202d61fa2a92": {
   "t": "<0>In plain terms</0> A.A. takes no position on outside controversies, so its name is never dragged into them.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "91a0a15a1ea2": {
+  "t": "<0>Tradition Ten: does A.A. take sides on outside issues? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"
@@ -861,6 +938,13 @@
    "12-traditions/index.html"
   ]
  },
+ "b65afdc431ea": {
+  "t": "<0>Tradition Eleven: does A.A. advertise? Read it from the books →</0>",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
  "633f5394cff3": {
   "t": "<0>Tradition 12</0>",
   "kind": "html",
@@ -877,6 +961,13 @@
  },
  "224f284439dd": {
   "t": "<0>In plain terms</0> Principles before personalities — a discipline of humility, not a gag order.",
+  "kind": "html",
+  "pages": [
+   "12-traditions/index.html"
+  ]
+ },
+ "338fe200b57e": {
+  "t": "<0>Tradition Twelve: does anonymity mean keeping A.A. secret? Read it from the books →</0>",
   "kind": "html",
   "pages": [
    "12-traditions/index.html"

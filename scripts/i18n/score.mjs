@@ -51,7 +51,7 @@
 //             Flags: 君/お前/貴様 for the reader; ASCII or Western quote marks in prose (Japanese quotes 「」, 『』 inside or for
 //             titles); full-width digits ０–９ or letters (write Latin 0–9); a Latin "." or "," after Japanese text (。、);
 //             English left in (two English filler words, or five Latin words in a row, outside 「」『』“”). Each costs score (×2).
-//             ru (wave rulang1): «вы» lower case (i18n/ru/GLOSSARY.md, PREP-NOTES.md); «ёлочки» with „лапки“ inside. Flags, outside «»:
+//             ru (wave rulang1): «вы» lower case (i18n/ru/GLOSSARY.md, PREP-NOTES.md); «ёлочки» with „лапки“ inside (a „…“ outside «» is flagged). Flags, outside «»:
 //             ты-forms for the reader (ты/тебя/тебе/твой…); «Вы/Вас/Вам/Ваш» capitalised mid-sentence; ASCII " or ” or a “ with no „
 //             before it; a Latin letter inside a Cyrillic word (the invisible typo: Latin a/e/o/p/c/x/y); «A.A.»/«AA» in Latin
 //             (Russian writes «АА»; English names like "A.A. World Services" are fine, so it's a flag to read, not a ruling);
@@ -347,7 +347,7 @@ const RU_TY = /(?<!\p{L})(?:ты|Ты|тебя|Тебя|тебе|Тебе|тоб
 const RU_VY = /(?<=[\p{Ll},;:—–] )(?:Вы|Вас|Вам|Вами|Ваш|Ваша|Ваше|Ваши|Вашего|Вашей|Вашему|Вашим|Ваших|Вашу)(?!\p{L})/u;
 const RU_MIX = /[\p{sc=Cyrillic}][A-Za-z]|[A-Za-z][\p{sc=Cyrillic}]/u;
 const RU_LATAA = /(?<![A-Za-z.])(?:A\.A\.|AA)(?![A-Za-z])(?! (?:World|Grapevine|General|Service|Comes|Way|Today|Fact|Tradition|Members?|Group))/u;
-const ruQuote = (s) => /["”]/.test(s) || /“/.test(s.replace(/„[^“]*“/gu, " "));
+const ruQuote = (s) => /["”]/.test(s) || /“/.test(s.replace(/„[^“]*“/gu, " ")) || /„/.test(s.replace(/«[^«»]*»/gu, " ")); // a top-level „…“ too (check-Ru-14)
 const ruEnglish = (s) => { const u = RU_OUT(s).replace(/“[^”]*”/g, " "), w = u.match(/[A-Za-z][A-Za-z'’-]*/g) ?? [], fill = w.filter((x) => HI_FILL.has(x.toLowerCase())); const run = /(?:[A-Za-z]*[a-z][A-Za-z'’-]*[\s,]+){4}[A-Za-z]*[a-z]/.test(u); return fill.length >= 2 || run ? (fill.length >= 2 ? fill : w).slice(0, 4) : []; };
 const RU_NUM = [["од(?:ин|на|но|ного|ной|ному|ним|ну)|перв\\p{L}+", "1"], ["дв(?:а|е|ух|ум|умя)|втор\\p{L}+", "2"], ["тр(?:и|ех|ёх|ем|ём|емя|ёмя)|трет\\p{L}+", "3"], ["четыр(?:е|ех|ёх|ем|ём|ьмя)|четв[её]рт\\p{L}+", "4"], ["пят(?:ь|и|ью)|пят\\p{L}*[ыо][йего]\\p{L}*", "5"], ["шест(?:ь|и|ью)|шест\\p{L}*[ыо][йего]\\p{L}*", "6"], ["сем(?:ь|и|ью)|седьм\\p{L}+", "7"], ["вос[её]м\\p{L}*|восьм\\p{L}+", "8"], ["девят(?:ь|и|ью)|девят[ыо]\\p{L}+", "9"], ["десят(?:ь|и|ью)|десят[ыо]\\p{L}+", "10"], ["одиннадцат\\p{L}+", "11"], ["двенадцат\\p{L}+", "12"]];
 const ruWords = (s) => { const out = []; for (const [w, n] of RU_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?!\\p{L})`, "iu").test(s)) out.push(n); for (const m of s.matchAll(/(\d+(?:[.,]\d+)?)\s*(тыс\.|тысяч\p{L}*|млн|миллион\p{L}*)/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (/^т/.test(m[2]) ? 1e3 : 1e6); out.push(String(v), String(v / 1e6)); } if (/круглосуточн|24\/7|24 часа/u.test(s)) out.push("24", "7"); return out; };

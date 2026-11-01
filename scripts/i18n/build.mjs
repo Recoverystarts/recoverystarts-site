@@ -28,9 +28,9 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // glossary and the files, and set the flag to false: the note comes off every page in one build.
 // ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, the Concepts' short form and the Preamble, so the Big Book
 // quotes, the prayers and the Concepts' long form are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
-// ru (wave rulang1): A.A. Russia publishes the Steps and the short Traditions (aarussia.ru, the pamphlet «Вопросы новых
-// членов»); the long-form Traditions, the Concepts, the prayers and the Big Book quotes are ours (CEO ruling 11-01 15:57Z, option 2:
-// A.A. Russia's refined Big Book is not yet approved by A.A.W.S.), so ru_ours_note says exactly that.
+// ru (wave rulang1): A.A. Russia publishes the Steps, the short Traditions and the Preamble (aarussia.ru); the Big Book, the long
+// Traditions and the Concepts follow its refined 2025 translation, still under A.A.W.S. review (CEO 21:51Z, option 1: named as
+// that, never as official); what has no A.A. Russian (the Serenity Prayer) is ours. ru_ours_note says exactly that.
 const OURS_NOTE = { hi: true, ja: true, ru: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);

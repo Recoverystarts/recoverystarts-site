@@ -6,10 +6,10 @@
    Einstein» should be one face, not Literata for the Russian and Fraunces for the brand. Google serves each subset as its own
    unicode-range file, so a page downloads only the Cyrillic and Latin files it uses. Both faces have true italics, and
    Cyrillic has no stacked marks, so italics and the site's line height stay; only letter-spacing goes on headings
-   (Cyrillic capitals set wide with it). */
+   (Cyrillic capitals set wide with it). No auto-hyphens: at 390 px they broke «Информа-ция» in an h1 that fits whole. */
 @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&family=Jost:ital,wght@0,300..700;1,300..700&display=swap');
 html:lang(ru){--font-display:'Literata',Georgia,serif;--font-body:'Jost',system-ui,-apple-system,sans-serif;--font-ui:'Jost',system-ui,-apple-system,sans-serif}
-html:lang(ru) h1,html:lang(ru) h2,html:lang(ru) h3,html:lang(ru) h4{letter-spacing:0;hyphens:auto;overflow-wrap:break-word}
+html:lang(ru) h1,html:lang(ru) h2,html:lang(ru) h3,html:lang(ru) h4{letter-spacing:0;hyphens:manual;overflow-wrap:break-word}
 html:lang(ru) body{hyphens:manual;overflow-wrap:break-word}
 html:lang(ru) input,html:lang(ru) textarea,html:lang(ru) select,html:lang(ru) button{font-family:var(--font-ui)}
 /* "our translation" note (build.mjs OURS_NOTE), the same box as Hindi's and Japanese's */

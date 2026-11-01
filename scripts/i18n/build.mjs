@@ -17,10 +17,10 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", en: "en_US" };
 
 // a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
-const LANG_CSS = { hi: "style.hi.css" };
+const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css" };
 const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
 // "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English

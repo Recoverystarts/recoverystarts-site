@@ -120,7 +120,7 @@ Keep the English's placeholders around 988 (`<0>988</0>` is a `tel:988` link); a
 | English | Japanese |
 |---|---|
 | Preface | 前書き |
-| Foreword to the First Edition / Second / Third / Fourth | 初版に寄せて / 再販にあたって (as printed: «再販», very likely for «再版»; unsure, see PREP-NOTES) / 第三版に寄せて / 第四版に寄せて |
+| Foreword to the First Edition / Second / Third / Fourth | 初版に寄せて / **再版にあたって** (A.A. Japan's page prints «再販» (resale), almost surely a typo for «再版» (second printing/edition); **Super's ruling, S1 2026-11-01: write «再版にあたって»** everywhere, so the site doesn't repeat a typo; PREP-NOTES unsure 5) / 第三版に寄せて / 第四版に寄せて |
 | The Doctor's Opinion | 医師の意見 |
 | (the Japanese edition only) | 日本語翻訳改訂版への序文 / 日本語初版序文 |
 | 1 Bill's Story | 第1章 ビルの物語 |
@@ -280,6 +280,54 @@ Where the /12-concepts/ page quotes more of a Concept than this (the long form),
   - S1 writes the full **"Big Book quotes — look here first"** section from Recoverystarts/aa-library (jalang1 README, the Super's S1); runners rely on it.
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «英語版『<i>Alcoholics Anonymous</i>』第4版、Nページ。Recovery Startsによる翻訳。確認と学びのための短い引用です。ページ全体はお手元の本で読んでください →». Keep the English's placeholders around the same words.
+
+## Big Book quotes — look here first (wave jalang1)
+*Added 2026-11-01 by the jalang1 Super (Opus 5.5). A.A. Japan publishes no Big Book text online (only an audio reading; see PREP-NOTES unsure 2), so every passage here is **[ours]**: translated once from the English 4th Edition, faithfully and close, in A.A. Japan's vocabulary, so that every runner writes the same Japanese for the same passage. The English column was pulled from Recoverystarts/aa-library by script (the same passages hi1 fixed), not typed.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (copy them by script). If the English quotes only part of a passage, cut the Japanese at the matching sentence or clause; never reword.
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase. List the id under `unsure:` as `BBQ <id>`.
+3. **Same line, same Japanese**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., or from any Japanese Big Book you may remember or find. Never swap in Japanese page numbers: pages stay the English 4th Edition's.
+5. **Big Book quotes are in plain form (である調・た形)**, like the Steps; the page around them stays です・ます. A quote set inside a です・ます sentence goes in 「」.
+6. **Never call a Big Book quote A.A.'s Japanese.** Where the English says a quote is "exactly as the book states it", "word for word" or "the Big Book's own words", write «英語版第4版からの私たちの日本語訳» (our Japanese translation from the English 4th Edition) instead of claiming exactness. The page's note (`ja_ours_note`) says the rest. The Steps, Traditions, Concepts and Preamble are different: they **are** A.A. Japan's wording, and "A.A.'s own wording" stays true for them.
+7. God: 神, no «様»; «くださる» where the English has God acting for us (as A.A. Japan's Step 7 has «ください»). The reader, when the book speaks to "you": あなた, gentle requests as «〜てほしい» (never «〜なさい», «〜しろ»).
+
+**Ours, fixed so every page says it the same way:**
+| p. | English | Japanese |
+|---|---|---|
+| 58 | Rarely have we seen a person fail who has thoroughly followed our path. | the line in "Prayers and fixed texts" above |
+| 58 | Our stories disclose in a general way what we used to be like, what happened, and what we are like now. | 私たちの物語は、私たちがかつてどうだったか、何が起こったか、そしていまどうなっているかを、おおまかに明らかにしている。 |
+| 58 | If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps. | もしあなたが、私たちが手にしているものを自分も欲しいと心に決め、それを得るためならどんな努力も惜しまないつもりでいるなら――そのとき、あなたにはいくつかのステップを踏む用意ができている。 |
+| 59 | Half measures availed us nothing. | the line in "Prayers and fixed texts" above |
+| 58–59 | Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now! | 私たちが相手にしているのはアルコールだということを忘れないでほしい――巧妙で、不可解で、強力なアルコールなのだ！助けがなければ、それは私たちの手に負えない。しかし、すべての力をもつ存在がある――その存在とは神である。あなたがいま、神を見いだせますように！ |
+| 59 | We stood at the turning point. We asked His protection and care with complete abandon. | 私たちは転換点に立っていた。私たちは何ひとつ残さず身をゆだねて、神の保護と配慮を求めた。 |
+| 59 | Here are the steps we took, which are suggested as a program of recovery: | これが私たちの踏んだステップであり、回復のプログラムとして提案するものである： |
+| 60 | Many of us exclaimed, “What an order! I can’t go through with it.’’ Do not be discouraged. | 私たちの多くが「なんという注文だ！とてもやり通せない」と叫んだ。落胆しないでほしい。 |
+| 60 | No one among us has been able to maintain anything like perfect adherence to these principles. We are not saints. | 私たちのなかで、これらの原理を完璧に守り通すことができた者はひとりもいない。私たちは聖人ではない。 |
+| 60 | The point is, that we are willing to grow along spiritual lines. The principles we have set down are guides to progress. We claim spiritual progress rather than spiritual perfection. | 大切なのは、私たちが霊的に成長していこうとする意志をもっていることである。私たちが書き記した原理は、進歩のための指針である。私たちが主張するのは、霊的な完成ではなく、霊的な進歩である。 |
+| 60 | (a) That we were alcoholic and could not manage our own lives. (b) That probably no human power could have relieved our alcoholism. (c) That God could and would if He were sought. | （a）私たちはアルコホーリクであり、自分の人生を管理することができなかった。（b）おそらく、どんな人間の力も、私たちをアルコホリズムから解放することはできなかっただろう。（c）神を求めさえすれば、神にはそれができ、またそうしてくださる。 |
+| 83–84 | If we are painstaking about this phase of our development, we will be amazed before we are half way through. We are going to know a new freedom and a new happiness. We will not regret the past nor wish to shut the door on it. We will comprehend the word serenity and we will know peace. No matter how far down the scale we have gone, we will see how our experience can benefit others. That feeling of uselessness and self-pity will disappear. We will lose interest in selfish things and gain interest in our fellows. Self-seeking will slip away. Our whole attitude and outlook upon life will change. Fear of people and of economic insecurity will leave us. We will intuitively know how to handle situations which used to baffle us. We will suddenly realize that God is doing for us what we could not do for ourselves. Are these extravagant promises? We think not. They are being fulfilled among us—sometimes quickly, sometimes slowly. They will always materialize if we work for them. | 私たちが自分の成長のこの段階に念入りに取り組むなら、半分も終わらないうちに驚くことになるだろう。私たちは新しい自由と新しい幸福を知るようになる。過去を悔やむことも、過去に扉を閉ざしたいと願うこともなくなる。「平安」という言葉の意味がわかり、安らぎを知るようになる。私たちがどれほど深く落ちていたとしても、自分の経験がどのように他の人の役に立つかがわかるようになる。自分は役に立たないという気持ちや自己憐憫は消えていく。自分本位なことへの関心を失い、仲間への関心をもつようになる。自分のことばかり求める気持ちは消えていく。人生に対する態度と見方がすっかり変わる。人への恐れや経済的な不安は去っていく。かつては途方に暮れたような状況にどう対処すればよいかが、直観的にわかるようになる。自分ではできなかったことを、神が私たちのためにしてくださっているのだと、私たちは突然気づくようになる。これらは大げさな約束だろうか？私たちはそうは思わない。これらの約束は私たちの間で実現しつつある――ときには速く、ときにはゆっくりと。私たちが努力するなら、それは必ず実現する。 |
+| 84 | And we have ceased fighting anything or anyone— even alcohol. | そして私たちは、何とも、誰とも、闘うことをやめた――アルコールとさえも。 |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | 私たちはアルコホリズムが治ったわけではない。私たちが本当に手にしているのは、霊的な状態を保つことを条件とした、一日ごとの猶予である。 |
+| 86 | On awakening let us think about the twenty-four hours ahead. | 目覚めたら、これからの24時間について考えてみよう。 |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | 実際の経験が示すところでは、ほかのアルコホーリクと徹底して関わることほど、飲酒から身を守ってくれるものはない。 |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | ほかの誰がどうであろうと自分は良くなれるのだという考えを、一人ひとりの意識に焼きつけてほしい。ただひとつの条件は、その人が神を信頼し、自分の内側を大掃除することである。 |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | あなたなりに理解した神に、自分をゆだねてほしい。自分の過ちを、神と仲間に認めてほしい。過去の残骸を片づけてほしい。 |
+| 164 | We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny. | 私たちは霊の共同体のなかで、あなたとともにいる。そして、あなたが幸せな運命への道を一歩一歩たどっていくうちに、きっと私たちの誰かに出会うことだろう。 |
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | いつか、どうにかして、自分も酒をコントロールして楽しめるようになるという考えは、異常な飲酒者すべてがとりつかれている大きな強迫観念である。 |
+| 53 | God either is, or He isn’t. | 神は存在するか、存在しないかのどちらかである。 |
+| 53 | God is everything or else He is nothing. | 神はすべてであるか、さもなければ無であるかのどちらかである。 |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | 利己主義――自己中心！私たちは、それこそが私たちの問題の根源だと考えている。 |
+| 64 | Resentment is the “number one’’ offender. It destroys more alcoholics than anything else. | 恨みこそが「最大の」元凶である。恨みは、ほかの何よりも多くのアルコホーリクを破滅させる。 |
+| 63 | the Third Step prayer | "Prayers and fixed texts" above (第3ステップの祈り) |
+| 76 | the Seventh Step prayer | "Prayers and fixed texts" above (第7ステップの祈り) |
+| 417 | And acceptance is the answer to all my problems today. … | `core.json` 1b08a63f6559 (the whole line) |
+| 561–566 | the Traditions, short and long form | the two Traditions sections above (A.A. Japan's; and `core.json`) |
+| 574–575 | the Concepts | the Concepts section above (A.A. Japan's; and `core.json`) |
+
+A Promise quoted alone takes its sentence from the pp. 83–84 row. The site's most-cited pages, for your bearings: 563–566, 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
+
 
 ## Site words
 | English | Japanese |

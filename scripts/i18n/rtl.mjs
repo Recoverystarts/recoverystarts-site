@@ -19,7 +19,7 @@ import { ROOT } from "./lib.mjs";
 const FONT = {
   fa: { url: "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap", family: "'Vazirmatn'" },
 };
-const flip = (css) => rtlcss.process(css);
+export const flip = (css) => rtlcss.process(css);
 
 // style.css → style.rtl.css (written once per build; the version is its hash, as style.css?v= is)
 let sheet = null;

@@ -46,7 +46,8 @@
 //             a Hindi sentence ending in a Latin "." instead of the danda «।» (initials and पृ./डॉ. are fine); English left in
 //             (two or more English filler words, or five Latin words in a row, outside a “quoted” title). Each costs score (×2).
 //             ja (wave jalang1): です・ます prose (i18n/ja/GLOSSARY.md); the fixed texts (Steps, Traditions, prayers, Big Book
-//             quotes) keep A.A. Japan's or the glossary's own form, so a plain «だ。/である。» is only counted outside 「」.
+//             quotes) keep A.A. Japan's or the glossary's own form, so a plain «だ。/である。» counts only outside 「」 in a segment
+//             that is otherwise です・ます (mixed register).
 //             Flags: 君/お前/貴様 for the reader; ASCII or Western quote marks in prose (Japanese quotes 「」, 『』 inside or for
 //             titles); full-width digits ０–９ or letters (write Latin 0–9); a Latin "." or "," after Japanese text (。、);
 //             English left in (two English filler words, or five Latin words in a row, outside 「」『』“”). Each costs score (×2).
@@ -333,7 +334,7 @@ const jaEnglish = (s) => { const u = jaOut(s), w = u.match(/[A-Za-z][A-Za-z'’-
 // ja: a number written in kanji counts too («十二のステップ», «第三», «二十四時間»), and 万/億 (200万 = 2 million)
 const JA_D = { 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
 const jaKanji = (k) => { let n = 0, cur = 0; for (const ch of k) { if (ch in JA_D) cur = JA_D[ch]; else if (ch === "十") { n += (cur || 1) * 10; cur = 0; } else if (ch === "百") { n += (cur || 1) * 100; cur = 0; } else if (ch === "千") { n += (cur || 1) * 1000; cur = 0; } } return n + cur; };
-const jaWords = (s) => { const out = []; for (const m of s.matchAll(/[〇一二三四五六七八九十百千]+/gu)) out.push(String(jaKanji(m[0]))); for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(万|億)/gu)) { const v = parseFloat(m[1]) * (m[2] === "万" ? 1e4 : 1e8); out.push(String(v), String(v / 1e6), String(v / 1e9)); } if (/二十四時間|24時間|年中無休|いつでも/u.test(s)) out.push("24", "7"); return out; };
+const jaWords = (s) => { const out = []; for (const m of s.matchAll(/[〇一二三四五六七八九十百千]+/gu)) out.push(String(jaKanji(m[0]))); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(午前|午後)(\d{1,2})時/gu)) out.push(m[2], String(+m[2] + (m[1] === "午後" ? 12 : 0))); for (const m of s.matchAll(/(\d+)万(\d[\d,]*)/gu)) out.push(String(+m[1] * 1e4 + +m[2].replace(/,/g, ""))); for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(万|億)/gu)) { const v = parseFloat(m[1]) * (m[2] === "万" ? 1e4 : 1e8); out.push(String(v), String(v / 1e6), String(v / 1e9)); } if (/二十四時間|24時間|年中無休|いつでも/u.test(s)) out.push("24", "7"); return out; };
 // de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
@@ -400,7 +401,9 @@ for (const f of files) {
     if (lang === "ja" && !code) {
       const st = strip(t), wide = JA_WIDE.test(st), punct = JA_PUNCT.exec(st), plain = JA_PLAIN.exec(jaOut(st)), eng = jaEnglish(st);
       if (wide || punct) { r.dia++; r.usted++; flag(id, wide ? "full-width digits or letters (write Latin 0–9, A–Z)" : `Latin "${punct[0].slice(-1)}" for 。/、 after: ${punct[0].slice(0, -1)}`); }
-      if (plain) { r.usted++; flag(id, `plain form outside 「」: …${plain[0]}`); }
+      // A.A. Japan's fixed texts and Big Book lines are rightly in plain form; a segment that MIXES です・ます prose with a
+      // plain-form sentence outside 「」 is the slip (an unquoted quote, or prose that lost its register)
+      if (plain && /(?:です|ます|ません|でした|ました|ください)[。？！]/u.test(jaOut(st))) { r.usted++; flag(id, `plain form outside 「」 in です・ます prose: …${plain[0]}`); }
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "pl" && !code) {

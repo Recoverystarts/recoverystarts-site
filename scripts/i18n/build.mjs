@@ -26,7 +26,9 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
 // page. The words are the language's own core id <lang>_ours_note. When A.A.'s printed wording arrives, swap it into the
 // glossary and the files, and set the flag to false: the note comes off every page in one build.
-const OURS_NOTE = { hi: true };
+// ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, Concepts and Preamble, so only the Big Book quotes and the
+// prayers are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
+const OURS_NOTE = { hi: true, ja: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }
@@ -38,7 +40,10 @@ const relOf = (url) => { const u = url.replace(/[?#].*$/, ""); if (!u.startsWith
 // which pages this language can have, and which every other built language already has (for hreflang)
 const ready = new Set(Object.entries(pageIds).filter(([rel, ids]) => ids.every((id) => tr[id] != null)).map(([rel]) => rel));
 const other = {};
-for (const l of Object.keys(LANGS)) if (l !== "en" && l !== lang) { const t = translations(l); other[l] = new Set(Object.entries(pageIds).filter(([, ids]) => ids.length && ids.every((id) => t[id] != null)).map(([r]) => r)); }
+// which pages each OTHER language has: the ones built on disk (wave jalang1, 2026-11-01). It used to be "every segment
+// translated", which is the same thing while the English stands still; when the English moves ahead of a language
+// (#444/#448), that language's live, older pages still exist and should still be linked until it's rebuilt.
+for (const l of Object.keys(LANGS)) if (l !== "en" && l !== lang) other[l] = new Set(Object.keys(pageIds).filter((r) => fs.existsSync(path.join(ROOT, l, r))));
 
 // a JSON data string → its translation, or null. A string holding HTML (a badge) gets the translation's HTML; a text string
 // (a title, a body with *emphasis*, which the page's script escapes itself) gets text, or null if tags would be left in it.

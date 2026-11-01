@@ -197,7 +197,7 @@ in their language with the page in their language.
 - Sitemap: https://recoverystarts.com/sitemap-hi.xml
 
 ### 日本語 — Japanese (ja)
-- Note: the Japanese Steps, Traditions (short and long form), Concepts and Preamble are A.A. Japan's own published wording (AA日本ゼネラルサービス, aajapan.org); the Big Book quotes and the Serenity, Third and Seventh Step prayers are our own translation from A.A.'s English, marked so on each page.
+- Note: the Japanese Steps, Traditions (short and long form), Concepts (short form) and Preamble are A.A. Japan's own published wording (AA日本ゼネラルサービス, aajapan.org); the Big Book quotes, the Serenity, Third and Seventh Step prayers and the long form of the Concepts are our own translation from A.A.'s English, marked so on each page.
 - Home: https://recoverystarts.com/ja/
 - AA info: Traditions and Concepts: https://recoverystarts.com/ja/aa-info/
 - Meetings: https://recoverystarts.com/ja/meetings/

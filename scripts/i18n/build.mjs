@@ -26,8 +26,8 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
 // page. The words are the language's own core id <lang>_ours_note. When A.A.'s printed wording arrives, swap it into the
 // glossary and the files, and set the flag to false: the note comes off every page in one build.
-// ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, Concepts and Preamble, so only the Big Book quotes and the
-// prayers are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
+// ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, the Concepts' short form and the Preamble, so the Big Book
+// quotes, the prayers and the Concepts' long form are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
 const OURS_NOTE = { hi: true, ja: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);

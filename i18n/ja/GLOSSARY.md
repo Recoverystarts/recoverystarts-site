@@ -95,7 +95,7 @@ Keep the English's placeholders around 988 (`<0>988</0>` is a `tel:988` link); a
 | the Big Book | **ビッグブック** [aajapan `/literature/`: «『アルコホーリクス・アノニマス』（通称：ビッグブック）»]. Its title: 『アルコホーリクス・アノニマス』. Note: the Japanese edition carries **12 Japanese members' stories** in place of most of the English stories [catalog B001: «日本のＡＡメンバー１２名の回復の手記»]; of the English stories only «ドクター・ボブの悪夢» is listed [`/bb-soundcloud/`] |
 | Alcoholics Anonymous, 4th Edition (a citation of the English book) | 英語版『<i>Alcoholics Anonymous</i>』第4版 |
 | Twelve Steps and Twelve Traditions ("12 & 12") — only when the English names the book | 『12のステップと12の伝統』 [catalog B005] — the title only; never a source |
-| Daily Reflections | 『今日を新たに』 [catalog B007: «今日を新たに～今日一日を省みるための書。»]. "the AA Daily Reflection theme (of the day)" → «AAの『今日を新たに』のその日のテーマ» |
+| Daily Reflections | 『今日を新たに』 [catalog B007: «今日を新たに～今日一日を省みるための書。»]. "the AA Daily Reflection theme (of the day)" → «AAの『Daily Reflections』のその日のテーマ» (**Super ruling, jalang1 2026-11-01:** the site's day titles are our translation of the English book's titles, while 『今日を新たに』 has its own Japanese titles, so naming 『今日を新たに』 beside our titles would misattribute them. Name the English book; the hub description says once «日本語版は『今日を新たに』») |
 | Living Sober | 『どうやって飲まないでいるか』 [catalog B011; aakco: «リビングソーバーミーティング … 書籍「どうやって飲まないでいるか」»] |
 | As Bill Sees It | 『ビルはこう思う』 [catalog B009] |
 | Came to Believe | 『信じるようになった』 [catalog B008] |

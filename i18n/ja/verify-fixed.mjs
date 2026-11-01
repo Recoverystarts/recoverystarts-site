@@ -26,7 +26,11 @@ for (const p of PAGES) {
   source += textOf(await r.text()) + "\n";
   await new Promise((ok) => setTimeout(ok, 1000));
 }
-const flat = source.replace(/\n/g, "").replace(/・/g, "");
+// the page as lines, each without its list number («1.», «１．», «1、»): an entry must equal one whole item, i.e. one line
+// or a run of consecutive lines (a long Tradition split over <p>s). A cut-down entry no longer passes (CHECKED-ja,
+// world-langs-2, 2026-11-01: "it checks includes, so a cut-down Step still passes"; hardened at jalang1 S1).
+const lines = source.split("\n").map((l) => l.replace(/^\d+\s*[.．、]\s*/, "").replace(/・/g, "")).filter(Boolean);
+const whole = (t) => { for (let i = 0; i < lines.length; i++) { let acc = ""; for (let j = i; j < Math.min(lines.length, i + 8); j++) { acc += lines[j]; if (acc === t) return true; if (acc.length >= t.length) break; } } return false; };
 
 const items = [];
 // GLOSSARY.md: the numbered lists under the four "word for word" headings, and the Preamble bullet
@@ -45,7 +49,9 @@ const FIXED = ["0a41494395b7","465c653ab0f5","8eb976079adb","c086e0b55760","0c6f
   "dc8b1bc8dbcb","6e113351c5ee","35d8a9b64010","dd04133c0abd","f916cd53b9a8","30a723656579","ea8687e4cdf1","549bf284bc05"];
 for (const id of FIXED) items.push([`core.json ${id}`, core[id] ?? ""]);
 
-const bad = items.filter(([, t]) => !t || !flat.includes(t.replace(/・/g, "")));
+const EXPECT = 73; // 12 Steps + 12 short + 12 long Traditions + 12 Concepts + the Preamble + 24 /aa-info/ segments
+if (items.length !== EXPECT) { console.log(`expected ${EXPECT} fixed texts, found ${items.length} in GLOSSARY.md/core.json`); process.exit(1); }
+const bad = items.filter(([, t]) => !t || !whole(t.replace(/・/g, "")));
 for (const [where] of bad) console.log(`not on aajapan.org as written: ${where}`);
 console.log(`${items.length - bad.length}/${items.length} fixed texts match A.A. Japan's pages${bad.length ? "" : " — 0 differences"}`);
 process.exit(bad.length ? 1 : 0);

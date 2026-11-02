@@ -17,10 +17,10 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", en: "en_US" };
 
 // a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
-const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css" };
+const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css" };
 const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
 // "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
@@ -28,7 +28,10 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // glossary and the files, and set the flag to false: the note comes off every page in one build.
 // ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, the Concepts' short form and the Preamble, so the Big Book
 // quotes, the prayers and the Concepts' long form are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
-const OURS_NOTE = { hi: true, ja: true };
+// ru (wave rulang1): A.A. Russia publishes the Steps, the short Traditions and the Preamble (aarussia.ru); the Big Book, the long
+// Traditions and the Concepts follow its refined 2025 translation, still under A.A.W.S. review (CEO 21:51Z, option 1: named as
+// that, never as official); what has no A.A. Russian (the Serenity Prayer) is ours. ru_ours_note says exactly that.
+const OURS_NOTE = { hi: true, ja: true, ru: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }

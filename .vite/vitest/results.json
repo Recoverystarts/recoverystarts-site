@@ -1,0 +1,1 @@
+{"version":"1.6.1","results":[[":tests/phraseSearch.test.js",{"duration":75,"failed":false}],[":tests/bookSearch.test.js",{"duration":612,"failed":false}],[":tests/searchPipeline.test.js",{"duration":567,"failed":false}]]}

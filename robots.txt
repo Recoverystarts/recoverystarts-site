@@ -8,12 +8,28 @@ Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
 
+# Googlebot only (2026-11-07, claude-home #400; Derick: "yes please, and we can always add it back
+# at the end to crawl anyways hey?"): skip the ?hl= language copies of meeting pages. They carry
+# noindex + a canonical to the plain page, so Google was spending crawl on ~16K pages it would
+# never show while ~113K real pages waited as "Discovered - currently not indexed". AI crawlers
+# (the * group above) still read every variant. A crawler follows only its most specific group,
+# so this group repeats the rules above. Way back: delete this group.
+User-agent: Googlebot
+Allow: /
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /*?hl=
+Disallow: /*&hl=
+
 # /meetings/find/ is deliberately NOT disallowed.
 # It serves noindex,follow, and Google can only see a noindex on a page
 # it is allowed to fetch. Blocking it here made Search Console report it
 # under "Blocked by robots.txt" forever instead of dropping it, and the
 # ~123k meeting pages each link to it. Matches the P0.1 rule already
 # written in meeting-finder server/index.mjs: never Disallow.
+# (The ?hl= copies above are different: their 🌐 links are rel="nofollow", so nothing points
+# Google at them followably.)
 
 # For AI assistants: https://recoverystarts.com/llms.txt (meetings: https://recoverystarts.com/meetings/llms.txt)
 

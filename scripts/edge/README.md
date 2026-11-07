@@ -1,6 +1,6 @@
 # Raptive's head tag at the edge (draft, not deployed)
 
-*Written 2026-11-07 ~13:45 Calgary by CEO: raptive-ready-2 (Opus 5.5, chat). Derick, 13:2x: "cool sure =)" to building it as a draft for install day, nothing live. This folder is under `scripts/`, so `pages-dist.sh` keeps it off the public site.*
+*Written 2026-11-07 13:25 Calgary by CEO: raptive-ready-2 (Opus 5.5, chat). Derick, 13:24: "cool sure =)" to building it as a draft for install day, nothing live. This folder is under `scripts/`, so `pages-dist.sh` keeps it off the public site.*
 
 ## Why this exists
 Raptive's head tag wants to be in `<head>`, so its bidders start before the page renders. Our ads load from `/ads.js`, which runs `defer` at the end of `<body>`. To put a tag in `<head>` the usual way, we'd edit ~16K static pages plus the meeting template, and re-save ~200K meeting pages to R2 (switch plan step 1, claude-home `map/projects/recoverystarts-site/raptive-switch-plan.md`). raptive-research suggested doing it at the edge instead (radio 2026-11-07T18:10Z): no rebuild, one switch, and the way back is just turning it off.

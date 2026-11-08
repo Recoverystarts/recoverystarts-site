@@ -5,7 +5,7 @@
 // explanatory prose: A.A. history, the Traditions, the Big Book pages, the A.A. questions) got single-digit fetches per
 // bot. Derick, 2026-11-07: "the training crawlers are important, its why we built most of the pages to do so." So this
 // page links every reading page from one place, with a few honest sentences on what each part is, and the sitemap names
-// each one with the date it last changed in git (a true lastmod, not today's date on everything).
+// each one with the date its reading text last changed (not today's date on everything).
 //
 // Built 2026-11-08 by CEO: raptive-ready-2 (Opus 5.5, chat). Run from the repo root after adding or renaming reading
 // pages: `node scripts/build-start-here.mjs` (needs the git history: in a shallow clone run
@@ -69,7 +69,7 @@ const sections = [
   },
   {
     id: "big-book", h: "The Big Book",
-    p: `<em>Alcoholics Anonymous</em>, 4th edition. There's a reference page for every page of the book, with what the page covers, its chapter, and where to read it. There are also pages on the passages people look for most, and you can read and search the actual pages free.`,
+    p: `<em>Alcoholics Anonymous</em>, 4th edition. There's a reference page for nearly every page of the book (a few blank and divider pages have none), with what the page covers, its chapter, and where to read it. There are also pages on the passages people look for most, and you can read and search the actual pages free.`,
     links: [["/big-book/pages/", titleOf("big-book/pages/index.html")], ["/big-book/search/", "Search the Big Book"], ["/big-book/", titleOf("big-book/index.html")], ...bbTopics.map((x) => [x.url, x.t])],
     extra: `<p class="sh-small">Every page, by number (the front matter in roman numerals first):</p><p class="sh-pages">${bbPages.map((n) => `<a href="/big-book/page-${n}/">${n}</a>`).join(" ")}</p>`,
   },
@@ -93,7 +93,8 @@ const icons = tpl.slice(tpl.indexOf("  <!-- brand:icons -->"), tpl.indexOf("  <m
 const css = tpl.match(/<link rel="stylesheet" href="\/style\.css[^"]*">/)[0];
 const body = tpl.slice(tpl.indexOf("<body>"), tpl.indexOf('  <main id="main">'))
   .replace(/<details class="rs-globe">[\s\S]*?<\/details>\s*/, "") // no language copies of this page yet
-  .replace(/utm_content=12-concepts-bar/g, "utm_content=start-here-bar");
+  .replace(/utm_content=12-concepts-bar/g, "utm_content=start-here-bar")
+  .replace(/utm_content%3D12-concepts-bar/g, "utm_content%3Dstart-here-bar"); // the Play referrer copy, URL-encoded
 const foot = tpl.slice(tpl.indexOf("  <footer class=\"footer\">"));
 if (!icons || !body.includes("<nav") || !foot.includes("</footer>")) throw new Error("template shape changed: 12-concepts/index.html");
 
@@ -159,29 +160,50 @@ fs.mkdirSync(R("start-here"), { recursive: true });
 fs.writeFileSync(R("start-here/index.html"), html);
 
 // ---- sitemap-reading.xml: every reading page, lastmod = its last commit (true, not today) ------------------------------
+// lastmod = the newest commit that changed the page's reading text: the words inside <main>, tags stripped. Nav, head,
+// footer and site-wide restamps (a new language in the 🌐 menu, the app face in the top bar, the privacy line) don't
+// count. Each file's versions are compared newest first, one pair per round, through `git cat-file --batch`.
+// History, 2026-11-08: "newest commit" gave 1,624 of 1,626 pages the same day; a line-count filter still let template
+// commits through (cold check on PR #79). If git isn't there, lastmod falls back to today.
 const lastmod = new Map();
+const mainText = (h) => { const a = h.indexOf("<main"), b = h.lastIndexOf("</main>"); return (a < 0 ? h : h.slice(a, b < 0 ? undefined : b)).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(); };
 try {
-  const log = execFileSync("git", ["log", "--format=@%cI", "--numstat", "--", "12-steps", "12-traditions", "12-concepts", "aa-history", "aa-info", "aa-questions", "big-book", "daily-reflection", "daily-tradition", "start-here"], { cwd: ROOT, maxBuffer: 1 << 28 }).toString();
-  // Site-wide restamps (a new language in the 🌐 menu, the privacy line) touch every page with a 1–3 line change. They
-  // aren't a change to what the page says, so a change of 4 lines or fewer in a commit that touched over 150 pages is
-  // skipped. lastmod is then the newest commit that really changed the page; a page only ever restamped keeps its
-  // newest restamp. (2026-11-08: a plain "newest commit" gave 1,624 of 1,626 pages the same day, 11-02.)
-  const commits = [];
-  let cur = null;
+  const git = (args, input) => execFileSync("git", args, { cwd: ROOT, maxBuffer: 1 << 30, input });
+  const log = git(["log", "--format=@%cI", "--raw", "--no-abbrev", "--", "12-steps", "12-traditions", "12-concepts", "aa-history", "aa-info", "aa-questions", "big-book", "daily-reflection", "daily-tradition", "start-here"]).toString();
+  const hist = new Map(); // file -> [{d, from, to}] newest first
+  let d = null;
   for (const line of log.split("\n")) {
-    if (line.startsWith("@")) commits.push((cur = { d: line.slice(1, 11), files: [] }));
-    else if (cur) { const m = line.match(/^(\d+|-)\t(\d+|-)\t(.+index\.html)$/); if (m) cur.files.push({ f: m[3], n: (+m[1] || 0) + (+m[2] || 0) }); }
+    if (line.startsWith("@")) { d = line.slice(1, 11); continue; }
+    const m = line.match(/^:\d+ \d+ ([0-9a-f]{40}) ([0-9a-f]{40}) \w+\t(.+index\.html)$/);
+    if (m) { if (!hist.has(m[3])) hist.set(m[3], []); hist.get(m[3]).push({ d, from: m[1], to: m[2] }); }
   }
-  const fallback = new Map();
-  for (const c of commits) {
-    const mass = c.files.length > 150;
-    for (const { f, n } of c.files) {
-      if (!fallback.has(f)) fallback.set(f, c.d);
-      if (!(mass && n <= 4) && !lastmod.has(f)) lastmod.set(f, c.d);
+  const ZERO = /^0+$/;
+  const cache = new Map();
+  const fetchBlobs = (ids) => {
+    const want = [...new Set(ids)].filter((id) => !ZERO.test(id) && !cache.has(id));
+    if (!want.length) return;
+    const out = git(["cat-file", "--batch"], want.join("\n") + "\n");
+    let i = 0;
+    while (i < out.length) {
+      const nl = out.indexOf(10, i);
+      const [id, type, size] = out.subarray(i, nl).toString().split(" ");
+      if (type !== "blob") { i = nl + 1; continue; }
+      cache.set(id, mainText(out.subarray(nl + 1, nl + 1 + +size).toString()));
+      i = nl + 1 + +size + 1;
     }
+  };
+  let open = [...hist.keys()].filter((f) => has(f));
+  for (let k = 0; open.length; k++) {
+    const pairs = open.map((f) => [f, hist.get(f)[k]]);
+    fetchBlobs(pairs.flatMap(([, c]) => (c ? [c.from, c.to] : [])));
+    open = pairs.filter(([f, c]) => {
+      if (!c) { const h = hist.get(f); lastmod.set(f, h[h.length - 1].d); return false; } // no text change found: its first commit
+      if (ZERO.test(c.from) || cache.get(c.from) !== cache.get(c.to)) { lastmod.set(f, c.d); return false; }
+      return true;
+    }).map(([f]) => f);
+    for (const id of [...cache.keys()]) if (!open.some((f) => hist.get(f)[k + 1]?.from === id || hist.get(f)[k + 1]?.to === id)) cache.delete(id);
   }
-  for (const [f, d] of fallback) if (!lastmod.has(f)) lastmod.set(f, d);
-} catch (e) { console.error("git log failed, lastmod falls back to today:", e.message); }
+} catch (e) { console.error("git failed, lastmod falls back to today:", e.message); }
 const today = new Date().toISOString().slice(0, 10);
 const urls = ["/start-here/"];
 for (const s of sections) for (const [u] of s.links) if (!urls.includes(u)) urls.push(u);

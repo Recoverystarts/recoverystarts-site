@@ -1,7 +1,7 @@
 // rtl.mjs — a right-to-left language's pages (wave tr4, Persian). The English pages and their CSS are left exactly as they
 // are; an rtl copy (build.mjs, a language whose LANGS dir is "rtl") is mirrored here, at build time:
 //   - /style.rtl.css: style.css mirrored by rtlcss (margins, padding, left/right, text-align, borders, transforms), plus
-//     the script's font (Vazirmatn, Google Fonts, the way style.css loads its own) and what Persian type needs (no
+//     the script's font (Vazirmatn, self-hosted from vazirmatn.css, the way style.css hosts its own) and what Persian type needs (no
 //     italics, no letter-spacing — both break the joined letters — and a little more line height on headings). The page's
 //     link to /style.css points here instead.
 //   - the page's own <style> blocks and style="" attributes, mirrored the same way (a "Next →" link's text-align:right).
@@ -16,8 +16,10 @@ import { parse } from "parse5";
 import rtlcss from "rtlcss";
 import { ROOT } from "./lib.mjs";
 
+// each language's font: its @font-face rules, self-hosted under /assets/fonts (claude-home #496, 2026-11-08; they were a
+// Google Fonts @import, which held the first paint until Google answered — the old URL is in the faces file's comment)
 const FONT = {
-  fa: { url: "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap", family: "'Vazirmatn'" },
+  fa: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
 };
 export const flip = (css) => rtlcss.process(css);
 
@@ -26,10 +28,10 @@ let sheet = null;
 export function rtlSheet() {
   if (sheet) return sheet;
   let css = flip(fs.readFileSync(path.join(ROOT, "style.css"), "utf8"));
-  const imports = Object.values(FONT).map((f) => `@import url('${f.url}');`).join("\n");
-  // the @imports must come before any rule: after style.css's own
+  const faces = Object.values(FONT).map((f) => fs.readFileSync(new URL(f.faces, import.meta.url), "utf8")).join("");
+  // at the top, after any @import of style.css's own (an @import must come before every other rule)
   const at = css.match(/^[\s\S]*?@import[^;]+;\s*\n/);
-  css = at ? at[0] + imports + "\n" + css.slice(at[0].length) : imports + "\n" + css;
+  css = at ? at[0] + faces + css.slice(at[0].length) : faces + css;
   css += "\n/* ---- right-to-left type (scripts/i18n/rtl.mjs) ---- */\n" + Object.entries(FONT).map(([l, f]) => `html:lang(${l}){--font-display:${f.family},'Fraunces',Georgia,serif;--font-body:${f.family},system-ui,-apple-system,sans-serif;--font-ui:${f.family},system-ui,-apple-system,sans-serif}`).join("\n") + `
 html[dir="rtl"] *{letter-spacing:0!important}
 html:lang(fa) ol{list-style-type:persian}

@@ -21,6 +21,11 @@ const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl
 
 // a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
 const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css" };
+// the home page preloads its headline's font (wave 2026-10-26-ads S2). Fraunces draws the English h1 (and Hindi's and
+// Japanese's spaces and Latin, since it comes first in their stacks), but a Persian or Russian h1 is drawn in Vazirmatn
+// or Literata, which come first there and carry Latin too: Fraunces is never used, so those pages preload their own
+// headline font instead (claude-home #496, 2026-11-08). Way back: delete this map and the line that uses it.
+const H1_FONT = { fa: "vazirmatn-arabic.woff2", ru: "literata-cyrillic.woff2" };
 const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
 // "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
@@ -113,6 +118,7 @@ for (const rel of Object.keys(pageIds)) {
     if (rel === "index.html") html = html.replace(/(<div class="book-body">[\s\S]*?<\/p>\s*<p>[\s\S]*?<\/p>)/, (m) => `${m}\n              ${p}`);
     else html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
   }
+  if (H1_FONT[lang]) html = html.replace(/(<link rel="preload" as="font" type="font\/woff2" href=")\/assets\/fonts\/fraunces-latin\.woff2(" crossorigin>)(<!--[^>]*-->)?/, (m, a, b) => `${a}/assets/fonts/${H1_FONT[lang]}${b}<!-- the headline's font, fetched with the stylesheet so the h1 paints once (claude-home #496) -->`);
   if (langCss) html = html.replace(/(<link rel="stylesheet" href="\/style\.css[^"]*">)/i, (m) => `${m}\n  <link rel="stylesheet" href="${langCss}">`);
   // the head: language, direction, canonical, alternates, og
   const url = `${SITE}/${lang}${urlOf(rel)}`;

@@ -175,6 +175,17 @@
           <span style="color:var(--ink-dim);font-size:.92rem">29,000+ A.A., N.A., C.A. and C.M.A. rooms you can join from anywhere, sorted by what starts next. No map, no travel, no account.</span></span>
           <span class="meeting-card-arrow" style="margin-left:auto">→</span>
         </a>
+        <!-- Holiday hubs (claude-home#415, holidays-build 2026-11-08): the 20 pages served by the meeting finder, linked year-round.
+             The same links are on the meeting finder's own /meetings/ render (server/pages.mjs), which recoverystarts.com doesn't serve:
+             the Worker sends exactly /meetings/ here to Pages. Way back: delete this section. -->
+        <section class="fade-in" aria-labelledby="holiday-hubs" style="padding:16px 22px;margin-bottom:26px;border:1px solid rgba(253,224,71,.35);border-radius:14px;background:rgba(253,224,71,.05)">
+          <h2 id="holiday-hubs" style="font-size:1.05rem;margin:0 0 4px"><span aria-hidden="true">🕯️</span> Holiday meetings</h2>
+          <p style="margin:0;color:var(--ink-dim);font-size:.92rem">Online rooms open on each holiday, in your time zone, and the alcathons and marathons groups hold.</p>
+            <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">A.A. meetings on the holidays:</span> <a href="/meetings/aa/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/aa/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/aa/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/aa/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/aa/holidays/new-years-day/">New Year's Day</a></p>
+            <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">N.A. meetings on the holidays:</span> <a href="/meetings/na/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/na/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/na/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/na/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/na/holidays/new-years-day/">New Year's Day</a></p>
+            <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">C.M.A. meetings on the holidays:</span> <a href="/meetings/cma/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/cma/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/cma/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/cma/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/cma/holidays/new-years-day/">New Year's Day</a></p>
+            <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">C.A. meetings on the holidays:</span> <a href="/meetings/ca/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/ca/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/ca/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/ca/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/ca/holidays/new-years-day/">New Year's Day</a></p>
+        </section>
         <div class="meetings-grid">
           <a href="/meetings/aa/" class="meeting-card fade-in">
             <div class="meeting-card-icon">🔺</div>

@@ -47,6 +47,7 @@ Asked something like "C.A. in Calgary tonight?" — two calls, no key:
 - Meetings, for AI assistants: https://recoverystarts.com/meetings/llms.txt
 - AA info: https://recoverystarts.com/aa-info/
 - Big Book — READ & SEARCH the actual pages (free, no account): https://read.recoverystarts.com/
+- Start here, every reading page on one page (Steps, Traditions, Concepts, A.A. history, the Big Book page by page, every A.A. question, the daily readings): https://recoverystarts.com/start-here/ (all of them with lastmod: https://recoverystarts.com/sitemap-reading.xml)
 - Big Book — read a specific page: https://read.recoverystarts.com/bigbook/read?page=[label] (e.g. ?page=417, ?page=59, ?page=xxv)
 - Big Book — get a copy: https://recoverystarts.com/big-book/
 - Big Book — page by page: https://recoverystarts.com/big-book/pages/

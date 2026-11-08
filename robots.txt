@@ -1,5 +1,12 @@
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
+# /add-meeting/ with a query string (2026-11-08, CEO: raptive-ready-2, claude-home #483): every meeting page links the
+# add/fix form as /add-meeting/?page=<that meeting>&name=<its name>, so there is one copy of the same form per meeting
+# (~200K). In the 24 h to 11-08 17:40Z Amazonbot fetched 9,616 of them and Reflectionbot 3,221, while the reading pages
+# got a few fetches each. The plain /add-meeting/ page stays open; only the per-meeting copies are skipped, for every
+# crawler (the lines are in each group below, because a crawler follows only its most specific group). People are
+# unaffected: robots.txt only asks crawlers. Way back: delete the two "Disallow: /add-meeting" lines in each group.
+
 User-agent: *
 Allow: /
 
@@ -7,6 +14,8 @@ Allow: /
 Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
+Disallow: /add-meeting/?
+Disallow: /add-meeting?
 
 # Googlebot only (2026-11-07, claude-home #400; Derick: "yes please, and we can always add it back
 # at the end to crawl anyways hey?"): skip the ?hl= language copies of meeting pages. They carry
@@ -19,6 +28,8 @@ Allow: /
 Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
+Disallow: /add-meeting/?
+Disallow: /add-meeting?
 Disallow: /*?hl=
 Disallow: /*&hl=
 
@@ -35,6 +46,8 @@ Allow: /
 Disallow: /scripts/
 Disallow: /tests/
 Disallow: /data/
+Disallow: /add-meeting/?
+Disallow: /add-meeting?
 
 # /meetings/find/ is deliberately NOT disallowed.
 # It serves noindex,follow, and Google can only see a noindex on a page
@@ -52,3 +65,6 @@ Disallow: /data/
 # sitemap-meetings.xml is the meeting finder's own index, so it's named here on its own line.
 Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml
+# Every reading page (Steps, Traditions, Concepts, history, the Big Book, A.A. questions, daily readings), lastmod = when
+# its text last changed. Built by scripts/build-start-here.mjs with the hub at /start-here/ (#483).
+Sitemap: https://recoverystarts.com/sitemap-reading.xml

@@ -76,7 +76,13 @@ function localDigits(s, lang) {
 // Only the languages listed, so fa's pages keep their bytes. Way back: delete LRM_AFTER and its use in localText.
 const LRM_AFTER = { he: true };
 const lrm = (s, lang) => (LRM_AFTER[lang] ? s.replace(/(?<![A-Za-z.])((?:[A-Z]\.){2,})(?!\u200e)/g, "$1\u200e") : s);
-export const localText = (s, lang) => lrm(localDigits(swapArrows(s), lang), lang);
+// he (wave helang1, check-He-10): a range written with an en or em dash between numbers («עמודים 44–57», «19:00–20:30») shows
+// reversed in right-to-left text ("57–44"): the dash is a neutral between two numbers, so it takes the paragraph's direction.
+// A left-to-right mark on each side of the dash keeps the range in reading order. A hyphen (phone numbers 052-8451201) is a
+// number separator and needs nothing. Way back: delete RANGE_LRM and its use in localText.
+const RANGE_LRM = { he: true };
+const ranges = (s, lang) => (RANGE_LRM[lang] ? s.replace(/(\d)(\s*)\u200e?([\u2013\u2014])\u200e?(\s*)(?=\d)/g, "$1$2\u200e$3\u200e$4") : s);
+export const localText = (s, lang) => ranges(lrm(localDigits(swapArrows(s), lang), lang), lang);
 
 const SKIP = new Set(["script", "style", "code", "pre", "kbd", "samp", "var", "textarea", "svg", "math"]);
 const META = new Set(["description", "og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image:alt"]);

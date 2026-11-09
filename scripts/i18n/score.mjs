@@ -455,7 +455,7 @@ for (const f of files) {
       // split (i18n/he/GLOSSARY.md, CHECKED-he). Flags to read, not rulings: «אתה» can be right in a first-person quote.
       const st = strip(t);
       const sing = /(?<!\p{L})(?:אתה|את\/ה|אתה\/את)(?!\p{L})|\p{Script=Hebrew}\.(?:ת|ה|י|ות)(?!\p{L})|\p{Script=Hebrew}\/(?:ה|ת|ית|ות)(?!\p{L})/u.exec(st);
-      const latAA = /(?<![A-Za-z.])A\.A\.(?!W|[A-Za-z])/.exec(st) && /\p{Script=Hebrew}/u.test(st);
+      const latAA = /\p{Script=Hebrew}[\s"'-]*A\.A\.(?![A-Za-z])(?!\s+[A-Z][a-z])|(?<![A-Za-z.])A\.A\.[\s"'-]*\p{Script=Hebrew}/u.exec(st); // A.A. against Hebrew, not inside an English title ("A.A. Comes of Age")
       const marks = /[\u0591-\u05C7\u200E\u200F\u202A-\u202E\u0600-\u06FF]/u.exec(st.replace(/אֵל/g, ""));
       const naw = /בשורה זו|ביקשנוהו|חונך|חונכות/.exec(st);
       const c988 = /(?<!\d)988(?!\d)/.test(strip(e)) && /988/.test(st) && (/הודעה|הודעת|SMS|טקסט|צ'אט/.test(st) || !/ארצות הברית/.test(st));

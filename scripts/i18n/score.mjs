@@ -57,6 +57,12 @@
 //             (Russian writes «АА»; English names like "A.A. World Services" are fine, so it's a flag to read, not a ruling);
 //             «спонсор» (A.A. Russia says «наставник»); English left in (two English filler words or five Latin words in a row
 //             outside «» and “”). Each costs score (×2). Number words count as numbers («Двенадцать шагов», «четвёртое издание»).
+//             tr (wave trlang1): siz, lower case mid-sentence; “…” quotes and ’ (i18n/tr/GLOSSARY.md). Flags, outside “…”: «sen»
+//             forms (sen, seni, sana, senin …) addressed to the reader (a prayer to God rightly says «sana»: read it, don't fix it);
+//             «Siz/Size/Sizin» capitalised mid-sentence; «adım» as a Step's name («12 adım», «Adım 4»); ASCII-ized words
+//             («Adsiz», «ayiklik», «Turkiye»); an ASCII ' before a suffix (A.A.'nın → A.A.’nın); «…» or ASCII "…" quotes;
+//             «sponsor» (A.A. Türkiye says «rehber»); «Allah» (the site says «Tanrı»); a 988 segment that offers text or
+//             doesn't say ABD. A time «19:00» counts as the English "7:00 pm". Each costs score (×2).
 //             Length: Japanese runs about a third of the English in characters, so "short" for ja is under 18%, not 60%.
 // score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
 import fs from "node:fs";
@@ -69,7 +75,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1", ru: "rulang1" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1", ru: "rulang1", tr: "trlang1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -123,7 +129,7 @@ const EN_FILLER = new Set("the and with your you our we are was were this that t
 const latin = (s) => s.replace(/[۰-۹]/g, (d) => d.charCodeAt(0) - 0x6f0).replace(/[٠-٩]/g, (d) => d.charCodeAt(0) - 0x660).replace(/٬/g, ",");
 // pl writes 1 234 (a space between thousands) and 2,99 (a decimal comma): both count as the English 1,234 and 2.99
 const plNum = (s) => (lang === "pl" || lang === "sv" || lang === "ru" ? s.replace(/(\d)[\u00a0\u202f ](?=\d{3}(?!\d))/g, "$1") : s);
-const nums = (s) => (plNum(latin(strip(s))).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).map((n) => (lang === "pl" || lang === "de" || lang === "sv" || lang === "nl" || lang === "ru" ? n.replace(",", ".") : n)).filter((n) => n.length);
+const nums = (s) => (plNum(latin(strip(s))).match(/\d[\d,.]*/g) ?? []).map((n) => n.replace(/[.,]$/, "").replace(/[,.](?=\d{3}\b)/g, "")).map((n) => (lang === "pl" || lang === "de" || lang === "sv" || lang === "nl" || lang === "ru" || lang === "tr" ? n.replace(",", ".") : n)).filter((n) => n.length);
 // fa: a number written as a word counts too («دوازده قدم» for "12 Steps", «ویرایش چهارم» for "4th Ed.", «شبانه‌روزی» for 24/7)
 const FA_NUM = [["یک|اول|نخست", "1"], ["دو|دوم", "2"], ["سه|سوم", "3"], ["چهار|چهارم", "4"], ["پنج|پنجم", "5"], ["شش|ششم", "6"], ["هفت|هفتم", "7"], ["هشت|هشتم", "8"], ["نه|نُه|نهم", "9"], ["ده|دهم", "10"], ["یازده|یازدهم", "11"], ["دوازده|دوازدهم", "12"]];
 const faWords = (s) => { const out = []; for (const [w, n] of FA_NUM) if (new RegExp(`(?<![\\p{L}])(?:${w})(?![\\p{L}])|(?<![\\p{L}])(?:${w})(?=\u200c?قدمی|\u200c?گانه)`, "u").test(s)) out.push(n); if (/شبانه[\u200c ]?روزی/.test(s)) out.push("24", "7"); return out; };
@@ -315,6 +321,21 @@ GLOSS_BY.nl = [
   [/\bmeetings?\b/i, /meeting|bijeenkomst/i, "meeting"],
   [/\brecovery\b/, /herstel|Recovery/i, "recovery"],
 ];
+// Turkish (i18n/tr/GLOSSARY.md; wave trlang1)
+GLOSS_BY.tr = [
+  [/\bBig Book\b/i, /Büyük Kitap/, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /rehber/i, "sponsor"],
+  [/\bHigher Power\b/i, /Üstün (?:bir )?Güç/i, "Higher Power"],
+  [/\bhome groups?\b/i, /ev grub/i, "home group"],
+  [/\bnewcomers?\b/i, /yeni gel|yeni katıl/i, "newcomer"],
+  [/\bamends\b/i, /telafi/i, "amends"],
+  [/\bspiritual awakening\b/i, /manevi (?:bir )?uyanış/i, "spiritual awakening"],
+  [/\bsobriety\b/i, /ayıklı|ayık/i, "sobriety"],
+  [/\bpowerless\b/i, /güçsüz/i, "powerless"],
+  [/\bgroup conscience\b/i, /grup bilinc/i, "group conscience"],
+  [/\bresentments?\b/i, /kızgınlı/i, "resentment"],
+  [/\bSteps?\b/, /[Bb]asamak/, "Step"],
+];
 const GLOSS = GLOSS_BY[lang] ?? [];
 // sv: å ä ö stripped (wave svnl1)
 const SV_BARE = /(?<!\p{L})(?:ar|pa|nar|fran|aven|ocksa|maste|gora|gor|mote|moten|motet|hjalp|hjalpa|manniska|manniskor|tva|sjalv|sjalva|forsta|overallt|bon|langre|harifran|dar|varld|nagon|nagot|nagra|fragor|fraga|ga|gar|sag|sager|lasa|lasning|kanner|kanna|sjalvforsorjande|aterfall|nastan|battre)(?!\p{L})/gu;
@@ -341,6 +362,14 @@ const jaEnglish = (s) => { const u = jaOut(s), w = u.match(/[A-Za-z][A-Za-z'’-
 const JA_D = { 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
 const jaKanji = (k) => { let n = 0, cur = 0; for (const ch of k) { if (ch in JA_D) cur = JA_D[ch]; else if (ch === "十") { n += (cur || 1) * 10; cur = 0; } else if (ch === "百") { n += (cur || 1) * 100; cur = 0; } else if (ch === "千") { n += (cur || 1) * 1000; cur = 0; } } return n + cur; };
 const jaWords = (s) => { const out = []; for (const m of s.matchAll(/[〇一二三四五六七八九十百千]+/gu)) out.push(String(jaKanji(m[0]))); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(午前|午後)(\d{1,2})時/gu)) out.push(m[2], String(+m[2] + (m[1] === "午後" ? 12 : 0))); for (const m of s.matchAll(/(\d+)万(\d[\d,]*)/gu)) out.push(String(+m[1] * 1e4 + +m[2].replace(/,/g, ""))); for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(万|億)/gu)) { const v = parseFloat(m[1]) * (m[2] === "万" ? 1e4 : 1e8); out.push(String(v), String(v / 1e6), String(v / 1e9)); } if (/二十四時間|24時間|年中無休|いつでも/u.test(s)) out.push("24", "7"); return out; };
+// tr: a number written as a word counts too («On İki Basamak», «dördüncü baskı», «7/24»), and a 24-hour time counts as its 12-hour English
+const TR_NUM = [["bir|birinci", "1"], ["iki|ikinci", "2"], ["üç|üçüncü", "3"], ["dört|dördüncü", "4"], ["beş|beşinci", "5"], ["altı|altıncı", "6"], ["yedi|yedinci", "7"], ["sekiz|sekizinci", "8"], ["dokuz|dokuzuncu", "9"], ["on|onuncu", "10"], ["on ?bir|on ?birinci", "11"], ["on ?iki|on ?ikinci", "12"]];
+const trWords = (s) => { const out = []; for (const [w, n] of TR_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?=\\p{L}{0,6}(?!\\p{L}))`, "iu").test(s.replace(/İ/g, "i").replace(/I/g, "ı"))) out.push(n); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(\d+(?:,\d+)?)\s*(bin|milyon)(?!\p{L})/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (m[2] === "bin" ? 1e3 : 1e6); out.push(String(v), String(v / 1e6)); } if (/7\/24|günün her saati|gece gündüz/u.test(s)) out.push("24", "7"); return out; };
+const TR_OUT = (s) => s.replace(/“[^”]*”|‘[^’]*’/gu, " ");
+const TR_SEN = /(?<!\p{L})(?:sen|Sen|seni|Seni|sana|Sana|senin|Senin|sende|senden|seninle|Seninle)(?!\p{L})/u;
+const TR_SIZ = /(?<=[\p{Ll},;:—–] )(?:Siz|Size|Sizi|Sizin|Sizde|Sizden|Sizinle)(?!\p{L})/u;
+const TR_ADIM = /(?:(?<!\p{L})(?:on iki|On İki|12|\d+\.)\s?[Aa]dım)|(?:(?<!\p{L})[Aa]dım(?:lar)?\s\d)/u;
+const TR_ASCII = /(?<!\p{L})(?:Adsiz|adsiz|ayiklik\p{L}*|Ayiklik\p{L}*|Buyuk|buyuk|Turkce|Türkce|Turkiye|Tanri|Tanriya|Tanrinin|toplanti|toplantilar\p{L}*|Toplanti\p{L}*|degil|icin|Icin|cok|Cok|simdi|yardim|Yardim|guc|Guc|gun|bugun|Bugun)(?!\p{L})/u;
 // ru: register, quotes, mixed-script words, Latin A.A., «спонсор», English left in (wave rulang1)
 const RU_OUT = (s) => s.replace(/«[^»]*»|„[^“]*“/gu, " ");
 const RU_TY = /(?<!\p{L})(?:ты|Ты|тебя|Тебя|тебе|Тебе|тобой|Тобой|твой|Твой|твоя|Твоя|твоё|Твоё|твое|твои|Твои|твоего|твоей|твоему|твоим|твоих|твою|сам себе)(?!\p{L})/u;
@@ -388,7 +417,7 @@ for (const f of files) {
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !ALSO[lang]?.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < (lang === "ja" ? 0.18 : 0.6)) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : []), ...(lang === "ru" ? ruWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : []), ...(lang === "ru" ? ruWords(strip(t)) : []), ...(lang === "tr" ? trWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
@@ -428,6 +457,17 @@ for (const f of files) {
       if (q || mix) { r.dia++; r.usted++; flag(id, q ? "quote marks: Russian uses «…» with „…“ inside" : `Latin letter inside a Cyrillic word: …${mix[0]}…`); }
       if (aa || sp) { r.usted++; flag(id, aa ? `«${aa[0]}» in Latin (Russian writes «АА»; fine in an English name)` : "«спонсор» (A.A. Russia says «наставник»)"); }
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
+    }
+    if (lang === "tr" && !code) {
+      // tr (wave trlang1): siz, “…” and ’, «basamak», «rehber», «Tanrı», 988 by call with the US apart (i18n/tr/GLOSSARY.md, CHECKED-tr)
+      const st = strip(t), o = TR_OUT(st), sen = TR_SEN.exec(o), siz = TR_SIZ.exec(o), adim = TR_ADIM.exec(st), asc = TR_ASCII.exec(st);
+      const apo = /[A-Za-z0-9.]'(?=\p{Ll})/u.exec(st), q = /[«»"]/.test(o), sp = /sponsor/iu.exec(o), allah = /(?<!\p{L})Allah/u.exec(o);
+      const c988 = /(?<!\d)988(?!\d)/.test(strip(e)) && /988/.test(st) && (/mesaj at|kısa mesaj|SMS|metin gönder|yazışarak/iu.test(st) || !/ABD/.test(st));
+      if (sen || siz) { r.usted++; flag(id, sen ? `register: «${sen[0]}» (the site says siz; a prayer to God may say «sana»)` : `register: «${siz[0]}» capitalised mid-sentence (lower-case siz)`); }
+      if (adim) { r.usted++; flag(id, `«${adim[0]}»: a Step is «basamak»`); }
+      if (asc || apo || q) { r.dia++; r.usted++; flag(id, asc ? `ASCII-ized: «${asc[0]}» (ç ğ ı ö ş ü)` : apo ? `ASCII apostrophe: …${apo[0]}… (’)` : "quote marks: Turkish uses “…” (‘…’ inside)"); }
+      if (sp || allah) { r.usted++; flag(id, sp ? "«sponsor» (A.A. Türkiye says «rehber»)" : "«Allah» (the site says «Tanrı»)"); }
+      if (c988) { r.usted++; flag(id, "988: by call, in the US (ABD), with a Turkish interpreter; Canada «tercüman bulunabilir»; never by text"); }
     }
     if (lang === "pl" && !code) {
       const bare = strip(t).match(PL_BARE) ?? [];

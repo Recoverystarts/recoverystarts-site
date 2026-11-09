@@ -267,6 +267,27 @@ Exactly as printed, cut by script. [bb2022] prints them **without numbers**, aft
 5. **Name it truthfully:** «A.A.’nın Türkçe Büyük Kitap’ı (“Adsız Alkolikler”, 2022 Türkçe baskı)». [bb2022] says it is Conference-approved; we may say «A.A.W.S.’nin Türkçe baskısı». Never «resmî çevirimiz» (ours).
 6. Inside our own “…”, a passage’s own “…” become ‘…’.
 
+**Finding a passage that isn’t in the table (trlang1 Super, S1, 2026-11-09).** [bb2022] prints its own page numbers, and they match the PDF’s page numbers. Get it into your own window, never into the repo (it is A.A.W.S.’s): `curl -sS -A "recoverystarts.com translation check" -o /tmp/bb2022.pdf https://www.adsizalkolikler.com/wp-content/uploads/2022/06/ADSIZ-ALKOLIKLER.pdf && pdftotext -f N -l M /tmp/bb2022.pdf -` (it answered 200 from a cloud window). Then grep a distinctive word of the passage near the page below; join the line-break hyphens; copy the sentence(s) by script, not by retyping.
+
+| English chapter (4th ed. pages) | [bb2022] pages | start offset |
+|---|---|---|
+| The Doctor’s Opinion (xxv–xxxii) | 18–25 | — |
+| 1 Bill’s Story (1–16) | 26–40 | +25 |
+| 2 There Is a Solution (17–29) | 41–52 | +24 |
+| 3 More About Alcoholism (30–43) | 53–64 | +23 |
+| 4 We Agnostics (44–57) | 65–77 | +21 |
+| 5 How It Works (58–71) | 78–91 | +20 |
+| 6 Into Action (72–88) | 92–107 | +20 |
+| 7 Working with Others (89–103) | 108–121 | +19 |
+| 8 To Wives (104–121) | 122–137 | +18 |
+| 9 The Family Afterward (122–135) | 138–150 | +16 |
+| 10 To Employers (136–150) | 151–163 | +15 |
+| 11 A Vision for You (151–164) | 164–177 | +13 |
+| Appendices (559–575) | 178–195 | — |
+| Dr. Bob’s Nightmare (171–181) | 195–204 | — |
+
+The Turkish runs a little shorter than the English, so the gap narrows through a chapter: start at English page + the chapter’s offset, and look a page either side. Any other personal story isn’t in [bb2022] online: translate it yourself, list it as `BBQ <id> ours`, and its credit line says «çeviri bizim».
+
 | Eng. p. | English | Turkish [bb2022], exactly as printed (Turkish page) | note |
 |---|---|---|---|
 | 58 | Rarely have we seen a person fail who has thoroughly followed our path. | Bizim yolumuzu izleyerek programımızı uygulayanlardan çok azının başarısızlığa uğradığını gördük. (s. 78) | ⚑ reads "we saw very few fail" |

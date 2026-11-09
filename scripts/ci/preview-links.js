@@ -20,7 +20,7 @@ const PREVIEW = (process.argv[2] || "").replace(/\/$/, "");
 if (!/^https:\/\/[a-z0-9-]+\.recoverystarts-site\.pages\.dev$/.test(PREVIEW)) { console.log("::error::usage: preview-links.js https://<id>.recoverystarts-site.pages.dev"); process.exit(1); }
 const LIVE = "https://recoverystarts.com";
 const DIST = path.join(__dirname, "..", "..", "dist");
-const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv"];
+const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "tr"];
 const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$))/;
 const SEEDS = ["/", "/start-here/", "/12-steps/", "/12-traditions/", "/12-concepts/", "/big-book/", "/daily-reflection/", "/daily-tradition/", "/aa-history/", "/aa-info/", "/meetings/", "/about/"];
 const UA = { "user-agent": "recoverystarts-site CI link check (github actions)" };

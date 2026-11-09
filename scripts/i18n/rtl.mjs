@@ -20,6 +20,8 @@ import { ROOT } from "./lib.mjs";
 // Google Fonts @import, which held the first paint until Google answered — the old URL is in the faces file's comment)
 const FONT = {
   fa: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
+  // ar (wave arlang1): Vazirmatn draws Arabic too (prep-ar, 390 and 1366 px). The same faces file, read once below.
+  ar: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
 };
 export const flip = (css) => rtlcss.process(css);
 
@@ -28,7 +30,7 @@ let sheet = null;
 export function rtlSheet() {
   if (sheet) return sheet;
   let css = flip(fs.readFileSync(path.join(ROOT, "style.css"), "utf8"));
-  const faces = Object.values(FONT).map((f) => fs.readFileSync(new URL(f.faces, import.meta.url), "utf8")).join("");
+  const faces = [...new Set(Object.values(FONT).map((f) => f.faces))].map((f) => fs.readFileSync(new URL(f, import.meta.url), "utf8")).join("");
   // at the top, after any @import of style.css's own (an @import must come before every other rule)
   const at = css.match(/^[\s\S]*?@import[^;]+;\s*\n/);
   css = at ? at[0] + faces + css.slice(at[0].length) : faces + css;
@@ -51,6 +53,8 @@ html[dir="rtl"] .rs-langs a[lang],html[dir="rtl"] .rs-here,html[dir="rtl"] bdi{u
 
 const ARROWS = { "→": "←", "←": "→", "›": "‹", "‹": "›", "⟶": "⟵", "⟵": "⟶", "▸": "◂", "◂": "▸", "▶": "◀", "◀": "▶", "↗": "↖", "↖": "↗" };
 const swapArrows = (s) => s.replace(/[→←›‹⟶⟵▸◂▶◀↗↖]/g, (c) => ARROWS[c]);
+// ar (wave arlang1) is NOT here: Arabic on this site keeps Western 0–9 (i18n/ar/GLOSSARY.md, CHECKED-ar #6), so its text
+// gets the arrows turned and nothing else. Never add ar to this table.
 const DIGITS = { fa: "۰۱۲۳۴۵۶۷۸۹" };
 // numbers a reader dials, left in Latin digits (the crisis lines: 988 Canada and U.S., Iran's 123 / 1480 / 115) —
 // unless the words just before make it a page ("صفحهٔ ۱۲۳")

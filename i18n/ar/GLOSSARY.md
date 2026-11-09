@@ -19,7 +19,7 @@
 - **Letters: Arabic only.** ي ك ى ة (U+064A, U+0643, U+0649, U+0629). **Never Persian ی ک ۀ (U+06CC, U+06A9, U+06C0) and no ZWNJ (U+200C).** That is the reverse of fa: copying a fa line or running fa's desk fixer (`desk/fix_fa.py`, which turns ي→ی) breaks ar. Hamza as standard: أ إ آ ؤ ئ ء.
 - **Tashkeel (vowel marks):** none, except a shadda or tanween where a word would be misread (التوقُّف, لستَ). Tanween fatha on the alef: «مجانًا»، «دائمًا» (not «مجاناً»).
 - **Punctuation:** ، ؛ ؟ and «…» for every quote. No space before them. The English period, colon and exclamation stay. Em dash — with spaces around it, as the English has it.
-- **Digits: Western 0–9 everywhere** (page numbers, years, counts, prices, times, phone numbers): «ص. 417»، «عام 1935»، «251 اجتماعًا»، «الساعة 7:00 مساءً». Why: Egypt's own press and ministries print Western digits online (the Ministry of Social Solidarity's hotline list, al-Ahram, Youm7), so do the Gulf and the Maghreb, and searches are typed that way. The build turns digits Persian **only for fa** (`scripts/i18n/rtl.mjs` DIGITS); leave ar out of that table. Never type ٠–٩ or ۰–۹.
+- **Digits: Western 0–9 everywhere** (page numbers, years, counts, prices, times, phone numbers): «ص. 417»، «عام 1935»، «251 اجتماعًا»، «الساعة 7:00 مساءً». Why: Egypt's own press and ministries print Western digits online (the Ministry of Social Solidarity's hotline list, al-Ahram, Youm7), so do the Gulf and the Maghreb, and searches are typed that way. The build turns digits Persian **only for fa** (`scripts/i18n/rtl.mjs` DIGITS); leave ar out of that table. Never type ٠–٩ or ۰–۹. *We did not find A.A.'s own Arabic usage online (ARABB-30 isn't online); this follows Egypt's ministries and press, which print 16023 that way (CHECKED-ar #6).*
 - **Thousands:** «29,000», «30,000 دولار» (Latin comma between digits; the Arabic comma ، only between words).
 - **Arrows: keep them exactly as the English has them** (`→`, `←`). The build turns them for RTL, as for fa.
 - **Dates are Gregorian.** Months, Egyptian/Gulf names: يناير، فبراير، مارس، أبريل، مايو، يونيو، يوليو، أغسطس، سبتمبر، أكتوبر، نوفمبر، ديسمبر. Not the Levantine كانون الثاني… "October 12" → «12 أكتوبر»; "All of October" → «كل أكتوبر». Weekdays: السبت، الأحد، الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة.
@@ -36,13 +36,13 @@ What's true (checked 2026-11-09 on each service's own site):
 - **Canada: 9-8-8**: English and French, 24/7; another language "may be available by phone, via an interpreter" [988.ca/get-help/what-to-expect]. Not promised.
 - **Dropped (couldn't confirm on the service's own site):** Egypt 16328 / 08008880700 / 0220816831 (General Secretariat of Mental Health and Addiction Treatment; mohp.gov.eg returned 503 and its subdomain didn't resolve), Egypt ambulance 123 (no official site reachable), Lebanon Embrace 1564 (embracelebanon.org returned 403). The other Arabic-speaking countries on the map: none checked yet, because the map's country list couldn't be read (see PREP-NOTES).
 
-So on an ar page **never write "call or text 988" alone.** Egypt first, then North America. Use these, word for word:
+So on an ar page **never write "call or text 988" alone.** Egypt first, then North America. Use these, word for word: **US and Canada are said apart** (CHECKED-ar #2, 2026-11-09): the US promises an interpreter on calls, Canada only says one "may be available". Names: US «988 Suicide & Crisis Lifeline», Canada «9-8-8 Suicide Crisis Helpline». **16023 is the addiction fund's hotline:** call it «الخط الساخن» of the fund, never a suicide or crisis line. «سرّي» is said of 988 only.
 
 | English | Arabic |
 |---|---|
-| In crisis right now? Call or text 988. You are not alone. | هل تمرّ بأزمة الآن؟ في مصر اتصل بالخط الساخن 16023 (خط صندوق مكافحة وعلاج الإدمان والتعاطي). في الولايات المتحدة وكندا اتصل بـ 988 واطلب مترجمًا للعربية. لستَ وحدك. |
-| If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). | إن كنت في أزمة، ففي مصر اتصل بالخط الساخن 16023 (صندوق مكافحة وعلاج الإدمان والتعاطي)؛ وفي الولايات المتحدة وكندا اتصل بـ 988 (Suicide & Crisis Lifeline) واطلب مترجمًا للعربية. |
-| …988 inside a longer sentence | «988 (في الولايات المتحدة وكندا؛ بالهاتف، مع طلب مترجم للعربية)» |
+| In crisis right now? Call or text 988. You are not alone. | هل تمرّ بأزمة الآن؟ في مصر اتصل بالخط الساخن 16023 (خط صندوق مكافحة وعلاج الإدمان والتعاطي). في الولايات المتحدة اتصل بـ 988 واطلب مترجمًا للعربية. في كندا اتصل بـ 9-8-8؛ قد يتوفّر مترجم عبر الهاتف. لستَ وحدك. |
+| If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). | إن كنت في أزمة، ففي مصر اتصل بالخط الساخن 16023 (صندوق مكافحة وعلاج الإدمان والتعاطي)؛ وفي الولايات المتحدة اتصل بـ 988 (988 Suicide & Crisis Lifeline) واطلب مترجمًا للعربية؛ وفي كندا اتصل بـ 9-8-8 (9-8-8 Suicide Crisis Helpline)، وقد يتوفّر مترجم عبر الهاتف. |
+| …988 inside a longer sentence | «988 (في الولايات المتحدة، بالهاتف مع طلب مترجم للعربية؛ وفي كندا 9-8-8، وقد يتوفّر مترجم)» |
 | free, 24/7, confidential (said of 988) | مجاني، على مدار الساعة، سرّي |
 | go to the emergency room | توجّه إلى أقرب قسم طوارئ |
 | detox / medical detox | إزالة السموم / إزالة السموم تحت إشراف طبي |
@@ -86,7 +86,7 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 | 1 Bill's Story | قصة بيل |
 | 2 There Is a Solution | يوجد حل |
 | 3 More About Alcoholism | المزيد عن إدمان الكحول |
-| 4 We Agnostics | نحن اللاأدريين |
+| 4 We Agnostics | نحن اللاأدريون (nominative: the title stands alone; CEO CHECKED-ar #4) |
 | 5 How It Works | كيف يعمل البرنامج |
 | 6 Into Action | إلى العمل |
 | 7 Working with Others | العمل مع الآخرين |
@@ -104,11 +104,11 @@ A personal story's English title: translate it faithfully **[ours]**, the same e
 | English | Arabic |
 |---|---|
 | meeting / open / closed meeting | اجتماع / اجتماع مفتوح / اجتماع مغلق [J] |
-| speaker / discussion / Step meeting | اجتماع تحدّث / اجتماع نقاش / اجتماع الخطوات [J] |
-| group | مجموعة [J] |
+| speaker / discussion / Step meeting | اجتماع تحدّث / اجتماع نقاش / اجتماع الخطوات **[ours]** (not on [J]'s pages; CHECKED-ar #5) |
+| group | مجموعة **[ours]** (not on [J]'s pages; CHECKED-ar #5) |
 | home group | المجموعة الأم **[ours]** |
 | group conscience | ضمير المجموعة **[ours]** (Tradition 2: «ضمير جماعتنا») |
-| sponsor / sponsee / sponsorship | **كفيل / مَكفول / الكفالة** **[ours]** (no A.A. Arabic seen; «راعٍ/رعاية» clashes with [J]'s «الرعاية» for "Twelfth Step care") |
+| sponsor / sponsee / sponsorship | **المرشد / المُرشَد / الإرشاد** **[ours]**. **Never «كفيل/مكفول/الكفالة»:** in the Gulf that is the everyday word for the kafala sponsor of a migrant worker, and this language serves the Gulf (CEO CHECKED-ar #3, 2026-11-09). No A.A. Arabic title for the sponsorship pamphlet P-15 was found online (S1 search 2026-11-09); if one turns up, it wins. Not N.A.'s word. "Sponsor Teacher" «المرشد المعلّم»; "your sponsor" «مرشدك». |
 | newcomer | القادم الجديد، القادمون الجدد [J] |
 | old-timer | العضو القديم، القدامى **[ours]** |
 | **sobriety / sober / stay sober** | **الامتناع عن الشرب / ممتنع عن الشرب / البقاء ممتنعًا عن الشرب** **[ours]**. Why: [M] and [J] write «اليقظة» for sobriety, but «يقظة روحية» is "spiritual awakening" (Step 12), and one word for both would muddle the Step. «اليقظة» stays **only inside the Preamble as [M] prints it.** "3 years sober" «ممتنع عن الشرب منذ 3 سنوات» |

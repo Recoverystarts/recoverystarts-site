@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="application-name" content="Recovery Starts">
+  <meta name="theme-color" content="#14110d">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A.A. soruları, kitaplardan yanıtlanıyor | Recovery Starts</title>
+  <meta name="description" content="A.A. hakkındaki sorular, A.A.’nın kendi literatüründen yanıtlanıyor: 1939 tarihli Büyük Kitap, Geleneklerin 1946 tarihli Uzun biçimi ve tarihleriyle birlikte sonraki kitaplar. Her alıntı denetlendi.">
+  <meta property="og:title" content="A.A. soruları, kitaplardan yanıtlanıyor">
+  <meta property="og:description" content="A.A. hakkındaki sorular, A.A.’nın kendi literatüründen yanıtlanıyor: 1939 tarihli Büyük Kitap, Geleneklerin 1946 tarihli Uzun biçimi ve tarihleriyle birlikte sonraki kitaplar. Her alıntı denetlendi.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:url" content="https://recoverystarts.com/tr/aa-questions/">
+  <meta property="og:site_name" content="Recovery Starts">
+  <meta property="og:image" content="https://recoverystarts.com/assets/og/og-steps.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "CollectionPage", "name": "A.A. questions, answered from the books", "url": "https://recoverystarts.com/aa-questions/"}
+  </script>
+  <link rel="stylesheet" href="/style.css?v=d067c37a11">
+  <style>
+    .cp-bg { position: fixed; inset: 0; background: linear-gradient(135deg,#0b0b0f 0%,#1a1a2e 40%,#16213e 70%,#0b0b0f 100%); z-index:-1; }
+    .aq-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
+    .aq { max-width: 760px; margin: 0 auto; }
+    .aq-crumb { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 1.2rem; }
+    .aq-crumb a { color: var(--text-muted); }
+    .aq h1 { font-family: var(--font-display); color: var(--text); font-size: clamp(1.7rem,5vw,2.4rem); line-height: 1.2; margin: 0 0 1.4rem; }
+    .aq h2 { font-family: var(--font-display); color: var(--gold); font-size: 1.15rem; margin: 2.2rem 0 0.8rem; }
+    .aq h3 { color: var(--text); font-size: 1rem; margin: 1.6rem 0 0.6rem; }
+    .aq p, .aq li { color: var(--text); line-height: 1.8; }
+    .aq p { margin: 0 0 1rem; }
+    .aq ul, .aq ol { margin: 0 0 1.2rem; padding-left: 1.3rem; }
+    .aq blockquote { margin: 1.2rem 0; padding: 0.8rem 1.1rem; border-left: 3px solid var(--gold); background: var(--bg-card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .aq blockquote p { margin: 0; }
+    .aq a { color: var(--accent, #2DD4BF); overflow-wrap: anywhere; }
+    .aq table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.4rem; font-size: 0.86rem; display: block; overflow-x: auto; }
+    .aq th, .aq td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
+    .aq th { color: var(--text); }
+    .aq .aq-short { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.2rem 0.4rem; margin-bottom: 1.6rem; }
+    .aq-note { font-size: 0.82rem; color: var(--text-dim); margin-top: 2.4rem; line-height: 1.6; }
+    .aq-group { margin: 2rem 0 0.6rem; }
+    .aq-list { list-style: none; padding: 0 !important; }
+    .aq-list li { margin: 0 0 0.5rem; line-height: 1.5; }
+  </style>
+  <link rel="canonical" href="https://recoverystarts.com/tr/aa-questions/">
+  <link rel="alternate" hreflang="en" href="https://recoverystarts.com/aa-questions/">
+  <link rel="alternate" hreflang="tr" href="https://recoverystarts.com/tr/aa-questions/">
+  <link rel="alternate" hreflang="es" href="https://recoverystarts.com/es/aa-questions/">
+  <link rel="alternate" hreflang="pt-BR" href="https://recoverystarts.com/pt/aa-questions/">
+  <link rel="alternate" hreflang="fr" href="https://recoverystarts.com/fr/aa-questions/">
+  <link rel="alternate" hreflang="fa" href="https://recoverystarts.com/fa/aa-questions/">
+  <link rel="alternate" hreflang="pl" href="https://recoverystarts.com/pl/aa-questions/">
+  <link rel="alternate" hreflang="de" href="https://recoverystarts.com/de/aa-questions/">
+  <link rel="alternate" hreflang="sv" href="https://recoverystarts.com/sv/aa-questions/">
+  <link rel="alternate" hreflang="nl" href="https://recoverystarts.com/nl/aa-questions/">
+  <link rel="alternate" hreflang="hi" href="https://recoverystarts.com/hi/aa-questions/">
+  <link rel="alternate" hreflang="ja" href="https://recoverystarts.com/ja/aa-questions/">
+  <link rel="alternate" hreflang="ru" href="https://recoverystarts.com/ru/aa-questions/">
+  <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/aa-questions/">
+<style id="rs-globe-css">
+.rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
+.rs-globe summary{list-style:none;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#F2F4FF;cursor:pointer}
+.rs-globe summary::-webkit-details-marker{display:none}
+.rs-globe summary:hover{border-color:#2DD4BF;color:#2DD4BF}
+.rs-globe .rs-langs{position:absolute;right:0;top:calc(100% + 10px);min-width:180px;background:#0E111C;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:8px;box-shadow:0 24px 56px rgba(0,0,0,.55);display:flex;flex-direction:column;z-index:1000}
+.rs-globe .rs-langs a,.rs-globe .rs-here{padding:8px 10px;border-radius:8px;color:#D0D7EE;font-size:15px;text-decoration:none}
+.rs-globe .rs-langs a:hover{background:rgba(45,212,191,.10);color:#2DD4BF}
+.rs-globe .rs-here{color:#2DD4BF;font-weight:600}
+@media (max-width:1020px){.rs-globe{order:1;margin-left:auto;margin-right:8px}.nav-toggle{order:2}}
+/* the phone menu at any width where the menu's words don't fit (a longer language, a big font): the few lines in
+   GLOBE_JS measure the bar and set .rs-tight — the same rules as style.css's max-width:1020px block */
+/* on a wide screen the menu's own width is capped (--max-width): the globe sits in the margin outside it (.rs-out), and
+   the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
+.nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
+.nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
+/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
+   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
+   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+@media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
+.rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
+.rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
+.rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
+.rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
+.rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
+/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+   this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
+.rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
+.rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
+.rs-offer button{background:none;border:0;color:inherit;font-size:22px;line-height:1;min-width:36px;min-height:36px;cursor:pointer}
+</style>
+</head>
+<body>
+  <div class="cp-bg"></div>
+  <a href="#main" class="skip-link">İçeriğe geç</a>
+  <nav class="nav"><div class="nav-inner">
+    <a href="/tr/" class="nav-brand">Recovery Starts</a>
+    <a class="rs-bb notranslate" href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=play-badge&amp;utm_content=aa-questions-bar" data-play="https://play.google.com/store/apps/details?id=org.autogrow.recoveryeinstein&amp;referrer=utm_source%3Drecoverystarts%26utm_medium%3Dsite%26utm_campaign%3Dplay-badge%26utm_content%3Daa-questions-bar" rel="noopener" aria-label="Büyük Kitap uygulaması — AA Big Book Search + AI Guide"><i aria-hidden="true"></i><span>Büyük Kitap uygulaması</span></a>
+    <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="nav-menu" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">☰</button>
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="/meetings/find/?hl=tr" class="nav-cta nav-cta-map">Toplantı Haritası</a></li>
+      <li><a href="/online/?hl=tr" class="nav-cta nav-cta-online">Çevrim İçi Toplantılar</a></li>
+      <li class="has-sub nav-group-start"><a href="/tr/daily-reflection/">Günlük Okuma</a><button class="sub-toggle" aria-expanded="false" aria-label="Günlük Okuma bölümüne göz at">▾</button>
+      <ul class="sub-menu sub-menu-groups">
+        <li class="sub-group"><span class="sub-group-title">Günün Düşüncesi</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/tr/daily-reflection/today/">Bugünün düşüncesi →</a></li>
+            <li><a href="/tr/daily-reflection/january/">Ocak</a></li>
+            <li><a href="/tr/daily-reflection/february/">Şubat</a></li>
+            <li><a href="/tr/daily-reflection/march/">Mart</a></li>
+            <li><a href="/tr/daily-reflection/april/">Nisan</a></li>
+            <li><a href="/tr/daily-reflection/may/">Mayıs</a></li>
+            <li><a href="/tr/daily-reflection/june/">Haziran</a></li>
+            <li><a href="/tr/daily-reflection/july/">Temmuz</a></li>
+            <li><a href="/tr/daily-reflection/august/">Ağustos</a></li>
+            <li><a href="/tr/daily-reflection/september/">Eylül</a></li>
+            <li><a href="/tr/daily-reflection/october/">Ekim</a></li>
+            <li><a href="/tr/daily-reflection/november/">Kasım</a></li>
+            <li><a href="/tr/daily-reflection/december/">Aralık</a></li>
+            <li class="sub-hub"><a href="/tr/daily-reflection/">Tüm günün düşünceleri →</a></li>
+          </ul></li>
+        <li class="sub-group"><span class="sub-group-title">Günün Geleneği</span>
+          <ul class="sub-group-list">
+            <li class="sub-today"><a href="/tr/daily-tradition/today/">Bugünün geleneği →</a></li>
+            <li><a href="/tr/daily-tradition/january/">Ocak<small>Gelenek 1</small></a></li>
+            <li><a href="/tr/daily-tradition/february/">Şubat<small>Gelenek 2</small></a></li>
+            <li><a href="/tr/daily-tradition/march/">Mart<small>Gelenek 3</small></a></li>
+            <li><a href="/tr/daily-tradition/april/">Nisan<small>Gelenek 4</small></a></li>
+            <li><a href="/tr/daily-tradition/may/">Mayıs<small>Gelenek 5</small></a></li>
+            <li><a href="/tr/daily-tradition/june/">Haziran<small>Gelenek 6</small></a></li>
+            <li><a href="/tr/daily-tradition/july/">Temmuz<small>Gelenek 7</small></a></li>
+            <li><a href="/tr/daily-tradition/august/">Ağustos<small>Gelenek 8</small></a></li>
+            <li><a href="/tr/daily-tradition/september/">Eylül<small>Gelenek 9</small></a></li>
+            <li><a href="/tr/daily-tradition/october/">Ekim<small>Gelenek 10</small></a></li>
+            <li><a href="/tr/daily-tradition/november/">Kasım<small>Gelenek 11</small></a></li>
+            <li><a href="/tr/daily-tradition/december/">Aralık<small>Gelenek 12</small></a></li>
+            <li class="sub-hub"><a href="/tr/daily-tradition/">Tüm Günün Gelenekleri →</a></li>
+          </ul></li>
+      </ul></li>
+      <li class="has-sub"><a href="/tr/big-book/">Büyük Kitap</a><button class="sub-toggle" aria-expanded="false" aria-label="Büyük Kitap bölümüne göz at">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/tr/big-book/search/">Büyük Kitap’ta ara</a></li>
+        <li><a href="/tr/big-book/pages/">Sayfa sayfa</a></li>
+        <li><a href="/tr/big-book/">Büyük Kitap’ı edin</a></li>
+      </ul></li>
+      <li class="has-sub"><a href="/tr/aa-info/" class="active">Program</a><button class="sub-toggle" aria-expanded="false" aria-label="Program bölümüne göz at">▾</button>
+      <ul class="sub-menu sub-menu-list">
+        <li><a href="/tr/12-steps/">12 Basamak</a></li>
+        <li><a href="/tr/12-traditions/">12 Gelenek</a></li>
+        <li><a href="/tr/12-concepts/">12 Kavram</a></li>
+        <li><a href="/tr/aa-questions/">A.A. Soruları, Kitaplardan</a></li>
+        <li><a href="/tr/aa-info/">A.A. Bilgisi</a></li>
+        <li><a href="/tr/meetings/">Toplantı bul</a></li>
+      </ul></li>
+      <li><a href="/tr/about/">Hakkımızda</a></li>
+      <li class="nav-group-start nav-util"><a href="/tr/add-meeting/" class="nav-add-meeting">Toplantı ekle</a></li>
+      <li class="nav-app"><a href="/tr/download/" class="nav-cta">Uygulamayı indir</a></li>
+    </ul>
+    <details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان · Język"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></summary><div class="rs-langs"><span class="rs-here" lang="tr">✓ Türkçe</span><a href="/aa-questions/" data-hl="en" hreflang="en" lang="en">English</a><a href="/es/aa-questions/" data-hl="es" hreflang="es" lang="es">Español</a><a href="/pt/aa-questions/" data-hl="pt" hreflang="pt-BR" lang="pt-BR">Português</a><a href="/fr/aa-questions/" data-hl="fr" hreflang="fr" lang="fr">Français</a><a href="/fa/aa-questions/" data-hl="fa" hreflang="fa" lang="fa" dir="rtl">فارسی</a><a href="/pl/aa-questions/" data-hl="pl" hreflang="pl" lang="pl">Polski</a><a href="/de/aa-questions/" data-hl="de" hreflang="de" lang="de">Deutsch</a><a href="/sv/aa-questions/" data-hl="sv" hreflang="sv" lang="sv">Svenska</a><a href="/nl/aa-questions/" data-hl="nl" hreflang="nl" lang="nl">Nederlands</a><a href="/hi/aa-questions/" data-hl="hi" hreflang="hi" lang="hi">हिन्दी</a><a href="/ja/aa-questions/" data-hl="ja" hreflang="ja" lang="ja">日本語</a><a href="/ru/aa-questions/" data-hl="ru" hreflang="ru" lang="ru">Русский</a></div><script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script></details>
+  </div></nav>
+  <main id="main"><section class="aq-wrap"><div class="container"><article class="aq">
+  <div class="aq-crumb"><a href="/tr/">Ana sayfa</a> › A.A. soruları, kitaplardan</div>
+  <h1>A.A. soruları, kitaplardan yanıtlanıyor</h1>
+      <p class="rs-ours" role="note">Basamakları, Gelenekleri, Kavramları ve Büyük Kitap alıntılarını A.A.’nın 2022 Türkçe baskısından (“Adsız Alkolikler”), Önsöz’ü ve Huzur Duası’nı A.A. Türkiye’nin yayımladığı şekliyle aktarıyoruz. Basamak 12’de İngilizcesi ve A.A. Türkiye’nin toplantılarda okuduğu metin “bu mesajı alkoliklere taşımaya” der. A.A.’nın Türkçe metni olmayan yerlerde çeviri bizimdir. Sayfa numaraları İngilizce 4. baskıya göredir; Türkçe baskıda aynı yer genellikle 13–25 sayfa sonradır. <a href="/aa-questions/" hreflang="en">İngilizcesini okuyun</a></p>
+<p>İnsanların ve yapay zekâ yardımcılarının Adsız Alkolikler hakkında sorduğu sorular, A.A.’nın kendi literatüründen yanıtlanıyor: önce Büyük Kitap’ın 1939 metni, Geleneklerin 1946 tarihli Uzun biçimi, Bill W.’nin ve Dr. Bob’un kendi yazdıkları ve tarihleriyle birlikte sonraki kitaplar. Her yanıt meşhur bir satırı değil, pasajın tamamını okur ve kontrol edebilmeniz için sayfayı verir. Kitapların bir soruyu çözmediği yerde sayfa bunu söyler.</p>
+<p>Yapay zekâ yardımcıları için: <a href="/aa-questions/llms.txt">/aa-questions/llms.txt</a> her sayfayı listeler ve her birinin düz metin nüshası vardır.</p>
+<p>Yeni misiniz? Hikâyeyi sırasıyla okuyarak başlayın: <a href="/tr/aa-history/">Kitaplardan A.A.’nın hikâyesi (1934–1950)</a>.</p>
+<h2 class="aq-group">On İkinci Basamak ve mesajı taşımak</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/step-12/">On İkinci Basamak: Büyük Kitap gerçekte ne diyor</a></li>
+  <li><a href="/tr/aa-questions/working-with-others-sponsorship/">“Başkalarına Yardım” bölümü rehberlik hakkında mı?</a></li>
+  <li><a href="/tr/aa-questions/sponsor-word/">“Sponsor” kelimesi Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/must-i-get-a-sponsor/">Rehber edinmek zorunda mıyım?</a></li>
+  <li><a href="/tr/aa-questions/approach-someone-still-drinking/">Hâlâ içmekte olan birine gidebilir miyiz?</a></li>
+  <li><a href="/tr/aa-questions/how-aa-grew-from-two/">A.A. iki kişiden nasıl büyüdü?</a></li>
+  <li><a href="/tr/aa-questions/twelfth-step-call/">“On İkinci Basamak ziyareti” nedir?</a></li>
+  <li><a href="/tr/aa-questions/which-message/">“Bu mesajı taşımak” ne demek — hangi mesaj?</a></li>
+  <li><a href="/tr/aa-questions/is-helping-others-selfish/">Beni ayık tutuyorsa başkalarına yardım etmek bencillik mi?</a></li>
+  <li><a href="/tr/aa-questions/spiritual-awakening/">12. Basamak’taki “manevi uyanış” nedir?</a></li>
+  <li><a href="/tr/aa-questions/step-12-god/">12. Basamak Tanrı’ya belirli bir biçimde inanmayı şart koşar mı?</a></li>
+  <li><a href="/tr/aa-questions/bars-and-drinkers/">Büyük Kitap barlardan ve içenlerden uzak durmayı söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/helping-the-family/">Büyük Kitap içki içenin ailesine yardım konusunda ne der?</a></li>
+  <li><a href="/tr/aa-questions/money-or-a-place-to-stay/">Yeni gelene para ya da kalacak yer vermeli miyim?</a></li>
+  <li><a href="/tr/aa-questions/doesnt-want-help/">Yardım ettiğim kişi bunu istemiyorsa ne olacak?</a></li>
+</ul>
+<h2 class="aq-group">Basamaklar</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/where-are-the-steps/">On İki Basamak Büyük Kitap’ın neresinde?</a></li>
+  <li><a href="/tr/aa-questions/steps-rules-or-suggestions/">Basamaklar kural mı, öneri mi?</a></li>
+  <li><a href="/tr/aa-questions/step-1-powerless/">1. Basamak ne diyor? Neye karşı güçsüz?</a></li>
+  <li><a href="/tr/aa-questions/religious-to-work-the-steps/">Basamakları çalışmak için dindar olmam gerekir mi?</a></li>
+  <li><a href="/tr/aa-questions/third-step-prayer/">Üçüncü Basamak duası nedir, nerededir?</a></li>
+  <li><a href="/tr/aa-questions/how-to-do-step-4/">Büyük Kitap 4. Basamak’ın nasıl yapılacağını nasıl anlatır?</a></li>
+  <li><a href="/tr/aa-questions/who-hears-fifth-step/">Beşinci Basamağımı kime anlatırım?</a></li>
+  <li><a href="/tr/aa-questions/seventh-step-prayer/">Yedinci Basamak duası nedir, nerededir?</a></li>
+  <li><a href="/tr/aa-questions/how-to-make-amends/">Büyük Kitap telafinin nasıl yapılacağını nasıl anlatır?</a></li>
+  <li><a href="/tr/aa-questions/the-promises/">“Vaatler” nerededir ve ne vadeder?</a></li>
+  <li><a href="/tr/aa-questions/steps-10-and-11/">10. ve 11. Basamaklar gün gün ne ister?</a></li>
+  <li><a href="/tr/aa-questions/faith-without-works/">“Faith without works is dead” (işsiz iman ölüdür) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/how-long-to-work-the-steps/">İlk üyeler Basamakları çalışmak için ne kadar sürdü?</a></li>
+  <li><a href="/tr/aa-questions/definition-of-insanity/">Deliliğin tanımı Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/ninety-in-ninety/">Büyük Kitap “90 günde 90 toplantı” der mi?</a></li>
+  <li><a href="/tr/aa-questions/acceptance-is-the-answer/">“Acceptance is the answer” (kabullenme cevaptır) ana metnin bir parçası mı?</a></li>
+  <li><a href="/tr/aa-questions/doctors-opinion/">“Doktorun Görüşü” nedir, kim yazdı?</a></li>
+  <li><a href="/tr/aa-questions/alcoholism-illness/">Büyük Kitap alkolizmin bir hastalık olmasıyla ne demek istiyor?</a></li>
+  <li><a href="/tr/aa-questions/aa-religious/">A.A. dinî bir kuruluş mu?</a></li>
+  <li><a href="/tr/aa-questions/treatment-centres/">Büyük Kitap tedavi merkezlerini onaylıyor mu?</a></li>
+</ul>
+<h2 class="aq-group">Gelenekler</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/traditions-why-written/">On İki Gelenek neden yazıldı?</a></li>
+  <li><a href="/tr/aa-questions/traditions-and-steps-dates/">Gelenekler Basamaklarla birlikte mi yazıldı?</a></li>
+  <li><a href="/tr/aa-questions/traditions-in-big-book/">Gelenekler Büyük Kitap’ın neresinde?</a></li>
+  <li><a href="/tr/aa-questions/traditions-long-form/">Geleneklerin Uzun biçimi nedir ve neden kısa biçim yerine onu okumalı?</a></li>
+  <li><a href="/tr/aa-questions/traditions-rules-groups-members/">Gelenekler kural mı? Kimin için geçerli: gruplar mı, üyeler mi?</a></li>
+  <li><a href="/tr/aa-questions/thrown-out-of-aa/">A.A.’dan biri atılabilir mi?</a></li>
+  <li><a href="/tr/aa-questions/only-requirement-membership/">A.A. üyeliğinin tek koşulu nedir?</a></li>
+  <li><a href="/tr/aa-questions/tradition-1-unity/">Birinci Gelenek: “önce benim ayıklığım” demek mi?</a></li>
+  <li><a href="/tr/aa-questions/tradition-2-authority/">İkinci Gelenek: A.A.’da kimsenin otoritesi var mı?</a></li>
+  <li><a href="/tr/aa-questions/group-conscience-vote/">Grup bilinci çoğunluk oyu mudur?</a></li>
+  <li><a href="/tr/aa-questions/tradition-4-autonomy/">Dördüncü Gelenek: GSO bir gruba ne yapacağını söyleyebilir mi?</a></li>
+  <li><a href="/tr/aa-questions/tradition-5-primary-purpose/">Beşinci Gelenek: bir grubun tek amacı nedir?</a></li>
+  <li><a href="/tr/aa-questions/tradition-6-treatment-centres/">Altıncı Gelenek: bir A.A. grubu tedavi merkeziyle iş birliği yapabilir mi?</a></li>
+  <li><a href="/tr/aa-questions/clubs-and-aa/">Bill W. kulüpler ve A.A. hakkında ne dedi?</a></li>
+  <li><a href="/tr/aa-questions/tradition-7-outside-money/">Yedinci Gelenek: A.A. dışarıdan para alır mı?</a></li>
+  <li><a href="/tr/aa-questions/tradition-8-paid-twelfth-step/">Sekizinci Gelenek: On İkinci Basamak çalışması için kimseye ödeme yapılabilir mi?</a></li>
+  <li><a href="/tr/aa-questions/tradition-9-organized/">Dokuzuncu Gelenek: A.A. örgütlü mü? Onu kim yönetiyor?</a></li>
+  <li><a href="/tr/aa-questions/tradition-10-outside-issues/">Onuncu Gelenek: A.A. dışarıdaki konularda taraf tutar mı?</a></li>
+  <li><a href="/tr/aa-questions/tradition-11-advertising/">On Birinci Gelenek: A.A. reklam yapar mı?</a></li>
+  <li><a href="/tr/aa-questions/tradition-12-anonymity-secret/">On İkinci Gelenek: adsızlık A.A.’yı gizli tutmak mı demek?</a></li>
+  <li><a href="/tr/aa-questions/why-aa-is-anonymous/">A.A. neden adsız?</a></li>
+  <li><a href="/tr/aa-questions/group-names/">Bir A.A. grubuna bir tedavi merkezinin ya da bir kişinin adı verilebilir mi?</a></li>
+  <li><a href="/tr/aa-questions/home-group/">Ev grubu nedir ve Gelenekler ona nasıl yol gösterir?</a></li>
+  <li><a href="/tr/aa-questions/business-meeting/">Grup iş toplantısı ne için yapılır?</a></li>
+  <li><a href="/tr/aa-questions/no-outside-affiliation/">“Dışarıdan hiçbir bağlantı yok” uygulamada ne demek?</a></li>
+  <li><a href="/tr/aa-questions/traditions-formalities/">Gelenekler sadece formalite mi?</a></li>
+</ul>
+<h2 class="aq-group">A.A. nasıl başladı</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/how-bill-and-bob-met/">Bill W. ile Dr. Bob nasıl tanıştı?</a></li>
+  <li><a href="/tr/aa-questions/who-was-dr-bob/">Dr. Bob kimdi?</a></li>
+  <li><a href="/tr/aa-questions/aa-number-three/">A.A.’nın üçüncü üyesi kimdi ve nasıl bulundu?</a></li>
+  <li><a href="/tr/aa-questions/why-the-big-book-was-written/">Büyük Kitap neden ve ne zaman yazıldı?</a></li>
+  <li><a href="/tr/aa-questions/foreword-first-edition/">Birinci Baskı İçin Önsöz A.A.’nın ne için olduğunu nasıl anlatıyor?</a></li>
+  <li><a href="/tr/aa-questions/members-in-1939/">A.A.’nın 1939’da kaç üyesi vardı?</a></li>
+  <li><a href="/tr/aa-questions/aa-1939-to-1950/">A.A.’da 1939 ile 1950 arasında ne değişti?</a></li>
+  <li><a href="/tr/aa-questions/cleveland-1950/">1950 Cleveland kongresinde ne oldu?</a></li>
+  <li><a href="/tr/aa-questions/dr-bob-death-last-words/">Dr. Bob ne zaman öldü ve A.A.’ya son sözleri neydi?</a></li>
+  <li><a href="/tr/aa-questions/three-legacies/">A.A.’nın Üç Mirası nedir?</a></li>
+</ul>
+<h2 class="aq-group">Kavramlar ve hizmet</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/concepts-what-and-why/">On İki Kavram nedir ve neden yazıldı?</a></li>
+  <li><a href="/tr/aa-questions/concepts-vs-traditions/">On İki Kavram, On İki Gelenek ile aynı şey mi?</a></li>
+  <li><a href="/tr/aa-questions/who-has-final-say/">A.A.’da son söz kimin?</a></li>
+  <li><a href="/tr/aa-questions/aa-top-down/">A.A. yukarıdan aşağıya mı yönetiliyor?</a></li>
+  <li><a href="/tr/aa-questions/right-of-appeal/">Temyiz Hakkı nedir ve azınlık neden önemlidir?</a></li>
+  <li><a href="/tr/aa-questions/gsr-district-area/">GHT, bölge ve alan nedir?</a></li>
+  <li><a href="/tr/aa-questions/concept-01/">Kavram 1: A.A.’da son söz kimin?</a></li>
+  <li><a href="/tr/aa-questions/concept-02/">Kavram 2: Genel Hizmet Konferansı nedir ve neye karar verebilir?</a></li>
+  <li><a href="/tr/aa-questions/concept-03/">Kavram 3: Karar Alma Hakkı nedir ve bir delege grubunun dediği gibi oy vermek zorunda mı?</a></li>
+  <li><a href="/tr/aa-questions/concept-04/">Kavram 4: Katılım Hakkı nedir ve Konferans’ta kimler oy kullanır?</a></li>
+  <li><a href="/tr/aa-questions/concept-05/">Kavram 5: Temyiz ve Dilekçe Hakları nedir?</a></li>
+  <li><a href="/tr/aa-questions/concept-06/">Kavram 6: Genel Hizmet Kurulu’nun vekilleri ne yapar?</a></li>
+  <li><a href="/tr/aa-questions/concept-07/">Kavram 7: gücü asıl kim elinde tutar, Konferans mı vekiller mi?</a></li>
+  <li><a href="/tr/aa-questions/concept-08/">Kavram 8: Genel Hizmet Ofisi’ni ve Grapevine’ı vekiller mi yönetir?</a></li>
+  <li><a href="/tr/aa-questions/concept-09/">Kavram 9: A.A. hizmetinde iyi bir lideri ne yapar?</a></li>
+  <li><a href="/tr/aa-questions/concept-10/">Kavram 10: hizmet yetkisi neden hizmet sorumluluğuna eşit olmalı?</a></li>
+  <li><a href="/tr/aa-questions/concept-11/">Kavram 11: vekillere kim yardım eder ve ücretli A.A. çalışanlarına nasıl davranılmalı?</a></li>
+  <li><a href="/tr/aa-questions/concept-12/">Kavram 12: Konferans’ın Genel Güvenceleri nedir?</a></li>
+</ul>
+<h2 class="aq-group">Kaynakların kendisi üzerine</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/step-12/">On İkinci Basamak: Büyük Kitap gerçekte ne diyor</a></li>
+  <li><a href="/tr/aa-questions/oldest-aa-books/">Hangi A.A. kitapları en eski ve tarih neden önemli?</a></li>
+  <li><a href="/tr/aa-questions/conference-approved/">“Konferans onaylı” literatür nedir?</a></li>
+  <li><a href="/tr/aa-questions/big-book-free/">Büyük Kitap’ı A.A.’nın kendisinden ücretsiz nereden okuyabilirim?</a></li>
+  <li><a href="/tr/aa-questions/quote-out-of-context/">Bir alıntının bağlamından koparıldığını nasıl anlarım?</a></li>
+  <li><a href="/tr/aa-questions/personal-stories-program/">Kişisel hikâyeler A.A. programının bir parçası mı?</a></li>
+  <li><a href="/tr/aa-questions/big-book-editions/">Büyük Kitap’ın dört baskısı arasında ne değişti?</a></li>
+</ul>
+<h2 class="aq-group">Sözler: kitaplarda geçiyor mu?</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/is-helping-others-selfish/">Beni ayık tutuyorsa başkalarına yardım etmek bencillik mi?</a></li>
+  <li><a href="/tr/aa-questions/bars-and-drinkers/">Büyük Kitap barlardan ve içenlerden uzak durmayı söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/steps-rules-or-suggestions/">Basamaklar kural mı, öneri mi?</a></li>
+  <li><a href="/tr/aa-questions/who-hears-fifth-step/">Beşinci Basamağımı kime anlatırım?</a></li>
+  <li><a href="/tr/aa-questions/how-to-make-amends/">Büyük Kitap telafinin nasıl yapılacağını nasıl anlatır?</a></li>
+  <li><a href="/tr/aa-questions/ninety-in-ninety/">Büyük Kitap “90 günde 90 toplantı” der mi?</a></li>
+  <li><a href="/tr/aa-questions/dr-bob-death-last-words/">Dr. Bob ne zaman öldü ve A.A.’ya son sözleri neydi?</a></li>
+  <li><a href="/tr/aa-questions/one-day-at-a-time/">“One day at a time” (günü gününe) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/keep-coming-back/">“Keep coming back” (gelmeye devam edin) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/fake-it-till-you-make-it/">Büyük Kitap “fake it till you make it” (başarana kadar numarasını yap) der mi?</a></li>
+  <li><a href="/tr/aa-questions/halt/">HALT (hungry, angry, lonely, tired — aç, öfkeli, yalnız, yorgun) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/best-thinking/">“Your best thinking got you here” (sizi buraya en iyi düşünceleriniz getirdi) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/meeting-makers/">“Meeting makers make it” (toplantıya gelen başarır) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/people-places-things/">“People, places and things” (insanlar, yerler ve şeyler) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/relapse-part-of-recovery/">Büyük Kitap “kayma iyileşmenin bir parçasıdır” der mi? Kayma hakkında ne söyler?</a></li>
+  <li><a href="/tr/aa-questions/thinking-problem/">“It’s not a drinking problem, it’s a thinking problem” (sorun içki değil, düşünce) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/sick-as-our-secrets/">“We’re only as sick as our secrets” (sırlarımız kadar hastayız) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/god-doesnt-make-junk/">“God doesn’t make junk” (Tanrı çöp yapmaz) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/stick-with-the-winners/">Büyük Kitap “stick with the winners” (kazananlarla kal) der mi?</a></li>
+  <li><a href="/tr/aa-questions/progress-not-perfection/">“Progress, not perfection” (mükemmellik değil, gelişim) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/let-go-and-let-god/">“Let go and let God” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/easy-does-it/">“Easy Does It”, “First Things First” ve “Live and Let Live” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/keep-it-simple/">“Keep it simple” (basit tutun) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/turn-it-over/">“Turn it over” (bırak, O’na ver) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/higher-power-anything/">Üstün Gücünüz herhangi bir şey olabilir mi: bir kapı tokmağı, grup?</a></li>
+  <li><a href="/tr/aa-questions/dry-drunk/">“Dry drunk” (kuru ayyaş) nedir? Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/pink-cloud/">“Pembe bulut” nedir? Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/thirteenth-step/">“On Üçüncü Basamak” nedir?</a></li>
+  <li><a href="/tr/aa-questions/hit-bottom/">Büyük Kitap “dibi görmek” zorunda olduğunuzu söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/works-if-you-work-it/">“It works if you work it” (uygularsan işe yarar) Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/give-it-away/">Büyük Kitap “elde tutmak için vermek gerekir” der mi?</a></li>
+  <li><a href="/tr/aa-questions/first-drink/">“Seni sarhoş eden ilk kadehtir” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/once-an-alcoholic/">Büyük Kitap “bir kere alkolik olan hep alkoliktir” der mi?</a></li>
+  <li><a href="/tr/aa-questions/no-musts/">A.A.’da “hiçbir şart yok” (no musts) demek doğru mu?</a></li>
+  <li><a href="/tr/aa-questions/rule-62/">“62 No’lu Kural” nedir?</a></li>
+  <li><a href="/tr/aa-questions/selfish-program/">“A.A. bencil bir programdır” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/side-of-the-street/">“Kendi kaldırımını temiz tut” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/think-the-drink-through/">“İçkiyi sonuna kadar düşünmek” (ya da “kaseti ileri sarmak”) Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/stinking-thinking/">“Kokuşmuş düşünce” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/before-the-miracle/">“Mucize gerçekleşmeden bırakma” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/bring-the-body/">“Bedeni getir, zihin peşinden gelir” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/sick-and-tired/">“Hasta ve yorgun olmaktan bıkıp usanmak” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/gratitude/">Büyük Kitap’ın ana metni şükranı anlatıyor mu? (“şükran tutumu”)</a></li>
+  <li><a href="/tr/aa-questions/this-too-shall-pass/">“Bu da geçer” A.A. kitaplarında var mı?</a></li>
+  <li><a href="/tr/aa-questions/grace-of-god/">“Tanrı’nın lütfu olmasaydı ben de orada olurdum” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/expectations-resentments/">“Beklentiler önceden tasarlanmış kızgınlıklardır” Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/fear-false-evidence/">Büyük Kitap korkunun “gerçek gibi görünen sahte kanıt” olduğunu söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/god-acronyms/">“G.O.D. = Good Orderly Direction / Group Of Drunks” A.A. kitaplarında var mı?</a></li>
+  <li><a href="/tr/aa-questions/character-defects-shortcomings/">“Karakter kusurları” ya da “kişilik bozuklukları”, “eksiklikler”: Büyük Kitap ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/chips-and-birthdays/">Jetonlar, sikkeler, madalyonlar ve ayıklık yıldönümleri Büyük Kitap’ta var mı? Nereden çıktılar?</a></li>
+  <li><a href="/tr/aa-questions/no-crosstalk/">“Çapraz konuşma yok” bir A.A. kuralı mı?</a></li>
+  <li><a href="/tr/aa-questions/disease-push-ups/">“Hastalığınız otoparkta şınav çekiyor” kitaplarda var mı?</a></li>
+  <li><a href="/tr/aa-questions/st-francis-prayer/">Aziz Francis Duası Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/responsibility-declaration/">“Ben sorumluyum…” (Sorumluluk Beyanı) nereden geliyor?</a></li>
+  <li><a href="/tr/aa-questions/willpower/">Büyük Kitap irade gücünün işe yaramadığını söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/trust-god-clean-house/">Büyük Kitap “Tanrı’ya güven, bahar temizliği yap, başkalarına yardım et” der mi?</a></li>
+</ul>
+<h2 class="aq-group">Sık sık tek başına alıntılanan Büyük Kitap pasajları</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/the-promises/">“Vaatler” nerededir ve ne vadeder?</a></li>
+  <li><a href="/tr/aa-questions/alcoholism-illness/">Büyük Kitap alkolizmin bir hastalık olmasıyla ne demek istiyor?</a></li>
+  <li><a href="/tr/aa-questions/rarely-have-we-seen/">“Bizim yolumuzu izleyerek programımızı uygulayanlardan çok azının başarısızlığa uğradığını gördük” gerçekte ne diyor ve kimin iyileşmeyebileceğini söylüyor?</a></li>
+  <li><a href="/tr/aa-questions/half-measures/">“Yarım yamalak çabalarımız bize hiçbir kazanç sağlamadı” bağlamında ne demek?</a></li>
+  <li><a href="/tr/aa-questions/any-length/">“Ne gerekiyorsa yapmaya” ne için söyleniyor?</a></li>
+  <li><a href="/tr/aa-questions/cunning-baffling-powerful/">“Kurnaz, aldatıcı ve çok güçlü” nerede geçiyor ve hemen ardından ne geliyor?</a></li>
+  <li><a href="/tr/aa-questions/abc-of-page-60/">60. sayfanın a, b, c’si nedir (“Belki de insani hiçbir güç… Eğer istersek Tanrı bizi iyileştirebilirdi”)?</a></li>
+  <li><a href="/tr/aa-questions/self-will-run-riot/">Büyük Kitap’ta “Bencillik —benmerkezcilik!” ve “azgınlaşmış bencil irade” ne demek?</a></li>
+  <li><a href="/tr/aa-questions/resentment-number-one/">“Bir numarada kızgınlık vardı” nerede geçiyor ve ne demek?</a></li>
+  <li><a href="/tr/aa-questions/liquor-but-a-symptom/">Büyük Kitap alkolün “sadece bir belirti” olduğunu söyler mi? Asıl sorun içmek mi?</a></li>
+  <li><a href="/tr/aa-questions/spiritual-malady/">“Manevi hastalık” nedir?</a></li>
+  <li><a href="/tr/aa-questions/this-is-a-sick-man/">Büyük Kitap gerçekten kızdığınız insanlar için dua etmeyi söyler mi (“Bu, hasta bir adam”)?</a></li>
+  <li><a href="/tr/aa-questions/god-doing-for-us/">“Kendimiz için yapamadıklarımızı Tanrı bizim için yapıyor” nerede geçiyor ve neyle ilgili?</a></li>
+  <li><a href="/tr/aa-questions/daily-reprieve/">“Gündelik rahatlama” nedir ve neye “bağlıdır”?</a></li>
+  <li><a href="/tr/aa-questions/love-and-tolerance/">“Sevgi ve başkalarına karşı hoşgörü yaşamımızın kanunudur” nerede geçiyor?</a></li>
+  <li><a href="/tr/aa-questions/spiritual-life-not-a-theory/">“Manevi yaşam bir teori değildir. Onu yaşamalıyız” ne için söyleniyor?</a></li>
+  <li><a href="/tr/aa-questions/design-for-living/">“Gerçekten işe yarayan bir yaşam tasarımı” nedir?</a></li>
+  <li><a href="/tr/aa-questions/bedevilments/">“Başımıza bela olan şeyler” nedir?</a></li>
+  <li><a href="/tr/aa-questions/lack-of-power/">“Lack of power, that was our dilemma”: hangi ikilem?</a></li>
+  <li><a href="/tr/aa-questions/god-is-everything-or-nothing/">“Tanrı ya her şeydir ya da hiçbir şeydir” kendi yerinde ne demek?</a></li>
+  <li><a href="/tr/aa-questions/fundamental-idea-of-god/">“Her erkeğin, kadının ve çocuğun derinliklerinde temel Tanrı fikri vardır” ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/phenomenon-of-craving-allergy/">“Arzulama olgusu” nedir ve “alerji” nedir?</a></li>
+  <li><a href="/tr/aa-questions/restless-irritable-discontented/">“Huzursuz, sinirli ve hoşnutsuz” sözünü kim, ne hakkında söyledi?</a></li>
+  <li><a href="/tr/aa-questions/happy-joyous-free/">Büyük Kitap “mutlu, neşeli ve hür” olmamız gerektiğini söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/contempt-prior-to-investigation/">“Araştırmadan aşağılamak” nerede geçiyor ve Büyük Kitap bunu kimin söylediğini yazıyor?</a></li>
+  <li><a href="/tr/aa-questions/last-lines-big-book/">Büyük Kitap’ın son satırları ne diyor (“sadece tavsiye”, “sadece biraz bilgi sahibiyiz”, “Mutlu Kaderin Yolu”)?</a></li>
+  <li><a href="/tr/aa-questions/self-knowledge/">“Sadece kendini tanımakla içkiyi bırakması hemen hemen mümkün değildir” ne anlama gelir?</a></li>
+  <li><a href="/tr/aa-questions/jaywalker/">Büyük Kitap’taki “jaywalker” (kuralsızca yürüyen adam) kim ve bu hikâye ne için?</a></li>
+  <li><a href="/tr/aa-questions/jim-whiskey-milk/">“Jim” kim ve süte neden viski?</a></li>
+  <li><a href="/tr/aa-questions/man-of-thirty/">Yirmi beş yıl ayık kalıp yeniden içen adam (s. 32) kim?</a></li>
+  <li><a href="/tr/aa-questions/fourth-dimension/">“Dördüncü bir boyuta” fırlatılmak ne demektir?</a></li>
+  <li><a href="/tr/aa-questions/faith-twenty-four-hours/">“İçimizde ve yaptıklarımızda her gün 24 saat işleyen bir inanç olmalıdır; aksi takdirde helak oluruz” neyi ifade eder?</a></li>
+  <li><a href="/tr/aa-questions/people-who-would-not-mix/">“Biz normalde başkalarının arasına karışmayan insanlarız” ne söyler?</a></li>
+  <li><a href="/tr/aa-questions/who-are-you-to-say/">“Sen kim oluyorsun da Tanrı’nın olmadığını söyleyebiliyorsun!”: bunu kim, kime söylüyor?</a></li>
+  <li><a href="/tr/aa-questions/thy-will-be-done/">Büyük Kitap’ta “İraden tecelli edecektir” ne anlama gelir?</a></li>
+  <li><a href="/tr/aa-questions/pause-when-agitated/">“Tedirgin olursak ya da şüpheye düşersek bir ara verir” ne anlama gelir ve nerede geçer?</a></li>
+  <li><a href="/tr/aa-questions/maximum-service/">“Asıl amacımız” nedir (“Tanrı’ya ve insanlara gücümüzün yettiği kadar hizmet edebilecek seviyeye erişmek”)?</a></li>
+  <li><a href="/tr/aa-questions/tornado/">“Başkalarının yaşamlarını da kasıp kavurarak yoluna devam eden bir kasırga gibidir” ne anlama gelir?</a></li>
+  <li><a href="/tr/aa-questions/other-spiritual-approach/">Büyük Kitap yeni gelenin işi A.A.’nın yöntemiyle yapması gerektiğini söyler mi? (“…başka bir manevi yaklaşımı tercih ediyorsa, onu vicdanının ardından gitmesi yönünde destekleyin”)</a></li>
+</ul>
+<h2 class="aq-group">A.A. kimin için, ne değil</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/aa-and-drug-addiction/">A.A. uyuşturucu ya da başka şeylere bağımlı olanlar için mi?</a></li>
+  <li><a href="/tr/aa-questions/singleness-of-purpose/">“Tek amaçlılık” nereden geliyor? Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/still-drinking/">Hâlâ içiyorsam A.A.’ya gidebilir miyim?</a></li>
+  <li><a href="/tr/aa-questions/open-and-closed-meetings/">Açık ve kapalı toplantı arasındaki fark ne? Aile ya da arkadaşlar gelebilir mi?</a></li>
+  <li><a href="/tr/aa-questions/court-slips/">A.A. mahkeme kâğıdı imzalar ya da mahkemeler ve denetimli serbestlik için yazı yazar mı?</a></li>
+  <li><a href="/tr/aa-questions/aa-treatment-program/">A.A. bir tedavi programı mı? Detoks, barınma ya da danışmanlık sağlar mı?</a></li>
+  <li><a href="/tr/aa-questions/does-aa-cost/">A.A.’nın bir ücreti var mı?</a></li>
+  <li><a href="/tr/aa-questions/preamble/">A.A. Önsözü Büyük Kitap’ta var mı? Nereden geldi?</a></li>
+  <li><a href="/tr/aa-questions/cooperation-not-affiliation/">“İş birliği ama bağlantı değil” nereden geliyor?</a></li>
+  <li><a href="/tr/aa-questions/doctors-and-medicine/">Büyük Kitap doktorlardan, ilaçtan ya da psikiyatriden uzak durmayı söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/women-in-aa/">Büyük Kitap yalnızca erkekler için mi yazıldı? A.A. kadınlar için de mi?</a></li>
+  <li><a href="/tr/aa-questions/al-anon/">Al-Anon A.A.’nın bir parçası mı?</a></li>
+</ul>
+<h2 class="aq-group">Yeni gelen ve aile için</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/im-an-alcoholic/">“Ben bir alkoliğim” demek zorunda mıyım? “Merhaba, ben ___, ve ben bir alkoliğim” Büyük Kitap’ta geçiyor mu?</a></li>
+  <li><a href="/tr/aa-questions/am-i-an-alcoholic/">Alkolik olup olmadığımı nasıl anlarım?</a></li>
+  <li><a href="/tr/aa-questions/drink-normally-again/">Bir alkolik bir daha normal şekilde içebilir mi?</a></li>
+  <li><a href="/tr/aa-questions/aa-meeting/">Bir A.A. toplantısında ne olur?</a></li>
+  <li><a href="/tr/aa-questions/meeting-privacy/">Toplantıda söylediklerim mahrem kalır mı?</a></li>
+  <li><a href="/tr/aa-questions/recovered-or-recovering/">“İyileşmiş” mi “iyileşmekte olan” mı: Büyük Kitap hangi kelimeyi kullanıyor?</a></li>
+  <li><a href="/tr/aa-questions/spouse-drinks/">Eşim içiyor. Büyük Kitap ne yapmamı söylüyor?</a></li>
+  <li><a href="/tr/aa-questions/family-afterward/">İçki bittikten sonra ailenin başına ne gelir?</a></li>
+  <li><a href="/tr/aa-questions/to-employers/">Büyük Kitap işverenlere ne der?</a></li>
+</ul>
+<h2 class="aq-group">Erken dönem program ve A.A.’nın başlangıcı</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/six-steps/">On İki Basamak’tan önce kullanılan “altı basamak” neydi?</a></li>
+  <li><a href="/tr/aa-questions/how-the-steps-were-written/">On İki Basamak nasıl yazıldı?</a></li>
+  <li><a href="/tr/aa-questions/oxford-group/">Erken dönem A.A. Oxford Grupları’ndan ne aldı ve neden ayrıldı?</a></li>
+  <li><a href="/tr/aa-questions/four-absolutes/">“Dört Mutlak” neydi? Büyük Kitap’ta var mı?</a></li>
+  <li><a href="/tr/aa-questions/akron-and-new-york/">İlk yıllarda Akron ile New York nasıl farklıydı?</a></li>
+  <li><a href="/tr/aa-questions/aa-birthday-june-10/">A.A.’nın doğum günü neden 10 Haziran 1935?</a></li>
+  <li><a href="/tr/aa-questions/carl-jung/">Carl Jung’un A.A.’nın başlangıcında payı neydi?</a></li>
+  <li><a href="/tr/aa-questions/ebby/">“Bill’in Hikâyesi”ndeki eski okul arkadaşı (Ebby) kimdi?</a></li>
+  <li><a href="/tr/aa-questions/towns-hospital/">Bill W.’nin Towns Hastanesi’nde başına ne geldi?</a></li>
+  <li><a href="/tr/aa-questions/william-james/">Büyük Kitap neden William James’ten söz ediyor?</a></li>
+  <li><a href="/tr/aa-questions/sister-ignatia/">Rahibe Ignatia kimdi ve St. Thomas Hastanesi’nin payı neydi?</a></li>
+  <li><a href="/tr/aa-questions/henrietta-seiberling/">Henrietta Seiberling kimdi?</a></li>
+  <li><a href="/tr/aa-questions/rockefeller-money/">Erken dönem A.A. Rockefeller’ın parasını neden geri çevirdi?</a></li>
+  <li><a href="/tr/aa-questions/alcoholic-foundation/">Alcoholic Foundation neydi?</a></li>
+  <li><a href="/tr/aa-questions/works-publishing/">Büyük Kitap’ın parası nasıl bulundu ve nasıl yayımlandı (Works Publishing)?</a></li>
+  <li><a href="/tr/aa-questions/big-book-draft/">1939’dan önce Büyük Kitap’ın bir taslağı var mıydı?</a></li>
+  <li><a href="/tr/aa-questions/aa-name/">Adsız Alkolikler adını nasıl aldı? Kitabın adı “The Way Out” mıydı?</a></li>
+  <li><a href="/tr/aa-questions/who-wrote-the-chapters/">Büyük Kitap’ın bölümlerini, “Eşler İçin” dâhil, kim yazdı?</a></li>
+  <li><a href="/tr/aa-questions/jack-alexander-article/">Jack Alexander yazısı (1941) neydi ve ne yaptı?</a></li>
+  <li><a href="/tr/aa-questions/reading-before-big-book/">İlk üyeler Büyük Kitap yokken ne okuyordu?</a></li>
+  <li><a href="/tr/aa-questions/serenity-prayer/">Huzur Duası A.A.’ya nereden geldi?</a></li>
+  <li><a href="/tr/aa-questions/lords-prayer/">Bazı toplantılar neden Rabbin Duası’yla kapanıyor?</a></li>
+  <li><a href="/tr/aa-questions/cleveland-first-aa-group/">Cleveland grubu kendine Adsız Alkolikler adını veren ilk grup nasıl oldu?</a></li>
+</ul>
+<h2 class="aq-group">Önceki sayfaların tek başına ele almadığı basamaklar</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/steps-6-7-8/">Altıncı, Yedinci ve Sekizinci Basamak ne ister ve Büyük Kitap her biri hakkında ne kadar şey söylüyor?</a></li>
+  <li><a href="/tr/aa-questions/step-2/">İkinci Basamak ne ister: neye “inandık”?</a></li>
+  <li><a href="/tr/aa-questions/steps-in-order/">Büyük Kitap basamakların sırayla uygulanmasını söyler mi?</a></li>
+  <li><a href="/tr/aa-questions/step-9-injure/">Dokuzuncu Basamak’taki “onları veya başkalarını rahatsız etmeyeceğimizden emin olduğumuz zaman” ifadesi ne anlama gelir? (Eşime evlilik dışı bir ilişkimi anlatmalı mıyım?)</a></li>
+  <li><a href="/tr/aa-questions/amends-job-or-jail/">Büyük Kitap, işinize mal olabilecek ya da sizi hapse düşürebilecek telafiler hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/creditors-and-debts/">Büyük Kitap borçlar ve alacaklılar hakkında ne diyor?</a></li>
+</ul>
+<h2 class="aq-group">Büyük Kitap şunlar hakkında ne diyor…</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/big-book-sex/">Büyük Kitap cinsellik hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/big-book-fear/">Büyük Kitap korku hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/self-pity-jealousy/">Büyük Kitap kendine acıma ve kıskançlık hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/big-book-honesty/">Büyük Kitap dürüstlük hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/big-book-tolerance/">Büyük Kitap hoşgörü hakkında ne diyor?</a></li>
+  <li><a href="/tr/aa-questions/humility/">Büyük Kitap alçakgönüllülüğün ne olduğunu söylüyor?</a></li>
+</ul>
+<h2 class="aq-group">Uygulama, hizmet ve para</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/young-people/">Gençler ve ergenler A.A.’ya gidebilir mi?</a></li>
+  <li><a href="/tr/aa-questions/basket-money/">Yedinci Gelenek sepetindeki para nereye gider? Bir üyenin verebileceği miktara sınır var mı?</a></li>
+  <li><a href="/tr/aa-questions/prisons-and-hospitals/">A.A. mesajı hapishanelere ve hastanelere taşır mı?</a></li>
+  <li><a href="/tr/aa-questions/grapevine/">A.A. Grapevine nedir ve nasıl başladı?</a></li>
+</ul>
+<h2 class="aq-group">İnsanlar ve tarih</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/bill-w/">Bill W. kimdi?</a></li>
+  <li><a href="/tr/aa-questions/lois-w/">Lois W. kimdi ve A.A.’nın başlangıcında ne yaptı?</a></li>
+  <li><a href="/tr/aa-questions/anne-smith/">Dr. Bob’un eşi Anne Smith kimdi?</a></li>
+  <li><a href="/tr/aa-questions/father-ed-dowling/">Peder Ed Dowling kimdi ve neden A.A.’nın hikâyesinde yer alıyor?</a></li>
+  <li><a href="/tr/aa-questions/st-louis-1955/">1955’teki St. Louis konvansiyonunda ne oldu?</a></li>
+</ul>
+<h2 class="aq-group">Kaynaklar hakkında</h2>
+<ul class="aq-list">
+  <li><a href="/tr/aa-questions/big-book-appendices/">Büyük Kitap’ın eklerinde neler var ve her biri ne zaman eklendi?</a></li>
+  <li><a href="/tr/aa-questions/appendix-v-religious-view/">Ek V, “A.A. Üzerine Dini Görüşler”, ne diyor?</a></li>
+</ul>
+  <p class="aq-note">Bu sayfalar A.A. hakkındaki soruları, A.A.’nın kendi yayımladığı literatüre dayanarak yanıtlar; literatür baştan sona okunmuştur ve her alıntı, atıf yapılan sayfayla (İngilizce aslıyla) kelimesi kelimesine karşılaştırılmıştır. Recovery Starts bağımsızdır ve Adsız Alkolikler ile bağlantılı değildir. <a href="/tr/aa-questions/sources/">Neleri okuduk ve her kaynak ne zaman yazıldı</a>.</p>
+</article></div></section></main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Recovery Starts</div><p class="footer-desc">Bağımsız bir iyileşme farkındalığı projesi. Hiçbir toplulukla bağlantılı değildir. Buradaki her okuma ücretsiz ve eksiksizdir; hep öyle kalacak.</p></div>
+        <div><h4>Oku</h4><ul class="footer-links"><li><a href="/tr/daily-reflection/">Günün Düşüncesi</a></li><li><a href="/tr/daily-tradition/">Günün Geleneği</a></li><li><a href="/tr/big-book/pages/">Büyük Kitap, sayfa sayfa</a></li><li><a href="/tr/big-book/search/">Büyük Kitap’ta ara</a></li></ul></div>
+        <div><h4>Program</h4><ul class="footer-links"><li><a href="/tr/12-steps/">12 Basamak</a></li><li><a href="/tr/12-traditions/">12 Gelenek</a></li><li><a href="/tr/12-concepts/">12 Kavram</a></li><li><a href="/tr/aa-questions/">A.A. Soruları</a></li><li><a href="/tr/aa-info/">A.A. Bilgisi</a></li><li><a href="/tr/meetings/">Toplantı bul</a></li></ul></div>
+        <div><h4>Bağlantıda kal</h4><ul class="footer-links"><li><a href="https://app.recoverystarts.com/?utm_source=recoverystarts&amp;utm_medium=site&amp;utm_campaign=footer" target="_blank" rel="noopener">Recovery Einstein</a></li><li><a href="/tr/download/">Uygulamayı indir</a></li><li><a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Derick’le tanışın</a></li><li><a href="https://claudeslab.com" target="_blank" rel="noopener">Claude’s Lab</a></li></ul></div>
+      </div>
+      <p class="footer-safety">Şu an çok mu zor? Türkiye’de hayati tehlike varsa 112’yi arayın; alkol veya madde bağımlılığı için YEDAM Danışma Hattı 115 (ücretsiz). ABD’de <a href="tel:988">988</a>’i arayıp Türkçe tercüman isteyin (Kanada’da 9-8-8’de tercüman bulunabilir). Yalnız değilsiniz.</p>
+      <div class="privacy-notice"><strong><a href="/tr/privacy/">Gizlilik</a>:</strong> Hangi sayfaların insanlara yardımcı olduğunu ve neyi iyileştirebileceğimizi görmek için Google Analytics ve Cloudflare Web Analytics kullanıyoruz; Google analiz çerezleri yerleştirir. <strong>Bağımsızlık:</strong> Hiçbir toplulukla bağlantılı değiliz. <strong>Tıbbi tavsiye değildir:</strong> Uzman yardımının yerini tutmaz.</div>
+      <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>’ın bir projesidir. <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a> tarafından yapıldı.</p></div>
+    </div>
+  </footer>
+  <script src="/app.js?v=d067c37a11"></script><script src="/ads.js" defer></script>
+<script>window.RS_T={"p":{"Donate":"Bağış yap","Donate — keep it free":"Bağış yap — ücretsiz kalsın","Keep this free.":"Ücretsiz kalsın.","This map is built and paid for by one person, out of pocket. Every new country costs more to run. If it helped you find a room, a dollar in the basket keeps it free for the next person.":"Bu haritayı tek bir kişi yapıyor ve masrafını kendi cebinden ödüyor. Eklenen her yeni ülke, çalıştırma maliyetini artırıyor. Bir toplantı bulmanıza yardımcı olduysa, sepete atacağınız bir dolar onu bir sonraki kişi için de ücretsiz tutar.","$1 in the basket":"Sepete 1 $","Give more":"Daha fazla ver","Close":"Kapat","Support Recovery Starts":"Recovery Starts’ı destekleyin","Big Book app":"Büyük Kitap uygulaması","Open web app":"Web uygulamasını aç","Free · also on Google Play":"Ücretsiz · Google Play’de de var","Install":"Yükle","In-app purchases · Free":"Uygulama içi satın alma · Ücretsiz","Get AA Big Book Search + AI Guide on Google Play":"AA Big Book Search + AI Guide’ı Google Play’den indirin","Open AA Big Book Search + AI Guide, the free web app":"Ücretsiz web uygulaması AA Big Book Search + AI Guide’ı açın","Today":"Bugün","Latest reading":"Son okuma","Sit with":"Üzerinde düşünün","Open this reading":"Bu okumayı aç","Ask Recovery Einstein about today's Tradition":"Bugünün geleneğini Recovery Einstein’a sorun","Quick answer":"Kısa cevap","Long Form":"Uzun Biçim","Appendix I":"Ek I","The Twelve Traditions — Long Form":"On İki Gelenek — Uzun Biçim","The complete, unabridged Traditions (pp. 563–566).":"Geleneklerin kısaltılmamış tam metni (s. 563–566).","Most people are only ever shown the \u003cstrong>short form\u003c/strong> (pp. 561–562). The Long Form is the full text — it is where Tradition Three states that alcoholics may call themselves an A.A. group “provided that, as a group, they have no other affiliation.”":"Çoğu insana yalnızca \u003cstrong>kısa biçim\u003c/strong> gösterilir (s. 561–562). Uzun Biçim tam metindir — Üçüncü Gelenek’in, alkoliklerin kendilerine A.A. grubu diyebileceğini “grup olarak başka hiçbir bağlantıları olmaması koşuluyla” söylediği yer de burasıdır.","exact phrase":"tam ifade","Page {n}":"Sayfa {n}","You're looking for \u003cstrong>page {n}\u003c/strong> of the Big Book, 4th Edition.":"Büyük Kitap’ın 4. baskısında \u003cstrong>{n}. sayfayı\u003c/strong> arıyorsunuz.","What's on page {n} →":"{n}. sayfada neler var →","Read it in the app →":"Uygulamada okuyun →","A.A. offers the whole book free —":"A.A. kitabın tamamını ücretsiz sunuyor —","read this page at aa.org →":"bu sayfayı aa.org’da okuyun (İngilizce) →","Get your own copy →":"Kendi kitabınızı edinin →","Reading the Big Book with someone who knows every page?":"Büyük Kitap’ı her sayfasını bilen biriyle okumaya ne dersiniz?","Meet Recovery Einstein →":"Recovery Einstein’la tanışın →","Steps, chapters &amp; references":"Basamaklar, bölümler ve kaynaklar","Quick answers":"Kısa cevaplar","Searching the Big Book…":"Büyük Kitap’ta aranıyor…","In the Big Book":"Büyük Kitap’ta","No pages matched “{q}.” Try a word or short phrase from the text, a page number, or a topic like \u003cem>resentment\u003c/em> or \u003cem>acceptance\u003c/em>.":"“{q}” ile eşleşen sayfa bulunamadı. Arama İngilizce metinde yapılıyor: metinden İngilizce bir kelime ya da kısa bir ifade, bir sayfa numarası veya \u003cem>resentment\u003c/em> (kızgınlık) ya da \u003cem>acceptance\u003c/em> (kabullenme) gibi bir konu deneyin.","1 page":"1 sayfa","1 quick answer":"1 kısa cevap","{n} quick answers":"{n} kısa cevap","1 reference":"1 kaynak","{n} references":"{n} kaynak","1 passage":"1 pasaj","{n} passages":"{n} pasaj","Results for “{q}”: {list}.":"“{q}” için sonuçlar: {list}.","No results for “{q}.”":"“{q}” için sonuç yok.","Searching…":"Aranıyor…","Full-text search is unavailable right now. Quick answers are still here.":"Tam metin araması şu anda kullanılamıyor. Kısa cevaplar yine de burada.","Search is unavailable right now. Please try again in a moment.":"Arama şu anda kullanılamıyor. Lütfen birazdan tekrar deneyin.","Step":"Basamak","Chapter":"Bölüm","Reference":"Kaynak","Page":"Sayfa","Chapter {n} – {x}":"Bölüm {n} – {x}","Step {n}":"Basamak {n}","Pages {n} to {x}":"Sayfa {n}–{x}","Go directly to page {n}":"Doğrudan {n}. sayfaya git","Found in {x}":"Bulunduğu yer: {x}","The Doctor's Opinion":"Doktorun Görüşü","Bill's Story":"Bill’in Hikâyesi","There Is a Solution":"Bir Çözüm Var","More About Alcoholism":"Alkolizm Hakkında Daha Fazla Bilgi","We Agnostics":"Biz, Agnostikler","How It Works":"Programımız Hakkında","Into Action":"Uygulamaya Geçiş","Working With Others":"Başkalarına Yardım","To Wives":"Eşler İçin","The Family Afterward":"Sonrasında Aile İlişkileri","To Employers":"İşverenler İçin","A Vision For You":"Geleceğe Bakış","The Promises":"Vaatler","Third Step Prayer":"Üçüncü Basamak duası","Seventh Step Prayer":"Yedinci Basamak duası","Twelve Traditions":"On İki Gelenek","Spiritual Experience":"Manevi Tecrübe","Appendix":"Ek","Contents":"İçindekiler","Admitted we were powerless over alcohol—that our lives had become unmanageable.":"Alkole karşı güçsüz olduğumuzu ve hayatımızın yönetilemez hale geldiğini kabul ettik.","Came to believe that a Power greater than ourselves could restore us to sanity.":"Sadece bizden Üstün bir Güç’ün akıl sağlığımızı geri getirebileceğine inandık.","Made a decision to turn our will and our lives over to the care of God as we understood Him.":"İrademizi ve hayatımızı anladığımız anlamdaki Tanrı’ya teslim etmeye karar verdik.","Made a searching and fearless moral inventory of ourselves.":"Korkmadan, derinlemesine vicdan muhasebesi yaptık.","Admitted to God, to ourselves, and to another human being the exact nature of our wrongs.":"Kusurlarımızı açık bir biçimde Tanrıya, kendimize ve bir başkasına itiraf ettik.","Were entirely ready to have God remove all these defects of character.":"Tanrının bu kişilik bozukluklarını düzeltmesi için tüm benliğimizle hazırlandık.","Humbly asked Him to remove our shortcomings.":"Tanrının eksikliklerimizi gidermesini alçakgönüllülükle diledik.","Made a list of all persons we had harmed, and became willing to make amends to them all.":"Zarar verdiğimiz insanların listesini çıkardık ve hatalarımızı telafi etmeye istekli hale geldik.","Made direct amends to such people wherever possible, except when to do so would injure them or others.":"Daha önce zararımız dokunan kişilerden, onları veya başkalarını rahatsız etmeyeceğimizden emin olduğumuz zaman doğrudan özür diledik ve hatalarımızı mümkün olduğu kadar telafi ettik.","Continued to take personal inventory and when we were wrong promptly admitted it.":"Vicdan muhasebesine devam ettik ve hatalı olduğumuzu gördüğümüzde derhal itiraf ettik.","Sought through prayer and meditation to improve our conscious contact with God as we understood Him, praying only for knowledge of His will for us and the power to carry that out.":"Dua ve meditasyon yoluyla, algıladığımız anlamdaki Tanrı ile bilinçli bağlantımızı geliştirmeye devam ettik. O’nun bizim için isteğini anlamamızı sağlaması ve bize yerine getirebilme gücü vermesi için dua ettik.","Having had a spiritual awakening as the result of these Steps, we tried to carry this message to alcoholics, and to practice these principles in all our affairs.":"Bu basamakların sonucu olarak, manevi bir uyanışla bu mesajı taşımaya ve bu ilkeleri bütün işlerimizde uygulamaya çalıştık.","Personal Stories – Part I":"Kişisel Hikâyeler – Bölüm I","Personal Stories – Part II":"Kişisel Hikâyeler – Bölüm II","Personal Stories – Part III":"Kişisel Hikâyeler – Bölüm III","Personal Stories":"Kişisel Hikâyeler","Foreword to First Edition":"Birinci Baskı İçin Önsöz","Foreword to Second Edition":"İkinci Baskı İçin Önsöz","Foreword to Third Edition":"Üçüncü Baskı İçin Önsöz","Foreword to Fourth Edition":"Dördüncü Baskı İçin Önsöz","Preface":"Giriş","Title Page":"Başlık sayfası","Copyright Page":"Telif hakkı sayfası","Appendix I – The A.A. Tradition":"Ek I – A.A. Geleneği","Appendix II – Spiritual Experience":"Ek II – Manevi Tecrübe","Appendix III – The Medical View":"Ek III – A.A. Üzerine Tıbbi Görüşler","Appendix IV – The Lasker Award":"Ek IV – Lasker Ödülü","Appendix V – The Religious View":"Ek V – A.A. Üzerine Dini Görüşler","Appendix VI – How to Get in Touch":"Ek VI – A.A. ile Nasıl İrtibata Geçersiniz?","Appendix VII – Twelve Concepts":"Ek VII – On İki Kavram"},"r":[],"skip":""};</script><script src="/rs-t.js?v=1"></script>
+
+<script>/*rs-globe*/(function(){var n=document.querySelector('nav.nav'),i=n&&n.querySelector('.nav-inner');function over(){return i.scrollWidth>i.clientWidth+1}function fit(){if(!i)return;n.classList.remove('rs-tight','rs-out');n.classList.add('rs-out');if(!over()&&innerWidth-i.getBoundingClientRect().right>=60&&innerWidth>1020)return;n.classList.remove('rs-out');if(!over())return;if(over())n.classList.add('rs-tight')}fit();addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('.rs-globe a[data-hl],.rs-offer a[data-hl]');if(!a)return;var v=a.getAttribute('data-hl');try{localStorage.setItem('rs_hl',v)}catch(x){}try{document.cookie='rs_hl='+encodeURIComponent(v)+'; path=/; max-age=31536000; SameSite=Lax'}catch(x){}},true);
+(function(){try{if(localStorage.getItem('rs_lang_offer')||localStorage.getItem('rs_hl'))return}catch(e){return}if(/(?:^|; )rs_hl=/.test(document.cookie))return;
+var cur=(document.documentElement.lang||'en').toLowerCase().split('-')[0],want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(function(x){return String(x).toLowerCase().split('-')[0]});
+if(!want[0]||want[0]===cur)return;var T={"en":["This page is also in English.","View in English"],"es":["Esta página también está en español.","Ver en español"],"pt":["Esta página também está em português.","Ver em português"],"fr":["Cette page existe aussi en français.","Voir en français"],"fa":["این صفحه به فارسی هم هست.","خواندن به فارسی"],"pl":["Ta strona jest też po polsku.","Czytaj po polsku"],"de":["Diese Seite gibt es auch auf Deutsch.","Auf Deutsch lesen"],"sv":["Den här sidan finns också på svenska.","Läs på svenska"],"nl":["Deze pagina is er ook in het Nederlands.","Lees in het Nederlands"],"hi":["यह पेज हिंदी में भी है।","हिंदी में पढ़ें"],"ja":["このページは日本語でもお読みいただけます。","日本語で読む"],"ru":["Эта страница есть и на русском.","Читать на русском"],"tr":["Bu sayfa Türkçe olarak da var.","Türkçe oku"]},pick=null;document.querySelectorAll('.rs-globe a[data-hl]').forEach(function(a){var c=(a.getAttribute('data-hl')||'').split('-')[0];if(!pick&&T[c]&&want.indexOf(c)>-1)pick=a});if(!pick)return;
+var c=pick.getAttribute('data-hl').split('-')[0],bar=document.createElement('div');bar.className='rs-offer';bar.lang=pick.getAttribute('lang')||c;bar.dir=pick.getAttribute('dir')||'ltr';
+var s=document.createElement('span');s.textContent=T[c][0];var a=document.createElement('a');a.href=pick.getAttribute('href');a.textContent=T[c][1];a.setAttribute('data-hl',pick.getAttribute('data-hl'));
+var x=document.createElement('button');x.type='button';x.setAttribute('aria-label','×');x.textContent='×';function seen(){try{localStorage.setItem('rs_lang_offer','1')}catch(e){}}
+a.addEventListener('click',seen);x.addEventListener('click',function(){seen();bar.remove()});bar.appendChild(s);bar.appendChild(a);bar.appendChild(x);document.body.appendChild(bar)})();</script></body>
+</html>

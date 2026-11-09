@@ -17,15 +17,15 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", he: "he_IL", en: "en_US" };
 
 // a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
-const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css" };
+const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css", he: "style.he.css" };
 // the home page preloads its headline's font (wave 2026-10-26-ads S2). Fraunces draws the English h1 (and Hindi's and
 // Japanese's spaces and Latin, since it comes first in their stacks), but a Persian or Russian h1 is drawn in Vazirmatn
 // or Literata, which come first there and carry Latin too: Fraunces is never used, so those pages preload their own
 // headline font instead (claude-home #496, 2026-11-08). Way back: delete this map and the line that uses it.
-const H1_FONT = { fa: "vazirmatn-arabic.woff2", ru: "literata-cyrillic.woff2" };
+const H1_FONT = { fa: "vazirmatn-arabic.woff2", ru: "literata-cyrillic.woff2", he: "frank-ruhl-libre-hebrew.woff2" };
 const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
 // "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
 // and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
@@ -36,7 +36,10 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // ru (wave rulang1): A.A. Russia publishes the Steps, the short Traditions and the Preamble (aarussia.ru); the Big Book, the long
 // Traditions and the Concepts follow its refined 2025 translation, still under A.A.W.S. review (CEO 21:51Z, option 1: named as
 // that, never as official); what has no A.A. Russian (the Serenity Prayer) is ours. ru_ours_note says exactly that.
-const OURS_NOTE = { hi: true, ja: true, ru: true };
+// he (wave helang1): the Steps, short and long Traditions, Concepts and Preamble are A.A. Israel's (aa-israel.co.il), much of
+// it from a translation stamped "awaiting approval – May 2023": used, never called official (CHECKED-he). The p. 417 quote is
+// the Hebrew Big Book's; other Big Book quotes and what has no A.A. Hebrew are ours. he_ours_note says exactly that.
+const OURS_NOTE = { hi: true, ja: true, ru: true, he: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }

@@ -9,7 +9,15 @@
 ## What I found, in one paragraph
 A.A. in Israel has a good national site (aa-israel.co.il, run by the registered service centre «אלכוהוליסטים אנונימים ישראל מרכז שירות (ע"ר)») and posts its pamphlets as PDFs. Its Hebrew comes in two generations. The **older, approved** one is A.A.W.S.'s own printed pamphlet «חבר חדש שואל» (HEBP-24, © 1980). The **newer** one is what A.A. Israel uses today: its website's Steps and two pamphlets, one of which prints «תרגום ממתין לאישור – מאי 2023» at the top of every page. It carries the Steps, the short-form Traditions, the Concepts and the Preamble. A separate, undated pamphlet has the long-form Traditions. The Serenity Prayer is on the site. The Hebrew Big Book is sold in print; online there are only scans of three of its stories. One of them holds the p. 417 passage the home page quotes, so that quote is the Hebrew book's own words. Nothing from N.A. and nothing from the "12 and 12" was used.
 
-## The open decision — which Steps (langs-super's call; my recommendation first)
+## Round 2 — 2026-11-09T18:3xZ: langs-super's answers, and three README lines
+*langs-super (radio 18:26Z), answering the two decisions; the final call on both is the CEO's at the cold check.*
+- **Steps: the website's wording** (as recommended, and as GLOSSARY already has it). The pamphlets' wording stays below, for the record.
+- **Long-form Traditions 3 and 10, Concepts 2, 3 and 8: printed as A.A. Israel prints them**, gaps against the English noted (see "Unsure") but not filled ("A.A.'s own wording beats ours"). core.json already does this; nothing changed in it.
+- **Ministry of Health (addiction services), a README candidate: not confirmed.** `www.gov.il/he/departments/topics/addiction` and `www.gov.il/he/pages/emergency-numbers` answer a script with 403; `www.health.gov.il` with an empty 202 (a bot check), 2026-11-09 ~18:30Z. Not used, like MDA 101; a person in a browser could read it.
+- **og:locale: `he_IL`**, to add to `OG` in `scripts/i18n/build.mjs` (line 20; without it the build writes the bare `he`). Not changed on this branch (scripts are the wave's).
+- **🌐 label: «עברית»**, as `LANGS.he.name` (`{ name: "עברית", dir: "rtl", en: "Hebrew" }`, the line I tested locally). It is the name Hebrew uses for itself; A.A. Israel's own language switcher writes «עִבְרִית», with niqqud: we drop the points, as everywhere else.
+
+## The open decision — which Steps (decided round 2: the website's; kept for the record)
 Two wordings of the same newer translation:
 1. **The website's** (`/article/12-step-program/`, what a newcomer sees today), **recommended**, and the one in GLOSSARY. It's the later edit: it has "moral" in Step 4 («חשבון נפש מוסרי, נוקב וחסר פחד») and "all" in Step 8 («בפניהם כולם»), both of which the English has and the pamphlets drop.
 2. **The pamphlets'** (P-86 and the sponsorship Q&A agree word for word; the same translation as the short-form Traditions and the Concepts we use). If the call is for one source for every fixed text, it's this. Here it is, so nobody has to re-read the PDFs:

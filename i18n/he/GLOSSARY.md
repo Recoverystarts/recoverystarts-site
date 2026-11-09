@@ -6,7 +6,7 @@
 > - **The newer translation**, the one A.A. Israel uses today: its website's Steps page, and two pamphlets on its site (P-86 «המילה "אלוהים"» and «שאלות ותשובות על חונכות»). The sponsorship pamphlet prints **«תרגום ממתין לאישור – מאי 2023»** ("translation awaiting approval – May 2023") at the top of every page: A.A. Israel sent it to A.A.W.S. and it is not approved yet. The Steps, the Traditions (short form), the Concepts and the Preamble below come from it. Like Russia's refined Big Book, it is **used, never called official** (Derick, 2026-11-01 15:51 Calgary: "when i said dont use the book i just meant dont make it official if its not official ... if its a translation then its probably ok to use"). Pages say so through `he_ours_note`.
 > - **The older, approved translation**: A.A.W.S.'s own Hebrew pamphlet «חבר חדש שואל» ("A Newcomer Asks", HEBP-24, © 1980 A.A.W.S., printed in the USA), on A.A. Israel's site as a PDF. Its Steps are worded differently («הודינו כי אנו חסרי כוחות מול האלכוהול – שחיינו הפכו לבלתי אפשריים»). **Not used for fixed texts** (A.A. Israel no longer prints these words anywhere else), but it is the model for how A.A. speaks to the reader: **אתם**, plural, throughout.
 > - **The Big Book in Hebrew** («הספר הגדול») is sold in print by A.A. Israel (₪30). Online there are only A.A. Israel's scans of three of its stories. **The p. 417 passage in core.json is the Hebrew book's own words** (from the scan, read by eye; see "Big Book quotes"). Any other Big Book quote is **[ours]** until a Hebrew source for it is found: never reconstruct the Hebrew book from memory.
-> **The Steps: a decision for langs-super** (PREP-NOTES, "The open decision"). This file uses **the website's wording** (A.A. Israel's own page, today), not the two pamphlets'. The two differ in small places.
+> **The Steps: decided** (CEO: langs-1, CHECKED-he #1, 2026-11-09T18:39Z): **the pamphlets' wording** ([p86] = [spon]), not the website's. Both are A.A. Israel's, but the website's Steps share phrasing with N.A.'s Hebrew Steps that the pamphlets don't («בשורה זו», «ביקשנוהו», «מוסרי»), and the pamphlets are the same translation as the Traditions, Concepts and Preamble we use: one source, named once as A.A. Israel's translation awaiting approval. Derick's line is never N.A.'s wording (10-03). Way back: the website's Steps are kept below, for the record; swap if A.A. Israel says the website is its current text.
 
 ## Sources (checked 2026-11-09, all read directly on the publisher's own URL, one page at a time)
 - **[aail]** — A.A. Israel's national site, `www.aa-israel.co.il` ("כל הזכויות שמורות © 2026 אלכוהוליסטים אנונימים ישראל מרכז שירות (ע"ר) | ע"ר: 580554558": the service centre, a registered nonprofit). Pages read: `/` (home), `/about-aa/`, `/article/12-step-program/` (**the Twelve Steps**), `/for-aa-members/` (**the Serenity Prayer**), `/literature/`, `/aa-official-pamphlets/`, `/aa-book-shop/` (book titles and prices), `/aa-meetings/`, `/contact/`, `/self-assessment/`, `/daily-posts/`, `/articles/`, `/aa-personal-stories/`, `/for-professionals/`, `/accessibility-statement/`, and the articles `first-meeting-what-to-expect`, `anonymity-and-privacy`, `aa-history-and-founding`, `signs-of-alcohol-addiction`, `living-with-an-alcoholic`. Hotline: **072-393-2500** (every page's header); book orders on WhatsApp 050-448-5085.
@@ -19,10 +19,10 @@
 - **Not used**: any N.A. Hebrew, any treatment centre's or "12 steps" site in Hebrew, Wikipedia, machine translation. Also not used: A.A. Israel's daily posts («הרהור יומי», from the A.A.W.S. book *Daily Reflections*). We don't reproduce that book; its *title* is used below.
 
 **Which wording, and why.**
-- **Steps: [aail] `/article/12-step-program/`**, word for word (Step 7 «ביקשנוהו», "we asked Him", is a literary form, not a typo; Step 12 has no final full stop on the page: add none). Why the site and not [p86]/[spon], which agree with each other: the site is what A.A. Israel shows a newcomer today (2026), and it is the later edit of the same translation. It puts back "moral" in Step 4 («חשבון נפש מוסרי, נוקב וחסר פחד»; the pamphlets drop it) and "all" in Step 8 («בפניהם כולם»). **langs-super decides**; the pamphlets' wording is in PREP-NOTES if the call goes the other way.
+- **Steps: [p86] = [spon]**, word for word (CHECKED-he #1). The pamphlets' Step 4 has no "moral" and Step 8 no "all" against the English: that's how A.A. Israel's translation prints them, and we print it so; don't add the words. The website's wording ([aail] `/article/12-step-program/`) is kept for the record under the Steps, never used on a page.
 - **Traditions, short form: [p86] = [spon]**, word for word. The site has no Traditions page; [hebp24]'s are the older wording.
-- **Traditions, long form: [tlf]**, word for word, in core.json. Its Tradition 3 has no "for sobriety", and its Tradition 10 stops before "The Alcoholics Anonymous groups oppose no one…". That is how A.A. Israel prints them, so we print them that way (PREP-NOTES, "Unsure").
-- **Concepts: [spon]**, word for word, in core.json. A.A. Israel calls them «העקרונות לשירות עולמי» / «שנים עשר העקרונות». Its Concepts 2, 3 and 8 are longer than the English short form (2 reads like the long form's first sentence; 8 lists its two points). Unsure; in PREP-NOTES.
+- **Traditions, long form: [tlf]**, word for word, in core.json. Its Tradition 3 has no "for sobriety", and its Tradition 10 stops before "The Alcoholics Anonymous groups oppose no one…". That is how A.A. Israel prints them, so we print them that way, **no gaps filled with our words** (CHECKED-he #2: our words inside A.A.'s fixed text would muddle where it came from). The AA Info credit line (`7a68d874e33f`) says the Hebrew is A.A. Israel's translation, shorter than the English in T3 and T10.
+- **Concepts: [spon]**, word for word, in core.json. A.A. Israel calls them «העקרונות לשירות עולמי» / «שנים עשר העקרונות». Its Concepts 2, 3 and 8 are longer than the English short form (2 reads like the long form's first sentence; 8 lists its two points). Printed as A.A. Israel prints them (CHECKED-he #2).
 - **Preamble: [p86]** (= [spon], which adds niqqud to «הִתְחַבְּרוּת»).
 - **Serenity Prayer: [aail] `/for-aa-members/`.**
 - **Typography normalised, words untouched**: "A.A." / "AA" in Latin letters inside A.A.'s Hebrew becomes **«א.א.»**, as A.A. Israel's own site writes it («על אנונימיות בא.א», «אחוות א.א.»). A Latin "A.A." with its trailing full stop is broken by the bidi algorithm in right-to-left text (pdftotext gives ".A.A"; a browser shows the dot on the wrong side). ״ (gershayim) becomes ". Niqqud is dropped except «אֵל» (God, Tradition 2, short form), which the source points so that it isn't read as «אל», "to".
@@ -61,25 +61,25 @@
 
 ## Crisis lines — read this before any 988, detox or withdrawal segment
 What's true (checked 2026-11-09, each on the service's own site):
-- **Israel — ער"ן, 1201** («עזרה ראשונה נפשית»): «עמותת ער"ן מעניקה עזרה ראשונה נפשית מצילה חיים 24/7 בשיחה בטלפון ובאינטרנט דרך המילה הכתובה, כל הפניות הנן אנונימיות ודיסקרטיות וניתנות לכל אדם, בכל גיל ובכל סוג של מצוקה» [eran.org.il, `/knowledge-center/suicide-prevention/`]; «24 שעות ביממה בכל ימות השנה» [`/about-us/`]; online help on **WhatsApp 052-8451201**, or chat, e-mail and SMS on its site [suicide-prevention page]; «במגוון שפות», with lines for new immigrants in English, Spanish, Russian, Amharic and French [home page]. So: **anonymous, 24 hours a day, every day**. The pages I read **don't say "free"**: don't write «חינם» of 1201.
+- **Israel — ער"ן, 1201** («עזרה ראשונה נפשית»): «ער"ן מעניקה עזרה ראשונה נפשית אנונימית מצילה חיים» [eran.org.il home page]; «בצורה אנונימית ומיידית, 24 שעות ביממה בכל ימות השנה» [`/about-us/`] (both re-read 2026-11-09 ~19:55Z by helang1-super; CHECKED-he #4: the sentence quoted here before wasn't on the cited page); online help on **WhatsApp 052-8451201**, or chat, e-mail and SMS on its site [suicide-prevention page]; «במגוון שפות», with lines for new immigrants in English, Spanish, Russian, Amharic and French [home page]. So: **anonymous, 24 hours a day, every day**. The pages I read **don't say "free"**: don't write «חינם» of 1201.
 - **Held: סה"ר** (sahar.org.il, anonymous chat and WhatsApp, «ללא תשלום»). It is **not round the clock**: «א׳-ה׳ 16:00-03:00, שישי, שבת וערבי חג 18:00-00:00» [its home page]. Fine for a page that has room to give hours; not in the short crisis lines below.
-- **Not confirmed, not used: מגן דוד אדום, 101.** Its sites (mdais.org, mda.org.il) answer a script with a bot check, so nothing could be read on them (2026-11-09). 101 is Israel's ambulance number and everyone in Israel knows it, but the rule is "confirmed on the service's own site". So the medical-emergency line says «חדר המיון הקרוב» and no number until someone reads it on MDA's site (PREP-NOTES, "Unsure").
-- **USA — 988** and **Canada — 9-8-8**: as prep-ru read them on 2026-11-01 (samhsa.gov FAQ: calls get a free interpreter in 240+ languages, text and chat have none; 988.ca: English and French, an interpreter "may be available" by phone). **Not re-read this round.** Hebrew isn't named, so we ask for an interpreter and promise nothing.
+- **Not confirmed, not used: מגן דוד אדום, 101.** Its sites (mdais.org, mda.org.il) answer a script with a bot check, so nothing could be read on them (2026-11-09; tried again by helang1-super ~19:56Z: mdais.org and mda.org.il a bot page, gov.il's emergency-numbers pages 403). CHECKED-he #5: add it only once read on gov.il or MDA's own site. 101 is Israel's ambulance number and everyone in Israel knows it, but the rule is "confirmed on the service's own site". So the medical-emergency line says «חדר המיון הקרוב» and no number until someone reads it on MDA's site (PREP-NOTES, "Unsure").
+- **USA — 988** (the 988 Suicide & Crisis Lifeline): calls get a free interpreter in 240+ languages through Language Line ("There is no cost to you for language interpretation") [samhsa.gov/mental-health/988/faqs, re-read 2026-11-09 ~19:55Z]; text and chat have none. **Canada — 9-8-8** (the 9-8-8 Suicide Crisis Helpline): English and French, 24/7; another language "may be available by phone, via an interpreter" [988.ca/get-help/what-to-expect, re-read the same time]. **Said apart** (CHECKED-he #6): the US promises an interpreter on a call, Canada only says one may be available.
 - **A.A. Israel's hotline, 072-393-2500** («הקו החם», in the header of every aa-israel.co.il page and in [p86]). It's A.A., not a crisis line, and the site gives no hours: use it only where the English points to A.A. itself («למציאת א.א. קרוב אליכם»), never as a crisis number, and say nothing about hours.
 
-So on a he page **never write «התקשרו או שלחו הודעה ל-988» alone**: a reader in Israel can't reach 988, and a Hebrew text to 988 gets English. Israel first, then North America. Use these, word for word (`i18n/he/core.json` has the three footer/home/app ones already):
+So on a he page **never write «התקשרו או שלחו הודעה ל-988» alone**: a reader in Israel can't reach 988, and a Hebrew text to 988 gets English. Israel first, then the US, then Canada, **the US and Canada said apart**. Use these, word for word (`i18n/he/core.json` has the three footer/home/app ones already). The Hebrew in this table is **[ours]** except where a row names its source; ער"ן's own words are cited above.
 
 | English | Hebrew |
 |---|---|
-| In crisis right now? Call or text 988. You are not alone. | קשה לכם מאוד עכשיו? בישראל התקשרו לער"ן, 1201: עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה. בארצות הברית ובקנדה התקשרו ל-<0>988</0> ובקשו מתורגמן לעברית. אתם לא לבד. |
-| In crisis? Call or text 988 — free, 24/7, confidential. | <0>קשה לכם עכשיו?</0> בישראל – ער"ן, 1201: עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה. בארצות הברית ובקנדה – <1>988</1>: חינם, 24/7, חסוי; התקשרו ובקשו מתורגמן לעברית. אתם לא לבד. |
-| If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). | אם קשה לכם מאוד עכשיו, בישראל התקשרו לער"ן, 1201 (עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה); בארצות הברית ובקנדה התקשרו ל-988 (Suicide & Crisis Lifeline) ובקשו מתורגמן לעברית. |
-| …988 inside a longer sentence | «988 (בארצות הברית ובקנדה; בטלפון, בקשו מתורגמן לעברית)» and, where the sentence has room, «בישראל – ער"ן, 1201» |
-| 988 Crisis Lifeline (a button/link) | קו המשבר 988 (ארצות הברית וקנדה) |
+| In crisis right now? Call or text 988. You are not alone. | קשה לכם מאוד עכשיו? בישראל התקשרו לער"ן, 1201: עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה. בארצות הברית התקשרו ל-<0>988</0> ובקשו מתורגמן לעברית. בקנדה התקשרו ל-9-8-8; ייתכן שיהיה מתורגמן בטלפון. אתם לא לבד. |
+| In crisis? Call or text 988 — free, 24/7, confidential. | <0>קשה לכם עכשיו?</0> בישראל – ער"ן, 1201: עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה. בארצות הברית – <1>988</1>: חינם, 24/7, חסוי; התקשרו ובקשו מתורגמן לעברית. בקנדה – 9-8-8; ייתכן שיהיה מתורגמן בטלפון. אתם לא לבד. |
+| If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). | אם קשה לכם מאוד עכשיו, בישראל התקשרו לער"ן, 1201 (עזרה ראשונה נפשית, אנונימית, 24 שעות ביממה); בארצות הברית התקשרו ל-988 (988 Suicide & Crisis Lifeline) ובקשו מתורגמן לעברית; בקנדה התקשרו ל-9-8-8 (9-8-8 Suicide Crisis Helpline), ייתכן שיהיה מתורגמן בטלפון. |
+| …988 inside a longer sentence | «988 (בארצות הברית: התקשרו ובקשו מתורגמן לעברית; בקנדה 9-8-8, ייתכן שיהיה מתורגמן)» and, where the sentence has room, «בישראל – ער"ן, 1201» |
+| 988 Crisis Lifeline (a button/link) | קו המשבר 988 (ארצות הברית; בקנדה 9-8-8) |
 | a teen / young person in crisis | (in Israel) ער"ן, 1201 – לכל גיל [eran.org.il: «בכל גיל»]; ער"ן also runs a youth line (`/eran-for-the-community/youth-and-teenagers-helpline/`), **not read**: don't name it until someone does |
 | online / text help in Israel | ער"ן בווטסאפ, 052-8451201 |
 | Call 911 / go to the emergency room | פנו לחדר המיון הקרוב (בארצות הברית ובקנדה – 911) |
-| free, 24/7, confidential (of 988) | חינם, 24/7, חסוי. Say "confidential" (חסוי) and "free" (חינם) of 988 only |
+| free, 24/7, confidential (of 988) | חינם, 24/7, חסוי. Say "confidential" (חסוי) and "free" (חינם) of the US 988 only |
 | anonymous, 24 hours (of 1201) | אנונימית, 24 שעות ביממה (ער"ן's own words: «אנונימית», «24 שעות ביממה בכל ימות השנה») |
 | detox / medical detox | גמילה / גמילה בפיקוח רפואי [ours; aail: «גמילה פיזית»] |
 | withdrawal / alcohol withdrawal / withdrawal symptoms | תסמיני גמילה / גמילה מאלכוהול / תסמיני גמילה [ours] |
@@ -162,7 +162,24 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 | addiction | התמכרות | [aail] |
 | treatment centre | מרכז טיפול | [ours] |
 
-## The Twelve Steps — A.A. Israel's wording [aail `/article/12-step-program/`, word for word]
+## The Twelve Steps — A.A. Israel's translation [p86] = [spon], word for word (CHECKED-he #1)
+1. הודינו שאנו חסרי אונים מול האלכוהול, ושאבדה לנו השליטה על חיינו.
+2. הגענו לאמונה שכוח גדול מאתנו יכול להחזיר לנו את שפיות דעתנו.
+3. החלטנו למסור את רצוננו ואת חיינו להשגחת אלוהים – כפי שאנו מבינים אותו.
+4. עשינו חשבון נפש נוקב וחסר פחד.
+5. התוודינו בפני אלוהים, בפני עצמנו ובפני אדם נוסף על טבעם המדויק של פגמינו.
+6. היינו נכונים לחלוטין שאלוהים ישחרר אותנו מכל הפגמים באופיינו.
+7. ביקשנו אותו בענווה שישחרר אותנו מחסרונותינו.
+8. ערכנו את רשימת כל האנשים שבהם פגענו, והיינו מוכנים לכפר על כל מעשינו בפניהם.
+9. כיפרנו על מעשינו במישרין בפני כל מי שיכולנו, חוץ מאותם המקרים שמעשה זה היה עלול לפגוע בהם או באחרים.
+10. המשכנו בחשבון הנפש, וכאשר שגינו הודינו בכך מיד.
+11. ביקשנו בדרך של תפילה ושל הרהורים לשפר את הקשר התודעתי עם אלוהים – כפי שאנו מבינים אותו, כשאנו מתפללים רק לדעת את רצונו מאתנו ומבקשים את הכוח לבצע זאת.
+12. כשעברנו התעוררות רוחנית כתוצאה מצעדים אלה, ניסינו לשאת מסר זה לאלכוהוליסטים וליישם עקרונות אלה בכל תחומי חיינו.
+
+Step 12 ends with a full stop, as the pamphlets print it. Steps 4 and 8 are shorter than the English (no "moral", no "all"): print them as they are.
+
+<details><summary>For the record only, never on a page: the website's wording [aail `/article/12-step-program/`]</summary>
+
 1. הודינו שאנו חסרי אונים מול האלכוהול, שאבדה לנו השליטה על חיינו.
 2. הגענו לאמונה שכוח גדול מאתנו יכול להחזיר לנו את שפיות דעתנו.
 3. החלטנו למסור את רצוננו ואת חיינו להשגחת אלוהים, כפי שאנו מבינים אותו.
@@ -175,6 +192,8 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 10. המשכנו בחשבון הנפש, וכאשר שגינו, הודינו בכך מיד.
 11. חיפשנו בדרך של תפילה והרהורים לשפר את הקשר ההכרתי שלנו עם אלוהים, כפי שאנו מבינים אותו, כשאנו מתפללים רק לדעת את רצונו עבורנו ומבקשים את הכוח לבצע זאת.
 12. משעברה עלינו התעוררות רוחנית כתוצאה מצעדים אלה, ניסינו לשאת בשורה זו לאלכוהוליסטים וליישם עקרונות אלה בכל תחומי חיינו
+
+</details>
 
 ## The Twelve Traditions, short form — [p86] = [spon], word for word ("A.A." → «א.א.»)
 1. טובתנו המשותפת קודמת לכול. החלמה אישית תלויה באחדות א.א.
@@ -213,6 +232,8 @@ A.A. Israel posts three stories from the Hebrew Big Book as scans ([bbhe]): «ק
 The scan prints «לכל» in bold (emphasis, as the English italicises "all"); we don't carry the bold, as the English segment doesn't. The scan's dashes are hyphens; typed as en dashes (typography). **Read by eye from a 200-dpi scan, not by OCR**: a runner who reuses it should keep it exactly as here. Every other Big Book quote: **[ours]**, marked as the credit line `96327e987d94` would mark it, until a Hebrew source is read.
 
 ## Site words
+All **[ours]** (CHECKED-he #4), except where a cell names A.A. Israel ([aail]).
+
 | English | Hebrew |
 |---|---|
 | Meetings Map / Open the Meetings Map | מפת הפגישות / לפתיחת מפת הפגישות |

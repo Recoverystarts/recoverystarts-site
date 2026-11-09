@@ -20,6 +20,8 @@ import { ROOT } from "./lib.mjs";
 // Google Fonts @import, which held the first paint until Google answered — the old URL is in the faces file's comment)
 const FONT = {
   fa: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
+  // ar (wave arlang1): Vazirmatn draws Arabic too (prep-ar, 390 and 1366 px). The same faces file, read once below.
+  ar: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
 };
 export const flip = (css) => rtlcss.process(css);
 
@@ -28,7 +30,7 @@ let sheet = null;
 export function rtlSheet() {
   if (sheet) return sheet;
   let css = flip(fs.readFileSync(path.join(ROOT, "style.css"), "utf8"));
-  const faces = Object.values(FONT).map((f) => fs.readFileSync(new URL(f.faces, import.meta.url), "utf8")).join("");
+  const faces = [...new Set(Object.values(FONT).map((f) => f.faces))].map((f) => fs.readFileSync(new URL(f, import.meta.url), "utf8")).join("");
   // at the top, after any @import of style.css's own (an @import must come before every other rule)
   const at = css.match(/^[\s\S]*?@import[^;]+;\s*\n/);
   css = at ? at[0] + faces + css.slice(at[0].length) : faces + css;
@@ -51,6 +53,8 @@ html[dir="rtl"] .rs-langs a[lang],html[dir="rtl"] .rs-here,html[dir="rtl"] bdi{u
 
 const ARROWS = { "→": "←", "←": "→", "›": "‹", "‹": "›", "⟶": "⟵", "⟵": "⟶", "▸": "◂", "◂": "▸", "▶": "◀", "◀": "▶", "↗": "↖", "↖": "↗" };
 const swapArrows = (s) => s.replace(/[→←›‹⟶⟵▸◂▶◀↗↖]/g, (c) => ARROWS[c]);
+// ar (wave arlang1) is NOT here: Arabic on this site keeps Western 0–9 (i18n/ar/GLOSSARY.md, CHECKED-ar #6), so its text
+// gets the arrows turned and nothing else. Never add ar to this table.
 const DIGITS = { fa: "۰۱۲۳۴۵۶۷۸۹" };
 // numbers a reader dials, left in Latin digits (the crisis lines: 988 Canada and U.S., Iran's 123 / 1480 / 115) —
 // unless the words just before make it a page ("صفحهٔ ۱۲۳")
@@ -70,7 +74,20 @@ function localDigits(s, lang) {
     return tok.replace(/\d/g, (d) => D[+d]);
   });
 }
-export const localText = (s, lang) => localDigits(swapArrows(s), lang);
+// ar (wave arlang1): a Latin abbreviation that ends in a period (A.A., N.A., C.M.A., A.A.W.S.) inside Arabic text shows as
+// ".A.A": the bidi algorithm gives the last period to the right-to-left run. A left-to-right mark (U+200E) after it keeps
+// the period with its letters. Added here, at build time, so translators never type direction marks (GLOSSARY.md).
+// Only ar, so fa's pages keep their bytes. Way back: delete LRM_AFTER and its use in localText.
+const LRM_AFTER = { ar: true };
+const lrm = (s, lang) => (LRM_AFTER[lang] ? s.replace(/(?<![A-Za-z.])((?:[A-Z]\.){2,})(?!\u200e)/g, "$1\u200e") : s);
+// a number range ("pp. 44–57", "7:00–8:30") in right-to-left text shows reversed (57–44): the dash is neutral, so
+// the two numbers take the paragraph's direction. A left-to-right mark either side of an en/em dash between two digits
+// keeps the range in reading order (CEO langs-1 on site #89, from helang1's checker 11-09). fa is left out so its bytes
+// stay (its digits are Persian and it was never reported); the wave that merges second keeps every key. Way back: delete
+// RANGE_LRM and its use in localText.
+const RANGE_LRM = { ar: true };
+const ranges = (s, lang) => (RANGE_LRM[lang] ? s.replace(/(\d)\u200e?([\u2013\u2014])\u200e?(?=\d)/g, "$1\u200e$2\u200e") : s);
+export const localText = (s, lang) => ranges(lrm(localDigits(swapArrows(s), lang), lang), lang);
 
 const SKIP = new Set(["script", "style", "code", "pre", "kbd", "samp", "var", "textarea", "svg", "math"]);
 const META = new Set(["description", "og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image:alt"]);

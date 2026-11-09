@@ -33,6 +33,7 @@ export const LANGS = {
   hi: { name: "हिन्दी", dir: "ltr", en: "Hindi" },
   ja: { name: "日本語", dir: "ltr", en: "Japanese" },
   ru: { name: "Русский", dir: "ltr", en: "Russian" },
+  ar: { name: "العربية", dir: "rtl", en: "Arabic" },
 };
 
 const SKIP_TAGS = new Set(["script", "style", "noscript", "svg", "template", "code", "pre", "math", "iframe", "canvas", "video", "audio"]);

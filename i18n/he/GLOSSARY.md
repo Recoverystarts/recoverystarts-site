@@ -228,6 +228,10 @@ In `i18n/he/core.json`, ids `e32af397e692` (1) … `549bf284bc05` (12). The pamp
 - **"pick one up (at a meeting)": «לקחת עותק»**, never «לקבל עותק» (reads as "be given one", i.e. free).
 - **The Big Book quote credit line says «ציטוט קצר בתרגום שלנו, לצורכי זיהוי ולימוד»**: every Big Book quote except p. 417 is ours (rule 5).
 - **Chapter and book titles as `_phrases.json` has them**: «סיפורו של ביל», «עוד על אלכוהוליזם», «אנחנו האגנוסטים», «יש פתרון»…
+- **Big Book chapter and appendix titles: exactly `_phrases.json`'s**: «חוות דעתו של הרופא», «סיפורו של ביל», «יש פתרון», «עוד על אלכוהוליזם», «אנחנו האגנוסטים», «איך זה עובד», «לפעולה», «עבודה עם אחרים», «לנשים», «המשפחה אחר כך», «למעסיקים», «חזון בשבילכם»; appendices «נספח I … VII» (Roman, as the English). Never «אל הפעולה», «יוצאים לפעולה», «דעתו של הרופא», «חזון עבורכם», «נספח 2».
+- **"honesty" «כנות», "dishonest(y)" «לא כנים / חוסר כנות»** (the p. 84 and p. 86 quotes the same in every line). **"meditation" «הרהור»** (the glossary's Step 11 «תפילה ושל הרהורים»), never «מדיטציה».
+- **Tradition 11: A.A. Israel's Hebrew says «בכל אמצעי התקשורת»**, not press, radio and films. A reading that leans on those three words says «המסורת באנגלית».
+- **Decades: «שנות ה-40»**, never «שנות ה-1940».
 - **"humbling" (the good kind): «מלמד ענווה»**, never «משפיל» (humiliating). **"fight" between a couple: «לריב»**, not «להילחם». **"employment": «עבודה»**. **"online": «אונליין»**.
 
 ## Big Book quotes — look here first

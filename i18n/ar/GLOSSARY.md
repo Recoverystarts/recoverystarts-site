@@ -227,6 +227,7 @@ All twelve, cut to the sentences the English page has, are in `i18n/ar/core.json
 | 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | اغرس في وعي كل رجل فكرة أنه يستطيع أن يتعافى بغضّ النظر عن أي أحد. الشرط الوحيد هو أن يثق بالله وينظّف بيته. |
 | 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | سلّم نفسك لله كما تفهمه. اعترف بأخطائك له ولإخوانك. أزِل حطام ماضيك. |
 | 164 | We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny. | سنكون معك في زمالة الروح، وستلتقي حتمًا ببعضنا وأنت تمضي في طريق المصير السعيد. |
+| xxviii | restless, irritable and discontented (The Doctor's Opinion) | «قلق ومتهيّج وغير راضٍ» (plural «قلقون ومتهيّجون وغير راضين»; Super, 2026-11-09, check-Ar-25) |
 | 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | إن فكرة أنه سيتمكن، بطريقة ما ويومًا ما، من التحكم في شربه والاستمتاع به هي الهوس الأكبر لدى كل شارب غير طبيعي. |
 | 53 | God either is, or He isn’t. | إما أن يكون الله موجودًا، وإما ألا يكون. |
 | 53 | God is everything or else He is nothing. | إما أن يكون الله كل شيء، وإما ألا يكون شيئًا. |

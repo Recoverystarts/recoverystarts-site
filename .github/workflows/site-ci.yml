@@ -1,0 +1,119 @@
+# Site CI — the merge gate for recoverystarts.com (2026-11-09, window 3 merge-gate-build; claude-home #522, #499 step 3).
+# Why: until today this public repo had no workflows at all, and Cloudflare Pages deploys main on every push. The 11-07
+# research (claude-home map/projects/recoverystarts-site/research/2026-11-07-topic8-github/) traced misses this catches:
+# audit-readings.js failing unseen for five weeks (09-05), 298 dead meeting links (09-20), the menu sending translated
+# readers to English (10-12), 96 dead links from a slug guard (11-01), and a Russian batch passing Pages' file limit.
+# Jobs (both on every PR into main; `site-check` also on every push to main):
+#   site-check     the build (scripts/pages-dist.sh, Pages' own build command), then scripts/ci/site-check.js: file count
+#                  of dist/ (warn 90,000, fail 100,000 — our plan's Pages limit since 11-07), pages per language against
+#                  main, every internal link on disk, translated → English links; then the quote gate audit-readings.js.
+#   preview-links  waits for Cloudflare Pages' own check on the PR's commit, reads its preview URL, and runs
+#                  scripts/ci/preview-links.js on what Pages actually serves.
+# The quote gate needs the A.A. source scans, which live in the PRIVATE repo Recoverystarts/recovery-einstein and must
+# never be copied into this public one. With the repo secret EINSTEIN_READ_TOKEN (a fine-grained token, Contents: read
+# on recovery-einstein only — Derick's click, see claude-home waves/2026-11-08-merge-gate/proof/build.md) it runs and a
+# fabricated quotation fails the job; without the secret it is skipped with a warning, so this CI can land first.
+# Minutes: this repo is public, and Actions minutes on public repos are free; no path filter, because the checks are
+# meant to be required by the ruleset on main and a path-filtered required check waits forever. concurrency cancels a
+# superseded run.
+# Ways back: disable the workflow (Actions → Site CI → ⋯ → Disable workflow) or delete this file and scripts/ci/.
+name: Site CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  site-check:
+    name: site-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build (scripts/pages-dist.sh, the Pages build command)
+        run: sh scripts/pages-dist.sh
+      - name: File count, pages per language, internal links, translated → English
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || github.event.before }}
+        run: |
+          case "$BASE" in 0000000*|"") BASE=HEAD~1 ;; esac
+          node scripts/ci/site-check.js --base "$BASE"
+      - name: Quote sources (private recovery-einstein; needs EINSTEIN_READ_TOKEN)
+        id: hist
+        env:
+          TOKEN: ${{ secrets.EINSTEIN_READ_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::audit-readings.js skipped: no EINSTEIN_READ_TOKEN secret yet (the A.A. sources are in the private recovery-einstein repo)"
+            echo "have=0" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git init -q "$RUNNER_TEMP/re" && cd "$RUNNER_TEMP/re"
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/Recoverystarts/recovery-einstein.git"
+          git fetch -q --depth 1 origin main && git checkout -q FETCH_HEAD -- historian-sources
+          # the OCR repair map lives on an unmerged branch (audit-readings.js says so); take it from there if main lacks it
+          if [ ! -f historian-sources/ocr-repairs.json ]; then
+            git fetch -q --depth 1 origin fix/ocr-corpus-repairs && git show FETCH_HEAD:historian-sources/ocr-repairs.json > historian-sources/ocr-repairs.json
+          fi
+          git remote remove origin
+          echo "have=1" >> "$GITHUB_OUTPUT"
+      - name: Quote gate (scripts/audit-readings.js)
+        if: steps.hist.outputs.have == '1'
+        env:
+          HISTORIAN_SOURCES: ${{ runner.temp }}/re/historian-sources
+        run: node scripts/audit-readings.js
+
+  preview-links:
+    name: preview-links
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      checks: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Wait for Cloudflare Pages' preview of this commit
+        id: preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          for i in $(seq 1 60); do
+            j=$(gh api "repos/$REPO/commits/$SHA/check-runs?check_name=Cloudflare%20Pages" --jq '.check_runs[0] | {status, conclusion, summary: .output.summary}' 2>/dev/null || echo '{}')
+            st=$(jq -r '.status // ""' <<<"$j"); co=$(jq -r '.conclusion // ""' <<<"$j")
+            if [ "$st" = completed ]; then
+              if [ "$co" != success ]; then echo "::error::Cloudflare Pages could not build this commit ($co): see its check on the PR"; exit 1; fi
+              url=$(jq -r '.summary' <<<"$j" | grep -oE 'https://[a-z0-9]+\.recoverystarts-site\.pages\.dev' | head -1)
+              [ -n "$url" ] || { echo "::error::no preview URL in Cloudflare Pages' check"; exit 1; }
+              echo "url=$url" >> "$GITHUB_OUTPUT"; echo "preview: $url"; exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::Cloudflare Pages did not finish a preview of $SHA in 20 minutes"; exit 1
+      - name: Build dist/ (to know which translated pages exist)
+        run: sh scripts/pages-dist.sh
+      - name: Link check on the preview (scripts/ci/preview-links.js)
+        env:
+          URL: ${{ steps.preview.outputs.url }}
+        run: node scripts/ci/preview-links.js "$URL"

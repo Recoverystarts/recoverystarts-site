@@ -2,7 +2,7 @@
 
 *prep-tr (Code window, Opus 5.5), 2026-11-09, research only: nothing here has shipped, merged or deployed. Branch `prep/tr` cut from main `705505fb`; files under `i18n/tr/` only. The CEO's cold check (`status/CHECKED-tr.md`) comes next; runners don't see this before it.*
 
-## Round 2 — read this first (2026-11-09T18:4xZ, prep-tr)
+## Round 2 — read this first (2026-11-09T18:33Z, prep-tr)
 **What changed and why.** My first draft said [bb2022]'s PDF stops after Dr. Bob's story, with no appendices. I'd read the PDF's last page (the end of Dr. Bob's story) and assumed. The cold second reader (a fresh subagent that read the files without my reasoning) found the appendices on pp. 178–195: the short-form Traditions (pp. 180–181), «ON İKİ GELENEK (UZUN BİÇİM)» (pp. 182–185) and «VII ON İKİ KAVRAM (KISA BİÇİM)» (pp. 193–195). I checked it myself in the PDF: true.
 - **So every fixed text now comes from [bb2022]**: Steps, both forms of the Traditions, the Concepts, the prayers, the quotes. That's one source, the newest, A.A.W.S.'s and Conference-approved, and the Steps, Traditions, Concepts and quotes then agree with each other. **Open decision 2 below is gone**: the 1991 long form isn't needed. The site's short Traditions and Concepts, and [bb1991]'s long form, are written out under GLOSSARY "Way back" (round 1's text, untouched), so going back is a paste.
 - The fixed texts were **cut from the PDF text by script** (hyphens joined), not retyped. Two marks: long T9's footnote marker «[1]» dropped; long T10 «zor durum-/da» joined across the page break. One printed typo is kept: long T11 «kaçınması gerektiğiniz düşünüyoruz» (should be «gerektiğini»). Unsure whether to correct it.

@@ -69,9 +69,10 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
       leaks++; errors.push(`translated → English: ${from} links ${t}, which lands on English ${landed} though /${lang}${landed} exists`);
     }
   }
-  const mres = await pool(mapTargets, 4, async (t) => ({ t, r: await get(LIVE + t, "HEAD") }));
-  for (const { t, r } of mres) if (!(r.status >= 200 && r.status < 400) && r.status !== 403) errors.push(`meeting map ${t} → ${r.status || r.error} on ${LIVE} (linked from ${links.get([...links.keys()].find((k) => k.startsWith(t)))})`);
-  // 403: Cloudflare's bot challenge for a data-centre IP — the map answers people; not a broken link
+  const mres = await pool(mapTargets, 2, async (t) => ({ t, r: await get(LIVE + t, "HEAD") }));
+  // 403 / 429: Cloudflare's bot challenge or rate rule for a data-centre IP (GitHub's runners met 429 on 11-09) — the
+  // map answers people; only a 404, 410, 5xx or no answer counts as a broken link
+  for (const { t, r } of mres) if (!(r.status >= 200 && r.status < 400) && r.status !== 403 && r.status !== 429) errors.push(`meeting map ${t} → ${r.status || r.error} on ${LIVE} (linked from ${links.get([...links.keys()].find((k) => k.startsWith(t)))})`);
   const summary = [`## Preview link check`, ``, `${PREVIEW}`, ``, `| | |`, `|---|---|`, `| pages read | ${pages.length} |`, `| site links asked | ${siteTargets.length} |`, `| meeting-map paths asked on ${LIVE} | ${mapTargets.length} |`, `| translated → English | ${leaks} |`, `| failures | ${errors.length} |`, ``];
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary.join("\n") + "\n");
   for (const e of errors) console.log("::error::" + e);

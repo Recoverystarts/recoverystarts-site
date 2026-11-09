@@ -43,6 +43,7 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
   const seeds = [];
   for (const l of ["", ...LANGS.map((x) => "/" + x)]) for (const s of SEEDS) { const p = l + s; if (p === "/" || onDisk(p)) seeds.push(p); }
   const errors = [], links = new Map(); // target path → first page it was seen on
+  const fromTranslated = []; // [page, target, the <a …> tag] for every link on a translated page (each page judged on its own links)
   const pages = await pool(seeds, 6, async (p) => ({ p, r: await get(PREVIEW + p) }));
   for (const { p, r } of pages) {
     if (r.status !== 200) { errors.push(`seed ${p}: ${r.status || r.error}`); continue; }
@@ -50,6 +51,7 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
       const t = m[1];
       if (t.startsWith("//") || t.startsWith("/cdn-cgi/") || t.includes("' +")) continue;
       if (!links.has(t)) links.set(t, p);
+      if (langOf(p) !== "en") fromTranslated.push([p, t, r.body.slice(r.body.lastIndexOf("<", m.index), r.body.indexOf(">", m.index) + 1)]);
     }
   }
   const targets = [...links.keys()];
@@ -58,16 +60,19 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
   console.log(`preview ${PREVIEW}: ${pages.length} pages read, ${siteTargets.length} site links, ${mapTargets.length} meeting-map paths`);
   const res = await pool(siteTargets, 8, async (t) => ({ t, r: await get(PREVIEW + t, /\.(png|jpe?g|webp|svg|ico|woff2?|css|js|xml|txt|pdf|json)$/.test(t.split("?")[0]) ? "HEAD" : "GET") }));
   let leaks = 0;
+  const landedAt = new Map();
   for (const { t, r } of res) {
-    const from = links.get(t);
-    if (!(r.status >= 200 && r.status < 400)) { errors.push(`${t} → ${r.status || r.error} (linked from ${from})`); continue; }
-    const landed = new URL(r.url).pathname, lang = langOf(from);
-    if (lang !== "en" && langOf(landed) === "en" && landed !== "/" && onDisk(`/${lang}${landed}`) && /\/$|\.html$/.test(landed)) {
-      // the language switcher links every language on purpose: skip links that are hreflang/switcher anchors on the page
-      const page = pages.find((x) => x.p === from).r.body, at = page.indexOf(`href="${t}"`), tag = page.slice(page.lastIndexOf("<", at), page.indexOf(">", at) + 1);
-      if (/hreflang=|lang-switch|data-lang|class="[^"]*lang/.test(tag)) continue;
-      leaks++; errors.push(`translated → English: ${from} links ${t}, which lands on English ${landed} though /${lang}${landed} exists`);
-    }
+    if (!(r.status >= 200 && r.status < 400)) { errors.push(`${t} → ${r.status || r.error} (linked from ${links.get(t)})`); continue; }
+    landedAt.set(t, new URL(r.url).pathname);
+  }
+  const seen = new Set();
+  for (const [from, t, tag] of fromTranslated) {
+    const landed = landedAt.get(t), lang = langOf(from);
+    if (!landed || landed === "/" || langOf(landed) !== "en" || !/\/$|\.html$/.test(landed) || !onDisk(`/${lang}${landed}`)) continue;
+    // the language switcher links every language on purpose: hreflang/switcher anchors are not leaks
+    if (/hreflang=|lang-switch|data-lang|class="[^"]*lang/.test(tag)) continue;
+    if (seen.has(`${from} ${t}`)) continue; seen.add(`${from} ${t}`);
+    leaks++; errors.push(`translated → English: ${from} links ${t}, which lands on English ${landed} though /${lang}${landed} exists`);
   }
   const mres = await pool(mapTargets, 2, async (t) => ({ t, r: await get(LIVE + t, "HEAD") }));
   // 403 / 429: Cloudflare's bot challenge or rate rule for a data-centre IP (GitHub's runners met 429 on 11-09) — the

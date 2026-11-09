@@ -184,13 +184,59 @@ All twelve, cut to the sentences the English page has, are in `i18n/ar/core.json
 
 ## Prayers and fixed texts: one wording, everywhere
 - **The A.A. Preamble** [M, word for word]: «مدمنو الكحول المجهولون هي زمالة تضم الرجال والسيدات الذين يقومون بمشاركة خبراتهم ونقاط قوتهم وآمالهم مع بعضهم بعضاً، مما قد يُمَكِّنهم من حل مشكلاتهم المشتركة ومساعدة الآخرين في التعافي من إدمان الكحول. والشرط الوحيد للاشتراك في هذه الزمالة هي الرغبة في التوقُّف عن شرب الكحوليات. فلا يوجد أي استحقاقات أو رسوم للاشتراك في عضوية زمالة مدمني الكحول المجهولين، فنحن ندعم أنفسنا بأنفسنا من خلال مساهماتنا. كما أن الزمالة ليست حليفة لأي طائفة أو فئة أو سياسة أو مؤسسة أو معهد، فهي لا ترغب في الدخول في أي خلاف، كما أنها لا تعارض ولا تؤيد أياً من القضايا والمشكلات. هدفنا الأساسي هو عدم الإفراط في تناول الشراب والحفاظ على اليقظة، ومساعدة مدمني الكحول الآخرين في الوصول إلى هذه الحالة من اليقظة وعدم الإفراط في تناول الشراب.» Kept as printed, «بعضاً» and «أياً» spelling included. Its last sentence reads further from the English ("to stay sober") than the rest; don't "correct" it.
-- **The Promises** (Big Book pp. 83–84) [J], with its PDF-copy breaks («ا لم», «ا لإحساس») joined: «إن بذلنا غاية جهدنا في هذه المرحلة من تقدمنا، فإننا سنذهل قبل الوصول إلى منتصف الطريق…», then the numbered promises as [J] prints them. *unsure:* «هذه ا لم رحلة» is probably «هذه المرحلة»; read ARABB-30 before relying on it. Credit it as AA in Amman's Arabic, never as official.
+- **The Promises** (Big Book pp. 83–84) [J]: the whole text, PDF breaks joined, is in "Big Book quotes — look here first" below (pp. 83–84 row). Credit it as AA in Amman's Arabic, never as official.
 - **Serenity Prayer [ours]:** «اللهم امنحني السكينة لأتقبّل الأشياء التي لا أستطيع تغييرها، والشجاعة لأغيّر الأشياء التي أستطيع تغييرها، والحكمة لأعرف الفرق بينها.»
 - **Third Step prayer** (English p. 63) **[ours]:** «يا الله، أقدّم نفسي إليك، لتبني بي وتفعل بي ما تشاء. حرّرني من عبودية الذات، لأحسن العمل بمشيئتك. أزل عني صعابي، لعل انتصاري عليها يشهد لمن أودّ مساعدتهم على قوتك ومحبتك وطريقتك في الحياة. ليتني أعمل بمشيئتك دائمًا!»
 - **Seventh Step prayer** (English p. 76) **[ours]:** «يا خالقي، أنا الآن راغب في أن تأخذني كلّي، بخيري وشري. أدعوك أن تزيل عني الآن كل عيب من عيوب شخصيتي يقف في طريق نفعي لك ولإخواني من البشر. امنحني القوة، وأنا أخرج من هنا، لأنفّذ أمرك. آمين.»
 - **God:** «الله». Arabic-speaking Christians and Muslims both say it, and A.A.'s Arabic pages [J] use it. "a loving God" «إله محب»; "Him who presides over us all" «من يرعانا جميعًا».
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (ترجمة حرة), the same Arabic each time the same English line returns in your batch (search your file first).
 - A quote's credit line: "Alcoholics Anonymous, 4th Edition, page N. A short quotation, for identification and study. Read the whole page in your own copy →" becomes «<0>Alcoholics Anonymous</0> (الكتاب الكبير)، الطبعة الإنجليزية الرابعة، الصفحة N؛ ترجمة حرة. اقتباس قصير، للتعريف والدراسة. <1>اقرأ الصفحة كاملة في نسختك →</1>». Keep the English's placeholders.
+
+## Big Book quotes — look here first (wave arlang1)
+*Added 2026-11-09 by the arlang1 Super (Opus 5.5), on the model of wave hi1. A.A.W.S. prints the Big Book in Arabic (ARABB-30) but no text is online, so every line here is **[ours]**, translated once, faithfully and close to the English, so that every runner writes the same Arabic for the same passage. The one exception is the Promises: AA in Amman's local Arabic [J], as the glossary chose. The English lines are the ones the hi1 Super pulled by script from Derick's own copy of the 4th edition (Recoverystarts/aa-library `big-book/text/`), with the page found the same way; they are the lines the site quotes most.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly. If the English quotes only part of a passage, cut the Arabic at the matching sentence or clause; never reword it.
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase. List the id under `unsure:` as `BBQ <id>`, so a checker reads it.
+3. **Same line, same Arabic**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know them. Never swap in ARABB-30's page numbers.
+5. **Never call this wording A.A.'s.** It is our translation from A.A.'s English; the page's note (build.mjs `OURS_NOTE`, core `ar_ours_note`) says so. Where the English says a quote is "exactly as the book states it" or "word for word", say it is our translation of the book's English («بترجمتنا عن نص الكتاب الإنجليزي»), never that it is the book's Arabic.
+6. God is «الله», with «هو/له/إليه» for Him; the reader is «أنت». "Sponsor" is «المرشد» (see Program words).
+
+**Ours, fixed so every page says it the same way:**
+| p. | English | Arabic |
+|---|---|---|
+| 58 | Rarely have we seen a person fail who has thoroughly followed our path. | نادرًا ما رأينا شخصًا يفشل إذا اتّبع طريقنا اتّباعًا تامًّا. |
+| 58 | Our stories disclose in a general way what we used to be like, what happened, and what we are like now. | تكشف قصصنا، بصورة عامة، ما كنا عليه في الماضي، وما الذي حدث، وما نحن عليه الآن. |
+| 58 | If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps. | إن كنت قد قررت أنك تريد ما لدينا، وأنك مستعد لأن تذهب إلى أبعد مدى للحصول عليه — فأنت مستعد لأن تتخذ خطوات معيّنة. |
+| 59 | Half measures availed us nothing. | لم تُجدِنا أنصاف الحلول شيئًا. |
+| 58–59 | Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now! | تذكّر أننا نتعامل مع الكحول — الماكر، المحيّر، القوي! إنه أقوى من أن نواجهه دون عون. لكن هناك مَن له القوة كلها — وهو الله. عسى أن تجده الآن! |
+| 59 | We stood at the turning point. We asked His protection and care with complete abandon. | وقفنا عند نقطة التحوّل. وطلبنا حمايته ورعايته مستسلمين له تمامًا. |
+| 59 | Here are the steps we took, which are suggested as a program of recovery: | هذه هي الخطوات التي اتخذناها، وهي مقترحة برنامجًا للتعافي: |
+| 60 | Many of us exclaimed, “What an order! I can’t go through with it.’’ Do not be discouraged. | صاح كثيرون منا: «يا له من مطلب! لا أستطيع أن أمضي فيه إلى النهاية.» لا تيأس. |
+| 60 | No one among us has been able to maintain anything like perfect adherence to these principles. We are not saints. | لم يستطع أحد منا أن يلتزم بهذه المبادئ التزامًا يقارب الكمال. لسنا قدّيسين. |
+| 60 | The point is, that we are willing to grow along spiritual lines. The principles we have set down are guides to progress. We claim spiritual progress rather than spiritual perfection. | المهم هو أننا مستعدون للنمو على الطريق الروحي. والمبادئ التي وضعناها أدلّة على طريق التقدّم. إن ما ندّعيه هو التقدّم الروحي لا الكمال الروحي. |
+| 60 | (a) That we were alcoholic and could not manage our own lives. (b) That probably no human power could have relieved our alcoholism. (c) That God could and would if He were sought. | (أ) أننا كنا مدمني كحول ولم نكن قادرين على إدارة حياتنا. (ب) أنه ربما ما كان لأي قوة بشرية أن تخلّصنا من إدمان الكحول. (ج) أن الله يستطيع ذلك وسيفعله إن طلبناه. |
+| 83–84 | the Promises ("If we are painstaking about this phase of our development … They will always materialize if we work for them.") | [J]'s Arabic, its PDF breaks joined (AA in Amman; local, never called official): «إن بذلنا غاية جهدنا في هذه المرحلة من تقدمنا، فإننا سنذهل قبل الوصول إلى منتصف الطريق، حيث أننا... 1. سنتعرف على حرية وسعادة جديدتين علينا. 2. لن نندم على الماضي ولن نحاول نسيانه. 3. سندرك معنى كلمة الهدوء وسنعرف الطمأنينة. 4. مهما كان المدى الذي هوينا إليه، سنكتشف كم هي مفيدة تجربتها بالنسبة للآخرين. 5. سيزول عنا الإحساس بعدم الجدوى والإشفاق على أنفسنا. 6. ستزول أنانيتنا ونكتسب الاهتمام بزملائنا. 7. ستتغير مواقفنا ونظرتناللحياة تماماً. 8. لن يصيبنا شعور الخوف من الناس أو عدم الأمان المالي. 9. ستكون بديهتنا سريعة وحاضرة عند معالجة المواقف التي عادة ما كانت تعيقنا. 10. سندرك فجأة كيف أن الله يحقق لنا مالم نستطع تحقيقه لأنفسنا. هل ما نقوله إسراف في الوعود؟ لا نظن ذلك، إذ أنها بالفعل تحققت فينا بسرعة في بعض الأحيان وببطء في أحيان أخرى. وهي تتحقق دائماً ما دمنا نسعى من أجلها.» A Promise quoted alone takes its sentence from here; a line [J] folds into another ("Self-seeking will slip away") is cut from its number, not reworded. *unsure:* «تجربتها» in 4 is probably «تجربتنا» (our experience); kept as [J] prints it. |
+| 84 | And we have ceased fighting anything or anyone— even alcohol. | وقد كففنا عن محاربة أي شيء أو أي أحد — حتى الكحول. |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | لم نُشفَ من إدمان الكحول. ما لدينا حقًّا هو مهلة يومية مرهونة بالمحافظة على حالتنا الروحية. |
+| 86 | On awakening let us think about the twenty-four hours ahead. | عند الاستيقاظ، لنفكّر في الساعات الأربع والعشرين المقبلة. |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | تُظهر التجربة العملية أنه لا شيء يضمن الحصانة من الشرب مثل العمل المكثّف مع مدمني الكحول الآخرين. |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | اغرس في وعي كل رجل فكرة أنه يستطيع أن يتعافى بغضّ النظر عن أي أحد. الشرط الوحيد هو أن يثق بالله وينظّف بيته. |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | سلّم نفسك لله كما تفهمه. اعترف بأخطائك له ولإخوانك. أزِل حطام ماضيك. |
+| 164 | We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny. | سنكون معك في زمالة الروح، وستلتقي حتمًا ببعضنا وأنت تمضي في طريق المصير السعيد. |
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | إن فكرة أنه سيتمكن، بطريقة ما ويومًا ما، من التحكم في شربه والاستمتاع به هي الهوس الأكبر لدى كل شارب غير طبيعي. |
+| 53 | God either is, or He isn’t. | إما أن يكون الله موجودًا، وإما ألا يكون. |
+| 53 | God is everything or else He is nothing. | إما أن يكون الله كل شيء، وإما ألا يكون شيئًا. |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | الأنانية — التمركز حول الذات! هذا، في رأينا، هو أصل متاعبنا. |
+| 64 | Resentment is the “number one’’ offender. It destroys more alcoholics than anything else. | الاستياء هو المذنب «رقم واحد». إنه يدمّر من مدمني الكحول أكثر مما يدمّر أي شيء آخر. |
+| 63 | the Third Step prayer | "Prayers and fixed texts" above |
+| 76 | the Seventh Step prayer | "Prayers and fixed texts" above |
+| 417 | And acceptance is the answer to all my problems today. … | `core.json` 1b08a63f6559 (the whole line) |
+| 561–566 | the Traditions, short and long form | the two Traditions sections above (and `core.json`) |
+| 574–575 | the Concepts | the Concepts section above (and `core.json`) |
+
+The site's most-cited pages, for your bearings: 563–566, 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
 
 ## Site words
 | English | Arabic |

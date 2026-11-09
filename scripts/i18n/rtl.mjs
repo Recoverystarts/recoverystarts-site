@@ -74,7 +74,13 @@ function localDigits(s, lang) {
     return tok.replace(/\d/g, (d) => D[+d]);
   });
 }
-export const localText = (s, lang) => localDigits(swapArrows(s), lang);
+// ar (wave arlang1): a Latin abbreviation that ends in a period (A.A., N.A., C.M.A., A.A.W.S.) inside Arabic text shows as
+// ".A.A": the bidi algorithm gives the last period to the right-to-left run. A left-to-right mark (U+200E) after it keeps
+// the period with its letters. Added here, at build time, so translators never type direction marks (GLOSSARY.md).
+// Only ar, so fa's pages keep their bytes. Way back: delete LRM_AFTER and its use in localText.
+const LRM_AFTER = { ar: true };
+const lrm = (s, lang) => (LRM_AFTER[lang] ? s.replace(/(?<![A-Za-z.])((?:[A-Z]\.){2,})(?!\u200e)/g, "$1\u200e") : s);
+export const localText = (s, lang) => lrm(localDigits(swapArrows(s), lang), lang);
 
 const SKIP = new Set(["script", "style", "code", "pre", "kbd", "samp", "var", "textarea", "svg", "math"]);
 const META = new Set(["description", "og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image:alt"]);

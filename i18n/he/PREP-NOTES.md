@@ -9,6 +9,17 @@
 ## What I found, in one paragraph
 A.A. in Israel has a good national site (aa-israel.co.il, run by the registered service centre «אלכוהוליסטים אנונימים ישראל מרכז שירות (ע"ר)») and posts its pamphlets as PDFs. Its Hebrew comes in two generations. The **older, approved** one is A.A.W.S.'s own printed pamphlet «חבר חדש שואל» (HEBP-24, © 1980). The **newer** one is what A.A. Israel uses today: its website's Steps and two pamphlets, one of which prints «תרגום ממתין לאישור – מאי 2023» at the top of every page. It carries the Steps, the short-form Traditions, the Concepts and the Preamble. A separate, undated pamphlet has the long-form Traditions. The Serenity Prayer is on the site. The Hebrew Big Book is sold in print; online there are only scans of three of its stories. One of them holds the p. 417 passage the home page quotes, so that quote is the Hebrew book's own words. Nothing from N.A. and nothing from the "12 and 12" was used.
 
+## Round 3 — 2026-11-09T19:52Z: after reading the wave README and PREP-ru (Derick turned manual mode on; read through the ops-vault)
+Not a redo. Checked against the README's "What a prep window does", "The RTL check" and the Hebrew lines, and against PREP-ru's shape:
+- **Menu at 390 px, with the menu open** (README "All three"; I hadn't opened it in round 1): checked on the same specimen (the built /fa/ page with Hebrew swapped in, Frank Ruhl Libre + Heebo), hamburger open, sub-menus expanded. One clean column, no item wraps, no horizontal scroll. Hebrew runs shorter than English, so nothing to shorten.
+- **Crisis candidates** (README: 101, ERAN 1201, SAHAR, Ministry of Health): all four were already checked. ERAN kept, SAHAR held, 101 and MoH not confirmed (bot checks). 988's rules (never "text" in another language, "confidential" of 988 only) are already in GLOSSARY.
+- **Quotes and gershayim** (README: " " or „ ”; A.A. as א.א.): no change. Straight " " (A.A. Israel's own), gershayim typed as ", «א.א.».
+- **N.A. check:** no change. No N.A. Hebrew read or used; every source is aa-israel.co.il or A.A.W.S.
+- **For the Super, from PREP-ru's shape** (new lines, nothing in core.json changes):
+  - **Big Book quotes beyond p. 417**: the Hebrew Big Book isn't online (only three story scans). ru filled a 29-row table from its source; he can't. Use hi1's rule: look the passage up, and if there's no Hebrew source, translate it faithfully as [ours] and list `BBQ <id>` under unsure. Never reconstruct the Hebrew book from memory.
+  - **Big Book chapter titles**: not online in Hebrew. [ours] at S1, marked, unless A.A. Israel's book-shop scan or the story PDFs turn one up.
+  - **Town names on Israel's meeting pages** (README "The RTL check"): A.A. Israel's /aa-meetings/ prints its towns in Hebrew. That's the source for Hebrew town labels (the Persian precedent, ir-S4). Map-side, for helang1's Finder line, not this prep.
+
 ## Round 2 — 2026-11-09T18:3xZ: langs-super's answers, and three README lines
 *langs-super (radio 18:26Z), answering the two decisions; the final call on both is the CEO's at the cold check.*
 - **Steps: the website's wording** (as recommended, and as GLOSSARY already has it). The pamphlets' wording stays below, for the record.

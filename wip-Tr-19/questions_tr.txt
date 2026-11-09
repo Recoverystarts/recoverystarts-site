@@ -1,0 +1,94 @@
+0|Bugün hangi korkunuzu fark ettiniz ve onunla nasıl başa çıktınız: ona sarılarak mı, yoksa bırakarak mı?
+1|Bugün hâlâ kontrol etmeye çalıştığınız bir şey nedir ve onu bırakmak sizi Vaatler’de anlatılan özgürlüğe nasıl yaklaştırabilir?
+2|Hayatınızın hangi alanında bugün hâlâ sıkışmış hissediyorsunuz ve bunu Üstün Gücünüze teslim etmek size başka bir özgürlük katmanının kapısını nasıl açabilir?
+3|Hayatınızın hangi alanında bugün “araç”tan çok “araç yapımcısı” olmaya en çok eğilimlisiniz, yani yalnızca kullanılmaya hazır olmak yerine sonuçları kontrol etmeye çalışıyorsunuz?
+4|İyileşmeye başladığınızdan beri bırakabildiğiniz belirli bir bencil tutum nedir ve bu, gününüze yaklaşımınızı nasıl değiştirdi?
+5|Hayatınızın hangi alanında bugün Üstün Gücünüzün zamanlamasına güvenmek yerine bir sonucu zorlamaya çalışıyorsunuz?
+6|Ayık kaldığınızdan beri ailevi yükümlülükleriniz nasıl değişti ve yardım etmekle fazla müdahil olmak arasındaki çizgiyi nereye çekiyorsunuz?
+7|Hayatınızdaki bir ilişkiyi düşünün: bir rehberle, bir eşle, bir dostla. Orada işleri sıklıkla ele alan ya da kontrol eden biri olabilirsiniz. Sonucu bırakıp yalnızca orada olarak bugün gerçek bir ortaklığa nasıl yönelebilirsiniz?
+8|Hatalarınızı telafi ettiğiniz ama yine de huzursuz hissettiğiniz bir ilişkiyi düşünün. Bu telafiyi gerçekten yaşamak için bugün atabileceğiniz küçük ve düzenli bir adım nedir?
+9|İyileşmede zor bir döneme girdiğinizde ilk hamleniz nedir: rehberiniz mi, Üstün Gücünüz mü, yoksa kendi en iyi düşünceniz mi?
+10|Bugün kendi irade gücünüze değil de A.A. grubuna, sizden daha büyük bir güç olarak güvenmeyi nasıl uygulayabilirsiniz?
+11|Kendinizle, başkalarıyla ya da Tanrı’yla ilgili hangi inanç veya tutumu bugün biraz daha gevşek tutmaya çağrılıyorsunuz?
+12|Basamakları çalışmaya başladığınızdan beri kendinizle ilgili hangi temel inanç derinden değişti?
+13|Hayatınızın hangi alanında kontrolü ya da korkuyu bırakarak bugün biraz daha özgürlük yaşayabilirsiniz?
+14|Yalnızca içmemenin ötesine geçen, düşünce ve duygularınızdaki bir kayma olan “psişik değişim”i hangi somut biçimlerde yaşadınız?
+15|Bugün hayatınızda “manevi gelişim” neye benziyor, ileriye atılmış tek bir küçük adım bile olsa?
+16|Bugün yazıp Üstün Gücünüzden hayatınızdan kaldırmasını isteyebileceğiniz belirli bir korku nedir?
+17|Sarılıp durduğunuz belirli bir korku nedir ve onu bugün Üstün Gücünüze nasıl teslim edebilirsiniz?
+18|Hayatınızın bugün hâlâ tuzağa düşmüş olabileceğinizi hissettiğiniz bir alanını düşünün: bir kızgınlık, bir korku ya da bir ilişki. Bunun “özgür” bir hâli nasıl görünürdü ve bu özgürlüğe yaklaşmak için bugün hangi tek adımı atabilirsiniz?
+19|İyileşmenizde bir başkasına güvenmeyi uygulamak için bu hafta atabileceğiniz küçük bir adım nedir: bir toplantıda dürüstçe bir şey paylaşmak mı, yoksa bir sorunda yardım istemek mi?
+20|Gündelik rahatlamanızı güçlendirmek için bugün kendinize söz verebileceğiniz “anaokulu düzeyinde” bir manevi uygulama nedir?
+21|Bir başka alkoliğe yardım etmenin (yalnızca güzel bir söz ya da kendi hikâyenizi paylaşmak bile) kendi ayıklığınızı güçlendirdiği bir anı düşünün. Bu vermede siz ne aldınız?
+22|Ayıklığın ilk günlerinizi düşünün: iyileşmenin armağanı size şimdi, başlangıçta sahip olmadığınız neyi verdi? Nasıl değişti ve büyümesine ne yardımcı oldu?
+23|Programı olduğu gibi, istediğiniz gibi değil, tam olarak benimseyebilmek için bırakmanız gereken eski bir fikir neydi?
+24|İyileşmenizin hangi alanında bugün kurucuların kararlılığını benimsemeniz gerekiyor, yani sonuçlar hemen gelmese de yolunuzdan şaşmamak?
+25|Kendi hayatınızdaki dalga etkisini düşünün: İyileşmesi sizi ilk kez etkileyen kişi kimdi? Ayıklığınız başkalarına şimdiden nasıl dalgalar yaydı, belki ilk başta fark etmediğiniz yollarla?
+26|İyileşmenizde, bir inanç sıçraması gibi hissettirse bile, kendi kontrolünüzü bırakıp tamamen duaya güvenmeniz gereken belirli durum neydi?
+27|Bugün feda edebileceğiniz, sizi grubun birliğine yaklaştırıp iyileşmenizi güçlendirebilecek küçük bir şey nedir: bir kızgınlık mı, bir korku mu, haklı çıkma ihtiyacı mı?
+28|Bugün bırakmaya hazır olduğunuz eski bir düşünce ya da davranış kalıbı nedir ve Üstün Gücünüz onu bırakmanıza nasıl yardımcı olabilir?
+29|Gitmesi gerektiğini bildiğiniz ama yine de bırakmaya tamamen istekli olmadığınız bir kusur var mı? Sizi tereddüt ettiren ne?
+30|Mükemmel yapıp yapamayacağınızdan emin olmasanız bile bugün “sadece deneyebileceğiniz” bir şey nedir ve bu, iyileşmenizde ilerlemenizi nasıl sürdürebilir?
+31|Sayfa 83–84’teki hangi vaadin şu an hayatınızda gerçekleştiğini görmeye en çok ihtiyaç duyuyorsunuz ve ona doğru ilerlemek için bugün atabileceğiniz küçücük bir adım nedir?
+32|Hayatınızın hangi alanında değişime direnç hissediyorsunuz ve orada bir Üstün Gücün rehberliğine güvenmeye doğru küçük bir adımı nasıl atabilirsiniz?
+33|Gündelik rahatlamayı alabilmek için manevi durumunuzu güçlendirmek üzere bugün yapabileceğiniz tek şey nedir?
+34|Hayatınızın hangi alanında bugün dürüstçe “Bu program işe yarıyor, eskisinden farklıyım” diyebilirsiniz?
+35|Bugün manevi durumunuzu destekleyen hangi seçimi yapıyorsunuz?
+36|Hayatınızın hangi alanına bugün biraz daha “iyi ve düzenli bir yön” davet edebilirsiniz ve bu neye benzerdi?
+37|Uyandığınızda genellikle aklınıza gelen ilk düşünce nedir ve bir Üstün Gücü o ana davet ederek gününüzün havasını nasıl belirleyebilirsiniz?
+38|“Ruhun dünyası” günlük hayatınızda neye benziyor ve bencil iradenin dünyası daha gürültülü göründüğünde bilinçli olarak ona nasıl adım atıyorsunuz?
+39|Bugün iyileşmenizin “kilit taşı” nedir, yani kaldırılırsa geri kalan her şeyin çökeceği ilke veya uygulama?
+40|Bunun ne anlama geldiğinden henüz emin olmasanız bile bugün sizden büyük bir Güce sunabileceğiniz küçük bir isteklilik nedir?
+41|Üstün Gücünüz bugün neye benziyor ve bu anlayış A.A.’ya ilk geldiğinizden beri nasıl değişti?
+42|İyileşmenizde, onu “teslim ettikten” sonra bile, kendi başınıza düzenleyemeyeceğiniz bir armağan gibi hissettiren bir gelişme yaşadığınız oldu mu?
+43|Hayatınızın neresinde bağımsızlığı yalnızlıkla karıştırdınız ve kontrolü teslim etmek sizi gerçekten nasıl özgürleştirebilir?
+44|Basit, dürüst bir dua (umutsuzluk içinde edilen bir dua bile) ne zaman bakış açınızı değiştirdi ya da iyileşmenizde zor bir anı atlatmanıza yardımcı oldu?
+45|Sabah uyandığınızda, kendi yüreğinizdeki ya da bir başkasının yüreğindeki umut tohumunu sulamak için bugün yapabileceğiniz küçük bir şey nedir?
+46|Hayatınızda sabrınızı sınayan birini düşünün. Kendi iyiliğinizden ödün vermeden, bugün o kişiye karşı sevgiyi ve hoşgörüyü nasıl uygulayabilirsiniz?
+47|Manevi esenliğe odaklanmanın maddi durumunuzu beklenmedik biçimde iyileştirdiği bir zaman yaşadınız mı? Bu nasıl hissettirdi?
+48|Artık alkole karşı mücadele etmeniz gerekmediğine gerçekten inansaydınız gününüz nasıl görünürdü?
+49|Hâlâ tuttuğunuz hangi çekince (o tek düşünce, bahane ya da koşul) sizi tam teslimiyetten ve Vaatler’de anlatılan huzurdan alıkoyuyor olabilir?
+50|Sadece en iyisini umarak pasif kalmak yerine, manevi durumunuzu etkin biçimde sürdürmek için bugün atabileceğiniz, büyük ya da küçük, tek bir adım nedir?
+51|Bugün ayıklığınızın, bir zamanlar olağan sayabileceğiniz, görünüşte sıradan hangi yönü için Üstün Gücünüze şükredebilirsiniz?
+52|İyileşmeniz size bugün daha önce fark etmediğiniz hangi yeni dersi öğretti?
+53|İyileşmedeki özgürlüğünüzü bugün bir başkasına yardım etmek için nasıl kullanıyorsunuz?
+54|Hayatınızın neresinde bugün gerçek eşitliği uygulayabilirsiniz: kendinize ve başkalarına ne daha iyi ne daha kötü, yalnızca aynı yolda yürüyen yol arkadaşları olarak davranmak?
+55|Hayatınızın hangi alanlarında güvenilir bir hizmetkâr olarak davranıyorsunuz ve egonuz nerede hizmet etmek yerine yönetmeye çalışarak sinsice içeri sızıyor olabilir?
+56|Bugün hangi durumda hâlâ sonucu kontrol etmeye çalışıyorsunuz ve bu kontrolü bir Üstün Güce teslim etmek neye benzerdi?
+57|İyileşmenizin hangi alanında kendi görüşünüzü bırakıp bugün grup bilincine güvenmek işinize yarardı?
+58|Erken iyileşme döneminde birinin nezaketinin ya da sabrının size ait olduğunuzu hissettirdiği bir zamanı düşünün. Aynı sevgiyi bugün yeni gelen birine nasıl sunabilirsiniz?
+59|Bugün bahçenizde hangi kızgınlıklar ya da korkular kök salmaya çalışıyor ve onları sökmek için planınız nedir?
+60|İyileşmenin ömür boyu süren görevinin bir parçası olarak en sık hangi uygulamaya ya da basamağa geri dönmeniz gerekiyor?
+61|Emin olmasanız bile bugün “inanmaya istekli olma”yı uygulayabileceğiniz bir alan hayatınızda neresidir?
+62|Hayatımın hangi alanında bugün isteklilikten kaçınıyorum ve bunu Üstün Gücüme tamamen teslim etmek neye benzerdi?
+63|Hayatınızın hangi alanında bugün hâlâ fazla sıkı tutunuyorsunuz? Bunu teslim etmek yaklaşımınızı nasıl değiştirebilir?
+64|Hayatınızın hangi alanında bugün hâlâ Tanrı’yı oynamaya çalışıyorsunuz ve gerçekten bırakıp bir Üstün Gücün öncülük etmesine izin vermek neye benzerdi?
+65|Yüreğimin ya da zihnimin hangi yanı bugün hâlâ iyileşmeye ihtiyaç duyuyor ve bu değişimi davet etmek için hangi basamağı atabilirim?
+66|“Sonunda özgür” kendi iyileşmenizde sizin için ne anlama geliyor: neyden özgür ve ne yapmakta özgür?
+67|Toplantılardaki ilk günlerinize geri dönün. Gerçekten ait olduğunuzu ilk ne zaman hissettiniz: yalnızca katılmak değil, ait olmak?
+68|Hâlâ taşıdığınız, bir telafi yazarak ya da kendinizi affederek bugün bırakabileceğiniz geçmişteki hangi başarısızlık ya da pişmanlık var?
+69|Basamakları dolanmak için hiç daha kolay, daha yumuşak bir yol aradınız mı? Ne oldu?
+70|Bugün kendinizi tam olarak olduğunuz gibi kabul etmek nasıl hissettirirdi?
+71|Hayatınızın neresinde bugün hâlâ Tanrı’yı tanımanın size huzur getirebileceğine güvenmek yerine savaşıyorsunuz?
+72|Hâlâ kin beslediğim biri var mı ve özgürce affedebilmem için Üstün Gücümden o kızgınlığı kaldırmasını istemeye istekli miyim?
+73|Bugün kin beslediğiniz biri var mı? Henüz hissedemeseniz bile onun esenliği için dua edebilir misiniz?
+74|Eski benliğinizin hangi kısımlarını hâlâ korumaya çalışıyorsunuz ve onları bırakmak sizi nasıl özgür kılabilir?
+75|En son ne zaman karşılığında bir şey beklemeden iyileşmedeki birine yardım ettiniz ve bu deneyimden kendiniz hakkında ne öğrendiniz?
+76|İçki günlerinizden hâlâ utanç ya da öfke taşıyan bir anıyı düşünün. Ona farklı bakabilmek için bugün Dördüncü Basamak’ın ışığını nasıl tutabilirsiniz?
+77|Dünün pişmanlıklarını ve yarının korkularını bırakıp yalnızca bugünkü ayıklığınıza odaklanmak sizin için ne anlama geliyor?
+78|Geçmişinizden, bir zamanlar kızdığınız ama şimdi sizi iyileşmeye yaklaştırdığı için bir nimet olarak gördüğünüz bir şey nedir?
+79|“Yönetilemez” şu an hayatımda, içmeyle ilgisiz görünen alanlarda bile, neye benziyor?
+80|Ayıklığınız buna bağlıymış gibi, manevi sağlığınızı sürdürmek için bugün atabileceğiniz belirli bir adım nedir?
+81|“Mutlu, neşeli ve özgür” bugün hayatınızda, içki günlerinizle karşılaştırıldığında neye benziyor?
+82|Bugün şükrettiğiniz, bir yıl önce gözünüzden kaçacak küçük bir şey nedir?
+83|İçki günlerinizden hangi olumsuz deneyimi başka bir alkoliğe yardım etmekte olumlu bir güce dönüştürebildiniz?
+84|Hâlâ suçluluk taşıdığınız geçmişteki bir hata nedir ve program onu bugün bırakmanıza nasıl yardımcı olabilir?
+85|Özellikle başka bir alkoliğin yolculuğunu yargılamaya meyilli hissettiğinizde, kendi iyileşmenizde eşit hakları nasıl uyguluyorsunuz?
+86|Hayatınızın neresinde bugün yargıyı hoşgörüyle değiştirebilirsiniz, karşınızdaki kişinin sizin göremediğiniz bir hastalıkla mücadele ediyor olabileceğini hatırlayarak?
+87|Hangi eski kızgınlıklar ya da korkular bugün manevi evinizi dağınık hâle getiriyor ve onları süpürmek için neler gerekir?
+88|Hâlâ ıstırap çeken bir alkoliğe mesajı taşımak için bugün atabileceğiniz, büyük ya da küçük, tek bir somut adım nedir?
+89|Bugün başka bir alkoliğe hizmet etmeye hazır olmamı engelleyebilecek ve benim geri tuttuğum şey nedir?
+90|Hayatımın hangi alanında bugün tamamen dürüst olmaktan kaçınmaya meyilliyim ve bunun yerine doğruyu söylemek bana neye mal olurdu?
+91|Hayatınızda, takıntı yaptığınız bir “ağaç” (bir kişi, yer ya da şey) Tanrı’nın iradesinin ve tam bir iyileşmenin “ormanını” görmenizi engelliyor olabilir mi?
+92|Geçmişinizin hangi kısmını gizli tutmaya en çok meyillisiniz ve hiçbir şeyi geri tutmamak sizi nasıl özgür kılabilir?
+93|Birinin sınırlarına ya da duygularına saygısızlığınızın kızgınlığa yol açtığı bir zamanı düşünün. Onuncu Basamak’ı uygulamak bugün farklı karşılık vermenize nasıl yardımcı olabilir?

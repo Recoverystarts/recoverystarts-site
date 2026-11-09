@@ -109,6 +109,8 @@ A personal story's English title: translate it faithfully **[ours]**, the same e
 | home group | المجموعة الأم **[ours]** |
 | group conscience | ضمير المجموعة **[ours]** (Tradition 2: «ضمير جماعتنا») |
 | sponsor / sponsee / sponsorship | **المرشد / المُرشَد / الإرشاد** **[ours]**. **Never «كفيل/مكفول/الكفالة»:** in the Gulf that is the everyday word for the kafala sponsor of a migrant worker, and this language serves the Gulf (CEO CHECKED-ar #3, 2026-11-09). No A.A. Arabic title for the sponsorship pamphlet P-15 was found online (S1 search 2026-11-09); if one turns up, it wins. Not N.A.'s word. "Sponsor Teacher" «المرشد المعلّم»; "your sponsor" «مرشدك». |
+| guidance (God's, the program's) / to guide | **التوجيه / يوجّه** (or «الهداية», «هادٍ» for God as Guide). **Never «الإرشاد/مرشد»**: that is now our sponsor word (Super, 2026-11-09, check-Ar-20) |
+| counseling (Tradition 8: "the occupation of counseling alcoholics for fees or hire") | **تقديم المشورة**: «نعرّف المهنية بأنها عمل تقديم المشورة لمدمني الكحول مقابل أجر أو بالتوظيف». Never «إرشاد», which would read as sponsoring for money |
 | newcomer | القادم الجديد، القادمون الجدد [J] |
 | old-timer | العضو القديم، القدامى **[ours]** |
 | **sobriety / sober / stay sober** | **الامتناع عن الشرب / ممتنع عن الشرب / البقاء ممتنعًا عن الشرب** **[ours]**. Why: [M] and [J] write «اليقظة» for sobriety, but «يقظة روحية» is "spiritual awakening" (Step 12), and one word for both would muddle the Step. «اليقظة» stays **only inside the Preamble as [M] prints it.** "3 years sober" «ممتنع عن الشرب منذ 3 سنوات» |
@@ -229,7 +231,7 @@ All twelve, cut to the sentences the English page has, are in `i18n/ar/core.json
 | 53 | God either is, or He isn’t. | إما أن يكون الله موجودًا، وإما ألا يكون. |
 | 53 | God is everything or else He is nothing. | إما أن يكون الله كل شيء، وإما ألا يكون شيئًا. |
 | 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | الأنانية — التمركز حول الذات! هذا، في رأينا، هو أصل متاعبنا. |
-| 64 | Resentment is the “number one’’ offender. It destroys more alcoholics than anything else. | الاستياء هو المذنب «رقم واحد». إنه يدمّر من مدمني الكحول أكثر مما يدمّر أي شيء آخر. |
+| 64 | Resentment is the “number one’’ offender. It destroys more alcoholics than anything else. | الاستياء هو المذنب ‹رقم واحد›. إنه يدمّر من مدمني الكحول أكثر مما يدمّر أي شيء آخر. |
 | 63 | the Third Step prayer | "Prayers and fixed texts" above |
 | 76 | the Seventh Step prayer | "Prayers and fixed texts" above |
 | 417 | And acceptance is the answer to all my problems today. … | `core.json` 1b08a63f6559 (the whole line) |

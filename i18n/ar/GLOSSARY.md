@@ -236,6 +236,8 @@ All twelve, cut to the sentences the English page has, are in `i18n/ar/core.json
 | 561–566 | the Traditions, short and long form | the two Traditions sections above (and `core.json`) |
 | 574–575 | the Concepts | the Concepts section above (and `core.json`) |
 
+*(Super, 2026-11-09, check-Ar-17: a quote that follows «أن» or «لأن» may open with the subject, «أن «التجربة العملية تُظهر أنه…»»; Arabic needs it after «أنّ». Same words, same order otherwise.)*
+
 The site's most-cited pages, for your bearings: 563–566, 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
 
 ## Site words

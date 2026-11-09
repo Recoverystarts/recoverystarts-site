@@ -80,7 +80,14 @@ function localDigits(s, lang) {
 // Only ar, so fa's pages keep their bytes. Way back: delete LRM_AFTER and its use in localText.
 const LRM_AFTER = { ar: true };
 const lrm = (s, lang) => (LRM_AFTER[lang] ? s.replace(/(?<![A-Za-z.])((?:[A-Z]\.){2,})(?!\u200e)/g, "$1\u200e") : s);
-export const localText = (s, lang) => lrm(localDigits(swapArrows(s), lang), lang);
+// a number range ("pp. 44–57", "7:00–8:30") in right-to-left text shows reversed (57–44): the dash is neutral, so
+// the two numbers take the paragraph's direction. A left-to-right mark either side of an en/em dash between two digits
+// keeps the range in reading order (CEO langs-1 on site #89, from helang1's checker 11-09). fa is left out so its bytes
+// stay (its digits are Persian and it was never reported); the wave that merges second keeps every key. Way back: delete
+// RANGE_LRM and its use in localText.
+const RANGE_LRM = { ar: true };
+const ranges = (s, lang) => (RANGE_LRM[lang] ? s.replace(/(\d)\u200e?([\u2013\u2014])\u200e?(?=\d)/g, "$1\u200e$2\u200e") : s);
+export const localText = (s, lang) => ranges(lrm(localDigits(swapArrows(s), lang), lang), lang);
 
 const SKIP = new Set(["script", "style", "code", "pre", "kbd", "samp", "var", "textarea", "svg", "math"]);
 const META = new Set(["description", "og:title", "og:description", "og:image:alt", "twitter:title", "twitter:description", "twitter:image:alt"]);

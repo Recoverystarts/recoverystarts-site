@@ -218,18 +218,63 @@ In `i18n/he/core.json`, ids `e32af397e692` (1) … `549bf284bc05` (12). The pamp
 ## Prayers and fixed texts — one wording, everywhere
 - **The Serenity Prayer** («תפילת השלווה») [aail `/for-aa-members/`]: «אלי, תן בי את השלווה לקבל את הדברים שאין ביכולתי לשנותם, אומץ לשנות את הדברים אשר ביכולתי, והתבונה להבחין בין השניים»
 - **The Preamble** («המבוא של א.א.») [p86]: «"אלכוהוליסטים אנונימיים", א.א., היא התחברות של גברים ושל נשים החולקים זה עם זה את ניסיונם, את כוחם ואת תקוותם כדי לפתור את בעייתם המשותפת ולעזור לאחרים להחלים מאלכוהוליזם. הדרישה היחידה לחברות היא הרצון להפסיק לשתות. אין בא.א. לא תשלומים ולא דמי חבר – אנו נושאים את עצמנו בעזרת תרומותינו. א.א. אינה מעורבת בפוליטיקה, בדת או בחברה, אינה קשורה בשום ארגון או מוסד, אינה מעורבת במחלוקות כלשהן ואינה תומכת בשום עניין או מתנגדת לו. מטרתנו העיקרית היא להישאר מפוכחים ולעזור לאלכוהוליסטים אחרים להשיג את פיכחונם.» (The pamphlet sets the last three sentences as bullets; on a page they run as one paragraph, as the English Preamble does.)
-- **The Third and Seventh Step prayers**: **not found in Hebrew online** (they're in the Big Book's chapter 5–6, pp. 63 and 76, which A.A. Israel doesn't post). **Hold**: don't translate them until a source is found or langs-super rules [ours] (PREP-NOTES, "Unsure").
+- **The Third and Seventh Step prayers**: **not found in Hebrew online** (they're in the Big Book, pp. 63 and 76, which A.A. Israel doesn't post). **[ours]**, fixed once by helang1-super in S1: see "Big Book quotes — look here first". Use those words exactly.
 - **The Responsibility Statement** («אני אחראי…»): two wordings exist ([hebp24] back cover; [spon] p. 31, cut off at the page end). Not needed by any segment yet; ask before using.
 - **The Declaration of Unity** («הצהרת אחדות») [spon p. 31]: «את זה אנחנו חייבים לעתיד של א.א.: לשים את הרווחה המשותפת שלנו במקום הראשון; לשמור על האחווה שלנו מאוחדת. שכן על אחדות א.א. תלויים חיינו וחייהם של הבאים אחרינו.»
 
 ## Big Book quotes — look here first
-A.A. Israel posts three stories from the Hebrew Big Book as scans ([bbhe]): «קבלה הייתה הפתרון» ("Acceptance Was the Answer", from p. 407), «הוא חי רק כדי לשתות» ("He Lived Only to Drink") and «בתנועה» (English title not matched; not read). Only the first was read, one passage:
+*Written 2026-11-09 by helang1-super (Opus 5.5) in S1, on the model of waves hi1 and arlang1, with the English checked against the site's own English segments and Recoverystarts/aa-library (big-book/text). The Hebrew Big Book («הספר הגדול») is sold in print by A.A. Israel; online there are only scans of three of its stories ([bbhe]). So **one passage is the Hebrew book's own words (p. 417, below)**, and every other line here is **[ours]**: translated once, faithfully and close to the English, so every runner writes the same Hebrew for the same passage. The page's note (`he_ours_note`: «חלק מהציטוטים מהספר הגדול לקוחים מהתרגום העברי… את השאר תרגמנו בעצמנו») says so.*
+
+**The rule, for every Big Book quote in your batch:**
+1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly. If the English quotes only part of a passage, cut the Hebrew at the matching sentence or clause; never reword it.
+2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase. List the id under `unsure:` as `BBQ <id>`, so a checker reads it.
+3. **Same line, same Hebrew**: before you write a quote, search your own file for it; if you've written it once, copy it.
+4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A.'s Hebrew, even if you know them. Never reconstruct the Hebrew Big Book from memory, and never swap in its own page numbers (the English 4th Edition's pages stay).
+5. **Never call our wording A.A.'s.** Where the English says a quote is "exactly as the book states it" or "word for word", say it is our translation of the book's English («בתרגום שלנו מהנוסח האנגלי של הספר»), never that it is the Hebrew book's words (p. 417 is the one exception).
+6. God is «אלוהים», «אותו», «רצונו»; the book's "we" stays «אנחנו»; where the book speaks to the reader, «אתם». A first-person prayer keeps the book's "I" in the masculine generic, as the glossary says.
+
+**The Hebrew Big Book's own words** [bbhe]:
 
 | Page | English (core.json) | Hebrew, the Hebrew Big Book's words [bbhe, scan p. 186 of the Hebrew book] |
 |---|---|---|
-| 417 | And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation — some fact of my life — unacceptable to me… | וקבלה היא התשובה לכל בעיותיי היום. כשאני מוטרד, הסיבה היא שאני מוצא איזה שהוא אדם, מקום, דבר או מצב – איזו עובדה בחיי – שאינם מקובלים עלי… |
+| 417 | And acceptance is the answer to all my problems today. When I am disturbed, it is because I find some person, place, thing, or situation — some fact of my life — unacceptable to me… | וקבלה היא התשובה לכל בעיותיי היום. כשאני מוטרד, הסיבה היא שאני מוצא איזה שהוא אדם, מקום, דבר או מצב – איזו עובדה שהיא בחיי – שאינם מקובלים עלי… |
 
-The scan prints «לכל» in bold (emphasis, as the English italicises "all"); we don't carry the bold, as the English segment doesn't. The scan's dashes are hyphens; typed as en dashes (typography). **Read by eye from a 200-dpi scan, not by OCR**: a runner who reuses it should keep it exactly as here. Every other Big Book quote: **[ours]**, marked as the credit line `96327e987d94` would mark it, until a Hebrew source is read.
+The scan prints «לכל» in bold (emphasis, as the English italicises "all"); we don't carry the bold, as the English segment doesn't. The scan's dashes are hyphens; typed as en dashes (typography). **Read by eye from the scan, twice**: by prep-he (200 dpi), then by helang1-super (150 dpi, scan page 11, 2026-11-09 ~20:10Z, CHECKED-he #3), who found one word the first read dropped: «איזו עובדה **שהיא** בחיי» (fixed here and in core.json). The rest matches letter for letter. Use it exactly as here, and only for p. 417.
+
+**Ours, fixed so every page says it the same way:**
+| p. | English | Hebrew [ours] |
+|---|---|---|
+| 58 | Rarely have we seen a person fail who has thoroughly followed our path. | רק לעיתים רחוקות ראינו אדם נכשל, אם הלך בדרכנו ביסודיות. |
+| 58 | Our stories disclose in a general way what we used to be like, what happened, and what we are like now. | הסיפורים שלנו מגלים, באופן כללי, איך היינו פעם, מה קרה, ואיך אנחנו עכשיו. |
+| 58 | If you have decided you want what we have and are willing to go to any length to get it—then you are ready to take certain steps. | אם החלטתם שאתם רוצים את מה שיש לנו, ואתם מוכנים ללכת כל כברת דרך כדי להשיג אותו – אז אתם מוכנים לעשות צעדים מסוימים. |
+| 59 | Half measures availed us nothing. | חצאי אמצעים לא הועילו לנו דבר. |
+| 58–59 | Remember that we deal with alcohol—cunning, baffling, powerful! Without help it is too much for us. But there is One who has all power—that One is God. May you find Him now! | זכרו שאנחנו מתמודדים עם אלכוהול – ערמומי, מבלבל, חזק! בלי עזרה הוא חזק מדי בשבילנו. אבל יש אחד שבידו כל הכוח – האחד הזה הוא אלוהים. הלוואי שתמצאו אותו עכשיו! |
+| 59 | We stood at the turning point. We asked His protection and care with complete abandon. | עמדנו בנקודת המפנה. ביקשנו את הגנתו ואת השגחתו בהתמסרות גמורה. |
+| 59 | Here are the steps we took, which are suggested as a program of recovery: | אלה הצעדים שעשינו, והם מוצעים כתוכנית החלמה: |
+| 60 | Many of us exclaimed, “What an order! I can’t go through with it.” Do not be discouraged. | רבים מאיתנו קראו: "איזו דרישה! אני לא אוכל לעמוד בזה." אל תתייאשו. |
+| 60 | No one among us has been able to maintain anything like perfect adherence to these principles. We are not saints. | אף אחד מאיתנו לא הצליח לדבוק בעקרונות האלה דבקות שמתקרבת לשלמות. איננו קדושים. |
+| 60 | The point is, that we are willing to grow along spiritual lines. The principles we have set down are guides to progress. We claim spiritual progress rather than spiritual perfection. | העיקר הוא שאנחנו מוכנים לצמוח בדרך הרוחנית. העקרונות שקבענו הם קווים מנחים להתקדמות. אנחנו טוענים להתקדמות רוחנית, לא לשלמות רוחנית. |
+| 60 | (a) That we were alcoholic and could not manage our own lives. (b) That probably no human power could have relieved our alcoholism. (c) That God could and would if He were sought. | (א) שהיינו אלכוהוליסטים ולא יכולנו לנהל את חיינו. (ב) שכנראה שום כוח אנושי לא היה יכול לשחרר אותנו מהאלכוהוליזם שלנו. (ג) שאלוהים יכול, ויעשה זאת, אם יבקשו אותו. |
+| 63 | the Third Step prayer ("God, I offer myself to Thee … May I do Thy will always!") | אלוהים, אני מציע את עצמי לך – לבנות איתי ולעשות בי כרצונך. שחרר אותי מכבלי האני, כדי שאוכל לעשות טוב יותר את רצונך. הסר ממני את קשיי, כדי שהניצחון עליהם יעיד בפני אלה שאני רוצה לעזור להם על כוחך, על אהבתך ועל דרך החיים שלך. יהי רצון שאעשה את רצונך תמיד! |
+| 76 | the Seventh Step prayer ("My Creator, I am now willing … Amen.") | בוראי, אני מוכן עכשיו שתקבל את כולי, הטוב והרע. אני מתפלל שתסיר ממני עכשיו כל פגם באופיי שעומד בדרכה של התועלת שלי לך ולחבריי. תן לי כוח, כשאני יוצא מכאן, לעשות את מצוותך. אמן. |
+| 83–84 | the Promises ("If we are painstaking about this phase of our development … They will always materialize if we work for them.") | אם נקפיד בשלב הזה של התפתחותנו, נופתע עוד לפני שנגיע לחצי הדרך. נכיר חופש חדש ואושר חדש. לא נתחרט על העבר וגם לא נרצה לסגור עליו את הדלת. נבין את המילה שלווה ונדע שלום. לא משנה עד כמה נמוך ירדנו בסולם, נראה איך הניסיון שלנו יכול להועיל לאחרים. תחושת חוסר התועלת והרחמים העצמיים תיעלם. נאבד עניין בדברים אנוכיים ונמצא עניין בחברינו. הרדיפה אחר טובתנו האישית תחמוק מאיתנו. כל הגישה שלנו וכל ההשקפה שלנו על החיים ישתנו. הפחד מאנשים ומחוסר ביטחון כלכלי יעזוב אותנו. נדע באופן אינטואיטיבי איך להתמודד עם מצבים שפעם בלבלו אותנו. נבין פתאום שאלוהים עושה בשבילנו את מה שלא יכולנו לעשות בעצמנו. האם אלה הבטחות מופרזות? אנחנו לא חושבים כך. הן מתגשמות בקרבנו – לפעמים מהר, לפעמים לאט. הן תמיד יתממשו אם נעבוד למענן. |
+| 84 | And we have ceased fighting anything or anyone—even alcohol. | והפסקנו להילחם בכל דבר ובכל אדם – אפילו באלכוהול. |
+| 85 | We are not cured of alcoholism. What we really have is a daily reprieve contingent on the maintenance of our spiritual condition. | לא נרפאנו מאלכוהוליזם. מה שיש לנו באמת הוא ארכה יומית, התלויה בשמירה על מצבנו הרוחני. |
+| 86 | On awakening let us think about the twenty-four hours ahead. | כשאנחנו מתעוררים, הבה נחשוב על 24 השעות שלפנינו. |
+| 89 | Practical experience shows that nothing will so much insure immunity from drinking as intensive work with other alcoholics. | הניסיון המעשי מראה ששום דבר לא יבטיח חסינות מפני שתייה כמו עבודה אינטנסיבית עם אלכוהוליסטים אחרים. |
+| 98 | Burn the idea into the consciousness of every man that he can get well regardless of anyone. The only condition is that he trust in God and clean house. | צרבו בתודעתו של כל אדם את הרעיון שהוא יכול להבריא בלי קשר לאף אחד. התנאי היחיד הוא שיבטח באלוהים ויעשה ניקיון בביתו. |
+| 164 | Abandon yourself to God as you understand God. Admit your faults to Him and to your fellows. Clear away the wreckage of your past. | מסרו את עצמכם לאלוהים כפי שאתם מבינים את אלוהים. הודו בטעויותיכם בפניו ובפני חבריכם. פנו את הריסות העבר שלכם. |
+| 164 | We shall be with you in the Fellowship of the Spirit, and you will surely meet some of us as you trudge the Road of Happy Destiny. | נהיה איתכם באחוות הרוח, ובוודאי תפגשו כמה מאיתנו כשתצעדו בדרך הגורל המאושר. |
+| 30 | The idea that somehow, someday he will control and enjoy his drinking is the great obsession of every abnormal drinker. | הרעיון שאיכשהו, מתישהו, הוא ישלוט בשתייה שלו ויהנה ממנה הוא האובססיה הגדולה של כל שתיין לא נורמלי. |
+| 53 | God either is, or He isn’t. | או שאלוהים קיים, או שאינו קיים. |
+| 53 | God is everything or else He is nothing. | אלוהים הוא הכול, או שאינו כלום. |
+| 62 | Selfishness—self-centeredness! That, we think, is the root of our troubles. | אנוכיות – התמקדות בעצמנו! זה, לדעתנו, שורש הצרות שלנו. |
+| 64 | Resentment is the “number one” offender. It destroys more alcoholics than anything else. | הטינה היא העבריין "מספר אחת". היא הורסת יותר אלכוהוליסטים מכל דבר אחר. |
+| 417 | And acceptance is the answer to all my problems today. … | the Hebrew Big Book's, above; `core.json` 1b08a63f6559 (the whole line) |
+| 561–566 | the Traditions, short and long form | the two Traditions sections above (and `core.json`) |
+| 574–575 | the Concepts | the Concepts section above (and `core.json`) |
+
+The site's most-cited pages, for your bearings: 563–566, 83–85, 58–60, 89, 76, 63, 62, 64, 67, 164, 30, 86, 417, 97–98.
 
 ## Site words
 All **[ours]** (CHECKED-he #4), except where a cell names A.A. Israel ([aail]).

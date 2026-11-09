@@ -89,7 +89,7 @@ Keep the English’s placeholders around the numbers (`<0>988</0>` stays around 
 | a member / members | A.A. üyesi / A.A. üyeleri [aatr: «AA üyeleri kişisel çıkar gözetmez»] |
 | alcoholic | **alkolik** [aatr: «Adım……., ben bir alkoliğim»]. A.A.’s word for us; don’t soften it to «bağımlı kişi» |
 | alcoholism | **alkolizm** [aatr, bb2022]; "the disease" → hastalık [aatr: «ALKOLİZM denilen … hastalık»] |
-| Narcotics Anonymous / N.A. | Narkotik Anonim (N.A.) — the name only; never its literature |
+| Narcotics Anonymous / N.A. | **Adsız Narkotik (N.A.)** — N.A. Türkiye's own name for itself (na-turkiye.org: «Adsız Narkotik Türkiye», 19× on its home page, «Narkotik Anonim» 0×; checked 2026-11-09 by trlang1-super after the Finder found it in N.A. Türkiye's rows). The name only; never its literature. *(Round 1 said «Narkotik Anonim».)* |
 | Cocaine Anonymous / Crystal Meth Anonymous / Gamblers Anonymous / Sex Addicts Anonymous | Cocaine Anonymous (C.A.) / Crystal Meth Anonymous (C.M.A.) / Gamblers Anonymous (G.A.) / Sex Addicts Anonymous (S.A.A.) [ours: names in English; those fellowships' own Turkish wasn’t checked. Glossed once, where room: «Kokain Anonim», «Kumarbazlar Anonim» — unsure] |
 | Recovery Dharma, SMART Recovery, Celebrate Recovery | names stay in Latin (RD, CR) |
 | Al-Anon / Alateen | Al-Anon / Alateen [aatr toplantilar: «(Al-Anon)»] |

@@ -821,7 +821,8 @@
   "t": "The Twelve Traditions",
   "kind": "html",
   "pages": [
-   "aa-info/index.html"
+   "aa-info/index.html",
+   "start-here/index.html"
   ]
  },
  "7a68d874e33f": {
@@ -1710,6 +1711,13 @@
    "index.html"
   ]
  },
+ "87641439bfc8": {
+  "t": "<0>Start Here: Every Reading</0>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
  "fd4615ba2bbe": {
   "t": "<0></0> Free · No sign-up · Night or day",
   "kind": "html",
@@ -2027,6 +2035,13 @@
    "index.html"
   ]
  },
+ "d2f8d69b4354": {
+  "t": "<0>Start here: every reading</0>",
+  "kind": "html",
+  "pages": [
+   "index.html"
+  ]
+ },
  "7068b718522e": {
   "t": "Find Recovery Meetings — AA, NA, CMA, GA & More | Recovery Starts",
   "kind": "html",
@@ -2085,6 +2100,48 @@
  },
  "93356144ff0c": {
   "t": "<0>💻</0> <1><2>Online meetings — in your time zone</2><3/> <4>29,000+ A.A., N.A., C.A. and C.M.A. rooms you can join from anywhere, sorted by what starts next. No map, no travel, no account.</4></1> <5>→</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "7024a4108d75": {
+  "t": "<0>🕯️</0> Holiday meetings",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "dc4b9247de7c": {
+  "t": "Online rooms open on each holiday, in your time zone, and the alcathons and marathons groups hold.",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "84328c69be0c": {
+  "t": "<0>A.A. meetings on the holidays:</0> <1>Thanksgiving</1> · <2>Christmas Eve</2> · <3>Christmas Day</3> · <4>New Year's Eve</4> · <5>New Year's Day</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "4d6e7d60681b": {
+  "t": "<0>N.A. meetings on the holidays:</0> <1>Thanksgiving</1> · <2>Christmas Eve</2> · <3>Christmas Day</3> · <4>New Year's Eve</4> · <5>New Year's Day</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "3f0fcb42df87": {
+  "t": "<0>C.M.A. meetings on the holidays:</0> <1>Thanksgiving</1> · <2>Christmas Eve</2> · <3>Christmas Day</3> · <4>New Year's Eve</4> · <5>New Year's Day</5>",
+  "kind": "html",
+  "pages": [
+   "meetings/index.html"
+  ]
+ },
+ "f9451046a570": {
+  "t": "<0>C.A. meetings on the holidays:</0> <1>Thanksgiving</1> · <2>Christmas Eve</2> · <3>Christmas Day</3> · <4>New Year's Eve</4> · <5>New Year's Day</5>",
   "kind": "html",
   "pages": [
    "meetings/index.html"

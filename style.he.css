@@ -1,0 +1,16 @@
+/* Hebrew type: loaded after /style.rtl.css on /he/ pages only (scripts/i18n/build.mjs LANG_CSS; wave helang1, 2026-11-09).
+   Vazirmatn (the rtl sheet's face for fa and ar) has no Hebrew letters, so the prep (i18n/he/PREP-NOTES.md, "Font") chose
+   Frank Ruhl Libre for headings (the classic Hebrew book serif, next to Fraunces) and Heebo for body and UI (a plain modern
+   sans, next to Outfit). Both SIL OFL 1.1, self-hosted the house way (claude-home #496): the Hebrew subset Google Fonts served
+   on 2026-11-09 (fonts.gstatic.com frankruhllibre v23, heebo v28), one variable file each, with Google's unicode-range.
+   The Hebrew face comes first and draws only Hebrew; Latin (Recovery Einstein, AA, 988) falls through to Fraunces and Outfit,
+   so brand words keep the site's own type. The rtl sheet already drops letter-spacing and italics and adds line height.
+   Way back: drop he from build.mjs LANG_CSS and H1_FONT; the page falls back to the rtl sheet and the device's Hebrew font. */
+@font-face{font-family:'Frank Ruhl Libre';font-style:normal;font-weight:300 900;font-display:swap;src:url(/assets/fonts/frank-ruhl-libre-hebrew.woff2) format('woff2');unicode-range:U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F}
+@font-face{font-family:'Heebo';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/heebo-hebrew.woff2) format('woff2');unicode-range:U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F}
+html:lang(he){--font-display:'Frank Ruhl Libre','Fraunces',Georgia,serif;--font-body:'Heebo','Outfit',system-ui,-apple-system,sans-serif;--font-ui:'Heebo','Outfit',system-ui,-apple-system,sans-serif}
+html:lang(he) ol{list-style-type:decimal}
+/* "our translation" note (build.mjs OURS_NOTE), the box Hindi, Japanese and Russian use, its rule on the reading side */
+.rs-ours{margin:.9rem 0 1.3rem;padding:.6rem .9rem;border-inline-start:3px solid var(--gold);background:var(--glass-highlight);border-radius:8px 0 0 8px;color:var(--ink-soft);font-family:var(--font-ui);font-size:var(--step--1);line-height:1.7;max-width:46rem}
+.rs-ours a{color:var(--gold);white-space:nowrap}
+.book-body .rs-ours{margin:.8rem 0 0;padding:.45rem .7rem;font-size:.78rem;line-height:1.6;max-width:none}

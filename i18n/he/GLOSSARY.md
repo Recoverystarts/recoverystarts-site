@@ -222,6 +222,14 @@ In `i18n/he/core.json`, ids `e32af397e692` (1) … `549bf284bc05` (12). The pamp
 - **The Responsibility Statement** («אני אחראי…»): two wordings exist ([hebp24] back cover; [spon] p. 31, cut off at the page end). Not needed by any segment yet; ask before using.
 - **The Declaration of Unity** («הצהרת אחדות») [spon p. 31]: «את זה אנחנו חייבים לעתיד של א.א.: לשים את הרווחה המשותפת שלנו במקום הראשון; לשמור על האחווה שלנו מאוחדת. שכן על אחדות א.א. תלויים חיינו וחייהם של הבאים אחרינו.»
 
+## Decisions during the wave (helang1-super; read with S1.md)
+*Settled from the checkers' findings, 2026-11-09. They hold for every line; the Super applies them wave-wide by script before the merge.*
+- **Personal Stories parts: «סיפורים אישיים – חלק 1 / חלק 2 / חלק 3»**, Latin digits (the glossary's 0–9 rule; most lines and both checkers). Never «חלק ראשון», «חלק I» or «חלק III».
+- **"pick one up (at a meeting)": «לקחת עותק»**, never «לקבל עותק» (reads as "be given one", i.e. free).
+- **The Big Book quote credit line says «ציטוט קצר בתרגום שלנו, לצורכי זיהוי ולימוד»**: every Big Book quote except p. 417 is ours (rule 5).
+- **Chapter and book titles as `_phrases.json` has them**: «סיפורו של ביל», «עוד על אלכוהוליזם», «אנחנו האגנוסטים», «יש פתרון»…
+- **"humbling" (the good kind): «מלמד ענווה»**, never «משפיל» (humiliating). **"fight" between a couple: «לריב»**, not «להילחם». **"employment": «עבודה»**. **"online": «אונליין»**.
+
 ## Big Book quotes — look here first
 *Written 2026-11-09 by helang1-super (Opus 5.5) in S1, on the model of waves hi1 and arlang1, with the English checked against the site's own English segments and Recoverystarts/aa-library (big-book/text). The Hebrew Big Book («הספר הגדול») is sold in print by A.A. Israel; online there are only scans of three of its stories ([bbhe]). So **one passage is the Hebrew book's own words (p. 417, below)**, and every other line here is **[ours]**: translated once, faithfully and close to the English, so every runner writes the same Hebrew for the same passage. The page's note (`he_ours_note`: «חלק מהציטוטים מהספר הגדול לקוחים מהתרגום העברי… את השאר תרגמנו בעצמנו») says so.*
 

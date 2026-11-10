@@ -62,13 +62,20 @@ export async function onRequestGet(context) {
     const slug = `${monthName.toLowerCase()}-${day}`;
     const displayDate = `${monthName} ${day}, ${year}`;
 
+    const pageErrors = {};
+    const soft = (name) => (err) => {
+      pageErrors[name] = String((err && err.message) || err).slice(0, 200);
+      console.error(`[send-daily-email] ${name}:`, pageErrors[name]);
+      return null;
+    };
     const [reflection, tradition] = await Promise.all([
-      getReflection(slug).catch(err => { console.error('[send-daily-email] reflection:', err && err.message); return null; }),
-      getTradition(slug).catch(err => { console.error('[send-daily-email] tradition:', err && err.message); return null; }),
+      getReflection(slug).catch(soft('reflection')),
+      getTradition(slug).catch(soft('tradition')),
     ]);
 
     if (!reflection && !tradition) {
-      return jsonResponse({ error: 'Both pages failed to load', slug }, 500);
+      // Messages only (page URL + status); the caller already holds the token.
+      return jsonResponse({ error: 'Both pages failed to load', slug, pageErrors }, 500);
     }
 
     const subjectParts = [];
@@ -86,6 +93,7 @@ export async function onRequestGet(context) {
         subject,
         has_reflection: !!reflection,
         has_tradition: !!tradition,
+        pageErrors,
         body,
       });
     }

@@ -23,7 +23,7 @@ const { execSync } = require("child_process");
 
 const ROOT = path.join(__dirname, "..", "..");
 const DIST = path.join(ROOT, "dist");
-const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar"];
+const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
 const WARN_AT = 90000, FAIL_AT = 100000;
 // served by the meetings Worker / Railway at recoverystarts.com, not by Pages
 const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$))/;

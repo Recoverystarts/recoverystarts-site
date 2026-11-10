@@ -17,7 +17,7 @@ const lang = process.argv[2];
 if (!lang || !LANGS[lang] || lang === "en") { console.error(`usage: build.mjs <${Object.keys(LANGS).filter((x) => x !== "en").join("|")}> [--only prefix,…]`); process.exit(2); }
 const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? process.argv[i + 1].split(",").map((s) => s.replace(/^\//, "")) : null; })();
 const SITE = "https://recoverystarts.com";
-const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", ar: "ar_AR", en: "en_US" };
+const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", ar: "ar_AR", tr: "tr_TR", en: "en_US" };
 
 // a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
 const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css" };
@@ -38,7 +38,10 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // that, never as official); what has no A.A. Russian (the Serenity Prayer) is ours. ru_ours_note says exactly that.
 // ar (wave arlang1): A.A.W.S. prints Arabic (ARABB-30) but no text is online; mercaa.com gives the Preamble, used word for
 // word. The Steps, Traditions, Concepts, prayers and Big Book quotes are ours (CEO CHECKED-ar #1); ar_ours_note says so.
-const OURS_NOTE = { hi: true, ja: true, ru: true, ar: true };
+// tr (wave trlang1): A.A.W.S.'s own Conference-approved 2022 Turkish Big Book ("Adsız Alkolikler", adsizalkolikler.com) gives the
+// Steps (as printed: Step 12 has no «alkoliklere», CHECKED-tr #1), both forms of the Traditions, the Concepts, the prayers and the
+// Big Book quotes; A.A. Türkiye's site gives the Preamble and the Serenity Prayer; the rest is ours. tr_ours_note says exactly that.
+const OURS_NOTE = { hi: true, ja: true, ru: true, ar: true, tr: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }

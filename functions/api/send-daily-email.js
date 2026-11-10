@@ -80,7 +80,7 @@ export async function onRequestGet(context) {
     }
 
     const subjectParts = [];
-    if (reflection) subjectParts.push(reflection.title);
+    if (reflection) subjectParts.push(titleCase(reflection.title));
     if (tradition) subjectParts.push(tradition.number ? `Tradition ${tradition.number}` : tradition.title);
     const subject = `☕ ${subjectParts.join(' · ')}`;
 
@@ -267,6 +267,21 @@ function composeBody({ displayDate, reflection, tradition, note }) {
 
   out.push('*Recovery Einstein — an AI companion grounded in the Big Book of Alcoholics Anonymous. Daily Traditions is an independent educational resource from Recovery Starts, not official A.A. literature.*');
   return out.join('\n\n') + '\n';
+}
+
+// The reflection pages print their titles in capitals; the subject line reads softer in title case.
+// Only all-caps titles are changed. Words like A.A. keep their capitals.
+const SMALL = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'in', 'of', 'on', 'or', 'the', 'to', 'with']);
+function titleCase(t) {
+  if (t !== t.toUpperCase()) return t;
+  let first = true;
+  return t.split(' ').map(w => {
+    if (/^([A-Z]\.){2,}$/.test(w) || !/[A-Z]/.test(w)) return w;
+    const lw = w.toLowerCase();
+    const out = (!first && SMALL.has(lw)) ? lw : lw.replace(/[a-z]/, c => c.toUpperCase());
+    first = /[:—–-]$/.test(w);
+    return out;
+  }).join(' ');
 }
 
 function safeEqual(a, b) {

@@ -207,6 +207,15 @@ ${LONGFORM_BOX(n, shortFormFor(n))}
         <a href="/download/?${utm}" class="btn btn-outline">Get the app →</a>
       </div>
 
+      <div class="dr-email" translate="no">
+        <span class="lbl">Tomorrow morning</span>
+        <p>Each morning, Einstein's Big Book reflection and the day's Tradition reading in one email — a&nbsp;quiet moment before the world gets loud.</p>
+        <form class="dr-email-form" action="https://buttondown.com/api/emails/embed-subscribe/recoverystarts" method="post" target="_blank">
+          <input type="email" name="email" placeholder="your email" required aria-label="Email address">
+          <button type="submit">Send it to me</button>
+        </form>
+      </div>
+
       <div class="dt-nav">
         ${prevA}
         <a class="dt-nav-mid" href="/daily-tradition/${d.month}/"><small>Tradition ${n}</small>All of ${M}</a>

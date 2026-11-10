@@ -1543,6 +1543,16 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 
 .dr-bg, .dt-bg, .cp-bg, .tt-bg, .bb-bg { background: none !important; }
 
+/* Signup box layout, for pages without the reflection pages' inline copy
+   (the Daily Tradition day pages, 2026-11-10). Same values as that copy. */
+.dt-wrap .dr-email { max-width: 760px; margin: 2.2rem auto 0; padding: 1.5rem 2rem; border: 1px solid; border-radius: 12px; text-align: center; }
+.dt-wrap .dr-email .lbl { display: block; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.dt-wrap .dr-email p { font-size: 0.95rem; margin: 0 0 1rem; line-height: 1.5; }
+.dt-wrap .dr-email-form { display: flex; gap: 0.5rem; max-width: 420px; margin: 0 auto; }
+.dt-wrap .dr-email-form input[type="email"] { flex: 1; padding: 0.6rem 1rem; border: 1px solid; border-radius: 8px; font-size: 0.95rem; }
+.dt-wrap .dr-email-form button { padding: 0.6rem 1.2rem; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; cursor: pointer; white-space: nowrap; }
+@media (max-width: 600px) { .dt-wrap .dr-email-form { flex-direction: column; } }
+
 .dr-email {
   background: var(--paper-2) !important;
   border-color: var(--rule) !important;

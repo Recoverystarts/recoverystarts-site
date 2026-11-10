@@ -14,7 +14,9 @@ export default {
       return;
     }
     try {
-      const resp = await fetch('https://recoverystarts.com/api/send-daily-email', {
+      // The pages.dev address, not recoverystarts.com: the zone's WAF challenges server-to-server callers
+      // (seen 2026-11-10 from the vault), and pages.dev serves the same production deployment.
+      const resp = await fetch('https://recoverystarts-site.pages.dev/api/send-daily-email', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'User-Agent': 'recoverystarts-daily-email-cron/2 (+https://recoverystarts.com)',

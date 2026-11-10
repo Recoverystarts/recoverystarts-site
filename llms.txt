@@ -227,6 +227,21 @@ in their language with the page in their language.
 - Meetings: https://recoverystarts.com/ru/meetings/
 - Sitemap: https://recoverystarts.com/sitemap-ru.xml
 
+### العربية — Arabic (ar)
+- Note: the Arabic A.A. Preamble is the wording the A.A. Middle East Regional Committee publishes (mercaa.com), used word for word; A.A. World Services prints the Big Book and some pamphlets in Arabic, but no text of them is online, so the Arabic Twelve Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page.
+- Home: https://recoverystarts.com/ar/
+- The 12 Steps: https://recoverystarts.com/ar/12-steps/
+- The 12 Traditions (short and long form): https://recoverystarts.com/ar/12-traditions/
+- How the 12 Traditions came about (1937–1950): https://recoverystarts.com/ar/12-traditions/history/
+- AA info: Traditions and Concepts: https://recoverystarts.com/ar/aa-info/
+- Daily Traditions: https://recoverystarts.com/ar/daily-tradition/
+- Daily Reflections: https://recoverystarts.com/ar/daily-reflection/
+- The Big Book, page by page: https://recoverystarts.com/ar/big-book/pages/
+- Big Book search: https://recoverystarts.com/ar/big-book/search/
+- A.A. questions, answered from the books: https://recoverystarts.com/ar/aa-questions/
+- Meetings: https://recoverystarts.com/ar/meetings/
+- Sitemap: https://recoverystarts.com/sitemap-ar.xml
+
 ### Türkçe — Turkish (tr)
 - Note: the Turkish Twelve Steps, both forms of the Twelve Traditions, the short form of the Concepts, the Third and Seventh Step prayers and the Big Book quotes are A.A.'s own Conference-approved Turkish Big Book (“Adsız Alkolikler”, 2022 edition, A.A. World Services; adsizalkolikler.com), as printed; the Preamble and the Serenity Prayer are as A.A. Türkiye publishes them; everything else, including quotations from A.A. literature with no Turkish text online, is our own translation from A.A.'s English, marked so on each page.
 - Home: https://recoverystarts.com/tr/

@@ -1618,6 +1618,7 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 
 /* ---- right-to-left type (scripts/i18n/rtl.mjs) ---- */
 html:lang(fa){--font-display:'Vazirmatn','Fraunces',Georgia,serif;--font-body:'Vazirmatn',system-ui,-apple-system,sans-serif;--font-ui:'Vazirmatn',system-ui,-apple-system,sans-serif}
+html:lang(ar){--font-display:'Vazirmatn','Fraunces',Georgia,serif;--font-body:'Vazirmatn',system-ui,-apple-system,sans-serif;--font-ui:'Vazirmatn',system-ui,-apple-system,sans-serif}
 html[dir="rtl"] *{letter-spacing:0!important}
 html:lang(fa) ol{list-style-type:persian}
 html[dir="rtl"] *{font-style:normal!important}

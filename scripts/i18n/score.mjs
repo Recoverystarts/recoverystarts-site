@@ -57,6 +57,10 @@
 //             (Russian writes «АА»; English names like "A.A. World Services" are fine, so it's a flag to read, not a ruling);
 //             «спонсор» (A.A. Russia says «наставник»); English left in (two English filler words or five Latin words in a row
 //             outside «» and “”). Each costs score (×2). Number words count as numbers («Двенадцать шагов», «четвёртое издание»).
+//             ar (wave arlang1): MSA, «أنت» (i18n/ar/GLOSSARY.md). Flags: Persian ی ک ۀ or a ZWNJ (fa's letters, wrong for ar);
+//             Arabic-Indic ٠–٩ or Persian ۰–۹ digits (ar writes Western 0–9); Latin , ; ? between Arabic words (، ؛ ؟); ASCII or
+//             English quotes outside «»; «كفيل/الكفالة» for sponsor (the Gulf's kafala word; the site says «المرشد»); a 988 segment
+//             that offers text or doesn't name the US (the US/Canada split); English left in. Each costs score (×2).
 //             tr (wave trlang1): siz, lower case mid-sentence; “…” quotes and ’ (i18n/tr/GLOSSARY.md). Flags, outside “…”: «sen»
 //             forms (sen, seni, sana, senin …) addressed to the reader (a prayer to God rightly says «sana»: read it, don't fix it);
 //             «Siz/Size/Sizin» capitalised mid-sentence; «adım» as a Step's name («12 adım», «Adım 4»); ASCII-ized words
@@ -75,7 +79,7 @@ const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
 // each language's wave: its runners push origin/claude/<wave>-<line>
-const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1", ru: "rulang1", tr: "trlang1" };
+const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1", ru: "rulang1", ar: "arlang1", tr: "trlang1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
 const outAt = args.indexOf("--out") > 0 ? args[args.indexOf("--out") + 1] : null;
@@ -321,6 +325,20 @@ GLOSS_BY.nl = [
   [/\bmeetings?\b/i, /meeting|bijeenkomst/i, "meeting"],
   [/\brecovery\b/, /herstel|Recovery/i, "recovery"],
 ];
+// Arabic (i18n/ar/GLOSSARY.md; wave arlang1)
+GLOSS_BY.ar = [
+  [/\bBig Book\b/i, /الكتاب الكبير/, "Big Book"],
+  [/\bsponsor(s|ed|ing|ship)?\b/i, /مرشد|المرشد|إرشاد|الإرشاد|مرشدك|مرشدي/, "sponsor"],
+  [/\bsponsees?\b/i, /مُرشَد|مرشَد|المرشَدين|المُرشَدين/, "sponsee"],
+  [/\bHigher Power\b/i, /القوة العليا|قوة عليا|قوة أعظم/, "Higher Power"],
+  [/\bhome groups?\b/i, /المجموعة الأم|مجموعته الأم|مجموعتك الأم|مجموعتي الأم/, "home group"],
+  [/\bnewcomers?\b/i, /قادم(?:ون|ين)? (?:ال)?جد(?:يد|د)/, "newcomer"],
+  [/\bamends\b/i, /تعويض|التعويض|عوّض|عوض/, "amends"],
+  [/\bspiritual awakening\b/i, /يقظة روحية|اليقظة الروحية/, "spiritual awakening"],
+  [/\bsobriety\b/i, /الامتناع عن الشرب|امتناع|ممتنع/, "sobriety"],
+  [/\bpowerless\b/i, /عاجز/, "powerless"],
+  [/\bgroup conscience\b/i, /ضمير المجموعة|ضمير جماعت/, "group conscience"],
+];
 // Turkish (i18n/tr/GLOSSARY.md; wave trlang1)
 GLOSS_BY.tr = [
   [/\bBig Book\b/i, /Büyük Kitap/, "Big Book"],
@@ -362,6 +380,9 @@ const jaEnglish = (s) => { const u = jaOut(s), w = u.match(/[A-Za-z][A-Za-z'’-
 const JA_D = { 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
 const jaKanji = (k) => { let n = 0, cur = 0; for (const ch of k) { if (ch in JA_D) cur = JA_D[ch]; else if (ch === "十") { n += (cur || 1) * 10; cur = 0; } else if (ch === "百") { n += (cur || 1) * 100; cur = 0; } else if (ch === "千") { n += (cur || 1) * 1000; cur = 0; } } return n + cur; };
 const jaWords = (s) => { const out = []; for (const m of s.matchAll(/[〇一二三四五六七八九十百千]+/gu)) out.push(String(jaKanji(m[0]))); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(午前|午後)(\d{1,2})時/gu)) out.push(m[2], String(+m[2] + (m[1] === "午後" ? 12 : 0))); for (const m of s.matchAll(/(\d+)万(\d[\d,]*)/gu)) out.push(String(+m[1] * 1e4 + +m[2].replace(/,/g, ""))); for (const m of s.matchAll(/(\d+(?:\.\d+)?)\s*(万|億)/gu)) { const v = parseFloat(m[1]) * (m[2] === "万" ? 1e4 : 1e8); out.push(String(v), String(v / 1e6), String(v / 1e9)); } if (/二十四時間|24時間|年中無休|いつでも/u.test(s)) out.push("24", "7"); return out; };
+// ar: a number written as a word counts too («الخطوات الاثنتا عشرة» for "12 Steps", «الطبعة الرابعة» for "4th Ed.", «على مدار الساعة» for 24/7)
+const AR_NUM = [["واحد|واحدة|الأول|الأولى|أول", "1"], ["اثنان|اثنين|اثنتان|اثنتين|الثاني|الثانية", "2"], ["ثلاث|ثلاثة|الثالث|الثالثة", "3"], ["أربع|أربعة|الأربعة|الرابع|الرابعة", "4"], ["خمس|خمسة|الخامس|الخامسة", "5"], ["ست|ستة|السادس|السادسة", "6"], ["سبع|سبعة|السابع|السابعة", "7"], ["ثماني|ثمانية|الثامن|الثامنة", "8"], ["تسع|تسعة|التاسع|التاسعة", "9"], ["عشر|عشرة|العاشر|العاشرة", "10"], ["أحد عشر|إحدى عشرة|الحادي عشر|الحادية عشرة", "11"], ["(?:ال)?اثن(?:ا|تا|ي|تي) عشرة?|الثاني عشر|الثانية عشرة", "12"]];
+const arWords = (s) => { const out = []; for (const [w, n] of AR_NUM) if (new RegExp(`(?<!\\p{L})(?:[وبلف]|لل)?(?:${w})(?!\\p{L})`, "u").test(s)) out.push(n); if (/على مدار الساعة/.test(s)) out.push("24", "7"); return out; };
 // tr: a number written as a word counts too («On İki Basamak», «dördüncü baskı», «7/24»), and a 24-hour time counts as its 12-hour English
 const TR_NUM = [["bir|birinci", "1"], ["iki|ikinci", "2"], ["üç|üçüncü", "3"], ["dört|dördüncü", "4"], ["beş|beşinci", "5"], ["altı|altıncı", "6"], ["yedi|yedinci", "7"], ["sekiz|sekizinci", "8"], ["dokuz|dokuzuncu", "9"], ["on|onuncu", "10"], ["on ?bir|on ?birinci", "11"], ["on ?iki|on ?ikinci", "12"]];
 const trWords = (s) => { const out = []; for (const [w, n] of TR_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?=\\p{L}{0,6}(?!\\p{L}))`, "iu").test(s.replace(/İ/g, "i").replace(/I/g, "ı"))) out.push(n); for (const m of s.matchAll(/(?<!\d)(\d{1,2}):\d{2}/gu)) { const h = +m[1]; out.push(String(h % 12 || 12)); } for (const m of s.matchAll(/(\d+(?:,\d+)?)\s*(bin|milyon)(?!\p{L})/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (m[2] === "bin" ? 1e3 : 1e6); out.push(String(v), String(v / 1e6)); } if (/7\/24|günün her saati|gece gündüz/u.test(s)) out.push("24", "7"); return out; };
@@ -417,7 +438,7 @@ for (const f of files) {
     if (tw.length >= 6 && tw.filter((w) => EN_FILLER.has(w) && !ALSO[lang]?.has(w)).length / tw.length >= 0.15) { r.english++; flag(id, "English words in the Spanish"); }
     const el = strip(e).length, tl = strip(t).length;
     if (el >= 80 && tl / el < (lang === "ja" ? 0.18 : 0.6)) { r.short++; flag(id, `short (${Math.round((100 * tl) / el)}% of the English length)`); }
-    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : []), ...(lang === "ru" ? ruWords(strip(t)) : []), ...(lang === "tr" ? trWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
+    const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : []), ...(lang === "ru" ? ruWords(strip(t)) : []), ...(lang === "ar" ? arWords(strip(t)) : []), ...(lang === "tr" ? trWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
     // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
@@ -456,6 +477,20 @@ for (const f of files) {
       if (ty || vy) { r.usted++; flag(id, ty ? `register: «${ty[0]}» (the site says «вы»)` : `register: «${vy[0]}» capitalised mid-sentence (lower-case «вы»)`); }
       if (q || mix) { r.dia++; r.usted++; flag(id, q ? "quote marks: Russian uses «…» with „…“ inside" : `Latin letter inside a Cyrillic word: …${mix[0]}…`); }
       if (aa || sp) { r.usted++; flag(id, aa ? `«${aa[0]}» in Latin (Russian writes «АА»; fine in an English name)` : "«спонсор» (A.A. Russia says «наставник»)"); }
+      if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
+    }
+    if (lang === "ar" && !code) {
+      // ar (wave arlang1): Arabic letters only, Western digits, Arabic punctuation, «…» quotes, «المرشد» for sponsor, 988 said
+      // with the US/Canada split (i18n/ar/GLOSSARY.md, CHECKED-ar). Never the fa rules: fa wants ی ک and Persian digits.
+      const st = strip(t), o = RU_OUT(st);
+      const fa = /[\u06cc\u06a9\u06c0\u200c]/.exec(st), dig = /[٠-٩۰-۹]/.exec(st), punct = /(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/u.exec(st), q = /["“”]/.test(o);
+      const kafil = /(?<!\p{L})(?:ال|و|ب|ل|لل|ف)?(?:كفيل|كفلاء|مكفول|كفالة|الكفالة)\p{L}*/u.exec(st);
+      const c988 = /988/.test(st) && /(?<!\d)988(?!\d)/.test(strip(e)) && (/رسالة نصية|رسائل نصية|نصيًا|نصّيًا|أرسل رسالة/.test(st) || !/الولايات المتحدة/.test(st));
+      const eng = ruEnglish(st);
+      if (fa || dig) { r.dia++; r.usted++; flag(id, fa ? "Persian letter or ZWNJ (Arabic writes ي ك ة, no half-space)" : `digit «${dig[0]}»: Arabic here writes Western 0–9`); }
+      if (punct || q) { r.dia++; r.usted++; flag(id, punct ? `Latin "${punct[0].trim()}" between Arabic words (، ؛ ؟)` : "quote marks: Arabic uses «…»"); }
+      if (kafil) { r.usted++; flag(id, `«${kafil[0]}»: sponsor is «المرشد» (CHECKED-ar #3)`); }
+      if (c988) { r.usted++; flag(id, "988: say it by call, US apart from Canada, with the interpreter (GLOSSARY crisis table); never by text"); }
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "tr" && !code) {

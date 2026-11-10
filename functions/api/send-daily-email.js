@@ -19,6 +19,7 @@ const withUtm = (u) => u + (u.includes('?') ? '&' : '?') + UTM;
 
 export async function onRequestGet(context) {
   const url = new URL(context.request.url);
+  ASSETS = context.env.ASSETS || null;
   const expectedToken = context.env.DAILY_EMAIL_TOKEN;
 
   const auth = context.request.headers.get('Authorization') || '';
@@ -159,13 +160,26 @@ export async function onRequestGet(context) {
   }
 }
 
+// Pages are read from this deployment's own static assets (env.ASSETS), not over the network:
+// a network self-fetch goes through the zone's WAF and came back 403 from a Pages Function
+// (2026-11-10). The network fetch stays as the fallback when ASSETS isn't there.
+let ASSETS = null;
 async function fetchPage(pageUrl) {
+  const errs = [];
+  if (ASSETS) {
+    try {
+      const r = await ASSETS.fetch(new Request(pageUrl));
+      if (r.ok) return r.text();
+      errs.push(`assets ${r.status}`);
+    } catch (e) { errs.push(`assets ${e && e.message}`); }
+  }
   const resp = await fetch(pageUrl, {
     redirect: 'follow',
     headers: { 'User-Agent': 'recoverystarts-daily-email/2 (+https://recoverystarts.com)' },
   });
-  if (!resp.ok) throw new Error(`${resp.status} ${pageUrl}`);
-  return resp.text();
+  if (resp.ok) return resp.text();
+  errs.push(`net ${resp.status}`);
+  throw new Error(`${errs.join(', ')} ${pageUrl}`);
 }
 
 async function getReflection(slug) {

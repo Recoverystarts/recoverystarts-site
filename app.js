@@ -145,7 +145,7 @@
   window.gtag = gtag;
   // A browser driven by a program (our own Playwright and Lighthouse checks) sends no hits: they were showing up as
   // "(not set)" Direct sessions, ~60 on 2026-10-26 (wave 2026-10-26-ads S4). gtag() stays defined, so callers like
-  // donate.js just queue into a dataLayer nobody sends. Same rule as /ads.js.
+  // donate.js just queue into a dataLayer nobody sends. (The old AdSense loader followed the same rule.)
   if (navigator.webdriver) return;
   gtag('js', new Date());
   gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true, traffic_type: 'rs' }); // traffic_type 'rs' marks our own hits so a GA4 Include-only data filter can drop ghost hits sent straight to Google (claude-home #575, 2026-11-12). Way back: remove the key.

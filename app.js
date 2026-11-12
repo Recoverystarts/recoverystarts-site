@@ -148,7 +148,7 @@
   // donate.js just queue into a dataLayer nobody sends. Same rule as /ads.js.
   if (navigator.webdriver) return;
   gtag('js', new Date());
-  gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true });
+  gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true, traffic_type: 'rs' }); // traffic_type 'rs' marks our own hits so a GA4 Include-only data filter can drop ghost hits sent straight to Google (claude-home #575, 2026-11-12). Way back: remove the key.
   var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
 })();
 

@@ -3,3 +3,13 @@
 # instead of asking again on every page (wave 2026-10-26-ads S2). Way back: delete this file.
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Raptive is approved for recoverystarts.com only (2026-11-12, Code window raptive-install). Every branch and PR also gets
+# a preview copy on *.pages.dev, and Raptive's head tag (which we may not change or wrap in a condition) would load ads
+# there too. So on those hosts only, the browser may run inline scripts and our own files and nothing from elsewhere:
+# Raptive's loader (and GA) never starts on a preview. recoverystarts.com and www get no new header from this.
+# Checked in `wrangler pages dev` with Host headers. Way back: delete these four lines.
+https://:project.pages.dev/*
+  Content-Security-Policy: script-src 'self' 'unsafe-inline'
+https://:version.:project.pages.dev/*
+  Content-Security-Policy: script-src 'self' 'unsafe-inline'

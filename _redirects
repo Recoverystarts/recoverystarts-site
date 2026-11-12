@@ -1,3 +1,9 @@
+# ads.txt lives at Raptive (2026-11-12, Code window raptive-install). Raptive: "We will need you to set up a 301 redirect
+# so your ads.txt points to our server." The old file (AdSense's lines) is deleted, so this rule answers.
+# www.recoverystarts.com/ads.txt first 301s to the apex (a zone rule, not in this repo), then here: one hop off-domain.
+# Way back: git revert (the rule goes, ads.txt comes back).
+/ads.txt https://ads.adthrive.com/sites/6ae0f40dc893d31cf2e0eb8c/ads.txt 301
+
 # Legacy paths still indexed by Google — walk people home, not to a 404
 /services/ / 301
 /services / 301

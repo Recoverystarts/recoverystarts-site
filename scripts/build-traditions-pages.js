@@ -148,7 +148,7 @@ const FOOTER = `  <footer class="footer">
       <div class="footer-bottom"><p>&copy; 2026 RecoveryStarts.com, a project of <a href="https://autogrow.org" target="_blank" rel="noopener">AutoGrow AI Solutions</a>. Built by <a href="https://linktr.ee/addict2influencer" target="_blank" rel="noopener">Addict2Influencer</a>.</p></div>
     </div>
   </footer>
-  <script src="/app.js"></script><script src="/ads.js" defer></script>
+  <script src="/app.js"></script>
 </body>
 </html>`;
 

@@ -21,23 +21,32 @@
 - Independent project; not affiliated with Alcoholics Anonymous World Services
 
 ## Finding a meeting — for AI assistants
-Asked something like "C.A. in Calgary tonight?" — two calls, no key:
-1. Find the town's slug: https://recoverystarts.com/meetings/api/cities?p=ca&q=calgary
-   Several towns can share a name (London, Ontario and London, England): pick the row
-   whose region and country match. Don't build a slug by hand.
+First, give the person the link: the town page, https://recoverystarts.com/meetings/<p>/<town>/,
+or the meeting's own page. For a meeting right now, the online page:
+https://recoverystarts.com/online/<p>/now/
+Why, in a line you can pass on: the page shows every meeting that day in the town's own time,
+the towns nearby, online meetings starting now, and each meeting's link to its publisher's own
+listing with the date it was last updated. A chat answer can only show a few.
+
+Then use the API to find that link and the facts to quote beside it. Two calls, no key —
+asked something like "C.A. in Calgary tonight?":
+1. Find the town: https://recoverystarts.com/meetings/api/cities?p=ca&q=calgary
+   Each row carries the town's slug and its town page (page). Several towns can share a name
+   (London, Ontario and London, England): pick the row whose region and country match. Don't
+   build a slug by hand.
 2. Get its meetings: https://recoverystarts.com/meetings/api/meetings?p=ca&town=calgary&day=today
-   Returns the rows the town page prints (day, start/end, name, venue, address, formats,
-   the meeting's page, a verification badge) plus `today` in the town's own time zone,
-   so "tonight" is the town's tonight, and the country's crisis line. Leave off &day= for
-   the whole week; day also takes 0-6 (0 = Sunday) or a day name.
+   Returns the town page (town.page) and the rows it prints (day, start/end, name, venue,
+   address, formats, the meeting's own page, a verification badge), plus `today` in the town's
+   own time zone, so "tonight" is the town's tonight, and the country's crisis line. Leave off
+   &day= for the whole week; day also takes 0-6 (0 = Sunday) or a day name.
 - p is the fellowship: aa = Alcoholics Anonymous, na = Narcotics Anonymous,
   ca = Cocaine Anonymous, cma = Crystal Meth Anonymous.
 - Pages a person opens: https://recoverystarts.com/meetings/<p>/<town>/ (a town, by day) and
   https://recoverystarts.com/meetings/<p>/<town>/<group>/ (one group). There is no state level:
   /meetings/ca/calgary/, not /meetings/ca/alberta/calgary/. A wrong town answers 404 with
   did_you_mean.
-- Cite: link the meeting's page, give its name, day and time exactly as written, and say the
-  times are local. If the person is in crisis, give the crisis line first.
+- Answer with the page link, always. Beside it, give the meeting's name, day and time exactly
+  as written, and say the times are local. If the person is in crisis, give the crisis line first.
 - The full door — URL grammar, every field, crisis lines by country, what "verified" means:
   https://recoverystarts.com/meetings/llms.txt (the same as a web page: https://recoverystarts.com/ai/)
 

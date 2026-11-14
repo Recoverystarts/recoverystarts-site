@@ -24,6 +24,10 @@
  *  7. ROBOTS.TXT (2026-11-14, claude-home #514, deploy-1126): every Sitemap: line names a file that's served, and a
  *     comment that spells out the language sitemaps (sitemap-en/es/pt/fr.xml) names the same languages as sitemap.xml's
  *     index. Its comment said four languages for weeks while the index held fourteen.
+ *  8. CONTENT-LANGUAGE (2026-11-14, claude-home #514, deploy-1126): read _headers the way Pages applies it (rules in
+ *     order, one splat, "! Name" detaches what an earlier rule set, two values of one header joined with ", ") and ask
+ *     every page: is the Content-Language it will be sent exactly its own <html lang>? Checked against
+ *     `wrangler pages dev` on 2026-11-14 (en, es, pt-BR, fa on real paths; one value each).
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -183,6 +187,40 @@ if (run("robots")) {
   }
   console.log(`robots: ${inIndex.length} language sitemaps in the index, ${bad} problem(s)`);
   out.push("", `| robots.txt (#514) | ${bad} problem(s); index lists ${inIndex.length} language sitemaps |`);
+}
+
+// 8. Content-Language from _headers equals each page's <html lang> (#514)
+if (run("contentlang")) {
+  const rules = [];
+  let cur = null;
+  for (const line of fs.readFileSync(path.join(DIST, "_headers"), "utf8").split("\n")) {
+    if (!line.trim() || line.trim().startsWith("#")) continue;
+    if (!/^\s/.test(line)) { cur = { pat: line.trim(), ops: [] }; rules.push(cur); continue; }
+    const t = line.trim(), det = /^!\s*(.+)$/.exec(t), kv = /^([^:]+):\s*(.*)$/.exec(t);
+    if (det) cur.ops.push(["del", det[1].trim().toLowerCase()]);
+    else if (kv) cur.ops.push(["set", kv[1].trim().toLowerCase(), kv[2]]);
+  }
+  // only path rules (a full https://host/… rule is for the preview hosts, never recoverystarts.com)
+  const match = (pat, p) => pat.startsWith("/") && new RegExp("^" + pat.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*").replace(/:\w+/g, "[^/]+") + "$").test(p);
+  const headerFor = (p) => {
+    let v = null;
+    for (const r of rules) if (match(r.pat, p)) for (const [op, k, val] of r.ops) if (k === "content-language") v = op === "del" ? null : v == null ? val : `${v}, ${val}`;
+    return v;
+  };
+  const bad = [];
+  let n = 0;
+  for (const f of files) {
+    if (!f.endsWith(".html")) continue;
+    const lang = /<html\s[^>]*?\blang="([^"]+)"/i.exec(fs.readFileSync(f, "utf8").slice(0, 2000))?.[1];
+    if (!lang) continue; // a verification file with no <html lang> (Google's) has nothing to agree with
+    n++;
+    const r = rel(f), p = "/" + r.replace(/index\.html$/, ""), sent = headerFor(p);
+    if (sent !== lang) bad.push(`${p}: <html lang="${lang}"> but Content-Language ${sent ?? "(none)"}`);
+  }
+  console.log(`content-language: ${n} pages, ${bad.length} disagree`);
+  out.push("", `| Content-Language (#514) | ${n.toLocaleString("en-US")} pages, ${bad.length} disagree |`);
+  for (const b of bad.slice(0, 20)) err(b);
+  if (bad.length > 20) err(`content-language: ${bad.length - 20} more pages`);
 }
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, ["## Site check", "", "| check | result |", "|---|---|", ...out, "", errors.length ? `**${errors.length} failure(s)**` : "**all checks pass**", ""].join("\n") + "\n");

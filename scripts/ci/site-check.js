@@ -21,6 +21,9 @@
  *  6. CANONICAL (2026-11-14, claude-home #514, deploy-1126): a page's canonical names a path (never the bare host, as the
  *     home page's did: "https://recoverystarts.com" while its hreflang and the sitemap said ".../"), and where the page
  *     lists itself in hreflang, its canonical is that same URL.
+ *  7. ROBOTS.TXT (2026-11-14, claude-home #514, deploy-1126): every Sitemap: line names a file that's served, and a
+ *     comment that spells out the language sitemaps (sitemap-en/es/pt/fr.xml) names the same languages as sitemap.xml's
+ *     index. Its comment said four languages for weeks while the index held fourteen.
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -162,6 +165,24 @@ if (run("canonical")) {
   out.push("", `| canonical (#514) | ${n.toLocaleString("en-US")} pages, ${bad.length} wrong |`);
   for (const b of bad.slice(0, 20)) err(b);
   if (bad.length > 20) err(`canonical: ${bad.length - 20} more pages`);
+}
+
+// 7. robots.txt agrees with the sitemap index (#514)
+if (run("robots")) {
+  const robots = fs.readFileSync(path.join(DIST, "robots.txt"), "utf8");
+  const index = fs.readFileSync(path.join(DIST, "sitemap.xml"), "utf8");
+  const inIndex = [...index.matchAll(/<loc>[^<]*\/sitemap-([a-z]{2}(?:-[A-Za-z]+)?)\.xml<\/loc>/g)].map((m) => m[1]).sort();
+  let bad = 0;
+  for (const m of robots.matchAll(/^Sitemap:\s*https:\/\/recoverystarts\.com\/(\S+)$/gm)) {
+    // /sitemap-meetings.xml is the meeting map's, served by the meetings Worker (meeting-finder deploy/worker-meetings-route.js)
+    if (m[1] !== "sitemap-meetings.xml" && !fs.existsSync(path.join(DIST, m[1]))) { bad++; err(`robots.txt names Sitemap ${m[1]}, which isn't served`); }
+  }
+  for (const m of robots.matchAll(/sitemap-([a-z]{2}(?:\/[a-z]{2})+)\.xml/g)) {
+    const said = m[1].split("/").sort();
+    if (said.join() !== inIndex.join()) { bad++; err(`robots.txt's comment says sitemap-${m[1]}.xml, but sitemap.xml lists ${inIndex.length}: ${inIndex.join(", ")}`); }
+  }
+  console.log(`robots: ${inIndex.length} language sitemaps in the index, ${bad} problem(s)`);
+  out.push("", `| robots.txt (#514) | ${bad} problem(s); index lists ${inIndex.length} language sitemaps |`);
 }
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, ["## Site check", "", "| check | result |", "|---|---|", ...out, "", errors.length ? `**${errors.length} failure(s)**` : "**all checks pass**", ""].join("\n") + "\n");

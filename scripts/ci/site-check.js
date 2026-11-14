@@ -18,6 +18,9 @@
  *  5. ESCAPED TWICE (2026-11-14, claude-home #561, deploy-1126): a tag's attribute or a <title> that shows an entity as
  *     text, "&amp;quot;" and friends. scripts/i18n/build.mjs escaped attr translations without decoding them first, so 931
  *     es/pt/hi pages told Google `"El comité de selección."` with the &quot; spelled out. The build decodes first now.
+ *  6. CANONICAL (2026-11-14, claude-home #514, deploy-1126): a page's canonical names a path (never the bare host, as the
+ *     home page's did: "https://recoverystarts.com" while its hreflang and the sitemap said ".../"), and where the page
+ *     lists itself in hreflang, its canonical is that same URL.
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -137,6 +140,28 @@ if (run("entities")) {
   out.push("", `| escaped twice (#561) | ${bad.length} pages |`);
   for (const b of bad.slice(0, 20)) err(`escaped twice: ${b}`);
   if (bad.length > 20) err(`escaped twice: ${bad.length - 20} more pages`);
+}
+
+// 6. a canonical names a path, and agrees with the page's own hreflang (#514)
+if (run("canonical")) {
+  const HL = { pt: "pt-BR" };
+  const bad = [];
+  let n = 0;
+  for (const f of files) {
+    if (!f.endsWith(".html")) continue;
+    const html = fs.readFileSync(f, "utf8");
+    const c = /<link rel="canonical" href="([^"]+)"/.exec(html)?.[1];
+    if (!c) continue;
+    n++;
+    const r = rel(f), lang = langOf(r);
+    if (/^https?:\/\/[^/]+$/.test(c)) { bad.push(`${r}: canonical ${c} has no path (the same page as ${c}/)`); continue; }
+    const own = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].find((m) => m[1] === (HL[lang] ?? lang))?.[2];
+    if (own && own !== c && !/noindex/.test(html.slice(0, 4000))) bad.push(`${r}: canonical ${c}, but its own hreflang says ${own}`);
+  }
+  console.log(`canonical: ${n} pages, ${bad.length} wrong`);
+  out.push("", `| canonical (#514) | ${n.toLocaleString("en-US")} pages, ${bad.length} wrong |`);
+  for (const b of bad.slice(0, 20)) err(b);
+  if (bad.length > 20) err(`canonical: ${bad.length - 20} more pages`);
 }
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, ["## Site check", "", "| check | result |", "|---|---|", ...out, "", errors.length ? `**${errors.length} failure(s)**` : "**all checks pass**", ""].join("\n") + "\n");

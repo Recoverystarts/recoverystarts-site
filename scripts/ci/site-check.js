@@ -15,6 +15,9 @@
  *     09-20; 96 from oi1, 11-01.)
  *  4. TRANSLATED → ENGLISH: a page under /<lang>/ that links to an English page when the same page exists in <lang>.
  *     (10-12: the menu sent translated readers to English.)
+ *  5. ESCAPED TWICE (2026-11-14, claude-home #561, deploy-1126): a tag's attribute or a <title> that shows an entity as
+ *     text, "&amp;quot;" and friends. scripts/i18n/build.mjs escaped attr translations without decoding them first, so 931
+ *     es/pt/hi pages told Google `"El comité de selección."` with the &quot; spelled out. The build decodes first now.
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -116,6 +119,24 @@ if (run("links")) {
   out.push("", `| internal links | ${links.toLocaleString("en-US")} on ${pages.toLocaleString("en-US")} pages; ${mapLinks.toLocaleString("en-US")} go to the meeting map |`, `| broken targets | ${broken.size} |`, `| translated → English | ${leaks.size} |`);
   for (const [p, where] of broken) err(`broken link ${p} (on ${where.join(", ")})`);
   for (const [k, where] of leaks) { const [lang, p] = k.split(" "); err(`translated → English: ${lang} pages link to ${p} though /${lang}${p} exists (on ${where.join(", ")})`); }
+}
+
+// 5. an entity escaped twice in an attribute or a <title> (#561): it reaches search results as "&quot;" in words
+if (run("entities")) {
+  const TWICE = /&amp;(?:quot|amp|apos|lt|gt|nbsp|#\d+|#x[0-9a-f]+);/i;
+  const bad = [];
+  let pages = 0;
+  for (const f of files) {
+    if (!f.endsWith(".html")) continue;
+    pages++;
+    const html = fs.readFileSync(f, "utf8");
+    const hit = [...html.matchAll(/<[a-z][^>]*>/gi)].find((m) => TWICE.test(m[0])) ?? [...html.matchAll(/<title>[^<]*<\/title>/gi)].find((m) => TWICE.test(m[0]));
+    if (hit) bad.push(`${rel(f)}: ${hit[0].slice(0, 140)}`);
+  }
+  console.log(`entities: ${pages} pages, ${bad.length} with an entity escaped twice`);
+  out.push("", `| escaped twice (#561) | ${bad.length} pages |`);
+  for (const b of bad.slice(0, 20)) err(`escaped twice: ${b}`);
+  if (bad.length > 20) err(`escaped twice: ${bad.length - 20} more pages`);
 }
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, ["## Site check", "", "| check | result |", "|---|---|", ...out, "", errors.length ? `**${errors.length} failure(s)**` : "**all checks pass**", ""].join("\n") + "\n");

@@ -13,3 +13,52 @@ https://:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
 https://:version.:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
+
+# Content-Language (2026-11-14, claude-home #514 / #489 step 6, deploy-1126): every page says the language its <html lang>
+# says, the way the meeting map's pages already do (meeting-finder server/headers.mjs). Bing weighs this header over
+# hreflang. English is everything; each /<code>/ folder detaches it and sets its own, because Pages joins two values of
+# one header with a comma ("en, es") when two rules match (developers.cloudflare.com/pages/configuration/headers/).
+# The codes are each folder's <html lang> exactly (pt is pt-BR); scripts/ci/site-check.js check 8 holds them together.
+# Functions' answers (functions/) and the meeting map (the meetings Worker) don't read this file. Way back: delete
+# from here to the end of the file.
+/*
+  Content-Language: en
+/ar/*
+  ! Content-Language
+  Content-Language: ar
+/de/*
+  ! Content-Language
+  Content-Language: de
+/es/*
+  ! Content-Language
+  Content-Language: es
+/fa/*
+  ! Content-Language
+  Content-Language: fa
+/fr/*
+  ! Content-Language
+  Content-Language: fr
+/hi/*
+  ! Content-Language
+  Content-Language: hi
+/ja/*
+  ! Content-Language
+  Content-Language: ja
+/nl/*
+  ! Content-Language
+  Content-Language: nl
+/pl/*
+  ! Content-Language
+  Content-Language: pl
+/pt/*
+  ! Content-Language
+  Content-Language: pt-BR
+/ru/*
+  ! Content-Language
+  Content-Language: ru
+/sv/*
+  ! Content-Language
+  Content-Language: sv
+/tr/*
+  ! Content-Language
+  Content-Language: tr

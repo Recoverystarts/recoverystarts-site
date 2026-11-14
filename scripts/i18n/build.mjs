@@ -94,7 +94,7 @@ for (const rel of Object.keys(pageIds)) {
   for (let i = segs.length - 1; i >= 0; i--) {
     const s = segs[i], t = tr[idOf(s.en)];
     if (t == null) throw new Error(`${rel}: segment ${idOf(s.en)} has no ${lang} (extract is out of date — run extract.mjs)`);
-    html = html.slice(0, s.start) + (s.kind === "attr" ? t.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) : fromTemplate(t, s.en)) + html.slice(s.end);
+    html = html.slice(0, s.start) + (s.kind === "attr" ? unent(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) : fromTemplate(t, s.en)) + html.slice(s.end);
   }
   // a page's JSON data (<script type="application/json">, e.g. the Daily Tradition hub's readings, which its script draws
   // over the server-rendered one): a string whose English is a segment translated elsewhere takes that translation, so the

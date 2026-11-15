@@ -149,7 +149,22 @@
   if (navigator.webdriver) return;
   gtag('js', new Date());
   gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true, traffic_type: 'rs' }); // traffic_type 'rs' marks our own hits so a GA4 Include-only data filter can drop ghost hits sent straight to Google (claude-home #575, 2026-11-12). Way back: remove the key.
-  var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
+  // GA starts when someone is there: a tap, a wheel or finger scroll, a key, a pointer that has really moved, or the page in view for 1.5 s (2026-11-15, Code: farm-study).
+  // Why: 137,992 sessions on 11-13/14 were a browser fleet that left each page after 0.2 s, and Raptive's RPM divides
+  // by these sessions. The meeting finder's pages carry the same rule (meeting-finder server/pages.mjs). What changes
+  // for real numbers: a visit that ends inside 1.5 s without a touch is no longer a session. Way back: git revert.
+  var on = 0, t = 0, ev = ['pointerdown', 'wheel', 'keydown', 'touchstart'], mv = 0, lx = -1, ly = -1;
+  // a pointer counts once it has really moved three times: the browser sends itself one move when a cursor rests over a new page
+  function mo(e) { if (e.isTrusted && (e.clientX !== lx || e.clientY !== ly)) { lx = e.clientX; ly = e.clientY; if (++mv >= 3) go(e); } }
+  function go(e) {
+    if (on || (e && e.isTrusted === false)) return;
+    on = 1; clearTimeout(t); removeEventListener('pointermove', mo, true); ev.forEach(function (n) { removeEventListener(n, go, true); });
+    var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
+  }
+  function arm() { clearTimeout(t); if (document.visibilityState === 'visible') t = setTimeout(go, 1500); }
+  ev.forEach(function (n) { addEventListener(n, go, { capture: true, passive: true }); });
+  addEventListener('pointermove', mo, { capture: true, passive: true });
+  document.addEventListener('visibilitychange', arm); arm();
 })();
 
 

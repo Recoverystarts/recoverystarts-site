@@ -147,9 +147,49 @@
   // "(not set)" Direct sessions, ~60 on 2026-10-26 (wave 2026-10-26-ads S4). gtag() stays defined, so callers like
   // donate.js just queue into a dataLayer nobody sends. (The old AdSense loader followed the same rule.)
   if (navigator.webdriver) return;
-  gtag('js', new Date());
-  gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true, traffic_type: 'rs' }); // traffic_type 'rs' marks our own hits so a GA4 Include-only data filter can drop ghost hits sent straight to Google (claude-home #575, 2026-11-12). Way back: remove the key.
-  var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
+  // The hand gate (2026-11-15, Code: farm-study, claude-home #575). The meeting finder carries the same logic in its
+  // page template; meeting-finder server/hand.mjs has the whole why and the proof. In short: a crawler loads pages in
+  // real Chrome from home internet addresses, ~70,000 a day, each load a first visit with no referrer that lasts 0.2 s
+  // and never touches the page. It ran this tag, so Analytics showed 67,000 "Direct" sessions a day beside ~1,100 from
+  // search. Nothing is blocked. On that kind of visit (first visit, no referrer, desktop browser; or one that came
+  // through the missing-slash redirect, which the edge stamps with a 30-second cookie, rs_hop) Analytics starts at the
+  // first pointer, key, touch, wheel or scroll. Every other visit starts it at once, as before.
+  // First visits also tell our own server "loaded" and, once, "a hand" (how, how soon): no cookie, nothing about the
+  // person. Kinds: d desktop/no referrer (waits), h the hop (waits), c arrived from another site, m a phone with no
+  // referrer (c and m don't wait: they are the yardstick). Read at /healthz/visits -> hand on the meetings service.
+  // While a visit waits, <body> has the class rs-wait-hand; nothing styles it (it is there for Raptive to act on).
+  // Way back: put the three lines below "start" back at this level and delete the rest.
+  var d = document, n = navigator, on = false, t0 = Date.now(), px, py;
+  var c = d.cookie || '', r = d.referrer || '';
+  var first = !/(?:^|; )_ga=/.test(c), hop = /(?:^|; )rs_hop=1/.test(c);
+  var mob = n.userAgentData ? n.userAgentData.mobile : /Mobi|Android|iPhone|iPad|iPod/i.test(n.userAgent);
+  var kind = !first ? '' : hop ? 'h' : r ? (r.indexOf(location.origin) ? 'c' : '') : mob ? 'm' : 'd';
+  var wait = kind === 'd' || kind === 'h';
+  var how = { pointerdown: 'p', pointermove: 'm', keydown: 'k', touchstart: 't', wheel: 'w', scroll: 's' };
+  if (hop) d.cookie = 'rs_hop=;Max-Age=0;Path=/';
+  function start() {
+    if (on) return;
+    on = true;
+    gtag('js', new Date());
+    gtag('config', 'G-QEHZLMSH7P', { anonymize_ip: true, traffic_type: 'rs' }); // traffic_type 'rs' marks our own hits so a GA4 Include-only data filter can drop ghost hits sent straight to Google (claude-home #575, 2026-11-12). Way back: remove the key.
+    var g = d.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; d.head.appendChild(g);
+  }
+  function say(e) { try { n.sendBeacon('/meetings/api/hand/' + kind + '/' + e); } catch (z) {} }
+  function mark(yes) { if (d.body) d.body.classList[yes ? 'add' : 'remove']('rs-wait-hand'); }
+  if (!wait) start();
+  if (!kind) return;
+  say('l');
+  if (wait) { if (d.body) mark(true); else d.addEventListener('DOMContentLoaded', function () { if (!on) mark(true); }); }
+  function hand(e) {
+    if (!e.isTrusted) return; // an event a script made up is not a person
+    // one pointer position alone isn't a hand: a parked cursor reports one when a page loads
+    if (e.type === 'pointermove' && (px === undefined || (e.screenX === px && e.screenY === py))) { px = e.screenX; py = e.screenY; return; }
+    for (var x in how) window.removeEventListener(x, hand, true);
+    var s = (Date.now() - t0) / 1000;
+    say(how[e.type] + '/' + (s < 1 ? 0 : s < 2 ? 1 : s < 5 ? 2 : s < 10 ? 3 : s < 30 ? 4 : 5));
+    if (wait) { start(); mark(false); }
+  }
+  for (var x in how) window.addEventListener(x, hand, { capture: true, passive: true });
 })();
 
 

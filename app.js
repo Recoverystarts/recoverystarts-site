@@ -154,6 +154,14 @@
   // by these sessions. The meeting finder's pages carry the same rule (meeting-finder server/pages.mjs). What changes
   // for real numbers: a visit that ends inside 1.5 s without a touch is no longer a session. Way back: git revert.
   var on = 0, t = 0, ev = ['pointerdown', 'wheel', 'keydown', 'touchstart'], mv = 0, lx = -1, ly = -1;
+  // The fleet's own kind of visit: a first visit (no _ga cookie) that comes with no referrer to a desktop browser. There
+  // the 1.5 s doesn't count, only a hand does (Code: farm-study, 2026-11-15, on top of the rule above; the meeting
+  // finder's pages carry the same case). Why: 2,691 of the fleet's 67,269 page views on 11-14 stayed in focus a second
+  // or more (Analytics' user_engagement), 4.9 s on average, so the 1.5 s would still let about 2,700 of them a day in.
+  // Real people make about 150 such visits a day; each is counted from their first movement. Every other visit (from
+  // search or a link, a returning visitor, a phone, moving around our own pages) keeps the rule above as it is.
+  // Way back: delete `bare` here and in arm().
+  var bare = !document.referrer && !/(?:^|; )_ga=/.test(document.cookie) && !(navigator.userAgentData ? navigator.userAgentData.mobile : /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent));
   // a pointer counts once it has really moved three times: the browser sends itself one move when a cursor rests over a new page
   function mo(e) { if (e.isTrusted && (e.clientX !== lx || e.clientY !== ly)) { lx = e.clientX; ly = e.clientY; if (++mv >= 3) go(e); } }
   function go(e) {
@@ -161,7 +169,7 @@
     on = 1; clearTimeout(t); removeEventListener('pointermove', mo, true); ev.forEach(function (n) { removeEventListener(n, go, true); });
     var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QEHZLMSH7P'; document.head.appendChild(g);
   }
-  function arm() { clearTimeout(t); if (document.visibilityState === 'visible') t = setTimeout(go, 1500); }
+  function arm() { clearTimeout(t); if (!bare && document.visibilityState === 'visible') t = setTimeout(go, 1500); }
   ev.forEach(function (n) { addEventListener(n, go, { capture: true, passive: true }); });
   addEventListener('pointermove', mo, { capture: true, passive: true });
   document.addEventListener('visibilitychange', arm); arm();

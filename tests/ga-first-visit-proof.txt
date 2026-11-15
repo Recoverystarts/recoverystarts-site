@@ -1,0 +1,22 @@
+# GA4's start rule in app.js, real Chromium 153.0.8010.12 — 2026-11-15T22:24:40.989Z
+# "#103" = the shield's static-site branch as it stands; "here" = #103 plus the first-visit case.
+# Requests for gtag.js per visit (1 = Analytics started, 0 = it did not).
+
+PASS  first visit, no referrer, desktop, gone at 0.3 s (the fleet as it is today): #103 0, here 0
+PASS  the same visit, staying 3 s in view, nobody touching: #103 1, here 0   <-- the difference
+PASS  the same visit on the home page, staying 3 s: #103 1, here 0   <-- the difference
+PASS  a person on that kind of visit who moves the mouse: #103 1, here 1
+PASS  a person on that kind of visit who presses a key: #103 1, here 1
+PASS  a person on that kind of visit who turns the wheel: #103 1, here 1
+PASS  arrives from Google, reads 2.5 s without touching: #103 1, here 1
+PASS  a returning visitor (has _ga), no referrer, 2.5 s: #103 1, here 1
+PASS  a phone with no referrer, 2.5 s without touching: #103 1, here 1
+PASS  from one of our own pages, before any cookie, 2.5 s: #103 1, here 1
+PASS  20 fleet-shaped loads across three pages that each stay 2.5 s: Analytics sessions under #103's rule 20, here 0
+
+## What a visitor sees: here beside #103's branch
+PASS  /start-here/ at 1366x900: the full-page picture is byte-for-byte the same (2566390 bytes)
+PASS  / at 390x844: the full-page picture is byte-for-byte the same (1301648 bytes)
+PASS  /big-book/ at 1366x900: the full-page picture is byte-for-byte the same (405098 bytes)
+
+all passed

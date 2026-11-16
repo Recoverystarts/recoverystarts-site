@@ -83,12 +83,19 @@ try {
   check(v.gtag === 1 && /^d\/[ws]\/[0-5]$/.test(v.beacons[1] ?? ""), `same shape, a person turns the wheel: Analytics starts; ledger [${v.beacons}]`);
   v = await visit(s.base, PAGE, { act: (p) => p.evaluate(() => { window.dispatchEvent(new Event("scroll")); window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" })); }) });
   check(v.gtag === 0 && v.beacons.join() === "d/l", `same shape, a script fakes scroll and key events: still no Analytics; ledger [${v.beacons}]`);
+  // since the join with the shield (meeting-finder #1059): a first visit from another site or a phone starts Analytics at
+  // the first hand or after 1.5 s in view, no longer at once (a fleet that learns a Google referrer still leaves in 0.2 s)
   v = await visit(s.base, PAGE, { referer: "https://www.google.com/" });
-  check(v.gtag === 1 && v.beacons.join() === "c/l" && !/rs-wait-hand/.test(v.bodyClass), `arrives from Google, nobody touching: Analytics at once, as before; ledger [${v.beacons}]`);
+  check(v.gtag === 0 && v.beacons.join() === "c/l" && !/rs-wait-hand/.test(v.bodyClass), `arrives from Google, nobody touching, gone at 0.5 s: no Analytics yet, no mark; ledger [${v.beacons}]`);
+  v = await visit(s.base, PAGE, { referer: "https://www.google.com/", stay: 2500 });
+  check(v.gtag === 1 && v.beacons.join() === "c/l" && !/rs-wait-hand/.test(v.bodyClass), `arrives from Google, nobody touching, still there at 2.5 s: Analytics started (1.5 s in view); ledger [${v.beacons}]`);
   v = await visit(s.base, PAGE, { cookies: [{ name: "_ga", value: "GA1.1.1111.2222" }] });
   check(v.gtag === 1 && v.beacons.length === 0, `returning visitor (has _ga), no referrer: Analytics at once; nothing sent to the ledger`);
-  v = await visit(s.base, PAGE, { ua: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1", viewport: { width: 390, height: 844 }, mobile: true });
-  check(v.gtag === 1 && v.beacons.join() === "m/l", `a phone with no referrer: Analytics at once; ledger [${v.beacons}]`);
+  const IPHONE = { ua: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Mobile/15E148 Safari/604.1", viewport: { width: 390, height: 844 }, mobile: true };
+  v = await visit(s.base, PAGE, IPHONE);
+  check(v.gtag === 0 && v.beacons.join() === "m/l", `a phone with no referrer, gone at 0.5 s: no Analytics yet; ledger [${v.beacons}]`);
+  v = await visit(s.base, PAGE, { ...IPHONE, stay: 2500 });
+  check(v.gtag === 1 && v.beacons.join() === "m/l", `a phone with no referrer, still there at 2.5 s: Analytics started (1.5 s in view); ledger [${v.beacons}]`);
   v = await visit(s.base, PAGE, { referer: "https://www.google.com/", cookies: [{ name: "rs_hop", value: "1" }] });
   check(v.gtag === 0 && v.beacons.join() === "h/l", `through the missing-slash hop, claiming Google sent it: waits; ledger [${v.beacons}]`);
   v = await visit(s.base, "/", { referer: s.base + PAGE });

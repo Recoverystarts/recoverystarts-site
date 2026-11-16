@@ -15,6 +15,7 @@
  *     09-20; 96 from oi1, 11-01.)
  *  4. TRANSLATED → ENGLISH: a page under /<lang>/ that links to an English page when the same page exists in <lang>.
  *     (10-12: the menu sent translated readers to English.)
+ *  5. DOUBLE-ESCAPED ATTRIBUTES: an attribute value with &amp;quot; / &amp;#x27; (shows as "&quot;"; 2026-11-16, #561).
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -116,6 +117,23 @@ if (run("links")) {
   out.push("", `| internal links | ${links.toLocaleString("en-US")} on ${pages.toLocaleString("en-US")} pages; ${mapLinks.toLocaleString("en-US")} go to the meeting map |`, `| broken targets | ${broken.size} |`, `| translated → English | ${leaks.size} |`);
   for (const [p, where] of broken) err(`broken link ${p} (on ${where.join(", ")})`);
   for (const [k, where] of leaks) { const [lang, p] = k.split(" "); err(`translated → English: ${lang} pages link to ${p} though /${lang}${p} exists (on ${where.join(", ")})`); }
+}
+
+// 5. DOUBLE-ESCAPED ATTRIBUTES (2026-11-16, claude-home #561): an attribute value holding &amp;quot; or &amp;#x27;,
+// which a browser and Google's snippet show as the literal "&quot;". 5,529 of them sat in es/pt/hi meta descriptions
+// until build.mjs decoded attribute translations before escaping them. Way back: delete this block.
+if (run("entities")) {
+  const bad = new Map();
+  for (const f of files) {
+    if (!f.endsWith(".html")) continue;
+    const html = fs.readFileSync(f, "utf8");
+    if (!html.includes("&amp;")) continue;
+    const n = (html.match(/\s[a-z:-]+="[^"]*&amp;(?:quot|#x27|#39|apos);/gi) ?? []).length;
+    if (n) bad.set(rel(f), n);
+  }
+  out.push("", `| double-escaped attributes | ${bad.size} pages |`);
+  console.log(`double-escaped attributes: ${bad.size} pages`);
+  if (bad.size) err(`${bad.size} pages have a double-escaped attribute (&amp;quot; shows as "&quot;"), e.g. ${[...bad.keys()].slice(0, 3).join(", ")}. Fix the build, or run node scripts/i18n/unescape-attrs.mjs`);
 }
 
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, ["## Site check", "", "| check | result |", "|---|---|", ...out, "", errors.length ? `**${errors.length} failure(s)**` : "**all checks pass**", ""].join("\n") + "\n");

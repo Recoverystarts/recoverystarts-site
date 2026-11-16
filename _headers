@@ -13,3 +13,51 @@ https://:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
 https://:version.:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
+
+# Content-Language (2026-11-16, Code: quiet-fixes, claude-home #514 / research 12 step 6): Bing has called hreflang "a far
+# weaker signal than content-language", and our static pages sent none (the meeting pages already do, from the Worker and
+# the server, since meeting-finder #986). Each page says the language its <html lang> says: English by default, and each
+# /<lang>/ folder its own tag. Pages joins the values of every rule that matches a path, so each language rule first
+# drops the English one ("! Content-Language"). Checked in `wrangler pages dev`. Visitors see nothing; it's a header.
+# Way back: delete this block.
+/*
+  Content-Language: en
+/es/*
+  ! Content-Language
+  Content-Language: es
+/pt/*
+  ! Content-Language
+  Content-Language: pt-BR
+/fr/*
+  ! Content-Language
+  Content-Language: fr
+/de/*
+  ! Content-Language
+  Content-Language: de
+/fa/*
+  ! Content-Language
+  Content-Language: fa
+/pl/*
+  ! Content-Language
+  Content-Language: pl
+/sv/*
+  ! Content-Language
+  Content-Language: sv
+/nl/*
+  ! Content-Language
+  Content-Language: nl
+/hi/*
+  ! Content-Language
+  Content-Language: hi
+/ja/*
+  ! Content-Language
+  Content-Language: ja
+/ru/*
+  ! Content-Language
+  Content-Language: ru
+/ar/*
+  ! Content-Language
+  Content-Language: ar
+/tr/*
+  ! Content-Language
+  Content-Language: tr

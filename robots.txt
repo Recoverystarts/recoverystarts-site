@@ -65,6 +65,8 @@ Disallow: /add-meeting?
 # sitemap-meetings.xml is the meeting finder's own index, so it's named here on its own line.
 Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml
+# The family map (Al-Anon and Nar-Anon, its own Worker family-router → Recoverystarts/al-anon-finder), 2026-11-17
+Sitemap: https://recoverystarts.com/family/sitemap.xml
 # Every reading page (Steps, Traditions, Concepts, history, the Big Book, A.A. questions, daily readings), lastmod = when
 # its text last changed. Built by scripts/build-start-here.mjs with the hub at /start-here/ (#483).
 Sitemap: https://recoverystarts.com/sitemap-reading.xml

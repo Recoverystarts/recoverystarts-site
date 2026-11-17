@@ -27,7 +27,8 @@ const DIST = path.join(ROOT, "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
 const WARN_AT = 90000, FAIL_AT = 100000;
 // served by the meetings Worker / Railway at recoverystarts.com, not by Pages
-const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$))/;
+// + /family/: the family map (Al-Anon and Nar-Anon), served by the family-router Worker from Recoverystarts/al-anon-finder (2026-11-17)
+const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$)|family(\/|$))/;
 const args = process.argv.slice(2);
 const base = args.includes("--base") ? args[args.indexOf("--base") + 1] : null;
 const only = args.includes("--only") ? args[args.indexOf("--only") + 1].split(",") : null;

@@ -21,7 +21,8 @@ if (!/^https:\/\/[a-z0-9-]+\.recoverystarts-site\.pages\.dev$/.test(PREVIEW)) { 
 const LIVE = "https://recoverystarts.com";
 const DIST = path.join(__dirname, "..", "..", "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
-const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$))/;
+// + /family/: the family map (Al-Anon and Nar-Anon), served by the family-router Worker (2026-11-17)
+const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data)(\/|$)|online(\/|$)|family(\/|$))/;
 const SEEDS = ["/", "/start-here/", "/12-steps/", "/12-traditions/", "/12-concepts/", "/big-book/", "/daily-reflection/", "/daily-tradition/", "/aa-history/", "/aa-info/", "/meetings/", "/about/"];
 const UA = { "user-agent": "recoverystarts-site CI link check (github actions)" };
 const langOf = (p) => { const s = p.split("/")[1]; return LANGS.includes(s) ? s : "en"; };

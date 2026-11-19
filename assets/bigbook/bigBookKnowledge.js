@@ -3,11 +3,10 @@
  * client/src/lib/big-book-knowledge.ts (CHAPTERS, STEP_REFERENCES,
  * SPECIAL_REFERENCES, searchKnowledge).
  *
- * This is the layer the first port was missing: it answers structural queries
- * the full-text engine can't — "step 12" → Step 12 spanning pp.89–103 (the
- * whole Working With Others chapter), "12 traditions" → the Long Form on
- * p.563, chapter names, the prayers, The Promises. Matching rules are the
- * app's exactly, including the digit-boundary step regex ("step 1" must not
+ * It answers structural queries the full-text engine can't: "step 12" → Step 12
+ * spanning pp.89–103 (the whole Working With Others chapter), "12 traditions" →
+ * the Long Form on p.563, chapter names, the prayers, The Promises. Matching
+ * rules are the app's, including the digit-boundary step regex ("step 1" doesn't
  * fire on a "step 10"/"step 12" query).
  */
 
@@ -123,8 +122,8 @@ export function searchKnowledge(query) {
   const q = query?.toLowerCase?.() ?? "";
   const results = [];
 
-  // Search steps. Digit-boundary matching: "step 1" must not fire on a
-  // "step 10"/"step 11"/"step 12" query (substring includes() had that bug).
+  // Search steps. Digit-boundary matching: "step 1" doesn't fire on a
+  // "step 10"/"step 11"/"step 12" query.
   for (const step of STEP_REFERENCES) {
     const stepRx = new RegExp(`step\\s*${step.step}(?![0-9])`);
     if (stepRx.test(q) || q.includes(step?.description?.toLowerCase?.() ?? "")) {

@@ -1,25 +1,19 @@
 # Response headers for Cloudflare Pages (https://developers.cloudflare.com/pages/configuration/headers/).
 # The self-hosted fonts never change under a name (a new font gets a new file name), so phones keep them for a year
-# instead of asking again on every page (wave 2026-10-26-ads S2). Way back: delete this file.
+# instead of asking again on every page.
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Raptive is approved for recoverystarts.com only (2026-11-12, Code window raptive-install). Every branch and PR also gets
-# a preview copy on *.pages.dev, and Raptive's head tag (which we may not change or wrap in a condition) would load ads
-# there too. So on those hosts only, the browser may run inline scripts and our own files and nothing from elsewhere:
-# Raptive's loader (and GA) never starts on a preview. recoverystarts.com and www get no new header from this.
-# Checked in `wrangler pages dev` with Host headers. Way back: delete these four lines.
+# Preview copies on *.pages.dev may run inline scripts and our own files only, so Raptive's loader and GA don't start
+# there (Raptive is approved for recoverystarts.com only). recoverystarts.com and www get no header from this.
 https://:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
 https://:version.:project.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'
 
-# Content-Language (2026-11-16, Code: quiet-fixes, claude-home #514 / research 12 step 6): Bing has called hreflang "a far
-# weaker signal than content-language", and our static pages sent none (the meeting pages already do, from the Worker and
-# the server, since meeting-finder #986). Each page says the language its <html lang> says: English by default, and each
-# /<lang>/ folder its own tag. Pages joins the values of every rule that matches a path, so each language rule first
-# drops the English one ("! Content-Language"). Checked in `wrangler pages dev`. Visitors see nothing; it's a header.
-# Way back: delete this block.
+# Content-Language matching each page's <html lang>: English by default, and each /<lang>/ folder its own tag.
+# Pages joins the values of every rule that matches a path, so each language rule first drops the English one
+# ("! Content-Language").
 /*
   Content-Language: en
 /es/*

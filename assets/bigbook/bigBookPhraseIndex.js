@@ -1,9 +1,7 @@
 /**
  * Curated Big Book quick-cards — vanilla-JS mirror of the app's
- * client/src/data/bigBookPhraseIndex.ts. The array literal below is carried
- * over from the app source verbatim (regenerated, not hand-edited): the app is
- * the spec, and any entry the app doesn't have would make the two searches
- * disagree on doctrine. Do not add site-only entries here — page-level content
+ * client/src/data/bigBookPhraseIndex.ts. The array literal below is the app's,
+ * regenerated from its source, so both searches agree. Page-level content
  * (Traditions explainer, pamphlet links) lives in big-book/search/index.html.
  *
  * @typedef {Object} BigBookPhrase

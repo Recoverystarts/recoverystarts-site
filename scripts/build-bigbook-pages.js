@@ -5,19 +5,15 @@
  * Generates one landing page per Big Book page from bigbook/search-index.json,
  * plus a browsable hub at /big-book/pages/.
  *
- * ── THE COPYRIGHT GUARDRAIL (read before editing) ───────────────────────────
- * The 4th edition of Alcoholics Anonymous is under active AAWS copyright.
- * This script NEVER renders a page's full text. It reads the text only to
- * DERIVE a short attributed excerpt (hard-capped) and a set of themes.
- * assertQuoteCap() enforces the cap at build time and THROWS if violated.
- * If you find yourself removing that assertion, stop and re-read
- * D:\Forge\work-orders\WO-bigbook-page-library.md.
+ * ── Copyright guardrail ─────────────────────────────────────────────────────
+ * The 4th edition of Alcoholics Anonymous is under AAWS copyright. This script
+ * never renders a page's full text: it reads the text only to derive a short
+ * attributed excerpt (capped) and a set of themes. assertQuoteCap() enforces the
+ * cap at build time and throws if it is exceeded.
  *
- * Every factual claim on a generated page comes from exactly two places:
+ * Every factual claim on a generated page comes from two places:
  *   1. bigbook/search-index.json          (label -> section -> text)
  *   2. assets/bigbook/bigBookKnowledge.js (chapters, steps, special refs)
- * Nothing is inferred, rounded, or remembered. A wrong page number is the one
- * failure mode this product cannot have.
  *
  * Usage: node scripts/build-bigbook-pages.js [--dry]
  */
@@ -34,7 +30,7 @@ const DRY = process.argv.includes("--dry");
 const EXCERPT_MAX = 300;   // chars of quoted book text we will render
 const QUOTE_CAP   = 340;   // absolute assertion ceiling; build throws above this
 
-// Curated pages we must never clobber — a human wrote these and they're better.
+// Hand-written pages the generator skips.
 const CURATED = new Set(["83"]);
 
 // Pages with too little text to justify a page (blank versos, dividers).
@@ -76,7 +72,7 @@ const SPECIAL = [
   { name: "Spiritual Experience (Appendix II)",  from: 567, to: 568 },
 ];
 
-// Themes are DERIVED from the page's own text — never asserted from memory.
+// Themes are derived from the page's own text.
 const THEMES = [
   ["resentment",               /\bresent(ment|ments|ful)?\b/i],
   ["fear",                     /\bfear(s|ful)?\b/i],
@@ -140,13 +136,8 @@ function assertQuoteCap(quote, label) {
 
 /** Pull the first clean, complete, quotable sentence(s) — capped.
  *
- * ADJACENCY IS LOAD-BEARING. An earlier version filtered the sentence list
- * (capital-initial, >=40 chars) and then joined the SURVIVORS — which could
- * stitch sentence #2 onto sentence #5 and produce a "quote" that appears
- * nowhere on the page. 152 pages failed the verbatim check because of it.
- * We now pick a starting sentence and only ever extend with the sentence that
- * literally follows it, so the result is always a contiguous substring of the
- * page. Do not "optimise" this back into a filter+join.
+ * Starts at one sentence and only extends with the sentence that literally
+ * follows it, so the result is always a contiguous substring of the page.
  */
 function makeExcerpt(text, label) {
   const t = normalize(text);
@@ -249,23 +240,12 @@ function chapterRangeText(ch) {
 }
 
 /**
- * ── THE FAQ LAYER ───────────────────────────────────────────────────────────
- * Clean question/answer pairs with FAQPage schema are what AI assistants and
- * AI Overviews actually LIFT. This is the layer that decides whether a machine
- * asking "what's on page 64 of the Big Book?" gets our answer or somebody's
- * distortion. It's also the only genuinely unique substance on these pages, so
- * it's what keeps them from being thin content.
- *
- * THE RULE: every answer is DERIVED — from the index (label, section) or the
- * knowledge layer (chapters, steps, special references). Nothing is invented,
- * nothing is remembered, nothing is guessed. If we can't source it, we don't
- * say it. A wrong page number is the one failure this product cannot have, and
- * an FAQ answer is the single most quotable place to put one.
- *
- * SECOND RULE: answers carry NO book text. They are our own prose plus page
- * refs. That keeps the total quoted book text on the page at exactly the one
- * capped excerpt — the FAQ layer adds substance without adding exposure.
- * (Enforced by construction: this function never receives the page text.)
+ * ── The FAQ layer ───────────────────────────────────────────────────────────
+ * Question/answer pairs with FAQPage schema. Every answer is derived from the
+ * index (label, section) or the knowledge layer (chapters, steps, special
+ * references). Answers carry no book text — our own prose plus page refs — so
+ * the page's quoted book text stays at the one capped excerpt. This function
+ * never receives the page text.
  */
 function makeFaqs(displayLabel, section, ch, st, sp, themes) {
   const faqs = [];
@@ -358,7 +338,7 @@ function makeFaqs(displayLabel, section, ch, st, sp, themes) {
     }
   }
 
-  // Q5 — the honest close. Same on every page, and it should be.
+  // Q5 — the close, same on every page.
   faqs.push({
     q: "Can I read page " + displayLabel + " of the Big Book online for free?",
     a: "Yes — free, no account. The Big Book Search Engine at read.recoverystarts.com shows the actual pages of the 4th Edition; page " + displayLabel + " is at read.recoverystarts.com/bigbook/read?page=" + String(displayLabel).toLowerCase() + ". The book itself belongs to A.A., which offers it to everyone: read it free at aa.org, buy a copy from the official A.A. store, or pick one up at almost any meeting.",
@@ -472,10 +452,9 @@ ${NAV}
 const DISCLAIMER = `      <p class="cp-disclaimer">This is an independent Big Book reference page from Recovery Starts — not official AA literature, not affiliated with Alcoholics Anonymous World Services, and not medical advice. Page references are to <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition. <strong>Read the full book free at <a href="https://www.aa.org/the-big-book" target="_blank" rel="noopener">aa.org</a></strong>, or <a href="/big-book/">get your own copy from A.A.</a> If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>`;
 
 // ── Build ───────────────────────────────────────────────────────────────────
-// The Big Book text now lives in functions/_lib/ — the one directory Cloudflare
-// Pages does NOT serve publicly. It is a BUILD-TIME input here (we derive short
-// excerpts from it) and a RUNTIME input to /api/bigbook-search. It is never a
-// public asset. See functions/api/bigbook-search.js for the full reasoning.
+// The Big Book text lives in functions/_lib/, which Cloudflare Pages does not
+// serve publicly: a build-time input here (short excerpts) and a runtime input
+// to /api/bigbook-search.
 const idx = JSON.parse(fs.readFileSync(path.join(ROOT, "functions", "_lib", "big-book-text.json"), "utf8"));
 
 const pages = idx
@@ -497,7 +476,7 @@ for (let i = 0; i < pages.length; i++) {
   const slug = "page-" + displayLabel;
   const url = SITE + "/big-book/" + slug + "/";
 
-  if (CURATED.has(label)) continue;   // never clobber a hand-written page
+  if (CURATED.has(label)) continue;   // hand-written page
 
   const prev = pages[i - 1];
   const next = pages[i + 1];
@@ -587,7 +566,7 @@ for (let i = 0; i < pages.length; i++) {
 
   const searchQ = encodeURIComponent(sp.length ? sp[0].name.replace(/^the /, "") : (themes[0] || topic));
 
-  // ── FAQ layer: the substance, and the thing AI actually lifts ──
+  // ── FAQ layer ──
   const faqs = makeFaqs(displayLabel, e.s, ch, st, sp, themes);
   const faqLd = {
     "@context": "https://schema.org",
@@ -653,10 +632,8 @@ ${DISCLAIMER}
 ${FOOTER}
 `;
 
-  // GUARD: the FAQ layer must add SUBSTANCE, never EXPOSURE. Every answer is our
-  // own prose plus page refs — no book text. If an answer ever contains a long
-  // run of this page's actual text, the copyright argument for these pages
-  // collapses. Fail the build rather than ship it.
+  // Guard: an FAQ answer is our own prose plus page refs, never book text. A long
+  // run of this page's text in an answer fails the build.
   const pageNorm = normalize(e.t);
   for (const f of faqs) {
     for (let k = 0; k + 40 <= f.a.length; k += 20) {

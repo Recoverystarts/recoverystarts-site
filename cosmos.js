@@ -1,7 +1,6 @@
 /* Open Cosmos — floating particles only (bg is static full-bleed img)
  * The particles start once the page has drawn and the phone is idle, and fade in over a second, so the headline,
- * the buttons and the picture never wait behind them (wave 2026-10-26-ads S2: on a slow phone this loop was ~4 s of
- * main-thread work before the headline showed). Way back: call start() at once and drop the fade. */
+ * the buttons and the picture never wait behind them. */
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canvas = document.getElementById("particles");

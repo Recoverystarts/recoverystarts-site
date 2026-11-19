@@ -1,29 +1,16 @@
 #!/usr/bin/env node
 /**
- * refresh-tradition-hub.js — bring /daily-tradition/ (the hub) up to date with
- * data/traditions-daily.json WITHOUT running the stale full builder.
+ * refresh-tradition-hub.js — bring /daily-tradition/ (the hub) up to date with data/traditions-daily.json without
+ * the full builder.
  *
- * WHY (2026-09-10): the hub's "Today" card renders client-side from a
- * <script id="dt-data"> JSON copy of EVERY reading, and its static copy
- * ("August is Tradition 8", the August day list, the Tradition 8 short form,
- * the server-rendered fallback card) is whatever the last full build saw.
- * build-traditions-pages.js does not even emit dt-data (it was hand-added
- * later), and running it regresses nav/icons/OG/CTA/footer on all pages.
- * patch-one-tradition.js updates day pages + titles, not this payload. So
- * September's 24 rewrites were live on every day page and NOT in the hub —
- * Derick saw the old Sept 10 on his phone and the new one on desktop.
- *
- * What this touches in daily-tradition/index.html, and nothing else:
- *   1. the dt-data JSON payload (all readings, from the JSON — same field shape)
+ * What this touches in daily-tradition/index.html:
+ *   1. the dt-data JSON payload (all readings; the "Today" card renders from it client-side)
  *   2. "<Month> is Tradition <n>" in the meta description and the dt-date line
  *   3. the <h2 class="dt-h2">Month · Tradition n</h2> + <div class="dt-days"> list
  *   4. the <div class="dt-tradition"> short-form block (from twelve-traditions.json)
- *   5. the server-rendered fallback card in #dt-today-main (the current month's
- *      day 1, same markup __dtHero produces)
+ *   5. the server-rendered fallback card in #dt-today-main (the current month's day 1, same markup __dtHero produces)
  * "Current month" = today's month if it is in the data, else the latest one.
  *
- * Run it after ANY reading change (apply-tradition-batch → parse → audit →
- * patch-one-tradition → THIS), and on the 1st of a new month.
  * Usage: node scripts/refresh-tradition-hub.js [--month september]
  */
 const fs = require("fs");
@@ -35,7 +22,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const escAttr = (s) => esc(s).replace(/"/g, "&quot;");
 const mdEm = (s) => esc(s).replace(/\*([^*]+)\*/g, "<em>$1</em>");
 
-// Same table as build-traditions-pages.js — keep in step.
+// Same table as build-traditions-pages.js.
 const KIND_BADGE = {
   "hypothetical":          { label: "Where it goes wrong",   cls: "hyp" },
   "the earned answer":     { label: "The earned answer",     cls: "earned" },

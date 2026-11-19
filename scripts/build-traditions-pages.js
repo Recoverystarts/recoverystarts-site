@@ -8,20 +8,14 @@
  *   /daily-tradition/july-1/ … july-31/   one page per reading
  *   /daily-tradition/today/           auto-redirect to today's reading
  *
- * REUSABLE BY DESIGN: this template is month-agnostic. Adding November (Tradition
- * 11) means adding 30 rows to traditions-daily.json and re-running. No template
- * work. That was the whole point of the WO.
+ * Month-agnostic: a month is its rows in traditions-daily.json.
  *
- * THE READINGS ARE APPROVED CONTENT. They are rendered VERBATIM from the JSON,
- * which parse-traditions.js proved is a verbatim copy of the GATE-2 markdown.
- * Nothing here rewrites, re-voices, or "improves" a reading.
+ * Readings render verbatim from the JSON, which parse-traditions.js checks
+ * against the source markdown.
  *
- * DOCTRINE (load-bearing — do not let this blur):
- *   The Traditions are GOVERNANCE, not theology. They bind A.A. GROUPS and the
- *   Fellowship — not individuals, and not independent businesses.
- *   Short form = pp. 561–562.  LONG FORM = pp. 563–566.  Concepts = pp. 574–575.
- *   Tradition 3's "no other affiliation" clause exists ONLY in the Long Form.
- *   That is why the Long Form is front-loaded on every page.
+ * The Long Form is front-loaded on every page: Tradition 3's "no other
+ * affiliation" clause exists only there. Short form = pp. 561–562,
+ * Long Form = pp. 563–566, Concepts = pp. 574–575.
  *
  * Usage: node scripts/build-traditions-pages.js [--dry]
  */
@@ -33,11 +27,7 @@ const ROOT = path.join(__dirname, "..");
 const SITE = "https://recoverystarts.com";
 const TODAY = "2026-07-12";
 
-// Article schema dates, PER MONTH-BATCH — not one date for all 366 pages.
-// Each month is written, gated and shipped as a batch, so the honest
-// datePublished is the day that batch went live. One shared date across the
-// whole year reads to a crawler as a single enormous content dump.
-// ADD A LINE HERE WHEN A MONTH SHIPS. Unlisted months fall back to TODAY.
+// Article schema datePublished, per month batch. Unlisted months fall back to TODAY.
 const MONTH_PUBLISHED = {
   january: "2026-10-12",
   february: "2026-10-12",
@@ -54,11 +44,9 @@ const MONTH_PUBLISHED = {
 };
 const publishedFor = (month) => MONTH_PUBLISHED[month] || TODAY;
 
-// ── Kind → badge. TWO SCHEMES, side by side. ────────────────────────────────
-// July T7 and August T8 shipped on the odd/even scheme and are not retro-fitted.
-// September T9 onward uses the five questions, run straight through.
-// "hyp" styling tints the days that work through a scenario rather than an
-// incident. It is a colour, not a disclaimer — nothing announces itself.
+// ── Kind → badge. Two schemes, side by side. ────────────────────────────────
+// July (T7) and August (T8) use the odd/even scheme; September (T9) onward
+// uses the five questions. "hyp" tints the days that work through a scenario.
 const KIND_BADGE = {
   "hypothetical":          { label: "Where it goes wrong",   cls: "hyp" },
   "the earned answer":     { label: "The earned answer",     cls: "earned" },
@@ -77,19 +65,16 @@ function kindLabelFor(d) {
   const k = KIND_BADGE[String(d.kind || "").toLowerCase()];
   return k ? k.label.toLowerCase() : String(d.kind || "");
 }
-// The hub's "How <Month> reads" paragraph. It describes the SCHEME the featured
-// month was written on — July and August ran odd/even; September onward runs the
-// five questions straight through. Describing the wrong one is a lie about the
-// page directly beneath it, so this switches on the month's actual kind tags.
+// The hub's "How <Month> reads" paragraph: describes the scheme the featured
+// month was written on, switching on the month's actual kind tags.
 function howMonthReads(month, daysForMonth) {
   const monthCap = month.charAt(0).toUpperCase() + month.slice(1);
   const kinds = new Set((daysForMonth || []).map((d) => String(d.kind || "").toLowerCase()));
   const hasFiveQ = kinds.has("the threat") || kinds.has("how it gets captured");
   const hasOddEven = kinds.has("hypothetical") || kinds.has("the earned answer");
   const CLOSE = `Anything inside quotation marks is A.A.'s own wording, printed exactly, with the source named at the foot of the reading. The explaining around it is ours — plain modern English, and scenes drawn to show how the Tradition actually plays out. You should always be able to tell which is which.</p>`;
-  // A month can carry BOTH schemes (August: days 1–11 shipped on odd/even,
-  // days 12+ on the five questions). Describing only one would be a lie about
-  // the page directly beneath this paragraph.
+  // A month can carry both schemes (August: days 1–11 odd/even, days 12+ the
+  // five questions).
   if (hasFiveQ && hasOddEven) {
     return `<p><strong>How ${monthCap} reads.</strong> The month opens day-by-day — one angle on the Tradition at a time, where groups go wrong with it and the reason it was written — then settles into five questions, run straight through: <em>what specifically threatened A.A.</em> · <em>how the founders solved it before there was a Tradition</em> · <em>where that same danger lives now</em> · <em>how a group drifts off it on its own</em> · <em>how it gets hollowed out from outside</em>. ${CLOSE}`;
   }
@@ -152,8 +137,8 @@ const FOOTER = `  <footer class="footer">
 </body>
 </html>`;
 
-// FIRST LIGHT: the reading page is a book page — paper ground (body), Literata
-// at 65ch, eyebrow wayfinding, hairline rows for indexes. Tokens only, no hex.
+// Reading page styles: paper ground (body), Literata at 65ch, eyebrow
+// wayfinding, hairline rows for indexes. Tokens only, no hex.
 const STYLE = `  <style>
     .dt-wrap { padding: clamp(2rem,5vw,4rem) 0 4rem; }
     .dt-crumb { text-align:center; font-family: var(--font-ui); font-size:0.78rem; letter-spacing:0.06em; color:var(--ink-dim); margin-bottom:1.4rem; }
@@ -281,24 +266,14 @@ ${NAV}
   <main id="main"><section class="dt-wrap"><div class="container">`;
 }
 
-// The scenario disclaimer was removed on purpose. Announcing "this is a
-// hypothetical" taught the reader nothing and read like a legal notice in the
-// middle of a reading. The prose carries it instead — an imagined scene says so
-// in its own opening words, and every scene is anchored to real A.A. history or
-// the book. The site-wide notice below still states what this project is.
-
 const DISC = `      <p class="dt-disc">Daily Traditions is an independent educational resource from Recovery Starts — <strong>not official A.A. literature</strong>, not affiliated with Alcoholics Anonymous World Services, and not medical advice. The Twelve Traditions are the property of A.A. Page references are to <em>Alcoholics Anonymous</em> (the Big Book), 4th Edition: short form ${SHORT_PAGES}, <strong>long form ${LONG_PAGES}</strong>. If you're in crisis, call or text 988 (Suicide &amp; Crisis Lifeline).</p>`;
 
 /**
- * TODAY'S READING — the hero at the top of the hub.
+ * TODAY'S READING — the hero at the top of the hub; the reading leads, the
+ * doctrine essay sits below it.
  *
- * Derick's note, and he's right: "if people show up and [the doctrine essay] is
- * the first thing they read they will leave." Someone landing here should be
- * READING, not being lectured. So the reading leads and the essay moves down.
- *
- * Rendered twice, identically: once here at build time (so no-JS users and
- * crawlers get a real reading), and once by __dtHero() in the browser (so the
- * date is actually today's). Keep the two in sync — same markup, same classes.
+ * Rendered twice with the same markup and classes: here at build time (no-JS
+ * users and crawlers) and by __dtHero() in the browser (today's date).
  */
 function todayHeroHtml(d, isToday = true) {
   const monthCap = CAP(d.month);
@@ -469,7 +444,7 @@ ${FOOTER}
   seenTitles.add(title);
   seenDescs.add(desc);
 
-  // Non-negotiables, asserted at build time.
+  // Asserted at build time.
 
   if (html.indexOf(LONG_PAGES) === -1) throw new Error("Missing Long Form page ref on " + slug);
   if (html.indexOf(SHORT_PAGES) === -1) throw new Error("Missing short form page ref on " + slug);
@@ -498,10 +473,8 @@ const T = featDays[0].tradition;
 const monthCap = CAP(featMonth);
 const shortForm = DATA.traditions[String(T)].shortForm;
 
-// Month cards — every LIVE month now has its own hub page. The card used to
-// jump to an in-page anchor, which meant the hub had to carry every month's
-// full grid and grew without bound. The id stays so old #month-august links
-// still land somewhere sensible.
+// Month cards link to each live month's hub page. The id keeps old
+// #month-august links landing on the card.
 const monthCardsFor = (current) => MONTHS.map((m, i) => {
   const n = i + 1;
   const live = liveMonths.has(m);

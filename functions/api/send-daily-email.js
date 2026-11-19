@@ -6,8 +6,7 @@
 //   date=<month>-<day> build for that day instead of today (e.g. date=march-3). Dry runs only.
 //   test=1             create the email as a Buttondown draft and send it to the newsletter owner's
 //                      address only (Buttondown's send-draft route); never reaches subscribers
-//   note=<text>        a plain sentence or two put at the top of the email (used once, for the
-//                      "we're back" send on 2026-11)
+//   note=<text>        a plain sentence or two put at the top of the email
 //
 // If one page fails to load, the other one goes out alone. If both fail, nothing is sent (500).
 // Tradition text is printed exactly as the Daily Tradition page prints it: no wording of ours is added
@@ -23,9 +22,7 @@ export async function onRequestGet(context) {
   const expectedToken = context.env.DAILY_EMAIL_TOKEN;
 
   const auth = context.request.headers.get('Authorization') || '';
-  // Header only. `?token=` was kept one week after the switch (2026-11-10) and is gone since the
-  // 2026-11-19 security sweep: a token in a URL lands in logs and history. The deployed
-  // daily-email-cron Worker was read through the Cloudflare API that day and sends the header.
+  // Header only: a token in a URL lands in logs and history.
   const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
 
   if (!expectedToken || !token || !safeEqual(token, expectedToken)) {
@@ -159,9 +156,8 @@ export async function onRequestGet(context) {
   }
 }
 
-// Pages are read from this deployment's own static assets (env.ASSETS), not over the network:
-// a network self-fetch goes through the zone's WAF and came back 403 from a Pages Function
-// (2026-11-10). The network fetch stays as the fallback when ASSETS isn't there.
+// Pages are read from this deployment's own static assets (env.ASSETS): a network self-fetch goes through the
+// zone's WAF, which answers a Pages Function 403. The network fetch is the fallback when ASSETS isn't there.
 let ASSETS = null;
 async function fetchPage(pageUrl) {
   const errs = [];
@@ -201,7 +197,7 @@ async function getTradition(slug) {
   const pageUrl = `${SITE}/daily-tradition/${slug}/`;
   const html = await fetchPage(pageUrl);
 
-  // Structure read from the live pages (2026-11-10): .dt-kicker "Tradition 11 · November 10",
+  // Page structure: .dt-kicker "Tradition 11 · November 10",
   // h1.dt-title, .dt-reading <p>s, .dt-sit <p>, p.dt-grounded "Grounded in: …",
   // .dt-tradition > h2 + blockquote (the Tradition's own wording).
   const kicker = stripHtml(extractBetween(html, '<div class="dt-kicker">', '</div>') || '');

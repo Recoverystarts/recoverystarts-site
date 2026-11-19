@@ -1,12 +1,7 @@
-// restamp.mjs — give every BUILT language page the current 🌐 and hreflang alternates without rebuilding its text
-// (wave jalang1, 2026-11-01). node scripts/i18n/restamp.mjs [lang …]   (default: every built language)
-//
-// Why: build.mjs <lang> rebuilds a language from its translation files and drops any page whose English has changed
-// since it was translated. On 2026-11-01 main's English was ~184k words ahead of every language (#444/#448), so
-// rebuilding es…hi to add 日本語 to their 🌐 would have taken their (older, live) versions of 97 pages off the site.
-// This touches only the 🌐 (globe.mjs stampGlobe) and the <link rel="alternate" hreflang> lines, and takes which
-// languages a page exists in from the folders on disk, the same rule build.mjs now uses. Run it after building a new
-// language. Running it twice changes nothing.
+// restamp.mjs — give every built language page the current 🌐 and hreflang alternates without rebuilding its text.
+// node scripts/i18n/restamp.mjs [lang …]   (default: every built language)
+// Touches only the 🌐 (globe.mjs stampGlobe) and the <link rel="alternate" hreflang> lines, taking which languages a
+// page exists in from the folders on disk, so older translated pages are kept. Running it twice changes nothing.
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT, I18N, LANGS, tagOf, readJson } from "./lib.mjs";

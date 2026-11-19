@@ -1,5 +1,5 @@
-// indexnow.mjs — tell IndexNow engines (Bing, Yandex, Seznam, Naver…; Google doesn't take IndexNow) about new and changed
-// pages (wave tr3 S2). Key: .indexnow-key, served at /<key>.txt (scripts/submit.ps1 uses the same).
+// indexnow.mjs — tell IndexNow engines (Bing, Yandex, Seznam, Naver…) about new and changed pages.
+// Key: .indexnow-key, served at /<key>.txt.
 // node scripts/i18n/indexnow.mjs fr es pt      every URL in sitemap-fr.xml, sitemap-es.xml, sitemap-pt.xml
 // node scripts/i18n/indexnow.mjs --urls a b …   just these
 // node scripts/i18n/indexnow.mjs … --dry        print what would be sent

@@ -1,15 +1,10 @@
-// score.mjs — compare the runners' translation files side by side, without reading Spanish (wave tr1, 2026-10-11).
+// score.mjs — compare translation files batch by batch with the same measurements, to find the segments a person
+// should read first. None of these numbers say a translation is good.
 // node scripts/i18n/score.mjs es                 the files in i18n/es/ here
-// node scripts/i18n/score.mjs es --branches      every pushed origin/claude/tr1-* branch's files, no merging needed
-// node scripts/i18n/score.mjs es --branches --out i18n/reports/score.json   + the flagged segments, for a checker
-// node scripts/i18n/score.mjs pt --branches      the same for Portuguese: origin/claude/tr2-* (a language's wave is in
-//                                                WAVE below; --wave <name> reads another wave's branches)
-// node scripts/i18n/score.mjs es --branches --wave tr3   a later wave's top-up lines: only files a branch changed from
-//                                                where it left this branch (HEAD) are read, so a French line's copy of es/ isn't scored
+// node scripts/i18n/score.mjs es --branches      every pushed origin/claude/<wave>-* branch's files (WAVE below;
+//                                                --wave <name> reads another set; only files a branch changed are read)
+// node scripts/i18n/score.mjs es --branches --out i18n/reports/score.json   + the flagged segments
 //
-// Every batch gets the same measurements, so a window that ran at a lower effort (or a different model) shows up as a
-// row that's worse than its neighbours. None of these numbers say a translation is good; they find the places a person
-// (a checker) should read first:
 //   done      ids translated / ids in the batch (i18n/batches/<batch>.json)
 //   tags      placeholders that don't match the English (<0>…</0>, <1/>): would break a link or a bold on the page
 //   same      segments of 4+ words left identical to the English: not translated
@@ -19,56 +14,56 @@
 //   glossary  of the recovery words the glossary fixes (Big Book, sponsor, Higher Power, amends …), how often the Spanish
 //             uses the glossary's word: low = drifting vocabulary, which is what readers notice across pages
 //   usted     es: "usted/ustedes" forms: the site speaks as "tú" (a few are fine in quotes; many means the wrong register)
-//   reg       pt (wave tr2): the column "usted" counts the wrong register for Brazil: "tu"/"vós" forms ("tu és",
+//   reg       pt: the column "usted" counts the wrong register for Brazil: "tu"/"vós" forms ("tu és",
 //             "teu", "vosso", "contigo") and European-Portuguese words and grammar ("facto", "telemóvel", "equipa",
 //             "está a fazer"). The site speaks Brazilian Portuguese as "você".
-//             fr (wave tr3): "tu"/"toi"/"ton"/"ta"/"tes"/"t'" forms — the site says "vous" (a few are fine inside a quote).
-//             fa (wave tr4): Arabic ي/ك for Persian ی/ک; می/نمی written apart or run together without the half-space
+//             fr: "tu"/"toi"/"ton"/"ta"/"tes"/"t'" forms — the site says "vous" (a few are fine inside a quote).
+//             fa: Arabic ي/ك for Persian ی/ک; می/نمی written apart or run together without the half-space
 //             (U+200C); "تو"/"تویی"/"خودت" where the site says «شما»; Latin , ; ? in Persian prose (، ؛ ؟).
-//             pl (wave pl1): the site says "ty" in lower case, as Polish A.A.'s Big Book does (i18n/pl/GLOSSARY.md):
+//             pl: the site says "ty" in lower case, as Polish A.A.'s Big Book does (i18n/pl/GLOSSARY.md):
 //             Pan/Pani/Państwo and "wy" forms (możecie, wasz) are the wrong register; ASCII " or English “ in prose
 //             (Polish quotes „…”); and stripped diacritics — "sie", "moze", "ktory", "zycie" for się, może, który, życie,
 //             or a long segment with no ą ć ę ł ń ó ś ź ż at all. Stripped diacritics also cost score (×2, like English words).
-//             de (wave de1): the site says «Sie», as German-speaking A.A.'s Big Book does (i18n/de/GLOSSARY.md): du/dich/dir/
+//             de: the site says «Sie», as German-speaking A.A.'s Big Book does (i18n/de/GLOSSARY.md): du/dich/dir/
 //             dein/euch/euer forms are the wrong register (fine inside a quote; the flag says which); ASCII " or English “…”
 //             in prose (German quotes „…“); Swiss «ss» where standard German writes ß (gross, Strasse, heisst, weiss,
 //             ausser…) and old «daß/muß»; umlauts written ae/oe/ue (fuer, ueber, koennen); a sentence starting lower case.
 //             Each costs score (×2, like English words).
-//             sv (wave svnl1): the reader is «du», lower case (i18n/sv/GLOSSARY.md): ni/Ni/er/ert/era for the reader, and Du/Dig/Din
+//             sv: the reader is «du», lower case (i18n/sv/GLOSSARY.md): ni/Ni/er/ert/era for the reader, and Du/Dig/Din
 //             capitalised mid-sentence (fine in a prayer to God; the flag says which), are the wrong register; ASCII " or “ „ « »
 //             in prose (Swedish quotes ”…”); stripped å ä ö («ar», «pa», «nar», «fran», «mote» for är, på, när, från, möte), or a
 //             long segment with no å ä ö at all.
-//             nl (wave svnl1): the reader is «je/jij», lower case (i18n/nl/GLOSSARY.md): u/uw and «jullie» for the reader are the
+//             nl: the reader is «je/jij», lower case (i18n/nl/GLOSSARY.md): u/uw and «jullie» for the reader are the
 //             wrong register (U/Uw for God stay); ASCII " or „ « » in prose (Dutch quotes “…”); a dropped trema («ideeen»,
 //             «financiele», «geinteresseerd») or letters Dutch doesn't use (ä ö ü å ß ñ). Both cost score (×2, like English words).
-//             hi (wave hi1): the reader is «आप», plural, polite (i18n/hi/GLOSSARY.md): तुम/तू/तेरा/तुम्हारा/तुझे… are the wrong
+//             hi: the reader is «आप», plural, polite (i18n/hi/GLOSSARY.md): तुम/तू/तेरा/तुम्हारा/तुझे… are the wrong
 //             register; ASCII " or „ « » in prose (Hindi quotes “…”); Devanagari digits ०–९ (Hindi here writes Latin digits);
 //             a Hindi sentence ending in a Latin "." instead of the danda «।» (initials and पृ./डॉ. are fine); English left in
 //             (two or more English filler words, or five Latin words in a row, outside a “quoted” title). Each costs score (×2).
-//             ja (wave jalang1): です・ます prose (i18n/ja/GLOSSARY.md); the fixed texts (Steps, Traditions, prayers, Big Book
+//             ja: です・ます prose (i18n/ja/GLOSSARY.md); the fixed texts (Steps, Traditions, prayers, Big Book
 //             quotes) keep A.A. Japan's or the glossary's own form, so a plain «だ。/である。» counts only outside 「」 in a segment
 //             that is otherwise です・ます (mixed register).
 //             Flags: 君/お前/貴様 for the reader; ASCII or Western quote marks in prose (Japanese quotes 「」, 『』 inside or for
 //             titles); full-width digits ０–９ or letters (write Latin 0–9); a Latin "." or "," after Japanese text (。、);
 //             English left in (two English filler words, or five Latin words in a row, outside 「」『』“”). Each costs score (×2).
-//             ru (wave rulang1): «вы» lower case (i18n/ru/GLOSSARY.md, PREP-NOTES.md); «ёлочки» with „лапки“ inside (a „…“ outside «» is flagged). Flags, outside «»:
+//             ru: «вы» lower case (i18n/ru/GLOSSARY.md); «ёлочки» with „лапки“ inside (a „…“ outside «» is flagged). Flags, outside «»:
 //             ты-forms for the reader (ты/тебя/тебе/твой…); «Вы/Вас/Вам/Ваш» capitalised mid-sentence; ASCII " or ” or a “ with no „
 //             before it; a Latin letter inside a Cyrillic word (the invisible typo: Latin a/e/o/p/c/x/y); «A.A.»/«AA» in Latin
 //             (Russian writes «АА»; English names like "A.A. World Services" are fine, so it's a flag to read, not a ruling);
 //             «спонсор» (A.A. Russia says «наставник»); English left in (two English filler words or five Latin words in a row
 //             outside «» and “”). Each costs score (×2). Number words count as numbers («Двенадцать шагов», «четвёртое издание»).
-//             ar (wave arlang1): MSA, «أنت» (i18n/ar/GLOSSARY.md). Flags: Persian ی ک ۀ or a ZWNJ (fa's letters, wrong for ar);
+//             ar: MSA, «أنت» (i18n/ar/GLOSSARY.md). Flags: Persian ی ک ۀ or a ZWNJ (fa's letters, wrong for ar);
 //             Arabic-Indic ٠–٩ or Persian ۰–۹ digits (ar writes Western 0–9); Latin , ; ? between Arabic words (، ؛ ؟); ASCII or
 //             English quotes outside «»; «كفيل/الكفالة» for sponsor (the Gulf's kafala word; the site says «المرشد»); a 988 segment
 //             that offers text or doesn't name the US (the US/Canada split); English left in. Each costs score (×2).
-//             tr (wave trlang1): siz, lower case mid-sentence; “…” quotes and ’ (i18n/tr/GLOSSARY.md). Flags, outside “…”: «sen»
-//             forms (sen, seni, sana, senin …) addressed to the reader (a prayer to God rightly says «sana»: read it, don't fix it);
+//             tr: siz, lower case mid-sentence; “…” quotes and ’ (i18n/tr/GLOSSARY.md). Flags, outside “…”: «sen»
+//             forms (sen, seni, sana, senin …) addressed to the reader (a prayer to God rightly says «sana»);
 //             «Siz/Size/Sizin» capitalised mid-sentence; «adım» as a Step's name («12 adım», «Adım 4»); ASCII-ized words
 //             («Adsiz», «ayiklik», «Turkiye»); an ASCII ' before a suffix (A.A.'nın → A.A.’nın); «…» or ASCII "…" quotes;
 //             «sponsor» (A.A. Türkiye says «rehber»); «Allah» (the site says «Tanrı»); a 988 segment that offers text or
 //             doesn't say ABD. A time «19:00» counts as the English "7:00 pm". Each costs score (×2).
 //             Length: Japanese runs about a third of the English in characters, so "short" for ja is under 18%, not 60%.
-// score = 100 minus weighted problems per 100 segments, minus glossary drift. Compare rows; don't read it as a grade.
+// score = 100 minus weighted problems per 100 segments, minus glossary drift; a comparison between rows, not a grade.
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
@@ -78,7 +73,7 @@ const args = process.argv.slice(2);
 const lang = args[0];
 if (!lang || !LANGS[lang] || lang === "en") { console.error("usage: score.mjs <lang> [--branches] [--out file]"); process.exit(2); }
 const useBranches = args.includes("--branches");
-// each language's wave: its runners push origin/claude/<wave>-<line>
+// each language's translation branches: origin/claude/<wave>-<line>
 const WAVE = { es: "tr1", pt: "tr2", fr: "tr3", fa: "tr4", pl: "pl1", de: "de1", sv: "svnl1", nl: "svnl1", hi: "hi1", ja: "jalang1", ru: "rulang1", ar: "arlang1", tr: "trlang1" };
 const wave = args.indexOf("--wave") > 0 ? args[args.indexOf("--wave") + 1] : WAVE[lang] ?? "tr1";
 const pre = `claude/${wave}-`;
@@ -98,7 +93,7 @@ if (useBranches) {
       if (!n.endsWith(".json") || n.startsWith("_") || n === "core.json") continue;
       const batch = n.slice(0, -5);
       if (!fs.existsSync(path.join(I18N, "batches", `${batch}.json`))) continue;
-      // a file the branch didn't change (it came with the branch it started from) isn't this line's work
+      // skip files the branch didn't change from where it started
       try { const base = git("merge-base", ref, "HEAD").trim(); if (git("rev-parse", `${ref}:i18n/${lang}/${n}`).trim() === quiet("rev-parse", `${base}:i18n/${lang}/${n}`).trim()) continue; } catch {}
       try { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: JSON.parse(git("show", `${ref}:i18n/${lang}/${n}`)) }); }
       catch (e) { files.push({ label: ref.slice(`origin/${pre}`.length), batch, json: null, err: "not valid JSON" }); }
@@ -325,7 +320,7 @@ GLOSS_BY.nl = [
   [/\bmeetings?\b/i, /meeting|bijeenkomst/i, "meeting"],
   [/\brecovery\b/, /herstel|Recovery/i, "recovery"],
 ];
-// Arabic (i18n/ar/GLOSSARY.md; wave arlang1)
+// Arabic (i18n/ar/GLOSSARY.md)
 GLOSS_BY.ar = [
   [/\bBig Book\b/i, /الكتاب الكبير/, "Big Book"],
   [/\bsponsor(s|ed|ing|ship)?\b/i, /مرشد|المرشد|إرشاد|الإرشاد|مرشدك|مرشدي/, "sponsor"],
@@ -339,7 +334,7 @@ GLOSS_BY.ar = [
   [/\bpowerless\b/i, /عاجز/, "powerless"],
   [/\bgroup conscience\b/i, /ضمير المجموعة|ضمير جماعت/, "group conscience"],
 ];
-// Turkish (i18n/tr/GLOSSARY.md; wave trlang1)
+// Turkish (i18n/tr/GLOSSARY.md)
 GLOSS_BY.tr = [
   [/\bBig Book\b/i, /Büyük Kitap/, "Big Book"],
   [/\bsponsor(s|ed|ing|ship)?\b/i, /rehber/i, "sponsor"],
@@ -355,12 +350,12 @@ GLOSS_BY.tr = [
   [/\bSteps?\b/, /[Bb]asamak/, "Step"],
 ];
 const GLOSS = GLOSS_BY[lang] ?? [];
-// sv: å ä ö stripped (wave svnl1)
+// sv: å ä ö stripped
 const SV_BARE = /(?<!\p{L})(?:ar|pa|nar|fran|aven|ocksa|maste|gora|gor|mote|moten|motet|hjalp|hjalpa|manniska|manniskor|tva|sjalv|sjalva|forsta|overallt|bon|langre|harifran|dar|varld|nagon|nagot|nagra|fragor|fraga|ga|gar|sag|sager|lasa|lasning|kanner|kanna|sjalvforsorjande|aterfall|nastan|battre)(?!\p{L})/gu;
 const SV_DIA = /[åäöÅÄÖ]/;
-// nl: a dropped trema, or letters Dutch doesn't use (wave svnl1)
+// nl: a dropped trema, or letters Dutch doesn't use
 const NL_BAD = /(?<!\p{L})(?:ideeen|financiele|financielen|geinteresseerd\p{L}*|beinvloed\p{L}*|creeren|creeer\p{L}*|reeel|reele|naieve?|geillustreerd\p{L}*|zeeen|knieen|kopieren|kopieer\p{L}*|egoisme|egoist\p{L}*|egoistisch\p{L}*|coordin\p{L}*)(?!\p{L})|[äöüåßñÄÖÜÅ]/gu;
-// hi: Devanagari digits, a Latin full stop after a Hindi word (not an initial or an abbreviation), English left in (wave hi1)
+// hi: Devanagari digits, a Latin full stop after a Hindi word (not an initial or an abbreviation), English left in
 const HI_DIG = /[०-९]/u;
 const HI_ABBR = new Set("पृ डॉ श्री सं ए बी सी डी ई एफ़ एफ जी एच आई जे के एल एम एन ओ पी क्यू आर एस टी यू वी डब्ल्यू एक्स वाई ज़ेड जेड".split(" "));
 const HI_DOT = (s) => [...s.matchAll(/([\u0900-\u097F]+)\.(?=\s|$)/gu)].map((m) => m[1]).filter((w) => !HI_ABBR.has(w));
@@ -369,7 +364,7 @@ const hiEnglish = (s) => { const u = s.replace(/“[^”]*”|‘[^’]*’/g, "
 // hi: a number written as a word counts too («बारह चरण» for "12 Steps", «चौथा संस्करण», «20 लाख» for 2 million, «चौबीसों घंटे» for 24/7)
 const HI_NUM = [["एक|पहला|पहली|पहले", "1"], ["दो|दूसरा|दूसरी|दूसरे", "2"], ["तीन|तीसरा|तीसरी|तीसरे", "3"], ["चार|चौथा|चौथी|चौथे", "4"], ["पाँच|पांच|पाँचवाँ|पाँचवीं|पाँचवें", "5"], ["छह|छः|छठा|छठी|छठे", "6"], ["सात|सातवाँ|सातवीं|सातवें", "7"], ["आठ|आठवाँ|आठवीं|आठवें", "8"], ["नौ|नौवाँ|नौवीं|नौवें", "9"], ["दस|दसवाँ|दसवीं|दसवें", "10"], ["ग्यारह|ग्यारहवाँ|ग्यारहवीं|ग्यारहवें", "11"], ["बारह|बारहवाँ|बारहवीं|बारहवें", "12"]];
 const hiWords = (s) => { const out = []; for (const [w, n] of HI_NUM) if (new RegExp(`(?<![\\p{L}\\p{M}])(?:${w})(?![\\p{L}\\p{M}])`, "u").test(s)) out.push(n); for (const m of s.matchAll(/(\d+(?:[.,]\d+)?)\s*(लाख|करोड़)/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (m[2] === "लाख" ? 1e5 : 1e7); out.push(String(v), String(v / 1e6)); } if (/चौबीसों घंटे|24 घंटे|दिन-रात|हर समय/u.test(s)) out.push("24", "7"); return out; };
-// ja: full-width digits/letters, a Latin "." or "," after Japanese, English left in, a plain-form sentence end outside 「」 (wave jalang1)
+// ja: full-width digits/letters, a Latin "." or "," after Japanese, English left in, a plain-form sentence end outside 「」
 const JA = "\\p{sc=Han}\\p{sc=Hiragana}\\p{sc=Katakana}ー々";
 const JA_WIDE = /[０-９Ａ-Ｚａ-ｚ]/u;
 const JA_PUNCT = new RegExp(`[${JA}][.,](?=\\s|$|[${JA}])`, "u");
@@ -391,7 +386,7 @@ const TR_SEN = /(?<!\p{L})(?:sen|Sen|seni|Seni|sana|Sana|senin|Senin|sende|sende
 const TR_SIZ = /(?<=[\p{Ll},;:—–] )(?:Siz|Size|Sizi|Sizin|Sizde|Sizden|Sizinle)(?!\p{L})/u;
 const TR_ADIM = /(?:(?<!\p{L})(?:on iki|On İki|12|\d+\.)\s?[Aa]dım)|(?:(?<!\p{L})[Aa]dım(?:lar)?\s\d)/u;
 const TR_ASCII = /(?<!\p{L})(?:Adsiz|adsiz|ayiklik\p{L}*|Ayiklik\p{L}*|Buyuk|buyuk|Turkce|Türkce|Turkiye|Tanri|Tanriya|Tanrinin|toplanti|toplantilar\p{L}*|Toplanti\p{L}*|degil|icin|Icin|cok|Cok|simdi|yardim|Yardim|guc|Guc|gun|bugun|Bugun)(?!\p{L})/u;
-// ru: register, quotes, mixed-script words, Latin A.A., «спонсор», English left in (wave rulang1)
+// ru: register, quotes, mixed-script words, Latin A.A., «спонсор», English left in
 const RU_OUT = (s) => s.replace(/«[^»]*»|„[^“]*“/gu, " ");
 const RU_TY = /(?<!\p{L})(?:ты|Ты|тебя|Тебя|тебе|Тебе|тобой|Тобой|твой|Твой|твоя|Твоя|твоё|Твоё|твое|твои|Твои|твоего|твоей|твоему|твоим|твоих|твою|сам себе)(?!\p{L})/u;
 const RU_VY = /(?<=[\p{Ll},;:—–] )(?:Вы|Вас|Вам|Вами|Ваш|Ваша|Ваше|Ваши|Вашего|Вашей|Вашему|Вашим|Ваших|Вашу)(?!\p{L})/u;
@@ -401,7 +396,7 @@ const ruQuote = (s) => /["”]/.test(s) || /“/.test(s.replace(/„[^“]*“/g
 const ruEnglish = (s) => { const u = RU_OUT(s).replace(/“[^”]*”/g, " "), w = u.match(/[A-Za-z][A-Za-z'’-]*/g) ?? [], fill = w.filter((x) => HI_FILL.has(x.toLowerCase())); const run = /(?:[A-Za-z]*[a-z][A-Za-z'’-]*[\s,]+){4}[A-Za-z]*[a-z]/.test(u); return fill.length >= 2 || run ? (fill.length >= 2 ? fill : w).slice(0, 4) : []; };
 const RU_NUM = [["од(?:ин|на|но|ного|ной|ному|ним|ну)|перв\\p{L}+", "1"], ["дв(?:а|е|ух|ум|умя)|втор\\p{L}+", "2"], ["тр(?:и|ех|ёх|ем|ём|емя|ёмя)|трет\\p{L}+", "3"], ["четыр(?:е|ех|ёх|ем|ём|ьмя)|четв[её]рт\\p{L}+", "4"], ["пят(?:ь|и|ью)|пят\\p{L}*[ыо][йего]\\p{L}*", "5"], ["шест(?:ь|и|ью)|шест\\p{L}*[ыо][йего]\\p{L}*", "6"], ["сем(?:ь|и|ью)|седьм\\p{L}+", "7"], ["вос[её]м\\p{L}*|восьм\\p{L}+", "8"], ["девят(?:ь|и|ью)|девят[ыо]\\p{L}+", "9"], ["десят(?:ь|и|ью)|десят[ыо]\\p{L}+", "10"], ["одиннадцат\\p{L}+", "11"], ["двенадцат\\p{L}+", "12"]];
 const ruWords = (s) => { const out = []; for (const [w, n] of RU_NUM) if (new RegExp(`(?<!\\p{L})(?:${w})(?!\\p{L})`, "iu").test(s)) out.push(n); for (const m of s.matchAll(/(\d+(?:[.,]\d+)?)\s*(тыс\.|тысяч\p{L}*|млн|миллион\p{L}*)/gu)) { const v = parseFloat(m[1].replace(",", ".")) * (/^т/.test(m[2]) ? 1e3 : 1e6); out.push(String(v), String(v / 1e6)); } if (/круглосуточн|24\/7|24 часа/u.test(s)) out.push("24", "7"); return out; };
-// de: Swiss/old spellings, umlauts written out, a sentence starting lower case (wave de1)
+// de: Swiss/old spellings, umlauts written out, a sentence starting lower case
 const DE_SS = /(?<!\p{L})(?:gross|grosse[nmrs]?|grösse|grösser\p{L}*|grösst\p{L}*|Grösse|Strasse[n]?|heisst|heissen|weiss|weisst|ausser|ausserhalb|äussere?\p{L}*|schliesslich|Fuss|Füsse|Mass|massgeblich|gemäss|bloss|draussen|Spass|Gruss|grüssen|süss|liess|hiess|stiess|fliessen|beissen|reissen|schiessen|Bussgeld|daß|muß|mußte|läßt|faßt|Schluß|bißchen|Mißbrauch)(?!\p{L})/gu;
 const DE_UML = /(?<!\p{L})(?:fuer|ueber\p{L}*|Ueber\p{L}*|koenn\p{L}*|moeglich\p{L}*|Moeglich\p{L}*|muess\p{L}*|waere\p{L}*|haette\p{L}*|naechst\p{L}*|taeglich\p{L}*|aender\p{L}*|Aender\p{L}*|Loesung\p{L}*|loes\p{L}*|Gefuehl\p{L}*|fuehl\p{L}*|hoer\p{L}*|schoen\p{L}*|Buecher|Maenner|Fruehling|frueh\p{L}*|spaet\p{L}*|Naechte|natuerlich|wuerde\p{L}*|duerf\p{L}*|moecht\p{L}*|Rueck\p{L}*|rueck\p{L}*|Schluessel|Naehe|Faehigkeit\p{L}*|Gespraech\p{L}*|Nuechtern\p{L}*|nuechtern\p{L}*)(?!\p{L})/gu;
 const DE_LOW = /(?<!(?:^|[\s.(])(?:\p{L}|bzw|ca|vgl|ggf|usw|inkl|evtl|zzgl|bspw|Nr|Dr|S|St))[.!?]\s+[„‚(]?(?!(?:z|d|u|o|s)\.|(?:x{0,3}(?:ix|iv|v?i{0,3})){1,6}(?![a-zäöü]))[a-zäöü][\p{L}]{2,}/u;
@@ -441,7 +436,7 @@ for (const f of files) {
     const tn = new Set([...nums(t), ...(lang === "fa" ? faWords(t) : []), ...(lang === "pl" ? plWords(strip(t)) : []), ...(lang === "de" ? deWords(strip(t)) : []), ...(lang === "sv" ? svWords(strip(t)) : []), ...(lang === "nl" ? nlWords(strip(t)) : []), ...(lang === "hi" ? hiWords(strip(t)) : []), ...(lang === "ja" ? jaWords(strip(t)) : []), ...(lang === "ru" ? ruWords(strip(t)) : []), ...(lang === "ar" ? arWords(strip(t)) : []), ...(lang === "tr" ? trWords(strip(t)) : [])]); const miss = nums(e).filter((n) => !tn.has(n));
     if (miss.length) { r.numbers++; flag(id, `number missing: ${miss.join(", ")}`); }
     for (const [ep, sp, name] of GLOSS) if (ep.test(strip(e))) { r.gAll++; if (sp.test(t)) r.gHit++; else flag(id, `glossary: "${name}"`); }
-    // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose (pl1 review)
+    // the share bar's segment is live JS (this.textContent='…'): its quotes and its missing diacritics are code, not prose
     const code = /textContent|return false/.test(t);
     const reg = code ? 0 : (strip(t).match(REG[lang] ?? /(?!)/g) ?? []).length;
     if (reg && lang !== "es") flag(id, `register: ${(strip(t).match(REG[lang]) ?? []).slice(0, 3).join(", ")}`);
@@ -480,8 +475,8 @@ for (const f of files) {
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "ar" && !code) {
-      // ar (wave arlang1): Arabic letters only, Western digits, Arabic punctuation, «…» quotes, «المرشد» for sponsor, 988 said
-      // with the US/Canada split (i18n/ar/GLOSSARY.md, CHECKED-ar). Never the fa rules: fa wants ی ک and Persian digits.
+      // ar: Arabic letters only, Western digits, Arabic punctuation, «…» quotes, «المرشد» for sponsor, 988 said
+      // with the US/Canada split (i18n/ar/GLOSSARY.md). (fa's rules differ: ی ک and Persian digits.)
       const st = strip(t), o = RU_OUT(st);
       const fa = /[\u06cc\u06a9\u06c0\u200c]/.exec(st), dig = /[٠-٩۰-۹]/.exec(st), punct = /(?<=\p{Script=Arabic})\s?[,;?](?=\s?\p{Script=Arabic})/u.exec(st), q = /["“”]/.test(o);
       const kafil = /(?<!\p{L})(?:ال|و|ب|ل|لل|ف)?(?:كفيل|كفلاء|مكفول|كفالة|الكفالة)\p{L}*/u.exec(st);
@@ -494,7 +489,7 @@ for (const f of files) {
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "tr" && !code) {
-      // tr (wave trlang1): siz, “…” and ’, «basamak», «rehber», «Tanrı», 988 by call with the US apart (i18n/tr/GLOSSARY.md, CHECKED-tr)
+      // tr: siz, “…” and ’, «basamak», «rehber», «Tanrı», 988 by call with the US apart (i18n/tr/GLOSSARY.md)
       const st = strip(t), o = TR_OUT(st), sen = TR_SEN.exec(o), siz = TR_SIZ.exec(o), adim = TR_ADIM.exec(st), asc = TR_ASCII.exec(st);
       const apo = /[A-Za-z0-9.]'(?=\p{Ll})/u.exec(st), q = /[«»"]/.test(o), sp = /sponsor/iu.exec(o), allah = /(?<!\p{L})Allah/u.exec(o);
       const c988 = /(?<!\d)988(?!\d)/.test(strip(e)) && /988/.test(st) && (/mesaj at|kısa mesaj|SMS|metin gönder|yazışarak/iu.test(st) || !/ABD/.test(st));

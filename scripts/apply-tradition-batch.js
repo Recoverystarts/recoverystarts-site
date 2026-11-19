@@ -1,15 +1,12 @@
 #!/usr/bin/env node
 /**
- * apply-tradition-batch.js — swap whole readings into BOTH source files.
+ * apply-tradition-batch.js — swaps whole readings into both source files.
  *
  * A batch file holds one or more complete readings in the source format
  * (### Month D — "Title" · *(kind)* / body / *Sit with:* / *Grounded in:*).
  * Each reading replaces the block with the same Month+Day in
- * data/traditions-source.md AND data/readings-source.md, byte-identical, so
- * the two never drift. Title may change (slugs are date-based); the caller
- * re-renders pages afterwards. Then run:
- *   node scripts/parse-traditions.js && node scripts/parse-traditions.js --verify
- *   node scripts/audit-readings.js
+ * data/traditions-source.md and data/readings-source.md, byte-identical.
+ * Pages are not re-rendered here.
  *
  * Usage: node scripts/apply-tradition-batch.js <batch.md>
  */

@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /ru/ pages. Our English → Russian (wave rulang1, Super, 2026-11-01). The Steps are A.A. Russia's (aarussia.ru /12shagov; i18n/ru/GLOSSARY.md, by script); Tradition 3's long-form clause, the chapter and appendix titles and the rest are ours (glossary). The Big Book search reads English only, so the no-results line asks for English words.",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /ru/ pages. Our English → Russian. The Steps are A.A. Russia's (aarussia.ru /12shagov; i18n/ru/GLOSSARY.md, by script); Tradition 3's long-form clause, the chapter and appendix titles and the rest are ours (glossary). The Big Book search reads English only, so the no-results line asks for English words.",
  "p": {
   "Donate": "Пожертвовать",
   "Donate — keep it free": "Поддержать бесплатный сайт",

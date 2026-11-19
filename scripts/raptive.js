@@ -1,27 +1,19 @@
 #!/usr/bin/env node
 /**
- * raptive.js — Raptive's head tag on every page, the health tag on the reading pages, and no AdSense left
- * (Code window raptive-install, 2026-11-12; claude-home: CEO raptive-install's brief).
+ * raptive.js — Raptive's head tag on every page, the health tag on the reading pages, and no AdSense left.
  *
- * recoverystarts.com moves from AdSense to Raptive. For every HTML page a person gets, in every language:
- *   1. Raptive's head tag (TAG below), inline in <head>, exactly as Raptive sent it. The agreement forbids changing
- *      their code: no condition around it, no rewrite. Every token stays, data-cfasync="false" included (it keeps
- *      Cloudflare's Rocket Loader off it). It goes in right after <meta charset>, so the charset stays in the first
- *      1024 bytes and the ad script starts as early as Raptive wants ("needs to be placed in the <head>", 11-09).
- *   2. <meta name="health-directed-treatment" content="true"> on the reading pages only (HEALTH below), Derick
- *      11-12 14:26 "add iyt": a visitor to these pages can fairly be inferred to be affected by addiction, so Raptive
- *      serves only non-personalized ads there to visitors from CA, CT, UT, VA and WA. Not on home, /download/,
- *      /privacy/, /add-meeting/, /start-here/, /about/ or the 404.
- *   3. AdSense out: the old `<script src="/ads.js" defer></script>` goes (the file /ads.js is deleted with it).
+ * For every HTML page, in every language:
+ *   1. Raptive's head tag (TAG below), inline in <head>, exactly as Raptive sent it (data-cfasync="false" keeps
+ *      Rocket Loader off it), right after <meta charset> so the charset stays in the first 1024 bytes.
+ *   2. <meta name="health-directed-treatment" content="true"> on the reading pages only (HEALTH below): Raptive then
+ *      serves only non-personalized ads there to visitors from CA, CT, UT, VA and WA.
+ *   3. the old `<script src="/ads.js" defer></script>` removed.
  *
- * It is idempotent: a page that already has the tag keeps one copy. fix-nav.js calls stamp() on every page (it used
- * to add /ads.js there), so a page any generator writes gets the tag on the next fix-nav run; the language builds
- * (scripts/i18n/build.mjs) copy the English page's head, tag included.
+ * Idempotent. fix-nav.js calls stamp() on every page; the language builds copy the English head, tag included.
  *
  * Usage: node scripts/raptive.js           stamp every page
  *        node scripts/raptive.js --check   change nothing; exit 1 if any page is wrong (tag missing, twice or altered;
  *                                          health tag where it shouldn't be or missing; AdSense left)
- * Way back: git revert the commit that added this file (the AdSense code and /ads.txt come back with it).
  */
 const fs = require("fs");
 const path = require("path");

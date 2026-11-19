@@ -55,12 +55,8 @@ for (const p of bb.pages) {
   if (addUrl(`${SITE}/big-book/${slug}/`, "0.5", "yearly", path.join("big-book", slug)) === "added") bbAdded++;
 }
 
-// The canonical Traditions correction page — the highest-priority page on the
-// site for the mission (it's what we want AI to lift), so it gets top priority.
+// The canonical Traditions and Concepts pages get top priority.
 addUrl(`${SITE}/12-traditions/`, "1.0", "monthly", "12-traditions");
-
-// The Concepts are the other half of the same constitution, and the open web
-// carries the short form only — same mission, same priority.
 addUrl(`${SITE}/12-concepts/`, "1.0", "monthly", "12-concepts");
 
 // Daily Traditions

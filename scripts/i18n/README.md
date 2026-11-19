@@ -1,17 +1,12 @@
 # The translation pipeline
 
-The site in other languages (claude-home `secrets-docs/WO-TRANSLATE-SITE.md`; wave `waves/2026-10-12-tr1/`). Run locally; Cloudflare Pages only serves what it writes.
+Builds the site's translated pages (`/es/…`, `/de/…`, …) from the English pages and the translation files in `i18n/`.
 
-```
-cd scripts/i18n && npm install          # once (parse5)
-node scripts/i18n/extract.mjs           # every page's text → i18n/segments/<part>.json (+ pages.json)
-node scripts/i18n/batch.mjs             # → i18n/batches/<part>-<n>.json, the runner-sized pieces, and BATCHES.md
-node scripts/i18n/check.mjs es [batch]  # a translation file is sound: every id real, placeholders kept
-node scripts/i18n/build.mjs es          # → /es/… for every page whose text is all translated; the 🌐 on both copies
-```
+- `extract.mjs` — every English page's text → `i18n/segments/<part>.json` (+ `pages.json`).
+- `batch.mjs` — segments → `i18n/batches/<part>-<n>.json` and the index `BATCHES.md`.
+- `check.mjs <lang> [batch]` — checks a translation file: every id real, placeholders kept.
+- `build.mjs <lang>` — writes `/<lang>/…` for every page whose text is fully translated, and the 🌐 language menu.
+- `score.mjs`, `rtl.mjs`, `globe.mjs`, `restamp.mjs`, `sitemap.mjs`, `indexnow.mjs`, `unescape-attrs.mjs` — scoring, right-to-left handling, the language menu, date stamps, per-language sitemaps, IndexNow pings, attribute-escape repair.
+- `lib.mjs` — shared helpers and `LANGS` (each language's code, own name and direction).
 
-- A language is a folder of translation files, `i18n/<code>/*.json` (`id → text`), plus `_phrases.json` for words the site's scripts write in the browser (read by `/rs-t.js`), plus its `GLOSSARY.md`. Its code, own name and direction go in `LANGS` in `lib.mjs`.
-- A translation is written in the placeholder form the batch file shows: `Call or text <0>988</0>.` — the numbers stand for the original tags, which the build puts back.
-- A page is built in a language only when every one of its segments is translated, so no page is half in one language. The 🌐 on each page lists only the languages that page exists in, each in its own name.
-- Re-run `extract.mjs` after any English page changes; a changed sentence gets a new id and its old translation simply stops being used.
-- Building is repeatable: the same files in give the same pages out.
+A language is `i18n/<code>/*.json` (`id → text`, tags written as placeholders like `<0>988</0>`), `_phrases.json` (strings `/rs-t.js` uses in the browser) and `GLOSSARY.md`. A page is built in a language only when all its segments are translated; a changed English sentence gets a new id. Dependencies: `parse5` (`package.json` here).

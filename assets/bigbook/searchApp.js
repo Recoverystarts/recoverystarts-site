@@ -1,42 +1,24 @@
 /**
  * Big Book search UI controller for recoverystarts.com.
  *
- * THE APP IS THE SPEC (app.recoverystarts.com → Big Book → search). Result
- * content, layering, ordering, and dedupe all come from composeResults()
- * (searchPipeline.js) — which now runs SERVER-SIDE, in /api/bigbook-search.
+ * Result content, layering, ordering, and dedupe come from composeResults()
+ * (searchPipeline.js), which runs server-side in /api/bigbook-search, matching
+ * the app (app.recoverystarts.com → Big Book → search).
  *
- * ── THE PRODUCT BOUNDARY (this is the whole design) ──────────────────────────
- *   THE WEBSITE tells you WHICH PAGE a passage is on, and shows you just enough
- *   to know it's the right one. THE APP is where you read the book.
+ * The text lives only inside the Worker (functions/_lib/, which Pages doesn't
+ * serve). The browser sends a query and gets back page numbers, chapters, and
+ * ~170-char highlighted snippets.
  *
- * This file used to download the ENTIRE 4th-edition text (981 KB of
- * /bigbook/search-index.json) into every visitor's browser, and render a full
- * page of the book whenever someone clicked a page number. Between them, the
- * website was a copy of the Big Book with a search box on top. That was never
- * the product — and it staked the whole domain on something we don't need.
- *
- * Now: the text lives only inside the Worker (functions/_lib/, the one directory
- * Cloudflare Pages does not serve — verified: /functions/** 404s while
- * /scripts/**, /data/** and /tests/** all return 200). The browser sends a query
- * and gets back page numbers, chapters, and ~170-char highlighted snippets.
- * There is no URL that returns the book.
- *
- * Search quality is UNCHANGED: same BookSearch engine, same phrase index, same
- * knowledge layer, same composeResults pipeline, same tests. Exact-phrase search
- * still works. Only the location changed — and how little we say.
- *
- * What this file still owns:
- *   • quick-cards (phraseSearch, ≤2) still render INSTANTLY, client-side, from
- *     the curated short-quote index — no network, no perceived latency
+ * What this file owns:
+ *   • quick-cards (phraseSearch, ≤2) render instantly, client-side, from the
+ *     curated short-quote index
  *   • "step N" / chapter / reference queries surface knowledge cards with page
- *     RANGES ("Step 12 · pp. 89–103"), exactly like the app
- *   • a page-number query ("page 83", "417", "xxv") now offers the PAGE, not the
- *     page's text — it points at /big-book/page-N/ and at the app
+ *     ranges ("Step 12 · pp. 89–103"), like the app
+ *   • a page-number query ("page 83", "417", "xxv") offers the page, not the
+ *     page's text: it points at /big-book/page-N/ and at the app
  *   • full-text hits render with <mark> snippets + page + section
  *
- * 4TH EDITION pagination. Always. It's the only edition anyone is holding.
- *
- * Free search. The only CTA points to /download/. Never links to /demo.
+ * 4th edition pagination. The CTA points to /download/.
  */
 import { searchPhraseIndex } from "./phraseSearch.js";
 import { firstLabel } from "./searchPipeline.js";
@@ -47,7 +29,7 @@ const API_URL = "/api/bigbook-search";
 const LANG = (document.documentElement.lang || "en").split("-")[0].toLowerCase();
 const P = LANG !== "en" && location.pathname.startsWith(`/${LANG}/`) ? `/${LANG}` : "";
 
-// ── Words in the reader's language (wave tr3 S3, claude-home#256) ─────────────
+// ── Words in the reader's language ───────────────────────────────────────────
 // On /es/, /pt/, /fr/… the page carries its phrasebook (i18n/<lang>/_phrases.json → window.RS_T, before this module
 // runs). Every sentence this file writes is looked up there WHOLE, its {n} slots filled after, so a new language gets
 // these words from its phrase list alone. In English there's no book and every word stays as written. The data's own
@@ -111,10 +93,6 @@ const esc = (s) =>
 const escAttr = (s) =>
   esc(s).replace(/"/g, "&quot;");
 
-// (The ligature fold that used to live here existed only to clean up full page
-// text before printing it into the DOM. We don't print page text any more, and
-// the server already folds ligatures inside the snippets it sends.)
-
 // ── Rendering helpers ────────────────────────────────────────────────────────
 function snippetHtml(parts) {
   return parts
@@ -146,16 +124,10 @@ function quickCardHtml(card) {
 /**
  * Steps / chapters / special references — the app's knowledge cards.
  *
- * SITE-ONLY PRESENTATION (approved divergence): the Twelve Traditions reference
- * is surfaced as the LONG FORM (pp. 563–566) so people actually discover the
- * complete text. This matters — Tradition Three's "no other affiliation" clause,
- * the one that says no treatment center can own an A.A. group, exists ONLY in the
- * Long Form. The short form (pp. 561–562) does not carry it, and the short form is
- * all most people are ever shown.
- *
- * The DATA is untouched: p.563 is still the underlying record and still the jump
- * target (pageButton uses firstLabel()). This is display only, so app-parity and
- * the pipeline tests both hold.
+ * The Twelve Traditions reference is shown as the Long Form (pp. 563–566), which
+ * carries Tradition Three's "no other affiliation" clause; the short form
+ * (pp. 561–562) does not. p.563 is still the underlying record and the jump
+ * target (pageButton uses firstLabel()); this is display only.
  */
 function knowledgeCardHtml(r) {
   if (r.title === "Twelve Traditions") {
@@ -193,12 +165,8 @@ function hitHtml(r) {
 }
 
 /**
- * A page-number query used to dump that page's ENTIRE text into the DOM.
- *
- * It doesn't any more. The website's job is to tell you WHICH PAGE — and then
- * hand you off to the two places that should actually have the words: your own
- * copy of the book, or the app. So a page jump now offers the page's reference
- * card (/big-book/page-N/) and the app, and says so plainly.
+ * A page-number query offers the page's reference card (/big-book/page-N/) and
+ * the app, not the page's text.
  *
  * `description` here is the section/chapter, straight from the API.
  */
@@ -345,7 +313,7 @@ function debounce(fn, ms) {
 }
 
 function init() {
-  // Single source of truth for the indexed edition (WO: INDEX_EDITION = "4th").
+  // The indexed edition (INDEX_EDITION = "4th").
   document.documentElement.dataset.bigbookEdition = INDEX_EDITION;
 
   const onInput = debounce(() => {
@@ -360,8 +328,7 @@ function init() {
       runSearch(input.value);
     }
   });
-  // There is no 1 MB index to warm any more — the search runs on the server and
-  // the first query is a single small request. Nothing to prefetch.
+  // The search runs on the server; nothing to prefetch.
 
   clearBtn.addEventListener("click", () => {
     input.value = "";
@@ -398,10 +365,6 @@ function init() {
     clearBtn.style.display = "";
     runSearch(q0);
   }
-
-  // Nothing to prefetch. The old build downloaded 981 KB of Big Book text here,
-  // on every visit, before anyone had typed a thing. That page is now ~1 MB
-  // lighter and the book isn't on the wire at all.
 }
 
 // Boot at the end of module evaluation, after every helper/const above is

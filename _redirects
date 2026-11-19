@@ -1,15 +1,12 @@
-# ads.txt lives at Raptive (2026-11-12, Code window raptive-install). Raptive: "We will need you to set up a 301 redirect
-# so your ads.txt points to our server." The old file (AdSense's lines) is deleted, so this rule answers.
-# www.recoverystarts.com/ads.txt first 301s to the apex (a zone rule, not in this repo), then here: one hop off-domain.
-# Way back: git revert (the rule goes, ads.txt comes back).
+# ads.txt is served by Raptive. www.recoverystarts.com/ads.txt first 301s to the apex (a zone rule, not in this repo),
+# then here: one hop off-domain.
 /ads.txt https://ads.adthrive.com/sites/6ae0f40dc893d31cf2e0eb8c/ads.txt 301
 
 # Legacy paths still indexed by Google — walk people home, not to a 404
 /services/ / 301
 /services / 301
 
-# Old (pre-rebuild) Daily Reflections addresses. Bing Webmaster Tools still shows
-# them crawled in Aug–Sep 2026 with impressions and a 404. Added 2026-09-20.
+# Old (pre-rebuild) Daily Reflections addresses.
 /daily-reflections /daily-reflection/ 301
 /daily-reflections/ /daily-reflection/ 301
 /dailyreflections-january /daily-reflection/january/ 301
@@ -25,7 +22,7 @@
 /dailyreflections-november /daily-reflection/november/ 301
 /dailyreflections-december /daily-reflection/december/ 301
 
-# The AI front door (WO-AI-FRONT-DOOR, 2026-09-28): /ai/ is the readable twin of the meetings' llms.txt,
+# /ai/ is the readable twin of the meetings' llms.txt,
 # served by the meeting finder under /meetings/ (the worker proxies /meetings/*).
 /ai /meetings/ai/ 302
 /ai/ /meetings/ai/ 302

@@ -1,17 +1,8 @@
 #!/usr/bin/env node
 /**
- * patch-one-tradition.js — re-render ONE reading's text into its existing page.
- *
- * WHY THIS EXISTS (2026-09-05): build-traditions-pages.js is STALE versus the
- * live HTML. Nav, brand icons, OG images, the floating Einstein CTA, the footer
- * and the 988 line were all patched into the generated pages by later commits
- * (fix-nav, brand pass, etc.) and never folded back into the generator. Running
- * the full build regresses all 184 pages. So a single-reading edit is applied
- * the way the Sept 14/15 rewrites were: patch the reading fields in place.
- *
- * Same rendering rules as the builder (esc / mdEm / teaser+desc, lines 106-118
- * and 379-380 there). Reads data/traditions-daily.json (already regenerated from
- * the source md by parse-traditions.js --verify).
+ * patch-one-tradition.js — re-render one reading's text into its existing page, in place (the generated pages carry
+ * later nav/brand/footer changes that build-traditions-pages.js doesn't produce). Same rendering rules as the builder
+ * (esc / mdEm / teaser+desc). Reads data/traditions-daily.json.
  *
  * Usage: node scripts/patch-one-tradition.js september-6
  */
@@ -73,12 +64,9 @@ if (h1 && h1[1] !== esc(d.title)) {
     if (!f || !fs.existsSync(f)) continue;
     const s = f === file ? html : fs.readFileSync(f, "utf8");
     if (!s.includes(oldTitle)) continue;
-    // Only the occurrences that belong to THIS day: every place a title
-    // appears (hub JSON, month grid, prev/next links, the page's own head)
-    // carries "September 28" / "september-28" / "day":28 within ~120 chars
-    // before it. Two days can share a title in passing (Sept 28 took Sept
-    // 30's old title on 2026-09-05) — a blind global replace renamed both.
-    // (?!\d) so "September 2" does not claim "September 28".
+    // Only the occurrences that belong to this day: each place a title appears (hub JSON, month grid, prev/next links,
+    // the page's own head) carries "September 28" / "september-28" / "day":28 within ~120 chars before it, so two days
+    // sharing a title aren't both renamed. (?!\d) so "September 2" does not claim "September 28".
     const tokens = [new RegExp(`${monthCap} ${d.day}(?!\\d)`), new RegExp(`${d.month}-${d.day}/`), new RegExp(`"day":${d.day},`)];
     let out = "", last = 0, idx;
     while ((idx = s.indexOf(oldTitle, last)) !== -1) {

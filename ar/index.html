@@ -32,7 +32,7 @@
   {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://recoverystarts.com/#organization","name":"Recovery Starts","alternateName":["RecoveryStarts","RecoveryStarts.com","Recovery Starts Project"],"url":"https://recoverystarts.com","logo":{"@type":"ImageObject","@id":"https://recoverystarts.com/#logo","url":"https://recoverystarts.com/assets/og/logo-512.png","contentUrl":"https://recoverystarts.com/assets/og/logo-512.png","width":512,"height":512,"caption":"Recovery Starts"},"image":{"@id":"https://recoverystarts.com/#logo"},"description":"An independent recovery awareness project: free daily readings, the Big Book page by page, and a worldwide meeting directory covering nine fellowships. Not affiliated with any fellowship.","foundingLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressRegion":"Alberta","addressCountry":"CA"}},"areaServed":{"@type":"Place","name":"Worldwide"},"knowsAbout":["Alcoholics Anonymous","Narcotics Anonymous","Crystal Meth Anonymous","Cocaine Anonymous","The Twelve Steps","The Twelve Traditions","recovery meetings","addiction recovery"],"sameAs":["https://youtube.com/@addict2influencer","https://instagram.com/addict2influencer","https://tiktok.com/@addict2influencer","https://x.com/addict2influence","https://facebook.com/addict2influencer"]},{"@type":"WebSite","@id":"https://recoverystarts.com/#website","name":"Recovery Starts","alternateName":"RecoveryStarts.com","url":"https://recoverystarts.com","description":"Free recovery meeting directory, daily readings, the Big Book page by page, and Recovery Einstein - an AI Big Book companion.","inLanguage":"en","publisher":{"@id":"https://recoverystarts.com/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://recoverystarts.com/big-book/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}
   </script>
   <link rel="preload" as="image" href="/assets/world/cosmos-bg.webp" fetchpriority="high">
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/vazirmatn-arabic.woff2" crossorigin><!-- the headline's font, fetched with the stylesheet so the h1 paints once (claude-home #496) -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/vazirmatn-arabic.woff2" crossorigin><!-- the headline's font, fetched with the stylesheet so the h1 paints once -->
   <link rel="stylesheet" href="/style.rtl.css?v=eb75e1d0e9">
   <link rel="canonical" href="https://recoverystarts.com/ar/">
   <link rel="alternate" hreflang="en" href="https://recoverystarts.com/">
@@ -202,8 +202,7 @@
       </div>
       <div class="glass-panel video-slot">
         <div class="video-frame">
-          <!-- click-to-play (wave 2026-10-26-ads S2): the video's own poster and a play button; YouTube's ~1 MB player
-               loads only when someone taps it. Way back: the iframe below, out of its <template>, without ?autoplay=1. -->
+          <!-- click-to-play: the video's poster and a play button; YouTube's player loads on tap -->
           <button type="button" class="video-facade" aria-labelledby="demo-title" onclick="var f=this.parentNode;f.replaceChildren(f.querySelector('template').content.cloneNode(true));f.querySelector('iframe').focus()">
             <img src="/assets/video/walkthrough-640.webp" srcset="/assets/video/walkthrough-640.webp 640w, /assets/video/walkthrough-960.webp 960w, /assets/video/walkthrough-1280.webp 1280w" sizes="(min-width: 1100px) 1000px, 92vw" alt="" width="1280" height="720" loading="lazy" decoding="async">
             <svg class="video-play" viewBox="0 0 68 48" aria-hidden="true"><path class="video-play-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
@@ -352,7 +351,7 @@
   </main>
   </div>
 
-  <style>.footer{position:relative;z-index:1}</style><!-- 2026-11-13: the home page's fixed sky (.world-fixed, z-index 0) painted over the footer, which had no position; only the Donate link showed. Here, not in style.css, because 19,262 pages carry style.css?v= and only these 14 have the sky. -->
+  <style>.footer{position:relative;z-index:1}</style><!-- keeps the footer above the home page's fixed sky -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">

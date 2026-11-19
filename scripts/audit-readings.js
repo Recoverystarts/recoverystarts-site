@@ -1,45 +1,15 @@
 #!/usr/bin/env node
 /**
- * audit-readings.js — every quotation, checked against the real sources. Build gate.
+ * audit-readings.js — checks every quotation in the daily readings against the
+ * real sources, character for character. Exits 1 on any that doesn't match.
  *
- * The daily readings are original writing. But anything inside QUOTATION MARKS is
- * a claim about what an A.A. source actually SAYS. An invented or "tightened"
- * quotation would make us the fabricator — the thing this project exists to end.
+ * Quoted lines that are not A.A. literature (scene dialogue) are registered in
+ * data/scene-dialogue.json; any other unmatched quotation fails.
  *
- * So every quotation is checked, character for character, against the real text.
- * Exit code 1 on any that doesn't match. Wire this into the build.
- *
- * ── QUOTE FREELY. QUOTE EXACTLY. ────────────────────────────────────────────
- * This gate is NOT a reason to quote less. Quoting the actual words is the whole
- * point — it is what makes a reading land, and it is what nobody else does. Quote
- * as much as the reading needs. Just never reshape a quotation to make it read
- * better.
- *
- * Quotation marks work like normal writing (Derick's ruling, Aug 2026): a person
- * in an imagined scene may speak in quotes, the way dialogue is quoted anywhere.
- * The hard rule is narrower: any quotation OF A.A. LITERATURE must be the
- * source's exact words, and every quoted line that is OURS (scene dialogue, not
- * literature) must be registered in data/scene-dialogue.json. So an unmatched
- * quotation is always one of two things: declared fiction, or a fabrication
- * that stops the build. It is never silently either.
- *
- * (It caught a real one: a July reading said Rockefeller spoke "without any
- * thought of financial reward." The book says "without any thought of financial
- * INCOME OR reward." Two words dropped for rhythm. That is how distortion starts.)
- *
- * ── WHAT WE MAY QUOTE ───────────────────────────────────────────────────────
- * Alcoholics Anonymous (4th ed.) · AA Comes of Age · the A.A. Service Manual ·
- * Pass It On · Dr. Bob and the Good Oldtimers · Experience Strength & Hope ·
- * pamphlets P-17 (A.A. Tradition), P-43 (Traditions Illustrated),
- * P-44 (Legacy of Service).
- *
- * ── WHAT WE NEVER USE: THE 12&12 ────────────────────────────────────────────
- * Not "don't quote it" — don't USE it. The Twelve Steps and Twelve Traditions
- * binds the Steps and the Traditions into one book, and that binding is the very
- * thing treatment centres exploit: it lets them present the Traditions as twelve
- * more steps for the INDIVIDUAL to work, when the Traditions are rules for the
- * GROUP. That is the distortion, at its source. We don't reach for the tool that
- * built it.
+ * Sources: Alcoholics Anonymous (4th ed.), AA Comes of Age, the A.A. Service
+ * Manual, Pass It On, Dr. Bob and the Good Oldtimers, Experience Strength & Hope,
+ * pamphlets P-17, P-43 and P-44 (see SOURCES). The Twelve Steps and Twelve
+ * Traditions is not among them.
  */
 const fs = require("fs");
 const path = require("path");
@@ -47,8 +17,7 @@ const path = require("path");
 const SRC = "data/readings-source.md";
 const HIST = process.env.HISTORIAN_SOURCES || "C:\\Users\\addic\\recovery-einstein\\historian-sources";
 
-// Everything we are allowed to quote. A source we can't grep is a source we
-// can't verify — and a quotation we can't verify does not ship.
+// Every source a quotation is checked against.
 const SOURCES = [
   ["Big Book (4th ed)",        null],                                  // loaded from JSON below
   ["AA Comes of Age",          "aa_comes_of_age.txt"],
@@ -61,25 +30,15 @@ const SOURCES = [
   ["P-44 Legacy of Service",   "p-44_aa_legacy_of_service.txt"],
 ];
 
-// Known OCR corruptions in OUR SCANS. Repairs to the SOURCE so it says what the
-// printed page says. Accusing a reading of fabrication because our scanner
-// slipped is its own kind of lie. Each repair is listed so it can be audited.
+// Known OCR corruptions in the scans, repaired so the source reads as the printed page.
 const OCR_REPAIRS = [[/beelsaverted/gi, "been averted"]];
 
-// The corpus-wide repair map lives NEXT TO THE SCANS it repairs — one file,
-// read by both this gate and the app's DB ingest, so the two can never
-// disagree. Each entry's "find" is a snippet of the raw scan that occurs
-// exactly once in its file, carrying the corruption; "replace" is the same
-// snippet as the printed page reads. Entries feed the same loop below.
-// Full audit trail (evidence, sentences, reasons): ocr-repairs.json itself.
+// The corpus-wide repair map, beside the scans it repairs (also read by the app's DB ingest).
+// Each entry's "find" is a snippet of the raw scan carrying the corruption; "replace" is the
+// same snippet as the printed page reads.
 const MAP_FILE = path.join(HIST, "ocr-repairs.json");
 
-// FAIL LOUD. This used to sit behind `if (fs.existsSync(MAP_FILE))`, which meant
-// a missing map produced no error, no warning and no output — the audit simply
-// ran with one repair instead of 2,746 and still printed PASS. That is the same
-// silent-fallback shape that left the app's Tier 1 correction layer dead in
-// production for months. An absent map is now a hard stop, because an audit that
-// cannot repair the scans cannot tell a real quote from a scanner artifact.
+// A missing repair map is a hard stop: without it the scans can't be told apart from real misquotes.
 if (!fs.existsSync(MAP_FILE)) {
   throw new Error(
     `OCR repair map missing: ${MAP_FILE}\n` +
@@ -115,13 +74,8 @@ const squash = (t) =>
     .replace(/ﬃ/g, "ffi").replace(/ﬄ/g, "ffl")
     .replace(/[’‘']/g, "'").replace(/[“”"]/g, '"')
     .replace(/[—–]/g, "")
-    // SOFT HYPHEN U+00AD. The Big Book extract stores line-break hyphenation on
-    // chapter pages as an INVISIBLE soft hyphen ("un­\nless"), not an ASCII
-    // one — 103 pages carry them. It is a typesetting artifact that appears in no
-    // printed copy, so it must be stripped exactly like the visible hyphens below.
-    // Without this, any correctly-transcribed quote spanning a hyphenated word on
-    // a chapter page is reported as FABRICATED. Found when the p.125 quotation
-    // "unless we are sure he would approve" failed while being verbatim correct.
+    // soft hyphen U+00AD: the Big Book extract stores line-break hyphenation on chapter
+    // pages as an invisible soft hyphen, stripped like the visible hyphens below.
     .replace(/­/g, "")
     .replace(/[\s\-]+/g, "")     // ALL whitespace + hyphens: "mem -\nbers" -> "members"
     .toLowerCase();

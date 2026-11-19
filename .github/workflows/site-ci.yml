@@ -1,22 +1,10 @@
-# Site CI — the merge gate for recoverystarts.com (2026-11-09, window 3 merge-gate-build; claude-home #522, #499 step 3).
-# Why: until today this public repo had no workflows at all, and Cloudflare Pages deploys main on every push. The 11-07
-# research (claude-home map/projects/recoverystarts-site/research/2026-11-07-topic8-github/) traced misses this catches:
-# audit-readings.js failing unseen for five weeks (09-05), 298 dead meeting links (09-20), the menu sending translated
-# readers to English (10-12), 96 dead links from a slug guard (11-01), and a Russian batch passing Pages' file limit.
-# Jobs (both on every PR into main; `site-check` also on every push to main):
-#   site-check     the build (scripts/pages-dist.sh, Pages' own build command), then scripts/ci/site-check.js: file count
-#                  of dist/ (warn 90,000, fail 100,000 — our plan's Pages limit since 11-07), pages per language against
-#                  main, every internal link on disk, translated → English links; then the quote gate audit-readings.js.
-#   preview-links  waits for Cloudflare Pages' own check on the PR's commit, reads its preview URL, and runs
-#                  scripts/ci/preview-links.js on what Pages actually serves.
-# The quote gate needs the A.A. source scans, which live in the PRIVATE repo Recoverystarts/recovery-einstein and must
-# never be copied into this public one. With the repo secret EINSTEIN_READ_TOKEN (a fine-grained token, Contents: read
-# on recovery-einstein only — Derick's click, see claude-home waves/2026-11-08-merge-gate/proof/build.md) it runs and a
-# fabricated quotation fails the job; without the secret it is skipped with a warning, so this CI can land first.
-# Minutes: this repo is public, and Actions minutes on public repos are free; no path filter, because the checks are
-# meant to be required by the ruleset on main and a path-filtered required check waits forever. concurrency cancels a
-# superseded run.
-# Ways back: disable the workflow (Actions → Site CI → ⋯ → Disable workflow) or delete this file and scripts/ci/.
+# Site CI for recoverystarts.com, on every PR into main and every push to main.
+#   site-check     builds dist/ with scripts/pages-dist.sh (the Pages build command), runs the Functions security tests,
+#                  scripts/ci/site-check.js, and the quote gate scripts/audit-readings.js. The quote gate reads the A.A.
+#                  source scans from the private repo Recoverystarts/recovery-einstein via the EINSTEIN_READ_TOKEN secret;
+#                  without the secret that step is skipped with a warning.
+#   preview-links  waits for Cloudflare Pages' check on the PR's commit, reads its preview URL, and runs
+#                  scripts/ci/preview-links.js against it.
 name: Site CI
 
 on:
@@ -47,7 +35,6 @@ jobs:
           node-version: 22
       - name: Build (scripts/pages-dist.sh, the Pages build command)
         run: sh scripts/pages-dist.sh
-      # Security sweep 2026-11-19: the Functions' guards (form host + per-address limit, header-only token).
       - name: Functions security tests
         run: node --test tests/functions-security.test.mjs
       - name: File count, pages per language, internal links, translated → English
@@ -68,7 +55,7 @@ jobs:
           git init -q "$RUNNER_TEMP/re" && cd "$RUNNER_TEMP/re"
           git remote add origin "https://x-access-token:${TOKEN}@github.com/Recoverystarts/recovery-einstein.git"
           git fetch -q --depth 1 origin main && git checkout -q FETCH_HEAD -- historian-sources
-          # the OCR repair map lives on an unmerged branch (audit-readings.js says so); take it from there if main lacks it
+          # the OCR repair map comes from the fix/ocr-corpus-repairs branch when main lacks it
           if [ ! -f historian-sources/ocr-repairs.json ]; then
             git fetch -q --depth 1 origin fix/ocr-corpus-repairs && git show FETCH_HEAD:historian-sources/ocr-repairs.json > historian-sources/ocr-repairs.json
           fi

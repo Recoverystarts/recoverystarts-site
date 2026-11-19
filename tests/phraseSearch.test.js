@@ -32,8 +32,7 @@ describe("phrase index mirrors the app", () => {
   it("has the app's 112 entries — no site-only additions", async () => {
     const { BIG_BOOK_PHRASE_INDEX } = await import("../assets/bigbook/bigBookPhraseIndex.js");
     expect(BIG_BOOK_PHRASE_INDEX).toHaveLength(112);
-    // The reverted port added invented Long-Form cards that hijacked
-    // "12 traditions" from the app's behavior — they must stay gone.
+    // no Long-Form cards: "12 traditions" resolves as the app does
     expect(
       BIG_BOOK_PHRASE_INDEX.find((e) => e.phrase === "the twelve traditions long form")
     ).toBeUndefined();

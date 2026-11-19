@@ -1,18 +1,12 @@
 /* donate.js — "keep this free" sheet for recoverystarts.com + the meeting finder.
- * One file, kept identical in recoverystarts-site (/donate.js) and
- * meeting-finder (server/static/donate.js). Written 2026-09-27 (Fable 5.1, the
- * Sunday planner) at Derick's ask: out of pocket, a dollar in the basket.
+ * The same file is meeting-finder's server/static/donate.js.
  *
- * Behaviour: waits for the reader's first search (or 6 s), slides a small
- * closable sheet up from the bottom, remembers the close for 30 days in
- * localStorage (no cookie, nothing sent anywhere), and leaves a quiet "Donate"
- * link in the footer so nobody has to wait for the sheet again. v2 (14:4x):
- * also a "Donate" item in the nav menu and a hero button on the homepage.
- * v3 (17:5x): the PayPal button is on by default (hosted button 77M33WUD8KTCE,
- * "Support Recovery Starts", any amount, CAD; made by the PayPal window).
+ * Adds a "Donate" item to the nav menu, a hero button on the homepage and a
+ * "Donate" link in the footer. PayPal hosted button 77M33WUD8KTCE ("Support
+ * Recovery Starts", any amount, CAD). build() holds the closable sheet, which
+ * init() doesn't call.
  * Config (optional) via window.RS_DONATE before this script loads:
  *   { paypal: "https://…" | "" to hide, delayMs: 6000, days: 30, site: "finder"|"site" }
- * Links live in claude-home secrets-docs/DONATIONS.md.
  */
 (function () {
   "use strict";
@@ -25,7 +19,7 @@
   var LINK_PAYPAL = cfg.paypal != null ? cfg.paypal : "https://www.paypal.com/ncp/payment/77M33WUD8KTCE"; // PayPal, any amount
   var KEY = "rs_donate_seen";
   var DAYS = cfg.days || 30;
-  var DELAY = cfg.delayMs != null ? cfg.delayMs : 6000; // Derick 2026-09-27 14:41: 20 s "takes too long"
+  var DELAY = cfg.delayMs != null ? cfg.delayMs : 6000;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function seen() {
@@ -94,7 +88,7 @@
 
   function navAndHero() {
     // Menu item (every page: the nav is one stamped header) and a hero button on the homepage,
-    // both added here so no page needs a rebuild. Derick 2026-09-27 14:41.
+    // both added here so no page needs a rebuild.
     var add = document.querySelector(".nav-links a.nav-add-meeting");
     if (add && !document.querySelector(".nav-donate")) {
       var li = document.createElement("li");
@@ -113,16 +107,12 @@
   }
 
   function init() {
-    // Not on Persian pages for now (Derick, 2026-10-12): Stripe and PayPal don't take payments from Iran, and Canada has
-    // sanctions on Iran. To show it there too, delete this line.
+    // Not on Persian pages: Stripe and PayPal don't take payments from Iran, and Canada has sanctions on Iran.
     if (/^fa\b/i.test(document.documentElement.lang || "")) return;
     var style = document.createElement("style"); style.textContent = CSS; document.head.appendChild(style);
     navAndHero();
     footerLink();
-    // v4 (2026-10-11): the pop-up sheet is retired. Derick: "lets get ride of
-    // that donate popup now that we have a button on the main page." The menu
-    // item, the homepage button and the footer link stay. build() is kept
-    // unused so the sheet can come back with one line if he ever wants it.
+    // The pop-up sheet (build()) is not shown.
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

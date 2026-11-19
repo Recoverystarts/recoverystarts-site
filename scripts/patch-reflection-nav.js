@@ -1,15 +1,8 @@
 #!/usr/bin/env node
 /**
- * patch-reflection-nav.js — the month escape hatch on every reflection day page.
- *
- * The 366 Daily Reflection day pages were written as a one-time batch — there is
- * no generator to re-run, so this patches them IN PLACE, the same way regen-seo
- * did. It touches ONLY the .dr-nav block (prev/next at the foot of the page) and
- * turns it into three slots: prev day / All of <Month> / next day. The reading
- * itself is never touched.
- *
- * Idempotent: a page that already carries .dr-nav-mid is skipped, so this can
- * sit in build-all and run on every build.
+ * patch-reflection-nav.js — the month link on every Daily Reflection day page. Patches the pages in place: only the
+ * .dr-nav block at the foot becomes three slots: prev day / All of <Month> / next day. A page that already carries
+ * .dr-nav-mid is skipped, so it runs on every build (build-all).
  *
  * Usage: node scripts/patch-reflection-nav.js [--dry]
  */

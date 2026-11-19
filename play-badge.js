@@ -1,11 +1,11 @@
 /* Play badge - the floating link to "AA Big Book Search + AI Guide" on Google Play.
  * Shared verbatim by recoverystarts-site (/play-badge.js) and meeting-finder (server/static/play-badge.js).
- * Configure BEFORE loading:  window.PLAY_BADGE = { mode:'card'|'pill', pos:'br'|'tl', icon:'/path/icon-96.png',
+ * Configure before loading:  window.PLAY_BADGE = { mode:'card'|'pill', pos:'br'|'tl', icon:'/path/icon-96.png',
  *                                                  utm:{source,medium,campaign,content} }
- * Behaviour (Derick, 2026-09-07): A = the Play store row (mode card) on site pages, C = compact pill on the map;
+ * Behaviour: A = the Play store row (mode card) on site pages, C = compact pill on the map;
  * either folds to icon-only after the first scroll/pan, one tap re-expands, next tap follows the link.
  * Android -> Play listing with install referrer carrying the UTM. Everyone else -> the web app, same UTM.
- * Way back: git revert; the old .einstein-cta stays in the page markup and is only hidden by this script.
+ * The old .einstein-cta in the page markup is hidden by this script.
  */
 (function () {
   if (window.__playBadgeMounted) return; window.__playBadgeMounted = true;

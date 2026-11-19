@@ -1,4 +1,4 @@
-// Security sweep, 2026-11-19. Run: node --test tests/functions-security.test.mjs (site CI runs it).
+// node --test tests/functions-security.test.mjs (site CI runs it).
 // Each test is the attack it stops. fetch is replaced, so nothing leaves the process.
 import { test } from "node:test";
 import assert from "node:assert/strict";

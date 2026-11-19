@@ -1,17 +1,10 @@
 #!/usr/bin/env node
 /**
- * parse-traditions.js — turn the APPROVED Daily Traditions markdown into
- * data/traditions-daily.json, keyed "month-day" (same shape as reflections.json).
+ * parse-traditions.js — turn the Daily Traditions markdown into data/traditions-daily.json, keyed "month-day"
+ * (same shape as reflections.json). The readings are copied verbatim; --verify diffs every parsed reading back
+ * against the source markdown, character for character, and throws on the first mismatch.
  *
- * THE POINT OF THIS SCRIPT: the readings were written and approved by Derick at
- * GATE 2. They are NOT to be rewritten, re-voiced, paraphrased, "improved", or
- * regenerated. This parser copies them VERBATIM. Any drift is a defect.
- *
- * A round-trip check (--verify) diffs every parsed reading back against the
- * source markdown, character for character, and throws on the first mismatch.
- *
- * Source: data/traditions-source.md  (in-repo; approved July T7 + August T8 …).
- *         The build no longer depends on D:\Forge being mounted.
+ * Source: data/traditions-source.md
  * Usage:  node scripts/parse-traditions.js [--verify]
  */
 
@@ -28,9 +21,7 @@ const MONTH_TRADITION = {
   july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
 };
 
-// The Traditions, short form — READ from the extractor's output, never retyped.
-// data/twelve-traditions.json is the single source of Tradition text (verbatim,
-// 4th ed). This is the "never retype a Tradition" rule, applied to our own script.
+// The Traditions, short form, read from data/twelve-traditions.json (verbatim, 4th ed).
 const TRAD = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "twelve-traditions.json"), "utf8"));
 const shortFormFor = (n) => {
   const t = TRAD.traditions.find((x) => x.n === n);
@@ -45,8 +36,7 @@ const raw = fs.readFileSync(SRC, "utf8");
 //   body paragraph
 //   *Sit with:* question
 //   *Grounded in:* citation
-// NOTE: no `|$` in the lookahead. Under the /m flag `$` matches end-of-LINE,
-// so the lazy [\s\S]*? stopped at the heading and captured an empty body.
+// No `|$` in the lookahead: under /m `$` matches end-of-line, which would stop the lazy body at the heading.
 const blockRx = /^### (\w+) (\d+) — "(.+?)" · \*\((.+?)\)\*\s*\n([\s\S]*?)(?=\n### |\n---|\n\*\*Pack-check)/gm;
 
 const days = [];
@@ -74,15 +64,13 @@ while ((m = blockRx.exec(raw)) !== null) {
     day,
     tradition: MONTH_TRADITION[month],
     title: title.trim(),
-    // TWO SCHEMES LIVE SIDE BY SIDE, on purpose.
-    //   OLD (July T7, August T8): "hypothetical" | "the earned answer", odd/even.
-    //   NEW (September T9 onward): the five questions, run straight through —
+    // Two kind schemes:
+    //   July (T7), August (T8): "hypothetical" | "the earned answer", odd/even.
+    //   September (T9) onward: the five questions, in order —
     //     "the threat" | "before the tradition" | "the threat today" |
     //     "how a group breaks it" | "how it gets captured".
-    // July and August are shipped and approved. They are NOT retro-fitted.
     kind: kind.trim(),
-    // Q4 ("how a group breaks it") is the NEW scheme's labelled hypothetical —
-    // it is the only new-scheme day that carries the disclaimer.
+    // Q4 ("how a group breaks it") is the new scheme's hypothetical and the only new-scheme day with the disclaimer.
     hypothetical: /hypothetical|how a group breaks it/i.test(kind),
     body,                                 // VERBATIM
     sitWith: sit[1].trim(),               // VERBATIM
@@ -104,9 +92,7 @@ for (const d of days) {
 }
 if (drift) throw new Error(`${drift} verbatim check(s) failed. Refusing to write. The readings are approved content — they do not get rewritten.`);
 
-// Pairing check applies ONLY to the old odd/even scheme (July T7, August T8).
-// The five-question scheme runs Q1..Q5 straight through and has no odd/even
-// relationship — checking it there would warn on every second day, forever.
+// The odd/even pairing check applies only to the July/August scheme.
 const OLD_SCHEME = /^(hypothetical|the earned answer)$/i;
 const oldSchemeDays = days.filter((d) => OLD_SCHEME.test(d.kind));
 const badPair = oldSchemeDays.filter((d) => (d.day % 2 === 1) !== d.hypothetical);
@@ -114,14 +100,10 @@ if (badPair.length) {
   console.warn("Pairing warning (odd should be hypothetical, even the earned answer):", badPair.map((d) => d.key).join(", "));
 }
 
-// Five-question tags are LABELS, not law (Derick's ruling, Aug 2026). The
-// rotation was a writing scaffold, and enforcing it here turned a style into a
-// build failure — a reading's shape comes from its point, not from a slot.
-// The tag on a day only has to be a known kind (checked below); which kind a
-// day carries is an editorial choice, never a defect.
+// The five-question tag only has to be a known kind; which kind a day carries isn't checked.
 const FIVE_Q = ["the threat", "before the tradition", "the threat today", "how a group breaks it", "how it gets captured"];
 
-// Every reading must use a known kind from ONE of the two schemes.
+// Every reading uses a known kind from one of the two schemes.
 const unknownKind = days.filter((d) => !OLD_SCHEME.test(d.kind) && !FIVE_Q.includes(d.kind.toLowerCase()));
 if (unknownKind.length) {
   throw new Error("Unknown kind tag(s): " + unknownKind.map((d) => `${d.key} → "${d.kind}"`).join(", "));

@@ -1,8 +1,6 @@
-// globe.mjs — the 🌐 in the main site's menu (wave tr1; WO-TRANSLATE-SITE v2 §3). One list on every page that exists in
-// more than one language, each language written in its own name and marked with its own lang (so nothing ever
-// translates "English" into "Inglés" — Derick 2026-10-11 16:54). The same look as the meeting finder's (sitenav.mjs).
-// A click remembers the choice in rs_hl (localStorage, cookie fallback), the key the meeting finder's hl.js reads, so a
-// reader who picks Español on the homepage gets the finder in Spanish too.
+// globe.mjs — the 🌐 language menu on every page that exists in more than one language. Each language is written in
+// its own name and marked with its own lang. A click stores the choice in rs_hl (localStorage, cookie fallback), the
+// key the meeting finder's hl.js also reads.
 import { LANGS, tagOf } from "./lib.mjs";
 const SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>`;
 export const GLOBE_CSS = `<style id="rs-globe-css">
@@ -44,11 +42,9 @@ export function globeHtml(here, avail) {
   const items = Object.entries(avail).filter(([c]) => c !== here).sort(([a], [b]) => order.indexOf(a) - order.indexOf(b)).map(([c, u]) => `<a href="${u}" data-hl="${c}" hreflang="${tagOf(c)}" ${own(c)}>${LANGS[c].name}</a>`).join("");
   return `<details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان · Język">${SVG}</summary><div class="rs-langs"><span class="rs-here" ${own(here)}>✓ ${LANGS[here].name}</span>${items}</div>${GO_JS}</details>`;
 }
-// One remembered choice across recoverystarts.com, /meetings and /online (wave tr2 S2): a reader who picked a language
-// on either site (rs_hl: localStorage, cookie fallback; "pt" here, "pt-BR" from the meeting finder — matched on the part
-// before the dash, as the finder's hl.js does) and lands on a page in another language goes to this page in theirs, if
-// the 🌐 lists it. It runs inside the 🌐, as the menu is read, so the wrong language barely shows. A crawler stores
-// nothing, so it always gets the page it asked for.
+// One remembered choice across recoverystarts.com, /meetings and /online: a reader with rs_hl set ("pt" here, "pt-BR"
+// from the meeting finder, matched on the part before the dash) who lands on a page in another language goes to this
+// page in theirs, if the 🌐 lists it. Crawlers store nothing, so they get the page they asked for.
 const GO_JS = `<script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script>`;
 // The offer line's words, each in its own language (the meeting finder's sitenav.mjs OFFER_JS and i18n/es.mjs offer)
 const OFFER = { en: ["This page is also in English.", "View in English"], es: ["Esta página también está en español.", "Ver en español"], pt: ["Esta página também está em português.", "Ver em português"], fr: ["Cette page existe aussi en français.", "Voir en français"], fa: ["این صفحه به فارسی هم هست.", "خواندن به فارسی"], pl: ["Ta strona jest też po polsku.", "Czytaj po polsku"], de: ["Diese Seite gibt es auch auf Deutsch.", "Auf Deutsch lesen"], sv: ["Den här sidan finns också på svenska.", "Läs på svenska"], nl: ["Deze pagina is er ook in het Nederlands.", "Lees in het Nederlands"], hi: ["यह पेज हिंदी में भी है।", "हिंदी में पढ़ें"], ja: ["このページは日本語でもお読みいただけます。", "日本語で読む"], ru: ["Эта страница есть и на русском.", "Читать на русском"], ar: ["هذه الصفحة متاحة بالعربية أيضًا.", "اقرأ بالعربية"], tr: ["Bu sayfa Türkçe olarak da var.", "Türkçe oku"] };

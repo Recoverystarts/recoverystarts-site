@@ -1,4 +1,4 @@
-// rtl.mjs — a right-to-left language's pages (wave tr4, Persian). The English pages and their CSS are left exactly as they
+// rtl.mjs — a right-to-left language's pages. The English pages and their CSS are left as they
 // are; an rtl copy (build.mjs, a language whose LANGS dir is "rtl") is mirrored here, at build time:
 //   - /style.rtl.css: style.css mirrored by rtlcss (margins, padding, left/right, text-align, borders, transforms), plus
 //     the script's font (Vazirmatn, self-hosted from vazirmatn.css, the way style.css hosts its own) and what Persian type needs (no
@@ -15,12 +15,11 @@ import crypto from "node:crypto";
 import { parse } from "parse5";
 import rtlcss from "rtlcss";
 import { ROOT } from "./lib.mjs";
-
-// each language's font: its @font-face rules, self-hosted under /assets/fonts (claude-home #496, 2026-11-08; they were a
+// each language's font: its @font-face rules, self-hosted under /assets/fonts
 // Google Fonts @import, which held the first paint until Google answered — the old URL is in the faces file's comment)
 const FONT = {
   fa: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
-  // ar (wave arlang1): Vazirmatn draws Arabic too (prep-ar, 390 and 1366 px). The same faces file, read once below.
+  // Vazirmatn draws Arabic too; the same faces file, read once below
   ar: { faces: "vazirmatn.css", family: "'Vazirmatn'" },
 };
 export const flip = (css) => rtlcss.process(css);
@@ -53,8 +52,7 @@ html[dir="rtl"] .rs-langs a[lang],html[dir="rtl"] .rs-here,html[dir="rtl"] bdi{u
 
 const ARROWS = { "→": "←", "←": "→", "›": "‹", "‹": "›", "⟶": "⟵", "⟵": "⟶", "▸": "◂", "◂": "▸", "▶": "◀", "◀": "▶", "↗": "↖", "↖": "↗" };
 const swapArrows = (s) => s.replace(/[→←›‹⟶⟵▸◂▶◀↗↖]/g, (c) => ARROWS[c]);
-// ar (wave arlang1) is NOT here: Arabic on this site keeps Western 0–9 (i18n/ar/GLOSSARY.md, CHECKED-ar #6), so its text
-// gets the arrows turned and nothing else. Never add ar to this table.
+// ar is not here: Arabic on this site keeps Western 0–9, so its text gets the arrows turned and nothing else
 const DIGITS = { fa: "۰۱۲۳۴۵۶۷۸۹" };
 // numbers a reader dials, left in Latin digits (the crisis lines: 988 Canada and U.S., Iran's 123 / 1480 / 115) —
 // unless the words just before make it a page ("صفحهٔ ۱۲۳")
@@ -67,24 +65,19 @@ function localDigits(s, lang) {
     const prev = all[at - 1] ?? "", prev2 = all[at - 2] ?? "", next = all[at + tok.length] ?? "";
     if (/[A-Za-z\/:@#?=&_%+]/.test(prev) || /[A-Za-z\/@_%]/.test(next)) return tok;
     if (/[-.]/.test(prev) && /[A-Za-z0-9]/.test(prev2)) return tok;
-    // an app price ("US$4.99") stays Latin, as the glossary says; the decimals after the point already do, so the whole
-    // price reads one way (dl1, 2026-10-18: the old card showed "$۲.99"). History's "$10,000" isn't marked US$ and still turns.
+    // an app price ("US$4.99") stays Latin so the whole price reads one way; an unmarked "$10,000" still turns
     if (all.slice(Math.max(0, at - 3), at) === "US$") return tok;
     if (PHONE.test(tok) && !PAGEWORD.test(all.slice(Math.max(0, at - 14), at))) return tok;
     return tok.replace(/\d/g, (d) => D[+d]);
   });
 }
-// ar (wave arlang1): a Latin abbreviation that ends in a period (A.A., N.A., C.M.A., A.A.W.S.) inside Arabic text shows as
-// ".A.A": the bidi algorithm gives the last period to the right-to-left run. A left-to-right mark (U+200E) after it keeps
-// the period with its letters. Added here, at build time, so translators never type direction marks (GLOSSARY.md).
-// Only ar, so fa's pages keep their bytes. Way back: delete LRM_AFTER and its use in localText.
+// ar: a Latin abbreviation ending in a period (A.A., N.A., A.A.W.S.) inside Arabic text shows as ".A.A", because the
+// bidi algorithm gives the last period to the right-to-left run. A left-to-right mark (U+200E) after it keeps the period
+// with its letters, added at build time. fa is left out.
 const LRM_AFTER = { ar: true };
 const lrm = (s, lang) => (LRM_AFTER[lang] ? s.replace(/(?<![A-Za-z.])((?:[A-Z]\.){2,})(?!\u200e)/g, "$1\u200e") : s);
-// a number range ("pp. 44–57", "7:00–8:30") in right-to-left text shows reversed (57–44): the dash is neutral, so
-// the two numbers take the paragraph's direction. A left-to-right mark either side of an en/em dash between two digits
-// keeps the range in reading order (CEO langs-1 on site #89, from helang1's checker 11-09). fa is left out so its bytes
-// stay (its digits are Persian and it was never reported); the wave that merges second keeps every key. Way back: delete
-// RANGE_LRM and its use in localText.
+// a number range ("pp. 44–57", "7:00–8:30") in right-to-left text shows reversed (57–44): the dash is neutral. A
+// left-to-right mark either side of an en/em dash between two digits keeps the range in reading order. fa is left out.
 const RANGE_LRM = { ar: true };
 const ranges = (s, lang) => (RANGE_LRM[lang] ? s.replace(/(\d)\u200e?([\u2013\u2014])\u200e?(?=\d)/g, "$1\u200e$2\u200e") : s);
 export const localText = (s, lang) => ranges(lrm(localDigits(swapArrows(s), lang), lang), lang);

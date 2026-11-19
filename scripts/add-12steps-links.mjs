@@ -1,11 +1,8 @@
 #!/usr/bin/env node
 /**
- * WO-einstein-max-reach Phase 6 — wire /12-steps/ into the site:
- *  1. Add "The 12 Steps" to the main nav (after Daily Reflection) on every
- *     page that carries the shared nav. Idempotent.
- *  2. Add a "Go deeper" chip to the 12 step-guide pages linking /12-steps/.
- *  3. Add /12-steps/ to sitemap.xml (after the aa-info entry).
- * Node (not PowerShell) for byte-faithful UTF-8.
+ * Adds /12-steps/ to the main nav (after Daily Reflection) on every page with the
+ * shared nav, a "Go deeper" chip on the 12 step-guide pages, and /12-steps/ to
+ * sitemap.xml. Idempotent.
  */
 import { readdirSync, readFileSync, writeFileSync, statSync } from "node:fs";
 import path from "node:path";

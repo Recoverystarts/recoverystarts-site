@@ -161,7 +161,14 @@
   </div></nav>
 
 
-  <main id="main">
+  <!-- Raptive in-content ads (CEO window 2026-11-18, todo raptive-incontent-finder; meeting-finder #1066/#1072 did the finder's
+       own pages): Raptive's Content unit places ads only after a child of `.dr-wrap > .container` (not h1-h3; the first 3
+       skipped on desktop, 2 on a phone). <main> is that .dr-wrap, and the container's children are grouped so an ad can only
+       land after the first six fellowship cards, after the last three, or after the crisis box: never between the heading,
+       the two doors, the holiday box and the four fellowships we list, and never inside a card grid (each group is its own
+       grid). Six and three fill whole rows at 1, 2 and 3 columns (280px cards), so the cards sit exactly where they did.
+       Way back: git revert. -->
+  <main id="main" class="dr-wrap">
     <div class="container">
       <div class="page-head">
         <h1 class="eyebrow">AA meeting finder</h1>
@@ -169,7 +176,7 @@
         <p class="standfirst">Every fellowship below is free to attend, and nobody will ask you to sign anything. The first four open our own live meeting listings — every meeting those fellowships publish, on one map. The rest open that fellowship's own finder.</p>
       </div>
 
-      <section>
+      <section style="padding-bottom:0">
         <a href="/meetings/find/" class="fade-in" style="display:flex;align-items:center;gap:14px;padding:18px 22px;margin-bottom:26px;border:1px solid rgba(45,212,191,.45);border-radius:14px;background:rgba(45,212,191,.08);text-decoration:none">
           <span style="font-size:1.6rem" aria-hidden="true">🗺️</span>
           <span><strong style="color:var(--accent)">Open the Meetings Map</strong><br>
@@ -193,7 +200,9 @@
             <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">C.M.A. meetings on the holidays:</span> <a href="/meetings/cma/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/cma/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/cma/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/cma/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/cma/holidays/new-years-day/">New Year's Day</a></p>
             <p style="margin:6px 0 0;font-size:.92rem;line-height:1.8"><span style="color:var(--ink-dim)">C.A. meetings on the holidays:</span> <a href="/meetings/ca/holidays/thanksgiving/">Thanksgiving</a> · <a href="/meetings/ca/holidays/christmas-eve/">Christmas Eve</a> · <a href="/meetings/ca/holidays/christmas-day/">Christmas Day</a> · <a href="/meetings/ca/holidays/new-years-eve/">New Year's Eve</a> · <a href="/meetings/ca/holidays/new-years-day/">New Year's Day</a></p>
         </section>
-        <div class="meetings-grid">
+      </section>
+
+      <div class="meetings-grid">
           <a href="/meetings/aa/" class="meeting-card fade-in">
             <div class="meeting-card-icon">🔺</div>
             <div class="meeting-card-body">
@@ -247,7 +256,8 @@
             </div>
             <span class="meeting-card-arrow">→</span>
           </a>
-
+      </div>
+      <div class="meetings-grid" style="margin-bottom:clamp(2.5rem, 6vw, 5rem)">
           <a href="https://recoverydharma.org/meetings/" target="_blank" rel="noopener" class="meeting-card fade-in">
             <div class="meeting-card-icon">☸️</div>
             <div class="meeting-card-body">
@@ -274,8 +284,7 @@
             </div>
             <span class="meeting-card-arrow">→</span>
           </a>
-        </div>
-      </section>
+      </div>
 
       <section>
         <div class="crisis-box fade-in" style="text-align: center;">

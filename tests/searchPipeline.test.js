@@ -56,7 +56,7 @@ describe("searchKnowledge (app's big-book-knowledge.ts)", () => {
   });
 });
 
-describe("composeResults — WO verification queries", () => {
+describe("composeResults — verification queries", () => {
   it("'step 12': Step card (pp.89-103) leads; quick-card page 60 deduped out of full text", () => {
     const rs = compose("step 12");
     expect(rs[0]).toMatchObject({ type: "Step", title: "Step 12", page: "89-103" });

@@ -1,11 +1,6 @@
-# Daily Traditions — APPROVED SOURCE (GATE 2)
+# Daily Traditions — source
 
-Derick-approved readings. This file is the source of truth for what the site renders,
-and it lives IN THE REPO so the build can verify itself without any external drive.
-
-Reconstructed from data/traditions-daily.json, which parse-traditions.js proved is a
-verbatim copy of the original PILOT-T7-month.md (every field checked as an exact
-substring before writing).
+The readings the site renders, written from data/traditions-daily.json by scripts/vendor-source.js.
 
 ---
 

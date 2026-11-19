@@ -1,12 +1,7 @@
 """
 extract-pamphlets.py — turn the A.A. pamphlet PDFs into searchable text.
 
-A source we cannot grep is a source we cannot quote. Every quotation in the
-readings has to be checkable, character for character, against the real text —
-that's what scripts/audit-readings.js does, and it fails the build otherwise.
-
-So the pamphlets we're allowed to quote have to exist as plain text next to the
-books.
+Writes plain text next to the books, for the quote gate (scripts/audit-readings.js).
 """
 import glob
 import os

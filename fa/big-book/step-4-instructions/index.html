@@ -103,16 +103,15 @@
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;left:16px;top:50%;transform:translateY(-50%);margin:0}
-/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
-   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
-   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+/* a translated menu's words are longer than English's: on a desktop the bar may use the screen up to 70px from each
+   edge, with a slightly tighter gap and 0.84rem words, so the full bar fits from 1366px wide */
 @media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-right:auto;margin-left:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);right:0;left:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 4px 0 0;padding:2px 14px 2px 0;border-right:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
-/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+/* the offer: one closable line under the menu, in the reader's own language, when their browser's language has
    this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
 .rs-offer{position:fixed;top:var(--nav-height);right:0;left:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
 .rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}

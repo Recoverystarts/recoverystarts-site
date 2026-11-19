@@ -5,6 +5,7 @@
  * Crawls all HTML on disk, collects internal hrefs (skipping externals,
  * anchors-only, tel:, mailto:, and Cloudflare's email-protection stubs), and
  * verifies each target exists.
+ *
  * Usage: node scripts/check-links.js
  */
 const fs = require("fs");

@@ -1,8 +1,8 @@
-# Dutch glossary — the words every nl runner uses the same way
+# Dutch glossary — the site's words, the same way everywhere
 
-*Started 2026-10-17 by prep window prep1-nl (research only; the CEO window checks it before any runner sees it). Standard written Dutch (Standaardnederlands) that reads naturally in the Netherlands and in Flanders, plain and warm. The reader is **je/jij**, lower case (see "Form of address"). Where Dutch-speaking A.A. prints its own Dutch, we use it word for word; the source is in brackets. **[ours]** marks a wording Dutch A.A. hasn't published online: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s Dutch (Narcotics Anonymous' Basic Text or pamphlets) and never the Twelve Steps and Twelve Traditions** («Twaalf Stappen en Twaalf Tradities», "the 12 and 12"), even if you know them.*
+*Standard written Dutch (Standaardnederlands) that reads naturally in the Netherlands and in Flanders, plain and warm. The reader is **je/jij**, lower case (see "Form of address"). Where Dutch-speaking A.A. prints its own Dutch, we use it word for word; the source is in brackets. **[ours]** marks a wording Dutch A.A. hasn't published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Dutch (Narcotics Anonymous' Basic Text or pamphlets) and never the Twelve Steps and Twelve Traditions** («Twaalf Stappen en Twaalf Tradities», "the 12 and 12"), even if you know them.*
 
-## Sources (checked 2026-10-17, all read directly on the publisher's own URL)
+## Sources (all read directly on the publisher's own URL)
 - **[AA NL]** — aa-nederland.nl, the site of AA Nederland (Stichting, ANBI; Algemeen Diensten Bureau, Rotterdam): `/wat-is-aa/de-12-stappen/` (Steps; also the Serenity Prayer), `/wat-is-aa/de-12-tradities/` (Traditions, short form, with its opening line), `/wat-is-aa/de-12-concepten/` (Concepts, **long** form, «Copyright © 1996 Stichting Publiciteit AA Nederland», see the warning under Concepts), `/wat-is-aa/`, `/informatie/over-aa/`, `/informatie/over-aa/hoe-het-werkt/`, `/informatie/over-aa/aa-herstelprogramma/`, `/informatie/algemeen/afkortingen/` (service abbreviations), `/vragen-en-antwoorden/` (a long Q&A, the Dutch "44 Questions" text).
 - **[AA NL shop]** — aa-nederland.nl/webshop, read through the shop's own product feed (`/wp-json/wc/store/v1/products`): book and pamphlet titles and their descriptions.
 - **[AA VL]** — aa-vlaanderen.be (aavlaanderen.org redirects there), the site of AA Vlaanderen (Algemeen Dienstbeheer van de Nederlandstalige AA in België vzw, ALDINEA-BEL vzw, Berchem-Antwerpen): `/wat-is-aa/`, `/hoe-werkt-het/`, `/voor-wie-is-aa/`, `/ik-heb-een-probleem/`, `/12-stappen/` (a **paraphrase**, not the Steps), `/12-tradities/` (behind a member login: not readable).
@@ -18,9 +18,8 @@
 - **Capitals are kept for God** (God, Hij, Hem, Zijn, U, Uw) — that's how the Steps and Traditions print it («zoals wij Hem begrepen», «Zijn wil», «zoals Hij zich openbaart»). Our prose never capitalises je/jij.
 - **Gender:** Dutch rarely needs it with je. Where a sentence needs a person, use **iemand**, **AA'ers**, plural forms, or «hij of zij» only where AA does («geen greep meer heeft op zijn of haar drinken» [AA NL, /wat-is-aa/]). No slashes («hij/zij», «alcoholist(e)») in prose.
 
-## How to write a segment
+## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Dutch needs. Don't type HTML.
-- `node scripts/i18n/check.mjs nl <your-batch>` = 0 problems (the wave taught the scripts Dutch).
 - **AA, not A.A.:** Dutch A.A. writes **AA** with no periods [AA NL and AA VL everywhere]. Compounds take a hyphen: **AA-lid, AA-groep, AA-bijeenkomst, AA-programma, AA-literatuur, AA-lidmaatschap** [AA NL, Traditions 3, 6, 7]. A member is **een AA'er**, plural **AA'ers** (with the apostrophe; AA prints ’) [AA NL, /wat-is-aa/; AA VL]. The fellowship as subject is singular: «Anonieme Alcoholisten heeft geen mening» [AA NL, Tradition 10], «AA staat open voor…» [AA VL]. Keep the periods only in English proper names: A.A. World Services, Inc.; A.A. Grapevine, Inc.; A.A.W.S.
 - **Quotes:** “…” (curly double) for quotations, as AA Nederland prints them («“God, geef mij de Kalmte…”» [AA NL, Steps page]; «“Het Grote Boek van de Anonieme Alcoholisten” en “Twaalf Stappen en Twaalf Tradities”» [AA NL, Traditions page]); a quote inside a quote: ‘…’. Never straight "…" in Dutch prose. Book titles: in <i>…</i> where the English has it, otherwise “…”.
 - **Dashes:** the en dash with spaces « – » between clauses, as A.A. does (Step 1 «alcohol – dat ons leven», Tradition 5 «hoofddoel – haar boodschap»). Ranges without spaces: 1937–1950, blz. 58–59.
@@ -38,8 +37,8 @@
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «Link kopiëren», both of them, and leave every other character exactly as it is.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-17, each on the service's own site):
+## Crisis lines
+What's true (each on the service's own site):
 - **Netherlands — 113 Zelfmoordpreventie, 113**: for people thinking about suicide; **call free on 113, 24 hours a day; chat at 113.nl, open day and night**; anonymous and confidential [113.nl/heb-je-nu-hulp-nodig/hulplijn: «Je kan ons gratis bellen via 113. We staan 24 uur per dag voor je klaar», «De chat is dag en nacht geopend», «Ben je in levensgevaar? Bel meteen 112»]. The phone number works **only from within the Netherlands**; from abroad, chat [113.nl/english]. «Most of the times, we can offer help in English as well» [113.nl/english]. Deaf, hard-of-hearing or speech-impaired: Teletolk with Dutch Sign Language, Mon–Fri 8:00–19:00 [113.nl/teletolk].
 - **Netherlands — 112**, alarmnummer, for life-threatening emergencies (police, fire, ambulance) [rijksoverheid.nl, «Wanneer kan ik alarmnummer 112 bellen?»; 113.nl: «Ben je in levensgevaar? Bel meteen 112»]. (112.nl itself was blocked by this session's network proxy, so the government page stands in for it.)
 - **Belgium — Zelfmoordlijn 1813**: **call 1813, 24/7; chat every day 17:00–24:00, Wednesdays 12:00–24:00; e-mail answered within 5 working days**; every contact anonymous and free [zelfmoord1813.be: «Elk gesprek is anoniem en gratis», «Bel 1813 · 24/7 bereikbaar», «Chat · Elke dag van 17u tot 00u, woensdag van 12u tot 00u», «Mail · Antwoord binnen 5 werkdagen»].
@@ -66,7 +65,7 @@ So on an nl page **never write "bel of sms 988" alone** — a Dutch speaker who 
 | not medical advice | dit is geen medisch advies |
 | treatment / treatment center / rehab | behandeling / behandelcentrum (verslavingskliniek) / afkickkliniek [ours] |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link). Every crisis/988/detox/withdrawal segment is read by the super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link).
 
 ## Fellowships and books
 | English | Dutch |
@@ -210,7 +209,7 @@ Opening line (it introduces both forms): «Onze AA ervaring heeft ons geleerd da
 11. Ons beleid ten aanzien van publiciteit is meer gebaseerd op aantrekkingskracht dan op reclame; tegenover de pers, radio en televisie moeten wij altijd onze persoonlijke anonimiteit handhaven.
 12. Anonimiteit is de geestelijke grondslag van al onze Tradities; deze herinnert ons eraan dat principes voorrang hebben boven persoonlijke belangen.
 
-One correction: AA Nederland's page spells Tradition 2's word «authoriteit»; the Dutch word is **autoriteit**, and we print it so (a one-letter slip, not a different wording; noted in PREP-NOTES for the CEO window). Everything else as printed, including Tradition 11's «televisie» where the English has "films". Where the English bolds the first half of a Tradition (`<0>…</0>`), cut the Dutch at the matching point; `i18n/nl/core.json` (the /aa-info/ page) has all twelve already cut — copy them.
+One correction: AA Nederland's page spells Tradition 2's word «authoriteit»; the Dutch word is **autoriteit**, and we print it so (a one-letter slip, not a different wording). Everything else as printed, including Tradition 11's «televisie» where the English has "films". Where the English bolds the first half of a Tradition (`<0>…</0>`), cut the Dutch at the matching point; `i18n/nl/core.json` (the /aa-info/ page) has all twelve already cut — copy them.
 
 ### Where the two differ (for the record; never quote AA Vlaanderen's in an nl page)
 AA Vlaanderen's Informatiemap (pp. 14–15, 18) prints an older translation, e.g. Step 1 «We hebben toegegeven dat wij machteloos stonden tegenover alcohol», Step 2 «Wij zijn gaan geloven dat een Macht groter dan wijzelf ons weer geestelijk gezond kon maken», Step 3 «zoals wij persoonlijk Hem opvatten», Step 5 «de juiste aard van onze misstappen»; Tradition 2 «slechts één uiteindelijk gezag – een liefhebbende God zoals Hij zich in ons groepsgeweten kan uiten. Onze leiders zijn slechts dienaren die ons vertrouwen genieten», Tradition 11 «ten aanzien van pers, radio, T.V. en film», Tradition 12 «aan beginselen de voorrang moeten geven boven personen». Its Preamble is the one we use (see below).
@@ -249,7 +248,7 @@ AA Nederland prints the Concepts in their **long** form (aa-nederland.nl/wat-is-
 11. De beheerders moeten steeds de best mogelijke comités, bestuurders van de dienstverlenende corporaties, verantwoordelijke uitvoerders, kader en raadgevers hebben.
 12. De Conferentie zal de geest van de AA-traditie in acht nemen en er grote zorg voor dragen dat zij nooit de zetel van gevaarlijke rijkdom of macht wordt.
 
-Where the /12-concepts/ page quotes more of a Concept than this, translate the rest faithfully yourself [ours] and keep these first sentences. **Don't copy AA Nederland's long-form Concept text into a page**: its page says «Niets uit deze tekst mag worden overgenomen zonder schriftelijke toestemming vooraf van AA Nederland» (an open question for the CEO window, PREP-NOTES). Any "verbatim / A.A.'s official wording" claim about the Concepts gets an honest rewording: «Concept 1 in de bewoording van AA Nederland; de andere in onze vertaling, met de woorden van AA Nederland waar die overeenkomen».
+Where the /12-concepts/ page quotes more of a Concept than this, translate the rest faithfully yourself [ours] and keep these first sentences. **Don't copy AA Nederland's long-form Concept text into a page**: its page says «Niets uit deze tekst mag worden overgenomen zonder schriftelijke toestemming vooraf van AA Nederland». Any "verbatim / A.A.'s official wording" claim about the Concepts gets an honest rewording: «Concept 1 in de bewoording van AA Nederland; de andere in onze vertaling, met de woorden van AA Nederland waar die overeenkomen».
 
 ## Prayers and fixed texts — one wording, everywhere
 - **Serenity Prayer** [AA NL, Steps page: «Traditiegetrouw wordt elke AA-bijeenkomst besloten met de woorden…»]: «God, geef mij de Kalmte om te aanvaarden wat ik niet kan veranderen, Moed om te veranderen wat ik kan veranderen, en Wijsheid om tussen deze twee onderscheid te maken.» (A.A. capitalises Kalmte, Moed, Wijsheid; keep it. AA Nederland's page adds the meeting's closing words «Kom, blijf komen, want je bent er pas als je er niet meer bent.» — they're not part of the prayer; don't append them.)
@@ -263,8 +262,8 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Dutch each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Dutch edition's wording for ordinary quotes.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, 4e editie (Engelstalig), pagina N; eigen vertaling. Een kort citaat, ter herkenning en studie. Lees de hele pagina in je eigen exemplaar →». Keep the English's placeholders around the same words.
 
-## Big Book quotes — look here first (wave svnl1)
-*Added 2026-10-17 by the svnl1 Super (Opus 5.5, Super window). Every English line below was located in Derick's own copy of the 4th edition (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result. Dutch A.A. publishes no Big Book passage online, so every line here is ours.*
+## Big Book quotes — look here first
+*Every English line below was located in the 4th edition text (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result. Dutch A.A. publishes no Big Book passage online, so every line here is ours.*
 
 **The rule, for every Big Book quote in your batch:**
 1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (cut, never reworded, if the English quotes only part of it).
@@ -331,4 +330,4 @@ The site's most-cited pages, for your bearings: 563–566 (long-form Traditions)
 | Not verified yet | Nog niet geverifieerd |
 | email | e-mail |
 
-*— prep1-nl, 2026-10-17. Every quotation above was read on the page named beside it; nothing in the A.A. sections is from memory.*
+*Every quotation above was read on the page named beside it.*

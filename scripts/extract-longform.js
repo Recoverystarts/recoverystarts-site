@@ -2,19 +2,9 @@
 /**
  * extract-longform.js — the Twelve Traditions, straight out of the book.
  *
- * ── WHY WE DON'T USE THE TRUTH PACK FOR THIS ────────────────────────────────
- * The truth pack is a hand-assembled secondary source, and it is abridged in at
- * least one place: its Tradition 9 long form contains a literal "…". Publishing
- * an abridged Long Form AS "the Long Form" would make us the distortion — the
- * precise failure this whole project exists to correct.
- *
- * So we go to the primary source: pages 561–562 (short form) and 563–566 (long
- * form) of Alcoholics Anonymous, 4th Edition, out of the book text itself.
- * Extracted, never retyped, never paraphrased, never remembered.
- *
- * The book's own words on why the long form matters (p.561):
- *   "Because the 'long form' is more explicit and of possible historic value,
- *    it is also reproduced."
+ * Reads pages 561–562 (short form) and 563–566 (long form) of Alcoholics
+ * Anonymous, 4th Edition, out of the book text itself, and asserts nothing is
+ * abridged (no "…").
  *
  * OUTPUT: data/twelve-traditions.json
  * Usage: node scripts/extract-longform.js
@@ -93,7 +83,7 @@ for (let i = 1; i <= 12; i++) {
   longs.push(longRaw.slice(start + String(i).length + 2, end).trim().replace(/\s*\d{3}\s*$/, "").trim());
 }
 
-// ── Assertions: publish nothing we can't stand behind ───────────────────────
+// ── Assertions ──────────────────────────────────────────────────────────────
 const problems = [];
 longs.forEach((t, i) => {
   const n = i + 1;
@@ -104,7 +94,7 @@ longs.forEach((t, i) => {
 shorts.forEach((t, i) => {
   if (!/[.!?]$/.test(t)) problems.push("T" + (i + 1) + " short form does not end in punctuation");
 });
-// The clause the whole mission turns on MUST be present, verbatim, in T3 long.
+// Tradition 3's "no other affiliation" clause, verbatim, in the long form.
 if (!/as a group, they have no other affiliation/.test(longs[2])) {
   problems.push("Tradition 3 long form is MISSING the 'no other affiliation' clause — the extraction is wrong");
 }

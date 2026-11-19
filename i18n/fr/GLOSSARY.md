@@ -1,13 +1,11 @@
-# French glossary — the words every tr3 runner uses the same way
+# French glossary — the site's words, the same way everywhere
 
-*Started 2026-10-12 by wave tr3 S1-fr (the super). Neutral French, the French A.A. World Services publishes (read in Québec, Europe and Africa alike). The reader is **vous**, plain and warm. No Québec-only or France-only slang. Where A.A. prints its own French, we use it word for word; the source is in brackets. **[nôtre]** marks a wording we couldn't find printed by A.A. online: it's ours, fixed here so every page says it the same way. Add to this file through your close (the super merges additions), not by changing it mid-wave. The 12 & 12 (« Les Douze Étapes et les Douze Traditions ») is never a source.*
+*Neutral French, the French A.A. World Services publishes (read in Québec, Europe and Africa alike). The reader is **vous**, plain and warm. No Québec-only or France-only slang. Where A.A. prints its own French, we use it word for word; the source is in brackets. **[nôtre]** marks a wording we couldn't find printed by A.A. online: it's ours, fixed here so every page says it the same way. The 12 & 12 (« Les Douze Étapes et les Douze Traditions ») is never a source.*
 
-Sources checked 2026-10-12: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Concepts), SMF-141FR (Serenity Prayer), SMF-92FR (Preamble), FP-15 (sponsorship), the French Big Book chapters and Appendice I on aa.org (`aa.org/sites/default/files/2021-11/fr_bigbook_*.pdf`), the French Service Manual (FBM-31), aa.org/fr.
+Sources: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Concepts), SMF-141FR (Serenity Prayer), SMF-92FR (Preamble), FP-15 (sponsorship), the French Big Book chapters and Appendice I on aa.org (`aa.org/sites/default/files/2021-11/fr_bigbook_*.pdf`), the French Service Manual (FBM-31), aa.org/fr.
 
-## How to write a segment
-- Write in the placeholder form: keep every `<0>…</0>` pair and `<1/>` the English has, around the words that belong in it, in whatever order French needs. Don't type HTML.
-- `node scripts/i18n/check.mjs fr <your-batch>` must say 0 problems. `node scripts/i18n/score.mjs fr` has a `reg` column (tu/toi/ton/ta/tes/t' slips) — keep it at 0 outside quotes.
-- **Typography:** write « guillemets » for quotes, ’ or ' for the apostrophe, and a normal space before : ; ! ? and inside « ». **The desk turns those spaces into non-breaking ones at merge** (`desk/fix_fr.py`), so don't hunt for special characters. Plain characters are fine (é, à, ç, œ, —, …); `&mdash;`-style entities may stay as they are.
+## Conventions
+- **Typography:** write « guillemets » for quotes, ’ or ' for the apostrophe, and a normal space before : ; ! ? and inside « ». Plain characters are fine (é, à, ç, œ, —, …); `&mdash;`-style entities may stay as they are.
 - **AA, not A.A.:** French A.A. writes **AA** with no periods: « les AA », « des AA », « un membre des AA », « un groupe des AA ». The fellowship is **le Mouvement** (capital M) or « notre association » — never « la Fraternité ». A fellowship in general (NA, GA…) is « une fraternité ».
 - **Register:** vous everywhere. Inclusive spelling (« seul·e ») isn't used; use the masculine generic as A.A.'s French does, or reword to avoid gender. Sponsor in general: « parrain ou marraine » once, then « parrain ».
 - Numbers: 1 234 (space) · 2,99 $ · 19 h 30 · le 18 novembre 1982 · 4e édition · XXe siècle. Months and days lower case in running text (janvier, lundi); a month alone as a label or heading starts with a capital (Janvier).
@@ -17,8 +15,8 @@ Sources checked 2026-10-12: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Co
 - Meta descriptions (the short text Google shows) end on a full sentence, never cut mid-sentence.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-12, each on the service's own site):
+## Crisis lines
+What's true (each on the service's own site):
 - **Canada — 9-8-8, Ligne d'aide en cas de crise de suicide**: call **or text** 988, **in French or English**, 24/7, free. [canada.ca: « peuvent appeler ou envoyer un texto au 988, en anglais ou en français »; 988.ca/fr: « 24/7/365 »]. In Québec, a call to 988 is put through to Québec's own line, **1 866 APPELLE (1 866 277-3553)**; Québec also takes texts at **535353** and chat at suicide.ca [suicide.ca].
 - **USA — 988 Suicide & Crisis Lifeline**: calls, chat and text are in English and Spanish; a **call** gets an interpreter in 240+ more languages, French among them, free. **Text and chat have no interpreter.** [samhsa.gov/mental-health/988/faqs]
 - **France — 3114**, « le numéro national de prévention du suicide », free, 24/7, all of France [3114.fr].
@@ -39,7 +37,7 @@ So on a fr page **never write "appelez ou textez le 988" without "Au Canada"** �
 | not medical advice | ce n'est pas un avis médical |
 | treatment / treatment center | traitement / centre de traitement |
 
-Keep every number in a crisis segment exactly as the English has it, plus the Canada/France lines. Every crisis/988/detox/withdrawal segment is read by the super.
+Keep every number in a crisis segment exactly as the English has it, plus the Canada/France lines.
 
 ## Fellowships and books
 | English | French |

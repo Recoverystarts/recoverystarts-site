@@ -1,20 +1,19 @@
 #!/usr/bin/env node
 /**
- * dt1-build.js — publish January–June Daily Traditions (wave dt1) in one pass.
+ * dt1-build.js — publishes the January–June Daily Traditions in one pass.
  *
  *   HISTORIAN_SOURCES=~/hist node scripts/dt1-build.js [--dry]
  *
- * 1. Reads data/dt1/D-*.md (one file per runner line). A month is published
- *    only when every one of its days is there; otherwise it stays "coming".
- * 2. Folds those months into data/traditions-source.md AND
+ * 1. Reads data/dt1/D-*.md (one file per half-month). A month is published
+ *    only when every one of its days is there; otherwise it shows as "coming".
+ * 2. Folds those months into data/traditions-source.md and
  *    data/readings-source.md, just before July 1 (re-runnable: anything
  *    between the first January–June heading and July 1 is replaced).
  * 3. parse-traditions.js + --verify → data/traditions-daily.json.
  * 4. Renders the day pages and month pages (dt1-render.js, from live pages).
  * 5. refresh-tradition-hub.js (the hub's own copy of every reading), then the
  *    12-month strip on the hub and every month page, and the menu on every
- *    ENGLISH page (es/ and pt/ keep theirs: those languages don't have these
- *    pages yet, and fix-nav.js would stamp English onto them).
+ *    English page (es/ and pt/ keep theirs).
  * 6. "today"'s LIVE list (English only), the sitemap, MONTH_PUBLISHED.
  */
 const fs = require("fs");
@@ -28,7 +27,7 @@ const write = (f, s) => { if (!DRY) fs.writeFileSync(f, s); };
 const NEW_MONTHS = R.MONTHS.slice(0, 6);
 const OLD_MONTHS = R.MONTHS.slice(6);
 
-// ── 1. the runners' files ───────────────────────────────────────────────────
+// ── 1. the half-month files ─────────────────────────────────────────────────
 const dir = rel("data", "dt1");
 const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^D-[a-z]{3}[12]\.md$/.test(f)).sort() : [];
 const all = [];
@@ -106,8 +105,8 @@ const goldOf = (html) => (html.match(/id="month-([a-z]+)" href="[^"]*" style="bo
 for (const f of [rel("daily-tradition", "index.html"), ...LIVE.map((m) => rel("daily-tradition", m, "index.html"))]) {
   if (!fs.existsSync(f)) continue;
   const html = fs.readFileSync(f, "utf8");
-  // #367 (2026-10-23): the hub marks the reader's own current month in the browser (.dt-month.now), so it gets no
-  // baked-in gold; a month page keeps gold on its own month.
+  // The hub marks the reader's own current month in the browser (.dt-month.now), so it gets no baked-in gold;
+  // a month page keeps gold on its own month.
   const isHub = path.basename(path.dirname(f)) === "daily-tradition";
   write(f, R.stampMonthStrip(html, LIVE, isHub ? null : (goldOf(html) || path.basename(path.dirname(f)))));
 }

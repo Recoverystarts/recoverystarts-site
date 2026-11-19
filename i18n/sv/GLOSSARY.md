@@ -1,8 +1,8 @@
-# Swedish glossary — the words every sv runner uses the same way
+# Swedish glossary — the site's words, the same way everywhere
 
-*Started 2026-10-17 by prep window prep1-sv (research only; the CEO window checks it before any runner sees it). Standard written Swedish, plain and warm. The reader is **du**, in **lower case** (see "Form of address"). Where Swedish A.A. (Anonyma Alkoholister i Sverige, aa.se) prints its own Swedish, we use it word for word; the source is in brackets. **[ours]** marks a wording Swedish A.A. hasn't published online: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s Swedish (Anonyma Narkomaner's literature) and never the Twelve Steps and Twelve Traditions** («Tolv steg och tolv traditioner», «AA:s Tolv & Tolv», "the 12 and 12"), even if you know them.*
+*Standard written Swedish, plain and warm. The reader is **du**, in **lower case** (see "Form of address"). Where Swedish A.A. (Anonyma Alkoholister i Sverige, aa.se) prints its own Swedish, we use it word for word; the source is in brackets. **[ours]** marks a wording Swedish A.A. hasn't published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Swedish (Anonyma Narkomaner's literature) and never the Twelve Steps and Twelve Traditions** («Tolv steg och tolv traditioner», «AA:s Tolv & Tolv», "the 12 and 12"), even if you know them.*
 
-## Sources (checked 2026-10-17, all read directly on the publisher's own URL)
+## Sources (all read directly on the publisher's own URL)
 - **[aa.se]** — the site of AA i Sverige: `/aa-tolv-steg/` (Steps), `/aa-tolv-traditioner/` (Traditions, short form), `/aa-tolv-koncept/` (an older Concepts wording; see below), `/om-aa/`, `/om-aa/om-aa-moten/`, `/medlemmar/nyiaa/` («Du som är ny i AA»), `/medlemmar/var-gemensamma-valfard/`, `/medlemmar/aas-struktur-i-sverige/`, `/12-stegsprogrammet/`, `/vanliga-fragor/`, `/hitta-ett-mote/`, `/berattelser/professionella/lakarensasikt/` («Läkarens åsikt», the Doctor's Opinion), `/dagens-reflektion/`, `/aalitteratur/`, `/bokerbjudande/`.
 - **[Kort]** — Swedish A.A.'s printable cards, all linked from aa.se and hosted on its CDN (`aalive.cdn.tankbar.cloud/wp-content/uploads/…`):
   - `2022/10/aas_tolv_steg.pdf` — «AA:s Tolv Steg», «Tryckt med tillstånd av A.A. World Service, Inc», AA i Sverige 2017-06-22;
@@ -30,7 +30,7 @@
 - **Gender:** Swedish verbs and adjectives mostly don't need it. Where a pronoun for "the member/the newcomer" can't be avoided, use **«han eller hon»**, as Swedish A.A. does («fråga om han eller hon vill vara din sponsor» [aa.se `/medlemmar/nyiaa/`]), or reword with «den som …». Don't use «hen» (A.A.'s Swedish doesn't) and no slashes («han/hon») in our prose (the Servicehandbok uses them; we don't).
 - «Vi» for the fellowship's voice, as A.A. does («Vi vet hur jobbigt eller skämmigt det kändes» [aa.se]).
 
-## How to write a segment
+## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Swedish needs. Don't type HTML. Then `node scripts/i18n/check.mjs sv <your-batch>` = 0 problems.
 - **Quotes:** Swedish ”…” — the **same** right double quote (”) at both ends, as Swedish A.A. prints it («en traditionsenlig ”beslutanderätt”» [Servicehandbok]; «kapitlet ”Hur det fungerar”» [Pamphlets, AA-gruppen]). A quote inside a quote: ’…’ (right single quote both ends). Never "…" or “…” or «…» in Swedish prose. Apostrophes in names stay: Claude's Lab.
 - **Dashes:** the en dash with spaces « – » between clauses, as A.A. prints it (Step 1 «maktlösa inför alkoholen – att våra liv»). Ranges with no spaces: 1937–1950, s. 58–59, kapitel 7–11.
@@ -50,8 +50,8 @@
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «Kopiera länk», both of them, and leave every other character exactly as it is.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-17):
+## Crisis lines
+What's true:
 - **Sweden — 112**, the emergency number (ambulance, police, fire, and the on-call priest, «jourhavande präst», for someone in crisis at night). [1177.se, `/Stockholm/sjukdomar--besvar/psykiska-sjukdomar-och-besvar/sjalvmordstankar/till-dig-som-har-sjalvmordstankar/`: «Om du mår så dåligt att situationen känns outhärdlig eller om du har planer på att ta ditt liv ska du söka vård genast på en psykiatrisk akutmottagning eller ringa 112. Genom 112 kan du få kontakt med exempelvis ambulans, polis, räddningstjänst, giftinformationscentral eller jourhavande präst. Du som inte pratar svenska kan få hjälp med tolkning på ditt språk.»] **Not read on SOS Alarm's own site** (sosalarm.se blocks automated visitors with a Cloudflare check; see PREP-NOTES).
 - **Sweden — Självmordslinjen, 90101**, run by the association Mind, for anyone who doesn't want to live any more or is worried about someone close; **call or chat** (chat at mind.se). [1177.se, `/Stockholm/liv--halsa/psykisk-halsa/att-soka-stod-och-hjalp/rad-och-stod-pa-chatt-och-telefon-vid-psykisk-ohalsa-och-beroende/`: «Självmordslinjen drivs av föreningen Mind … Du som känner att du inte vill leva längre eller har någon närstående du är orolig för kan ringa eller chatta. … Telefon: 901 01»; and the page above: «Mind Självmordslinjen, chatt via mind.se eller på telefon 90101.»] **Not read on mind.se itself** (Cloudflare check). Its **hours and cost are not confirmed**: don't write «dygnet runt» or «gratis» about 90101.
 - **Sweden — 1177**, the national health-advice line, **24 hours a day** (it's the regions' health service; the name «1177 Vårdguiden» is retired, it's just «1177»). [1177.se: «Ring telefonnummer 1177 för sjukvårdsrådgivning dygnet runt.»; `/hitta-vard/kontaktkort/1177-pa-telefon/`: «Telefonnummer 1177 … Dygnet runt» every day.] Use it for detox, withdrawal and "see a doctor" segments, not as a suicide line.
@@ -77,7 +77,7 @@ So on an sv page **never write «ring eller sms:a 988» alone** — a Swedish sp
 | not medical advice | inga medicinska råd / det här är inte medicinsk rådgivning |
 | treatment / treatment center / rehab | behandling / behandlingshem [aa.se: «AA driver inte behandlingshem»] |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link). Every crisis/988/detox/withdrawal segment is read by the super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link).
 
 ## Fellowships and books
 | English | Swedish |
@@ -275,8 +275,8 @@ The Servicehandbok prints Concept 4 as «”rätt tillmedbestämmande”» — a
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Swedish each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Swedish edition's wording for ordinary quotes. (The /index.html p. 417 line is in core.json, [ours].)
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, 4:e utg. (engelska), sidan N; egen översättning. Ett kort citat, för igenkänning och studium. Läs hela sidan i ditt eget exemplar →». For a line from the cards or aa.se above, «svenska AA:s lydelse» in place of «egen översättning». Keep the English's placeholders around the same words.
 
-## Big Book quotes — look here first (wave svnl1)
-*Added 2026-10-17 by the svnl1 Super (Opus 5.5, Super window). Every English line below was located in Derick's own copy of the 4th edition (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result.*
+## Big Book quotes — look here first
+*Every English line below was located in the 4th edition text (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result.*
 
 **The rule, for every Big Book quote in your batch:**
 1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (cut, never reworded, if the English quotes only part of it).

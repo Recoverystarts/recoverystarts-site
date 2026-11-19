@@ -42,11 +42,7 @@ const MAP_FILE = path.join(HIST, "ocr-repairs.json");
 if (!fs.existsSync(MAP_FILE)) {
   throw new Error(
     `OCR repair map missing: ${MAP_FILE}\n` +
-      `The quote audit cannot run without it.\n` +
-      `Restore it with:\n` +
-      `  cd C:\\Users\\addic\\recovery-einstein\n` +
-      `  git show origin/fix/ocr-corpus-repairs:historian-sources/ocr-repairs.json > historian-sources/ocr-repairs.json\n` +
-      `(that branch is not merged to main, which is why the file can go absent)`
+      `The quote audit cannot run without it (it is historian-sources/ocr-repairs.json in recovery-einstein).`
   );
 }
 

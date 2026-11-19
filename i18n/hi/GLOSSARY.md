@@ -1,10 +1,10 @@
-# Hindi glossary — the words every hi runner uses the same way
+# Hindi glossary — the site's words, the same way everywhere
 
-*Started 2026-10-17 by prep window prep1-hi (research only; nothing here has shipped). Standard written Hindi in Devanagari, plain and warm, the Hindi an Indian A.A. member reads, not Sanskritised officialese. The reader is **आप** (see "Form of address"). Where an A.A. body prints its own Hindi, we use it word for word; the source is in brackets. **[ours]** marks a wording no A.A. body has published online: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s Hindi and never the Twelve Steps and Twelve Traditions** (the "12 & 12"; A.A.W.S. sells a Hindi edition, HINDB-15), even if you know them.*
+*Standard written Hindi in Devanagari, plain and warm, the Hindi an Indian A.A. member reads, not Sanskritised officialese. The reader is **आप** (see "Form of address"). Where an A.A. body prints its own Hindi, we use it word for word; the source is in brackets. **[ours]** marks a wording no A.A. body has published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Hindi and never the Twelve Steps and Twelve Traditions** (the "12 & 12"; A.A.W.S. sells a Hindi edition, HINDB-15), even if you know them.*
 
 > **Read this first.** No A.A. body publishes the Hindi **Steps, Traditions, Concepts, Serenity Prayer, Third or Seventh Step prayer** online (searched 2026-10-17; see Sources). A.A. India prints them in its Hindi literature, but nothing of it is online. So every one of those texts below is **[ours]**, a faithful translation of A.A.'s English. Never call them "A.A.'s Hindi" or "A.A.'s own wording", and say so honestly on any page that claims "word for word" (wording under each section). The CEO window decides before the wave whether to ship ours or get A.A. India's printed wording first (PREP-NOTES.md, "The open decision").
 
-## Sources (checked 2026-10-17, all read directly on the publisher's own URL)
+## Sources (all read directly on the publisher's own URL)
 - **[aapune]** — A.A. Pune Region's site, `aapune.org`, linked from A.A. India's own site (`aagsoindia.org/events`). It carries a Hindi version of its pages (the `data-hi` text behind its हिंदी switch): `/about-aa` (the Preamble, "What is AA?", "How AA Works", the history of A.A. in India, the General Service Office), `/am-i-an-alcoholic` (self-assessment intro), and `/static/schedule.js` (its Hindi interface words: weekdays, सुबह/दोपहर/शाम, and the rule *"Marathi conventionally uses Devanagari digits; Hindi and English use Latin ones"*). This is the **only A.A. Hindi online** we could find. It is a regional A.A. body's own website Hindi, not A.A. India's printed literature. We use it for vocabulary, form of address, digits and dates, and we print its Preamble as it stands (below).
 - **[GSO India]** — General Service Office of A.A. India, `aagsoindia.org`. Every page was read (about 70, from its sitemap) and **none has Devanagari text**. The site is English only. `/about` says GSO India translates Conference-approved literature into Indian languages (Hindi among them; A.A.W.S.'s Box 459, Aug–Sept 2001, also lists Hindi among the languages GSO India prints). Its 38 PDFs are government permission letters, not literature.
 - **[aa.org store]** — A.A.W.S.'s literature store (`onlineliterature.aa.org`), searched for "Hindi": two items only. HINDB-15 *Twelve Steps and Twelve Traditions* (never a source) and HINDP-44 *A.A.'s Legacy of Service* (print only, no text online). aa.org itself has no Hindi pages.
@@ -19,9 +19,8 @@
 - **Gender:** prefer forms that don't need it («आप पढ़ सकते हैं» is unavoidable; fine). Where a form must take a gender, use the **masculine generic**, as A.A. Pune does («आप अकेले नहीं हैं»). No slashes («करता/करती») in prose. The prayers are in the first person masculine («मैं प्रार्थना करता हूँ»), as most Hindi prayer cards are; keep it.
 - The registers to avoid: «तुम», «तू», «श्रीमान/श्रीमती» for the reader. `score.mjs hi` doesn't exist yet; the wave teaches it the तुम/तू/तेरा/तुम्हारा forms (PREP-NOTES).
 
-## How to write a segment
+## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Hindi needs (Hindi is verb-final: «<0>Recovery Einstein</0> से मिलें»). Don't type HTML.
-- `node scripts/i18n/check.mjs hi <your-batch>` = 0 problems, once the wave has added `hi` to `scripts/i18n/lib.mjs` LANGS.
 - **Script:** Devanagari, Unicode, with **nukta** where standard Hindi writes it: ज़रूरत, ज़िंदगी, फ़ोन, फ़रवरी, ख़तरा, ग़लती, क़ानूनी, बाक़ी, नुक़सान [aapune: फ़ोटोकॉपी, अख़बार, फ़रवरी, स्टाफ़, काफ़ी]. **Chandrabindu** where it belongs: हूँ, यहाँ, कहाँ, पहुँचना, जाएँ, परंपराएँ (not हूं, यहां). Use the conjuncts as typed by a normal Hindi keyboard; don't hunt for special characters.
 - **Full stop: the danda «।»**, never a Latin "." at the end of a Hindi sentence. ? ! , ; : — as in English. A sentence that ends in Latin (a URL, a brand) still takes «।»: «aa.org पर जाएँ।»
 - **Quotes:** “…” (curly double), and ‘…’ inside them [aapune: “Alcoholics Anonymous” नामक पुस्तक; ‘हाँ’ या ‘नहीं’]. Never "…" (ASCII) or «…» in Hindi prose.
@@ -41,8 +40,8 @@
 - **Fonts and italics:** Devanagari has no true italic; a browser's slanted Devanagari looks broken. Where the English uses `<i>` for a book title, keep the placeholder, and the wave's CSS sets Devanagari upright (PREP-NOTES, "Font").
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-17, each on the service's own site):
+## Crisis lines
+What's true (each on the service's own site):
 - **India — Tele MANAS, 14416 or 1-800-891-4416**, the national tele-mental-health helpline of the Ministry of Health and Family Welfare. **Toll-free, 24/7**, by **phone call** (also the Tele MANAS app, which links to the same number); counsellors answer "based on your region and corresponding choice of language", **20 Indian languages**; it lists "cigarette, alcohol and other such substances" and addiction among what it helps with, and suicidal ideas among what it screens for [telemanas.mohfw.gov.in: the site's own text, `assets/i18n/en.json`: «Dial the Toll-Free numbers below», «A toll-free, 24/7 helpline number (14416)», «Tele MANAS is a 24/7 on-demand service available free of cost… available in 20 Indian languages»; numbers as the site prints them: `phoneNumber:"1-800 891 4416", phoneNumbertwo:14416`]. Hindi is the site's own second language; the phone service's 20 languages aren't listed one by one on the pages we could read, so write «20 भारतीय भाषाओं में» if you name languages, not «हिंदी में». It's an IVRS line with a call-back (a recorded menu first, then a counsellor). Name: the site prints **Tele MANAS**. We write it **टेली मानस** in Hindi prose [ours, the transliteration].
   - Note for the desk: the site sends an incomplete TLS chain (the Sectigo DV R36 intermediate is missing), so plain `curl` fails. We verified it by adding that intermediate, checked against Mozilla's CCADB list, never by turning verification off.
 - **India — 112**, the single emergency number (Emergency Response Support System, ERSS) "for reporting and addressing all kinds of emergencies", dispatching "Police / Health / Fire / Disaster / Women / Children / Railways"; reachable by voice call, SMS, SOS and more [Ministry of Home Affairs, `गृहमंत्रालय.सरकार.भारत/en/commoncontent/emergency-response-support-system-erss` (the IDN of mha.gov.in), «ONE INDIA ONE EMERGENCY NUMBER 112»]. 112.gov.in itself didn't answer from here (connection reset, 2026-10-17); the Ministry that runs it is the source. Use 112 only for a threat to life or an emergency.
@@ -68,7 +67,7 @@ So on a hi page **never write "988 पर कॉल या टेक्स्ट
 | not medical advice | यह चिकित्सा सलाह नहीं है |
 | treatment / treatment center / rehab | इलाज / ट्रीटमेंट सेंटर (नशा-मुक्ति केंद्र) / रिहैब |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link; add no link to 14416, since there's no placeholder for it). Every crisis/988/detox/withdrawal segment is read by the super. `i18n/hi/core.json` has the three footer/home/app crisis segments already written this way: copy them.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link; add no link to 14416, since there's no placeholder for it). `i18n/hi/core.json` has the three footer/home/app crisis segments already written this way: copy them.
 
 ## Fellowships and books
 | English | Hindi |
@@ -254,8 +253,8 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, चौथा संस्करण (अंग्रेज़ी), पृष्ठ N; हमारा अनुवाद। पहचान और अध्ययन के लिए एक छोटा-सा उद्धरण। पूरा पृष्ठ अपनी प्रति में पढ़ें →». Keep the English's placeholders around the same words.
 
-## Big Book quotes — look here first (wave hi1)
-*Added 2026-10-18 by the hi1 Super (Opus 5.5). There is no Hindi Big Book online, so every line here is **[ours]**, translated once, faithfully and close to the English, so that every runner writes the same Hindi for the same passage. Each English line below was pulled by script from Derick's own copy of the 4th edition (Recoverystarts/aa-library `big-book/text/`), and its page was found the same way.*
+## Big Book quotes — look here first
+*There is no Hindi Big Book online, so every line here is **[ours]**, translated once, faithfully and close to the English, so that every runner writes the same Hindi for the same passage. Each English line below was pulled by script from Derick's own copy of the 4th edition (Recoverystarts/aa-library `big-book/text/`), and its page was found the same way.*
 
 **The rule, for every Big Book quote in your batch:**
 1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly. If the English quotes only part of a passage, cut the Hindi at the matching sentence or clause; never reword it.

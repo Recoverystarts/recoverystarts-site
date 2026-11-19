@@ -110,7 +110,7 @@ for (const rel of Object.keys(pageIds)) {
     if (rel === "index.html") html = html.replace(/(<div class="book-body">[\s\S]*?<\/p>\s*<p>[\s\S]*?<\/p>)/, (m) => `${m}\n              ${p}`);
     else html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
   }
-  if (H1_FONT[lang]) html = html.replace(/(<link rel="preload" as="font" type="font\/woff2" href=")\/assets\/fonts\/fraunces-latin\.woff2(" crossorigin>)(<!--[^>]*-->)?/, (m, a, b) => `${a}/assets/fonts/${H1_FONT[lang]}${b}<!-- the headline's font, fetched with the stylesheet so the h1 paints once (claude-home #496) -->`);
+  if (H1_FONT[lang]) html = html.replace(/(<link rel="preload" as="font" type="font\/woff2" href=")\/assets\/fonts\/fraunces-latin\.woff2(" crossorigin>)(<!--[^>]*-->)?/, (m, a, b) => `${a}/assets/fonts/${H1_FONT[lang]}${b}<!-- the headline's font, fetched with the stylesheet so the h1 paints once -->`);
   if (langCss) html = html.replace(/(<link rel="stylesheet" href="\/style\.css[^"]*">)/i, (m) => `${m}\n  <link rel="stylesheet" href="${langCss}">`);
   // the head: language, direction, canonical, alternates, og
   const url = `${SITE}/${lang}${urlOf(rel)}`;

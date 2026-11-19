@@ -484,8 +484,8 @@ for (const f of files) {
       const eng = ruEnglish(st);
       if (fa || dig) { r.dia++; r.usted++; flag(id, fa ? "Persian letter or ZWNJ (Arabic writes ي ك ة, no half-space)" : `digit «${dig[0]}»: Arabic here writes Western 0–9`); }
       if (punct || q) { r.dia++; r.usted++; flag(id, punct ? `Latin "${punct[0].trim()}" between Arabic words (، ؛ ؟)` : "quote marks: Arabic uses «…»"); }
-      if (kafil) { r.usted++; flag(id, `«${kafil[0]}»: sponsor is «المرشد» (CHECKED-ar #3)`); }
-      if (c988) { r.usted++; flag(id, "988: say it by call, US apart from Canada, with the interpreter (GLOSSARY crisis table); never by text"); }
+      if (kafil) { r.usted++; flag(id, `«${kafil[0]}»: sponsor is «المرشد»`); }
+      if (c988) { r.usted++; flag(id, "988: say it by call, US apart from Canada, with the interpreter (GLOSSARY crisis table)"); }
       if (eng.length) { r.english++; flag(id, `English left: ${eng.join(" ")}`); }
     }
     if (lang === "tr" && !code) {
@@ -497,7 +497,7 @@ for (const f of files) {
       if (adim) { r.usted++; flag(id, `«${adim[0]}»: a Step is «basamak»`); }
       if (asc || apo || q) { r.dia++; r.usted++; flag(id, asc ? `ASCII-ized: «${asc[0]}» (ç ğ ı ö ş ü)` : apo ? `ASCII apostrophe: …${apo[0]}… (’)` : "quote marks: Turkish uses “…” (‘…’ inside)"); }
       if (sp || allah) { r.usted++; flag(id, sp ? "«sponsor» (A.A. Türkiye says «rehber»)" : "«Allah» (the site says «Tanrı»)"); }
-      if (c988) { r.usted++; flag(id, "988: by call, in the US (ABD), with a Turkish interpreter; Canada «tercüman bulunabilir»; never by text"); }
+      if (c988) { r.usted++; flag(id, "988: by call, in the US (ABD), with a Turkish interpreter; Canada «tercüman bulunabilir»"); }
     }
     if (lang === "pl" && !code) {
       const bare = strip(t).match(PL_BARE) ?? [];
@@ -515,7 +515,7 @@ for (const f of files) {
 
 rows.sort((a, b) => a.score - b.score);
 const pad = (s, n) => String(s).padEnd(n), lp = (s, n) => String(s).padStart(n);
-console.log(`${lang}: ${rows.length} file(s)${useBranches ? ` from origin/${pre}* branches` : ""}, weakest first. A low score is where a checker reads first.\n`);
+console.log(`${lang}: ${rows.length} file(s)${useBranches ? ` from origin/${pre}* branches` : ""}, weakest first.\n`);
 console.log(pad("line", 9) + pad("batch", 20) + lp("score", 6) + lp("done", 12) + lp("tags", 6) + lp("same", 6) + lp("engl", 6) + lp("short", 6) + lp("nums", 6) + lp(lang === "es" ? "usted" : "reg", 6) + "  glossary");
 for (const r of rows) console.log(pad(r.line, 9) + pad(r.batch, 20) + lp(r.err ? "ERR" : r.score, 6) + lp(`${r.done}/${r.n}`, 12) + lp(r.tags, 6) + lp(r.same, 6) + lp(r.english, 6) + lp(r.short, 6) + lp(r.numbers, 6) + lp(r.usted, 6) + "  " + r.glossary + (r.err ? `  (${r.err})` : ""));
 if (outAt) { writeJson(path.resolve(ROOT, outAt), report); console.log(`\nflagged segments → ${outAt}`); }

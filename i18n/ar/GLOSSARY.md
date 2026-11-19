@@ -1,8 +1,8 @@
 # Arabic glossary: the words every ar runner uses the same way
 
-*Started 2026-11-09 by prep-ar (wave langs). Modern Standard Arabic (الفصحى), plain and warm, readable from Morocco to Oman. No Egyptian or Gulf dialect in the copy. The reader is addressed as **أنت**, masculine singular as the generic form (لستَ وحدك، اتصل، اقرأ), the way A.A.'s own Arabic pages do it (AA in Amman: «إذا كنت تشرب الكحول أكثر مما تنوي…»). Where A.A. publishes its own Arabic online, we use it word for word and cite it in brackets. **[ours]** marks wording A.A. hasn't published online. It's ours, fixed here so every page says it the same way. Add to this file at your close (`unsure:`), not mid-wave. **Never N.A.'s Arabic** (زمالة المدمنين المجهولين literature, the "blue book"; it fills the first page of Arabic search results) **and never the book Twelve Steps and Twelve Traditions** (the "12 & 12"), even if you know them. No machine translation.*
+*Modern Standard Arabic (الفصحى), plain and warm, readable from Morocco to Oman. No Egyptian or Gulf dialect in the copy. The reader is addressed as **أنت**, masculine singular as the generic form (لستَ وحدك، اتصل، اقرأ), the way A.A.'s own Arabic pages do it (AA in Amman: «إذا كنت تشرب الكحول أكثر مما تنوي…»). Where A.A. publishes its own Arabic online, we use it word for word and cite it in brackets. **[ours]** marks wording A.A. hasn't published online. It's ours, fixed here so every page says it the same way. Add to this file at your close (`unsure:`), not mid-wave. **Never N.A.'s Arabic** (زمالة المدمنين المجهولين literature, the "blue book"; it fills the first page of Arabic search results) **and never the book Twelve Steps and Twelve Traditions** (the "12 & 12"), even if you know them. No machine translation.*
 
-## Sources (checked 2026-11-09, plain curl with a recoverystarts.com user-agent)
+## Sources (plain curl with a recoverystarts.com user-agent)
 - **[M]** Middle East Regional Committee of Alcoholics Anonymous, **mercaa.com** (members: Abu Dhabi, Al Ain, Bahrain, Dubai, Egypt, Jordan, Kuwait, Lebanon, Oman, Qatar, Ras Al Khaimah, Saudi Arabia, Sharjah). `/anonymity-statement/` prints the **A.A. Preamble in Arabic** («مقدمة زمالة مدمني الكحول المجهولين — طُبعت بتصريح من صحيفة The AA Grapevine, Inc») and the fellowship's name «زمالة مدمني الكحول المجهولين». Everything else on the site is English.
 - **[J]** AA in Amman, **aainamman.org** (an A.A. site in Jordan; its Arabic pages are local translations of A.A.W.S. leaflets). It is **not** marked Conference-approved, so it's usable for vocabulary and as a source of quoted lines, never called "official":
   - `/malwmat-an-mnzmh-mdmny-alkhwl-almjh`: «معلومات عن منظمة مدمني الكحول المجهولين», a translation of A.A.W.S. leaflet F-2 *Information on A.A.* (its English original is the PDF MERCAA links).
@@ -14,7 +14,7 @@
 
 **Which wording, and why.** The fellowship's name: A.A.'s own, «مدمنو الكحول المجهولون» (the Arabic Big Book's title [S]; [M]; [J]). The Preamble: [M]'s, word for word. The Steps, both forms of the Traditions, the Concepts, the prayers and Big Book quotes: **[ours]**, translated once from the English 4th Edition, as wave hi1 did for Hindi (build.mjs "our translation" + `ar_ours_note`). When ARABB-30's wording is in hand, swap it into this file and core.json, and set `OURS_NOTE.ar` to false.
 
-## How to write a segment
+## Conventions
 - Keep every `<0>…</0>` and `<1/>` the English has, around the words that belong inside, in whatever order Arabic needs. Don't type HTML or direction marks (no U+200F/U+202B; the page is `dir="rtl"`).
 - **Letters: Arabic only.** ي ك ى ة (U+064A, U+0643, U+0649, U+0629). **Never Persian ی ک ۀ (U+06CC, U+06A9, U+06C0) and no ZWNJ (U+200C).** That is the reverse of fa: copying a fa line or running fa's desk fixer (`desk/fix_fa.py`, which turns ي→ی) breaks ar. Hamza as standard: أ إ آ ؤ ئ ء.
 - **Tashkeel (vowel marks):** none, except a shadda or tanween where a word would be misread (التوقُّف, لستَ). Tanween fatha on the alef: «مجانًا»، «دائمًا» (not «مجاناً»).
@@ -51,7 +51,7 @@ So on an ar page **never write "call or text 988" alone.** Egypt first, then Nor
 | not medical advice | ليست نصيحة طبية |
 | treatment / treatment center / rehab | العلاج / مركز علاج / مركز إعادة تأهيل |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988). Every crisis/988/detox/withdrawal segment is read by the super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988).
 
 ## Fellowships and books
 | English | Arabic |
@@ -194,7 +194,7 @@ All twelve, cut to the sentences the English page has, are in `i18n/ar/core.json
 - **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, the same Arabic each time the same English line returns in your batch (search your file first).
 - A quote's credit line: "Alcoholics Anonymous, 4th Edition, page N. A short quotation, for identification and study. Read the whole page in your own copy →" becomes «<0>Alcoholics Anonymous</0> (الكتاب الكبير)، الطبعة الإنجليزية الرابعة، الصفحة N؛ ترجمتنا. اقتباس قصير، للتعريف والدراسة. <1>اقرأ الصفحة كاملة في نسختك →</1>». Keep the English's placeholders. *(Super, 2026-11-09, check-Ar-05 F1: «ترجمة حرة» means "free/loose translation"; the credit says «ترجمتنا», as core 96327e987d94 does.)*
 
-## Big Book quotes — look here first (wave arlang1)
+## Big Book quotes — look here first
 *Added 2026-11-09 by the arlang1 Super (Opus 5.5), on the model of wave hi1. A.A.W.S. prints the Big Book in Arabic (ARABB-30) but no text is online, so every line here is **[ours]**, translated once, faithfully and close to the English, so that every runner writes the same Arabic for the same passage. The one exception is the Promises: AA in Amman's local Arabic [J], as the glossary chose. The English lines are the ones the hi1 Super pulled by script from Derick's own copy of the 4th edition (Recoverystarts/aa-library `big-book/text/`), with the page found the same way; they are the lines the site quotes most.*
 
 **The rule, for every Big Book quote in your batch:**

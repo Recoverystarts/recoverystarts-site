@@ -82,7 +82,7 @@ Keep every number in a crisis segment exactly as the English has it, plus the Ca
 | Appendices | Appendices |
 | Chapter 3 – More About Alcoholism | Chapitre 3 – Autres données sur l'alcoolisme (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[nôtre]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[nôtre]**, the same each time it comes back.
 
 ## Program words
 | English | French |
@@ -181,7 +181,7 @@ Use A.A.'s French, cut to the sentences the English page has (the English site p
 - **Seventh Step prayer** (English p. 76) [French Big Book, « À l'œuvre ! »]: « Mon Créateur, je suis maintenant disposé à ce que Vous preniez tout ce que je suis, bon ou mauvais. Je Vous demande d'ôter de moi chacun des défauts qui m'empêche de Vous être utile, à Vous et à mes semblables. Accordez-moi la force de faire Votre volonté à partir de maintenant. Ainsi soit-il. »
 - **The A.A. Preamble** [SMF-92FR]: « Les Alcooliques anonymes sont une association de personnes qui partagent entre elles leur expérience, leur force et leur espoir dans le but de résoudre leur problème commun et d'aider d'autres alcooliques à se rétablir. Le désir d'arrêter de boire est la seule condition pour devenir membre des AA. Les AA ne demandent ni cotisation ni droit d'entrée ; nous nous finançons par nos propres contributions. Les AA ne sont associés à aucune secte, confession religieuse ou politique, à aucun organisme ou établissement ; ils ne désirent s'engager dans aucune controverse ; ils n'endossent et ne contestent aucune cause. Notre but premier est de demeurer abstinent et d'aider d'autres alcooliques à le devenir. »
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (traduction libre), and use the same French each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the French edition's wording for ordinary quotes — one rule for everyone keeps the pages even.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (traduction libre), and use the same French each time the same English line comes back. Don't go looking for the French edition's wording for ordinary quotes — one rule for everyone keeps the pages even.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes « <i>Alcoholics Anonymous</i>, 4e édition (en anglais), page N ; traduction libre. Une courte citation, à des fins d'identification et d'étude. Lisez la page entière dans votre propre exemplaire → ». Keep the English's placeholders around the same words.
 
 ## Site words

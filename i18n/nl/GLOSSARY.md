@@ -118,7 +118,7 @@ Dutch A.A. names one chapter online («Hoe het werkt», AA VL shop: «Uit: “He
 | Appendices / Appendix I – The A.A. Tradition / II Spiritual Experience / III The Medical View on A.A. / IV The Lasker Award / V The Religious View on A.A. / VI How to Get in Touch with A.A. / VII Twelve Concepts | Bijlagen / Bijlage I – De AA-Traditie / II Spirituele ervaring / III De medische kijk op AA / IV De Lasker-prijs / V De religieuze kijk op AA / VI Contact opnemen met AA / VII De Twaalf Concepten [ours] |
 | Chapter 3 – More About Alcoholism | Hoofdstuk 3 – Meer over alcoholisme (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | Dutch |
@@ -231,7 +231,7 @@ Neither AA Nederland nor AA Vlaanderen publishes the long form online (it's in t
 
 Tradition 3's clause, quoted all over the site: **“op voorwaarde dat zij als groep geen andere binding hebben”**. Tradition 6's: «Een AA-groep kan zich aan niemand binden», «mag die samenwerking nooit zo ver gaan dat ze een binding of een steunbetuiging wordt, werkelijk of gesuggereerd». Where the English splits a long-form Tradition into several segments, split the Dutch at the matching sentence.
 
-**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): in Dutch that would be untrue for the long form. Say what's true, in the same place: «De korte formule in de bewoording van AA Nederland (aa-nederland.nl), de lange formule in onze eigen vertaling — beide uit <i>Alcoholics Anonymous</i>, 4e editie (Engelstalig): korte formule blz. 561–562, lange formule blz. 563–566.» («korte/lange formule» is A.A.'s Dutch: «De 7e traditie (De lange formule)» [AA NL shop].) Keep the English's placeholders and page numbers; the rest of the sentence (published unaltered, cited) is translated as it stands. Note it in your close.
+**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): in Dutch that would be untrue for the long form. Say what's true, in the same place: «De korte formule in de bewoording van AA Nederland (aa-nederland.nl), de lange formule in onze eigen vertaling — beide uit <i>Alcoholics Anonymous</i>, 4e editie (Engelstalig): korte formule blz. 561–562, lange formule blz. 563–566.» («korte/lange formule» is A.A.'s Dutch: «De 7e traditie (De lange formule)» [AA NL shop].) Keep the English's placeholders and page numbers; the rest of the sentence (published unaltered, cited) is translated as it stands.
 
 ## The Twelve Concepts, short form — AA Nederland's sentences where they match, the rest ours
 AA Nederland prints the Concepts in their **long** form (aa-nederland.nl/wat-is-aa/de-12-concepten/). The English site prints the short form (first sentence only for 7–12). Concept 1 is AA Nederland's sentence word for word; 2–12 are **ours**, built from AA Nederland's own phrases (marked in core.json's /aa-info/ segments) and its terms (Algemene Dienstenconferentie, Algemene Dienstenraad, beheerders, “Beslissingsrecht”, “Deelnemingsrecht”, “Recht op beroep”). All twelve are in `i18n/nl/core.json` (the /aa-info/ page) — use exactly those sentences wherever a Concept is quoted:
@@ -259,18 +259,15 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 - **The Promises** (pp. 83–84) **[ours]**: «Als we in deze fase van onze ontwikkeling nauwgezet te werk gaan, zullen we versteld staan nog voor we halverwege zijn. We zullen een nieuwe vrijheid en een nieuw geluk leren kennen. We zullen geen spijt hebben van het verleden en er ook niet de deur voor willen sluiten. We zullen het woord kalmte begrijpen en we zullen vrede kennen. Hoe diep we ook gezonken zijn, we zullen zien hoe onze ervaring anderen tot nut kan zijn. Dat gevoel van nutteloosheid en zelfmedelijden zal verdwijnen. We zullen onze belangstelling voor zelfzuchtige dingen verliezen en belangstelling krijgen voor onze medemensen. Eigenbelang zal wegglijden. Onze hele houding en kijk op het leven zullen veranderen. Angst voor mensen en voor financiële onzekerheid zal ons verlaten. We zullen intuïtief weten hoe we situaties moeten aanpakken die ons vroeger in verwarring brachten. We zullen plotseling beseffen dat God voor ons doet wat we zelf niet konden. Zijn dit overdreven beloften? Wij denken van niet. Ze gaan onder ons in vervulling – soms snel, soms langzaam. Ze zullen altijd werkelijkheid worden als we ervoor werken.» ("serenity" is «kalmte», as in A.A.'s Gebed om Kalmte.)
 - p. 164 "the Road of Happy Destiny" → «de Weg naar een Gelukkige Bestemming» [ours].
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Dutch each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Dutch edition's wording for ordinary quotes.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Dutch each time the same English line comes back. Don't go looking for the Dutch edition's wording for ordinary quotes.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, 4e editie (Engelstalig), pagina N; eigen vertaling. Een kort citaat, ter herkenning en studie. Lees de hele pagina in je eigen exemplaar →». Keep the English's placeholders around the same words.
 
-## Big Book quotes — look here first
+## Big Book quotes
 *Every English line below was located in the 4th edition text (Recoverystarts/aa-library, `big-book/text/`) and its page checked by script; the page given is that check's result. Dutch A.A. publishes no Big Book passage online, so every line here is ours.*
 
-**The rule, for every Big Book quote in your batch:**
-1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (cut, never reworded, if the English quotes only part of it).
-2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase a quote, never shorten it, never "improve" it. Then list its id in your close under `unsure:` as **`BBQ <id>`**. Checkers read every BBQ; the Super reads every BBQ.
-3. **Same line, same Dutch**: before you write a quote, search your own file for it; if you've written it once, copy it.
-4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know it. Never swap in Dutch page numbers (see "Page references").
-5. Never call one of these «de Nederlandse tekst van AA»: the credit line says «eigen vertaling» (see the credit-line rule above).
+**Conventions for Big Book quotes:**
+- Never take wording from the Twelve Steps and Twelve Traditions or from N.A., even if you know it. Never swap in Dutch page numbers (see "Page references").
+- Never call one of these «de Nederlandse tekst van AA»: the credit line says «eigen vertaling» (see the credit-line rule above).
 
 **Fixed (credit «eigen vertaling»):**
 | p. | English | Dutch |

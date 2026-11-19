@@ -107,7 +107,7 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 | Appendices / Appendix I – The A.A. Tradition / II Spiritual Experience / III The Medical View on A.A. / IV The Lasker Award / V The Religious View on A.A. / VI How to Get in Touch with A.A. / VII The Twelve Concepts | Anhänge / Anhang I – Die Traditionen der AA-Gemeinschaft / II – Die spirituelle Erfahrung / III – Die AA-Gemeinschaft aus der Sicht von Ärzten / IV – Der Lasker-Preis / V – Die AA-Gemeinschaft aus der Sicht von Geistlichen / VI – Wie man mit den Anonymen Alkoholikern in Verbindung kommt / VII – Die Zwölf Konzepte [BB's titles; the English book's Roman numbering, because we cite the English pages] |
 | Chapter 3 – More About Alcoholism | Kapitel 3 – Mehr über Alkoholismus (same pattern for every chapter) |
 
-Any other personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+Any other personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | German |
@@ -277,7 +277,7 @@ The site quotes the Big Book on almost every page (each `/big-book/page-N/` page
    | Appendices: Spiritual Experience (567–568) / Medical View / Lasker / Religious View | bb74 / bb75 / bb76 / bb77 | 427– |
 
    If you find it, copy A.A.'s German **exactly** (only the part the English quotes; fix nothing; „…“ around it as the English has quotes) and credit it as below with «Übersetzung der deutschsprachigen AA (Blaues Buch, S. N)», N = the German page. Where A.A.'s German is missing, or so free that it doesn't carry what the English page then discusses, the site's own translation is credited «eigene Übersetzung».
-3. **Quotes from the other personal stories** (most of pp. 171–561 are not in the German book), from pamphlets or Grapevine: translate faithfully yourself, «eigene Übersetzung», and use the same German each time the same English line comes back in your batch (search your file before you write it again).
+3. **Quotes from the other personal stories** (most of pp. 171–561 are not in the German book), from pamphlets or Grapevine: translate faithfully yourself, «eigene Übersetzung», and use the same German each time the same English line comes back.
 4. **The credit line.** "— <0>Alcoholics Anonymous</0>, 4th Edition, page N. A short quotation, for identification and study. <1>Read the whole page in your own copy →</1>" becomes «— <0>Alcoholics Anonymous</0>, 4. Auflage (englisch), Seite N; eigene Übersetzung. Ein kurzes Zitat, zum Wiedererkennen und Studieren. <1>Lesen Sie die ganze Seite in Ihrem eigenen Exemplar →</1>», and for A.A.'s German «…, Seite N; Übersetzung der deutschsprachigen AA (Blaues Buch, S. 98). Ein kurzes Zitat, …». Keep the English's placeholders around the same words; N stays the English page.
 
 ## Site words

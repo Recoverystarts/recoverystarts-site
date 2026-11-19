@@ -31,7 +31,7 @@
 - **Never ты** (ты, тебя, тебе, тобой, твой, твоя, твоё, твои) for the reader, except inside a Big Book quote that has it. Never «Вы» capitalised mid-sentence.
 - **Buttons and menu links: the infinitive**, as aarussia.ru's own buttons are («Найти группу», «Узнать больше», «Заказать литературу», «Пройти тест», «Узнать подробнее об АА»): «Найти собрание», «Читать сегодня →», «Открыть карту». **Sentences that ask the reader to do something: the вы-imperative** («Позвоните», «Напишите нам», «Пройдите небольшой тест» [aarussia]). Never the ты-imperative («позвони», «читай»).
 - **God:** «Бог», capital, with capital pronouns «Он, Его, Ему, Им, Нём» and «Тебе, Ты, Твой» in prayers [aarussia Steps: «Богу, как мы Его понимали»; bb2025 throughout]. "Higher Power" → **«Высшая Сила»**, both capitals [aarussia store, the Big Book's product page: «доверии к Высшей Силе»; bb2025 p. 43: «Она должна исходить от Высшей Силы»]. Step 2's phrase: «Сила более могущественная, чем мы» [aarussia; `/chto-na-sobranii` writes «Сила, более могущественная, чем мы», with the comma].
-- `score.mjs ru` doesn't exist yet; the wave teaches it (PREP-NOTES, "What the wave teaches the scripts").
+- `score.mjs ru` doesn't exist yet; the wave teaches it.
 
 ## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Russian needs. Don't type HTML.
@@ -53,7 +53,7 @@
 - Watch for lost negatives: «не», «ни… ни», «никогда не», «никакой… не», «за исключением». A dropped «не» turns a Tradition upside down (Tradition 6 «никогда не следует поддерживать…», 9 «никогда не следует обзаводиться…», 10 «не придерживается… не следует вовлекать»). Russian double negatives are right: «никогда ни с кем не».
 - Meta descriptions (the short text Google shows) end on a full sentence and a full stop, never cut mid-sentence. Russian runs about 15% longer than English: keep titles and buttons short; prefer the shorter of two right words.
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «Копировать ссылку», both of them, and leave every other character exactly as it is.
-- **Italics:** Cyrillic has true italics in the fonts proposed (PREP-NOTES, "Font"); keep `<i>` placeholders where the English has them.
+- **Italics:** Cyrillic has true italics in the fonts proposed; keep `<i>` placeholders where the English has them.
 - Translate it yourself; no Google, Yandex, DeepL or other machine translation.
 
 ## Crisis lines
@@ -133,7 +133,7 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 | Appendices / I The A.A. Tradition / II Spiritual Experience / III The Medical View on A.A. / IV The Lasker Award / V The Religious View on A.A. / VI How to Get in Touch With A.A. / VII Twelve Concepts (Short Form) | Приложения / I. Традиции АА / II. Духовный опыт / III. Взгляд медиков на АА / IV. Премия Ласкера / V. Взгляд представителей религий на АА / VI. Как связаться с АА / VII. 12 Концепций (краткая форма) |
 | Chapter 3 – More About Alcoholism | Глава 3. И снова об алкоголизме (same pattern for every chapter) |
 
-A personal story's English title (other than Dr. Bob's): translate it faithfully **[ours]**, the same each time it comes back in your batch.
+A personal story's English title (other than Dr. Bob's): translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | Russian |
@@ -205,9 +205,9 @@ Use it word for word wherever a Step appears; a Step quoted in part uses these w
 11. Стремились путём молитвы и размышления углубить соприкосновение с Богом, как мы понимали Его, молясь лишь о знании Его воли, которую нам надлежит исполнить, и о даровании силы для этого.
 12. Достигнув духовного пробуждения, к которому привели эти шаги, мы старались донести смысл наших идей до других алкоголиков и применять эти принципы во всех наших делах.
 
-**On the /12-steps/ page** (and anywhere the English says the Steps are "word for word, exactly as they appear in the Big Book, pp. 59–60"): in Russian that would be half true. These are A.A. Russia's published Steps, but the refined Big Book ([bb2025], p. 59) words them differently, and the 1989 printed book isn't online to compare. Say what's true, in the same place: «Двенадцать шагов — в том виде, в каком их публикует АА России (aarussia.ru; брошюра «Вопросы новых членов», © A.A.W.S.). Английский текст — <i>Alcoholics Anonymous</i>, 4-е издание, стр. 59–60.» Keep the English's placeholders and page numbers. Note it in your close.
+**On the /12-steps/ page** (and anywhere the English says the Steps are "word for word, exactly as they appear in the Big Book, pp. 59–60"): in Russian that would be half true. These are A.A. Russia's published Steps, but the refined Big Book ([bb2025], p. 59) words them differently, and the 1989 printed book isn't online to compare. Say what's true, in the same place: «Двенадцать шагов — в том виде, в каком их публикует АА России (aarussia.ru; брошюра «Вопросы новых членов», © A.A.W.S.). Английский текст — <i>Alcoholics Anonymous</i>, 4-е издание, стр. 59–60.» Keep the English's placeholders and page numbers.
 
-For the CEO window only (not for runners): [bb2025] chapter 5 words the Steps differently, e.g. Step 1 «…признали, что наша жизнь стала неуправляемой», Step 4 «Провели тщательную и бесстрашную нравственную инвентаризацию самих себя», Step 12 «Испытав духовное пробуждение в результате выполнения этих шагов, мы старались нести это послание алкоголикам…». The Working Group's cover letter says spreading its Step wording to other literature is "outside the competence of the Working Group". If A.A. Russia later adopts it, the swap is mechanical (PREP-NOTES).
+For the CEO window only (not for runners): [bb2025] chapter 5 words the Steps differently, e.g. Step 1 «…признали, что наша жизнь стала неуправляемой», Step 4 «Провели тщательную и бесстрашную нравственную инвентаризацию самих себя», Step 12 «Испытав духовное пробуждение в результате выполнения этих шагов, мы старались нести это послание алкоголикам…». The Working Group's cover letter says spreading its Step wording to other literature is "outside the competence of the Working Group". If A.A. Russia later adopts it, the swap is mechanical.
 
 ## The Twelve Traditions, short form — A.A. Russia's wording [aarussia `/12shagov`]
 Where the English bolds the first half of a Tradition (`<0>…</0>`), cut the Russian at the matching point. T5's «всё ещё» is the pamphlet's spelling (the web page has «все еще»).
@@ -241,7 +241,7 @@ The refined translation's text, word for word (the English: Big Book pp. 563–5
 
 Tradition 3's clause, quoted all over the site ("provided that, as a group, they have no other affiliation"), is the end of T3 above: take the exact words from T3 by script. Where the English splits a long-form Tradition into several segments, split the Russian at the matching sentence.
 
-**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): say what's true, in the same place: «Краткая форма — в том виде, в каком её публикует АА России (aarussia.ru); развёрнутая форма — по уточнённому русскому переводу книги «Анонимные Алкоголики», который публикует АА России (второе русское издание, 2025; ещё на рассмотрении у A.A.W.S.); Традиция 2 совпадает с началом краткой формы и дана словами АА России. Английский текст — <i>Alcoholics Anonymous</i>, 4-е издание: краткая форма — стр. 561–562, развёрнутая — стр. 563–566.» Keep the English's placeholders and page numbers. Note it in your close.
+**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): say what's true, in the same place: «Краткая форма — в том виде, в каком её публикует АА России (aarussia.ru); развёрнутая форма — по уточнённому русскому переводу книги «Анонимные Алкоголики», который публикует АА России (второе русское издание, 2025; ещё на рассмотрении у A.A.W.S.); Традиция 2 совпадает с началом краткой формы и дана словами АА России. Английский текст — <i>Alcoholics Anonymous</i>, 4-е издание: краткая форма — стр. 561–562, развёрнутая — стр. 563–566.» Keep the English's placeholders and page numbers.
 
 ## The Twelve Concepts, short form — [bb2025], Appendix VII, «ДВЕНАДЦАТЬ КОНЦЕПЦИЙ (краткая форма)»; Concept 1 [aarussia]
 The English site prints the short form as in the Big Book's Appendix VII; [bb2025] prints it with Roman numerals and says the short form was approved by the General Service Conference in 1971. Use exactly these sentences wherever a Concept is quoted; `i18n/ru/core.json` (/aa-info/) has all twelve. (aarussia `/obsluzhivanie/12principovaa` prints the long form in an older translation: not used for the short form.) **Concept 1** is A.A. Russia's own sentence, not [bb2025]'s: its English short and long forms are identical, and [aarussia] `/obsluzhivanie/12principovaa` prints the long-form Concepts, so Concept 1 is copied from there word for word (with its «Товарищества», A.A. Russia's word in that text).
@@ -269,16 +269,13 @@ Any "verbatim / A.A.'s official wording" claim about the Concepts: «по уто
 - **The A.A. Preamble** [aarussia `/aboutaa`; the same on the home page and the [manual]'s first page; «© AA Grapevine, Inc. Перепечатано с разрешения»]: «Анонимные Алкоголики — это Содружество, объединяющее мужчин и женщин, которые делятся друг с другом своим опытом, силами и надеждами с целью помочь себе и другим избавиться от алкоголизма. Единственное условие для членства в АА — это желание бросить пить. Члены АА не платят ни вступительных, ни членских взносов. Мы сами себя содержим благодаря нашим добровольным пожертвованиям. АА не связано ни с какой сектой, вероисповеданием, политическим направлением, организацией или учреждением; стремится не вступать в полемику по каким бы то ни было вопросам, не поддерживает и не выступает против чьих бы то ни было интересов. Наша главная цель — оставаться трезвыми и помочь другим алкоголикам обрести трезвость.» (We write « — » where the page has a hyphen or en dash between words, and leave out the ® after the name: typography only, the words are the page's.) It follows the older English wording ("a fellowship of **men and women**"), where today's English says "people". Use it wherever the English quotes the Preamble; where the English's point is the word "people" itself, say once: «(в нынешнем английском тексте — people, «люди»)».
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 
-## Big Book quotes — look here first (prep-ru round 3, from [bb2025] by script)
+## Big Book quotes (from [bb2025])
 *Filled 2026-11-01T21:57Z by prep-ru round 3, at rulang1-super's ask (radio 21:52Z), on the row set every language uses (i18n/ja/GLOSSARY.md's 29 rows: 24 passages, 5 pointers). Each Russian passage is [bb2025] **exactly as printed**, pulled by script from the PDF's text layer (`pdftotext`; line-end hyphens rejoined, compound hyphens kept: «кем-либо», «как-нибудь»), never retyped. The page is the English 4th edition's; inside a chapter the refined text's own page can differ by one. The Super re-checks every row against the PDF by script at S1. Rows marked ⚑ word the passage differently from the English in a way a reader who knows the English may notice: they are listed for the Super, who may put [ours] in their place (the credit line then says «перевод наш»).*
 
-**The rule, for every Big Book quote in your batch:**
-1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, copy these words by script; if the English quotes only part of it, cut the Russian at the matching sentence or clause; never reword it.
-2. **If it isn't here**, take it from [bb2025] itself (the PDF above), matched by script to the English page, and list the id under `unsure:` as `BBQ <id>`. If [bb2025] doesn't have it (the personal stories after Dr. Bob's: the refined PDF ends there), translate the English faithfully yourself, list it as `BBQ-ours <id>`, and its credit line says «перевод наш». Never take a line from memory or from the 1989 translation you may know.
-3. **Same line, same Russian:** before you write a quote, search your own file for it.
-4. A Step inside a quote (pp. 59–60) is A.A. Russia's published Step (the Steps section above), not [bb2025]'s chapter 5 wording.
-5. **Name it truthfully:** «уточнённый перевод, который публикует АА России (2025)»; never "A.A.'s Russian Big Book", "the official translation" or «официальный перевод». Where the English says a quote is "word for word" or "exactly as the book states it", use the credit line's words.
-6. Set inside our own «…», a passage's own «…» become „…“ («Многие из нас восклицали: „Что за режим!…“»).
+**Conventions for Big Book quotes:**
+- A Step inside a quote (pp. 59–60) is A.A. Russia's published Step (the Steps section above), not [bb2025]'s chapter 5 wording.
+- **Name it truthfully:** «уточнённый перевод, который публикует АА России (2025)»; never "A.A.'s Russian Big Book", "the official translation" or «официальный перевод». Where the English says a quote is "word for word" or "exactly as the book states it", use the credit line's words.
+- Set inside our own «…», a passage's own «…» become „…“ («Многие из нас восклицали: „Что за режим!…“»).
 
 | p. | English | Russian [bb2025], exactly as printed | note |
 |---|---|---|---|

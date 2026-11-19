@@ -93,7 +93,7 @@ A's Persian Big Book isn't online; only one chapter title is printed by A elsewh
 | Appendix I – The A.A. Tradition … VII – Twelve Concepts | پیوست ۱ – سنت AA؛ ۲ – تجربهٔ روحانی؛ ۳ – دیدگاه پزشکی؛ ۴ – جایزهٔ لاسکر؛ ۵ – دیدگاه مذهبی؛ ۶ – راه تماس؛ ۷ – دوازده مفهوم |
 | Chapter 3 – More About Alcoholism | فصل ۳ – بیشتر دربارهٔ الکلیسم (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | Persian |
@@ -201,7 +201,7 @@ B's Persian, with its typing slips corrected (C2 «علمی» → «عملی»; 
 - **Seventh Step prayer** (English p. 76) [A, «دعاهای قدم هفتم»]: «آفریدگارا، من اکنون آماده‌ام که تمام خوب و بد وجودم را به تو بسپارم. تمنا دارم یک‌یک نقص‌های درونم را که سد راه خدمت به تو و همنوعان من است برطرف کنی، و قدرتی عطا فرمایی تا از این پس به خدمت تو کمر بندم. آمین.»
 - **The A.A. Preamble** [A, `/fa/about-us/definition`]: «الکلی‌های گمنام انجمن افرادی است که تجربه، نیرو و امید خود را با یکدیگر مشارکت می‌کنند تا شاید بتوانند مشکل مشترکشان را حل کنند و دیگران را نیز در بهبودی از بیماری الکلیسم یاری دهند. تنها لازمهٔ عضویت، تمایل به توقف نوشیدن الکل است. در الکلی‌های گمنام حق عضویت و یا پرداختی وجود ندارد؛ ما از طریق کمک‌های داوطلبانهٔ خودمان خودکفا هستیم. الکلی‌های گمنام با هیچ فرقهٔ مذهبی، سیاسی، سازمان و یا نهادی پیوستگی ندارد و مایل به موضع‌گیری در مباحث و مشاجرات نیست و هیچ موضوعی را رد یا قبول نمی‌کند. هدف اصلی ما هوشیاری و کمک به دیگر الکلی‌هاست تا به هوشیاری برسند.»
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (ترجمهٔ آزاد), and use the same Persian each time the same English line comes back in your batch (search your file before you write it again). One rule for everyone keeps the pages even.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (ترجمهٔ آزاد), and use the same Persian each time the same English line comes back. One rule for everyone keeps the pages even.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quotation, for identification and study. Read the whole page in your own copy →" becomes «<0>الکلی‌های گمنام</0> (کتاب بزرگ)، ویرایش چهارم انگلیسی، صفحهٔ N؛ ترجمهٔ آزاد. نقل‌قولی کوتاه، برای شناخت و مطالعه. <1>کل صفحه را در نسخهٔ خودتان بخوانید →</1>». Keep the English's placeholders around the same words.
 
 ## Site words

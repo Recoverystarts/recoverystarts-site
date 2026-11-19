@@ -136,7 +136,7 @@ JUNAAB prints the Concepts in its Manual de Serviço (since the 9th edition, 201
 - **Third Step prayer** (English p. 63) **[nossa]**: "Deus, eu me ofereço a Ti, para que edifiques comigo e faças comigo o que quiseres. Liberta-me da escravidão do ego, para que eu possa cumprir melhor a Tua vontade. Afasta minhas dificuldades, para que a vitória sobre elas seja testemunho, para aqueles a quem eu possa ajudar, do Teu Poder, do Teu Amor e do Teu modo de vida. Que eu possa sempre fazer a Tua vontade!"
 - **Seventh Step prayer** (English p. 76) **[nossa]**: "Meu Criador, estou agora disposto a que Tu tenhas tudo de mim, o bom e o mau. Peço que agora removas de mim cada um dos defeitos de caráter que me impedem de ser útil a Ti e aos meus semelhantes. Dá-me forças, ao sair daqui, para cumprir a Tua vontade. Amém."
 - A prayer quoted in part uses these words, cut ("Deus, eu me ofereço a Ti, para que edifiques comigo e faças comigo o que quiseres"; "Meu Criador, estou agora disposto a que Tu tenhas tudo de mim, o bom e o mau").
-- Any other line the English quotes from the Big Book: translate it faithfully, and use the same Portuguese each time the same English line comes back in your batch (search your file before you write it again).
+- Any other line the English quotes from the Big Book: translate it faithfully, and use the same Portuguese each time the same English line comes back.
 
 ## Site words
 | English | Portuguese |

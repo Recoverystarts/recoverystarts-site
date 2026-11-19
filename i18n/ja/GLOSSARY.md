@@ -1,10 +1,10 @@
 # Japanese glossary — the site's words, the same way everywhere
 
-*Started 2026-11-01 (UTC) by prep window prep-ja (research only; nothing here has shipped). Standard written Japanese, plain and warm: the Japanese A.A. Japan uses when it speaks to someone new, not officialese. Where an A.A. body prints its own Japanese, we use it word for word; the source is in brackets. **[ours]** marks wording no A.A. body has published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Japanese and never the Twelve Steps and Twelve Traditions** (the "12 & 12", which A.A. Japan sells as 『12のステップと12の伝統』, B005), even if you know them.*
+*Standard written Japanese, plain and warm: the Japanese A.A. Japan uses when it speaks to someone new, not officialese. Where an A.A. body prints its own Japanese, we use it word for word; the source is in brackets. **[ours]** marks wording no A.A. body has published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Japanese and never the Twelve Steps and Twelve Traditions** (the "12 & 12", which A.A. Japan sells as 『12のステップと12の伝統』, B005), even if you know them.*
 
 > **Read this first.** Unlike Hindi, **A.A. Japan publishes A.A.'s core texts in Japanese on its own site**: the Twelve Steps, the Twelve Traditions (short **and** long form), the Twelve Concepts (short form, complete) and the Preamble, each «reprinted with permission of A.A. World Services» (or A.A. Grapevine, for the Preamble). Those sections below are **A.A. Japan's wording, word for word**, and any English claim that the Steps or Traditions are "A.A.'s own wording" stays true in Japanese. It also publishes the **Big Book's chapter titles** (on its audio-reading page). What is **not** online: the **Serenity Prayer, the Third and Seventh Step prayers, and the Big Book's text**. Those are **[ours]** here, and a page that quotes them says so.
 >
-> **Compare fixed texts by script and print only the differences; never paste the Steps, prayers or long book passages into a session.** The sections below were written by script from A.A. Japan's pages (prep-ja's `fixed.py`, method in PREP-NOTES.md), not typed.
+> The fixed-text sections below were written by script from A.A. Japan's pages, not typed; `verify-fixed.mjs` in this folder compares them with A.A. Japan's pages.
 
 ## Sources (all read directly on the publisher's own URL, one page at a time, user-agent naming recoverystarts.com)
 - **[aajapan]** — NPO法人 AA日本ゼネラルサービス (JSO), A.A. Japan's General Service Office, `aajapan.org` (robots.txt: only /wp/wp-admin/ disallowed). Pages read: `/12steps/` «ＡＡ１２のステップ», `/12traditions/` «ＡＡ１２の伝統», `/12traditonslong/` «ＡＡ１２の伝統（長文のもの）» (the slug really is misspelled), `/12concepts/` «ＡＡ１２の概念（短いかたち）», `/aboutaa/` «ＡＡ 序文» (the Preamble), `/introduction/` «ＡＡは初めてですか？» (reprinted from 『ＡＡ早わかり』), `/isaaforyou/` «ＡＡにご用は？―12の質問», `/soboku/` «ＡＡについての素朴な疑問», `/meetings/`, `/members/`, `/literature/` and its errata PDF (`errata_trad11.pdf`, 2025-07-16: the Japanese 4th-edition Big Book's Tradition 11 corrected to the wording below), `/new_offices/` (the regional offices and their hours), `/bb-soundcloud/` (the Big Book audio reading: chapter titles), and the literature catalog `catalog_all_202606a.pdf` (2026-06-01: every book and pamphlet title, with item numbers like B001). Steps, Traditions and Concepts end «（ＡＡワールドサービス社の許可のもとに再録）»; the Preamble «（Ａ.Ａ.グレープバイン社の許可のもと再録）».
@@ -15,7 +15,7 @@
 
 **Which wording, and why.** Steps, Traditions (both forms), Concepts, Preamble, Big Book chapter titles, book titles and most program words: [aajapan], the national General Service Office. Prayers, Big Book passages and the words A.A. Japan's pages don't use: **[ours]**, translated from A.A.'s English, in A.A. Japan's vocabulary.
 
-**Characters in the fixed texts.** A.A. Japan prints Latin letters and digits full-width («ＡＡ», «１２»). On this site they're half-width («AA», «12»), the same as the rest of the page. That's the **only** change: fullwidth A–Z, a–z, 0–9 → ASCII, and the stray spaces a copy from PDF left inside a few words («常任理 事会») removed. Every kana, kanji and punctuation mark is A.A. Japan's. A checker verifies by applying that same mapping to A.A. Japan's page and comparing by script.
+**Characters in the fixed texts.** A.A. Japan prints Latin letters and digits full-width («ＡＡ», «１２»). On this site they're half-width («AA», «12»), the same as the rest of the page. That's the **only** change: fullwidth A–Z, a–z, 0–9 → ASCII, and the stray spaces a copy from PDF left inside a few words («常任理 事会») removed. Every kana, kanji and punctuation mark is A.A. Japan's. `verify-fixed.mjs` applies that same mapping to A.A. Japan's page and compares by script.
 
 ## Form of address
 - **Site prose speaks to the reader in です・ます**, the way A.A. Japan speaks to someone new [aajapan `/introduction/`: «ＡＡのメンバーになるために必要なことは、飲酒をやめたいという願いだけです。会費や料金は必要ありません。»; aakco: «助けを求めてください。ＡＡはお役に立てるでしょう。»]. Requests: «〜してください» [aakco]. Never «〜しろ», «〜なさい», «お前», «君».
@@ -36,7 +36,7 @@
 - **Numbers: Latin (half-width) digits.** Below 10,000 with a comma: «5,700人» [aajapan `/introduction/`]. From 10,000 up, **万** as A.A. Japan does: «10万以上のグループ», «200万人以上» [aajapan `/introduction/`]; 29,000+ → «2万9,000以上»; 1.5 million → «150万». "3+" years → «3年以上». Counters: «12のステップ», «4つのモード», «9つの自助グループ», «5回», «366日分». Prices stay in US dollars as the English has them: «US$4.99<0>／月</0>», «3万ドル».
 - **Dates** (Gregorian): «2026年11月1日» [aajapan: «2025年７月16日», «2005年12月20日発行»]; no weekday unless the English has one. Months: 1月 … 12月. "in October" → «10月に». "October 12 — Title" → «10月12日 — タイトル». Years alone: «1935年».
 - **Weekdays:** 日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日 [aakco: «月曜日〜金曜日», «日曜日», «土曜日»]; short in a schedule or table: «（月）», «月～金», «火・木» [aajapan catalog: «（月～金）10：00～16：00», «（火・木）»]. "Daily" «毎日», "every Tuesday" «毎週火曜».
-- **Times: 24-hour, as A.A. Japan's lists print them** («19:00», «10:00～16:00»; the ja1 map wave read the same lists: queue ruling 2), with a half-width colon. In running prose where the English says "2 AM", write it the way Japanese speech does: «午前2時» [ours]; never "AM/PM", never «19時00分».
+- **Times: 24-hour, as A.A. Japan's lists print them** («19:00», «10:00～16:00»), with a half-width colon. In running prose where the English says "2 AM", write it the way Japanese speech does: «午前2時» [ours]; never "AM/PM", never «19時00分».
 - **Page references stay the English 4th Edition's numbers**: «p. 417», «417ページ», «563～566ページ». The Japanese Big Book's pagination is different (A.A. Japan's errata puts Tradition 11 at p. 649 of the hardcover, p. 259 of the pocket edition), so never swap in Japanese page numbers, and say «英語版» when citing: «英語版『Alcoholics Anonymous』第4版、58ページ».
 - **Chapters:** «第3章», «第7章～第11章» [aajapan `/bb-soundcloud/`: «第１章 ビルの物語»].
 - **Arrows:** keep → ← › exactly as the English has them, with the space before → that the English has.
@@ -45,7 +45,7 @@
 - Watch for lost negatives: «〜ない», «決して〜ない», «〜べきではない», «〜てはならない», «〜しない». A dropped one turns a Tradition upside down (A.A. Japan's Tradition 6 «〜したりすべきではない», 9 «決して組織化されるべきではない», 10 «外部の問題に意見を持たない»).
 - Meta descriptions end on a full sentence and «。», never cut mid-sentence.
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «リンクをコピー», both of them, and leave every other character exactly as it is.
-- **Italics:** Japanese has no italic; a slanted Japanese font looks broken. Where the English uses `<i>` for a book title, keep the placeholder and put 『』 around it: «英語版『<0>Alcoholics Anonymous</0>』». S1's CSS sets Japanese upright (PREP-NOTES, "Font").
+- **Italics:** Japanese has no italic; a slanted Japanese font looks broken. Where the English uses `<i>` for a book title, keep the placeholder and put 『』 around it: «英語版『<0>Alcoholics Anonymous</0>』». style.ja.css sets Japanese upright.
 - Translate it yourself; no Google or other machine translation.
 
 ## Crisis lines
@@ -53,9 +53,9 @@ What's true (each on the service's own site):
 - **いのちの電話 (Inochi no Denwa), 日本いのちの電話連盟** — `inochinodenwa.org`: «いつでも、どなたでもお電話いただけます», «お名前を名乗る必要はありません», «お話の内容が外に漏れることはありません», «相談は無料です（通話料のみご負担ください）», «全国53ヶ所で相談を受けています». **Free-dial 0120-783-556: 毎日16:00〜21:00, and on the 10th of every month 8:00〜翌11日8:00** («※通話料はかかりません»). **Navi-dial 0570-783-556: 10:00〜22:00 (年中無休)**, charged at call rates (not free on mobile plans). Also «インターネット相談» (by email/web form). It isn't 24-hour: never write «24時間» of it.
 - **よりそいホットライン (Yorisoi Hotline), 一般社団法人 社会的包摂サポートセンター** — `since2011.net/yorisoi/`: **0120-279-338 (フリーダイヤル, free)**, from Fukushima 0120-279-226; «全国どこからでも。秘密は守ります。»; «電話、FAX、チャットやSNSによる相談»; a recorded menu first (press 1 for the general line, others for foreign languages, DV, sexual minorities, «死にたいほどつらい方»…); FAX 0120-773-776. **Its own site doesn't state the hours of the Japanese line**; its English page says the foreign-language line is «everyday between 10 am and 10 pm». MHLW's list (`mhlw.go.jp/mamorouyokokoro/soudan/tel/`) says «24時間対応», but that same list still shows #いのちSOS as 24/365 on the day it was suspended, so we don't rely on it for hours: **write «無料» of よりそいホットライン, no hours.**
 - **119 (救急車・消防)** — 総務省消防庁 (FDMA), `fdma.go.jp`: «119番緊急通報»; its ♯7119 page: when unsure whether to call an ambulance, ♯7119 (where offered) advises and «緊急性が高いと判断した場合は、119番通報への転送». Use 119 for a threat to life or a medical emergency: «命に危険があるときは119番へ».
-- **Canada — 9-8-8**: call or text, **English and French, 24/7**; «If you would like to speak to someone in another language, this **may be available** by phone, via an interpreter» [988.ca/get-help/what-to-expect, re-read 2026-11-01]. Text: English/French only.
-- **USA — 988**: call, text and chat in English and Spanish; «If you speak a language other than English or Spanish, the 988 Lifeline uses Language Line Solutions to provide interpretation to callers in **more than 240 additional languages**. There is no cost to you for language interpretation»; text and chat have no interpreter [samhsa.gov/mental-health/988/faqs, re-read 2026-11-01]. The page doesn't name Japanese; the wording asks for a Japanese interpreter rather than promising one.
-- **Dropped:** **#いのちSOS** (0120-061-338, Lifelink): `lifelink.or.jp` announced on 2026-10-30 that #いのちSOS phone and email, and its SNS line, **stop taking calls from 2026-11-01 00:00 to the end of November** (a security fix); December's plans to be posted during November. Not used; recheck in December. **Held:** **こころの健康相談統一ダイヤル 0570-064-556** (MHLW): it connects to the caller's prefecture's mental-health line, but «相談対応の曜日・時間は都道府県によって異なります» and the call is charged, so it's not in the standard wording. **110** (police): not confirmed on a police site in this pass (npa.go.jp gave no page that states it; keishicho returned 404), and 119 is the number for a medical emergency, so it's not used.
+- **Canada — 9-8-8**: call or text, **English and French, 24/7**; «If you would like to speak to someone in another language, this **may be available** by phone, via an interpreter» [988.ca/get-help/what-to-expect]. Text: English/French only.
+- **USA — 988**: call, text and chat in English and Spanish; «If you speak a language other than English or Spanish, the 988 Lifeline uses Language Line Solutions to provide interpretation to callers in **more than 240 additional languages**. There is no cost to you for language interpretation»; text and chat have no interpreter [samhsa.gov/mental-health/988/faqs]. The page doesn't name Japanese; the wording asks for a Japanese interpreter rather than promising one.
+- **Dropped:** **#いのちSOS** (0120-061-338, Lifelink): `lifelink.or.jp` announced on 2026-10-30 that #いのちSOS phone and email, and its SNS line, **stop taking calls from 2026-11-01 00:00 to the end of November** (a security fix); December's plans to be posted during November. Not used. **Held:** **こころの健康相談統一ダイヤル 0570-064-556** (MHLW): it connects to the caller's prefecture's mental-health line, but «相談対応の曜日・時間は都道府県によって異なります» and the call is charged, so it's not in the standard wording. **110** (police): not confirmed on a police site in this pass (npa.go.jp gave no page that states it; keishicho returned 404), and 119 is the number for a medical emergency, so it's not used.
 
 So on a ja page **never write «988に電話またはテキスト» alone**: a reader in Japan can't reach 988 at all, and a Japanese speaker who texts 988 gets English. Japan first, then North America. Use these, word for word:
 
@@ -68,7 +68,7 @@ So on a ja page **never write «988に電話またはテキスト» alone**: a r
 | where there's room for the 10th-of-the-month hours | «いのちの電話 0120-783-556（無料・毎日16:00～21:00、毎月10日は8:00～翌朝8:00）» |
 | 988 Crisis Lifeline (a button/link) | 988 クライシス・ライフライン（アメリカ・カナダ） |
 | Call 911 / go to the emergency room | 救急車を呼んでください（日本では119番、アメリカ・カナダでは911） / 最寄りの救急外来へ行ってください |
-| free, 24/7, confidential (of 988) | 無料・24時間・秘密厳守. Say "confidential" (秘密厳守) **of 988 only**, the rule the wave carries from hi1, even though いのちの電話 («お話の内容が外に漏れることはありません») and よりそいホットライン («秘密は守ります») say it of themselves (PREP-NOTES, unsure 3) |
+| free, 24/7, confidential (of 988) | 無料・24時間・秘密厳守. Say "confidential" (秘密厳守) **of 988 only**, as on the hi pages, even though いのちの電話 («お話の内容が外に漏れることはありません») and よりそいホットライン («秘密は守ります») say it of themselves |
 | detox / medical detox | 解毒 / 医師の管理のもとでの解毒（入院治療） [ours] |
 | withdrawal / alcohol withdrawal / withdrawal symptoms | 離脱 / アルコールの離脱 / 離脱症状 [ours; the medical term] |
 | withdrawal can be dangerous — even fatal | 急に酒をやめることは危険な場合があります。命にかかわることもあります [ours] |
@@ -94,7 +94,7 @@ Keep the English's placeholders around 988 (`<0>988</0>` is a `tel:988` link); a
 | the Big Book | **ビッグブック** [aajapan `/literature/`: «『アルコホーリクス・アノニマス』（通称：ビッグブック）»]. Its title: 『アルコホーリクス・アノニマス』. Note: the Japanese edition carries **12 Japanese members' stories** in place of most of the English stories [catalog B001: «日本のＡＡメンバー１２名の回復の手記»]; of the English stories only «ドクター・ボブの悪夢» is listed [`/bb-soundcloud/`] |
 | Alcoholics Anonymous, 4th Edition (a citation of the English book) | 英語版『<i>Alcoholics Anonymous</i>』第4版 |
 | Twelve Steps and Twelve Traditions ("12 & 12") — only when the English names the book | 『12のステップと12の伝統』 [catalog B005] — the title only; never a source |
-| Daily Reflections | 『今日を新たに』 [catalog B007: «今日を新たに～今日一日を省みるための書。»]. "the AA Daily Reflection theme (of the day)" → «AAの『Daily Reflections』のその日のテーマ» (**Super ruling, jalang1 2026-11-01:** the site's day titles are our translation of the English book's titles, while 『今日を新たに』 has its own Japanese titles, so naming 『今日を新たに』 beside our titles would misattribute them. Name the English book; the hub description says once «日本語版は『今日を新たに』») |
+| Daily Reflections | 『今日を新たに』 [catalog B007: «今日を新たに～今日一日を省みるための書。»]. "the AA Daily Reflection theme (of the day)" → «AAの『Daily Reflections』のその日のテーマ» (the site's day titles are our translation of the English book's titles, while 『今日を新たに』 has its own Japanese titles, so naming 『今日を新たに』 beside our titles would misattribute them. Name the English book; the hub description says once «日本語版は『今日を新たに』») |
 | Living Sober | 『どうやって飲まないでいるか』 [catalog B011; aakco: «リビングソーバーミーティング … 書籍「どうやって飲まないでいるか」»] |
 | As Bill Sees It | 『ビルはこう思う』 [catalog B009] |
 | Came to Believe | 『信じるようになった』 [catalog B008] |
@@ -119,7 +119,7 @@ Keep the English's placeholders around 988 (`<0>988</0>` is a `tel:988` link); a
 | English | Japanese |
 |---|---|
 | Preface | 前書き |
-| Foreword to the First Edition / Second / Third / Fourth | 初版に寄せて / **再版にあたって** (A.A. Japan's page prints «再販» (resale), almost surely a typo for «再版» (second printing/edition); **Super's ruling, S1 2026-11-01: write «再版にあたって»** everywhere, so the site doesn't repeat a typo; PREP-NOTES unsure 5) / 第三版に寄せて / 第四版に寄せて |
+| Foreword to the First Edition / Second / Third / Fourth | 初版に寄せて / **再版にあたって** (A.A. Japan's page prints «再販» (resale), almost surely a typo for «再版» (second printing/edition); the site writes «再版にあたって» everywhere) / 第三版に寄せて / 第四版に寄せて |
 | The Doctor's Opinion | 医師の意見 |
 | (the Japanese edition only) | 日本語翻訳改訂版への序文 / 日本語初版序文 |
 | 1 Bill's Story | 第1章 ビルの物語 |
@@ -138,7 +138,7 @@ Keep the English's placeholders around 988 (`<0>988</0>` is a `tel:988` link); a
 | Personal Stories – Part I / II / III | 個人の物語 第1部 / 第2部 / 第3部 [ours: the Japanese edition doesn't carry these parts] |
 | the title page line "The Story of How Many Thousands of Men and Women Have Recovered from Alcoholism" | 幾万もの、実にたくさんの人びとがアルコホリズムから回復した。本書は彼らがどのように回復したのかを語るものである。 [aajapan `/bb-soundcloud/`] |
 
-A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch. Those stories aren't in the Japanese edition, so there's no A.A. Japanese title to find.
+A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back. Those stories aren't in the Japanese edition, so there's no A.A. Japanese title to find.
 
 ## Program words
 | English | Japanese |
@@ -193,7 +193,7 @@ A personal story's English title: translate it faithfully **[ours]**, the same e
 | surrender / half measures / rigorous honesty / cunning, baffling, powerful | 降伏 / 中途半端なやり方 / 徹底した正直さ / 巧妙で、不可解で、強力 [all ours: Big Book phrases, not online in Japanese] |
 | General Service Board / trustees / General Service Conference | **常任理事会 / 常任理事 / 評議会（ゼネラル・サービス評議会）** [aajapan Concepts, long Tradition 4] |
 | the Right of Decision / Participation / Appeal / Petition | **「決定権」 / 「参加権」 / 「アピール権」** [aajapan Concepts 3–5] / 「請願権」 [ours; Concept 5's long form isn't on the site] |
-| group service representative (GSR) / treasurer / secretary / delegate | 代議員 [catalog P028: «代議員 ～グループがＡＡ全体とつながるために～»] / 会計 [ours] / セクレタリー（実務担当） [aajapan long Tradition 9] / 評議員 [aajapan `/soboku/`: «ＷＳＭ評議員»; unsure for the Conference delegate, see PREP-NOTES] |
+| group service representative (GSR) / treasurer / secretary / delegate | 代議員 [catalog P028: «代議員 ～グループがＡＡ全体とつながるために～»] / 会計 [ours] / セクレタリー（実務担当） [aajapan long Tradition 9] / 評議員 [aajapan `/soboku/`: «ＷＳＭ評議員»; unconfirmed for the Conference delegate] |
 | the Oxford Group | オックスフォード・グループ [ours] |
 | the Serenity Prayer / the Third Step prayer / Seventh Step prayer | 平安の祈り / 第3ステップの祈り / 第7ステップの祈り [ours: no A.A. Japan page names them] |
 | Founders Day (10 June) / A.A. Japan's start (1975) | 創始者の日 [ours] / AA日本の始まり（1975年） [aajapan: «AA日本 50周年記念誌» (catalog ot05), «ＡＡ30周年記念集会» (2005)] |
@@ -270,27 +270,23 @@ Where the /12-concepts/ page quotes more of a Concept than this (the long form),
 - **Third Step prayer** (English p. 63) [ours]: «神よ、私をあなたにささげます。あなたの思いのままに私を用いて築き、私をお用いください。自我のとらわれから私を解き放ち、あなたの意志をもっとよく行えるようにしてください。私の困難を取り去ってください。その困難に打ち勝つことが、私が助けようとする人たちに、あなたの力、あなたの愛、あなたの生き方を証しするものとなりますように。いつもあなたの意志を行えますように。»
 - **Seventh Step prayer** (English p. 76) [ours]: «私の創造主よ、私はいま、良いところも悪いところも含めて、私のすべてをあなたにゆだねる気持ちになりました。あなたと仲間の役に立つことを妨げている私の性格上の欠点を、一つ残らず、いま取り除いてくださるよう祈ります。ここから出て行くにあたり、あなたの望まれることを行う力をお与えください。アーメン。» («性格上の欠点» and «ゆだねる» are A.A. Japan's Step 6 and Step 3 words.)
   - If the English discusses a single phrase of the English prayer ("bondage of self", "My Creator", "every single defect"), quote the Japanese words that carry it («自我のとらわれ», «私の創造主よ», «性格上の欠点を、一つ残らず») and, where the point depends on the exact English word, add the English once: «（英語では「bondage of self」）».
-  - **A page that quotes a prayer says it's our translation**: «（Recovery Startsによる翻訳）» after the prayer, the way hi1 marked its texts (waves/2026-10-18-hi1/README.md §2–3). The Preamble, Steps, Traditions and Concepts need no such note: they're A.A. Japan's.
-- **Big Book lines.** No Japanese Big Book text is online (A.A. Japan publishes an **audio** reading of chapters 1–11, «ドクター・ボブの悪夢» and the appendices on SoundCloud from `/bb-soundcloud/`; prep-ja didn't transcribe it, see PREP-NOTES). So **translate faithfully yourself [ours]** and use the same Japanese each time the same English line comes back in your batch (search your file before you write it again). These recur on the site; use exactly:
+  - **A page that quotes a prayer says it's our translation**: «（Recovery Startsによる翻訳）» after the prayer, as the hi pages do. The Preamble, Steps, Traditions and Concepts need no such note: they're A.A. Japan's.
+- **Big Book lines.** No Japanese Big Book text is online (A.A. Japan publishes an **audio** reading of chapters 1–11, «ドクター・ボブの悪夢» and the appendices on SoundCloud from `/bb-soundcloud/`). So **translate faithfully yourself [ours]** and use the same Japanese each time the same English line comes back. These recur on the site; use exactly:
   - p. 58: "Rarely have we seen a person fail who has thoroughly followed our path." → «私たちの道を徹底してたどった人が失敗するのを、私たちはほとんど見たことがない。»; "Half measures availed us nothing." → «中途半端なやり方では、何も得られなかった。»; "We stood at the turning point." → «私たちは転換点に立っていた。»
   - p. 417: "And acceptance is the answer to all my problems today." → «そして、受け入れることが、今日の私のすべての問題への答えだ。» (whole line in `core.json` 1b08a63f6559). This story isn't in the Japanese edition at all.
   - p. 164: "Road of Happy Destiny" → «幸せな運命への道» [ours]
   - p. 85: "a daily reprieve" → «一日ごとの猶予» [ours; a stay, not a pardon («許し»)]
-  - S1 writes the full **"Big Book quotes — look here first"** section from Recoverystarts/aa-library (jalang1 README, the Super's S1); runners rely on it.
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «英語版『<i>Alcoholics Anonymous</i>』第4版、Nページ。Recovery Startsによる翻訳。確認と学びのための短い引用です。ページ全体はお手元の本で読んでください →». Keep the English's placeholders around the same words.
 
-## Big Book quotes — look here first
-*A.A. Japan publishes no Big Book text online (only an audio reading; see PREP-NOTES unsure 2), so every passage here is **[ours]**: translated once from the English 4th Edition, faithfully and close, in A.A. Japan's vocabulary, so that every runner writes the same Japanese for the same passage. The English column was pulled from Recoverystarts/aa-library by script (the same passages hi1 fixed), not typed.*
+## Big Book quotes
+*A.A. Japan publishes no Big Book text online (only an audio reading), so every passage here is **[ours]**: translated once from the English 4th Edition, faithfully and close, in A.A. Japan's vocabulary, so the same passage reads the same everywhere. The English column was pulled from Recoverystarts/aa-library by script (the same passages as the hi glossary), not typed.*
 
-**The rule, for every Big Book quote in your batch:**
-1. **Look it up here first**, then in "Prayers and fixed texts" above. If the passage is here, use these words exactly (copy them by script). If the English quotes only part of a passage, cut the Japanese at the matching sentence or clause; never reword.
-2. **If it isn't here**, translate the English faithfully and closely: the same sentences, the same order, the same images, nothing smoothed or explained. Never paraphrase. List the id under `unsure:` as `BBQ <id>`.
-3. **Same line, same Japanese**: before you write a quote, search your own file for it; if you've written it once, copy it.
-4. Never take wording from the Twelve Steps and Twelve Traditions or from N.A., or from any Japanese Big Book you may remember or find. Never swap in Japanese page numbers: pages stay the English 4th Edition's.
-5. **Big Book quotes are in plain form (である調・た形)**, like the Steps; the page around them stays です・ます. A quote set inside a です・ます sentence goes in 「」.
-6. **Never call a Big Book quote A.A.'s Japanese.** Where the English says a quote is "exactly as the book states it", "word for word" or "the Big Book's own words", write «英語版第4版からの私たちの日本語訳» (our Japanese translation from the English 4th Edition) instead of claiming exactness. The page's note (`ja_ours_note`) says the rest. The Steps, Traditions, Concepts and Preamble are different: they **are** A.A. Japan's wording, and "A.A.'s own wording" stays true for them.
-7. God: 神, no «様»; «くださる» where the English has God acting for us (as A.A. Japan's Step 7 has «ください»). The reader, when the book speaks to "you": あなた, gentle requests as «〜てほしい» (never «〜なさい», «〜しろ»).
+**Conventions for Big Book quotes:**
+- Never take wording from the Twelve Steps and Twelve Traditions or from N.A., or from any Japanese Big Book you may remember or find. Never swap in Japanese page numbers: pages stay the English 4th Edition's.
+- **Big Book quotes are in plain form (である調・た形)**, like the Steps; the page around them stays です・ます. A quote set inside a です・ます sentence goes in 「」.
+- **Never call a Big Book quote A.A.'s Japanese.** Where the English says a quote is "exactly as the book states it", "word for word" or "the Big Book's own words", write «英語版第4版からの私たちの日本語訳» (our Japanese translation from the English 4th Edition) instead of claiming exactness. The page's note (`ja_ours_note`) says the rest. The Steps, Traditions, Concepts and Preamble are different: they **are** A.A. Japan's wording, and "A.A.'s own wording" stays true for them.
+- God: 神, no «様»; «くださる» where the English has God acting for us (as A.A. Japan's Step 7 has «ください»). The reader, when the book speaks to "you": あなた, gentle requests as «〜てほしい» (never «〜なさい», «〜しろ»).
 
 **Ours, fixed so every page says it the same way:**
 | p. | English | Japanese |

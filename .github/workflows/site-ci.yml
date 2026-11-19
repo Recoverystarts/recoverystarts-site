@@ -47,6 +47,9 @@ jobs:
           node-version: 22
       - name: Build (scripts/pages-dist.sh, the Pages build command)
         run: sh scripts/pages-dist.sh
+      # Security sweep 2026-11-19: the Functions' guards (form host + per-address limit, header-only token).
+      - name: Functions security tests
+        run: node --test tests/functions-security.test.mjs
       - name: File count, pages per language, internal links, translated → English
         env:
           BASE: ${{ github.event_name == 'pull_request' && format('origin/{0}', github.base_ref) || github.event.before }}

@@ -1,17 +1,9 @@
 // build-start-here.mjs — the reading room hub (/start-here/) and its sitemap (/sitemap-reading.xml).
 //
-// Why (claude-home #483, research 4, CEO: deep-research-c 2026-11-07): AI crawlers spent their visits on meeting pages
-// and on ~200K copies of the add-meeting form, while the pages that can actually reach training sets (sourced,
-// explanatory prose: A.A. history, the Traditions, the Big Book pages, the A.A. questions) got single-digit fetches per
-// bot. Derick, 2026-11-07: "the training crawlers are important, its why we built most of the pages to do so." So this
-// page links every reading page from one place, with a few honest sentences on what each part is, and the sitemap names
-// each one with the date its reading text last changed (not today's date on everything).
-//
-// Built 2026-11-08 by CEO: raptive-ready-2 (Opus 5.5, chat). Run from the repo root after adding or renaming reading
-// pages: `node scripts/build-start-here.mjs` (needs the git history: in a shallow clone run
-// `git fetch --depth=3000 origin main` first, or lastmod falls back to today). It rewrites start-here/index.html and
-// sitemap-reading.xml; commit both. English only for now (no language copies; the i18n build doesn't know this page).
-// Way back: delete start-here/, sitemap-reading.xml, its Sitemap line in robots.txt and the home page link.
+// Links every reading page (A.A. history, the Traditions, the Big Book pages, the A.A. questions) from one place,
+// and writes sitemap-reading.xml with each page's lastmod = the date its reading text last changed.
+// Rewrites start-here/index.html and sitemap-reading.xml. English only (the i18n build doesn't know this page).
+//   node scripts/build-start-here.mjs     (needs git history; in a shallow clone lastmod falls back to today)
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
@@ -92,7 +84,7 @@ const tpl = read("12-concepts/index.html");
 const icons = tpl.slice(tpl.indexOf("  <!-- brand:icons -->"), tpl.indexOf("  <meta charset"));
 const css = tpl.match(/<link rel="stylesheet" href="\/style\.css[^"]*">/)[0];
 const body = tpl.slice(tpl.indexOf("<body>"), tpl.indexOf('  <main id="main">'))
-  .replace(/<details class="rs-globe">[\s\S]*?<\/details>\s*/, "") // no language copies of this page yet
+  .replace(/<details class="rs-globe">[\s\S]*?<\/details>\s*/, "") // no language copies of this page
   .replace(/utm_content=12-concepts-bar/g, "utm_content=start-here-bar")
   .replace(/utm_content%3D12-concepts-bar/g, "utm_content%3Dstart-here-bar"); // the Play referrer copy, URL-encoded
 const foot = tpl.slice(tpl.indexOf("  <footer class=\"footer\">"));
@@ -163,8 +155,7 @@ fs.writeFileSync(R("start-here/index.html"), html);
 // lastmod = the newest commit that changed the page's reading text: the words inside <main>, tags stripped. Nav, head,
 // footer and site-wide restamps (a new language in the 🌐 menu, the app face in the top bar, the privacy line) don't
 // count. Each file's versions are compared newest first, one pair per round, through `git cat-file --batch`.
-// History, 2026-11-08: "newest commit" gave 1,624 of 1,626 pages the same day; a line-count filter still let template
-// commits through (cold check on PR #79). If git isn't there, lastmod falls back to today.
+// If git isn't there, lastmod falls back to today.
 const lastmod = new Map();
 const mainText = (h) => { const a = h.indexOf("<main"), b = h.lastIndexOf("</main>"); return (a < 0 ? h : h.slice(a, b < 0 ? undefined : b)).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(); };
 try {

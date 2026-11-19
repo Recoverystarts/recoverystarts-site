@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /tr/ pages. Our English → Turkish (wave trlang1, Super, 2026-11-09). The Steps are A.A.'s 2022 Turkish Big Book («Adsız Alkolikler», pp. 79–80; i18n/tr/GLOSSARY.md, by script); the chapter and appendix titles are its table of contents; the rest is ours (glossary). The Big Book search reads English only, so the no-results line asks for English words.",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /tr/ pages. Our English → Turkish. The Steps are A.A.'s 2022 Turkish Big Book («Adsız Alkolikler», pp. 79–80; i18n/tr/GLOSSARY.md, by script); the chapter and appendix titles are its table of contents; the rest is ours (glossary). The Big Book search reads English only, so the no-results line asks for English words.",
  "p": {
   "Donate": "Bağış yap",
   "Donate — keep it free": "Bağış yap — ücretsiz kalsın",

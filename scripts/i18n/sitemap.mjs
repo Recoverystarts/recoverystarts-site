@@ -1,13 +1,13 @@
-// sitemap.mjs — one sitemap per language under a sitemap index (wave tr3 S2; claude-home#257).
-// node scripts/i18n/sitemap.mjs        (build.mjs runs it after every full build, so a new language gets it free)
+// sitemap.mjs — one sitemap per language under a sitemap index.
+// node scripts/i18n/sitemap.mjs        (build.mjs runs it after every full build)
 //
 // sitemap-en.xml is the English list, and the master: the scripts that add English pages (build-sitemap.js, dt1-build.js,
 // build-content-pages.js …) add their <url> there, and what's in it decides what's indexed. Nothing here adds an English
 // URL or drops one. For every English URL this writes the language versions that exist on disk (/<lang>/<path>, built by
 // build.mjs, not noindex) into sitemap-<lang>.xml, and every entry in every file lists all its versions as
 // <xhtml:link rel="alternate" hreflang> plus x-default → English (Google: each version lists itself and all the others).
-// /sitemap.xml becomes the index of those files; robots.txt names it. (/sitemap-meetings.xml is the meeting finder's own
-// index — an index can't hold an index, so robots.txt names it separately, as before.)
+// /sitemap.xml becomes the index of those files; robots.txt names it. /sitemap-meetings.xml is the meeting finder's own
+// index, which robots.txt names separately (an index can't hold an index).
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT, LANGS, tagOf } from "./lib.mjs";
@@ -69,7 +69,7 @@ export function writeSitemaps({ quiet = false } = {}) {
 // disk — so an assistant answering in French can send a reader to the French page. Rewritten between its heading and
 // the next "## " on every build; a new language appears here by itself.
 const DOORS = [["", "Home"], ["12-steps/", "The 12 Steps"], ["12-traditions/", "The 12 Traditions (short and long form)"], ["12-traditions/history/", "How the 12 Traditions came about (1937–1950)"], ["aa-info/", "AA info: Traditions and Concepts"], ["daily-tradition/", "Daily Traditions"], ["daily-reflection/", "Daily Reflections"], ["big-book/pages/", "The Big Book, page by page"], ["big-book/search/", "Big Book search"], ["aa-questions/", "A.A. questions, answered from the books"], ["meetings/", "Meetings"]];
-// a language whose A.A. texts are our own translation says so here too (build.mjs OURS_NOTE; wave hi1)
+// a language whose A.A. texts are our own translation says so here too (build.mjs OURS_NOTE)
 const OURS = { hi: "the Hindi Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page; A.A. publishes no Hindi text of them online.", ja: "the Japanese Steps, Traditions (short and long form), Concepts (short form) and Preamble are A.A. Japan's own published wording (AA日本ゼネラルサービス, aajapan.org); the Big Book quotes, the Serenity, Third and Seventh Step prayers, the long form of the Concepts and every other quotation from A.A. literature are our own translation from A.A.'s English, marked so on each page.", ru: "the Russian Twelve Steps, the short form of the Twelve Traditions and the Preamble are A.A. Russia's own published wording (aarussia.ru, Фонд «Единство»); the Big Book quotes, the long form of the Traditions and the Concepts follow the refined Russian translation A.A. Russia publishes (2025, sent to A.A. World Services for review), named as that on each page and never as A.A.'s published Russian Big Book; where there is no A.A. Russian text (the Serenity Prayer, most personal stories, other A.A. literature), the Russian is our own translation from A.A.'s English, marked so on each page.", ar: "the Arabic A.A. Preamble is the wording the A.A. Middle East Regional Committee publishes (mercaa.com), used word for word; A.A. World Services prints the Big Book and some pamphlets in Arabic, but no text of them is online, so the Arabic Twelve Steps, Traditions, Concepts, prayers and Big Book quotes are our own translation from A.A.'s English, marked so on each page.", tr: "the Turkish Twelve Steps, both forms of the Twelve Traditions, the short form of the Concepts, the Third and Seventh Step prayers and the Big Book quotes are A.A.'s own Conference-approved Turkish Big Book (\u201cAdsız Alkolikler\u201d, 2022 edition, A.A. World Services; adsizalkolikler.com), as printed; the Preamble and the Serenity Prayer are as A.A. Türkiye publishes them; everything else, including quotations from A.A. literature with no Turkish text online, is our own translation from A.A.'s English, marked so on each page." };
 function writeLlms(langs) {
   const f = path.join(ROOT, "llms.txt");

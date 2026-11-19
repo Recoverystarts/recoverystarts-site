@@ -1,36 +1,14 @@
 /**
  * /api/bigbook-search — server-side Big Book search.
  *
- * ── WHY THIS EXISTS ─────────────────────────────────────────────────────────
- * The search engine needs the full text of the Big Book. The PUBLIC does not.
+ * The full 4th-edition text lives in `functions/_lib/` (Pages doesn't serve
+ * that directory as a static asset) and is bundled into this Worker at build
+ * time. There is no URL that returns it.
  *
- * Until now the site shipped `/bigbook/search-index.json` — the complete
- * 4th-edition text, 981 KB, at a public URL, downloadable by anyone in one
- * request. And clicking a page number rendered that page's full text into the
- * DOM. Between them, the website was a copy of the book with a search box.
- *
- * That was never the product. The product boundary is:
- *
- *     THE WEBSITE tells you WHICH PAGE a passage is on, and shows you just
- *     enough to know it's the right one. THE APP is where you read the book.
- *
- * So the text moved to `functions/_lib/` — the one directory Cloudflare Pages
- * does NOT serve as a static asset (verified: /functions/** returns 404 while
- * /scripts/**, /data/**, /tests/** all return 200 — the repo root is public).
- * It is bundled into this Worker at build time. The full text now exists only
- * in the Worker's memory. There is no URL that returns it.
- *
- * What goes out over the wire: page label, chapter, and a ~170-char snippet
- * with the match highlighted. That's it. Enforced by SNIPPET_CAP below.
- *
- * 4TH EDITION ONLY. The pagination this returns is 4th-edition pagination,
- * which is the only pagination anyone in a meeting is holding.
- * See D:\Forge\research\DOCTRINE-4th-edition-only.md.
- *
- * Search quality is IDENTICAL to the old client-side search: it runs the exact
- * same BookSearch engine, the same phrase index, the same knowledge layer, and
- * the same composeResults pipeline. Same 38 tests. The engine didn't change —
- * only where it runs, and how little it says.
+ * A response carries page label, chapter, and a ~170-char snippet with the
+ * match highlighted, capped by SNIPPET_CAP below. Pagination is 4th edition.
+ * It runs the same BookSearch engine, phrase index, knowledge layer and
+ * composeResults pipeline as assets/bigbook/.
  */
 
 import { BookSearch } from "../../assets/bigbook/bookSearch.js";
@@ -38,9 +16,9 @@ import { searchPhraseIndex } from "../../assets/bigbook/phraseSearch.js";
 import { composeResults } from "../../assets/bigbook/searchPipeline.js";
 import ENTRIES from "../_lib/big-book-text.json";
 
-// The most book text we will EVER put in a response, per snippet. The engine
-// builds ~170-char snippets (80 chars of padding either side of the match);
-// this is the hard ceiling on top of that. Belt and braces.
+// The most book text put in a response, per snippet. The engine builds
+// ~170-char snippets (80 chars of padding either side of the match); this is
+// a ceiling on top of that.
 const SNIPPET_CAP = 320;
 
 // Cold-start once per isolate, then reused across requests.

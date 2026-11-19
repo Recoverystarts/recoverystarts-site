@@ -1836,5 +1836,5 @@
   "2b2c91303880": "Der Text von 1939 sagt nicht, wie er finanziert wurde. Die Copyright-Seite der heutigen Ausgabe nennt die erste Auflage als von 1939 bis 1955 laufend, und das Urheberrecht liegt jetzt bei A.A. World Services, Inc. (S. iv). Das Vorwort von 1955 sagt nur: „Im Frühjahr des Jahres 1939 trug dieser Entschluss seine Frucht in der Veröffentlichung dieses Buches“ (S. xvii). Siehe <0>Warum und wann wurde das Blaue Buch geschrieben?</0>",
   "0ac591f8ffdf": "Die Seitenzahlen des Blauen Buches stammen aus der vierten Auflage (2001). <0>Recovery Starts ist unabhängig und nicht mit den Anonymen Alkoholikern verbunden. Zitate sind kurz und mit Quellenangabe versehen; das Blaue Buch, P-44,</0> AA wird mündig <1>und</1> Pass It On <2>sind © A.A. World Services, Inc.</2>"
  },
- "_note": "Translations whose English segment is no longer on any page (re-extract 2026-11-01, wave jalang1: #444/#448 re-segmented the aa-questions pages with Big Book page links, and the hub links changed). Kept as translation memory for the catch-up; check.mjs and build.mjs skip files starting with _. Grouped by the batch file they came from."
+ "_note": "Translations whose English segment is no longer on any page, kept as translation memory; check.mjs and build.mjs skip files starting with _. Grouped by the batch file they came from."
 }

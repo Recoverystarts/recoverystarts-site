@@ -1,13 +1,11 @@
-# French glossary — the words every tr3 runner uses the same way
+# French glossary — the site's words, the same way everywhere
 
-*Started 2026-10-12 by wave tr3 S1-fr (the super). Neutral French, the French A.A. World Services publishes (read in Québec, Europe and Africa alike). The reader is **vous**, plain and warm. No Québec-only or France-only slang. Where A.A. prints its own French, we use it word for word; the source is in brackets. **[nôtre]** marks a wording we couldn't find printed by A.A. online: it's ours, fixed here so every page says it the same way. Add to this file through your close (the super merges additions), not by changing it mid-wave. The 12 & 12 (« Les Douze Étapes et les Douze Traditions ») is never a source.*
+*Neutral French, the French A.A. World Services publishes (read in Québec, Europe and Africa alike). The reader is **vous**, plain and warm. No Québec-only or France-only slang. Where A.A. prints its own French, we use it word for word; the source is in brackets. **[nôtre]** marks a wording we couldn't find printed by A.A. online: it's ours, fixed here so every page says it the same way. The 12 & 12 (« Les Douze Étapes et les Douze Traditions ») is never a source.*
 
-Sources checked 2026-10-12: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Concepts), SMF-141FR (Serenity Prayer), SMF-92FR (Preamble), FP-15 (sponsorship), the French Big Book chapters and Appendice I on aa.org (`aa.org/sites/default/files/2021-11/fr_bigbook_*.pdf`), the French Service Manual (FBM-31), aa.org/fr.
+Sources: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Concepts), SMF-141FR (Serenity Prayer), SMF-92FR (Preamble), FP-15 (sponsorship), the French Big Book chapters and Appendice I on aa.org (`aa.org/sites/default/files/2021-11/fr_bigbook_*.pdf`), the French Service Manual (FBM-31), aa.org/fr.
 
-## How to write a segment
-- Write in the placeholder form: keep every `<0>…</0>` pair and `<1/>` the English has, around the words that belong in it, in whatever order French needs. Don't type HTML.
-- `node scripts/i18n/check.mjs fr <your-batch>` must say 0 problems. `node scripts/i18n/score.mjs fr` has a `reg` column (tu/toi/ton/ta/tes/t' slips) — keep it at 0 outside quotes.
-- **Typography:** write « guillemets » for quotes, ’ or ' for the apostrophe, and a normal space before : ; ! ? and inside « ». **The desk turns those spaces into non-breaking ones at merge** (`desk/fix_fr.py`), so don't hunt for special characters. Plain characters are fine (é, à, ç, œ, —, …); `&mdash;`-style entities may stay as they are.
+## Conventions
+- **Typography:** write « guillemets » for quotes, ’ or ' for the apostrophe, and a normal space before : ; ! ? and inside « ». Plain characters are fine (é, à, ç, œ, —, …); `&mdash;`-style entities may stay as they are.
 - **AA, not A.A.:** French A.A. writes **AA** with no periods: « les AA », « des AA », « un membre des AA », « un groupe des AA ». The fellowship is **le Mouvement** (capital M) or « notre association » — never « la Fraternité ». A fellowship in general (NA, GA…) is « une fraternité ».
 - **Register:** vous everywhere. Inclusive spelling (« seul·e ») isn't used; use the masculine generic as A.A.'s French does, or reword to avoid gender. Sponsor in general: « parrain ou marraine » once, then « parrain ».
 - Numbers: 1 234 (space) · 2,99 $ · 19 h 30 · le 18 novembre 1982 · 4e édition · XXe siècle. Months and days lower case in running text (janvier, lundi); a month alone as a label or heading starts with a capital (Janvier).
@@ -17,8 +15,8 @@ Sources checked 2026-10-12: SMF-121FR (Steps), FP-28 (Traditions), SMF-114FR (Co
 - Meta descriptions (the short text Google shows) end on a full sentence, never cut mid-sentence.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-12, each on the service's own site):
+## Crisis lines
+What's true (each on the service's own site):
 - **Canada — 9-8-8, Ligne d'aide en cas de crise de suicide**: call **or text** 988, **in French or English**, 24/7, free. [canada.ca: « peuvent appeler ou envoyer un texto au 988, en anglais ou en français »; 988.ca/fr: « 24/7/365 »]. In Québec, a call to 988 is put through to Québec's own line, **1 866 APPELLE (1 866 277-3553)**; Québec also takes texts at **535353** and chat at suicide.ca [suicide.ca].
 - **USA — 988 Suicide & Crisis Lifeline**: calls, chat and text are in English and Spanish; a **call** gets an interpreter in 240+ more languages, French among them, free. **Text and chat have no interpreter.** [samhsa.gov/mental-health/988/faqs]
 - **France — 3114**, « le numéro national de prévention du suicide », free, 24/7, all of France [3114.fr].
@@ -39,7 +37,7 @@ So on a fr page **never write "appelez ou textez le 988" without "Au Canada"** �
 | not medical advice | ce n'est pas un avis médical |
 | treatment / treatment center | traitement / centre de traitement |
 
-Keep every number in a crisis segment exactly as the English has it, plus the Canada/France lines. Every crisis/988/detox/withdrawal segment is read by the super.
+Keep every number in a crisis segment exactly as the English has it, plus the Canada/France lines.
 
 ## Fellowships and books
 | English | French |
@@ -84,7 +82,7 @@ Keep every number in a crisis segment exactly as the English has it, plus the Ca
 | Appendices | Appendices |
 | Chapter 3 – More About Alcoholism | Chapitre 3 – Autres données sur l'alcoolisme (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[nôtre]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[nôtre]**, the same each time it comes back.
 
 ## Program words
 | English | French |
@@ -183,7 +181,7 @@ Use A.A.'s French, cut to the sentences the English page has (the English site p
 - **Seventh Step prayer** (English p. 76) [French Big Book, « À l'œuvre ! »]: « Mon Créateur, je suis maintenant disposé à ce que Vous preniez tout ce que je suis, bon ou mauvais. Je Vous demande d'ôter de moi chacun des défauts qui m'empêche de Vous être utile, à Vous et à mes semblables. Accordez-moi la force de faire Votre volonté à partir de maintenant. Ainsi soit-il. »
 - **The A.A. Preamble** [SMF-92FR]: « Les Alcooliques anonymes sont une association de personnes qui partagent entre elles leur expérience, leur force et leur espoir dans le but de résoudre leur problème commun et d'aider d'autres alcooliques à se rétablir. Le désir d'arrêter de boire est la seule condition pour devenir membre des AA. Les AA ne demandent ni cotisation ni droit d'entrée ; nous nous finançons par nos propres contributions. Les AA ne sont associés à aucune secte, confession religieuse ou politique, à aucun organisme ou établissement ; ils ne désirent s'engager dans aucune controverse ; ils n'endossent et ne contestent aucune cause. Notre but premier est de demeurer abstinent et d'aider d'autres alcooliques à le devenir. »
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (traduction libre), and use the same French each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the French edition's wording for ordinary quotes — one rule for everyone keeps the pages even.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (traduction libre), and use the same French each time the same English line comes back. Don't go looking for the French edition's wording for ordinary quotes — one rule for everyone keeps the pages even.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes « <i>Alcoholics Anonymous</i>, 4e édition (en anglais), page N ; traduction libre. Une courte citation, à des fins d'identification et d'étude. Lisez la page entière dans votre propre exemplaire → ». Keep the English's placeholders around the same words.
 
 ## Site words

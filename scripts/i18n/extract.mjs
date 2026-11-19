@@ -1,9 +1,9 @@
-// extract.mjs — every page's text into one list (wave tr1 S1; claude-home secrets-docs/WO-TRANSLATE-SITE.md).
+// extract.mjs — every page's text into one list.
 // Writes i18n/segments/<part>.json: { id: { t, kind, pages: [path, …] } } — t is the English with its tags as numbered
-// placeholders (lib.mjs toTemplate), the form a translation is written in, one file per part (core, big-book,
-// daily-reflection, …). A segment is in the part where it's met first; core pages are read first, so the menu and the
-// footer, which every page repeats, are in core.json once. Also i18n/segments/pages.json: path → [ids], which build.mjs
-// and check.mjs use. Run from anywhere: node scripts/i18n/extract.mjs
+// placeholders (lib.mjs toTemplate), one file per part (core, big-book, daily-reflection, …). A segment lives in the part
+// where it's met first; core pages are read first, so the menu and footer are in core.json once. Also writes
+// i18n/segments/pages.json: path → [ids], used by build.mjs and check.mjs.
+// node scripts/i18n/extract.mjs
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT, I18N, pages, partOf, segmentsOf, idOf, writeJson, toTemplate } from "./lib.mjs";

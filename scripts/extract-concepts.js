@@ -3,18 +3,14 @@
  * extract-concepts.js — the Twelve Concepts for World Service, both forms,
  * extracted VERBATIM from The A.A. Service Manual.
  *
- * SOURCE CHOICE (load-bearing): the Concepts appear in Big Book Appendix VII in
- * short form only. Their real home is The A.A. Service Manual Combined With
- * Twelve Concepts for World Service, which A.A. publishes FREE as a PDF on
- * aa.org and actively circulates to members — and which carries BOTH the short
- * form and the long form. That is the source used here.
+ * The Concepts appear in Big Book Appendix VII in short form only; The A.A.
+ * Service Manual Combined With Twelve Concepts for World Service (a free PDF on
+ * aa.org) carries both the short and the long form, and is the source here.
  *
- * Text is read from the historian corpus copy of the manual and never retyped.
- * The manual's PDF extraction carries known OCR damage — typographic ligatures
- * and spurious mid-word spaces. Every repair is listed explicitly in REPAIRS
- * below, is a pure spelling restoration, and is asserted at the end: no repair
- * may change a word into a different word. Nothing here rewrites, condenses or
- * "modernises" a Concept.
+ * Text is read from the historian corpus copy of the manual. The PDF extraction
+ * carries OCR damage (ligatures, spurious mid-word spaces); every repair is
+ * listed in REPAIRS below and asserted at the end to be a spelling restoration,
+ * not a word change.
  *
  * Output: data/twelve-concepts.json (same shape as data/twelve-traditions.json)
  *
@@ -102,7 +98,7 @@ const longRaw = block(text, "THE TWELVE CONCEPTS (LONG FORM)", "CONTENTS");
 const shortItems = splitConcepts(shortRaw);
 const longItems = splitConcepts(longRaw);
 
-// ── verification: nothing ships unless every assertion holds ────────────────
+// ── verification: every assertion must hold ─────────────────────────────────
 const problems = [];
 if (shortItems.length !== 12) problems.push(`short form has ${shortItems.length} items`);
 if (longItems.length !== 12) problems.push(`long form has ${longItems.length} items`);

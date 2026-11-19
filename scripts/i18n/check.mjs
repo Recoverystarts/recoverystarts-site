@@ -1,8 +1,7 @@
-// check.mjs — is a language's translation file sound? (wave tr1 S1; WO-TRANSLATE-SITE v2)
+// check.mjs — checks a language's translation files.
 // node scripts/i18n/check.mjs <lang> [file-name-without-.json …]
-// For every entry: the id exists in i18n/segments; the translation keeps the same tags and the same links as the
-// English's numbered placeholders (<0>…</0>, <1/>: its tags, lib.mjs toTemplate); nothing is empty. Then coverage per part.
-// Exit 1 on any problem, so a runner's close can say "check: 0 problems".
+// For every entry: the id exists in i18n/segments; the translation keeps the English's numbered placeholders
+// (<0>…</0>, <1/>, lib.mjs toTemplate) and links; nothing is empty. Then coverage per part. Exit 1 on any problem.
 import fs from "node:fs";
 import path from "node:path";
 import { I18N, LANGS, readJson, placeholdersOf } from "./lib.mjs";

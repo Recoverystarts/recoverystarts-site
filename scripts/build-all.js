@@ -1,13 +1,7 @@
 #!/usr/bin/env node
 /**
- * build-all.js — the whole site, in the right order, with the gates.
- *
- * The nav drifted across 1,041 pages because each generator carried its own copy
- * of the header. Now there is ONE nav (scripts/fix-nav.js) and it runs LAST,
- * after every generator, so nothing can drift again. Run this instead of running
- * the generators by hand.
- *
- * Any gate that fails stops the build. That's the point.
+ * build-all.js — runs every generator in order; scripts/fix-nav.js (the one shared
+ * nav) runs after the generators. Any step or gate that fails stops the build.
  */
 const { execSync } = require("child_process");
 const path = require("path");

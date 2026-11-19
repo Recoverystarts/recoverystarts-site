@@ -1,10 +1,9 @@
-// build.mjs — write /<lang>/… copies of every page whose text is all translated (wave tr1 S1; WO-TRANSLATE-SITE v2).
+// build.mjs — write /<lang>/… copies of every page whose text is fully translated.
 // node scripts/i18n/build.mjs <lang> [--only <path-prefix>,…]
-// For each English page: every segment (lib.mjs segmentsOf) is swapped for its translation in i18n/<lang>/*.json; a page
-// with even one segment missing is NOT written (the 🌐 then doesn't offer that language there — no half-translated page).
-// The copy gets <html lang dir>, its own canonical, hreflang alternates for the languages it exists in, og:locale and
-// og:url, and its links to pages that exist in the same language point at those (/es/about/, not /about/).
-// The folder /<lang>/ is rebuilt from scratch each run, so it's always exactly what the translation files cover.
+// Each English page's segments (lib.mjs segmentsOf) are swapped for their translations in i18n/<lang>/*.json; a page
+// with any segment missing is not written. The copy gets <html lang dir>, its own canonical, hreflang alternates,
+// og:locale and og:url, and links to pages that exist in the same language point there. /<lang>/ is rebuilt from
+// scratch each run.
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
@@ -19,28 +18,15 @@ const only = (() => { const i = process.argv.indexOf("--only"); return i > 0 ? p
 const SITE = "https://recoverystarts.com";
 const OG = { es: "es_LA", pt: "pt_BR", fr: "fr_CA", de: "de_DE", fa: "fa_IR", pl: "pl_PL", sv: "sv_SE", nl: "nl_NL", hi: "hi_IN", ja: "ja_JP", ru: "ru_RU", ar: "ar_AR", tr: "tr_TR", en: "en_US" };
 
-// a language whose script needs its own type: a sheet loaded after /style.css on its pages (hi: Devanagari, wave hi1)
+// a language whose script needs its own type: a sheet loaded after /style.css on its pages
 const LANG_CSS = { hi: "style.hi.css", ja: "style.ja.css", ru: "style.ru.css" };
-// the home page preloads its headline's font (wave 2026-10-26-ads S2). Fraunces draws the English h1 (and Hindi's and
-// Japanese's spaces and Latin, since it comes first in their stacks), but a Persian or Russian h1 is drawn in Vazirmatn
-// or Literata, which come first there and carry Latin too: Fraunces is never used, so those pages preload their own
-// headline font instead (claude-home #496, 2026-11-08). Way back: delete this map and the line that uses it.
+// the home page preloads its headline's font; Persian, Arabic and Russian h1s are drawn in Vazirmatn or Literata,
+// so those pages preload that font instead of Fraunces
 const H1_FONT = { fa: "vazirmatn-arabic.woff2", ru: "literata-cyrillic.woff2", ar: "vazirmatn-arabic.woff2" };
 const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1").update(fs.readFileSync(path.join(ROOT, LANG_CSS[lang]))).digest("hex").slice(0, 10)}` : null;
-// "our translation" (wave hi1): a language with no A.A. text online translates the Steps, Traditions, Concepts, prayers
-// and Big Book quotes itself, and says so on every page that quotes them, right under the h1, with a link to the English
-// page. The words are the language's own core id <lang>_ours_note. When A.A.'s printed wording arrives, swap it into the
-// glossary and the files, and set the flag to false: the note comes off every page in one build.
-// ja (wave jalang1): A.A. Japan publishes the Steps, Traditions, the Concepts' short form and the Preamble, so the Big Book
-// quotes, the prayers and the Concepts' long form are ours; ja_ours_note says exactly that (true on any page), so the same pages carry it as hi's.
-// ru (wave rulang1): A.A. Russia publishes the Steps, the short Traditions and the Preamble (aarussia.ru); the Big Book, the long
-// Traditions and the Concepts follow its refined 2025 translation, still under A.A.W.S. review (CEO 21:51Z, option 1: named as
-// that, never as official); what has no A.A. Russian (the Serenity Prayer) is ours. ru_ours_note says exactly that.
-// ar (wave arlang1): A.A.W.S. prints Arabic (ARABB-30) but no text is online; mercaa.com gives the Preamble, used word for
-// word. The Steps, Traditions, Concepts, prayers and Big Book quotes are ours (CEO CHECKED-ar #1); ar_ours_note says so.
-// tr (wave trlang1): A.A.W.S.'s own Conference-approved 2022 Turkish Big Book ("Adsız Alkolikler", adsizalkolikler.com) gives the
-// Steps (as printed: Step 12 has no «alkoliklere», CHECKED-tr #1), both forms of the Traditions, the Concepts, the prayers and the
-// Big Book quotes; A.A. Türkiye's site gives the Preamble and the Serenity Prayer; the rest is ours. tr_ours_note says exactly that.
+// "our translation" note: languages where A.A.'s own wording isn't online for some fixed texts (Steps, Traditions,
+// Concepts, prayers, Big Book quotes) translate those themselves and say so under the h1, with a link to the English
+// page. The words are the language's core id <lang>_ours_note; false here takes the note off every page.
 const OURS_NOTE = { hi: true, ja: true, ru: true, ar: true, tr: true };
 const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
@@ -53,9 +39,8 @@ const relOf = (url) => { const u = url.replace(/[?#].*$/, ""); if (!u.startsWith
 // which pages this language can have, and which every other built language already has (for hreflang)
 const ready = new Set(Object.entries(pageIds).filter(([rel, ids]) => ids.every((id) => tr[id] != null)).map(([rel]) => rel));
 const other = {};
-// which pages each OTHER language has: the ones built on disk (wave jalang1, 2026-11-01). It used to be "every segment
-// translated", which is the same thing while the English stands still; when the English moves ahead of a language
-// (#444/#448), that language's live, older pages still exist and should still be linked until it's rebuilt.
+// which pages each OTHER language has: the ones built on disk, so older live pages stay linked when the English moves
+// ahead of a language
 for (const l of Object.keys(LANGS)) if (l !== "en" && l !== lang) other[l] = new Set(Object.keys(pageIds).filter((r) => fs.existsSync(path.join(ROOT, l, r))));
 
 // a JSON data string → its translation, or null. A string holding HTML (a badge) gets the translation's HTML; a text string
@@ -94,8 +79,8 @@ for (const rel of Object.keys(pageIds)) {
   for (let i = segs.length - 1; i >= 0; i--) {
     const s = segs[i], t = tr[idOf(s.en)];
     if (t == null) throw new Error(`${rel}: segment ${idOf(s.en)} has no ${lang} (extract is out of date — run extract.mjs)`);
-    // an attribute's translation is escaped once here; one that already holds entities (&quot; copied from the English
-    // attribute) is decoded first, so it isn't escaped twice into &amp;quot; (claude-home #561). Way back: drop unent( ).
+    // an attribute's translation is escaped once; one that already holds entities is decoded first, so it isn't
+    // escaped twice into &amp;quot;
     html = html.slice(0, s.start) + (s.kind === "attr" ? unent(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) : fromTemplate(t, s.en)) + html.slice(s.end);
   }
   // a page's JSON data (<script type="application/json">, e.g. the Daily Tradition hub's readings, which its script draws
@@ -125,7 +110,7 @@ for (const rel of Object.keys(pageIds)) {
     if (rel === "index.html") html = html.replace(/(<div class="book-body">[\s\S]*?<\/p>\s*<p>[\s\S]*?<\/p>)/, (m) => `${m}\n              ${p}`);
     else html = html.replace(/<\/h1>/i, () => `</h1>\n      ${p}`);
   }
-  if (H1_FONT[lang]) html = html.replace(/(<link rel="preload" as="font" type="font\/woff2" href=")\/assets\/fonts\/fraunces-latin\.woff2(" crossorigin>)(<!--[^>]*-->)?/, (m, a, b) => `${a}/assets/fonts/${H1_FONT[lang]}${b}<!-- the headline's font, fetched with the stylesheet so the h1 paints once (claude-home #496) -->`);
+  if (H1_FONT[lang]) html = html.replace(/(<link rel="preload" as="font" type="font\/woff2" href=")\/assets\/fonts\/fraunces-latin\.woff2(" crossorigin>)(<!--[^>]*-->)?/, (m, a, b) => `${a}/assets/fonts/${H1_FONT[lang]}${b}<!-- the headline's font, fetched with the stylesheet so the h1 paints once -->`);
   if (langCss) html = html.replace(/(<link rel="stylesheet" href="\/style\.css[^"]*">)/i, (m) => `${m}\n  <link rel="stylesheet" href="${langCss}">`);
   // the head: language, direction, canonical, alternates, og
   const url = `${SITE}/${lang}${urlOf(rel)}`;

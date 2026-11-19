@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build-content-pages.js — Phase 5 of WO-einstein-max-reach.
+ * build-content-pages.js — renders the content pages.
  *
  * Renders the verified content JSON (data/content-pages.json, produced by the
  * content workflow) into:
@@ -12,8 +12,7 @@
  * from reflections.json themes + thoughts).
  *
  * Deterministic assembler: all layout, schema, UTM tagging, disclaimers and
- * footers are rendered here so the 28 pages are pixel-consistent; the agents
- * only wrote the words. Idempotent via regen-seo marker comments.
+ * footers are rendered here. Idempotent via regen-seo marker comments.
  *
  * Usage: node scripts/build-content-pages.js [--dry]
  */

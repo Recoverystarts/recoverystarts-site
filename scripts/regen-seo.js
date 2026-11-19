@@ -11,8 +11,7 @@
  *                      never cut mid-word
  *   Article JSON-LD    headline + description synced, dateModified bumped
  *
- * Body content (H1, perspective, discussion, refs) is NEVER touched — doctrine
- * text is Derick-approved. The script parses it read-only as the source of truth.
+ * Body content (H1, perspective, discussion, refs) is read, not changed.
  *
  * Usage:  node scripts/regen-seo.js --phase1 [--dry] [--only july-1]
  */
@@ -163,7 +162,7 @@ function processDayPage(slug, opts) {
   const file = path.join(DR, slug, "index.html");
   let html = fs.readFileSync(file, "utf8");
 
-  // --- Parse the page (read-only doctrine) ---
+  // --- Parse the page (read-only) ---
   const h1m = html.match(/<h1 class="dr-theme">([\s\S]*?)<\/h1>/);
   if (!h1m) throw new Error(`[${slug}] no H1 theme`);
   const themeRaw = stripTags(h1m[1]);
@@ -258,7 +257,7 @@ function phase2DayPage(slug, opts) {
   const file = path.join(DR, slug, "index.html");
   let html = stripGenerated(fs.readFileSync(file, "utf8"));
 
-  // Parse doctrine (read-only)
+  // Parse the page (read-only)
   const themeRaw = stripTags(html.match(/<h1 class="dr-theme">([\s\S]*?)<\/h1>/)[1]);
   const themeTC = titleCaseTheme(themeRaw);
   const bubbleM = html.match(/<div class="dr-bubble">[\s\S]*?<div class="who">[\s\S]*?<\/div>\s*<p>([\s\S]*?)<\/p>/);
@@ -532,10 +531,7 @@ function phase3(opts) {
     if (!opts.dry) fs.writeFileSync(p, src, "utf8");
   }
 
-  // 3. /llms.txt — RETIRED 2026-08-01. The live /llms.txt has been hand-evolved
-  // far past this template (Twelve Traditions corrections, Big Book Search
-  // Engine at read.recoverystarts.com, content notes) and is maintained
-  // directly. Writing this stale copy over it would regress all of that.
+  // 3. /llms.txt: off (WRITE_LLMS); the live /llms.txt is maintained directly.
   const WRITE_LLMS = false;
   const llms = `# recoverystarts.com
 

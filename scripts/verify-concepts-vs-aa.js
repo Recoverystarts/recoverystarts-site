@@ -1,25 +1,12 @@
 #!/usr/bin/env node
 /**
- * verify-concepts-vs-aa.js — check every published Concept, both forms, against
- * A.A.'s OWN current edition of the Service Manual.
+ * verify-concepts-vs-aa.js — check every published Concept, both forms, against a PDF of A.A.'s current Service
+ * Manual (not committed).
  *
- * Our text is extracted from the historian corpus copy of the manual. This gate
- * proves that copy still matches what A.A. publishes today (BM-31, 2024–2026),
- * so an older corpus edition can never quietly become the version the world
- * reads off our site.
+ *   node scripts/verify-concepts-vs-aa.js "path/to/BM-31_..._Service_Manual.pdf"
  *
- * The reference PDF is not committed (11MB, and it is A.A.'s to distribute).
- * Download the current manual from aa.org and point this at it:
- *
- *   node scripts/verify-concepts-vs-aa.js "C:\\path\\to\\BM-31_..._Service_Manual.pdf"
- *
- * Requires pdftotext (poppler) on PATH. Skips with a notice — never a failure —
- * when the PDF or pdftotext is absent, so the normal build is not blocked; run
- * it deliberately whenever A.A. issues a new edition.
- *
- * NORMALIZATION: pdftotext renders em dashes as "--" and loses curly quotes, so
- * both sides are normalized for quotes, dashes and whitespace before comparing.
- * Letters are never touched — a real wording change still fails.
+ * Needs pdftotext (poppler). Skips with a notice when the PDF or pdftotext is absent. Both sides are normalized for
+ * quotes, dashes and whitespace before comparing; letters are not touched.
  */
 
 const fs = require("fs");
@@ -48,13 +35,11 @@ try {
 }
 
 const deLigature = (s) => s.replace(/ﬀ/g, "ff").replace(/ﬁ/g, "fi").replace(/ﬂ/g, "fl").replace(/ﬃ/g, "ffi").replace(/ﬄ/g, "ffl");
-// A page-number footer lands on its own line and, once lines are joined, sits
-// INSIDE a sentence that broke across pages (SMF-195 drops a "1" between
-// "directly manage" and "these affairs"). Drop bare-number lines before joining.
+// A page-number footer lands on its own line and, once lines are joined, sits inside a sentence that broke across
+// pages. Drop bare-number lines before joining.
 const dropPageNumbers = (s) => s.split("\n").filter((l) => !/^\s*\d{1,4}\s*$/.test(l)).join("\n");
-// Both PDFs typeset the em dash differently ("Conference—excepting",
-// "Conference -- excepting"), so dashes are canonicalised WITHOUT surrounding
-// spaces. Letters and digits are never touched: a real wording change still fails.
+// The PDFs typeset the em dash differently ("Conference—excepting", "Conference -- excepting"), so dashes are
+// canonicalised without surrounding spaces.
 const norm = (s) => deLigature(s)
   .replace(/[‘’]/g, "'").replace(/[“”]/g, '"')
   .replace(/[–—]/g, "-").replace(/-{2,}/g, "-").replace(/\s*-\s*/g, "-")
@@ -74,10 +59,8 @@ if (lIdx === -1) {
   console.error("   FAILED — no long-form Concepts section in this document");
   process.exit(1);
 }
-// Compare each form against its OWN section: several Concepts open with the
-// same clause in both forms, so a whole-document search can match the wrong one.
-// A long-form-only service piece (SMF-195) has no short section — check what
-// the document actually contains, and say which.
+// Compare each form against its own section: several Concepts open with the same clause in both forms. A
+// long-form-only service piece (SMF-195) has no short section; report which forms the document contains.
 const hasShort = sIdx !== -1 && sIdx < lIdx;
 const SHORT = hasShort ? norm(lines.slice(sIdx, lIdx).join("\n")) : null;
 const LONG = norm(lines.slice(lIdx).join("\n"));

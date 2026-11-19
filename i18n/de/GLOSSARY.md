@@ -1,8 +1,8 @@
-# German glossary — the words every de1 runner uses the same way
+# German glossary — the site's words, the same way everywhere
 
-*Started 2026-10-17 by wave de1 S1-de (the Super, Opus 5.5). Standard written German (Germany): **ß**, never Swiss «ss»; plain and warm. The reader is **Sie** (see "Form of address"). Where German-speaking A.A. prints its own German, we use it word for word; the source is in brackets. **[ours]** marks a wording A.A. hasn't published in German: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s German (Narcotics Anonymous' Basic Text or pamphlets) and never the book «Zwölf Schritte und Zwölf Traditionen»** (the "12 and 12"), even if you know them.*
+*Standard written German (Germany): **ß**, never Swiss «ss»; plain and warm. The reader is **Sie** (see "Form of address"). Where German-speaking A.A. prints its own German, we use it word for word; the source is in brackets. **[ours]** marks a wording A.A. hasn't published in German: it's ours, fixed here so every page says it the same way. **Never N.A.'s German (Narcotics Anonymous' Basic Text or pamphlets) and never the book «Zwölf Schritte und Zwölf Traditionen»** (the "12 and 12"), even if you know them.*
 
-## Sources (checked 2026-10-17, all read directly on the publisher's own URL)
+## Sources (all read directly on the publisher's own URL)
 - **[BB]** — **the «Blaue Buch»**: *Anonyme Alkoholiker*, 1. revidierte Auflage 2016, the German edition of *Alcoholics Anonymous*, published chapter by chapter as PDF by the Anonyme Alkoholiker Interessengemeinschaft e.V. (the German-speaking A.A. service body for Germany, Austria/South Tyrol and German Switzerland) at `https://www.anonyme-alkoholiker.de/downloads/blauesbuch/bbNN.pdf` (table of files under "Big Book quotes" below). The Steps (Kapitel 5, S. 68–69), the Third and Seventh Step prayers, the Promises, the Traditions in short **and long** form (Anhang 1, S. 420–426), the short Concepts (Anhang 8, S. 443–446) and the Serenity Prayer (S. 331) below are copied from it and re-checked by script, word for word.
 - **[aa.de]** — anonyme-alkoholiker.de: `/unsere-idee/zwoelf-schritte/`, `/zwoelf-traditionen/`, `/praeambel/` (the Preamble), `/wie-es-funktioniert/`, `/leben-mit-aa/gedanken-zum-tag/` (the daily «Heute. Gedanken zum Tag»), `/meetings/was-ist-ein-aa-meeting/`, `/publikationen/literatur/` (the German literature list, for titles), `/kontakt/erste-hilfe/`, `/leben-mit-aa/intergruppen/`.
 - **[aa.at]** — anonyme-alkoholiker.at `/12-schritte`, `/12-traditionen`, `/12-konzepte` (same words as [BB]; Austria prints the Concepts too). **[aa.ch]** — anonyme-alkoholiker.ch (German Switzerland; uses the same literature from the same order desk).
@@ -10,14 +10,13 @@
 **Which wording, and why.** Germany, Austria and Switzerland share one German A.A. literature (one order desk, one «Blaues Buch»), so there was nothing to choose between countries. Where the website's Steps page and the book differ in punctuation (Step 8's dash, «wiedergutzumachen» vs «wieder gutzumachen», Step 10's dash and «unrecht»), we follow **the book** [BB], because the site quotes the Big Book on nearly every page. Traditions short form: [BB] Anhang 1 (identical to [aa.de] but «selbstständig»/«ehrenamtlich bleiben, jedoch»). Long form: [BB] — German A.A. *does* print it, so unlike pl/fa/pt it is **not ours**. Concepts: [BB] Anhang 8 = [aa.at] (the 1971 short form; the typo «sorgältig» on aa.at is not in the book). The **long** Concepts the /12-concepts/ page also prints are not published in German online → ours.
 
 ## Form of address
-- **Sie**, always, capital S: «Sie können», «Ihr Trinken», «wenn Sie sich entschieden haben». That is how German-speaking A.A.'s Big Book speaks to the reader («Wenn Sie sich darüber klar geworden sind, dass Sie das haben wollen, was wir heute besitzen …», «Mögen Sie Ihn jetzt finden!», S. 67–68) and how its website answers a newcomer («Was können wir für Sie tun?»). One rule for 20 runners, and our prose never clashes with the quotes.
+- **Sie**, always, capital S: «Sie können», «Ihr Trinken», «wenn Sie sich entschieden haben». That is how German-speaking A.A.'s Big Book speaks to the reader («Wenn Sie sich darüber klar geworden sind, dass Sie das haben wollen, was wir heute besitzen …», «Mögen Sie Ihn jetzt finden!», S. 67–68) and how its website answers a newcomer («Was können wir für Sie tun?»)., so our prose matches the quotes.
 - **du / dich / dir / dein / ihr / euch / euer** only inside a quotation that has it (a member's words in a story, a pamphlet title like «Sind die Anonymen Alkoholiker etwas für dich?»). `score.mjs de` flags du-forms (`reg`); a flag inside a quote is fine.
 - God's pronouns are capitalised as [BB] does: **Er, Ihn, Ihm, Sein, Seinen Willen, Dir, Deine, Deinen** (Steps 3, 7, 11, the prayers, Tradition 2). [BB]'s Tradition 12 has «IHN»; keep it there only.
 - **Gender:** prefer neutral wording («wer trinkt», «Menschen», «alle, die …»). Where a noun has to be chosen, the generic masculine as [BB] does («der Alkoholiker», «ein Neuling»); write both only where the English names both («Männer und Frauen», «Sponsor oder Sponsorin»). No gender star, colon or slash forms in prose.
 
-## How to write a segment
+## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order German needs. Don't type HTML.
-- `node scripts/i18n/check.mjs de <your-batch>` = 0 problems. `node scripts/i18n/score.mjs de` shows `reg` (du-forms, ASCII quotes) and spelling flags — keep them at 0 outside quotes.
 - **ß and umlauts always**: groß, Straße, heißt, weiß, außer, schließlich, Maß, bloß; ä ö ü — never ae/oe/ue (fuer, ueber, koennen are flagged). New spelling: **dass, muss, lässt** (never daß/muß).
 - **Quotes:** „…“ (low-high, U+201E and U+201C). A quote inside a quote: ‚…‘. Never "…" or “…” in German prose. Apostrophes in English names stay: Claude's Lab; German genitive has none: «Bills Geschichte», «Dericks Weg».
 - **Dashes:** a spaced en dash « – » between clauses (never « — »). Ranges without spaces: 1937–1950, S. 58–59.
@@ -32,13 +31,13 @@
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «Link kopieren», both of them, and leave every other character exactly as it is.
 - Translate it yourself; no Google, DeepL or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-17, each on the service's own site or the government's):
+## Crisis lines
+What's true (each on the service's own site or the government's):
 - **Germany — TelefonSeelsorge: 0800 111 0 111 · 0800 111 0 222 · 116 123** — free («Ihr Anruf ist kostenfrei»), anonymous, day and night («Tag und Nacht», «rund um die Uhr erreichbar») [telefonseelsorge.de].
 - **Austria — Telefonseelsorge 142** — «rund um die Uhr, jeden Tag … kostenlos und vertraulich» (0–24 Uhr) [telefonseelsorge.at]; emergency numbers **112** (Euro-Notruf) and **144** (Rettung), free from any phone [oesterreich.gv.at, Notrufnummern].
 - **Switzerland — Die Dargebotene Hand 143** — «immer für Sie da. Persönlich, anonym und vertraulich» [143.ch]; **not free**: CHF 0.20–0.70 per call [zh.ch, Notfallnummern] — so never write «kostenlos» for 143. **144** Sanität (ambulance) [zh.ch]; **112** works in Switzerland too.
 - **Germany — 112** (Feuerwehr/Rettungsdienst/Notarzt, free, 24/7, from any phone in the EU) [baden-wuerttemberg.de, «Europaweiter Notruf 112»]. (Police 110 is not needed on our pages.)
-- **Canada — 9-8-8**: call or text, English and French, 24/7; "if you would like to speak to someone in another language, this may be available by phone, via an interpreter" [988.ca, read by waves tr4/pl1 on 2026-10-12/13]. Text: English/French only.
+- **Canada — 9-8-8**: call or text, English and French, 24/7; "if you would like to speak to someone in another language, this may be available by phone, via an interpreter" [988.ca]. Text: English/French only.
 - **USA — 988**: call, text and chat in English and Spanish; **a call gets a free interpreter in 240+ more languages** (say "German" when it answers); text and chat have no interpreter [samhsa.gov/mental-health/988/faqs, read by tr4/pl1].
 - Dropped: none of the README's lines; all were confirmed. Not used: other regional or NGO lines, the Swiss 147 (Pro Juventute, for young people) except where the English speaks of teens.
 
@@ -60,7 +59,7 @@ So on a de page **never write "rufen Sie an oder schreiben Sie eine SMS an 988" 
 | not medical advice | keine medizinische Beratung |
 | treatment / treatment center / rehab | Behandlung / Suchtklinik, Behandlungszentrum / Entwöhnung, Reha |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link). Every crisis/988/detox/withdrawal segment is read by the Super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link).
 
 ## Fellowships and books
 | English | German |
@@ -108,7 +107,7 @@ Keep the English's placeholders around the numbers (`<0>988</0>` stays around 98
 | Appendices / Appendix I – The A.A. Tradition / II Spiritual Experience / III The Medical View on A.A. / IV The Lasker Award / V The Religious View on A.A. / VI How to Get in Touch with A.A. / VII The Twelve Concepts | Anhänge / Anhang I – Die Traditionen der AA-Gemeinschaft / II – Die spirituelle Erfahrung / III – Die AA-Gemeinschaft aus der Sicht von Ärzten / IV – Der Lasker-Preis / V – Die AA-Gemeinschaft aus der Sicht von Geistlichen / VI – Wie man mit den Anonymen Alkoholikern in Verbindung kommt / VII – Die Zwölf Konzepte [BB's titles; the English book's Roman numbering, because we cite the English pages] |
 | Chapter 3 – More About Alcoholism | Kapitel 3 – Mehr über Alkoholismus (same pattern for every chapter) |
 
-Any other personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+Any other personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | German |
@@ -277,8 +276,8 @@ The site quotes the Big Book on almost every page (each `/big-book/page-N/` page
    | Dr. Bob's Nightmare (171–181) / AA Number Three (182–192) / Acceptance Was the Answer (407–419) / Freedom from Bondage (544–553) | bb42 / bb43 / bb44 / bb45 | |
    | Appendices: Spiritual Experience (567–568) / Medical View / Lasker / Religious View | bb74 / bb75 / bb76 / bb77 | 427– |
 
-   If you find it, copy A.A.'s German **exactly** (only the part the English quotes; fix nothing; „…“ around it as the English has quotes) and credit it as below with «Übersetzung der deutschsprachigen AA (Blaues Buch, S. N)», N = the German page. If you can't find it in a few minutes, or the German is so free that it doesn't carry what the English page then discusses, translate it yourself, credit «eigene Übersetzung», and list the id under `unsure:` with "own translation". The Super checks every quote credited to A.A. against the book by script, so never put A.A.'s name on your own words.
-3. **Quotes from the other personal stories** (most of pp. 171–561 are not in the German book), from pamphlets or Grapevine: translate faithfully yourself, «eigene Übersetzung», and use the same German each time the same English line comes back in your batch (search your file before you write it again).
+   If you find it, copy A.A.'s German **exactly** (only the part the English quotes; fix nothing; „…“ around it as the English has quotes) and credit it as below with «Übersetzung der deutschsprachigen AA (Blaues Buch, S. N)», N = the German page. Where A.A.'s German is missing, or so free that it doesn't carry what the English page then discusses, the site's own translation is credited «eigene Übersetzung».
+3. **Quotes from the other personal stories** (most of pp. 171–561 are not in the German book), from pamphlets or Grapevine: translate faithfully yourself, «eigene Übersetzung», and use the same German each time the same English line comes back.
 4. **The credit line.** "— <0>Alcoholics Anonymous</0>, 4th Edition, page N. A short quotation, for identification and study. <1>Read the whole page in your own copy →</1>" becomes «— <0>Alcoholics Anonymous</0>, 4. Auflage (englisch), Seite N; eigene Übersetzung. Ein kurzes Zitat, zum Wiedererkennen und Studieren. <1>Lesen Sie die ganze Seite in Ihrem eigenen Exemplar →</1>», and for A.A.'s German «…, Seite N; Übersetzung der deutschsprachigen AA (Blaues Buch, S. 98). Ein kurzes Zitat, …». Keep the English's placeholders around the same words; N stays the English page.
 
 ## Site words

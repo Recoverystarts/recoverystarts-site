@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /sv/ pages. Our English → Swedish (wave svnl1, Super). Steps, Tradition 3 and «Hur det fungerar» in A.A. Sverige's own wording (i18n/sv/GLOSSARY.md); other chapter titles [ours].",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /sv/ pages. Our English → Swedish. Steps, Tradition 3 and «Hur det fungerar» in A.A. Sverige's own wording (i18n/sv/GLOSSARY.md); other chapter titles [ours].",
  "p": {
   "Donate": "Ge ett bidrag",
   "Donate — keep it free": "Ge ett bidrag – så att det förblir gratis",

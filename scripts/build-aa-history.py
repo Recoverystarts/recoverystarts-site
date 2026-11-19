@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
-"""/aa-history/ — the story of A.A. from 1934 to 1950 (and what came after, dated), told by linking the cold-read
-question pages in order. claude-home #444 (the truth source), goal #439.
+"""/aa-history/ — the story of A.A. from 1934 to 1950 (and what came after, dated), told by linking the A.A.
+question pages in order.
 
-Each chapter's lines are the first "In short" sentence of the question page it links to (our own words, already
-checked against the books by that page's writer and cold reader), so this page says nothing those pages don't.
-The chrome (menu, footer, ads, app bar) comes from a stamped A.A. question page in git HEAD, the same way
-aa-library/tools/transplant-into-site.py does it.
+Each chapter's lines are the first "In short" sentence of the question page it links to, so this page says nothing
+those pages don't. The chrome (menu, footer, ads, app bar) comes from a stamped A.A. question page in git HEAD.
 
   python3 scripts/build-aa-history.py /path/to/aa-library     (run from the site root)
-Written 2026-10-28 by CEO: reach, 4th window (Opus 5.5); 20:2x added Anne Smith, Lois W., Father Ed, the Grapevine, St. Louis 1955. Way back: delete this file and /aa-history/.
 """
 import re, sys, json, html, subprocess, pathlib, datetime
 

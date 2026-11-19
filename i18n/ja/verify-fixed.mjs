@@ -1,8 +1,8 @@
-// verify-fixed.mjs — prep-ja, 2026-11-01. Checks that every A.A. Japan fixed text in GLOSSARY.md (Steps, Traditions short
+// verify-fixed.mjs — checks that every A.A. Japan fixed text in GLOSSARY.md (Steps, Traditions short
 // and long, Concepts, Preamble) and in core.json (/aa-info/'s long Traditions and Concepts) is A.A. Japan's own wording.
-// It fetches aajapan.org's five pages (one at a time, a user-agent naming recoverystarts.com), applies the ONLY change
-// the glossary allows (fullwidth A–Z a–z 0–9 → ASCII; spaces touching Japanese removed), and prints ONLY the entries it
-// can't find there. It never prints the texts themselves when they match.
+// It fetches aajapan.org's five pages (one at a time, a user-agent naming recoverystarts.com), applies the one change
+// the glossary allows (fullwidth A–Z a–z 0–9 → ASCII; spaces touching Japanese removed), and prints only the entries it
+// can't find there. It doesn't print the texts themselves when they match.
 //   node i18n/ja/verify-fixed.mjs        (Node 18+, no dependencies; run from the repo root)
 import fs from "node:fs";
 import path from "node:path";
@@ -27,8 +27,7 @@ for (const p of PAGES) {
   await new Promise((ok) => setTimeout(ok, 1000));
 }
 // the page as lines, each without its list number («1.», «１．», «1、»): an entry must equal one whole item, i.e. one line
-// or a run of consecutive lines (a long Tradition split over <p>s). A cut-down entry no longer passes (CHECKED-ja,
-// world-langs-2, 2026-11-01: "it checks includes, so a cut-down Step still passes"; hardened at jalang1 S1).
+// or a run of consecutive lines (a long Tradition split over <p>s), so a cut-down entry fails.
 const lines = source.split("\n").map((l) => l.replace(/^\d+\s*[.．、]\s*/, "").replace(/・/g, "")).filter(Boolean);
 const whole = (t) => { for (let i = 0; i < lines.length; i++) { let acc = ""; for (let j = i; j < Math.min(lines.length, i + 8); j++) { acc += lines[j]; if (acc === t) return true; if (acc.length >= t.length) break; } } return false; };
 

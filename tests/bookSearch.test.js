@@ -5,16 +5,13 @@ import { BookSearch, normalizeText } from "../assets/bigbook/bookSearch.js";
 
 /**
  * Ported from the app's client/src/utils/bookSearch.test.ts. Runs against the
- * REAL realigned search index shipped on the site (/bigbook/search-index.json),
- * so it doubles as a regression check on the printed-label -> sheet mapping.
+ * Big Book text in functions/_lib/, so it also checks the printed-label -> sheet
+ * mapping.
  */
 let engine;
 
 beforeAll(() => {
-  // The Big Book text moved to functions/_lib/ — the one directory Cloudflare
-  // Pages does NOT serve publicly. It is no longer a downloadable web asset;
-  // the search now runs server-side in /api/bigbook-search. The ENGINE is
-  // unchanged, so these tests still exercise exactly what production runs.
+  // The text the /api/bigbook-search Function bundles (functions/_lib/ is not served publicly).
   const p = fileURLToPath(new URL("../functions/_lib/big-book-text.json", import.meta.url));
   const entries = JSON.parse(readFileSync(p, "utf8"));
   engine = new BookSearch(entries);

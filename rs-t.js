@@ -1,4 +1,4 @@
-/* rs-t.js — the phrasebook for pages whose words are written by a script in the browser (2026-10-11, WO-TRANSLATE-SITE).
+/* rs-t.js — the phrasebook for pages whose words are written by a script in the browser.
  *
  * The map (find.html + find-looks.mjs), the online calendar (online-cal.js) and the online page's small scripts build
  * their words in the browser, in English, thousands of lines of them. Rather than thread a dictionary through each, the
@@ -9,7 +9,7 @@
  *   r     patterns, [source, flags, replacement] for words with numbers in them ("in 12 min", "2:00 PM", "Oct 11")
  *   skip  a CSS selector whose text is a publisher's (a meeting's name, its place): never touched
  * Nothing runs on an English page (no RS_T). A phrase that isn't in the book stays English: the page never breaks over a
- * missing word, it just shows the English one, and window.RS_T_MISSING lists them for the proof.
+ * missing word, it just shows the English one, and window.RS_T_MISSING lists them.
  * RS_t(s) is the same lookup for a script that needs a word as a string (a title, a calendar file).
  */
 (function () {
@@ -65,9 +65,8 @@
       if (x != null && x !== a) { el["__rsv" + i] = x; el.setAttribute(ATTRS[i], x); }
     }
   }
-  // An element marked as another language is that language's own words — the picker's "English", "Português", "فارسی"
-  // (Derick 2026-10-11 16:54: "each language to switch to is in its native language … I wouldnt know thats english") —
-  // so the phrasebook never touches it, whatever the selector list says.
+  // An element marked as another language is that language's own words (the picker's "English", "Português", "فارسی"),
+  // so the phrasebook leaves it alone, whatever the selector list says.
   var HERE = (document.documentElement.getAttribute("lang") || "").toLowerCase();
   function foreign(el) { var l = el.getAttribute && el.getAttribute("lang"); return l != null && l.toLowerCase() !== HERE; }
   function skipped(el) { if (!el.closest) return false; var c = el.closest("[lang]"); if (c && c !== document.documentElement && foreign(c)) return true; return skip && el.closest(skip); }

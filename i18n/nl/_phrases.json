@@ -1,5 +1,5 @@
 {
- "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /nl/ pages. Our English → Dutch (wave svnl1, Super). Steps in AA Nederland's wording, «Hoe het werkt» AA Vlaanderen's (i18n/nl/GLOSSARY.md); the rest [ours].",
+ "_note": "Words written by the site's own scripts in the browser (donate.js, play-badge.js, the Daily Tradition hub's card, Big Book search), swapped by /rs-t.js on /nl/ pages. Our English → Dutch. Steps in AA Nederland's wording, «Hoe het werkt» AA Vlaanderen's (i18n/nl/GLOSSARY.md); the rest [ours].",
  "p": {
   "Donate": "Doneren",
   "Donate — keep it free": "Doneer – zodat het gratis blijft",

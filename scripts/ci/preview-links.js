@@ -1,17 +1,13 @@
 #!/usr/bin/env node
 /**
- * preview-links.js — the link check on the Pages preview (2026-11-09, claude-home #499 step 3, window 3).
+ * preview-links.js — link check on a Cloudflare Pages preview, as served (_redirects, _headers, Functions, clean URLs).
  * Usage: node scripts/ci/preview-links.js https://<id>.recoverystarts-site.pages.dev
  *
- * Why on the preview and not only on disk (site-check.js does disk): what readers get is what Pages SERVES —
- * _redirects, _headers, Functions and clean URLs included — and a link can resolve on disk and still 404 or bounce once
- * served. It reads each language's main pages from the preview (home, start-here, the steps, traditions, Big Book,
- * daily pages, A.A. history, meetings), asks every internal link they carry, and fails on:
- *   - a link that answers 4xx/5xx (redirects are followed; where a redirect lands counts),
- *   - a translated page whose link lands on an English page when that page exists in the reader's language
- *     (10-12: the menu sent translated readers to English), judged on the SERVED html after redirects.
- * Links to the meeting map (/meetings/aa/…, /online/…) are served by the meetings Worker on recoverystarts.com only,
- * not by any Pages preview, so those are asked on recoverystarts.com (read only, a few dozen GETs).
+ * Reads each language's main pages from the preview, requests every internal link they carry, and fails on:
+ *   - a link that answers 4xx/5xx (redirects followed; the landing page counts),
+ *   - a translated page whose link lands on an English page that also exists in the reader's language.
+ * Meeting-map paths (/meetings/aa/…, /online/…, /family/…) are served by Workers on recoverystarts.com only, so those
+ * are requested there.
  */
 const fs = require("fs");
 const path = require("path");
@@ -21,7 +17,7 @@ if (!/^https:\/\/[a-z0-9-]+\.recoverystarts-site\.pages\.dev$/.test(PREVIEW)) { 
 const LIVE = "https://recoverystarts.com";
 const DIST = path.join(__dirname, "..", "..", "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
-// + /family/: the family map (Al-Anon and Nar-Anon), served by the family-router Worker (2026-11-17)
+// paths served by the meetings and family Workers, not by Pages
 const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$))/;
 const SEEDS = ["/", "/start-here/", "/12-steps/", "/12-traditions/", "/12-concepts/", "/big-book/", "/daily-reflection/", "/daily-tradition/", "/aa-history/", "/aa-info/", "/meetings/", "/about/"];
 const UA = { "user-agent": "recoverystarts-site CI link check (github actions)" };
@@ -76,8 +72,7 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
     leaks++; errors.push(`translated → English: ${from} links ${t}, which lands on English ${landed} though /${lang}${landed} exists`);
   }
   const mres = await pool(mapTargets, 2, async (t) => ({ t, r: await get(LIVE + t, "HEAD") }));
-  // 403 / 429: Cloudflare's bot challenge or rate rule for a data-centre IP (GitHub's runners met 429 on 11-09) — the
-  // map answers people; only a 404, 410, 5xx or no answer counts as a broken link
+  // 403 / 429 are Cloudflare's bot challenge or rate rule for data-centre IPs; only 404, 410, 5xx or no answer count as broken
   for (const { t, r } of mres) if (!(r.status >= 200 && r.status < 400) && r.status !== 403 && r.status !== 429) errors.push(`meeting map ${t} → ${r.status || r.error} on ${LIVE} (linked from ${links.get([...links.keys()].find((k) => k.startsWith(t)))})`);
   const summary = [`## Preview link check`, ``, `${PREVIEW}`, ``, `| | |`, `|---|---|`, `| pages read | ${pages.length} |`, `| site links asked | ${siteTargets.length} |`, `| meeting-map paths asked on ${LIVE} | ${mapTargets.length} |`, `| translated → English | ${leaks} |`, `| failures | ${errors.length} |`, ``];
   if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary.join("\n") + "\n");

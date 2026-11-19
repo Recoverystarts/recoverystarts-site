@@ -2,23 +2,13 @@
 //
 // POST /api/meeting-info  →  emails addict2influencer@gmail.com via Resend.
 //
-// Why this exists: the map is built by crawling what fellowships publish, and
-// the rooms hardest to find are the ones least likely to be published well —
-// which is exactly backwards from who needs them. This is the door for a room
-// that has no website at all.
-//
-// ⚠ ANONYMITY IS THE DESIGN CONSTRAINT, NOT A NICETY. AA's eleventh and twelfth
-// traditions are about members not being identified publicly, and this project
-// has already been bitten once: a district feed published a member's name and
-// personal mobile in a meeting's location field, and it went out on a public
-// map. So: the form asks for a GROUP's public contact, never a person's; the
+// Anonymity: the form asks for a group's public contact, not a person's; the
 // submitter's own email is optional and used only to reply; nothing submitted
-// here is published anywhere automatically. A human reads every one.
+// here is published automatically. A person reads every one.
 //
-// 2026-09-17: the email now carries WHICH LISTING the report is about — the
-// form's hidden `page` field (filled from ?page= on a "report a problem" link,
-// or the referrer) and the Referer header. A Sep 14 submission said "Tuesday
-// 7:30 recovery center closed 3 months ago" and nothing in it said which room.
+// The email carries which listing the report is about: the form's hidden
+// `page` field (filled from ?page= on a "report a problem" link, or the
+// referrer) and the Referer header.
 //
 // Env (Cloudflare Pages → Settings → Environment variables):
 //   RESEND_API_KEY   send-only Resend key
@@ -32,12 +22,8 @@ const esc = (s) =>
 
 const clean = (v) => String(v ?? "").trim().slice(0, MAX);
 
-// Security sweep 2026-11-19: this form sends mail through our Resend key to Derick's inbox,
-// and recoverystarts-site.pages.dev serves it with none of the zone's WAF or shield in front
-// (proven: a data-center POST got 200 on pages.dev and 403 on recoverystarts.com). With no
-// limit anywhere, anyone could flood the inbox and burn the key's sending reputation. So the
-// form only sends from our own hostnames, where the zone's rules apply, and each isolate keeps
-// a small per-address count as a second floor.
+// The form sends only from our own hostnames, where the zone's WAF applies (pages.dev has none),
+// and each isolate keeps a small per-address count as a second limit.
 export const SEND_HOSTS = new Set(["recoverystarts.com", "www.recoverystarts.com", "localhost", "127.0.0.1"]);
 export const PER_IP_LIMIT = 5;
 export const PER_IP_WINDOW_MS = 10 * 60 * 1000;
@@ -94,9 +80,7 @@ export async function onRequestPost(context) {
   const ours = (u) => /^https?:\/\/(www\.)?recoverystarts\.com\/meetings\//.test(u) ? u : "";
   const page = ours(clean(f.page)) || ours(clean(request.headers.get("referer")));
 
-  // The bar is deliberately low: a name, or an address, or just a link. Someone
-  // typing this on a phone outside a church hall should not be made to fill in
-  // a form. Anything at all that a human can follow up is enough.
+  // Any one of a name, an address, a link or notes is enough.
   if (!(name || where || link || notes)) {
     return reply(wantsJson, 400, "Please tell us at least the meeting name, where it meets, or a link.");
   }
@@ -110,8 +94,7 @@ export async function onRequestPost(context) {
 
   const key = env.RESEND_API_KEY;
   if (!key) {
-    // Never swallow this into a cheerful "thanks" — a form that silently drops
-    // a meeting is worse than no form, because nobody ever tells you.
+    // Answer with an error, not a "thanks", so a dropped meeting is visible.
     return reply(wantsJson, 500, "Our form is misconfigured right now. Please email addict2influencer@gmail.com directly — sorry.");
   }
 

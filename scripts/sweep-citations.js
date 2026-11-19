@@ -1,41 +1,17 @@
 #!/usr/bin/env node
 /**
- * sweep-citations.js — does each in-body (source) bracket name the book the
- * quote is ACTUALLY in?
+ * sweep-citations.js — does each in-body (source) bracket name the book the quote is actually in?
  *
- * The build gate (audit-readings.js) proves every quotation exists somewhere in
- * the corpus. It does not check that the bracket standing in front of that
- * quotation points at the right book. Those are different claims, and only the
- * second one is what the reader is being asked to trust.
+ * audit-readings.js proves every quotation exists somewhere in the corpus; this checks that the nearest preceding
+ * bracket points at the right book. Also checks Big Book page numbers against the page-keyed extract and lists
+ * quotations with no bracket. Read-only; prints a report; not a gate.
  *
- * Also verifies Big Book PAGE numbers against the page-keyed extract, and lists
- * quotations carrying no bracket at all.
- *
- * Read-only. Prints a report. Never writes.
- *
- * This script has no authority. It is not a gate, nothing calls it, and a line in
- * its output is an observation to go look at — not a verdict on a reading. On its
- * first run (Aug 2026) it flagged ten days; six were real and four were the script
- * being wrong. Those four are worth knowing, because each one looks exactly like a
- * finding:
- *
- * 1. The source can be named in PROSE instead of a bracket. "Page xix of the Big
- *    Book is blunt:" is a perfectly good citation. This script only reads the
- *    nearest preceding bracket, so it blames whichever one came earlier in the day.
- *    Sept 28 and Sept 10 both looked wrong and were both correct.
- * 2. A quote can straddle a Big Book page break. The page-keyed extract stores the
- *    page NUMBER inline at the end of each page's text, so p.xiii ends "...in the
- *    conventional xiii" and p.xiv opens "sense of the word." A quotation crossing
- *    that seam matches no page and not even the joined text. Sept 1's Foreword
- *    quote is this, and it is correct as written — the adjacent page shows why.
- * 3. A pamphlet extract can have a dropped line. P-44 (Legacy of Service) is the
- *    same essay as Part II of the Service Manual, and our P-44 text is missing one
- *    sentence the Manual has, so a long span verifies only in the Manual. Oct 22's
- *    bracket says P-44 and is right. Fragment-by-fragment comparison shows it.
- *
- * What it did catch, and the reason it exists: a reading names source A, switches
- * to source B mid-way, then returns to A's material without re-naming it, and the
- * reader attributes the later quote to B. Six of those in Oct/Dec.
+ * Known false positives:
+ * 1. A source named in prose ("Page xix of the Big Book is blunt:") rather than a bracket — the earlier bracket is blamed.
+ * 2. A quote that straddles a Big Book page break: the extract stores each page number inline at the end of the page's
+ *    text, so the quote matches no page.
+ * 3. P-44 (Legacy of Service) is missing one sentence that Part II of the Service Manual has, so a long span may verify
+ *    only in the Manual.
  */
 const fs = require("fs");
 const path = require("path");

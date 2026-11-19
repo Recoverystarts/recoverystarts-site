@@ -79,9 +79,7 @@
     .dt-today-fig::before { content: ''; position: absolute; inset: -10%; background: radial-gradient(circle, rgba(139, 100, 220, 0.35) 0%, rgba(45, 212, 191, 0.18) 45%, transparent 70%); filter: blur(28px); }
     .dt-today-fig img { position: relative; width: 100%; height: auto; border-radius: 16px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); }
     .dt-today-fig figcaption { position: relative; text-align: center; font-family: var(--font-ui); font-size: 0.75rem; color: var(--ink-dim); margin-top: 8px; }
-    /* Phone: the boxed figure used to sit below the buttons where nobody
-       scrolls — keep the box, move it to the top of the card so Einstein
-       greets the reader before the reading starts. */
+    /* Phone: the boxed figure sits at the top of the card. */
     @media (max-width: 700px) {
       .dt-today { grid-template-columns: 1fr; }
       .dt-today-fig { max-width: 220px; margin: 0 auto; order: -1; }
@@ -123,11 +121,7 @@
     .dt-day .d { color: var(--accent); font-family: var(--font-ui); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; }
     .dt-day .t { display:block; font-family: var(--font-display); color: var(--ink); margin-top:3px; font-size:1.15rem; line-height:1.35; }
     .dt-day .k { display:block; color: var(--ink-dim); font-size:0.78rem; margin-top:4px; font-style:italic; }
-    /* Einstein keeps the reader company on wide screens — the art is feathered
-       to transparency at its edges (baked into the asset) and sits behind the
-       left margin at half strength. Hidden on narrow screens: a faint wash
-       behind phone text was tried and read badly; phones get the boxed figure
-       at the top of the hub card instead. */
+    /* Einstein on wide screens: feathered art behind the left margin at half strength; hidden on narrow screens. */
     .dt-einstein-bg { display: none; }
     @media (min-width: 1150px) {
       .dt-einstein-bg { display: block; position: fixed; z-index: -1; pointer-events: none; left: calc(50% - 660px); bottom: 4vh; width: 400px; height: auto; opacity: 0.5; }
@@ -165,16 +159,15 @@
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
-/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
-   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
-   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+/* a translated menu's words are longer than English's: on a desktop the bar may use the screen up to 70px from each
+   edge, with a slightly tighter gap and 0.84rem words, so the full bar fits from 1366px wide */
 @media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
-/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+/* the offer: one closable line under the menu, in the reader's own language, when their browser's language has
    this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
 .rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
 .rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
@@ -255,12 +248,7 @@
       <p class="rs-ours" role="note">このページのAAの文献からの引用のうち、12のステップ、12の伝統（短いものと長文のもの）、12の概念の短いかたち、AAの序文は、AA日本ゼネラルサービス（JSO）が公開している日本語です。ビッグブックの本文、祈り、12の概念の長いかたち、そのほかのAAの文献や歴史書からの引用の日本語は、AAの英語の原文からの私たちの翻訳で、AAが出版した日本語訳ではありません。<a href="/daily-tradition/" hreflang="en">英語で読む</a></p>
       <p class="dt-date">12か月。12の伝統。10月は伝統10です。</p>
 
-      <!-- TODAY'S READING LEADS. Someone who lands here should be reading, not
-           being lectured. The doctrine essay used to sit here; it now sits below,
-           for the people who want it. JS swaps in the real date on load (into
-           #dt-today-main only — Einstein keeps his seat); the server-rendered
-           fallback is honestly labeled "Latest reading" because a static page
-           cannot know what day the reader arrives. -->
+      <!-- today's reading; JS swaps in today's date on load (into #dt-today-main) -->
       <section class="dt-today">
         <div id="dt-today-main">
         

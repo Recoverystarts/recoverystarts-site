@@ -58,16 +58,15 @@
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
-/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
-   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
-   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+/* a translated menu's words are longer than English's: on a desktop the bar may use the screen up to 70px from each
+   edge, with a slightly tighter gap and 0.84rem words, so the full bar fits from 1366px wide */
 @media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
-/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+/* the offer: one closable line under the menu, in the reader's own language, when their browser's language has
    this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
 .rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
 .rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
@@ -88,7 +87,7 @@
   <link rel="alternate" hreflang="ar" href="https://recoverystarts.com/ar/meetings/" data-i18n>
   <link rel="alternate" hreflang="tr" href="https://recoverystarts.com/tr/meetings/" data-i18n>
   <link rel="alternate" hreflang="x-default" href="https://recoverystarts.com/meetings/" data-i18n>
-  <style>/* 2026-11-18: the H1 names the page ("AA meeting finder", in the eyebrow's look); the warm line keeps the big type */
+  <style>/* the H1 names the page ("AA meeting finder", in the eyebrow's look); the warm line keeps the big type */
   .page-head h1.eyebrow{line-height:inherit;font-variation-settings:normal;margin-bottom:.8rem}
   .page-head .page-h{font-family:var(--font-display);font-weight:550;line-height:1.15;color:var(--ink);text-wrap:balance;font-size:var(--step-4);letter-spacing:-0.02em;font-variation-settings:'opsz' 90;max-width:20ch}</style>
 </head>
@@ -161,13 +160,7 @@
   </div></nav>
 
 
-  <!-- Raptive in-content ads (CEO window 2026-11-18, todo raptive-incontent-finder; meeting-finder #1066/#1072 did the finder's
-       own pages): Raptive's Content unit places ads only after a child of `.dr-wrap > .container` (not h1-h3; the first 3
-       skipped on desktop, 2 on a phone). <main> is that .dr-wrap, and the container's children are grouped so an ad can only
-       land after the first six fellowship cards, after the last three, or after the crisis box: never between the heading,
-       the two doors, the holiday box and the four fellowships we list, and never inside a card grid (each group is its own
-       grid). Six and three fill whole rows at 1, 2 and 3 columns (280px cards), so the cards sit exactly where they did.
-       Way back: git revert. -->
+  <!-- Raptive in-content ads: the container's children are grouped so an ad lands only after the first six fellowship cards, after the last three, or after the crisis box; each group is its own grid -->
   <main id="main" class="dr-wrap">
     <div class="container">
       <div class="page-head">
@@ -189,17 +182,14 @@
           <span style="color:var(--ink-dim);font-size:.92rem">29,000+ A.A., N.A., C.A. and C.M.A. rooms you can join from anywhere, sorted by what starts next. No map, no travel, no account.</span></span>
           <span class="meeting-card-arrow" style="margin-left:auto">→</span>
         </a>
-        <!-- "Meetings tonight" (meeting-finder #1075, 2026-11-18): served by the meeting finder at /meetings/tonight/ (A.A. & N.A.)
-             and /meetings/<aa|na|ca|cma>/tonight/. Way back: delete this link. -->
+        <!-- "Meetings tonight": served by the meeting finder at /meetings/tonight/ and /meetings/<aa|na|ca|cma>/tonight/ -->
         <a href="/meetings/tonight/" class="fade-in" style="display:flex;align-items:center;gap:14px;padding:18px 22px;margin-bottom:26px;border:1px solid rgba(167,139,250,.45);border-radius:14px;background:rgba(167,139,250,.08);text-decoration:none">
           <span style="font-size:1.6rem" aria-hidden="true">🌙</span>
           <span><strong style="color:#c4b5fd">AA &amp; NA meetings tonight</strong><br>
           <span style="color:var(--ink-dim);font-size:.92rem">From now until late tonight, soonest first: rooms near you and online, with directions or the join link in one tap.</span></span>
           <span class="meeting-card-arrow" style="margin-left:auto">→</span>
         </a>
-        <!-- Holiday hubs (claude-home#415, holidays-build 2026-11-08): the 20 pages served by the meeting finder, linked year-round.
-             The same links are on the meeting finder's own /meetings/ render (server/pages.mjs), which recoverystarts.com doesn't serve:
-             the Worker sends exactly /meetings/ here to Pages. Way back: delete this section. -->
+        <!-- holiday hubs: the 20 holiday pages served by the meeting finder -->
         <section class="fade-in" aria-labelledby="holiday-hubs" style="padding:16px 22px;margin-bottom:26px;border:1px solid rgba(253,224,71,.35);border-radius:14px;background:rgba(253,224,71,.05)">
           <h2 id="holiday-hubs" style="font-size:1.05rem;margin:0 0 4px"><span aria-hidden="true">🕯️</span> Holiday meetings</h2>
           <p style="margin:0;color:var(--ink-dim);font-size:.92rem">Online rooms open on each holiday, in your time zone, and the alcathons and marathons groups hold.</p>
@@ -305,8 +295,6 @@
       </section>
     </div>
 
-    <!-- Tradition 6 optics (2026-08-07): the meetings side stays money-free —
-         no product invites here. The map speaks for itself. -->
   </main>
 
   <footer class="footer">

@@ -1,26 +1,20 @@
 #!/usr/bin/env node
 /**
- * dt1-check.js — check one runner's half-month of Daily Traditions (wave dt1,
- * January–June) before it ships. The spec is claude-home
- * waves/2026-10-12-dt1/SPEC.md; this is that spec, run as code.
+ * dt1-check.js — checks one half-month file of January–June Daily Traditions.
  *
  *   HISTORIAN_SOURCES=~/hist node scripts/dt1-check.js data/dt1/D-jan1.md [--pages]
  *
- * Problems (exit 1): the block format, the day range for the file's line, a known
- * kind, a body of 120–260 words, the Long Form named with its page,
- * the Sit with question, a title nobody else has, the sources Derick allows (no
- * 12&12, no first edition, nothing outside the wave's three), and the quote gate:
- * every quotation of 25+ characters must be in the Big Book (4th ed), A.A. Comes
- * of Age or P-17, character for character. A quote that names a Big Book or
- * P-17 page right before it must be on that page.
+ * Problems (exit 1): the block format, the day range for the file, a known kind,
+ * a body of 120–260 words, the Long Form named with its page, the Sit with
+ * question, a unique title, the allowed sources (no 12&12, no first edition,
+ * only the Big Book (4th ed), A.A. Comes of Age and P-17), and the quote gate:
+ * every quotation of 25+ characters must be in one of those three, character
+ * for character. A quote that names a Big Book or P-17 page right before it
+ * must be on that page.
  * Notes (no exit): a day off the five-kind rotation, a body outside 180–230
- * words, no "Test it tonight:". The shape is direction, not law
- * (WRITING-DIRECTION.md; parse-traditions.js on the kinds).
+ * words, no "Test it tonight:".
  *
- * --pages also writes preview pages to daily-tradition/<month>-<day>/ (throw
- * them away afterwards: git checkout -- . && git clean -fd daily-tradition/).
- *
- * Exit 1 on any problem.
+ * --pages also writes preview pages to daily-tradition/<month>-<day>/.
  */
 const fs = require("fs");
 const path = require("path");
@@ -62,7 +56,7 @@ if (fs.existsSync(mapFile)) {
 } else warn.push(`no ${mapFile}: quotes are checked against the raw scans (a scanner slip can show as a false failure, never a false pass)`);
 function loadHist(name) {
   const p = path.join(HIST, name);
-  if (!fs.existsSync(p)) { P("setup", `missing ${p} — fetch it from aa-library (SPEC §4); quotes from it can't be verified`); return null; }
+  if (!fs.existsSync(p)) { P("setup", `missing ${p}; quotes from it can't be verified`); return null; }
   let t = fs.readFileSync(p, "utf8");
   for (const [rx, to] of repairs) t = t.replace(rx, to);
   return t;
@@ -71,10 +65,7 @@ const aacoaRaw = loadHist("aa_comes_of_age.txt");
 const p17Raw = loadHist("p-17_aa_traditions.txt");
 const SOURCES = [["Big Book (4th ed)", bbAll], ["A.A. Comes of Age", aacoaRaw && squash(aacoaRaw)], ["P-17", p17Raw && squash(p17Raw)]];
 // P-17 pages: in the text extract, the printed page number (a line holding only
-// a number) sits ABOVE its page's text. Checked against p-17_aa_traditions.pdf:
-// "For whole movements have, before now…" is printed p. 5, "rule-making
-// benders" p. 12 (D-feb1 and D-feb2 caught the first version, which read it
-// as the foot of the page and came out one page high).
+// a number) sits above its page's text.
 const p17Pages = {};
 if (p17Raw) {
   let cur = "front";
@@ -107,7 +98,7 @@ if (line) {
 }
 
 const BANNED = [
-  [/sponsor/i, `"sponsor" (SPEC §4: describe the real thing)`],
+  [/sponsor/i, `"sponsor"`],
   [/twelve steps and twelve traditions/i, "the 12&12 (never)"],
   [/twelve and twelve|12\s*(&|and)\s*12/i, "the 12&12 (never)"],
   [/first edition|1939 edition/i, "the first edition (never; cite 4th-edition pages)"],
@@ -121,22 +112,21 @@ const BANNED = [
 
 for (const d of days) {
   const where = `${R.cap(d.month)} ${d.day}`;
-  if (d.heading !== `### ${R.cap(d.month)} ${d.day} — "${d.title}" · *(${d.kind})*`) P(where, "heading isn't in the exact format (SPEC §1)");
+  if (d.heading !== `### ${R.cap(d.month)} ${d.day} — "${d.title}" · *(${d.kind})*`) P(where, "heading isn't in the exact format");
   if (!R.MONTH_TRADITION[d.month] || R.MONTH_TRADITION[d.month] > 6) P(where, "month must be January–June");
   if (d.day < 1 || d.day > (R.DAYS_IN[d.month] || 31)) P(where, "no such day");
   const kind = R.KINDS[(d.day - 1) % 5];
-  // The five kinds are LABELS, not law (Derick, Aug 2026 — parse-traditions.js): a known kind is required,
-  // the rotation is the spec's default and only a note when a day departs from it.
+  // A known kind is required; a day off the rotation is only a note.
   if (!R.KINDS.includes(d.kind)) P(where, `kind "${d.kind}" isn't one of: ${R.KINDS.join(" · ")}`);
-  else if (d.kind !== kind) warn.push(`${where}: the rotation puts "${kind}" here, not "${d.kind}" — fine if the reading's point needs it; say why in your status file`);
+  else if (d.kind !== kind) warn.push(`${where}: the rotation puts "${kind}" here, not "${d.kind}"`);
   const rest = d.rest.filter((l) => l.trim());
   if (rest.length !== 3 || !rest[1].startsWith("*Sit with:* ") || !rest[2].startsWith("*Grounded in:* ") || d.rest[0] !== rest[0])
     P(where, "after the heading: exactly three lines — the body (one line), *Sit with:*, *Grounded in:*");
   const words = d.body.split(/\s+/).filter(Boolean).length;
-  // Shape is direction, not law (WRITING-DIRECTION.md): hard limits only where a reading stops being one.
+  // Hard limits only where a reading stops being one; the 180–230 aim is a note.
   if (words < 120 || words > 260) P(where, `body is ${words} words — that's not one reading (aim 180–230)`);
   else if (words < 180 || words > 230) warn.push(`${where}: ${words} words (the spec aims for 180–230)`);
-  if (!/Test it tonight:/.test(d.body)) warn.push(`${where}: no "Test it tonight:" (SPEC §3.7) — fine only if the ending does that job another way`);
+  if (!/Test it tonight:/.test(d.body)) warn.push(`${where}: no "Test it tonight:" — fine only if the ending does that job another way`);
   else if (d.body.lastIndexOf("Test it tonight:") < d.body.length * 0.6) warn.push(`${where}: "Test it tonight:" usually comes last`);
   if (!/\?$/.test(d.sitWith.trim())) P(where, "Sit with must end on a question");
   if ((d.sitWith.match(/[.!]/g) || []).length === 0) P(where, "Sit with: a plain statement first, then the question");

@@ -1,17 +1,6 @@
 /**
- * vendor-source.js — make the repo verify itself.
- *
- * The verify scripts were reading the APPROVED readings from D:\Forge — an
- * external drive. When it isn't mounted, the build cannot check its own work.
- * A build that can only verify itself when a USB drive is plugged in is not
- * verified; it's lucky.
- *
- * So the approved source gets vendored INTO the repo, reconstructed from
- * data/traditions-daily.json — which parse-traditions.js already proved is a
- * verbatim, character-for-character copy of the GATE-2 markdown (all 124 fields
- * checked as exact substrings before it was ever written).
- *
- * Output: data/readings-source.md  — the approved text, in the repo, in git.
+ * vendor-source.js — writes data/readings-source.md, the Daily Traditions source text, reconstructed from
+ * data/traditions-daily.json, and checks it still contains every reading verbatim.
  */
 const fs = require("fs");
 const path = require("path");
@@ -21,14 +10,9 @@ const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-dail
 const CAP = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const lines = [
-  "# Daily Traditions — APPROVED SOURCE (GATE 2)",
+  "# Daily Traditions — source",
   "",
-  "Derick-approved readings. This file is the source of truth for what the site renders,",
-  "and it lives IN THE REPO so the build can verify itself without any external drive.",
-  "",
-  "Reconstructed from data/traditions-daily.json, which parse-traditions.js proved is a",
-  "verbatim copy of the original PILOT-T7-month.md (every field checked as an exact",
-  "substring before writing).",
+  "The readings the site renders, written from data/traditions-daily.json by scripts/vendor-source.js.",
   "",
   "---",
   "",
@@ -57,4 +41,3 @@ if (bad) throw new Error(bad + " field(s) drifted — refusing to vendor.");
 console.log("Vendored the approved source into the repo:");
 console.log("  data/readings-source.md   (" + (out.length / 1024).toFixed(1) + " KB, " + DATA.days.length + " readings)");
 console.log("  all " + DATA.days.length * 4 + " fields verified verbatim.");
-console.log("  the build no longer depends on D:\\Forge being mounted.");

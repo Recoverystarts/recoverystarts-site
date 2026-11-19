@@ -1,18 +1,16 @@
-# Portuguese glossary — the words every tr2 runner uses the same way
+# Portuguese glossary — the site's words, the same way everywhere
 
-*Started 2026-10-12 by wave tr2 S1-pt (the super). Brazilian Portuguese (pt-BR), the reader addressed as **você**, plain and warm — the meeting finder's Portuguese already speaks this way. Where Brazilian A.A. (JUNAAB, aa.org.br) prints its own wording, we use theirs; the source is in brackets. **[nossa]** marks a wording we couldn't find printed by JUNAAB online: it's ours, and it's fixed here so every page says it the same way. Add to this file through your close (the super merges additions), not by changing it mid-wave. The 12 & 12 is never a source.*
+*Brazilian Portuguese (pt-BR), the reader addressed as **você**, plain and warm — the meeting finder's Portuguese already speaks this way. Where Brazilian A.A. (JUNAAB, aa.org.br) prints its own wording, we use theirs; the source is in brackets. **[nossa]** marks a wording we couldn't find printed by JUNAAB online: it's ours, and it's fixed here so every page says it the same way. The 12 & 12 is never a source.*
 
-## How to write a segment
-- Write in the placeholder form: keep every `<0>…</0>` pair and `<1/>` the English has, around the words that belong in it, in whatever order Portuguese needs. Don't type HTML yourself.
-- `node scripts/i18n/check.mjs pt <your-batch>` must say 0 problems.
+## Conventions
 - Plain characters are fine (ã, ç, é, —, “ ”); entities like `&mdash;` may stay as they are.
 - **Brazilian, not European:** você (never tu/vós/teu/vosso), fato, contato, celular, equipe, usuário, tela, banheiro, registro; "está fazendo", never "está a fazer". `score.mjs pt` counts slips in its `reg` column.
 - Numbers: 1.234 · 19h30 (or 7h30 da noite) · 18 de novembro de 1982 · 4ª edição. Page refs stay the English 4th Edition's numbers: "p. 417" / "página 86".
 - Names stay as they are: Bill W., Dr. Bob, Akron, Recovery Einstein, Recovery Starts, Addict2Influencer, AutoGrow AI Solutions, Claude's Lab, Derick.
 - A book's English title in running text gets its Portuguese title (below); a citation that names the English edition ("Alcoholics Anonymous, 4th Edition") becomes "<i>Alcoólicos Anônimos</i>, 4ª edição (em inglês)".
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-12):
+## Crisis lines
+What's true:
 - **988** (USA): calls, chat and text are in English and Spanish; a **call** gets an interpreter in 240+ more languages, Portuguese among them, at no cost. **Text and chat have no interpreter.** [samhsa.gov/mental-health/988/faqs: "the 988 Lifeline uses Language Line Solutions to provide interpretation to callers in more than 240 additional languages"; "988 call, chat, and text services are available in English and Spanish"]
 - **Brazil — CVV, 188**: free, 24 hours a day; also chat and e-mail at cvv.org.br. [cvv.org.br: "pelo telefone 188 (24 horas por dia e sem custo de ligação)"]
 - **Portugal — SOS Voz Amiga, 213 544 545** (also 912 802 669, 963 524 660, 930 712 500), daily 15h30–00h30. [sosvozamiga.org]
@@ -128,7 +126,7 @@ A Step quoted in part uses these words, cut, not reworded ("impotentes perante o
 
 (Two slips to watch for, from tr1: Tradition Four's "**salvo** em assuntos…" and Tradition Six's "**jamais**" — a lost negative turns a Tradition upside down.)
 
-**The long form** isn't printed by JUNAAB online. The 12-traditions runner translates the English long form faithfully, sentence by sentence, nothing added or dropped. Because of that, on the /12-traditions/ page the line "reproduced here in full — both forms, word for word — from Alcoholics Anonymous, 4th Edition" becomes: "…a forma curta na redação da JUNAAB (A.A. do Brasil) e a forma longa em nossa tradução fiel do texto em inglês de <i>Alcoholics Anonymous</i>, 4ª edição…" — never claim the long form is an official Portuguese text.
+**The long form** isn't printed by JUNAAB online. The site translates the English long form faithfully, sentence by sentence, nothing added or dropped. Because of that, on the /12-traditions/ page the line "reproduced here in full — both forms, word for word — from Alcoholics Anonymous, 4th Edition" becomes: "…a forma curta na redação da JUNAAB (A.A. do Brasil) e a forma longa em nossa tradução fiel do texto em inglês de <i>Alcoholics Anonymous</i>, 4ª edição…" — never claim the long form is an official Portuguese text.
 
 ## The Twelve Concepts, short form — as in i18n/pt/core.json (the /aa-info/ page) **[nossa]**
 JUNAAB prints the Concepts in its Manual de Serviço (since the 9th edition, 2016) but not online, so the short form in core.json is our faithful translation. Use exactly those sentences wherever a Concept is quoted in full. Its fixed terms are JUNAAB's [aa.org.br, boletim CAHIST 24]: o Direito de Decisão, o Direito de Participação, o Direito de Apelação, o Direito de Petição; a Conferência de Serviços Gerais; a Junta de Serviços Gerais; os custódios.
@@ -138,7 +136,7 @@ JUNAAB prints the Concepts in its Manual de Serviço (since the 9th edition, 201
 - **Third Step prayer** (English p. 63) **[nossa]**: "Deus, eu me ofereço a Ti, para que edifiques comigo e faças comigo o que quiseres. Liberta-me da escravidão do ego, para que eu possa cumprir melhor a Tua vontade. Afasta minhas dificuldades, para que a vitória sobre elas seja testemunho, para aqueles a quem eu possa ajudar, do Teu Poder, do Teu Amor e do Teu modo de vida. Que eu possa sempre fazer a Tua vontade!"
 - **Seventh Step prayer** (English p. 76) **[nossa]**: "Meu Criador, estou agora disposto a que Tu tenhas tudo de mim, o bom e o mau. Peço que agora removas de mim cada um dos defeitos de caráter que me impedem de ser útil a Ti e aos meus semelhantes. Dá-me forças, ao sair daqui, para cumprir a Tua vontade. Amém."
 - A prayer quoted in part uses these words, cut ("Deus, eu me ofereço a Ti, para que edifiques comigo e faças comigo o que quiseres"; "Meu Criador, estou agora disposto a que Tu tenhas tudo de mim, o bom e o mau").
-- Any other line the English quotes from the Big Book: translate it faithfully, and use the same Portuguese each time the same English line comes back in your batch (search your file before you write it again).
+- Any other line the English quotes from the Big Book: translate it faithfully, and use the same Portuguese each time the same English line comes back.
 
 ## Site words
 | English | Portuguese |

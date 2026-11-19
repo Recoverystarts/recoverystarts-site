@@ -2,23 +2,13 @@
 /**
  * build-concepts-truth.js — /12-concepts/ : the Twelve Concepts, published whole.
  *
- * ── WHY THIS PAGE EXISTS ────────────────────────────────────────────────────
- * The Traditions govern the life of the groups. The CONCEPTS govern the service
- * structure above them — who may decide what, who answers to whom, and the
- * warranties that stop the Conference becoming "the seat of perilous wealth or
- * power." They are the other half of A.A.'s constitution, and they are close to
- * invisible on the open web: Big Book Appendix VII carries the SHORT form only,
- * and almost nothing online reproduces the long form at all.
+ * The Traditions govern the groups; the Concepts govern the service structure
+ * above them. Big Book Appendix VII carries the short form only; this page
+ * publishes both forms, verbatim, in the same shape as /12-traditions/.
  *
- * That is the gap this page closes, in the same shape as /12-traditions/:
- * both forms, verbatim, one canonical page, linked from everywhere — so the
- * accurate version is what humans find and what the next crawl learns.
- *
- * ── SOURCE ──────────────────────────────────────────────────────────────────
- * data/twelve-concepts.json, extracted by scripts/extract-concepts.js from
- * The A.A. Service Manual Combined With Twelve Concepts for World Service —
- * the Concepts' own home, which A.A. publishes FREE as a PDF on aa.org and
- * circulates to members. Verbatim; never retyped, never paraphrased.
+ * Source: data/twelve-concepts.json, extracted by scripts/extract-concepts.js
+ * from The A.A. Service Manual Combined With Twelve Concepts for World Service
+ * (published free as a PDF on aa.org).
  *
  * Usage: node scripts/build-concepts-truth.js [--dry]
  */
@@ -98,7 +88,7 @@ const crumbSchema = {
 
 const DESC = "The Twelve Concepts for World Service, both forms, in full. The Concepts govern A.A.'s service structure — Big Book Appendix VII carries the short form only; the long form is here.";
 
-// 2026-10-28 (CEO: reach, #444): each Concept links to its answer page in /aa-questions/ (mirrors the hand edit)
+// Each Concept links to its answer page in /aa-questions/.
 const MORE = {"1": ["concept-01", "Concept I: who has the final say in A.A.?"], "2": ["concept-02", "Concept II: what is the General Service Conference, and what can it decide?"], "3": ["concept-03", "Concept III: what is the Right of Decision, and must a delegate vote the way the group says?"], "4": ["concept-04", "Concept IV: what is the Right of Participation, and who votes at the Conference?"], "5": ["concept-05", "Concept V: what are the Rights of Appeal and Petition?"], "6": ["concept-06", "Concept VI: what do the trustees of the General Service Board do?"], "7": ["concept-07", "Concept VII: who really holds power, the Conference or the trustees?"], "8": ["concept-08", "Concept VIII: do the trustees run the General Service Office and the Grapevine?"], "9": ["concept-09", "Concept IX: what makes a good leader in A.A. service?"], "10": ["concept-10", "Concept X: why must service authority equal service responsibility?"], "11": ["concept-11", "Concept XI: who helps the trustees, and how should paid A.A. workers be treated?"], "12": ["concept-12", "Concept XII: what are the General Warranties of the Conference?"]};
 const conceptsHtml = TWELVE.map((c) => `
       <article class="tt-t" id="concept-${c.n}">

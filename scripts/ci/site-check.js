@@ -1,21 +1,14 @@
 #!/usr/bin/env node
 /**
- * site-check.js — the merge gate's checks for recoverystarts.com (2026-11-09, claude-home #499 step 3, window 3).
- * Run by .github/workflows/site-ci.yml on every PR into main and every push to main; run it yourself before READY:
+ * site-check.js — checks on the built dist/, run by .github/workflows/site-ci.yml.
  *     sh scripts/pages-dist.sh && node scripts/ci/site-check.js --base origin/main
  *
- * Why each check, from the 11-07 research (claude-home map/projects/recoverystarts-site/research/2026-11-07-topic8-github/):
- *  1. FILE COUNT of dist/ (what Pages deploys): warn at 90,000, fail at 100,000. Pages' limit on our plan is 100,000
- *     since 11-07 (scripts/pages-dist.sh header); at 20,000 a Russian batch once stopped every deploy.
- *  2. PAGES PER LANGUAGE: each language's page count, against the base branch. A language that loses more than 2% of
- *     its pages, or has none, fails: a translation batch that deletes pages is a mistake until a person says otherwise.
- *  3. INTERNAL LINKS on disk: every href="/..." on every page resolves to a file in dist/ (scripts/check-links.js'
- *     rule). Paths the meeting map serves (the meetings Worker: /meetings/<program>/…, /meetings/find/, /online/) are
- *     not files here; they're counted, not failed, and the preview check asks them for real. (298 dead meeting links,
- *     09-20; 96 from oi1, 11-01.)
- *  4. TRANSLATED → ENGLISH: a page under /<lang>/ that links to an English page when the same page exists in <lang>.
- *     (10-12: the menu sent translated readers to English.)
- *  5. DOUBLE-ESCAPED ATTRIBUTES: an attribute value with &amp;quot; / &amp;#x27; (shows as "&quot;"; 2026-11-16, #561).
+ *  1. FILE COUNT of dist/: warn at 90,000, fail at 100,000 (the Pages file limit).
+ *  2. PAGES PER LANGUAGE against the base branch: a language with no pages, or more than 2% fewer, fails.
+ *  3. INTERNAL LINKS: every href="/..." resolves to a file in dist/. Meeting-map paths (served by Workers) are counted,
+ *     not failed; preview-links.js requests those.
+ *  4. TRANSLATED → ENGLISH: a page under /<lang>/ linking to an English page that also exists in <lang>.
+ *  5. DOUBLE-ESCAPED ATTRIBUTES: an attribute value with &amp;quot; / &amp;#x27; (shows as "&quot;").
  * Exit 1 on any failure; a summary table goes to $GITHUB_STEP_SUMMARY when it's set.
  */
 const fs = require("fs");
@@ -26,8 +19,7 @@ const ROOT = path.join(__dirname, "..", "..");
 const DIST = path.join(ROOT, "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
 const WARN_AT = 90000, FAIL_AT = 100000;
-// served by the meetings Worker / Railway at recoverystarts.com, not by Pages
-// + /family/: the family map (Al-Anon and Nar-Anon), served by the family-router Worker from Recoverystarts/al-anon-finder (2026-11-17)
+// paths served by the meetings and family Workers at recoverystarts.com, not by Pages
 const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$))/;
 const args = process.argv.slice(2);
 const base = args.includes("--base") ? args[args.indexOf("--base") + 1] : null;
@@ -120,9 +112,7 @@ if (run("links")) {
   for (const [k, where] of leaks) { const [lang, p] = k.split(" "); err(`translated → English: ${lang} pages link to ${p} though /${lang}${p} exists (on ${where.join(", ")})`); }
 }
 
-// 5. DOUBLE-ESCAPED ATTRIBUTES (2026-11-16, claude-home #561): an attribute value holding &amp;quot; or &amp;#x27;,
-// which a browser and Google's snippet show as the literal "&quot;". 5,529 of them sat in es/pt/hi meta descriptions
-// until build.mjs decoded attribute translations before escaping them. Way back: delete this block.
+// 5. double-escaped attributes: &amp;quot; or &amp;#x27; in an attribute shows as the literal "&quot;"
 if (run("entities")) {
   const bad = new Map();
   for (const f of files) {

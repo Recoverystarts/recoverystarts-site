@@ -1,23 +1,16 @@
 /* ============================================================================
    Recovery Starts — recoverystarts.com
-   OPEN COSMOS: the night world, locked by Derick + Grok (grok-handoff/).
+   OPEN COSMOS: the night world.
 
    Violet-navy grounds under a cosmic sky; teal is the one ACTION accent
    (the free-value door, links, focus); warm gold is the book light on the
    readings. Night-native — there is no light theme.
-
-   The organizing test: does this make someone shaking on their phone at 3am
-   feel held, not marketed to?
    ========================================================================== */
 
-/* Fraunces and Outfit, self-hosted (wave 2026-10-26-ads S2). They came from an import of Google Fonts' stylesheet,
-   which held every page's first paint until style.css, then Google's CSS, had both arrived (~0.85 s of a phone's 3.2 s
-   wait for the home headline). These are the same variable files Google served for it (Fraunces opsz+wght 400–600,
-   Outfit wght 300–700, fonts.gstatic.com 2026-10-26, SIL OFL), declared face by face as Google declared them (one face
-   per weight, so h1–h4's 550 still draws at 600 and the menu's 450 at 500), with the same unicode ranges and swap: the
-   type looks exactly as before. Each file downloads once, whatever the weight. Way back: put back the import line,
-   url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap'),
-   in place of these rules. (No at-sign word in this note: scripts/i18n/rtl.mjs looks for the first one.) */
+/* Fraunces and Outfit, self-hosted: the variable files Google Fonts serves (Fraunces opsz+wght 400–600, Outfit wght
+   300–700, SIL OFL), declared face by face as Google declares them (one face per weight, so h1–h4's 550 draws at 600
+   and the menu's 450 at 500), with the same unicode ranges and swap. Each file downloads once, whatever the weight.
+   (scripts/i18n/rtl.mjs looks for the first at-sign word in this file, so this comment has none.) */
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-vietnamese.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/fraunces-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
@@ -38,7 +31,7 @@
 @font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/outfit-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 @font-face{font-family:'Outfit';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/outfit-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
-/* ===== 1. TOKENS — OPEN COSMOS (night-native, locked by Derick+Grok) ===== */
+/* ===== 1. TOKENS — OPEN COSMOS (night-native) ===== */
 
 :root {
   color-scheme: dark;
@@ -332,7 +325,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 1px;
 }
 
-/* The one header action — Derick's door stays pinned top (nav-talk style) */
+/* The header action, pinned top (nav-talk style) */
 .nav-cta {
   background: rgba(45, 212, 191, 0.12);
   border: 1px solid rgba(45, 212, 191, 0.55);
@@ -351,7 +344,7 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 28px rgba(45, 212, 191, 0.28);
 }
 
-/* The second header action — the Meetings Map (Derick, 2026-08-06): the teal
+/* The second header action — the Meetings Map: the teal
    pill's violet twin, softly lit even at rest. Teal is the door to the app;
    violet is the door to a real room. */
 .nav-cta-map {
@@ -366,16 +359,15 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 32px rgba(167, 139, 250, 0.42);
 }
 
-/* Seven items share the desktop row since the Meetings Map pill joined; a
-   label must never break into two lines, and the narrow desktop band packs
-   tighter instead of wrapping. */
+/* Seven items share the desktop row: labels don't wrap, and the narrow
+   desktop band packs tighter instead. */
 .nav-links > li > a { white-space: nowrap; }
 @media (min-width: 1021px) and (max-width: 1140px) {
   .nav-links { gap: 8px; }
   .nav-cta { padding: 0.45rem 0.75rem; }
 }
 
-/* v4 (2026-10-11, Derick: "the top menu more organized"): the same items in
+/* The same items in
    three quiet groups (find a room · read · give), smaller type, one hairline
    between groups. Daily Reflection + Daily Tradition share one dropdown. */
 .sub-group { list-style: none; }
@@ -463,8 +455,7 @@ img { max-width: 100%; height: auto; display: block; }
     overflow-y: auto;
   }
   .sub-menu.sub-menu-list { grid-template-columns: 1fr; width: 250px; }
-  /* Desktop menus open on CLICK only (.open, toggled in app.js). Hover-open
-     flickered shut on the pointer's way down to the panel — Derick killed it. */
+  /* Desktop menus open on click (.open, toggled in app.js). */
   .has-sub.open > .sub-menu { display: grid; }
   .has-sub > a { cursor: pointer; }
   .sub-menu .sub-today {
@@ -551,10 +542,9 @@ img { max-width: 100%; height: auto; display: block; }
   .sub-soon { padding: 7px 0; color: var(--ink-dim); font-style: italic; }
   .nav-cta { text-align: center; }
 
-  /* Phone menu, 2026-10-14 (Derick: "the meetings map hamburger menu looks
-     correct but recoverystarts.com main page is wrong"). Same shape as the
-     map's: each dropdown opens flat under a small gold heading, nothing to
-     tap open, and the heading no longer jumps away to a hub page. Daily
+  /* Phone menu, same shape as the map's: each dropdown opens flat under a
+     small gold heading, nothing to tap open, and the heading doesn't link
+     to a hub page. Daily
      Reading shows only Today's / All-of links (the months stay on the hub
      pages); its order matches the map: both Today's first, then both All-of. */
   .nav-links .has-sub > a {
@@ -586,8 +576,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ===== 6. THE BIG BOOK APP IN THE TOP BAR (stamped by fix-nav.js) ======= */
-/* Recovery Einstein's round face, as the meeting map's bar has it (meeting-finder sitenav.mjs .rsn-bb). It was a
-   floating pill at the bottom right until 2026-10-18 (WO-ADS A7: the bottom of the screen is kept for an ad bar).
+/* Recovery Einstein's round face, as the meeting map's bar has it (meeting-finder sitenav.mjs .rsn-bb).
    It comes right after the brand in the HTML; `order` puts it at the end of the menu, next to the globe (order 9). */
 .rs-bb {
   order: 8;
@@ -743,7 +732,7 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 
 /* Quote block — the sacred text, framed like a poem.
    Named .quote-frame (NOT .bb-quote) — 591 legacy Big Book pages define their
-   own .bb-quote inline and must not inherit this frame. */
+   own .bb-quote inline, so they don't inherit this frame. */
 .quote-frame {
   margin-block: var(--space-m);
   padding-top: var(--space-s);
@@ -913,9 +902,8 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .footer-bottom a:hover { color: var(--sky-gold); }
 
 /* ===== 10. OPEN COSMOS WORLD + HOMEPAGE COMPONENTS =======================
-   Ported pixel-faithful from Grok's locked Option 2 (grok-handoff/). The
-   world (fixed cosmos image + shade + particles) ships on the homepage and,
-   later, hub pages; content pages stay quiet night per the adaptation law. */
+   The world (fixed cosmos image + shade + particles) is on the homepage;
+   content pages are quiet night. */
 
 .world-fixed {
   position: fixed;
@@ -1048,11 +1036,9 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .crisis a, .crisis-line a { color: var(--crisis); text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 .crisis-line { font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-dim); }
 
-/* The meeting-info door (Derick, 2026-08-11). Sits directly ABOVE the 988 line,
-   and wears the teal ACTION accent while 988 keeps --crisis blue. The two lines
-   are adjacent, so they must never read as the same kind of thing: one is an
-   invitation to help, the other is a lifeline. The rule at the top of this file
-   still holds — teal is the action accent, --crisis is 988 only. */
+/* The meeting-info door. Sits directly above the 988 line in the teal action
+   accent, while 988 keeps --crisis blue, so the invitation and the lifeline
+   read as different things. */
 .hero-add-meeting { margin-top: 1.5rem; font-size: 0.9rem; color: var(--ink-dim); text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55); }
 .hero-add-meeting a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
 .hero-add-meeting a:hover { color: var(--accent-hover); }
@@ -1266,7 +1252,7 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-/* the click-to-play poster (home, wave 2026-10-26-ads S2): fills the frame, YouTube's own play button shape */
+/* the click-to-play poster (home): fills the frame, YouTube's own play button shape */
 .video-facade { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
 .video-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .video-play { position: absolute; top: 50%; left: 50%; width: 68px; height: 48px; margin: -24px 0 0 -34px; }
@@ -1544,7 +1530,7 @@ section { padding: clamp(2.5rem, 6vw, 5rem) 0; }
 .dr-bg, .dt-bg, .cp-bg, .tt-bg, .bb-bg { background: none !important; }
 
 /* Signup box layout, for pages without the reflection pages' inline copy
-   (the Daily Tradition day pages, 2026-11-10). Same values as that copy. */
+   (the Daily Tradition day pages). Same values as that copy. */
 .dt-wrap .dr-email { max-width: 760px; margin: 2.2rem auto 0; padding: 1.5rem 2rem; border: 1px solid; border-radius: 12px; text-align: center; }
 .dt-wrap .dr-email .lbl { display: block; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.5rem; }
 .dt-wrap .dr-email p { font-size: 0.95rem; margin: 0 0 1rem; line-height: 1.5; }

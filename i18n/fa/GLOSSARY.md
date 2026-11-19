@@ -1,8 +1,8 @@
-# Persian glossary — the words every tr4 runner uses the same way
+# Persian glossary — the site's words, the same way everywhere
 
-*Started 2026-10-13 by wave tr4 S1-fa (the super). Standard written Persian as read in Iran, the reader is **شما** (plural verbs: «می‌توانید», «بخوانید»), plain and warm. No Dari- or Tajik-only forms. Where A.A. in Iran prints its own Persian, we use it word for word; the source is in brackets. **[ours]** marks a wording A.A. hasn't published online: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s Persian (Basic Text, IPs, «معتادان گمنام» literature) and never the Twelve Steps and Twelve Traditions** («گام‌های دوازده‌گانه و سنت‌های دوازده‌گانه», "the 12 and 12"), even if you know them.*
+*Standard written Persian as read in Iran, the reader is **شما** (plural verbs: «می‌توانید», «بخوانید»), plain and warm. No Dari- or Tajik-only forms. Where A.A. in Iran prints its own Persian, we use it word for word; the source is in brackets. **[ours]** marks a wording A.A. hasn't published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Persian (Basic Text, IPs, «معتادان گمنام» literature) and never the Twelve Steps and Twelve Traditions** («گام‌های دوازده‌گانه و سنت‌های دوازده‌گانه», "the 12 and 12"), even if you know them.*
 
-## Sources (checked 2026-10-13)
+## Sources
 A.A. in Iran has two service structures that publish in Persian; we credit them neutrally, as the meeting map does.
 - **[A]** «شورای خدمات عمومی الکلی‌های گمنام ایران» — aairan.org and its app pwa.aairan.org: the Twelve Steps (`/fa/recovery-group/twelve/steps`), the Twelve Traditions (`/fa/recovery-group/twelve/traditions`; the 2024 PDF `aairan.org/wp-content/uploads/2024/06/سنت-های-دوازده-گانه.pdf`), «هوشیار زیستن» (`/fa/gifts/living-sober`: Steps, Traditions, Serenity, Third and Seventh Step prayers), the prayers (`/fa/recovery-group/third/prayer`, `/fa/recovery-group/prayers/seventh`), the Preamble (`/fa/about-us/definition`), «چگونگی عملکرد» (How It Works, 2024 PDF), the sponsor Q&A.
 - **[B]** «دفتر خدمات عمومی الکلی‌های گمنام ایران» (Tehran) — iranaa.org: the Twelve Steps (`/newcommer/دوازده-قدم-aa`, the same words as [A]), the Twelve Concepts short form (`/newcommer/12-مفهوم`), a second Traditions wording and a newer, more literal Steps translation (`/how-anonymous-alcoholics-work`).
@@ -10,11 +10,9 @@ A.A. in Iran has two service structures that publish in Persian; we credit them 
 
 **Which wording, and why.** The Steps: the older translation, because **both** offices print it ([A] everywhere, [B] on its own Steps page); [B]'s newer translation appears only on one page and one PDF. The Traditions, Serenity Prayer, Third and Seventh Step prayers and Preamble: [A]'s, the same publisher as the Steps. Tradition 2: [A]'s 2024 PDF («خدمتگزاران مورد اعتمادند», "trusted servants"), where its app says «صادقند». The Concepts: [B]'s, the only Persian online, with its obvious typing slips corrected (noted below). Typography (half-space, «ی/ک», no space before «،») is normalized; **words are A.A.'s**. The long form of the Traditions isn't online in Persian anywhere: ours, below. Read through a reader service because both sites refuse connections from outside Iran; every text was read on the office's own URL.
 
-## How to write a segment
-- Write in the placeholder form: keep every `<0>…</0>` pair and `<1/>` the English has, around the words that belong in it, in whatever order Persian needs. Don't type HTML or direction marks (no U+200F/U+202B).
-- `node scripts/i18n/check.mjs fa <your-batch>` must say 0 problems. `node scripts/i18n/score.mjs fa` has a `reg` column (Arabic ي/ك, «می» without the half-space, «تو» forms, Latin , ; ? in Persian) — keep it at 0 outside quotes.
+## Conventions
 - **Letters:** Persian ی and ک only, never Arabic ي ك ى. **Half-space** (نیم‌فاصله, U+200C): «می‌خواهم»، «نمی‌توانم»، «کتاب‌ها»، «خانه‌ای»، «صفحهٔ»/«صفحه‌ای»، «بی‌باکانه»، «الکلی‌های». Ezafe after a silent ه: «صفحهٔ ۶۰»، «نسخهٔ خودتان».
-- **Punctuation:** ، ؛ ؟ and «گیومه» for every quote (English “…” and "…" become «…»). No space before ، ؛ ؟ . : !. The desk (`desk/fix_fa.py`) cleans letters, half-spaces and punctuation at the merge, but write them right.
+- **Punctuation:** ، ؛ ؟ and «گیومه» for every quote (English “…” and "…" become «…»). No space before ، ؛ ؟ . : !.
 - **Digits:** write Persian digits **۰–۹** in prose, page numbers, years, dates and counts («صفحهٔ ۴۱۷»، «سال ۱۹۳۵»، «بیش از ۲ میلیون»). **Phone numbers people dial stay Latin** (988, 123, 115, 911) and so do URLs, pamphlet codes (P-17) and prices ($2.99). The build writes any Latin digit left in Persian text as Persian anyway, except phone numbers and anything joined to Latin letters, so a slip can't make a page uneven.
 - **Arrows: keep them exactly as the English has them** (`→`, `←`, `›`). The build turns every arrow to point the way Persian reads. If you flip one yourself it ends up pointing the wrong way.
 - **Dates are Gregorian**, never converted to the solar calendar. Months: ژانویه، فوریه، مارس، آوریل، مه، ژوئن، ژوئیه، اوت، سپتامبر، اکتبر، نوامبر، دسامبر. "October 12" → «۱۲ اکتبر»; "October 12 — Title" → «۱۲ اکتبر — عنوان»; "All of October" → «همهٔ اکتبر»; "January 1" → «۱ ژانویه». Weekdays: شنبه، یکشنبه، دوشنبه، سه‌شنبه، چهارشنبه، پنجشنبه، جمعه.
@@ -25,8 +23,8 @@ A.A. in Iran has two service structures that publish in Persian; we credit them 
 - Meta descriptions (the short text Google shows) end on a full sentence, never cut mid-sentence.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-13):
+## Crisis lines
+What's true:
 - **Iran — 123, اورژانس اجتماعی بهزیستی** (Behzisti's social emergency): for someone thinking of suicide, or someone worried about them; a team can come to the person; **24 hours, free** [behzisti.ir/news/205390 «مداخله خط ۱۲۳ می‌تواند پیش از وقوع اقدام به خودکشی آغاز شود»; /news/31060; Behzisti: «شبانه‌روزی و رایگان»].
 - **Iran — 115, اورژانس** (medical emergency, ambulance) [115.ir, the Emergency Organization's own site; ems115.behdasht.gov.ir].
 - **Canada — 9-8-8**: English and French, 24/7; **a call can ask for an interpreter in another language, "may be available"** — not promised; text is English/French only [988.ca/get-help/what-to-expect].
@@ -48,7 +46,7 @@ So on a fa page **never write "call or text 988" alone** — a Persian speaker w
 | not medical advice | توصیهٔ پزشکی نیست |
 | treatment / treatment center / rehab | درمان / مرکز درمان / مرکز ترک اعتیاد |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988). Every crisis/988/detox/withdrawal segment is read by the super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988).
 
 ## Fellowships and books
 | English | Persian |
@@ -95,7 +93,7 @@ A's Persian Big Book isn't online; only one chapter title is printed by A elsewh
 | Appendix I – The A.A. Tradition … VII – Twelve Concepts | پیوست ۱ – سنت AA؛ ۲ – تجربهٔ روحانی؛ ۳ – دیدگاه پزشکی؛ ۴ – جایزهٔ لاسکر؛ ۵ – دیدگاه مذهبی؛ ۶ – راه تماس؛ ۷ – دوازده مفهوم |
 | Chapter 3 – More About Alcoholism | فصل ۳ – بیشتر دربارهٔ الکلیسم (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | Persian |
@@ -175,7 +173,7 @@ A Step quoted in part uses these words, cut, not reworded («در مقابل ا�
 Where the English bolds the first half of a Tradition (`<0>…</0>`), cut the Persian at the matching point; the /aa-info/ page in `i18n/fa/core.json` has all twelve already cut — copy those. Like the Steps, A's wording is used as printed where it differs a little from the English (Tradition 6's subject «الکلی‌های گمنام» where the English says "an A.A. group"; Tradition 9's «در برابر گروه مسئول»). Lost-negative watch: Two «حکومت نمی‌کنند», Six «هرگز نباید», Seven «دریافت نکند», Nine «هرگز نباید», Ten «هیچ … ندارد» and «هرگز نباید».
 
 ## The Twelve Traditions, long form — [ours], word for word
-Not published online in Persian by either office: this is ours, written once from the English 4th Edition (pp. 563–566) in the short form's vocabulary. Every runner uses it exactly.
+Not published online in Persian by either office: this is ours, written once from the English 4th Edition (pp. 563–566) in the short form's vocabulary.
 Opening line: «تجربهٔ ما در AA به ما آموخته است که:»
 1. هر عضو الکلی‌های گمنام تنها جزء کوچکی از یک کل بزرگ است. AA باید به زندگی ادامه دهد، وگرنه بیشتر ما بی‌گمان خواهیم مرد. از این رو منافع مشترک ما در رأس قرار می‌گیرد. اما منافع فردی بلافاصله پس از آن می‌آید.
 2. در ارتباط گروهی ما فقط یک مرجع وجود دارد و آن پروردگار مهربان است، بدان‌گونه که خود را در وجدان گروه بیان کند.
@@ -203,7 +201,7 @@ B's Persian, with its typing slips corrected (C2 «علمی» → «عملی»; 
 - **Seventh Step prayer** (English p. 76) [A, «دعاهای قدم هفتم»]: «آفریدگارا، من اکنون آماده‌ام که تمام خوب و بد وجودم را به تو بسپارم. تمنا دارم یک‌یک نقص‌های درونم را که سد راه خدمت به تو و همنوعان من است برطرف کنی، و قدرتی عطا فرمایی تا از این پس به خدمت تو کمر بندم. آمین.»
 - **The A.A. Preamble** [A, `/fa/about-us/definition`]: «الکلی‌های گمنام انجمن افرادی است که تجربه، نیرو و امید خود را با یکدیگر مشارکت می‌کنند تا شاید بتوانند مشکل مشترکشان را حل کنند و دیگران را نیز در بهبودی از بیماری الکلیسم یاری دهند. تنها لازمهٔ عضویت، تمایل به توقف نوشیدن الکل است. در الکلی‌های گمنام حق عضویت و یا پرداختی وجود ندارد؛ ما از طریق کمک‌های داوطلبانهٔ خودمان خودکفا هستیم. الکلی‌های گمنام با هیچ فرقهٔ مذهبی، سیاسی، سازمان و یا نهادی پیوستگی ندارد و مایل به موضع‌گیری در مباحث و مشاجرات نیست و هیچ موضوعی را رد یا قبول نمی‌کند. هدف اصلی ما هوشیاری و کمک به دیگر الکلی‌هاست تا به هوشیاری برسند.»
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (ترجمهٔ آزاد), and use the same Persian each time the same English line comes back in your batch (search your file before you write it again). One rule for everyone keeps the pages even.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself (ترجمهٔ آزاد), and use the same Persian each time the same English line comes back. One rule for everyone keeps the pages even.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quotation, for identification and study. Read the whole page in your own copy →" becomes «<0>الکلی‌های گمنام</0> (کتاب بزرگ)، ویرایش چهارم انگلیسی، صفحهٔ N؛ ترجمهٔ آزاد. نقل‌قولی کوتاه، برای شناخت و مطالعه. <1>کل صفحه را در نسخهٔ خودتان بخوانید →</1>». Keep the English's placeholders around the same words.
 
 ## Site words

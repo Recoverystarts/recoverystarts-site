@@ -1,8 +1,6 @@
-// globe.mjs — the 🌐 in the main site's menu (wave tr1; WO-TRANSLATE-SITE v2 §3). One list on every page that exists in
-// more than one language, each language written in its own name and marked with its own lang (so nothing ever
-// translates "English" into "Inglés" — Derick 2026-10-11 16:54). The same look as the meeting finder's (sitenav.mjs).
-// A click remembers the choice in rs_hl (localStorage, cookie fallback), the key the meeting finder's hl.js reads, so a
-// reader who picks Español on the homepage gets the finder in Spanish too.
+// globe.mjs — the 🌐 language menu on every page that exists in more than one language. Each language is written in
+// its own name and marked with its own lang. A click stores the choice in rs_hl (localStorage, cookie fallback), the
+// key the meeting finder's hl.js also reads.
 import { LANGS, tagOf } from "./lib.mjs";
 const SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg>`;
 export const GLOBE_CSS = `<style id="rs-globe-css">
@@ -21,16 +19,15 @@ export const GLOBE_CSS = `<style id="rs-globe-css">
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
-/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
-   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
-   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+/* a translated menu's words are longer than English's: on a desktop the bar may use the screen up to 70px from each
+   edge, with a slightly tighter gap and 0.84rem words, so the full bar fits from 1366px wide */
 @media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
-/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+/* the offer: one closable line under the menu, in the reader's own language, when their browser's language has
    this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
 .rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
 .rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
@@ -44,11 +41,9 @@ export function globeHtml(here, avail) {
   const items = Object.entries(avail).filter(([c]) => c !== here).sort(([a], [b]) => order.indexOf(a) - order.indexOf(b)).map(([c, u]) => `<a href="${u}" data-hl="${c}" hreflang="${tagOf(c)}" ${own(c)}>${LANGS[c].name}</a>`).join("");
   return `<details class="rs-globe"><summary aria-label="Language · Idioma · Langue · Sprache · زبان · Język">${SVG}</summary><div class="rs-langs"><span class="rs-here" ${own(here)}>✓ ${LANGS[here].name}</span>${items}</div>${GO_JS}</details>`;
 }
-// One remembered choice across recoverystarts.com, /meetings and /online (wave tr2 S2): a reader who picked a language
-// on either site (rs_hl: localStorage, cookie fallback; "pt" here, "pt-BR" from the meeting finder — matched on the part
-// before the dash, as the finder's hl.js does) and lands on a page in another language goes to this page in theirs, if
-// the 🌐 lists it. It runs inside the 🌐, as the menu is read, so the wrong language barely shows. A crawler stores
-// nothing, so it always gets the page it asked for.
+// One remembered choice across recoverystarts.com, /meetings and /online: a reader with rs_hl set ("pt" here, "pt-BR"
+// from the meeting finder, matched on the part before the dash) who lands on a page in another language goes to this
+// page in theirs, if the 🌐 lists it. Crawlers store nothing, so they get the page they asked for.
 const GO_JS = `<script>/*rs-go*/(function(){try{var c=null;try{c=localStorage.getItem('rs_hl')}catch(e){}if(!c){var m=document.cookie.match(/(?:^|; )rs_hl=([^;]*)/);if(m)c=decodeURIComponent(m[1])}if(!c)return;c=String(c).toLowerCase().split('-')[0];var h=(document.documentElement.lang||'en').toLowerCase().split('-')[0];if(c===h)return;var d=document.currentScript&&document.currentScript.parentNode,a=d&&d.querySelector('a[data-hl="'+c+'"]');if(a&&a.getAttribute('href'))location.replace(a.getAttribute('href')+location.hash)}catch(e){}})();</script>`;
 // The offer line's words, each in its own language (the meeting finder's sitenav.mjs OFFER_JS and i18n/es.mjs offer)
 const OFFER = { en: ["This page is also in English.", "View in English"], es: ["Esta página también está en español.", "Ver en español"], pt: ["Esta página também está em português.", "Ver em português"], fr: ["Cette page existe aussi en français.", "Voir en français"], fa: ["این صفحه به فارسی هم هست.", "خواندن به فارسی"], pl: ["Ta strona jest też po polsku.", "Czytaj po polsku"], de: ["Diese Seite gibt es auch auf Deutsch.", "Auf Deutsch lesen"], sv: ["Den här sidan finns också på svenska.", "Läs på svenska"], nl: ["Deze pagina is er ook in het Nederlands.", "Lees in het Nederlands"], hi: ["यह पेज हिंदी में भी है।", "हिंदी में पढ़ें"], ja: ["このページは日本語でもお読みいただけます。", "日本語で読む"], ru: ["Эта страница есть и на русском.", "Читать на русском"], ar: ["هذه الصفحة متاحة بالعربية أيضًا.", "اقرأ بالعربية"], tr: ["Bu sayfa Türkçe olarak da var.", "Türkçe oku"] };

@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 /**
- * verify-seo-buildout.js — the "measure, don't assume" gate.
- *
- * Reads what was actually WRITTEN TO DISK (not what the generator thinks it
- * wrote) and asserts every non-negotiable from the two work orders.
- * Exits non-zero on the first hard failure.
+ * verify-seo-buildout.js — checks what was written to disk for the generated pages (Big Book pages, Daily Traditions,
+ * month hubs, sitemap, nav). Exits non-zero on the first hard failure.
  *
  * Usage: node scripts/verify-seo-buildout.js
  */
@@ -63,12 +60,9 @@ for (const dir of bbDirs) {
 
   if (isCurated) continue;
 
-  // ── THE CRITICAL CHECK: the rendered quote must be a VERBATIM substring of
-  //    that label's index text. This is the "wrong page number" guard.
-  // Ellipses sit OUTSIDE the quotation marks; the quoted string itself must be
-  // a clean verbatim substring. Capture only what's between the quote marks.
-  // GREEDY: the book text itself contains quotation marks, so match out to the
-  // LAST quote mark before the closing tag, not the first.
+  // the rendered quote must be a verbatim substring of that label's index text (the wrong-page-number check).
+  // Ellipses sit outside the quotation marks. Greedy: the book text contains quotation marks, so match out to the
+  // last quote mark before the closing tag.
   const q = html.match(/<blockquote>(?:… )?"([\s\S]*)"(?: …)?<\/blockquote>/);
   if (!q) { bad(`page-${label}: no quote block`); continue; }
   const quote = unesc(q[1]).trim();
@@ -83,7 +77,7 @@ for (const dir of bbDirs) {
   }
   checked++;
 
-  // ── THE COPYRIGHT GUARD: total book text rendered must stay tiny.
+  // copyright guard: total book text rendered stays small.
   if (quote.length > maxQuote) { maxQuote = quote.length; maxQuoteLabel = label; }
   if (quote.length > 340) bad(`page-${label}: quote ${quote.length} chars EXCEEDS the 340 cap`);
 
@@ -102,22 +96,13 @@ if (titles.size === bbDirs.length) ok(`all ${titles.size} titles unique`);
 if (metas.size === bbDirs.length) ok(`all ${metas.size} meta descriptions unique`);
 ok(`longest quote rendered anywhere: ${maxQuote} chars (page ${maxQuoteLabel}) — cap is 340`);
 
-// Blank pages must NOT have been generated.
+// Blank pages are not generated.
 for (const lbl of ["277", "433", "165"]) {
   if (fs.existsSync(path.join(ROOT, "big-book", "page-" + lbl, "index.html"))) bad(`blank page ${lbl} was generated — it should be skipped`);
 }
 ok("blank/short pages (i, 165, 277, 433) correctly skipped");
 
-// ── page-83 is HAND-WRITTEN and better than a generated page. Its CONTENT must
-// never be clobbered by a generator.
-//
-// The old version of this check demanded the whole FILE be byte-identical to
-// main — which meant it also failed when the site-wide nav fix legitimately
-// touched the header. A guard that fires on the fixes you want isn't a guard,
-// it's noise, and noise gets switched off.
-//
-// So: the guard now protects what it was actually there to protect — the curated
-// CONTENT. Chrome (nav, footer) may change site-wide; the article may not.
+// page-83 is hand-written: its article content is checked against main; chrome (nav, footer) may change site-wide.
 const { execSync } = require("child_process");
 try {
   const mainVer = execSync("git show main:big-book/page-83/index.html", { cwd: ROOT }).toString();
@@ -135,10 +120,7 @@ try {
 console.log("\n=== 2. DAILY TRADITIONS ===\n");
 
 const dt = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "traditions-daily.json"), "utf8"));
-// The approved source is VENDORED INTO THE REPO (data/readings-source.md), not
-// read off D:\Forge. A build that can only verify itself when an external drive
-// happens to be plugged in is not verified — it's lucky. Regenerate with
-// scripts/vendor-source.js.
+// The approved source is data/readings-source.md (written by scripts/vendor-source.js).
 const srcMd = fs.readFileSync(path.join(ROOT, "data", "readings-source.md"), "utf8");
 
 let dtDrift = 0, dtChecked = 0;
@@ -150,7 +132,7 @@ for (const day of dt.days) {
   if (!fs.existsSync(file)) { bad(`${slug}: page not on disk`); continue; }
   const html = fs.readFileSync(file, "utf8");
 
-  // ── VERBATIM: the reading rendered on the page must match the APPROVED source.
+  // the reading rendered on the page matches the approved source verbatim.
   const bodyM = html.match(/<div class="dt-reading">\s*<p>([\s\S]*?)<\/p>\s*<\/div>/);
   if (!bodyM) { bad(`${slug}: no reading body found`); continue; }
   const rendered = unesc(bodyM[1].replace(/<\/?em>/g, "*")).trim();
@@ -166,10 +148,10 @@ for (const day of dt.days) {
   if (!html.includes("561–562")) bad(`${slug}: missing short-form ref 561–562`);
   if (!html.includes("563–566")) bad(`${slug}: missing LONG FORM ref 563–566`);
 
-  // Doctrine must not blur.
+  // Doctrine terms stay distinct.
   if (!/governance, not theology/.test(html)) bad(`${slug}: missing the governance-not-theology line`);
 
-  // Never /demo.
+  // No /demo links.
   if (/\/demo/.test(html)) bad(`${slug}: forbidden /demo link`);
 
   const t = html.match(/<title>(.*?)<\/title>/s);
@@ -226,7 +208,7 @@ const dupes = locs.filter((l, i) => locs.indexOf(l) !== i);
 if (dupes.length) bad("duplicate sitemap entries: " + [...new Set(dupes)].slice(0, 3).join(", "));
 else ok(`${locs.length} sitemap URLs, all unique`);
 
-// Every sitemap URL must resolve to a file on disk.
+// Every sitemap URL resolves to a file on disk.
 let missing = 0;
 for (const loc of locs) {
   const rel = loc.replace("https://recoverystarts.com/", "");
@@ -243,10 +225,8 @@ ok("hubs listed; noindex redirect correctly excluded");
 
 console.log("\n=== 4. THE BOOK IS NOT A PUBLIC ASSET ===\n");
 
-// Cloudflare Pages serves the ENTIRE repo root (verified: /scripts/, /data/ and
-// /tests/ all return 200 in production). `functions/` is the ONLY directory it
-// does not serve. So: the Big Book text is allowed to live in exactly one place.
-// If anything ever moves it back into the served root, this fails the build.
+// The Big Book text lives only under functions/ (not served as a static file); this fails if it moves into the
+// served root.
 const BOOK_HOME = path.join(ROOT, "functions", "_lib", "big-book-text.json");
 if (!fs.existsSync(BOOK_HOME)) bad("the Big Book text is missing from functions/_lib/");
 else ok("Big Book text lives in functions/_lib/ (Cloudflare does not serve functions/)");
@@ -255,7 +235,7 @@ if (fs.existsSync(path.join(ROOT, "bigbook"))) {
   bad("PUBLIC /bigbook/ DIRECTORY IS BACK — the full 4th-edition text would be downloadable again");
 } else ok("no public /bigbook/ directory — the old 981 KB full-text asset is gone");
 
-// Nothing in the served root may contain a large slab of book text.
+// Nothing in the served root contains a large slab of book text.
 function scanServedRoot(dir) {
   const skip = new Set(["functions", "node_modules", ".git", "scripts", "tests"]);
   for (const name of fs.readdirSync(dir)) {
@@ -276,7 +256,7 @@ function scanServedRoot(dir) {
 scanServedRoot(ROOT);
 ok("no file in the served root contains the Big Book text");
 
-// The search UI must not be able to print a whole page any more.
+// The search UI can't print a whole page.
 const app = fs.readFileSync(path.join(ROOT, "assets", "bigbook", "searchApp.js"), "utf8");
 if (/pageViewHtml|bb-pagetext/.test(app)) bad("searchApp.js can still render full page text");
 if (/search-index\.json['"]/.test(app)) bad("searchApp.js still fetches the public full-text index");
@@ -285,10 +265,7 @@ ok("search UI renders snippets + page cards only — it cannot print a page");
 
 console.log("\n=== 5. ONE NAV, ON EVERY PAGE ===\n");
 
-// The nav drifted: 1,039 pages were missing "The 12 Traditions", and /big-book/
-// and 404.html had NO nav at all — you could land there with no way back into
-// the site. Every generator carried its own copy of the header. Now there is one
-// (scripts/fix-nav.js) and this proves it reached every page.
+// Every page carries the one shared nav (scripts/fix-nav.js), including /big-book/ and 404.html.
 const REQUIRED_NAV = ["/", "/meetings/", "/aa-info/", "/daily-reflection/", "/daily-tradition/",
                       "/12-traditions/", "/12-steps/", "/big-book/", "/about/", "/download/"];
 const SKIP_NAV = new Set(["googlee7fbd843aaac14fe.html"]);

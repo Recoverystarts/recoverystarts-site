@@ -1,8 +1,8 @@
-# Polish glossary — the words every pl1 runner uses the same way
+# Polish glossary — the site's words, the same way everywhere
 
-*Started 2026-10-13 by wave pl1 S1-pl (the super). Standard written Polish, plain and warm. The reader is **ty**, written in **lower case** (see "Form of address"). Where Polish A.A. prints its own Polish, we use it word for word; the source is in brackets. **[ours]** marks a wording Polish A.A. hasn't published online: it's ours, fixed here so every page says it the same way. Add to this file through your close (`unsure:`), not by changing it mid-wave. **Never N.A.'s Polish (Anonimowi Narkomani's Basic Text or pamphlets) and never the Twelve Steps and Twelve Traditions** («Dwanaście Kroków i Dwanaście Tradycji», "the 12 and 12"), even if you know them.*
+*Standard written Polish, plain and warm. The reader is **ty**, written in **lower case** (see "Form of address"). Where Polish A.A. prints its own Polish, we use it word for word; the source is in brackets. **[ours]** marks a wording Polish A.A. hasn't published online: it's ours, fixed here so every page says it the same way. **Never N.A.'s Polish (Anonimowi Narkomani's Basic Text or pamphlets) and never the Twelve Steps and Twelve Traditions** («Dwanaście Kroków i Dwanaście Tradycji», "the 12 and 12"), even if you know them.*
 
-## Sources (checked 2026-10-13, all read directly on the publisher's own URL)
+## Sources (all read directly on the publisher's own URL)
 - **[aa.org.pl]** — the site of Fundacja Biuro Służby Krajowej Anonimowych Alkoholików w Polsce (Polish A.A.'s General Service Office, BSK): `/12-krokow-aa/` (Steps), `/12-tradycji-aa/` (Traditions, short form), `/12-koncepcji/` («12 Koncepcji dla służb AA w Polsce», Poland's own adaptation, reprinted with A.A.W.S. permission), `/wspolnota-aa/`, `/o-nas/`, `/anonimowosc-w-aa/`, `/co-to-jest-mityng/`, `/czy-aa-jest-dla-ciebie/`, `/mam-problem-z-alkoholem/`, `/aa-pytania-i-odpowiedzi/`, `/jak-zaniezc-sponsora/`, `/informacje-dla-rodzin-i-przyjaciol/`.
 - **[Katalog]** — the BSK's literature catalogue, `aa.org.pl/wp-content/uploads/2025/04/Katalog_literatury_2025.pdf`: book and pamphlet titles; poster P-26 (the Twelve Steps, © A.A.W.S., and the Preamble); the cards «Modlitwa o pogodę ducha» and «Preambuła AA»; three Big Book quote cards from the Polish 4th edition: I-41 «Jak to działa», s. 58–59; I-42 «Do czynu», s. 84–85; I-45 «Wizja dla ciebie», s. 164.
 - **[Region Warszawa]** — meeting cards written by A.A. Region Warszawa's literature team («Zespół ds. Literatury AA Region Warszawa»), each saying «Tekst modlitwy pochodzi z książki ANONIMOWI ALKOHOLICY, wydanej przez Biuro Służby Krajowej»: `intergrupapw.pl/do_pobrania/Modlitwa_Trzeciego_Kroku.pdf` and `…/Modlitwa_Siodmego_Kroku.pdf` (hosted by Intergrupa AA «Południowa Wielkopolska»). These follow an **earlier** Polish edition of the Big Book; the 4th edition's full prayer texts are not online anywhere we could find (an A.A. step-workshop handout quotes only their first and last words: «Boże, ofiaruję siebie Tobie… Obym zawsze spełniał Twoją wolę» and «Mój Stwórco chciałbym oddać Ci… jako że teraz będę czynił Twoją wolę. Amen»). We use the Region Warszawa texts whole, because they're the only complete A.A. Polish published; never mix in the 4th-edition fragments.
@@ -16,13 +16,12 @@
 - Never Pan/Pani/Państwo and never plural «wy» (możecie, wasz) for the reader. `score.mjs pl` flags them (`reg` column).
 - **Gender:** prefer forms that don't need it (present/future tense: «możesz», «zaczniesz»; «warto», «można»). Where a past-tense or adjective form can't be avoided, use the **masculine generic**, as Polish A.A.'s Big Book and Q&A do («jeśli zdecydowałeś», «Nie jesteś sam»). No slashes («zrobiłeś/aś») in prose.
 
-## How to write a segment
+## Conventions
 - Placeholder form: keep every `<0>…</0>` and `<1/>` the English has, around the words that belong in them, in the order Polish needs. Don't type HTML.
-- `node scripts/i18n/check.mjs pl <your-batch>` = 0 problems. `node scripts/i18n/score.mjs pl` shows `reg` (wrong register, ASCII quotes, stripped diacritics) — keep it at 0.
 - **Diacritics always**: ą ć ę ł ń ó ś ź ż. A long segment with none is flagged.
 - **Quotes:** „…” (low-high). A quote inside a quote: «…» inside „…”. Never "…" or “…” in Polish prose. Apostrophes in names stay: Claude's Lab, Bill's Story (in an English title).
 - **Dashes:** Polish uses the en dash with spaces « – » between clauses. Keep a range as 1937–1950, s. 58–59 (no spaces).
-- **Non-breaking spaces:** after one-letter words (a, i, o, u, w, z, A, I, O, U, W, Z) and inside numbers (1 234), the desk puts a no-break space at the merge (`fix_pl.py`). Type a normal space; don't hunt for special characters.
+- **Non-breaking spaces:** after one-letter words (a, i, o, u, w, z, A, I, O, U, W, Z) and inside numbers (1 234), the site has a no-break space.
 - **Numbers:** 1 234 (space for thousands; 4-digit numbers may stay 1234), 2,99 (decimal comma), 30 000 dolarów. Prices: «2,99 USD». Times: 19:30 (24-hour; "7:00 pm" → «19:00»). Years: «w 1935 roku» (or «w 1935 r.»). Ordinals: «12. Krok» is rare — write «Krok 12» or «Dwunasty Krok».
 - **Dates** (Gregorian, as the English): the day plus the month in the **genitive**, lower case: «13 października», «1 stycznia», «13 października 2026». A month on its own as a title or label: **nominative, capital** — «Październik», «Styczeń». "in October" → «w październiku». "All of October" → «Cały październik». "October 12 — Title" → «12 października — tytuł».
   - nominative: Styczeń, Luty, Marzec, Kwiecień, Maj, Czerwiec, Lipiec, Sierpień, Wrzesień, Październik, Listopad, Grudzień
@@ -37,8 +36,8 @@
 - **One segment is live JavaScript** (daily-reflection, the share bar: `<2>this.textContent='Copy Link',2000);return false;">Copy Link</2>`). Translate only the two words «Copy Link» → «Kopiuj link», both of them, and leave every other character exactly as it is.
 - Translate it yourself; no Google or other machine translation.
 
-## Crisis lines — read this before any 988, detox or withdrawal segment
-What's true (checked 2026-10-13, each on the service's own site):
+## Crisis lines
+What's true (each on the service's own site):
 - **Poland — 112**, numer alarmowy (emergency: ambulance, police, fire) [gov.pl/web/numer-alarmowy-112].
 - **Poland — 116 123**, Kryzysowy Telefon Zaufania, for **adults** in emotional crisis; **free, 24/7** [116sos.pl: «telefon 116 123 dostępny 24/7», «Wsparcie dla osób dorosłych», «Bezpłatne»; the operator Instytut Psychologii Zdrowia, psychologia.edu.pl/kryzysy-osobiste/telefon-kryzysowy-116123.html, says the line became the 116sos.pl platform, 24/7 (an older line on that page still says 14:00–22:00; 116sos.pl is current)]. (116123.pl itself is a parked domain — not the service.)
 - **Poland — 800 70 2222**, Centrum Wsparcia dla Osób Dorosłych w Kryzysie Psychicznym; **free, 24 hours, 7 days a week**; also chat and e-mail [centrumwsparcia.pl: «Bezpłatnie · Całodobowo · 7 dni w tygodniu», «Zadzwoń pod bezpłatny numer 800 70 2222»].
@@ -65,7 +64,7 @@ So on a pl page **never write "zadzwoń lub napisz SMS pod 988" alone** — a Po
 | not medical advice | to nie jest porada medyczna |
 | treatment / treatment center / rehab | leczenie / ośrodek leczenia uzależnień / odwyk (terapia) |
 
-Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link). Every crisis/988/detox/withdrawal segment is read by the super.
+Keep the English's placeholders around the numbers (`<0>988</0>` stays around 988; it's a `tel:988` link).
 
 ## Fellowships and books
 | English | Polish |
@@ -116,7 +115,7 @@ Polish A.A. prints three chapter titles in its catalogue; the rest are **[ours]*
 | Appendices / Appendix I – The A.A. Tradition / II Spiritual Experience / III The Medical View / IV The Lasker Award / V The Religious View / VI How to Get in Touch / VII Twelve Concepts | Dodatki / Dodatek I – Tradycja AA / II Doświadczenie duchowe / III Opinia medyczna / IV Nagroda Laskera / V Opinia religijna / VI Jak nawiązać kontakt / VII Dwanaście Koncepcji [ours] |
 | Chapter 3 – More About Alcoholism | Rozdział 3 – Więcej o alkoholizmie (same pattern for every chapter) |
 
-A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back in your batch.
+A personal story's English title: translate it faithfully **[ours]**, the same each time it comes back.
 
 ## Program words
 | English | Polish |
@@ -222,7 +221,7 @@ Polish A.A. doesn't publish the long form online (it's in the Polish Big Book an
 
 Tradition 3's clause, quoted all over the site: **„pod warunkiem że jako grupa nie mają żadnych innych powiązań”**. Tradition 6's: «Grupa AA nie może wiązać się z nikim», «współpraca nie powinna nigdy posunąć się do powiązania ani poparcia, rzeczywistego lub domniemanego». Where the English splits a long-form Tradition into several segments, split the Polish at the matching sentence.
 
-**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): in Polish that would be untrue for the long form. Say what's true, in the same place: «Wersja skrócona w brzmieniu polskiej Wspólnoty AA (aa.org.pl), wersja pełna w naszym przekładzie — obie z <i>Alcoholics Anonymous</i>, wyd. IV (angielskie): wersja skrócona s. 561–562, wersja pełna s. 563–566.» Keep the English's placeholders and page numbers; the rest of the sentence (published unaltered, cited) is translated as it stands. Note it in your close.
+**On the /12-traditions/ page** (and anywhere the English says the Traditions are printed "word for word, exactly as they appear in Alcoholics Anonymous"): in Polish that would be untrue for the long form. Say what's true, in the same place: «Wersja skrócona w brzmieniu polskiej Wspólnoty AA (aa.org.pl), wersja pełna w naszym przekładzie — obie z <i>Alcoholics Anonymous</i>, wyd. IV (angielskie): wersja skrócona s. 561–562, wersja pełna s. 563–566.» Keep the English's placeholders and page numbers; the rest of the sentence (published unaltered, cited) is translated as it stands.
 
 ## The Twelve Concepts, short form — Polish A.A.'s sentences, world structure ours
 Polish A.A. prints «12 Koncepcji dla służb AA w Polsce» (aa.org.pl/12-koncepcji/), written for Poland's own Conference and Board. The English site prints the **world** Concepts (General Service Conference, General Service Board), first sentence only for 7–12. These are Polish A.A.'s sentences where they match the English, with the world bodies put back **[ours]**; all twelve are in `i18n/pl/core.json` (the /aa-info/ page) — use exactly those sentences wherever a Concept is quoted:
@@ -252,7 +251,7 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
   - pp. 83–84 (the Promises): «Poznamy nową wolność i nowe szczęście. Nie będziemy żałować przeszłości i nie będziemy chcieli zatrzaskiwać za nią drzwi. Pojmiemy sens słów „pogoda ducha” i zaznamy spokoju. Bez względu na to, jak nisko upadliśmy, zobaczymy, że z naszego doświadczenia mogą skorzystać inni. Znikną poczucie bezużyteczności i użalanie się nad sobą. Przestaniemy skupiać się na sobie, a zaczniemy interesować się bliźnimi. Zniknie egoizm. Zmieni się całe nasze nastawienie i nasz sposób patrzenia na życie. Opuści nas strach przed ludźmi i niepewnością materialną. Znajdziemy intuicyjnie sposób postępowania w sytuacjach, które kiedyś wprawiały nas w zakłopotanie. Nagle uświadomimy sobie, że Bóg robi dla nas to, czego sami dla siebie nie byliśmy w stanie uczynić. Czy są to obietnice bez pokrycia? Sądzimy, że nie. One się spełniają wśród nas – czasem szybciej, czasem wolniej. Zawsze się materializują, jeśli nad nimi pracujemy.» [I-42; it opens with «Jeżeli do tego etapu naszego rozwoju podejdziemy starannie, to już w jego połowie będziemy zadziwieni efektami.»]
   - p. 164: «Oddaj się Bogu, tak, jak rozumiesz Boga. Wyznaj Mu i współbraciom swoje winy. Usuń gruzy po swojej przeszłości. Dziel się szczodrze tym, co odkrywasz, i dołącz do nas. Będziemy z tobą we Wspólnocie Ducha i z pewnością spotkasz niektórych z nas, gdy będziesz kroczył Drogą Szczęśliwego Przeznaczenia. Niech Bóg cię błogosławi i prowadzi. Zatem – do zobaczenia.» [I-45]; "Road of Happy Destiny" → «Droga Szczęśliwego Przeznaczenia».
 - A prayer or fixed text quoted in part uses these words, cut, not reworded.
-- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Polish each time the same English line comes back in your batch (search your file before you write it again). Don't go looking for the Polish edition's wording for ordinary quotes.
+- **Any other line the English quotes from the Big Book, a pamphlet or Grapevine:** translate it faithfully yourself, and use the same Polish each time the same English line comes back. Don't go looking for the Polish edition's wording for ordinary quotes.
 - A quote's credit line: the English "Alcoholics Anonymous, 4th Edition, page N. A short quote, for identification and study. Read the whole page in your own copy →" becomes «<i>Alcoholics Anonymous</i>, wyd. IV (angielskie), strona N; tłumaczenie własne. Krótki cytat, do rozpoznania i studiowania. Przeczytaj całą stronę we własnym egzemplarzu →». For a line from the cards above, «przekład polskiej Wspólnoty AA» in place of «tłumaczenie własne». Keep the English's placeholders around the same words.
 
 ## Site words
@@ -284,12 +283,12 @@ Where the /12-concepts/ page quotes more of a Concept than this, translate the r
 | Not verified yet | Jeszcze niezweryfikowane |
 | email | e-mail |
 
-## Review additions (pl1 super-review, 2026-10-13) — one wording, enforced by the desk's fix_pl.py §1
+## Review additions — one wording
 | English | Polish |
 |---|---|
 | a daily reprieve (p. 85) | codzienne zawieszenie wyroku [ours; a stay of sentence, never «ułaskawienie» (a pardon)] |
 | Daily Traditions (the series, where the English is plural) | Codzienne Tradycje; the menu's "Daily Tradition" stays «Codzienna Tradycja» |
-| The A.A. Service Manual | «Podręcznik służby AA» [ours]; where a runner kept the English title, «The A.A. Service Manual» |
+| The A.A. Service Manual | «Podręcznik służby AA» [ours]; or the English title, «The A.A. Service Manual» |
 | A.A.'s Legacy of Service (P-44) / The Twelve Traditions Illustrated (P-43) | «Dziedzictwo służby AA» / «Dwanaście Tradycji ilustrowanych» [ours] |
 | He Sold Himself Short (story) | «Nie doceniał siebie» [ours] |
 | Will A.A. Ever Have a Personal Government? (P-17) | «Czy AA będzie kiedyś miało rządy osobiste?» [ours] |

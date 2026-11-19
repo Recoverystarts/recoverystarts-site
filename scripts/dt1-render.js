@@ -1,18 +1,12 @@
 /**
- * dt1-render.js — render Daily Tradition pages for months that don't exist yet
- * (wave dt1: January–June), using a LIVE page as the template.
+ * dt1-render.js — renders Daily Tradition day and month pages for new months,
+ * using a live page as the template: a new day page is october-3/index.html
+ * with every day-specific piece swapped out, and a new month page is
+ * october/index.html the same way, so the chrome matches the existing pages.
  *
- * WHY A LIVE PAGE: build-traditions-pages.js is stale against the live HTML
- * (patch-one-tradition.js explains it): nav, icons, OG, the Einstein CTA, the
- * footer and the 988 line were patched into the pages and never folded back.
- * So a new day page is october-3/index.html with every day-specific piece
- * swapped out, and a new month page is october/index.html the same way. The
- * chrome is then byte-for-byte what the other 184 pages wear.
- *
- * New pages are English-only until a translation wave reaches them, so they
- * carry no 🌐 and no es/pt hreflang: the 🌐's remembered-language redirect
- * (globe.mjs GO_JS) would otherwise send a Spanish reader to a /es/ page that
- * doesn't exist yet.
+ * New pages are English-only: no 🌐 and no es/pt hreflang, so the 🌐's
+ * remembered-language redirect (globe.mjs GO_JS) can't send a reader to a
+ * translated page that doesn't exist.
  */
 const fs = require("fs");
 const path = require("path");

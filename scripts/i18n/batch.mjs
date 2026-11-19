@@ -1,12 +1,10 @@
-// batch.mjs — cut the text list into runner-sized batches (wave tr1 S1).
+// batch.mjs — cut the segment list into translation batches.
 // node scripts/i18n/batch.mjs [words-per-batch, default 28000]
-// node scripts/i18n/batch.mjs --add <name>=<page|text>:<regex> …   (wave tr3) keep every batch that exists, drop ids no
-//   longer in i18n/segments from them, and put each segment that's in no batch yet (core aside) into the first rule
-//   whose regex matches its first page (page:) or its English (text:), in segment order. For a top-up after new English
-//   pages, so the languages already translated keep their batch files: e.g. daily-tradition-3=page:daily-tradition/(january|february|march)
-// Writes i18n/batches/<part>-<n>.json (id → English, in the placeholder form a translation is written in, lib.mjs
-// toTemplate) and i18n/batches/BATCHES.md (one line per batch: words, segments, first and last page). A runner
-// translates one batch file into i18n/<lang>/<part>-<n>.json. core is not batched (S1 did it).
+// node scripts/i18n/batch.mjs --add <name>=<page|text>:<regex> …   keep existing batches, drop ids no longer in
+//   i18n/segments, and put each unbatched segment (core aside) into the first rule whose regex matches its first page
+//   (page:) or its English (text:), e.g. daily-tradition-3=page:daily-tradition/(january|february|march)
+// Writes i18n/batches/<part>-<n>.json (id → English in placeholder form, lib.mjs toTemplate) and i18n/batches/BATCHES.md.
+// core is not batched.
 import fs from "node:fs";
 import path from "node:path";
 import { I18N, readJson, writeJson } from "./lib.mjs";

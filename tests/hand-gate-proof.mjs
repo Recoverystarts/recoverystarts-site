@@ -1,4 +1,4 @@
-// The hand gate in app.js, in a real browser (Code: farm-study, 2026-11-15; claude-home #575).
+// The hand gate in app.js, in a real browser.
 //     node tests/hand-gate-proof.mjs            (from the repo root; writes tests/hand-gate-proof.txt)
 // Serves this checkout from a local port, opens a page in Chromium the way each kind of visitor would, and counts what
 // leaves the page: requests for Google's gtag.js and the ledger beacons. Google, Raptive and every other outside host
@@ -83,8 +83,7 @@ try {
   check(v.gtag === 1 && /^d\/[ws]\/[0-5]$/.test(v.beacons[1] ?? ""), `same shape, a person turns the wheel: Analytics starts; ledger [${v.beacons}]`);
   v = await visit(s.base, PAGE, { act: (p) => p.evaluate(() => { window.dispatchEvent(new Event("scroll")); window.dispatchEvent(new KeyboardEvent("keydown", { key: "a" })); }) });
   check(v.gtag === 0 && v.beacons.join() === "d/l", `same shape, a script fakes scroll and key events: still no Analytics; ledger [${v.beacons}]`);
-  // since the join with the shield (meeting-finder #1059): a first visit from another site or a phone starts Analytics at
-  // the first hand or after 1.5 s in view, no longer at once (a fleet that learns a Google referrer still leaves in 0.2 s)
+  // a first visit from another site or a phone starts Analytics at the first hand or after 1.5 s in view
   v = await visit(s.base, PAGE, { referer: "https://www.google.com/" });
   check(v.gtag === 0 && v.beacons.join() === "c/l" && !/rs-wait-hand/.test(v.bodyClass), `arrives from Google, nobody touching, gone at 0.5 s: no Analytics yet, no mark; ledger [${v.beacons}]`);
   v = await visit(s.base, PAGE, { referer: "https://www.google.com/", stay: 2500 });

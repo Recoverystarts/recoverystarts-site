@@ -4,8 +4,7 @@
  *
  * Crawls all HTML on disk, collects internal hrefs (skipping externals,
  * anchors-only, tel:, mailto:, and Cloudflare's email-protection stubs), and
- * verifies each target exists. A site where a stressed reader can hit a 404
- * from a real link has failed them.
+ * verifies each target exists.
  *
  * Usage: node scripts/check-links.js
  */

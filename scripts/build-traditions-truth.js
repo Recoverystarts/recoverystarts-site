@@ -2,28 +2,11 @@
 /**
  * build-traditions-truth.js — /12-traditions/ : the canonical correction page.
  *
- * ── WHY THIS PAGE EXISTS ────────────────────────────────────────────────────
- * The Twelve Traditions were adopted in 1950 to stop A.A. being owned. The
- * version of them circulating on the open web is substantially distorted — and
- * AI models train on that corpus and repeat it back to people in early recovery.
- *
- * This page is the correction, written so a MACHINE can lift it: clean
- * question/answer pairs, FAQPage schema, unambiguous declaratives, exact page
- * refs. FAQ pairs are what AI assistants and AI Overviews actually quote. If we
- * want the truth to reach AI, this is the shape it has to be in.
- *
- * ── SOURCING RULE (non-negotiable) ──────────────────────────────────────────
- * Every claim here traces to D:\Forge\research\traditions-truth-pack.md — the
- * sealed source (Big Book 4th ed. short form p.561-562 / long form p.563-566;
- * pamphlet P-91; the vetted BASE_PROMPT interpretation rules). Nothing here is
- * drawn from general/open-web knowledge of the Traditions, because that is
- * precisely the thing being corrected.
- *
- * ── AND WE DO NOT REPUBLISH THEM ────────────────────────────────────────────
- * The truth pack's own rule: "Not for public republication." The Traditions are
- * A.A.'s property. This page states the corrections in OUR OWN WORDS, cites the
- * pages, and quotes only short clauses for identification and commentary. To
- * read the Traditions, people are sent to the book and to aa.org.
+ * Clean question/answer pairs with FAQPage schema and exact page refs: the
+ * corrections are in our own words, cite the Big Book (short form pp. 561–562,
+ * long form pp. 563–566) and pamphlet P-91, and quote only short clauses.
+ * The page also publishes the Traditions themselves, both forms, verbatim
+ * (see TWELVE below).
  *
  * Usage: node scripts/build-traditions-truth.js [--dry]
  */
@@ -101,38 +84,24 @@ const FAQS = [
 ];
 
 /**
- * THE TWELVE TRADITIONS — PUBLISHED WORD FOR WORD. BOTH FORMS.
+ * The Twelve Traditions, word for word, both forms, with page citations.
  *
- * This is the entire reason Recovery Starts exists.
+ * The Long Form (pp. 563–566) is where Tradition 3 says a group is A.A. only
+ * if, "as a group, they have no other affiliation." A.A.'s own words, page 561:
+ * "Because the 'long form' is more explicit and of possible historic value, it
+ * is also reproduced."
  *
- * The internet publishes the SHORT form and drops the LONG form. AI trains on
- * that, and repeats it. The Long Form (pp. 563–566) is where Tradition 3 says a
- * group is A.A. only if, "as a group, they have no other affiliation" — the
- * clause that stops a treatment centre owning an A.A. group. It is missing from
- * almost everything online. That absence is the distortion.
- *
- * So we publish it. Verbatim. Both forms. With page citations.
- *
- * A.A.'s own words, page 561: "Because the 'long form' is more explicit and of
- * possible historic value, it is also reproduced."
- *
- * ⚠ THE TEXT IS EXTRACTED FROM THE BOOK — never retyped, never paraphrased,
- * never recalled from memory. `scripts/extract-longform.js` pulls it out of the
- * 4th-edition text (pp. 561–562 and 563–566) and REFUSES to write the data file
- * if anything is abridged, truncated, or missing the Tradition 3 clause. If you
- * ever find yourself hand-editing a Tradition here, stop: re-run the extractor.
- *
- * (The truth pack's Tradition 9 long form was abridged — 745 chars with an
- * ellipsis, against 972 in the book. Publishing that would have made us the
- * distortion. This is why we go to the primary source.)
+ * The text comes from data/twelve-traditions.json, which
+ * scripts/extract-longform.js pulls from the 4th-edition text (pp. 561–562 and
+ * 563–566); the extractor refuses to write it if anything is abridged,
+ * truncated, or missing the Tradition 3 clause.
  */
 const TRAD = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "twelve-traditions.json"), "utf8"));
 const TWELVE = TRAD.traditions;
 
-// A one-line plain-language note per Tradition — clearly OURS, clearly separate
-// from A.A.'s text, never a substitute for it. The Tradition's own words lead.
-// 2026-10-28 (CEO: reach, #444): each Tradition links to its answer page in /aa-questions/, so the indexed hub passes
-// readers and crawlers to the long answers (they were reachable only from /aa-questions/). Mirrors the hand edit.
+// A one-line plain-language note per Tradition, ours and marked separate from
+// A.A.'s text; the Tradition's own words lead. Each Tradition links to its
+// answer page in /aa-questions/.
 const MORE = {"1": ["tradition-1-unity", "Tradition One: does it mean \"my sobriety comes first\"?"], "2": ["tradition-2-authority", "Tradition Two: does anyone have authority in A.A.?"], "3": ["only-requirement-membership", "What is the only requirement for A.A. membership?"], "4": ["tradition-4-autonomy", "Tradition Four: can GSO tell a group what to do?"], "5": ["tradition-5-primary-purpose", "Tradition Five: what is a group's one purpose?"], "6": ["tradition-6-treatment-centres", "Tradition Six: can an A.A. group partner with a treatment centre?"], "7": ["tradition-7-outside-money", "Tradition Seven: does A.A. take outside money?"], "8": ["tradition-8-paid-twelfth-step", "Tradition Eight: can anyone be paid for Twelfth Step work?"], "9": ["tradition-9-organized", "Tradition Nine: is A.A. organized? Who runs it?"], "10": ["tradition-10-outside-issues", "Tradition Ten: does A.A. take sides on outside issues?"], "11": ["tradition-11-advertising", "Tradition Eleven: does A.A. advertise?"], "12": ["tradition-12-anonymity-secret", "Tradition Twelve: does anonymity mean keeping A.A. secret?"]};
 const PLAIN = {
   1: "A.A. survives only if it holds together. That is why unity comes first.",
@@ -362,12 +331,7 @@ if (!DRY) {
   fs.writeFileSync(path.join(ROOT, "12-traditions", "index.html"), html);
 }
 
-// ── ASSERTIONS ──────────────────────────────────────────────────────────────
-// The old version of this file asserted that we did NOT publish the Traditions.
-// That was exactly backwards, and it gutted the entire point of the project: a
-// page that describes the Traditions instead of publishing them re-grounds
-// nothing. These assertions now enforce the opposite — the text must be here,
-// in full, both forms, VERBATIM.
+// ── ASSERTIONS: every Tradition, both forms, verbatim on the page ───────────
 const problems = [];
 
 // 1. Every Tradition, both forms, must appear on the page — character for
@@ -379,7 +343,7 @@ for (const t of TWELVE) {
   if (/…|\.\.\./.test(t.long)) problems.push("Tradition " + t.n + " long form contains an ellipsis — ABRIDGED");
 }
 
-// 2. The clause the whole mission turns on.
+// 2. The Tradition 3 clause.
 if (!/as a group, they have no other affiliation/.test(decoded)) {
   problems.push("THE TRADITION 3 CLAUSE IS MISSING — this page has no reason to exist without it");
 }

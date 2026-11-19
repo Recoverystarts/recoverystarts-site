@@ -30,7 +30,7 @@
   <meta name="msvalidate.01" content="3E64DA692A700888D0D713F85A38E74A">
   <link rel="canonical" href="https://recoverystarts.com/maps/online/">
   <link rel="preload" as="image" href="/assets/world/cosmos-bg.webp" fetchpriority="high">
-  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces-latin.woff2" crossorigin><!-- the headline's font, fetched with style.css so the h1 paints once, in Fraunces (wave 2026-10-26-ads S2) -->
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces-latin.woff2" crossorigin><!-- the headline's font, fetched with style.css so the h1 paints once, in Fraunces -->
   <link rel="stylesheet" href="/style.css?v=d067c37a11">
 <style id="rs-globe-css">
 .rs-globe{position:relative;order:9;margin-left:12px;flex:none;font-family:var(--font-ui,system-ui)}
@@ -48,24 +48,22 @@
    the menu may use more of the screen than that cap when a longer language needs it (up to 130px short of each edge) */
 .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px))}
 .nav.rs-out .rs-globe{position:absolute;right:16px;top:50%;transform:translateY(-50%);margin:0}
-/* a translated menu's words are longer than English's (wave tr2, 2026-10-12 — Derick: "do your thing, it's a good fix"):
-   on a desktop the es/pt bar may use the screen up to 70px from each edge, with a slightly tighter gap and 0.84rem
-   words, so the full bar fits from 1366px wide like English does (it fell back to ☰ below ~1600). No words changed. */
+/* a translated menu's words are longer than English's: on a desktop the bar may use the screen up to 70px from each
+   edge, with a slightly tighter gap and 0.84rem words, so the full bar fits from 1366px wide */
 @media (min-width:1021px){html:not([lang="en"]) .nav.rs-out .nav-inner{max-width:max(var(--max-width), calc(100vw - 260px), min(calc(100vw - 140px), 1300px))}html:not([lang="en"]) .nav-links{gap:clamp(0.45rem,0.8vw,0.9rem)}html:not([lang="en"]) .nav-links a{font-size:0.84rem}}
 .rs-tight .nav-toggle{display:block;order:2}.rs-tight .rs-globe{order:1;margin-left:auto;margin-right:8px}
 .rs-tight .nav-links{display:none;position:absolute;top:var(--nav-height);left:0;right:0;background:rgba(4,6,13,.96);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;padding:1.5rem;gap:1.1rem;border-bottom:1px solid var(--rule);max-height:calc(100vh - var(--nav-height));overflow-y:auto}
 .rs-tight .nav-links.open{display:flex}.rs-tight .nav-links .has-sub{display:block}.rs-tight .nav-links .has-sub>a{display:inline-block}
 .rs-tight .sub-menu{display:none;position:static;margin:10px 0 0 4px;padding:2px 0 2px 14px;border-left:1px solid var(--rule)}.rs-tight .has-sub.open>.sub-menu{display:block}
 .rs-tight .sub-menu a{display:block;padding:7px 0;color:var(--ink-soft)}.rs-tight .nav-cta{text-align:center}
-/* the offer (wave tr2 S2): one closable line under the menu, in the reader's own language, when their browser's language has
+/* the offer: one closable line under the menu, in the reader's own language, when their browser's language has
    this page and they haven't chosen yet — the same bar and words as the meeting finder's (sitenav.mjs .rsn-offer) */
 .rs-offer{position:fixed;top:var(--nav-height);left:0;right:0;z-index:998;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#0E3B36;color:#E6FFFA;padding:8px 16px;font:14px/1.4 var(--font-ui,system-ui)}
 .rs-offer a{color:#5EEAD4;font-weight:600;text-decoration:underline}
 .rs-offer button{background:none;border:0;color:inherit;font-size:22px;line-height:1;min-width:36px;min-height:36px;cursor:pointer}
 </style>
 <style id="rs-chooser-css">
-/* the map chooser (Derick 2026-11-18 13:31, his sketch: one pill per map, the programs it holds split inside it, an
-   empty pill for the maps still to come). Same sky, nav and buttons as the home page. */
+/* the map chooser: one pill per map, the programs it holds split inside it, an empty pill for maps to come */
 .chooser{min-height:auto;padding-top:calc(var(--nav-height) + 3.5rem);display:block}
 .chooser h1{margin-bottom:1rem}
 .choose{display:flex;flex-direction:column;gap:1.4rem;margin-top:2.2rem;max-width:620px}
@@ -179,7 +177,7 @@
   </main>
   </div>
 
-  <style>.footer{position:relative;z-index:1}</style><!-- 2026-11-13: the home page's fixed sky (.world-fixed, z-index 0) painted over the footer, which had no position; only the Donate link showed. Here, not in style.css, because 19,262 pages carry style.css?v= and only these 14 have the sky. -->
+  <style>.footer{position:relative;z-index:1}</style><!-- keeps the footer above the home page's fixed sky -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">

@@ -10,3 +10,4 @@ desktop.ini
 *.local
 node_modules/
 dist/
+.vite/

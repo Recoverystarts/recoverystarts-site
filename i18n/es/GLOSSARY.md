@@ -1,10 +1,8 @@
-# Spanish glossary — the words every tr1 runner uses the same way
+# Spanish glossary — the site's words, the same way everywhere
 
-*Started 2026-10-11 by wave tr1 S1 (window 3, Opus 5.5). Neutral Latin-American Spanish ("es-419"), the reader addressed as **tú**. Where a fellowship prints its own word, we use theirs; the source is in brackets. Add to this file through your close (the desk merges additions), not by changing it mid-wave.*
+*Neutral Latin-American Spanish ("es-419"), the reader addressed as **tú**. Where a fellowship prints its own word, we use theirs; the source is in brackets.*
 
-## How to write a segment
-- Write in the placeholder form: keep every `<0>…</0>` pair and `<1/>` the English has, around the words that belong in it, in whatever order Spanish needs. Don't type HTML yourself.
-- `node scripts/i18n/check.mjs es <your-batch>` must say 0 problems.
+## Conventions
 - Plain characters are fine (é, ñ, —, «»); entities like `&mdash;` may stay as they are.
 - Numbers: 1,234 · 7:30 p.m. · 18 de noviembre de 1982. Page refs stay "p. 417" / "página 86".
 - Names stay as they are: Bill W., Dr. Bob, Akron, Recovery Einstein, Recovery Starts, Addict2Influencer, AutoGrow AI Solutions, Claude's Lab, Derick.

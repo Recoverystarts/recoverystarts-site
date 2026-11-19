@@ -7,16 +7,13 @@ import { searchKnowledge } from "../assets/bigbook/bigBookKnowledge.js";
 import { composeResults } from "../assets/bigbook/searchPipeline.js";
 
 /**
- * Locks the composed result pipeline to the APP's behavior (BigBook.tsx
- * handleSearch + big-book-knowledge.ts). These are the exact queries from the
- * rebuild work order, asserted against the app's layering rules:
+ * Locks the composed result pipeline to the app's behavior (BigBook.tsx
+ * handleSearch + big-book-knowledge.ts), asserted against its layering rules:
  *   jump → knowledge (quick-deduped) → full-text (only when no jump).
- * The reverted first port failed precisely here: no knowledge layer, an
- * invented "practice refs" line, and full-text running on jump queries.
  */
 let engine;
 beforeAll(() => {
-  // Text now lives in functions/_lib/ (not publicly served). Engine unchanged.
+  // Text lives in functions/_lib/ (not publicly served).
   const p = fileURLToPath(new URL("../functions/_lib/big-book-text.json", import.meta.url));
   engine = new BookSearch(JSON.parse(readFileSync(p, "utf8")));
 });
@@ -59,7 +56,7 @@ describe("searchKnowledge (app's big-book-knowledge.ts)", () => {
   });
 });
 
-describe("composeResults — WO verification queries", () => {
+describe("composeResults — verification queries", () => {
   it("'step 12': Step card (pp.89-103) leads; quick-card page 60 deduped out of full text", () => {
     const rs = compose("step 12");
     expect(rs[0]).toMatchObject({ type: "Step", title: "Step 12", page: "89-103" });

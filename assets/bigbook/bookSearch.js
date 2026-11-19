@@ -1,8 +1,7 @@
 /**
  * Big Book full-text search engine — vanilla-JS port of the app's
- * client/src/utils/bookSearch.ts (WO-einstein-max-reach Phase 6), ported
- * byte-faithfully for recoverystarts.com so the site inherits the exact
- * ranking, page-jump, fuzzy, and highlighted-snippet behaviour.
+ * client/src/utils/bookSearch.ts, with the same ranking, page-jump, fuzzy, and
+ * highlighted-snippet behaviour.
  *
  * MiniSearch-backed engine over the realigned search index:
  *  - exact-phrase matching ranks above token matches

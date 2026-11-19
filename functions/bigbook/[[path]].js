@@ -1,32 +1,13 @@
 /**
- * /bigbook/* — permanently gone. 410, and on purpose.
+ * /bigbook/* — 410 Gone.
  *
- * This path used to serve `search-index.json`: the COMPLETE text of Alcoholics
- * Anonymous, 4th Edition — 981 KB, downloadable by anyone in one request. The
- * file is deleted and the search now runs server-side (functions/api/bigbook-search.js).
+ * This path used to serve `search-index.json`, the complete Big Book text. The
+ * search now runs server-side (functions/api/bigbook-search.js). Functions take
+ * precedence over static assets in Cloudflare Pages, so this shadows anything
+ * written back into /bigbook/, and the 410 tells crawlers it is withdrawn.
  *
- * But deleting a file is NOT the same as making it unreachable. Two reasons:
- *
- *   1. CLOUDFLARE'S EDGE CACHE. We measured this. After the file was removed
- *      from the deployment, GET /bigbook/search-index.json STILL returned 200
- *      with the entire book — `cf-cache-status: HIT, age: 1033`. A cache-busted
- *      request to the identical URL returned a clean 404. The file was gone; the
- *      CACHE was not.
- *
- *      >>> PURGE THE CLOUDFLARE CACHE AFTER MERGING THIS TO PRODUCTION. <<<
- *      Dashboard -> recoverystarts.com -> Caching -> Purge Everything.
- *      Until you do, the book is still being handed out from the edge.
- *
- *   2. A FUTURE BUILD COULD RECREATE IT. Functions take precedence over static
- *      assets in Cloudflare Pages, so this shadows anything that ever gets
- *      written back into /bigbook/. scripts/verify-seo-buildout.js also fails
- *      the build if that happens. Two locks, because one gets picked.
- *
- * 410 Gone (not 404) is the honest status: this existed, it is deliberately
- * withdrawn, it is not coming back. Crawlers drop a 410 faster and harder.
- *
- * Where the book actually lives now:
- *   the book itself  -> a real copy:  /big-book/
+ * Where the book lives now:
+ *   the book itself  -> /big-book/
  *   the full text    -> the app:      app.recoverystarts.com
  *   "what page?"     -> /api/bigbook-search  ·  /big-book/pages/
  */

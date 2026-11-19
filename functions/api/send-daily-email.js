@@ -23,11 +23,10 @@ export async function onRequestGet(context) {
   const expectedToken = context.env.DAILY_EMAIL_TOKEN;
 
   const auth = context.request.headers.get('Authorization') || '';
-  const bearer = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
-  // WAY BACK, remove on or after 2026-11-17: `?token=` is still accepted for one week after the
-  // switch to the Authorization header (2026-11-10), in case the Worker has to be rolled back.
-  const legacy = url.searchParams.get('token') || '';
-  const token = bearer || legacy;
+  // Header only. `?token=` was kept one week after the switch (2026-11-10) and is gone since the
+  // 2026-11-19 security sweep: a token in a URL lands in logs and history. The deployed
+  // daily-email-cron Worker was read through the Cloudflare API that day and sends the header.
+  const token = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
 
   if (!expectedToken || !token || !safeEqual(token, expectedToken)) {
     return jsonResponse({ error: 'Unauthorized' }, 401);

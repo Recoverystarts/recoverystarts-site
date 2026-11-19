@@ -32,9 +32,37 @@ const esc = (s) =>
 
 const clean = (v) => String(v ?? "").trim().slice(0, MAX);
 
+// Security sweep 2026-11-19: this form sends mail through our Resend key to Derick's inbox,
+// and recoverystarts-site.pages.dev serves it with none of the zone's WAF or shield in front
+// (proven: a data-center POST got 200 on pages.dev and 403 on recoverystarts.com). With no
+// limit anywhere, anyone could flood the inbox and burn the key's sending reputation. So the
+// form only sends from our own hostnames, where the zone's rules apply, and each isolate keeps
+// a small per-address count as a second floor.
+export const SEND_HOSTS = new Set(["recoverystarts.com", "www.recoverystarts.com", "localhost", "127.0.0.1"]);
+export const PER_IP_LIMIT = 5;
+export const PER_IP_WINDOW_MS = 10 * 60 * 1000;
+const recent = new Map(); // ip -> [timestamps]
+
+export function overLimit(ip, now = Date.now()) {
+  const list = (recent.get(ip) || []).filter((t) => now - t < PER_IP_WINDOW_MS);
+  if (list.length >= PER_IP_LIMIT) {
+    recent.set(ip, list);
+    return true;
+  }
+  list.push(now);
+  recent.set(ip, list);
+  if (recent.size > 5000) recent.clear(); // an isolate never holds a big table
+  return false;
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
   const wantsJson = (request.headers.get("accept") || "").includes("application/json");
+
+  const host = new URL(request.url).hostname;
+  if (!SEND_HOSTS.has(host)) {
+    return reply(wantsJson, 403, "Please send this from recoverystarts.com/add-meeting/ — or email addict2influencer@gmail.com.");
+  }
 
   let f = {};
   try {
@@ -74,6 +102,10 @@ export async function onRequestPost(context) {
   }
   if (from && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(from)) {
     return reply(wantsJson, 400, "That email address does not look right — or leave it blank.");
+  }
+
+  if (overLimit(request.headers.get("cf-connecting-ip") || "unknown")) {
+    return reply(wantsJson, 429, "That's a lot of submissions at once. Please wait a few minutes, or email addict2influencer@gmail.com.");
   }
 
   const key = env.RESEND_API_KEY;

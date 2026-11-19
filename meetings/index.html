@@ -189,6 +189,14 @@
           <span style="color:var(--ink-dim);font-size:.92rem">29,000+ A.A., N.A., C.A. and C.M.A. rooms you can join from anywhere, sorted by what starts next. No map, no travel, no account.</span></span>
           <span class="meeting-card-arrow" style="margin-left:auto">→</span>
         </a>
+        <!-- "Meetings tonight" (meeting-finder #1075, 2026-11-18): served by the meeting finder at /meetings/tonight/ (A.A. & N.A.)
+             and /meetings/<aa|na|ca|cma>/tonight/. Way back: delete this link. -->
+        <a href="/meetings/tonight/" class="fade-in" style="display:flex;align-items:center;gap:14px;padding:18px 22px;margin-bottom:26px;border:1px solid rgba(167,139,250,.45);border-radius:14px;background:rgba(167,139,250,.08);text-decoration:none">
+          <span style="font-size:1.6rem" aria-hidden="true">🌙</span>
+          <span><strong style="color:#c4b5fd">AA &amp; NA meetings tonight</strong><br>
+          <span style="color:var(--ink-dim);font-size:.92rem">From now until late tonight, soonest first: rooms near you and online, with directions or the join link in one tap.</span></span>
+          <span class="meeting-card-arrow" style="margin-left:auto">→</span>
+        </a>
         <!-- Holiday hubs (claude-home#415, holidays-build 2026-11-08): the 20 pages served by the meeting finder, linked year-round.
              The same links are on the meeting finder's own /meetings/ render (server/pages.mjs), which recoverystarts.com doesn't serve:
              the Worker sends exactly /meetings/ here to Pages. Way back: delete this section. -->

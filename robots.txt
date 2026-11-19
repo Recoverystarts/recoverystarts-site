@@ -70,3 +70,14 @@ Sitemap: https://recoverystarts.com/family/sitemap.xml
 # Every reading page (Steps, Traditions, Concepts, history, the Big Book, A.A. questions, daily readings), lastmod = when
 # its text last changed. Built by scripts/build-start-here.mjs with the hub at /start-here/ (#483).
 Sitemap: https://recoverystarts.com/sitemap-reading.xml
+
+# PerplexityBot (2026-11-19, SEO window, Derick: "slow it down if it's costing Railway"): ~42K requests in 24 h, almost all
+# uncached ("dynamic"). Same rules as *, plus a crawl delay. Way back: delete this group.
+User-agent: PerplexityBot
+Allow: /
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /data/
+Disallow: /add-meeting/?
+Disallow: /add-meeting?
+Crawl-delay: 10

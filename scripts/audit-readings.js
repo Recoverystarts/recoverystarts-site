@@ -15,7 +15,7 @@ const fs = require("fs");
 const path = require("path");
 
 const SRC = "data/readings-source.md";
-const HIST = process.env.HISTORIAN_SOURCES || "C:\\Users\\addic\\recovery-einstein\\historian-sources";
+const HIST = process.env.HISTORIAN_SOURCES || path.join(__dirname, "..", "..", "recovery-einstein", "historian-sources"); // a recovery-einstein checkout beside this repo
 
 // Every source a quotation is checked against.
 const SOURCES = [

@@ -18,7 +18,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "data", "readings-source.md");
-const HIST = "C:\\Users\\addic\\recovery-einstein\\historian-sources";
+const HIST = process.env.HISTORIAN_SOURCES || path.join(ROOT, "..", "recovery-einstein", "historian-sources"); // a recovery-einstein checkout beside this repo
 const MAP_FILE = path.join(HIST, "ocr-repairs.json");
 
 const SOURCES = [

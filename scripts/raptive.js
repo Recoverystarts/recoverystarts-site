@@ -32,11 +32,12 @@ const HEALTH = `<meta name="health-directed-treatment" content="true">`;
 // or purpose is health, recovery or support; don't tag a neutral administrative page just because it's on this site.
 // Tagged, in English and under every /<lang>/ copy: the home page (it routes people into recovery meetings and
 // readings; Derick's call, 2026-11-21), the reading pages (sitemap-reading.xml's sections, the per-step pages,
-// /aa-info/), the static /meetings/ hub and /maps/ (the meeting-map chooser). The live /meetings/* and /family*
+// /aa-info/), /start-here/ (every reading on one page), /download/ (the Recovery Einstein Big Book companion; Derick,
+// 2026-11-21), the static /meetings/ hub and /maps/ (the meeting-map chooser). The live /meetings/* and /family*
 // pages come from the meeting finders (meeting-finder, al-anon-finder: server/raptive.mjs), which tag every page.
-// Not tagged: /about/, /privacy/, /add-meeting/, /download/, /start-here/, 404.html.
+// Not tagged: /about/, /privacy/, /add-meeting/, 404.html.
 const HEALTH_SECTIONS = new Set(["12-steps", "steps", "12-traditions", "12-concepts", "aa-history", "aa-info", "aa-questions",
-  "big-book", "daily-reflection", "daily-tradition", "meetings", "maps", "index.html"]);
+  "big-book", "daily-reflection", "daily-tradition", "meetings", "maps", "start-here", "download", "index.html"]);
 const LANG_DIR = /^(ar|de|es|fa|fr|hi|ja|nl|pl|pt|ru|sv|tr)\//;
 const ADS_JS = /<script src="\/ads\.js"[^>]*><\/script>/g;
 

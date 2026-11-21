@@ -28,10 +28,15 @@ const path = require("path");
 
 const TAG = `<!-- Raptive Head Tag Manual --><script data-no-optimize="1" data-cfasync="false">(function(w, d) { w.adthrive = w.adthrive || {}; w.adthrive.cmd = w.adthrive.cmd || []; w.adthrive.plugin = 'adthrive-ads-manual'; w.adthrive.host = 'ads.adthrive.com'; var s = d.createElement('script'); s.async = true; s.referrerpolicy='no-referrer-when-downgrade'; s.src = 'https://' + w.adthrive.host + '/sites/6ae0f40dc893d31cf2e0eb8c/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href) + '&cb=' + (Math.floor(Math.random() * 100) + 1); var n = d.getElementsByTagName('script')[0]; n.parentNode.insertBefore(s, n);})(window, document);</script><!-- End of Raptive Head Tag -->`;
 const HEALTH = `<meta name="health-directed-treatment" content="true">`;
-// the reading pages (sitemap-reading.xml's sections, the per-step pages, /aa-info/) and the static /meetings/ hub
-// pages, in English and under every /<lang>/ copy. /start-here/ is in sitemap-reading.xml but is a general page.
+// Which pages carry it follows Raptive's guidance (Michelle Stappert, onboarding, 2026-11-20): tag a page whose content
+// or purpose is health, recovery or support; don't tag a neutral administrative page just because it's on this site.
+// Tagged, in English and under every /<lang>/ copy: the home page (it routes people into recovery meetings and
+// readings; Derick's call, 2026-11-21), the reading pages (sitemap-reading.xml's sections, the per-step pages,
+// /aa-info/), the static /meetings/ hub and /maps/ (the meeting-map chooser). The live /meetings/* and /family*
+// pages come from the meeting finders (meeting-finder, al-anon-finder: server/raptive.mjs), which tag every page.
+// Not tagged: /about/, /privacy/, /add-meeting/, /download/, /start-here/, 404.html.
 const HEALTH_SECTIONS = new Set(["12-steps", "steps", "12-traditions", "12-concepts", "aa-history", "aa-info", "aa-questions",
-  "big-book", "daily-reflection", "daily-tradition", "meetings"]);
+  "big-book", "daily-reflection", "daily-tradition", "meetings", "maps", "index.html"]);
 const LANG_DIR = /^(ar|de|es|fa|fr|hi|ja|nl|pl|pt|ru|sv|tr)\//;
 const ADS_JS = /<script src="\/ads\.js"[^>]*><\/script>/g;
 

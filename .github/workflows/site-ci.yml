@@ -1,3 +1,4 @@
+# Finished product for automation: no other steps needed.
 # Site CI for recoverystarts.com, on every PR into main and every push to main.
 #   site-check     builds dist/ with scripts/pages-dist.sh (the Pages build command), runs the Functions security tests,
 #                  scripts/ci/site-check.js, and the quote gate scripts/audit-readings.js. The quote gate reads the A.A.
@@ -10,6 +11,7 @@ name: Site CI
 on:
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches: [main]
 
@@ -107,3 +109,18 @@ jobs:
         env:
           URL: ${{ steps.preview.outputs.url }}
         run: node scripts/ci/preview-links.js "$URL"
+
+  # Finished product for automation: no other steps needed. A non-draft claude/* PR merges once site-check passes.
+  merge:
+    needs: [site-check]
+    if: github.event_name == 'pull_request' && startsWith(github.head_ref, 'claude/') && github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Merge
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr merge "${{ github.event.pull_request.number }}" --repo "${{ github.repository }}" --merge --delete-branch

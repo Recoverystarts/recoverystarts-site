@@ -36,8 +36,6 @@ Disallow: /data/
 Disallow: /add-meeting/?
 Disallow: /add-meeting?
 
-# /meetings/find/ is not disallowed: it serves noindex,follow, and Google can only see a noindex on a page it may fetch.
-
 # For AI assistants: https://recoverystarts.com/llms.txt (meetings: https://recoverystarts.com/meetings/llms.txt)
 
 # sitemap.xml is an index: one sitemap per language (sitemap-<lang>.xml: en and the 13 translations), each URL listing

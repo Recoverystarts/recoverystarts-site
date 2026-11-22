@@ -47,6 +47,8 @@ Sitemap: https://recoverystarts.com/sitemap.xml
 Sitemap: https://recoverystarts.com/sitemap-meetings.xml
 # The family map (Al-Anon and Nar-Anon, served by its own Worker)
 Sitemap: https://recoverystarts.com/family/sitemap.xml
+# The substance fellowships map (M.A., H.A., D.A.A. and Nicotine Anonymous, served by its own Worker)
+Sitemap: https://recoverystarts.com/substances/sitemap.xml
 # Every reading page (Steps, Traditions, Concepts, history, the Big Book, A.A. questions, daily readings), lastmod = when
 # its text last changed. Built by scripts/build-start-here.mjs with the hub at /start-here/.
 Sitemap: https://recoverystarts.com/sitemap-reading.xml

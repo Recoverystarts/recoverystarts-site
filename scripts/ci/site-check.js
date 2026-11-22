@@ -19,8 +19,8 @@ const ROOT = path.join(__dirname, "..", "..");
 const DIST = path.join(ROOT, "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
 const WARN_AT = 90000, FAIL_AT = 100000;
-// paths served by the meetings and family Workers at recoverystarts.com, not by Pages
-const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$))/;
+// paths served by the meetings, family and substances Workers at recoverystarts.com, not by Pages
+const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$)|substances(\/|$))/;
 const args = process.argv.slice(2);
 const base = args.includes("--base") ? args[args.indexOf("--base") + 1] : null;
 const only = args.includes("--only") ? args[args.indexOf("--only") + 1].split(",") : null;

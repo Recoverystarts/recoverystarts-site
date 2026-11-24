@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * raptive.js — Raptive's head tag on every page, the health tag on the reading pages, and no AdSense left.
+ * raptive.js — Raptive's head tag on every page, the health tag on the routing pages, and no AdSense left.
  *
  * For every HTML page, in every language:
  *   1. Raptive's head tag (TAG below), inline in <head>, exactly as Raptive sent it (data-cfasync="false" keeps
  *      Rocket Loader off it), right after <meta charset> so the charset stays in the first 1024 bytes.
- *   2. <meta name="health-directed-treatment" content="true"> on the reading pages only (HEALTH below): Raptive then
- *      serves only non-personalized ads there to visitors from CA, CT, UT, VA and WA.
+ *   2. <meta name="health-directed-treatment" content="true"> on the pages that route people to meetings or help
+ *      (HEALTH below): Raptive then serves only non-personalized ads there to visitors from CA, CT, UT, VA and WA.
  *   3. the old `<script src="/ads.js" defer></script>` removed.
  *
  * Idempotent. fix-nav.js calls stamp() on every page; the language builds copy the English head, tag included.
@@ -20,16 +20,15 @@ const path = require("path");
 
 const TAG = `<!-- Raptive Head Tag Manual --><script data-no-optimize="1" data-cfasync="false">(function(w, d) { w.adthrive = w.adthrive || {}; w.adthrive.cmd = w.adthrive.cmd || []; w.adthrive.plugin = 'adthrive-ads-manual'; w.adthrive.host = 'ads.adthrive.com'; var s = d.createElement('script'); s.async = true; s.referrerpolicy='no-referrer-when-downgrade'; s.src = 'https://' + w.adthrive.host + '/sites/6ae0f40dc893d31cf2e0eb8c/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href) + '&cb=' + (Math.floor(Math.random() * 100) + 1); var n = d.getElementsByTagName('script')[0]; n.parentNode.insertBefore(s, n);})(window, document);</script><!-- End of Raptive Head Tag -->`;
 const HEALTH = `<meta name="health-directed-treatment" content="true">`;
-// Which pages carry it follows Raptive's guidance (Michelle Stappert, onboarding, 2026-11-20): tag a page whose content
-// or purpose is health, recovery or support; don't tag a neutral administrative page just because it's on this site.
-// Tagged, in English and under every /<lang>/ copy: the home page (it routes people into recovery meetings and
-// readings; Derick's call, 2026-11-21), the reading pages (sitemap-reading.xml's sections, the per-step pages,
-// /aa-info/), /start-here/ (every reading on one page), /download/ (the Recovery Einstein Big Book companion; Derick,
-// 2026-11-21), the static /meetings/ hub and /maps/ (the meeting-map chooser). The live /meetings/* and /family*
-// pages come from the meeting finders (meeting-finder, al-anon-finder: server/raptive.mjs), which tag every page.
-// Not tagged: /about/, /privacy/, /add-meeting/, 404.html.
-const HEALTH_SECTIONS = new Set(["12-steps", "steps", "12-traditions", "12-concepts", "aa-history", "aa-info", "aa-questions",
-  "big-book", "daily-reflection", "daily-tradition", "meetings", "maps", "start-here", "download", "index.html"]);
+// Which pages carry it: since 2026-11-23, the pages that route people to meetings or services or give individual
+// help: the home page, the static /meetings/ hub, /maps/ (the meeting-map chooser) and /download/ (the Recovery
+// Einstein app), in English and under every /<lang>/ copy. The live /meetings/* and /family* pages come from the
+// meeting finders (meeting-finder, al-anon-finder: server/raptive.mjs), which tag every page. The reading pages (the
+// published A.A. texts and reflections: steps, traditions, concepts, history, info, questions, Big Book, daily
+// readings, /start-here/) carry no tag: Raptive (Philip Sanchez, 2026-11-23) said general published texts that don't
+// identify a reader's health, route to services or give individual direction likely don't need it.
+// Not tagged either: /about/, /privacy/, /add-meeting/, 404.html.
+const HEALTH_SECTIONS = new Set(["meetings", "maps", "download", "index.html"]);
 const LANG_DIR = /^(ar|de|es|fa|fr|hi|ja|nl|pl|pt|ru|sv|tr)\//;
 const ADS_JS = /<script src="\/ads\.js"[^>]*><\/script>/g;
 
@@ -61,7 +60,7 @@ function problems(html, rel) {
   const head = html.slice(0, html.search(/<\/head>/i));
   if (n === 1 && !head.includes(TAG)) p.push("Raptive tag outside <head>");
   const h = count(html, HEALTH);
-  if (isHealthPage(rel) ? h !== 1 : h !== 0) p.push(`health tag ${h} times (${isHealthPage(rel) ? "reading" : "general"} page)`);
+  if (isHealthPage(rel) ? h !== 1 : h !== 0) p.push(`health tag ${h} times (${isHealthPage(rel) ? "routing" : "general"} page)`);
   if (h === 1 && !head.includes(HEALTH)) p.push("health tag outside <head>");
   if (/ads\.js|adsbygoogle|pagead|googlesyndication/.test(html)) p.push("AdSense left");
   return p;
@@ -96,7 +95,7 @@ if (require.main === module) {
     const out = stamp(html, rel);
     if (out !== html) { fs.writeFileSync(file, out); changed++; }
   }
-  console.log(`raptive: ${pages.length} pages, ${health} reading pages with the health tag; ` +
+  console.log(`raptive: ${pages.length} pages, ${health} pages with the health tag; ` +
     (CHECK ? `${bad} wrong` : `${changed} changed`));
   if (CHECK && bad) process.exit(1);
 }

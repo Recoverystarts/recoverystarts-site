@@ -103,11 +103,12 @@ for (const rel of Object.keys(pageIds)) {
   // links to pages that exist in this language: the ones this build can write, and with --only also the ones already on
   // disk (built earlier; their English may have moved ahead since, but the language's page is still there and live)
   // …and the meeting maps (the same origin, each with its own language switch: ?hl=<lang>): the main map under /meetings/
-  // and /online/, and the family, substance and behaviors maps under /family/, /substances/ and /behaviors/
+  // and /online/, and the family, substance, behaviors and balance maps under /family/, /substances/, /behaviors/ and
+  // /balance/
   html = html.replace(/(\shref=")(\/[^"]*)"/g, (m, a, url) => {
     const r = relOf(url);
     if (r && (ready.has(r) || (only && fs.existsSync(path.join(outDir, r))))) return `${a}/${lang}${url}"`;
-    if (/^\/(meetings|online|family|substances|behaviors)(\/|$)/.test(url) && !/[?&]hl=/.test(url)) { const [p, h = ""] = url.split("#"); return `${a}${p}${p.includes("?") ? "&amp;" : "?"}hl=${lang}${h ? "#" + h : ""}"`; }
+    if (/^\/(meetings|online|family|substances|behaviors|balance)(\/|$)/.test(url) && !/[?&]hl=/.test(url)) { const [p, h = ""] = url.split("#"); return `${a}${p}${p.includes("?") ? "&amp;" : "?"}hl=${lang}${h ? "#" + h : ""}"`; }
     return m;
   });
   // "our translation" note, under the page's h1 (its link goes to the English page, so it's put in after the links above)

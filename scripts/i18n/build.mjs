@@ -28,7 +28,7 @@ const langCss = LANG_CSS[lang] ? `/${LANG_CSS[lang]}?v=${crypto.createHash("sha1
 // Concepts, prayers, Big Book quotes) translate those themselves and say so under the h1, with a link to the English
 // page. The words are the language's core id <lang>_ours_note; false here takes the note off every page.
 const OURS_NOTE = { hi: true, ja: true, ru: true, ar: true, tr: true };
-const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|meetings\/)/;
+const OURS_SKIP = /^(?:404\.html|about\/|add-meeting\/|download\/|maps\/|meetings\/)/;
 const pageIds = readJson(path.join(I18N, "segments", "pages.json"), null);
 if (!pageIds) { console.error("run extract.mjs first"); process.exit(2); }
 const tr = translations(lang);
@@ -76,12 +76,19 @@ for (const rel of Object.keys(pageIds)) {
   if (only && !only.some((p) => rel.startsWith(p))) continue;
   let html = fs.readFileSync(path.join(ROOT, rel), "utf8");
   const segs = segmentsOf(html);
+  // an attribute's translation is escaped once; one that already holds entities is decoded first, so it isn't
+  // escaped twice into &amp;quot;
+  const escAttr = (t) => unent(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const want = (s) => { const t = tr[idOf(s.en)]; if (t == null) throw new Error(`${rel}: segment ${idOf(s.en)} has no ${lang} (extract is out of date — run extract.mjs)`); return t; };
+  // an attribute inside an html segment (a link's aria-label in a sentence) is translated as part of that segment: its
+  // translated value goes into the segment's English tags before the segment is swapped, so the two never overlap
+  const within = (a, h) => a !== h && a.kind === "attr" && h.kind === "html" && a.start >= h.start && a.end <= h.end;
   for (let i = segs.length - 1; i >= 0; i--) {
-    const s = segs[i], t = tr[idOf(s.en)];
-    if (t == null) throw new Error(`${rel}: segment ${idOf(s.en)} has no ${lang} (extract is out of date — run extract.mjs)`);
-    // an attribute's translation is escaped once; one that already holds entities is decoded first, so it isn't
-    // escaped twice into &amp;quot;
-    html = html.slice(0, s.start) + (s.kind === "attr" ? unent(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])) : fromTemplate(t, s.en)) + html.slice(s.end);
+    const s = segs[i], t = want(s);
+    if (segs.some((h) => within(s, h))) continue;
+    let en = s.en;
+    if (s.kind === "html") for (const a of segs.filter((a) => within(a, s)).sort((x, y) => y.start - x.start)) en = en.slice(0, a.start - s.start) + escAttr(want(a)) + en.slice(a.end - s.start);
+    html = html.slice(0, s.start) + (s.kind === "attr" ? escAttr(t) : fromTemplate(t, en)) + html.slice(s.end);
   }
   // a page's JSON data (<script type="application/json">, e.g. the Daily Tradition hub's readings, which its script draws
   // over the server-rendered one): a string whose English is a segment translated elsewhere takes that translation, so the
@@ -94,11 +101,12 @@ for (const rel of Object.keys(pageIds)) {
     return n ? open + JSON.stringify(out).replace(/<\//g, "<\\/") + close : m;
   });
   // links to pages that exist in this language
-  // …and the meeting finder (the same origin, its own language switch: ?hl=<lang>)
+  // …and the meeting maps (the same origin, each with its own language switch: ?hl=<lang>): the main map under /meetings/
+  // and /online/, and the family, substance and behaviors maps under /family/, /substances/ and /behaviors/
   html = html.replace(/(\shref=")(\/[^"]*)"/g, (m, a, url) => {
     const r = relOf(url);
     if (r && ready.has(r)) return `${a}/${lang}${url}"`;
-    if (/^\/(meetings|online)(\/|$)/.test(url) && !/[?&]hl=/.test(url)) { const [p, h = ""] = url.split("#"); return `${a}${p}${p.includes("?") ? "&amp;" : "?"}hl=${lang}${h ? "#" + h : ""}"`; }
+    if (/^\/(meetings|online|family|substances|behaviors)(\/|$)/.test(url) && !/[?&]hl=/.test(url)) { const [p, h = ""] = url.split("#"); return `${a}${p}${p.includes("?") ? "&amp;" : "?"}hl=${lang}${h ? "#" + h : ""}"`; }
     return m;
   });
   // "our translation" note, under the page's h1 (its link goes to the English page, so it's put in after the links above)
@@ -138,8 +146,10 @@ for (const rel of Object.keys(pageIds)) {
   built++;
 }
 // …and on the English page itself, so a reader can switch from where they are (the English page gets the globe and its
-// hreflang alternates; nothing else in it changes). A page with no translation loses a globe it no longer needs.
-if (!only) for (const rel of Object.keys(pageIds)) {
+// hreflang alternates; nothing else in it changes). A page with no translation loses a globe it no longer needs. With
+// --only, just the English pages under those prefixes.
+for (const rel of Object.keys(pageIds)) {
+  if (only && !only.some((p) => rel.startsWith(p))) continue;
   const file = path.join(ROOT, rel);
   let html = fs.readFileSync(file, "utf8");
   const avail = globes.get(rel) ?? { en: urlOf(rel), ...Object.fromEntries(Object.entries(other).filter(([, s]) => s.has(rel)).map(([l]) => [l, `/${l}${urlOf(rel)}`])) };
@@ -153,5 +163,5 @@ if (!only) for (const rel of Object.keys(pageIds)) {
 }
 const total = Object.keys(pageIds).length;
 // the per-language sitemaps and their index (sitemap.mjs), from what's now on disk
-if (!only) writeSitemaps({ quiet: true });
+writeSitemaps({ quiet: true });
 console.log(`${lang}: ${built} pages written to /${lang}/ (${ready.size} of ${total} pages fully translated; ${Object.keys(tr).length} translated segments)`);

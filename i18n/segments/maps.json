@@ -6,8 +6,8 @@
    "maps/index.html"
   ]
  },
- "f8db13452d06": {
-  "t": "Free meeting maps, worldwide: A.A., N.A., C.M.A. and C.A.; Al-Anon, Nar-Anon, Gam-Anon, Families Anonymous and Co-Anon for families and friends; M.A., NicA, D.A.A., H.A., Pills A. and DAA UK. Pick yours.",
+ "934f78dafe04": {
+  "t": "Free meeting maps, worldwide: A.A., N.A., C.M.A. and C.A.; Al-Anon, Nar-Anon, Gam-Anon, Families Anonymous, Co-Anon and ACA for families, friends and adults who grew up with it; M.A., NicA, D.A.A., H.A., Pills A. and DAA UK; G.A., CoDA, FA, FAA and GAA; D.A., U.A., SpA, W.A., ITAA and CLA. Pick yours.",
   "kind": "attr",
   "pages": [
    "maps/index.html"
@@ -42,15 +42,15 @@
    "maps/online/index.html"
   ]
  },
- "ae51bc51b574": {
-  "t": "<0><1><2>Al-Anon</2><3>Nar-Anon</3><4>Gam-Anon</4><5>Families Anonymous</5><6>Co-Anon</6></1></0><7>For the families and friends of someone who drinks, uses drugs or gambles</7>",
+ "4bcbad5b9d9d": {
+  "t": "<0><1><2>Al-Anon</2><3>Nar-Anon</3><4>Gam-Anon</4><5>Families Anonymous</5><6>Co-Anon</6><7>ACA</7></1></0><8>Families &amp; friends, and adults who grew up with it</8>",
   "kind": "html",
   "pages": [
    "maps/index.html"
   ]
  },
- "72fec9e24cce": {
-  "t": "Al-Anon · Nar-Anon · Gam-Anon · Families Anonymous · Co-Anon: For the families and friends of someone who drinks, uses drugs or gambles",
+ "778a759093ea": {
+  "t": "Al-Anon · Nar-Anon · Gam-Anon · Families Anonymous · Co-Anon · ACA: Families &amp; friends, and adults who grew up with it",
   "kind": "attr",
   "pages": [
    "maps/index.html",
@@ -66,6 +66,36 @@
  },
  "24834da78346": {
   "t": "M.A. · NicA · D.A.A. · H.A. · Pills A. · DAA UK: Marijuana, Nicotine, Drug Addicts, Heroin and Pills Anonymous, and DAA UK",
+  "kind": "attr",
+  "pages": [
+   "maps/index.html",
+   "maps/online/index.html"
+  ]
+ },
+ "48ea95b84827": {
+  "t": "<0><1><2>G.A.</2><3>CoDA</3><4>FA</4><5>FAA</5><6>GAA</6></1></0><7>Gamblers, Co-Dependents, Food Addicts in Recovery, Food Addicts and Gaming Addicts Anonymous</7>",
+  "kind": "html",
+  "pages": [
+   "maps/index.html"
+  ]
+ },
+ "4acf47fcab12": {
+  "t": "G.A. · CoDA · FA · FAA · GAA: Gamblers, Co-Dependents, Food Addicts in Recovery, Food Addicts and Gaming Addicts Anonymous",
+  "kind": "attr",
+  "pages": [
+   "maps/index.html",
+   "maps/online/index.html"
+  ]
+ },
+ "3cf6073831af": {
+  "t": "<0><1><2>D.A.</2><3>U.A.</3><4>SpA</4><5>W.A.</5><6>ITAA</6><7>CLA</7></1></0><8>Debtors, Underearners, Spenders, Workaholics, Internet and Technology Addicts, and Clutterers Anonymous</8>",
+  "kind": "html",
+  "pages": [
+   "maps/index.html"
+  ]
+ },
+ "546e3c40dcb2": {
+  "t": "D.A. · U.A. · SpA · W.A. · ITAA · CLA: Debtors, Underearners, Spenders, Workaholics, Internet and Technology Addicts, and Clutterers Anonymous",
   "kind": "attr",
   "pages": [
    "maps/index.html",
@@ -94,8 +124,8 @@
    "maps/online/index.html"
   ]
  },
- "00d02f4d5d2c": {
-  "t": "Free online and phone meetings, any hour: A.A., N.A., C.M.A. and C.A.; Al-Anon, Nar-Anon, Gam-Anon, Families Anonymous and Co-Anon for families and friends; M.A., NicA, D.A.A., H.A., Pills A. and DAA UK. Pick yours.",
+ "ac3a15caf857": {
+  "t": "Free online and phone meetings, any hour: A.A., N.A., C.M.A. and C.A.; Al-Anon, Nar-Anon, Gam-Anon, Families Anonymous, Co-Anon and ACA for families, friends and adults who grew up with it; M.A., NicA, D.A.A., H.A., Pills A. and DAA UK; G.A., CoDA, FA, FAA and GAA; D.A., U.A., SpA, W.A., ITAA and CLA. Pick yours.",
   "kind": "attr",
   "pages": [
    "maps/online/index.html"
@@ -129,8 +159,8 @@
    "maps/online/index.html"
   ]
  },
- "75130aeed939": {
-  "t": "<0><1><2>Al-Anon</2><3>Nar-Anon</3><4>Gam-Anon</4><5>Families Anonymous</5><6>Co-Anon</6></1></0><7>For the families and friends of someone who drinks, uses drugs or gambles</7>",
+ "6522a025eee0": {
+  "t": "<0><1><2>Al-Anon</2><3>Nar-Anon</3><4>Gam-Anon</4><5>Families Anonymous</5><6>Co-Anon</6><7>ACA</7></1></0><8>Families &amp; friends, and adults who grew up with it</8>",
   "kind": "html",
   "pages": [
    "maps/online/index.html"
@@ -138,6 +168,20 @@
  },
  "c250dbfb900c": {
   "t": "<0><1><2>M.A.</2><3>NicA</3><4>D.A.A.</4><5>H.A.</5><6>Pills A.</6><7>DAA UK</7></1></0><8>Marijuana, Nicotine, Drug Addicts, Heroin and Pills Anonymous, and DAA UK</8>",
+  "kind": "html",
+  "pages": [
+   "maps/online/index.html"
+  ]
+ },
+ "0991b8b8c9d5": {
+  "t": "<0><1><2>G.A.</2><3>CoDA</3><4>FA</4><5>FAA</5><6>GAA</6></1></0><7>Gamblers, Co-Dependents, Food Addicts in Recovery, Food Addicts and Gaming Addicts Anonymous</7>",
+  "kind": "html",
+  "pages": [
+   "maps/online/index.html"
+  ]
+ },
+ "b0f4c31cee3e": {
+  "t": "<0><1><2>D.A.</2><3>U.A.</3><4>SpA</4><5>W.A.</5><6>ITAA</6><7>CLA</7></1></0><8>Debtors, Underearners, Spenders, Workaholics, Internet and Technology Addicts, and Clutterers Anonymous</8>",
   "kind": "html",
   "pages": [
    "maps/online/index.html"

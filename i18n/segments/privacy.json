@@ -27,8 +27,8 @@
    "privacy/index.html"
   ]
  },
- "692bf73d72a7": {
-  "t": "<0>Who we are.</0> recoverystarts.com is run by Recovery Starts, a project of <1>AutoGrow AI Solutions</1>, Calgary, Alberta, Canada. You can reach us at <2>hello@recoverystarts.com</2>.",
+ "e08346cb3fda": {
+  "t": "<0>Who we are.</0> recoverystarts.com is run by Recovery Starts, a project of <1>AutoGrow AI Solutions</1>, Calgary, Alberta, Canada. You can reach us at <2>derick@autogrow.org</2>.",
   "kind": "html",
   "pages": [
    "privacy/index.html"
@@ -69,8 +69,8 @@
    "privacy/index.html"
   ]
  },
- "4e9cf2cc1a67": {
-  "t": "<0>Visit counts.</0> We use Google Analytics and Cloudflare Web Analytics. They tell us things like how many people visited, which pages they read, roughly which country they came from, and what kind of device they used. Google Analytics sets cookies in your browser to do this, and we ask it to shorten your IP address. Cloudflare Web Analytics uses no cookies.",
+ "1f265c7e3d6e": {
+  "t": "<0>Visit counts.</0> We use Google Analytics and Cloudflare Web Analytics. They tell us things like how many people visited, which pages they read, roughly which country they came from, and what kind of device they used. Google Analytics sets cookies in your browser to do this, and we ask it to shorten your IP address. You can read how Google uses this data in <1>Google&rsquo;s Privacy Policy</1>. Cloudflare Web Analytics uses no cookies.",
   "kind": "html",
   "pages": [
    "privacy/index.html"
@@ -111,8 +111,22 @@
    "privacy/index.html"
   ]
  },
- "047a600b0da8": {
-  "t": "To keep the site free, we may show ads. If we do, Google and its advertising partners may use cookies to show ads based on your visits to this site and other sites. You can turn off personalised ads at <0>adssettings.google.com</0>, and learn about other companies&rsquo; ad cookies at <1>aboutads.info</1>. Visitors in the UK and Europe are asked for consent before any personalised ads are shown. An ad never changes which meetings you see.",
+ "9f5db589a60e": {
+  "t": "Ads keep this site free. Google and its advertising partners may use cookies to show ads based on your visits to this site and other sites. You can turn off personalised ads at <0>adssettings.google.com</0>, and learn about other companies&rsquo; ad cookies at <1>aboutads.info</1>. An ad never changes which meetings you see.",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "cfbc9950274b": {
+  "t": "<0>Advertising.</0> CMI Marketing, Inc., d/b/a Raptive (&ldquo;Raptive&rdquo;) is a service provider of this Site for the purposes of placing advertising on the Site, and Raptive will collect and use certain data for advertising purposes. To learn more about Raptive&rsquo;s data usage, click here: <1>https://raptive.com/creator-advertising-privacy-statement/</1>",
+  "kind": "html",
+  "pages": [
+   "privacy/index.html"
+  ]
+ },
+ "936ccd898017": {
+  "t": "<0>Your privacy signals and choices.</0> Our ad code honours the Global Privacy Control (GPC) signal: if your browser sends it, your visit is treated as an opt-out of the sale or sharing of your personal information for advertising. Visitors in the United States will see a &ldquo;Do Not Sell or Share My Personal Information&rdquo; link at the bottom of the page; after you opt out, the same link lets you turn personalised ads back on. Visitors in the UK, the European Economic Area and Switzerland are asked for consent before any personalised ads are shown, and can change that choice at any time with the &ldquo;Update Privacy Preferences&rdquo; link at the bottom of the page.",
   "kind": "html",
   "pages": [
    "privacy/index.html"
@@ -139,8 +153,8 @@
    "privacy/index.html"
   ]
  },
- "21085bfe217c": {
-  "t": "Ask us what we have about you, or ask us to delete it: <0>hello@recoverystarts.com</0>.",
+ "6c7309c56579": {
+  "t": "Ask us what we have about you, or ask us to delete it: <0>derick@autogrow.org</0>.",
   "kind": "html",
   "pages": [
    "privacy/index.html"
@@ -160,8 +174,8 @@
    "privacy/index.html"
   ]
  },
- "2e7096f7fc36": {
-  "t": "Last updated: October 2026.",
+ "e4fba6468c26": {
+  "t": "Last updated: November 12, 2026.",
   "kind": "html",
   "pages": [
    "privacy/index.html"

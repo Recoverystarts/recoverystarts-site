@@ -1,4 +1,4 @@
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # /add-meeting/ with a query string: every meeting page links the add/fix form as /add-meeting/?page=…&name=…, one
 # copy of the same form per meeting. The plain /add-meeting/ page is open; the per-meeting copies are skipped in every

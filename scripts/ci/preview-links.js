@@ -17,8 +17,9 @@ if (!/^https:\/\/[a-z0-9-]+\.recoverystarts-site\.pages\.dev$/.test(PREVIEW)) { 
 const LIVE = "https://recoverystarts.com";
 const DIST = path.join(__dirname, "..", "..", "dist");
 const LANGS = ["de", "es", "fa", "fr", "hi", "ja", "nl", "pl", "pt", "ru", "sv", "ar", "tr"];
-// paths served by the meetings and family Workers, not by Pages
-const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$))/;
+// paths served by the meetings, family, substances and behaviors Workers, not by Pages (the behaviors Worker also
+// serves /balance)
+const MAP_ROUTE = /^\/(meetings\/(aa|na|ca|cma|find|online|ai|try|about-this-data|tonight)(\/|$)|online(\/|$)|family(\/|$)|substances(\/|$)|behaviors(\/|$)|balance(\/|$))/;
 const SEEDS = ["/", "/start-here/", "/12-steps/", "/12-traditions/", "/12-concepts/", "/big-book/", "/daily-reflection/", "/daily-tradition/", "/aa-history/", "/aa-info/", "/meetings/", "/about/"];
 const UA = { "user-agent": "recoverystarts-site CI link check (github actions)" };
 const langOf = (p) => { const s = p.split("/")[1]; return LANGS.includes(s) ? s : "en"; };
